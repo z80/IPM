@@ -1,0 +1,299 @@
+*,body{font-size:11px;font-family:Verdana,Geneva,Arial,Helvetica,sans-serif}
+div,form,h1,h2,h3,h4,h5,dl,dt,dd{padding:0;margin:0}
+body{background-color:#aaaaaa;max-width:1280px;margin:0 auto;padding:0}
+a{color:#d72128;outline:none}
+a:hover{text-decoration:none}
+p{padding:0;margin:0 0 10px 0}
+ol,ul{margin:0 10px 0;padding:0 0 10px 30px}
+table{margin:0;border-collapse:collapse}
+table td{padding:0}
+div.maincontent{padding:10px 15px}
+div.maincontent2{padding:0 15px}
+div.infomsg{padding:30px 15px 120px 15px}
+.red{color:#d72128}
+div#header{background:#ececec url(http://static.chipdip.ru/images/top_pattern2.gif) no-repeat top left;height:151px;border-bottom:2px solid #333;min-width:998px}
+#topmenu{float:right;background:transparent url(http://static.chipdip.ru/images/s1_3.gif) no-repeat 0 -345px;padding:0 3px 3px 5px}
+#topmenu a{padding:0 15px}
+#topmenu,#topmenu a{font-weight:bold;font-size:10px;color:#fff}
+#toplink{float:left;width:318px}
+#toplink a{display:block;width:318px;height:108px;border:0}
+#topcontainer{padding-top:27px;margin-left:318px}
+#topsearch{background:transparent url(http://static.chipdip.ru/images/s1_3.gif) no-repeat 0 -69px;width:400px;height:68px;float:left;padding:0 12px 0 20px}
+#search-select{padding:7px 0 5px 3px}
+#search-select a{color:#000;text-decoration:none}
+#search-select i{color:#ababab;font-style:normal;margin:0 7px 0 7px}
+#search-select a.act,#search-select a.act:hover{font-weight:bold;color:#d72128;text-decoration:none}
+#search-select a:hover{color:#000;text-decoration:underline}
+#topsearch .sf,#bottomsearch .sf{margin:0 10px 0 0;width:320px;font-size:12px}
+#topsearch .sf{width:320px}
+#topsearch input.sb,#bottomsearch input.sb{background:#ffdfa7 url(http://static.chipdip.ru/images/s1_3.gif) no-repeat 0 -139px;cursor:pointer;width:46px;height:22px;border:0;font-size:11px;text-align:center;padding-top:4px;padding-bottom:7px;font-family:Tahoma,Geneva,Arial,sans-serif}
+#topsearch a.ext,#bottomsearch a.ext{color:#333;font-size:10px;padding-left:3px}
+#bottomsearch .sf{width:263px}
+#topblocks a.top_sc,#topblocks a.top_online{background:transparent url(http://static.chipdip.ru/images/s1_3.gif) no-repeat;font-size:11px;font-family:Tahoma,Geneva,Arial,sans-serif;color:#333;text-decoration:none;text-align:center;padding-top:37px;height:31px;display:block;float:left;width:99px;margin-left:10px}
+#topblocks a.top_online{margin-left:13px;background-position:0 0}
+#topblocks a.top_sc{background-position:-100px 0}
+#topblocks a.top_sc:hover,#topblocks a.top_online:hover{color:#d72128}
+div.nojs{clear:both;background:#ffffe1 url(http://static.chipdip.ru/images/zebra.gif) repeat-x left bottom;padding:3px 10px 5px 10px;white-space:nowrap}
+#mm{clear:both;background:#e4d7c7 url(http://static.chipdip.ru/images/btns_v3.gif) repeat-x center;background-position:0 -328px;height:41px;border-bottom:2px solid #fff;white-space:nowrap}
+#mm div.menuend{width:39px;height:41px;border:none;float:left;background:#e4d7c7 url(http://static.chipdip.ru/images/s1_3.gif) no-repeat 0 -218px}
+#mm a.m123,#mm a.m46,#mm a.m5,#mm a.m7,#mm a.m8{display:block;font-size:10px;font-weight:bold;text-transform:uppercase;text-decoration:none;color:#333;margin:0;float:left;border-right:solid 1px #707070;background:url(http://static.chipdip.ru/images/btns_v3.gif) repeat-x top;width:88px}
+#mm a.m123,#mm a.m5,#mm a.m7{height:25px;padding:8px 10px}
+#mm a.m46,#mm a.m8{line-height:41px;padding:0 10px}
+#mm a.m46,#mm a.m5,#mm a.m7,#mm a.m8{text-align:center}
+#mm a.m123{background-color:#d8d9d1;background-position:0 0;text-shadow:#f5f5f5 1px 1px 0}
+#mm a.m123h{color:#e92c32;background-position:0 -41px;text-shadow:none}
+#mm a.m46,#mm a.m5{background-color:#f0efed;background-position:0 -82px;text-shadow:#f5f5f5 1px 1px 0}
+#mm a.m46h,#mm a.m5h{color:#eb2e34;background-position:0 -123px;text-shadow:none}
+#mm a.m7{background-color:#50bad9;background-position:0 -164px;text-shadow:#a5d7e6 1px 1px 0}
+#mm a.m7h{color:#fff;background-position:0 -205px;text-shadow:none}
+#mm a.m8{background-color:#b797d3;background-position:0 -246px;text-shadow:#e0c7ee 1px 1px 0}
+#mm a.m8h{color:#fff;background-position:0 -287px;text-shadow:none}
+#reg_n_cart{clear:both;border-bottom:1px solid #666666;background-color:#dce1e5;min-width:998px}
+#toplogin,#tlform td{color:#3e2600;font-size:10px;font-weight:bold}
+#tlform td{padding-right:7px;}
+#tlform td.pwdtxt{padding-left:7px;}
+#user{width:693px;padding-left:15px}
+#user span{margin-right:50px}
+#toplogin form{margin:6px 0 6px 0;padding:0;white-space:nowrap;font-size:10px;vertical-align:middle}
+#toplogin .tf{width:119px;font-weight:normal;vertical-align:middle}
+#toplogin .tlb{background:transparent url(http://static.chipdip.ru/images/s1_3.gif) no-repeat 0 -260px;height:19px;width:39px;border:0;vertical-align:middle;cursor:pointer;color:#fff;font-weight:bold;font-size:10px;text-align:center;padding:3px 4px 4px 5px}
+#cart-icon a{display:block;background:transparent url(http://static.chipdip.ru/images/s1_3.gif) no-repeat 0 -280px;height:33px;width:37px;border:0}
+#toplogin a,#toplogin a:visited{color:#333;font-size:10px}
+#toplogin .case{border:1px solid #999;background-color:#f5f6f7;padding:3px 5px 4px 7px;font-size:10px;white-space:nowrap;min-width:212px}
+#toplogin .case span{font-size:10px;color:#ED1B23;white-space:nowrap}
+#remember{display:none;border-collapse:separate;position:absolute;width:121px;padding:1px 0;border:solid 1px #999;background-color:#fff;font-weight:normal;font-size:10px;font-weight:normal !important;}
+#textblocks{width:100%;background-color:#f0f0f0;border-top:1px solid #cdcdcd;border-bottom:1px solid #dfdfdf;min-width:998px}
+#textblocks td{padding:15px;width:35%;vertical-align:top}
+#textblocks td h4{text-transform:uppercase;font-size:10px;color:#333}
+#textblocks td ul{margin:5px 0 0 0;padding:0 !important}
+#textblocks td ul li{color:#333;list-style-type:none;margin:2px 0 0 0;padding:0}
+#textblocks li i{display:inline-block;width:12px;font-style:normal;color:#d72128}
+#bottomsearch{background-color:#e6e5d3;border-top:2px solid #fff;border-bottom:2px solid #fff;height:60px;min-width:998px}
+#bottomcnt{width:968px;padding:15px}
+#bottomlinks{width:570px;padding-right:20px;float:left}
+#bottomlinks,#bottomlinks a{color:#333;font-size:10px}
+#bottomform{margin-left:591px;padding-left:25px;background:transparent url(http://static.chipdip.ru/images/s1_3.gif) no-repeat -498px -204px}
+#copy{background-color:#d72128;border-top:1px solid #9b9b9b;min-width:998px}
+#copycon{color:#fff;font-size:10px;padding:10px 15px}
+#copycon img{vertical-align:top;border:0}
+#counters{clear:both;padding-top:5px}
+#copycon a.promarket{float:right;color:#fff;font-size:10px;text-decoration:none}
+.ci{text-align:center;background-color:#fff;border-bottom:1px solid #b7b7b7;color:#333;padding:7px 0 10px}
+.ci div{color:#333;font-size:11px;padding:10px 0;margin:0 10px;border-bottom:1px solid #dfdfdf}
+.ci div.lst{border-bottom:none}
+.ci b{color:#666666}
+.ci em{display:block;font-style:normal;background:url(http://static.chipdip.ru/images/s1_3.gif) no-repeat}
+.ci em.icq{background-position:-55px -141px;width:100px;padding:5px 0 5px 20px;text-align:right;color:#D72128;font-weight:bold;margin:auto}
+.ci em.chi{background-position:-216px 0;width:119px;height:13px;margin:6px auto}
+.ci em.chi-on{background-position:-216px -18px;width:120px;height:23px;margin:0 auto 6px}
+.ci span{color:#D72128;font-weight:bold;line-height:15px}
+.ci a.feed{display:block;width:104px;height:18px;background:url(http://static.chipdip.ru/images/s1_3.gif) no-repeat 0 -195px;padding:3px 0 0 26px;margin:10px auto 0 auto;color:#333;text-decoration:none;text-align:left}
+.ci a.feed:hover{color:#d72128}
+.contul,.secul{width:225px}
+.contul a,.secul a{display:block;color:#333;font-weight:bold;text-transform:uppercase;text-decoration:none;font-size:10px;padding:4px 2px 4px 15px;border-bottom:1px solid #b7b7b7;border-top:1px solid #fff;cursor:pointer;background:url(http://static.chipdip.ru/images/s1_3.gif) no-repeat left center}
+.contul a{background-color:#ebe6d9;background-position:-451px 1px}
+.secul a{background-color:#f0efed;background-position:-451px -107px}
+.contul a:hover{background-color:#fff;background-position:-451px -35px;color:#D72128;cursor:pointer}
+.secul a:hover{background-color:#fff;background-position:-451px -143px;color:#D72128;cursor:pointer}
+table#content{width:100%}
+div#content,table#content{background-color:#fff;min-width:998px}
+#main3l,#main3r,#main2al,#main2br,#centerzone,#centercontent{vertical-align:top;background-color:#fff}
+#main3l,#main3r,#main2al,#main2br{background:url(http://static.chipdip.ru/images/back_curves.gif)}
+#main3l,#main2al{border-right:solid 1px #b7b7b7}
+#main3r,#main2br{border-left:solid 1px #b7b7b7}
+#main3l{width:225px}
+#main3r{width:5%;max-width:262px}
+#main2al{width:225px}
+#main2br{width:262px}
+#main3cb{vertical-align:bottom}
+#slider{height:1px;font-size:0}
+.loading{width:18px;height:18px;background:transparent url(http://static.chipdip.ru/images/loading.gif) no-repeat 1px 1px !important;border:none !important}
+.loading2{background:#fff url(http://static.chipdip.ru/images/loading.gif) no-repeat center center}
+.grey{background-color:#f5f5f5}
+.ctrl,.ctrl_b,.ctrl_btn{vertical-align:middle}
+.ctrl_btn{height:21px}
+.w_80{width:90px}
+.w_120{width:120px}
+.w_175{width:175px}
+.w_250{width:250px}
+.w_350{width:350px}
+table.vt td{vertical-align:top}
+table.pad td{padding:5px}
+table.pad_big td{padding:10px 5px}
+#content .header1,#content .header1 a{color:#fff;font-weight:bold;background-color:#d72128;font-size:10px;padding:7px 0 7px 0;text-transform:uppercase;border-bottom:1px solid #b7b7b7;text-align:center;white-space:nowrap}
+#content .header1 a{text-decoration:none}
+.news{padding:0 15px 15px;border-bottom:1px solid #b7b7b7;background-color:#fff}
+.newslist{padding:15px}
+.txt a{color:#000;text-decoration:none}
+.news .txt a{font-size:10px}
+.txt a:hover{color:#d72128}
+.txt img{float:left;padding:2px 10px 0 0;border:0}
+.txt i{display:inline-block;width:5px;height:10px;background:url(http://static.chipdip.ru/images/s1_3.gif) no-repeat -32px -320px}
+.news h4{color:#d72128;text-transform:uppercase;font-weight:bold;padding:15px 0 12px;font-size:12px}
+.news h5{padding-bottom:3px;font-size:10px;font-weight:bold;padding-right:15px}
+table.vid td{font-size:10px;padding-left:10px}
+table.vid img.fpvideo{width:130px;height:73px;border:solid 1px #fccd73}
+span.date{color:#777a7c;font-size:10px}
+.news em,.newslist em{display:block;height:15px;clear:both}
+.newslist em.dots{border-top:dotted 1px #b7b7b7}
+.allnews{text-align:right;margin:0;padding:0 15px 10px 15px}
+a.rss{display:block;width:16px;height:16px;background:url(http://static.chipdip.ru/images/s1_3.gif) no-repeat 0 -162px}
+.logos{margin:0;padding:10px;text-align:center}
+.logos img{margin:5px 0}
+.bbs{border-bottom:solid 1px #b7b7b7}
+.modul{padding:10px 20px;background-color:#fff;border-bottom:solid 1px #b7b7b7}
+#content h1,#content h1 a,#content h2{color:#D72128;font-size:18px;padding:10px 0;text-align:left;font-weight:normal}
+#content h1,#content h2{margin:0 15px}
+#content h1,#content h2{border-bottom:1px solid #cdcdcd}
+#breadcrumb{padding:6px 15px;text-align:left;color:#D72128;font-weight:bold;font-size:10px;border-bottom:1px solid #cdcdcd}
+#breadcrumb a{color:#544F4F;font-size:10px;white-space:nowrap}
+#breadcrumb .ddmenu,#breadcrumb .ddmenuend,#breadcrumb i{display:inline;line-height:14px;font-size:10px;white-space:nowrap;padding-right:10px;font-style:normal}
+.s-free{z-index:110;overflow:hidden;width:267px;border-left:solid 1px #d3d3d3;border-right:solid 1px #d3d3d3;border-top:solid 1px #d3d3d3;background-color:#f5f6f7}
+.anylinkcss,.anylinkcss1,.anylinkcss_pic{position:absolute;display:none;z-index:100}
+.anylinkcss a{background:#E9E9E9 url(http://static.chipdip.ru/images/s1_3.gif) no-repeat -450px -70px;border-top:1px solid #fff;border-bottom:1px solid #d3d3d3;font-weight:bold;line-height:13px;width:249px;color:#333;text-decoration:none;font-size:9px;display:block;text-indent:7px;padding:4px 8px 4px 10px;text-transform:uppercase !important;cursor:pointer}
+.anylinkcss a:hover{background-color:#fff;background-position:-450px 2px;color:#D72128;cursor:pointer}
+.anylinkcss1{line-height:13px}
+.anylinkcss1 a{width:100%;display:block;padding:1px 0;text-decoration:none;text-indent:5px;font-weight:normal;color:#333 !important;border-top:1px solid #fff;border-bottom:1px solid #d3d3d3}
+.anylinkcss1 a:hover{background-color:#fff !important;color:#D72128 !important}
+.anylinkcss_pic{padding:2px;border:1px solid #b7b7b7;background-color:#fff;width:150px;height:150px}
+table.pager{width:100%}
+.pager{margin-bottom:5px}
+.pager td{vertical-align:top;padding:10px 15px 5px 15px}
+.pager a{color:#D72128;text-decoration:none}
+.pager .sortname_act a:hover,.pager .sortname_noact a:hover{text-decoration:none !important}
+.pager .sortname_act{border:solid 1px #777a7c;padding-left:5px;padding-right:5px;padding-bottom:1px;background-color:#ffffe1}
+.pager .uarr,.pager .darr,.pager .uarr_g,.pager .darr_g{background-image:url(http://static.chipdip.ru/images/s2.gif);background-repeat:no-repeat;padding-right:12px}
+.pager .uarr{background-position:-172px -51px}
+.pager .darr{background-position:-172px -67px}
+.pager .uarr_g{background-position:-167px -83px}
+.pager .darr_g{background-position:-167px -99px}
+.pager .sortname_act a{text-decoration:none !important;color:#333}
+.pager .sortname_noact a{text-decoration:underline;color:#D72128}
+.pager .bold{font-weight:bold;color:#544F4F}
+.nav_act,.nav_noact,.pageactiv2,.pagenoactiv2,.nav_next,.nav_next_noact{font-size:10px;font-weight:bold;text-decoration:none;padding:1px 3px 1px 3px}
+.nav_next_noact{border:1px solid #cdcdcd}
+.nav_act,.nav_noact{border:1px solid #fff}
+.nav_act{color:#d72128}
+.nav_noact,.nav_next_noact{color:#cdcdcd}
+.pageactiv2{color:#333;background-color:#ffffe1;border:1px solid #777a7c}
+.pagenoactiv2,.nav_next{color:#d72128;background-color:#fff;border:1px solid #cdcdcd}
+.nav_act:hover,.pagenoactiv2:hover,.nav_next:hover{border:1px solid #777a7c}
+#content .header2,#content .header22{color:#D72128;font-weight:bold;background-color:#f5f5f5;padding:4px 6px 4px 6px;font-size:10px;text-align:center;text-transform:uppercase;border-bottom:1px solid #b7b7b7;border-top:1px solid #fff;white-space:nowrap}
+#content .header2 a,#content .header22 a{text-decoration:none}
+#content .header2{background-color:#f5f5f5}
+#content .header22{background-color:#f2f1df}
+.lib{margin:0 15px 20px 15px;min-width:250px}
+.lib td{padding:5px;border:1px solid #cdcdcd}
+.lib a{color:#333}
+.libheader{margin:0 15px 10px 15px;padding:5px;border:1px solid #cdcdcd;font-weight:bold;background-color:#f5f5f5}
+#searchword{padding:15px;font-size:14px}
+#searchword span{color:#D72128;font-weight:bold;font-size:14px}
+#maybe,#maybe a{font-style:normal;font-size:14px;padding-left:5px}
+#maybe a{font-weight:bold}
+.subcategory,.subcategory a{font-weight:bold;color:#333}
+.reg_h{background:transparent url(http://static.chipdip.ru/images/s1_3.gif) no-repeat 0 -384px;padding:0 0 5px 0;margin:10px 15px 5px 15px;width:575px}
+.reg_h b{color:#d72128}
+.reg_text{padding:5px 15px;width:575px}
+table.reg{width:575px;margin-left:15px}
+div.reg_sub{border-bottom:solid 1px #b7b7b7;height:1px;margin:10px 15px;width:561px;font-size:1px}
+i.ball_r,i.ball_g{display:inline-block;background:transparent url(http://static.chipdip.ru/images/s2.gif) no-repeat;height:12px;width:12px;margin-top:3px}
+i.ball_r{background-position:0 -206px}
+i.ball_g{background-position:0 -242px}
+.user_t{border-collapse:collapse}
+.user_t td{border:1px solid #cdcdcd;padding:3px 5px}
+.list1,.list2{list-style-image:url(http://static.chipdip.ru/images/nexthigh.gif);margin-top:5px;margin-bottom:10px}
+.list1 li,list2 li{margin-top:2px;margin-bottom:2px}
+.list2 li a{color:#333;text-decoration:none}
+.list2 li a:hover{text-decoration:underline}
+.sale{vertical-align:middle;height:13px;width:25px;margin:1px 0 0 5px}
+.nrb{border-right:none !important}
+.nlb{border-left:none !important}
+.ib_t2{padding:0 6px 0 15px;height:76px;overflow:hidden}
+.ib_t1{padding:0 15px 0 15px;margin:0}
+.grey_head,.blue_head{background-color:#dfdfdf;height:10px;margin:12px 0;border-top:solid 2px #fff}
+.grey_head{background-color:#dfdfdf}
+.blue_head{background-color:#94CEE2}
+.grey_head span,.blue_head span{color:#d72128;font-weight:bold;text-transform:uppercase;font-size:10px;background-color:#fff;line-height:10px;padding-right:5px;margin-top:0}
+.ib_sep{clear:both}
+.ib_div,.ib_div_v{float:left;border:solid 1px #cdcdcd;width:209px;margin:0 9px 15px 0}
+.ib_div{padding:7px 9px}
+.ib_div_v{padding:5px 9px 7px 9px}
+.ib_div_v{height:49px;width:209px;background:url(http://static.chipdip.ru/images/cinema.gif) no-repeat 210px 44px}
+.ib_div_v img,.ib_div img{border:none;display:inline-block;margin-right:10px;vertical-align:middle}
+.ib_div_v img{width:58px;height:47px;margin-top:2px}
+.ib_div img{width:60px;height:60px}
+.ib_div a,.ib_div_v a{display:block;overflow:hidden;color:#000;text-decoration:none}
+.ib_div a span,.ib_div_v a span{display:inline-block;font-size:10px;vertical-align:middle;cursor:pointer}
+.ib_div_v a span{width:130px}
+.ib_div a span{width:139px}
+.ib_div a{height:60px}
+.ib_div_v a{height:49px}
+.ib_div a:hover,.ib_div_v a:hover{color:#d72128}
+.ib_nb{border:none !important}
+.last_ib{display:none}
+#ib_empty{clear:both;height:40px}
+div.scr_s,div.scr_s img.main{width:155px;height:89px;border:none}
+.adv_r{background-color:#fff;border-bottom:solid 1px #b7b7b7}
+.adv_r em{font-size:1px;display:block;height:5px}
+#auc_outer{position:absolute;z-index:200;width:323px;padding:0 5px 5px 0}
+#auc_inner{border:solid 1px #ababab;background-color:#fff;overflow:hidden}
+#auc_inner a{color:#333}
+#auc a{display:block;font-size:12px;padding:2px 5px 2px 5px;line-height:13px;margin:0 !important;text-decoration:none}
+#auc a b{color:#0000ff;font-weight:normal;font-size:12px}
+#auc a.ac_over{background-color:#F9E9AA;text-decoration:underline}
+#auc_close{background-color:#e5e6e7;text-align:right;padding:2px 5px 2px 5px}
+#auc_head{color:#666666;font-style:oblique;padding:2px 5px 2px 5px}
+.inputerr{border:solid 2px #d72128;background:#ffffe1}
+.inputerrmsg{font-size:10px;color:#d72128;display:none}
+.s_b,.s_s,.s_r,.s_i,.s_em{height:13px;width:25px}
+.s_b,.s_s,.s_r,.s_i{background:url(http://static.chipdip.ru/images/s2.gif) no-repeat left center}
+.mov{position:relative;top:11px}
+.s_b{background-position:-24px 0}
+.s_r{background-position:-24px -13px}
+.s_s{background-position:-24px -26px}
+.s_i{background-position:-24px -39px}
+.inl{float:left;margin-right:5px}
+.av_y,.av_v,.av_r,.av_s,.av_z{height:15px;width:15px;background:url(http://static.chipdip.ru/images/s2.gif) no-repeat left center;margin-left:auto;margin-right:auto}
+.av_y{background-position:0 0}
+.av_v{background-position:0 -15px}
+.av_r{background-position:0 -30px}
+.av_s{background-position:0 -45px}
+.av_z{background-position:0 -60px}
+.rate_0,.rate_1,.rate_2,.rate_3,.rate_4,.rate_5{height:13px;width:75px;background:url(http://static.chipdip.ru/images/s1_3.gif) no-repeat}
+.rate_5{background-position:-150px -186px}
+.rate_4{background-position:-150px -199px}
+.rate_3{background-position:-150px -212px}
+.rate_2{background-position:-150px -225px}
+.rate_1{background-position:-150px -238px}
+.rate_0{background-position:-150px -251px}
+a.cb,input.btn-set{background:#f5f5f5 url(http://static.chipdip.ru/images/s2.gif) no-repeat left top;font-family:Tahoma,Geneva,Arial,sans-serif;vertical-align:middle;text-align:right;color:#333 !important}
+a.cb{display:inline-block;height:18px;text-decoration:none}
+a.btn-tab,a.btn-vit{width:105px;padding:3px 5px 0 0}
+a.btn-cmp,a.btn-clr,a.btn-set,a.btn-cnc{width:67px;padding:3px 5px 0 0}
+a.btn-tab{background-position:-60px 0}
+a.btn-vit{background-position:-60px -21px}
+a.btn-cmp{background-position:-60px -42px}
+a.btn-clr{background-position:-60px -63px}
+a.btn-set,input.btn-set{background-position:-60px -84px}
+a.btn-cnc{background-position:-60px -105px}
+a.cb:hover,input.btn-set:hover{color:#d72128 !important}
+input.btn-set{height:21px;width:72px;border:0;padding:0 5px 0 0;cursor:pointer}
+div.fphs{border-top:dotted 1px #999;height:2px;font-size:1px;margin:2px 2px 0 2px}
+table.fp{width:100%}
+table.fp td{text-align:center;vertical-align:top}
+td.fprb{border-right:dotted 1px #999}
+table.shops{width:80%;min-width:153px;margin-top:15px;margin-bottom:15px;margin-left:auto ;margin-right:auto}
+table.bigshop{width:220px !important;text-align:left}
+table.shops td{text-align:left;padding:0}
+table.shops div.spc{width:153px;height:1px;font-size:1px}
+table.shops th{text-align:center;margin-bottom:5px}
+table.shops img{border:solid 1px #b7b7b7}
+.shops .town{color:#D72128;font-weight:bold;font-size:12px;display:block;padding:5px 0;text-decoration:none}
+.shops a.dark{color:#333;font-size:12px;font-weight:bold;display:block;padding:0 0 5px 0}
+.shops .red{color:#D72128}
+.shops td .bigshop,.shops .red{font-family:Tahoma,Geneva,Arial,Helvetica,sans-serif}
+div.blue{padding:0 0 5px 0;color:#3333ff}
+div.blue a{color:#3333ff}
+input::-moz-focus-inner{border:0;padding:0}
+#remember,#auc_inner,.anylinkcss,.anylinkcss1{-moz-box-shadow:1px 1px 3px 1px rgba(64,64,64,0.35);-webkit-box-shadow:1px 1px 3px 0px rgba(64,64,64,0.35);box-shadow:1px 1px 3px 1px rgba(64,64,64,0.35)}
+.anylinkcss1{-moz-box-shadow:2px 2px 3px 0px rgba(64,64,64,0.35);-webkit-box-shadow:2px 2px 3px 0px rgba(64,64,64,0.35);box-shadow:2px 2px 3px 0px rgba(64,64,64,0.35)}

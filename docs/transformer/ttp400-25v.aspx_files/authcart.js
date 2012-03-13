@@ -1,0 +1,1 @@
+var AuthNCart = {CartSumma:'0,00',CartQty:'<span>0</span> товаров',UserName:'',CompareQty:''};

@@ -1,0 +1,316 @@
+#centercontent h4{color:#D72128;font-weight:bold;padding-bottom:9px}
+#centercontent table td.pad{padding:10px;white-space:normal;text-align:left}
+#centercontent table td.pad img{margin:0 10px 10px 0}
+#centercontent table.list{margin:10px 0 0 0}
+#centercontent table.list table{margin:0 10px 10px 10px;width:96%}
+#centercontent table.list table td{padding-bottom:10px;border-bottom:1px solid #cdcdcd}
+#centercontent .anchors{padding:10px 15px;color:#333333}
+#centercontent .anchors a{color:#333333}
+#centercontent .anchors .hd{font-weight:bold;color:#D72128;margin:7px 0 0 0;text-transform:uppercase;font-size:10px}
+#centercontent h1.wide{background-color:#f5f6f7;padding:13px 15px;margin:0}
+#a2c_multi,#comp_multi{display:inline-block;width:17px;height:17px;background:url(http://static.chipdip.ru/images/s2.gif) no-repeat}
+#a2c_multi{background-position:-122px -138px}
+#comp_multi{background-position:-145px -138px;margin-bottom:3px}
+input.a2c_btn,input.cmp_btn,form.cmp_frm input,input.prn_btn,a.qst_btn{display:inline-block;cursor:pointer;border:0;width:25px;height:23px;background:url(http://static.chipdip.ru/images/s2.gif) no-repeat;vertical-align:middle}
+input.a2c_btn{background-position:-60px -138px}
+input.cmp_btn{background-position:-29px -138px}
+form.cmp_frm input{background-position:-165px -136px}
+input.prn_btn{background-position:0 -138px}
+a.qst_btn{background-position:-90px -138px}
+div.nomenklat th{padding:5px;background-color:#d4d0c8;border:1px solid #b7b7b7;text-align:left;vertical-align:top}
+div.nomenklat{padding:0 15px}
+div.nomenklat tr.greytr{background-color:#f5f5f5}
+div.nomenklat td{border:1px solid #cdcdcd}
+div.nomenklat td.grey,div.nomenklat tr.grey{background-color:#eaeaea}
+table.cart th.name{min-width:225px}
+table.cart .rt{text-align:right; white-space:nowrap}
+table.cart .qy{padding:0; white-space:nowrap}
+.qy input{margin-left:13px;width:55px}
+table.cart .cr{text-align:center; white-space:nowrap}
+td.itog{text-align:right;border-top:solid 2px #ababab}
+div.overloadmessage{color:#000;padding:15px;margin:10px 0 15px 0;border-top:solid 3px #d71e1e;border-bottom:solid 3px #d71e1e;background-color:#ffffdd}
+div.f9{font-size:9px}
+span.cartcomment{font-size:9px;background-color:#FFFBDD}
+table.cartbuttons{margin-bottom:20px;width:100%}
+table.cartbuttons td{padding:10px 15px}
+table.cartbuttons td.c1{width:35%;text-align:right}
+table.cartbuttons td.c2{width:30%;text-align:center}
+table.cartbuttons td.c3{width:35%;text-align:left}
+table.cartbuttons td input{width:175px}
+table.cartcontrols{width:100%}
+table.cartcontrols a{color:#333333;background:url(http://static.chipdip.ru/images/s2.gif) no-repeat;padding-left:14px}
+table.cartcontrols a.pr{padding-right:10px}
+table.cartcontrols a.stopedit{background-position:-200px -199px}
+table.cartcontrols a.mycarts{background-position:-200px -137px}
+table.cartcontrols a.toexcel{background-position:-200px -219px}
+table.cartcontrols a.toprint{background-position:-200px -159px}
+table.cartcontrols a.clearcart{background-position:-201px -177px;padding-left:11px}
+.title{background-color:#F5F5F5;margin:-5px -5px 0;overflow:auto;padding:5px 5px 0 5px;color:#333;height:41px}
+.title a{color:#333 !important;font-weight:bold}
+.pic-show img{margin:5px 0;width:150px;height:150px;border:none}
+.ico{clear:both;text-align:center}
+.ico table{margin-bottom:10px;width:100%}
+.ico table td{padding:0;white-space:nowrap}
+.ico table th{width:60%;padding:0 5px 0 0;background-color:#FFFFFF;border:none;white-space:nowrap}
+.ico table th b{color:#ED1B23}
+.ico div,.ico div em{font-size:10px}
+.ico div{font-weight:normal;text-align:left}
+.ico img{vertical-align:middle}
+.ico a{font-weight:bold}
+.k_pic{width:25px;height:23px;vertical-align:middle;border:0}
+#advsearch{padding:0 15px}
+#advsearch table.pad{margin-top:10px}
+#advsearch input,#advsearch select{margin:3px 0}
+table.vitrina{border-right:1px solid #cdcdcd;width:100%}
+.tab{text-align:center;padding-top:13px !important}
+.tab img{margin:4px 0 0}
+.tab div.bl{margin-bottom:15px;text-align:center}
+.tab a,.tab div{font-size:10px}
+.ontop{text-align:right;padding:2px 10px 10px 0}
+.ontop a{display:inline-block;border:0;width:15px;height:15px;background:url(http://static.chipdip.ru/images/s2.gif) no-repeat 0 -112px}
+div.links,div.links_p,td.doclink a{color:#666;font-size:10px}
+div.links_p{margin:5px 3px 0 0;line-height:16px}
+div.links_p a{color:#333;background-color:#dce1e5;font-size:10px}
+td.doclink{padding-left:30px}
+td.doclink a{display:block;text-decoration:none;padding:5px 5px 6px 20px;background:transparent url(http://static.chipdip.ru/images/s2.gif) no-repeat -196px 4px}
+.subcategory,.subcategory a{font-weight:bold;color:#333}
+.g_info{padding:10px}
+.g_info_header{padding:5px 0 5px 0;font-size:14px;font-weight:bold;text-transform:uppercase;color:#333333;border-bottom:1px solid #cdcdcd}
+div.nomenklat td table td{padding:0;width:50%;white-space:nowrap;border:none}
+div.nomenklat td table td.pic-show{width:60%;text-align:center}
+div.nomenklat td table{width:100%}
+dfn{font-style:normal;color:#d72128}
+div.nomenklat dfn{font-size:9px}
+.minifoto{width:21px;height:17px;vertical-align:middle;margin-top:1px;border:0}
+.nrb{border-right:none !important}
+.nlb{border-left:none !important}
+div.avinfo{background-color:#F7F7F0;border:1px solid #cdcdcd !important;text-align:center;padding:5px}
+div.avinfo table.av_x{width:860px;margin-left:auto;margin-right:auto}
+div.avinfo table.av_x td{border:none;width:auto;white-space:nowrap;background-color:#F7F7F0}
+div.avinfo table.av_x td.pd{padding-right:10px}
+.pr0{padding-right:0 !important}
+.fs9{font-size:9px}
+.n_act{color:#bbbbbb !important;text-decoration:none}
+.techdochead{background-color:#E6E7E9;font-weight:bold;margin:0;padding:6px 15px 8px 15px;border-bottom:1px solid #DFDFDF}
+.private{margin:10px 15px}
+.private img{margin-top:3px;width:12px;height:12px;border:0}
+.private a{color:#333333}
+.title a b{color:#bb2128 !important}
+.nrb a b{color:#aa2128 !important}
+div.libsearch{margin-bottom:15px;color:#444444}
+div.libsearch a.res{font-size:14px}
+div.libsearch a.res{font-size:14px}
+div.libsearch a.prw{color:#444444}
+table.catlist{width:100%;margin-top:15px}
+table.catlist td{vertical-align:top;width:50%}
+table.catlist div{height:62px;margin:0 10px 10px 15px;clear:both}
+img.pic60,table.catlist div img{height:60px;width:60px;border:0}
+table.catlist div img{float:left;margin-right:15px}
+table.catlist div a{font-size:12px;color:#333333;font-weight:bold}
+table.catlist dl{display:block;clear:both;margin:0 10px 10px 15px}
+table.catlist dt{display:inline}
+table.catlist dt a{color:#333333;font-size:12px;font-weight:bold}
+table.catlist dt a.noact{color:#D72128;text-decoration:none}
+table.catlist dd{line-height:18px}
+table.catlist dd a{white-space:nowrap;color:#333}
+table.catlist dd i{font-style:normal;color:#d72128;padding-left:3px;padding-right:3px}
+table.catlist dd em{display:block;clear:both;height:20px;font-size:1px}
+table.catlist dt img{border:1px solid #cdcdcd;margin:0 10px 0 0;width:80px;height:80px;float:left}
+table.extmnf{width:100%}
+table.extmnf td{color:#666;width:50%;vertical-align:top}
+table.extmnf td.righttd{padding-left:10px}
+table.extmnf a{color:#333333;font-size:12px;font-weight:bold;line-height:20px}
+div.subssovet{padding:10px;margin:20px 15px;border:dashed 1px #928572;background-color:#ffffe1}
+div.pdfpreviewcont{text-align:center;padding:10px}
+div.pdfpreviewcont div{display:inline-block;padding:5px;border:dotted 1px #cdcdcd}
+ul.searchsite{list-style-image:url(http://static.chipdip.ru/images/nexthigh.gif)}
+ul.searchsite li{padding-bottom:15px}
+ul.searchsite li a{font-size:14px}
+ul.searchsite li span{color:#666666}
+a.photozoom i.lens,div.zoom i.lens{display:inline-block;width:24px;height:24px;background:url(http://static.chipdip.ru/images/s2.gif) no-repeat -130px -172px;border:0;padding:0}
+div.zoom i.lens{margin-top:10px}
+div.zoom a{text-decoration:none}
+.tdlink a{background:url(http://static.chipdip.ru/images/s2.gif) no-repeat -334px -181px;padding:2px 3px 2px 20px}
+.tdlink a.i_flv{background-position:-334px -135px}
+.tdlink a.i_pdf{background-position:-334px -38px}
+.tdlink a.i_zip{background-position:-334px -86px}
+.tdlink a.i_payment{background-position:-334px -227px}
+.tdlink b{color:#d72128}
+h4.vmenuitem{background:url(http://static.chipdip.ru/images/s2.gif) no-repeat -204px -244px;padding-left:14px}
+#compare{margin-top:10px;margin-bottom:10px}
+#compare td,#compare th{padding:5px;border:1px solid #dfdfdf}
+#compare th{text-align:left;width:175px}
+#compare img{margin:5px}
+.info{padding:10px 10px 10px 60px;margin:10px 0;border:dashed 1px #928572;background:#ffffe1 url(http://static.chipdip.ru/images/error.gif) no-repeat 10px 15px}
+.emptylist{padding:20px 10px 30px 60px ;margin:30px 0 60px 0;border:dashed 1px #928572;color:#D72128;font-weight:bold;background:#ffffe1 url(http://static.chipdip.ru/images/error.gif) no-repeat 10px 20px}
+.div_back{padding:10px 0}
+img.pic{border:0;width:150px;height:150px}
+a.cmp_clear{display:inline-block;width:17px;height:17px;border:0;background:url(http://static.chipdip.ru/images/s2.gif) no-repeat 0 -87px}
+#filter td{vertical-align:middle}
+#filter table.techdoc{margin:5px 15px 0 0;width:230px}
+#filter table.techdoc th{border:1px solid #cdcdcd;background-color:#E6E7E9;color:#D72128;font-weight:bold;padding:3px 5px;text-align:center}
+#filter table.techdoc td{border:1px solid #cdcdcd;height:40px;padding:0 5px !important;text-align:center}
+#filter h1{padding:0 0 10px 0;border:none}
+#filter h1 span{display:block;font-size:11px;text-transform:lowercase;font-style:italic}
+#filter div.comment,#filter div.comment b{font-size:12px}
+#filter div.comment{margin:-5px 10px 0 15px}
+#filter td.g_img{padding:5px 0 0 15px;width:3%}
+#filter td.g_img img{border:0;width:60px;height:60px}
+#param{margin:5px 15px 0 15px;padding:5px;background-color:#f5f5f5;border:1px solid #cdcdcd}
+#param h4{padding:5px;color:#777A7C !important;font-weight:bold}
+table.searchres{background-color:#f5f5f5;width:100%}
+table.searchres i{padding:0 10px;font-style:normal;color:#D72128;font-weight:bold}
+#content #centercontent table.searchres img{border:none;margin:0 5px}
+table.searchres td,table.searchres th{border:1px solid #DFDFDF;color:#333}
+table.searchres th{background-color:#fff;color:#544F4F;padding:5px}
+table.searchres td{padding:5px 15px}
+table.searchres td.mnfc{background-color:#faf8ed}
+table.searchres td.g_img{padding:3px;width:3%;background-color:#ffffff !important;height:60px}
+table.searchres td.empt_td{padding:0 !important;width:1px;height:60px}
+table.searchres td.g_img img{margin:0 !important;width:60px;height:60px;border:none}
+table.searchres td a,table.searchres td span{color:#666666}
+table.searchres td div.searchlink,table.searchres td div.searchlink a{color:#333333;font-weight:bold;font-size:14px}
+table.searchres td div.searchlink{padding:5px 0}
+table.searchres td a.allpos{color:#333333 !important}
+table.searchres td.countpos{color:#D72128;font-weight:bold;text-transform:uppercase;width:200px;text-align:center}
+table.searchres tr.catrazdel td{background-color:#f1faff}
+table.selects th{padding:0 5px 3px 0;font-weight:bold;text-align:left;color:#544F4F}
+table.selects td{padding:0 5px 0 0}
+table.selects select{z-index:1}
+table.vybor{border-collapse:separate;border-spacing:0;border:none}
+table.vybor td.td01{border-right:1px solid #cdcdcd;padding:0 15px 0 0}
+table.vybor td.td02{border-left:1px solid #fff;padding:0 0 0 19px}
+table.vybor b{display:block;padding:0 5px 2px 0;color:#544F4F}
+table.vybor b.skl{padding-top:3px}
+#resetall{display:block;margin-top:3px;color:#333;background:url(http://static.chipdip.ru/images/x2.gif) no-repeat 0 -13px;padding-left:16px}
+#gqreset,a.xdel{display:inline-block;width:13px;height:13px;vertical-align:middle;position:relative;background:url(http://static.chipdip.ru/images/x2.gif) no-repeat 0 0}
+#gqreset{left:-63px}
+a.xdel{left:-16px}
+#resetall:hover,#gqreset:hover,a.xdel:hover{background-position:0 -13px}
+.gq{width:150px}
+.gqbtn{width:40px;height:21px;margin-left:7px}
+#myparamform select{border:solid 1px #999;margin:0}
+#myparamform select.ctrl_act{border:solid 1px #ffb030}
+#myparamform input.gq{border:solid 1px #999;padding:2px}
+#myparamform input.ctrl_act{border:solid 1px #ffb030;padding:2px}
+.sklad{width:202px}
+#product_content{padding:0 15px 20px 15px;background-color:#ffffff}
+.itemclass{text-align:right;padding-top:1px}
+.itemclass span{background-color:#D72128;color:#ffffff;padding:0 10px 0 10px;font-weight:bold;border-top:solid 1px #f72128;border-left:solid 1px #f72128;border-bottom:solid 1px #a72128;border-right:solid 1px #a72128}
+#product_content h1{margin:0 0 5px 0;border:none}
+.maininfo th{padding-right:25px;font-weight:normal;text-align:left}
+.maininfo th.multiphoto{padding-right:15px}
+.zoom{padding:5px 0;text-align:center}
+.pricetab{padding:0 0 10px 0;margin:0 0 10px 0;border-bottom:dotted 1px #999999;min-width:441px}
+.pricetab span,.pricetab b{white-space:nowrap}
+#productctrls{width:100%;margin-bottom:10px}
+#productctrls td{padding:0 15px 0 0;white-space:nowrap}
+#productctrls td.a2cart{text-align:right;width:80%;padding:0 0 0 15px}
+#productctrls td a,#productctrls td b{font-weight:bold;color:#333333}
+#productctrls td a img{vertical-align:middle}
+#productctrls td.a2cart a,#productctrls td.a2cart b{font-weight:bold;color:#d72128}
+.graytext,h5{color:#777A7C;font-size:9px;font-weight:bold;text-transform:uppercase}
+h5 a,h5 span{font-size:9px;font-weight:bold;text-transform:uppercase;color:#d72128;cursor:default;text-decoration:none}
+h5{margin:0;padding:0 0 5px 0}
+h5 span{font-weight:normal;text-transform:lowercase}
+table.availability{clear:both;width:100%;border-collapse:collapse}
+table.availability td,table.availability th{padding:5px;text-align:left;border:1px solid #cdcdcd}
+table.availability th{min-width:125px}
+table.availability td.anal2pos{padding:0}
+table.availability td.anal2pos table{border-collapse:collapse}
+table.availability td.anal2pos table td{padding:3px 5px;border:none}
+table.availability td.anal2pos table td.bbtm{border-bottom:solid 1px #cdcdcd;padding:0;height:1px;font-size:1px}
+table.availability td.anal2pos table td.brt{border-right:solid 1px #cdcdcd}
+.fs9{font-size:9px}
+table.availability th{background-color:#f5f5f5;font-weight:bold}
+table.availability td img{vertical-align:middle}
+.razdel{clear:both;margin:20px 0 15px 0;border-bottom:1px solid #dfdfdf;font-size:1px}
+.techdata{border:0;border-collapse:collapse}
+.techdata td.td_param{padding-right:25px}
+table.techparam{color:#333333;font-size:9px;min-width:250px}
+table.techparam td,table.techparam th{padding:5px;text-align:left;border:1px solid #cdcdcd}
+table.techparam th{background-color:#f5f5f5;font-weight:normal}
+.techdocs div{padding:0 5px 5px 0}
+.techdocs img{vertical-align:middle}
+.techdocs a{color:#333333}
+.analogs{margin:10px 15px 20px 15px;padding:10px 0;border-top:1px solid #dfdfdf}
+.analogs table th{padding-right:10px;font-weight:normal;text-align:left}
+.analogs table td{border-left:1px solid #dfdfdf;padding:0 0 5px 15px}
+.analogs table th div{padding:5px 5px 5px 0}
+.analogs a{color:#333}
+#avl{border-collapse:collapse;border:solid 1px #cdcdcd}
+#avl td{padding:8px 10px;border:solid 1px #cdcdcd}
+#avl td a{color:#333}
+#avl td.gr,#avl td.qty{background-color:#f5f5f5}
+#avl td.qty,#avl td.subs{padding:0 10px !important;width:3%;text-align:center}
+#avl td.load{border:none !important;color:#f5f5f5 !important}
+#avl td.load span{visibility:hidden !important}
+#avltext{border-collapse:collapse;border:solid 1px #cdcdcd;border-bottom:none;background-color:#E6E5D3}
+#avltext td{padding:5px 10px}
+div.info1{padding:0 10px 10px 10px;text-align:center}
+div.info2{padding:10px 20px 0 20px;text-align:center}
+.avl_hdr{margin:10px 15px 0 15px;border:solid 1px #cdcdcd;background-color:#f5f5f5;text-align:center;padding:0 15px}
+.notfound{padding:30px 15px}
+.notfound span{color:#D72128;font-size:18px}
+.comment_text{margin-top:5px;color:#777A7C;font-size:9px}
+.item_desc{padding:20px 0 0 0}
+.item_desc p{padding:1px 0 15px 0;margin:0}
+.item_desc ul{margin:5px 40px 5px 15px}
+.item_desc table{border-collapse:collapse}
+.item_desc table td {padding:2px 10px 2px 0; vertical-align:top}
+.item_desc a{color:#333333}
+.red_b{color:#D72128;font-weight:bold}
+.blue_b{color:#2158D7;font-weight:bold}
+.sale_t1,.sale_t2{border:none !important}
+.sale_t1{padding-left:0 !important;font-weight:bold}
+.sale_t2{padding-left:15px !important;color:#D72128;font-weight:bold}
+.striked{text-decoration:line-through}
+.video{width:10%;padding:21px 20px 0 0}
+.video h4{color:#d72128;padding-bottom:5px}
+.video h6{color:#333333;font-size:11px;font-weight:bold;margin:0;padding-bottom:5px}
+.empty{width:15px}
+#slideshow{overflow:hidden;width:505px}
+#slideshow ul{width:3500px;list-style:none outside none;margin:0;padding:0}
+#slideshow li{float:left;margin-right:20px;font-size:10px;list-style:none outside none}
+#slideshow div.evt{color:#333333;display:block;height:24px;width:155px;margin:0 0 3px 0;overflow:hidden}
+#slideshow div.ivt{font-size:10px;font-weight:bold}
+#scroll-btns td.scrolls{display:none}
+#scroll-next,#scroll-prev{display:block;width:26px;height:62px;background:url(http://static.chipdip.ru/images/scroll-arrow.gif) repeat-x top;outline:none;cursor:pointer}
+#scroll-next{margin-left:14px}
+#scroll-prev{margin-right:14px;margin-left:5px}
+#scroll-next{background-position:0 0}
+#scroll-next.noact,#scroll-next.noact:hover{background-position:0 -62px;cursor:default !important}
+#scroll-next:hover{background-position:0 -124px}
+#scroll-prev{background-position:0 -186px}
+#scroll-prev.noact,#scroll-prev.noact:hover{background-position:0 -248px;cursor:default !important}
+#scroll-prev:hover{background-position:0 -310px}
+#compare_block{display:none}
+#compare_block .infoarea{padding:10px 20px;background-color:#ffffff;text-align:center}
+#compare_block b{color:#666666}
+.shop_y,.shop_n{font-size:18px;font-weight:bold}
+.shop_y{color:#33cc33}
+.shop_n{color:#808780}
+#shop_avail{display:none}
+div.blue_head{margin-top:22px}
+a.i_pdf{cursor:pointer !important}
+#pdfpreview{display:none;position:absolute}
+#pdfpreview img{border:solid 1px #666;padding:10px;background-color:#fff}
+table.pad td.gname,table.pad td.gname_fc{font-size:14px;font-weight:bold;color:#333;background-color:#fff;border-bottom:solid 2px #F8CF45}
+table.pad td.gname{padding:30px 5px 10px 5px !important}
+table.pad td.gname_fc{padding:10px 5px !important}
+table.pad td.gname span,table.pad td.gname_fc span,table.pad td.gname span a,table.pad td.gname_fc span a {font-size:11px;font-weight:normal;color:#666}
+#gbcont{height:60px;margin:15px 15px 30px 15px;text-align:center}
+#gb{display:none}
+#zoomcont{overflow:hidden;width:150px}
+#photopager{padding-top:5px;display:none;text-align:center}
+#photopager a{display:inline-block;padding:1px 3px;margin:0 2px;text-decoration:none;border:solid 1px #999;font-size:10px;color:#fff;background-color:#999}
+#photopager a:hover{background-color:#fff;border:solid 1px #FFB871;color:#FFB871}
+#photopager a.selected{background-color:#fff;border:solid 1px #999;color:#999;cursor:default}
+#photoscroll{display:block;width:670px;list-style:none;margin:0;padding:0}
+#photoscroll li{float:left;list-style:none;margin-right:5px}
+#photoscroll img{width:60px; height:60px;border:solid 1px #cdcdcd;margin-bottom:5px}
+div.multiphoto{width:194px; text-align:center; border:solid 1px #cdcdcd;}
+#photopager input{margin:0;font-size:10px;border:0;color:#fff;background-color:#999;outline:none;cursor:pointer}
+#photopager input:focus{border:none;border-color:transparent;}
+#photopager input.noact{color:#fff;background-color:#cdcdcd;cursor:default}
+#zoomcont{padding:0;width:196px;height:62px;margin-top:5px;overflow:hidden}
