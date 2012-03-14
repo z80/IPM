@@ -6,11 +6,11 @@ dt : 70;
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-p : 10;
+p : 70;
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-eq: dt/p = 60/sqrt(s);
+eq: dt/p = 50/sqrt(s);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
