@@ -1,0 +1,21 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 11.08.0 ] */
+
+/* [wxMaxima: input   start ] */
+dt : 70;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+p : 10;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq: dt/p = 60/sqrt(s);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve( [eq], [s] );
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
