@@ -1,0 +1,15 @@
+AC_INIT(configure.in)
+
+AM_CONFIG_HEADER(config.h)
+AM_INIT_AUTOMAKE(ftdi_eeprom, 0.3)
+
+AC_LANG_C
+AC_PROG_CC
+
+AC_CHECK_LIB(confuse, cfg_getstr,,[AC_MSG_ERROR(can't find confuse library)])
+
+PKG_CHECK_MODULES(LIBFTDI, libftdi)
+AC_SUBST(LIBFTDI_CFLAGS)
+AC_SUBST(LIBFTDI_LIBS)
+
+AC_OUTPUT(Makefile src/Makefile ftdi_eeprom.spec)
