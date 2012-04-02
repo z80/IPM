@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Tue 03 Apr 2012 12:20:06 AM MSK
+EESchema Schematic File Version 2  date Tue 03 Apr 2012 12:20:51 AM MSK
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -45,6 +45,15 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L CRYSTAL X?
+U 1 1 4F7A0A14
+P 4900 4650
+F 0 "X?" H 4900 4800 60  0000 C CNN
+F 1 "CRYSTAL" H 4900 4500 60  0000 C CNN
+	1    4900 4650
+	0    -1   -1   0   
+$EndComp
 $Comp
 L GND #PWR?
 U 1 1 4F7A09EC
