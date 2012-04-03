@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Tue 03 Apr 2012 01:04:14 AM MSK
+EESchema Schematic File Version 2  date Tue 03 Apr 2012 09:00:56 PM MSK
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -35,9 +35,9 @@ EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
-Sheet 28 45
+Sheet 27 28
 Title ""
-Date "2 apr 2012"
+Date "3 apr 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -91,7 +91,7 @@ AR Path="/4F79FC32/4F79F12A" Ref="#PWR28"  Part="1"
 AR Path="/4F79EEDB/4F79F12A" Ref="#PWR67"  Part="1" 
 AR Path="/4F79FEFF/4F79F12A" Ref="#PWR12"  Part="1" 
 AR Path="/4F79FF1E/4F79F12A" Ref="#PWR12"  Part="1" 
-F 0 "#PWR16" H 7900 5100 30  0001 C CNN
+F 0 "#PWR12" H 7900 5100 30  0001 C CNN
 F 1 "GND" H 7900 5030 30  0001 C CNN
 	1    7900 5100
 	1    0    0    -1  
@@ -110,7 +110,7 @@ AR Path="/4F79FC32/4F79F111" Ref="R28"  Part="1"
 AR Path="/4F79EEDB/4F79F111" Ref="R91"  Part="1" 
 AR Path="/4F79FEFF/4F79F111" Ref="R12"  Part="1" 
 AR Path="/4F79FF1E/4F79F111" Ref="R12"  Part="1" 
-F 0 "R16" V 7980 4550 50  0000 C CNN
+F 0 "R12" V 7980 4550 50  0000 C CNN
 F 1 "10k" V 7900 4550 50  0000 C CNN
 	1    7900 4550
 	1    0    0    -1  
@@ -129,7 +129,7 @@ AR Path="/4F79FC32/4F79F0F0" Ref="#PWR27"  Part="1"
 AR Path="/4F79EEDB/4F79F0F0" Ref="#PWR66"  Part="1" 
 AR Path="/4F79FEFF/4F79F0F0" Ref="#PWR11"  Part="1" 
 AR Path="/4F79FF1E/4F79F0F0" Ref="#PWR11"  Part="1" 
-F 0 "#PWR15" H 6400 4600 30  0001 C CNN
+F 0 "#PWR11" H 6400 4600 30  0001 C CNN
 F 1 "GND" H 6400 4530 30  0001 C CNN
 	1    6400 4600
 	1    0    0    -1  
@@ -148,7 +148,7 @@ AR Path="/4F79FC32/4F79F0DB" Ref="#PWR26"  Part="1"
 AR Path="/4F79EEDB/4F79F0DB" Ref="#PWR65"  Part="1" 
 AR Path="/4F79FEFF/4F79F0DB" Ref="#PWR10"  Part="1" 
 AR Path="/4F79FF1E/4F79F0DB" Ref="#PWR10"  Part="1" 
-F 0 "#PWR14" H 7900 2500 30  0001 C CNN
+F 0 "#PWR10" H 7900 2500 30  0001 C CNN
 F 1 "VCC" H 7900 2500 30  0000 C CNN
 	1    7900 2400
 	1    0    0    -1  
@@ -167,7 +167,7 @@ AR Path="/4F79FC32/4F79F0CE" Ref="#PWR25"  Part="1"
 AR Path="/4F79EEDB/4F79F0CE" Ref="#PWR64"  Part="1" 
 AR Path="/4F79FEFF/4F79F0CE" Ref="#PWR9"  Part="1" 
 AR Path="/4F79FF1E/4F79F0CE" Ref="#PWR9"  Part="1" 
-F 0 "#PWR13" H 7300 2500 30  0001 C CNN
+F 0 "#PWR9" H 7300 2500 30  0001 C CNN
 F 1 "VCC" H 7300 2500 30  0000 C CNN
 	1    7300 2400
 	1    0    0    -1  
@@ -186,7 +186,7 @@ AR Path="/4F79FC32/4F79F09F" Ref="Q7"  Part="1"
 AR Path="/4F79EEDB/4F79F09F" Ref="Q30"  Part="1" 
 AR Path="/4F79FEFF/4F79F09F" Ref="Q3"  Part="1" 
 AR Path="/4F79FF1E/4F79F09F" Ref="Q3"  Part="1" 
-F 0 "Q4" H 7800 3350 60  0000 R CNN
+F 0 "Q3" H 7800 3350 60  0000 R CNN
 F 1 "bc857" H 7800 3650 60  0000 R CNN
 	1    7800 3500
 	1    0    0    1   
@@ -205,7 +205,7 @@ AR Path="/4F79FC32/4F79EFBA" Ref="R25"  Part="1"
 AR Path="/4F79EEDB/4F79EFBA" Ref="R88"  Part="1" 
 AR Path="/4F79FEFF/4F79EFBA" Ref="R9"  Part="1" 
 AR Path="/4F79FF1E/4F79EFBA" Ref="R9"  Part="1" 
-F 0 "R13" V 7380 2950 50  0000 C CNN
+F 0 "R9" V 7380 2950 50  0000 C CNN
 F 1 "10k" V 7300 2950 50  0000 C CNN
 	1    7300 2950
 	1    0    0    -1  
@@ -224,7 +224,7 @@ AR Path="/4F79FC32/4F79EFB2" Ref="R26"  Part="1"
 AR Path="/4F79EEDB/4F79EFB2" Ref="R89"  Part="1" 
 AR Path="/4F79FEFF/4F79EFB2" Ref="R10"  Part="1" 
 AR Path="/4F79FF1E/4F79EFB2" Ref="R10"  Part="1" 
-F 0 "R14" V 6730 3500 50  0000 C CNN
+F 0 "R10" V 6730 3500 50  0000 C CNN
 F 1 "1k" V 6650 3500 50  0000 C CNN
 	1    6650 3500
 	0    -1   -1   0   
@@ -245,7 +245,7 @@ AR Path="/4F79FC32/4F79EF52" Ref="R27"  Part="1"
 AR Path="/4F79EEDB/4F79EF52" Ref="R90"  Part="1" 
 AR Path="/4F79FEFF/4F79EF52" Ref="R11"  Part="1" 
 AR Path="/4F79FF1E/4F79EF52" Ref="R11"  Part="1" 
-F 0 "R15" V 4780 4350 50  0000 C CNN
+F 0 "R11" V 4780 4350 50  0000 C CNN
 F 1 "1k5" V 4700 4350 50  0000 C CNN
 	1    4700 4350
 	1    0    0    -1  
@@ -266,7 +266,7 @@ AR Path="/4F79FC32/4F79EF18" Ref="U7"  Part="1"
 AR Path="/4F79EEDB/4F79EF18" Ref="U18"  Part="1" 
 AR Path="/4F79FEFF/4F79EF18" Ref="U3"  Part="1" 
 AR Path="/4F79FF1E/4F79EF18" Ref="U3"  Part="1" 
-F 0 "U4" H 5510 4020 70  0000 C CNN
+F 0 "U3" H 5510 4020 70  0000 C CNN
 F 1 "PHDARL" H 5510 3380 70  0000 C CNN
 	1    5500 3700
 	1    0    0    -1  

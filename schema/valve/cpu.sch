@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Tue 03 Apr 2012 01:04:14 AM MSK
+EESchema Schematic File Version 2  date Tue 03 Apr 2012 09:00:56 PM MSK
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -35,9 +35,9 @@ EELAYER 25  0
 EELAYER END
 $Descr A3 16535 11700
 encoding utf-8
-Sheet 45 45
+Sheet 45 28
 Title ""
-Date "2 apr 2012"
+Date "3 apr 2012"
 Rev ""
 Comp ""
 Comment1 ""
