@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Tue 03 Apr 2012 09:00:56 PM MSK
+EESchema Schematic File Version 2  date Wed 04 Apr 2012 04:27:02 PM MSK
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -35,9 +35,9 @@ EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
-Sheet 27 28
+Sheet 26 27
 Title ""
-Date "3 apr 2012"
+Date "4 apr 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,8 +45,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 8600 4000 2    60   Input ~ 0
-out
+Wire Wire Line
+	6400 4600 6400 3900
 Connection ~ 7900 4000
 Wire Wire Line
 	8600 4000 7900 4000
@@ -68,163 +68,211 @@ Wire Wire Line
 Wire Wire Line
 	4700 4600 4700 4850
 Wire Wire Line
-	6100 3900 6400 3900
+	6400 3900 6100 3900
 Wire Wire Line
 	6900 3500 7600 3500
 Wire Wire Line
 	7300 2700 7300 2400
 Wire Wire Line
-	6400 3900 6400 4600
-Wire Wire Line
 	7900 4800 7900 5100
+Text HLabel 8600 4000 2    60   Input ~ 0
+out
 $Comp
-L GND #PWR12
+L GND #PWR07
 U 1 1 4F79F12A
 P 7900 5100
-AR Path="/4F79FC54/4F79F12A" Ref="#PWR12"  Part="1" 
-AR Path="/4F79FC56/4F79F12A" Ref="#PWR4"  Part="1" 
-AR Path="/4F79FC55/4F79F12A" Ref="#PWR8"  Part="1" 
-AR Path="/4F79FC53/4F79F12A" Ref="#PWR16"  Part="1" 
-AR Path="/4F79FC48/4F79F12A" Ref="#PWR20"  Part="1" 
-AR Path="/4F79FC47/4F79F12A" Ref="#PWR24"  Part="1" 
-AR Path="/4F79FC32/4F79F12A" Ref="#PWR28"  Part="1" 
-AR Path="/4F79EEDB/4F79F12A" Ref="#PWR67"  Part="1" 
-AR Path="/4F79FEFF/4F79F12A" Ref="#PWR12"  Part="1" 
-AR Path="/4F79FF1E/4F79F12A" Ref="#PWR12"  Part="1" 
-F 0 "#PWR12" H 7900 5100 30  0001 C CNN
+AR Path="/4F79FF1F/4F79F12A" Ref="#PWR07"  Part="1" 
+AR Path="/4F79FF1E/4F79F12A" Ref="#PWR011"  Part="1" 
+AR Path="/4F79FF0A/4F79F12A" Ref="#PWR015"  Part="1" 
+AR Path="/4F79FF09/4F79F12A" Ref="#PWR019"  Part="1" 
+AR Path="/4F79FF00/4F79F12A" Ref="#PWR023"  Part="1" 
+AR Path="/4F79FEFF/4F79F12A" Ref="#PWR027"  Part="1" 
+AR Path="/4F79FEF8/4F79F12A" Ref="#PWR031"  Part="1" 
+AR Path="/4F79FEC2/4F79F12A" Ref="#PWR035"  Part="1" 
+AR Path="/4F79FC56/4F79F12A" Ref="#PWR039"  Part="1" 
+AR Path="/4F79FC55/4F79F12A" Ref="#PWR043"  Part="1" 
+AR Path="/4F79FC54/4F79F12A" Ref="#PWR047"  Part="1" 
+AR Path="/4F79FC53/4F79F12A" Ref="#PWR051"  Part="1" 
+AR Path="/4F79FC48/4F79F12A" Ref="#PWR055"  Part="1" 
+AR Path="/4F79FC47/4F79F12A" Ref="#PWR059"  Part="1" 
+AR Path="/4F79FC32/4F79F12A" Ref="#PWR063"  Part="1" 
+AR Path="/4F79EEDB/4F79F12A" Ref="#PWR095"  Part="1" 
+F 0 "#PWR095" H 7900 5100 30  0001 C CNN
 F 1 "GND" H 7900 5030 30  0001 C CNN
 	1    7900 5100
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R12
+L R R4
 U 1 1 4F79F111
 P 7900 4550
-AR Path="/4F79FC54/4F79F111" Ref="R12"  Part="1" 
-AR Path="/4F79FC56/4F79F111" Ref="R4"  Part="1" 
-AR Path="/4F79FC55/4F79F111" Ref="R8"  Part="1" 
-AR Path="/4F79FC53/4F79F111" Ref="R16"  Part="1" 
-AR Path="/4F79FC48/4F79F111" Ref="R20"  Part="1" 
-AR Path="/4F79FC47/4F79F111" Ref="R24"  Part="1" 
-AR Path="/4F79FC32/4F79F111" Ref="R28"  Part="1" 
-AR Path="/4F79EEDB/4F79F111" Ref="R91"  Part="1" 
-AR Path="/4F79FEFF/4F79F111" Ref="R12"  Part="1" 
-AR Path="/4F79FF1E/4F79F111" Ref="R12"  Part="1" 
-F 0 "R12" V 7980 4550 50  0000 C CNN
+AR Path="/4F79FF1F/4F79F111" Ref="R4"  Part="1" 
+AR Path="/4F79FF1E/4F79F111" Ref="R8"  Part="1" 
+AR Path="/4F79FF0A/4F79F111" Ref="R12"  Part="1" 
+AR Path="/4F79FF09/4F79F111" Ref="R16"  Part="1" 
+AR Path="/4F79FF00/4F79F111" Ref="R20"  Part="1" 
+AR Path="/4F79FEFF/4F79F111" Ref="R24"  Part="1" 
+AR Path="/4F79FEF8/4F79F111" Ref="R28"  Part="1" 
+AR Path="/4F79FEC2/4F79F111" Ref="R32"  Part="1" 
+AR Path="/4F79FC56/4F79F111" Ref="R36"  Part="1" 
+AR Path="/4F79FC55/4F79F111" Ref="R40"  Part="1" 
+AR Path="/4F79FC54/4F79F111" Ref="R44"  Part="1" 
+AR Path="/4F79FC53/4F79F111" Ref="R48"  Part="1" 
+AR Path="/4F79FC48/4F79F111" Ref="R52"  Part="1" 
+AR Path="/4F79FC47/4F79F111" Ref="R56"  Part="1" 
+AR Path="/4F79FC32/4F79F111" Ref="R60"  Part="1" 
+AR Path="/4F79EEDB/4F79F111" Ref="R111"  Part="1" 
+F 0 "R111" V 7980 4550 50  0000 C CNN
 F 1 "10k" V 7900 4550 50  0000 C CNN
 	1    7900 4550
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR11
+L GND #PWR08
 U 1 1 4F79F0F0
 P 6400 4600
-AR Path="/4F79FC54/4F79F0F0" Ref="#PWR11"  Part="1" 
-AR Path="/4F79FC56/4F79F0F0" Ref="#PWR3"  Part="1" 
-AR Path="/4F79FC55/4F79F0F0" Ref="#PWR7"  Part="1" 
-AR Path="/4F79FC53/4F79F0F0" Ref="#PWR15"  Part="1" 
-AR Path="/4F79FC48/4F79F0F0" Ref="#PWR19"  Part="1" 
-AR Path="/4F79FC47/4F79F0F0" Ref="#PWR23"  Part="1" 
-AR Path="/4F79FC32/4F79F0F0" Ref="#PWR27"  Part="1" 
-AR Path="/4F79EEDB/4F79F0F0" Ref="#PWR66"  Part="1" 
-AR Path="/4F79FEFF/4F79F0F0" Ref="#PWR11"  Part="1" 
-AR Path="/4F79FF1E/4F79F0F0" Ref="#PWR11"  Part="1" 
-F 0 "#PWR11" H 6400 4600 30  0001 C CNN
+AR Path="/4F79FF1F/4F79F0F0" Ref="#PWR08"  Part="1" 
+AR Path="/4F79FF1E/4F79F0F0" Ref="#PWR012"  Part="1" 
+AR Path="/4F79FF0A/4F79F0F0" Ref="#PWR016"  Part="1" 
+AR Path="/4F79FF09/4F79F0F0" Ref="#PWR020"  Part="1" 
+AR Path="/4F79FF00/4F79F0F0" Ref="#PWR024"  Part="1" 
+AR Path="/4F79FEFF/4F79F0F0" Ref="#PWR028"  Part="1" 
+AR Path="/4F79FEF8/4F79F0F0" Ref="#PWR032"  Part="1" 
+AR Path="/4F79FEC2/4F79F0F0" Ref="#PWR036"  Part="1" 
+AR Path="/4F79FC56/4F79F0F0" Ref="#PWR040"  Part="1" 
+AR Path="/4F79FC55/4F79F0F0" Ref="#PWR044"  Part="1" 
+AR Path="/4F79FC54/4F79F0F0" Ref="#PWR048"  Part="1" 
+AR Path="/4F79FC53/4F79F0F0" Ref="#PWR052"  Part="1" 
+AR Path="/4F79FC48/4F79F0F0" Ref="#PWR056"  Part="1" 
+AR Path="/4F79FC47/4F79F0F0" Ref="#PWR060"  Part="1" 
+AR Path="/4F79FC32/4F79F0F0" Ref="#PWR064"  Part="1" 
+AR Path="/4F79EEDB/4F79F0F0" Ref="#PWR096"  Part="1" 
+F 0 "#PWR096" H 6400 4600 30  0001 C CNN
 F 1 "GND" H 6400 4530 30  0001 C CNN
 	1    6400 4600
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR10
+L VCC #PWR09
 U 1 1 4F79F0DB
 P 7900 2400
-AR Path="/4F79FC54/4F79F0DB" Ref="#PWR10"  Part="1" 
-AR Path="/4F79FC56/4F79F0DB" Ref="#PWR2"  Part="1" 
-AR Path="/4F79FC55/4F79F0DB" Ref="#PWR6"  Part="1" 
-AR Path="/4F79FC53/4F79F0DB" Ref="#PWR14"  Part="1" 
-AR Path="/4F79FC48/4F79F0DB" Ref="#PWR18"  Part="1" 
-AR Path="/4F79FC47/4F79F0DB" Ref="#PWR22"  Part="1" 
-AR Path="/4F79FC32/4F79F0DB" Ref="#PWR26"  Part="1" 
-AR Path="/4F79EEDB/4F79F0DB" Ref="#PWR65"  Part="1" 
-AR Path="/4F79FEFF/4F79F0DB" Ref="#PWR10"  Part="1" 
-AR Path="/4F79FF1E/4F79F0DB" Ref="#PWR10"  Part="1" 
-F 0 "#PWR10" H 7900 2500 30  0001 C CNN
+AR Path="/4F79FF1F/4F79F0DB" Ref="#PWR09"  Part="1" 
+AR Path="/4F79FF1E/4F79F0DB" Ref="#PWR013"  Part="1" 
+AR Path="/4F79FF0A/4F79F0DB" Ref="#PWR017"  Part="1" 
+AR Path="/4F79FF09/4F79F0DB" Ref="#PWR021"  Part="1" 
+AR Path="/4F79FF00/4F79F0DB" Ref="#PWR025"  Part="1" 
+AR Path="/4F79FEFF/4F79F0DB" Ref="#PWR029"  Part="1" 
+AR Path="/4F79FEF8/4F79F0DB" Ref="#PWR033"  Part="1" 
+AR Path="/4F79FEC2/4F79F0DB" Ref="#PWR037"  Part="1" 
+AR Path="/4F79FC56/4F79F0DB" Ref="#PWR041"  Part="1" 
+AR Path="/4F79FC55/4F79F0DB" Ref="#PWR045"  Part="1" 
+AR Path="/4F79FC54/4F79F0DB" Ref="#PWR049"  Part="1" 
+AR Path="/4F79FC53/4F79F0DB" Ref="#PWR053"  Part="1" 
+AR Path="/4F79FC48/4F79F0DB" Ref="#PWR057"  Part="1" 
+AR Path="/4F79FC47/4F79F0DB" Ref="#PWR061"  Part="1" 
+AR Path="/4F79FC32/4F79F0DB" Ref="#PWR065"  Part="1" 
+AR Path="/4F79EEDB/4F79F0DB" Ref="#PWR097"  Part="1" 
+F 0 "#PWR097" H 7900 2500 30  0001 C CNN
 F 1 "VCC" H 7900 2500 30  0000 C CNN
 	1    7900 2400
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR9
+L VCC #PWR010
 U 1 1 4F79F0CE
 P 7300 2400
-AR Path="/4F79FC54/4F79F0CE" Ref="#PWR9"  Part="1" 
-AR Path="/4F79FC56/4F79F0CE" Ref="#PWR1"  Part="1" 
-AR Path="/4F79FC55/4F79F0CE" Ref="#PWR5"  Part="1" 
-AR Path="/4F79FC53/4F79F0CE" Ref="#PWR13"  Part="1" 
-AR Path="/4F79FC48/4F79F0CE" Ref="#PWR17"  Part="1" 
-AR Path="/4F79FC47/4F79F0CE" Ref="#PWR21"  Part="1" 
-AR Path="/4F79FC32/4F79F0CE" Ref="#PWR25"  Part="1" 
-AR Path="/4F79EEDB/4F79F0CE" Ref="#PWR64"  Part="1" 
-AR Path="/4F79FEFF/4F79F0CE" Ref="#PWR9"  Part="1" 
-AR Path="/4F79FF1E/4F79F0CE" Ref="#PWR9"  Part="1" 
-F 0 "#PWR9" H 7300 2500 30  0001 C CNN
+AR Path="/4F79FF1F/4F79F0CE" Ref="#PWR010"  Part="1" 
+AR Path="/4F79FF1E/4F79F0CE" Ref="#PWR014"  Part="1" 
+AR Path="/4F79FF0A/4F79F0CE" Ref="#PWR018"  Part="1" 
+AR Path="/4F79FF09/4F79F0CE" Ref="#PWR022"  Part="1" 
+AR Path="/4F79FF00/4F79F0CE" Ref="#PWR026"  Part="1" 
+AR Path="/4F79FEFF/4F79F0CE" Ref="#PWR030"  Part="1" 
+AR Path="/4F79FEF8/4F79F0CE" Ref="#PWR034"  Part="1" 
+AR Path="/4F79FEC2/4F79F0CE" Ref="#PWR038"  Part="1" 
+AR Path="/4F79FC56/4F79F0CE" Ref="#PWR042"  Part="1" 
+AR Path="/4F79FC55/4F79F0CE" Ref="#PWR046"  Part="1" 
+AR Path="/4F79FC54/4F79F0CE" Ref="#PWR050"  Part="1" 
+AR Path="/4F79FC53/4F79F0CE" Ref="#PWR054"  Part="1" 
+AR Path="/4F79FC48/4F79F0CE" Ref="#PWR058"  Part="1" 
+AR Path="/4F79FC47/4F79F0CE" Ref="#PWR062"  Part="1" 
+AR Path="/4F79FC32/4F79F0CE" Ref="#PWR066"  Part="1" 
+AR Path="/4F79EEDB/4F79F0CE" Ref="#PWR098"  Part="1" 
+F 0 "#PWR098" H 7300 2500 30  0001 C CNN
 F 1 "VCC" H 7300 2500 30  0000 C CNN
 	1    7300 2400
 	1    0    0    -1  
 $EndComp
 $Comp
-L PNP Q3
+L PNP Q1
 U 1 1 4F79F09F
 P 7800 3500
-AR Path="/4F79FC54/4F79F09F" Ref="Q3"  Part="1" 
-AR Path="/4F79FC56/4F79F09F" Ref="Q1"  Part="1" 
-AR Path="/4F79FC55/4F79F09F" Ref="Q2"  Part="1" 
-AR Path="/4F79FC53/4F79F09F" Ref="Q4"  Part="1" 
-AR Path="/4F79FC48/4F79F09F" Ref="Q5"  Part="1" 
-AR Path="/4F79FC47/4F79F09F" Ref="Q6"  Part="1" 
-AR Path="/4F79FC32/4F79F09F" Ref="Q7"  Part="1" 
-AR Path="/4F79EEDB/4F79F09F" Ref="Q30"  Part="1" 
-AR Path="/4F79FEFF/4F79F09F" Ref="Q3"  Part="1" 
-AR Path="/4F79FF1E/4F79F09F" Ref="Q3"  Part="1" 
-F 0 "Q3" H 7800 3350 60  0000 R CNN
+AR Path="/4F79FF1F/4F79F09F" Ref="Q1"  Part="1" 
+AR Path="/4F79FF1E/4F79F09F" Ref="Q2"  Part="1" 
+AR Path="/4F79FF0A/4F79F09F" Ref="Q3"  Part="1" 
+AR Path="/4F79FF09/4F79F09F" Ref="Q4"  Part="1" 
+AR Path="/4F79FF00/4F79F09F" Ref="Q5"  Part="1" 
+AR Path="/4F79FEFF/4F79F09F" Ref="Q6"  Part="1" 
+AR Path="/4F79FEF8/4F79F09F" Ref="Q7"  Part="1" 
+AR Path="/4F79FEC2/4F79F09F" Ref="Q8"  Part="1" 
+AR Path="/4F79FC56/4F79F09F" Ref="Q9"  Part="1" 
+AR Path="/4F79FC55/4F79F09F" Ref="Q10"  Part="1" 
+AR Path="/4F79FC54/4F79F09F" Ref="Q11"  Part="1" 
+AR Path="/4F79FC53/4F79F09F" Ref="Q12"  Part="1" 
+AR Path="/4F79FC48/4F79F09F" Ref="Q13"  Part="1" 
+AR Path="/4F79FC47/4F79F09F" Ref="Q14"  Part="1" 
+AR Path="/4F79FC32/4F79F09F" Ref="Q15"  Part="1" 
+AR Path="/4F79EEDB/4F79F09F" Ref="Q34"  Part="1" 
+F 0 "Q34" H 7800 3350 60  0000 R CNN
 F 1 "bc857" H 7800 3650 60  0000 R CNN
 	1    7800 3500
 	1    0    0    1   
 $EndComp
 $Comp
-L R R9
+L R R3
 U 1 1 4F79EFBA
 P 7300 2950
-AR Path="/4F79FC54/4F79EFBA" Ref="R9"  Part="1" 
-AR Path="/4F79FC56/4F79EFBA" Ref="R1"  Part="1" 
-AR Path="/4F79FC55/4F79EFBA" Ref="R5"  Part="1" 
-AR Path="/4F79FC53/4F79EFBA" Ref="R13"  Part="1" 
-AR Path="/4F79FC48/4F79EFBA" Ref="R17"  Part="1" 
-AR Path="/4F79FC47/4F79EFBA" Ref="R21"  Part="1" 
-AR Path="/4F79FC32/4F79EFBA" Ref="R25"  Part="1" 
-AR Path="/4F79EEDB/4F79EFBA" Ref="R88"  Part="1" 
-AR Path="/4F79FEFF/4F79EFBA" Ref="R9"  Part="1" 
-AR Path="/4F79FF1E/4F79EFBA" Ref="R9"  Part="1" 
-F 0 "R9" V 7380 2950 50  0000 C CNN
+AR Path="/4F79FF1F/4F79EFBA" Ref="R3"  Part="1" 
+AR Path="/4F79FF1E/4F79EFBA" Ref="R7"  Part="1" 
+AR Path="/4F79FF0A/4F79EFBA" Ref="R11"  Part="1" 
+AR Path="/4F79FF09/4F79EFBA" Ref="R15"  Part="1" 
+AR Path="/4F79FF00/4F79EFBA" Ref="R19"  Part="1" 
+AR Path="/4F79FEFF/4F79EFBA" Ref="R23"  Part="1" 
+AR Path="/4F79FEF8/4F79EFBA" Ref="R27"  Part="1" 
+AR Path="/4F79FEC2/4F79EFBA" Ref="R31"  Part="1" 
+AR Path="/4F79FC56/4F79EFBA" Ref="R35"  Part="1" 
+AR Path="/4F79FC55/4F79EFBA" Ref="R39"  Part="1" 
+AR Path="/4F79FC54/4F79EFBA" Ref="R43"  Part="1" 
+AR Path="/4F79FC53/4F79EFBA" Ref="R47"  Part="1" 
+AR Path="/4F79FC48/4F79EFBA" Ref="R51"  Part="1" 
+AR Path="/4F79FC47/4F79EFBA" Ref="R55"  Part="1" 
+AR Path="/4F79FC32/4F79EFBA" Ref="R59"  Part="1" 
+AR Path="/4F79EEDB/4F79EFBA" Ref="R110"  Part="1" 
+F 0 "R110" V 7380 2950 50  0000 C CNN
 F 1 "10k" V 7300 2950 50  0000 C CNN
 	1    7300 2950
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R10
+L R R2
 U 1 1 4F79EFB2
 P 6650 3500
-AR Path="/4F79FC54/4F79EFB2" Ref="R10"  Part="1" 
-AR Path="/4F79FC56/4F79EFB2" Ref="R2"  Part="1" 
-AR Path="/4F79FC55/4F79EFB2" Ref="R6"  Part="1" 
-AR Path="/4F79FC53/4F79EFB2" Ref="R14"  Part="1" 
-AR Path="/4F79FC48/4F79EFB2" Ref="R18"  Part="1" 
-AR Path="/4F79FC47/4F79EFB2" Ref="R22"  Part="1" 
-AR Path="/4F79FC32/4F79EFB2" Ref="R26"  Part="1" 
-AR Path="/4F79EEDB/4F79EFB2" Ref="R89"  Part="1" 
-AR Path="/4F79FEFF/4F79EFB2" Ref="R10"  Part="1" 
-AR Path="/4F79FF1E/4F79EFB2" Ref="R10"  Part="1" 
-F 0 "R10" V 6730 3500 50  0000 C CNN
+AR Path="/4F79FF1F/4F79EFB2" Ref="R2"  Part="1" 
+AR Path="/4F79FF1E/4F79EFB2" Ref="R6"  Part="1" 
+AR Path="/4F79FF0A/4F79EFB2" Ref="R10"  Part="1" 
+AR Path="/4F79FF09/4F79EFB2" Ref="R14"  Part="1" 
+AR Path="/4F79FF00/4F79EFB2" Ref="R18"  Part="1" 
+AR Path="/4F79FEFF/4F79EFB2" Ref="R22"  Part="1" 
+AR Path="/4F79FEF8/4F79EFB2" Ref="R26"  Part="1" 
+AR Path="/4F79FEC2/4F79EFB2" Ref="R30"  Part="1" 
+AR Path="/4F79FC56/4F79EFB2" Ref="R34"  Part="1" 
+AR Path="/4F79FC55/4F79EFB2" Ref="R38"  Part="1" 
+AR Path="/4F79FC54/4F79EFB2" Ref="R42"  Part="1" 
+AR Path="/4F79FC53/4F79EFB2" Ref="R46"  Part="1" 
+AR Path="/4F79FC48/4F79EFB2" Ref="R50"  Part="1" 
+AR Path="/4F79FC47/4F79EFB2" Ref="R54"  Part="1" 
+AR Path="/4F79FC32/4F79EFB2" Ref="R58"  Part="1" 
+AR Path="/4F79EEDB/4F79EFB2" Ref="R109"  Part="1" 
+F 0 "R109" V 6730 3500 50  0000 C CNN
 F 1 "1k" V 6650 3500 50  0000 C CNN
 	1    6650 3500
 	0    -1   -1   0   
@@ -232,20 +280,26 @@ $EndComp
 Text GLabel 4700 4850 3    60   Input ~ 0
 gnd-24v
 $Comp
-L R R11
+L R R1
 U 1 1 4F79EF52
 P 4700 4350
-AR Path="/4F79FC54/4F79EF52" Ref="R11"  Part="1" 
-AR Path="/4F79FC56/4F79EF52" Ref="R3"  Part="1" 
-AR Path="/4F79FC55/4F79EF52" Ref="R7"  Part="1" 
-AR Path="/4F79FC53/4F79EF52" Ref="R15"  Part="1" 
-AR Path="/4F79FC48/4F79EF52" Ref="R19"  Part="1" 
-AR Path="/4F79FC47/4F79EF52" Ref="R23"  Part="1" 
-AR Path="/4F79FC32/4F79EF52" Ref="R27"  Part="1" 
-AR Path="/4F79EEDB/4F79EF52" Ref="R90"  Part="1" 
-AR Path="/4F79FEFF/4F79EF52" Ref="R11"  Part="1" 
-AR Path="/4F79FF1E/4F79EF52" Ref="R11"  Part="1" 
-F 0 "R11" V 4780 4350 50  0000 C CNN
+AR Path="/4F79FF1F/4F79EF52" Ref="R1"  Part="1" 
+AR Path="/4F79FF1E/4F79EF52" Ref="R5"  Part="1" 
+AR Path="/4F79FF0A/4F79EF52" Ref="R9"  Part="1" 
+AR Path="/4F79FF09/4F79EF52" Ref="R13"  Part="1" 
+AR Path="/4F79FF00/4F79EF52" Ref="R17"  Part="1" 
+AR Path="/4F79FEFF/4F79EF52" Ref="R21"  Part="1" 
+AR Path="/4F79FEF8/4F79EF52" Ref="R25"  Part="1" 
+AR Path="/4F79FEC2/4F79EF52" Ref="R29"  Part="1" 
+AR Path="/4F79FC56/4F79EF52" Ref="R33"  Part="1" 
+AR Path="/4F79FC55/4F79EF52" Ref="R37"  Part="1" 
+AR Path="/4F79FC54/4F79EF52" Ref="R41"  Part="1" 
+AR Path="/4F79FC53/4F79EF52" Ref="R45"  Part="1" 
+AR Path="/4F79FC48/4F79EF52" Ref="R49"  Part="1" 
+AR Path="/4F79FC47/4F79EF52" Ref="R53"  Part="1" 
+AR Path="/4F79FC32/4F79EF52" Ref="R57"  Part="1" 
+AR Path="/4F79EEDB/4F79EF52" Ref="R108"  Part="1" 
+F 0 "R108" V 4780 4350 50  0000 C CNN
 F 1 "1k5" V 4700 4350 50  0000 C CNN
 	1    4700 4350
 	1    0    0    -1  
@@ -253,20 +307,26 @@ $EndComp
 Text HLabel 3900 3500 0    60   Input ~ 0
 in
 $Comp
-L PHDARL U3
+L PHDARL U1
 U 1 1 4F79EF18
 P 5500 3700
-AR Path="/4F79FC54/4F79EF18" Ref="U3"  Part="1" 
-AR Path="/4F79FC56/4F79EF18" Ref="U1"  Part="1" 
-AR Path="/4F79FC55/4F79EF18" Ref="U2"  Part="1" 
-AR Path="/4F79FC53/4F79EF18" Ref="U4"  Part="1" 
-AR Path="/4F79FC48/4F79EF18" Ref="U5"  Part="1" 
-AR Path="/4F79FC47/4F79EF18" Ref="U6"  Part="1" 
-AR Path="/4F79FC32/4F79EF18" Ref="U7"  Part="1" 
-AR Path="/4F79EEDB/4F79EF18" Ref="U18"  Part="1" 
-AR Path="/4F79FEFF/4F79EF18" Ref="U3"  Part="1" 
-AR Path="/4F79FF1E/4F79EF18" Ref="U3"  Part="1" 
-F 0 "U3" H 5510 4020 70  0000 C CNN
+AR Path="/4F79FF1F/4F79EF18" Ref="U1"  Part="1" 
+AR Path="/4F79FF1E/4F79EF18" Ref="U2"  Part="1" 
+AR Path="/4F79FF0A/4F79EF18" Ref="U3"  Part="1" 
+AR Path="/4F79FF09/4F79EF18" Ref="U4"  Part="1" 
+AR Path="/4F79FF00/4F79EF18" Ref="U5"  Part="1" 
+AR Path="/4F79FEFF/4F79EF18" Ref="U6"  Part="1" 
+AR Path="/4F79FEF8/4F79EF18" Ref="U7"  Part="1" 
+AR Path="/4F79FEC2/4F79EF18" Ref="U8"  Part="1" 
+AR Path="/4F79FC56/4F79EF18" Ref="U9"  Part="1" 
+AR Path="/4F79FC55/4F79EF18" Ref="U10"  Part="1" 
+AR Path="/4F79FC54/4F79EF18" Ref="U11"  Part="1" 
+AR Path="/4F79FC53/4F79EF18" Ref="U12"  Part="1" 
+AR Path="/4F79FC48/4F79EF18" Ref="U13"  Part="1" 
+AR Path="/4F79FC47/4F79EF18" Ref="U14"  Part="1" 
+AR Path="/4F79FC32/4F79EF18" Ref="U15"  Part="1" 
+AR Path="/4F79EEDB/4F79EF18" Ref="U24"  Part="1" 
+F 0 "U24" H 5510 4020 70  0000 C CNN
 F 1 "PHDARL" H 5510 3380 70  0000 C CNN
 	1    5500 3700
 	1    0    0    -1  

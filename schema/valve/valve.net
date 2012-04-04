@@ -1,0 +1,1951 @@
+# EESchema Netlist Version 1.1 created  Wed 04 Apr 2012 04:22:41 PM MSK
+(
+ ( /4F79E8DF/4F79EA67 $noname$ C1 4u7
+  ( 1 /usb/usb-vcc )
+  ( 2 GND )
+ )
+ ( /4F79E8CC/4F7A09C4 $noname$ C2 100n
+  ( 1 GND )
+  ( 2 N-000070 )
+ )
+ ( /4F79E8CC/4F7C2800 $noname$ C3 18p
+  ( 1 GND )
+  ( 2 N-000066 )
+ )
+ ( /4F79E8CC/4F7C280A $noname$ C4 18p
+  ( 1 GND )
+  ( 2 N-000059 )
+ )
+ ( /4F79E8CC/4F7C28F0 $noname$ C5 1u
+  ( 1 VCC )
+  ( 2 GND )
+ )
+ ( /4F79E8CC/4F7A1406 $noname$ C6 100n
+  ( 1 VCC )
+  ( 2 GND )
+ )
+ ( /4F79E8CC/4F7A1412 $noname$ C7 100n
+  ( 1 VCC )
+  ( 2 GND )
+ )
+ ( /4F79E8CC/4F7A1417 $noname$ C8 100n
+  ( 1 VCC )
+  ( 2 GND )
+ )
+ ( /4F79E8CC/4F7A141C $noname$ C9 100n
+  ( 1 VCC )
+  ( 2 GND )
+ )
+ ( /4F79F575/4F79EE31 $noname$ D1 DIODE
+  ( 1 /valve-isolated-4/out )
+  ( 2 vcc-24v )
+ )
+ ( /4F79F575/4F79EE29 $noname$ D2 DIODE
+  ( 1 gnd-24v )
+  ( 2 /valve-isolated-4/out )
+ )
+ ( /4F79F56D/4F79EE31 $noname$ D3 DIODE
+  ( 1 /valve-isolated-0/out )
+  ( 2 vcc-24v )
+ )
+ ( /4F79F56D/4F79EE29 $noname$ D4 DIODE
+  ( 1 gnd-24v )
+  ( 2 /valve-isolated-0/out )
+ )
+ ( /4F79F56C/4F79EE31 $noname$ D5 DIODE
+  ( 1 /valve-isolated-1/out )
+  ( 2 vcc-24v )
+ )
+ ( /4F79F56C/4F79EE29 $noname$ D6 DIODE
+  ( 1 gnd-24v )
+  ( 2 /valve-isolated-1/out )
+ )
+ ( /4F79F56B/4F79EE31 $noname$ D7 DIODE
+  ( 1 /valve-isolated-3/out )
+  ( 2 vcc-24v )
+ )
+ ( /4F79F56B/4F79EE29 $noname$ D8 DIODE
+  ( 1 gnd-24v )
+  ( 2 /valve-isolated-3/out )
+ )
+ ( /4F79F56A/4F79EE31 $noname$ D9 DIODE
+  ( 1 /valve-isolated-2/out )
+  ( 2 vcc-24v )
+ )
+ ( /4F79F56A/4F79EE29 $noname$ D10 DIODE
+  ( 1 gnd-24v )
+  ( 2 /valve-isolated-2/out )
+ )
+ ( /4F79F55E/4F79EE31 $noname$ D11 DIODE
+  ( 1 /valve-isolated-7/out )
+  ( 2 vcc-24v )
+ )
+ ( /4F79F55E/4F79EE29 $noname$ D12 DIODE
+  ( 1 gnd-24v )
+  ( 2 /valve-isolated-7/out )
+ )
+ ( /4F79F54D/4F79EE31 $noname$ D13 DIODE
+  ( 1 /valve-isolated-6/out )
+  ( 2 vcc-24v )
+ )
+ ( /4F79F54D/4F79EE29 $noname$ D14 DIODE
+  ( 1 gnd-24v )
+  ( 2 /valve-isolated-6/out )
+ )
+ ( /4F79E923/4F79EE31 $noname$ D15 DIODE
+  ( 1 /valve-isolated-5/out )
+  ( 2 vcc-24v )
+ )
+ ( /4F79E923/4F79EE29 $noname$ D16 DIODE
+  ( 1 gnd-24v )
+  ( 2 /valve-isolated-5/out )
+ )
+ ( /4F79E8CC/4F7C299D $noname$ D17 LED
+  ( 1 N-000068 )
+  ( 2 N-000056 )
+ )
+ ( /4F79E8CC/4F7C29CA $noname$ D18 LED
+  ( 1 N-000069 )
+  ( 2 N-000057 )
+ )
+ ( /4F79E8DF/4F79E985 $noname$ J1 USB_2_VALID
+  ( 1 /usb/usb-vcc )
+  ( 2 N-000074 )
+  ( 3 N-000079 )
+  ( 4 GND )
+ )
+ ( /4F79E8CC/4F7C284E $noname$ K1 CONN_3
+  ( 1 /cpu/swdio )
+  ( 2 /cpu/swclk )
+  ( 3 GND )
+ )
+ ( /4F7C3206 $noname$ P1 CONN_30
+  ( 1 /valve-isolated-0/out )
+  ( 2 /valve-isolated-1/out )
+  ( 3 /valve-isolated-2/out )
+  ( 4 /valve-isolated-3/out )
+  ( 5 /valve-isolated-4/out )
+  ( 6 /valve-isolated-5/out )
+  ( 7 /valve-isolated-6/out )
+  ( 8 /valve-isolated-7/out )
+  ( 9 /vacum-sensor-0/in )
+  ( 10 /vacum-sensor-1/in )
+  ( 11 /vacum-sensor-2/in )
+  ( 12 /vacum-sensor-3/in )
+  ( 13 /vacum-sensor-4/in )
+  ( 14 /vacum-sensor-5/in )
+  ( 15 /vacum-sensor-6/in )
+  ( 16 /vacum-sensor-7/in )
+  ( 17 /vacum-sensor-8/in )
+  ( 18 /vacum-sensor-9/in )
+  ( 19 /vacum-sensor-10/in )
+  ( 20 /vacum-sensor-11/in )
+  ( 21 /vacum-sensor-12/in )
+  ( 22 /vacum-sensor-13/in )
+  ( 23 /vacum-sensor-14/in )
+  ( 24 /vacum-sensor-15/in )
+  ( 25 VCC )
+  ( 26 GND )
+  ( 27 gnd-24v )
+  ( 28 gnd-24v )
+  ( 29 vcc-24v )
+  ( 30 vcc-24v )
+ )
+ ( /4F79FF1F/4F79F09F $noname$ Q1 bc857
+  ( 1 VCC )
+  ( 2 N-000167 )
+  ( 3 /vacum-sensor-15/out )
+ )
+ ( /4F79FF1E/4F79F09F $noname$ Q2 bc857
+  ( 1 VCC )
+  ( 2 N-000164 )
+  ( 3 /vacum-sensor-14/out )
+ )
+ ( /4F79FF0A/4F79F09F $noname$ Q3 bc857
+  ( 1 VCC )
+  ( 2 N-000161 )
+  ( 3 /vacum-sensor-13/out )
+ )
+ ( /4F79FF09/4F79F09F $noname$ Q4 bc857
+  ( 1 VCC )
+  ( 2 N-000158 )
+  ( 3 /vacum-sensor-12/out )
+ )
+ ( /4F79FF00/4F79F09F $noname$ Q5 bc857
+  ( 1 VCC )
+  ( 2 N-000155 )
+  ( 3 /vacum-sensor-10/out )
+ )
+ ( /4F79FEFF/4F79F09F $noname$ Q6 bc857
+  ( 1 VCC )
+  ( 2 N-000152 )
+  ( 3 /vacum-sensor-11/out )
+ )
+ ( /4F79FEF8/4F79F09F $noname$ Q7 bc857
+  ( 1 VCC )
+  ( 2 N-000149 )
+  ( 3 /vacum-sensor-9/out )
+ )
+ ( /4F79FEC2/4F79F09F $noname$ Q8 bc857
+  ( 1 VCC )
+  ( 2 N-000146 )
+  ( 3 /vacum-sensor-8/out )
+ )
+ ( /4F79FC56/4F79F09F $noname$ Q9 bc857
+  ( 1 VCC )
+  ( 2 N-000143 )
+  ( 3 /vacum-sensor-4/out )
+ )
+ ( /4F79FC55/4F79F09F $noname$ Q10 bc857
+  ( 1 VCC )
+  ( 2 N-000140 )
+  ( 3 /vacum-sensor-5/out )
+ )
+ ( /4F79FC54/4F79F09F $noname$ Q11 bc857
+  ( 1 VCC )
+  ( 2 N-000137 )
+  ( 3 /vacum-sensor-7/out )
+ )
+ ( /4F79FC53/4F79F09F $noname$ Q12 bc857
+  ( 1 VCC )
+  ( 2 N-000134 )
+  ( 3 /vacum-sensor-6/out )
+ )
+ ( /4F79FC48/4F79F09F $noname$ Q13 bc857
+  ( 1 VCC )
+  ( 2 N-000131 )
+  ( 3 /vacum-sensor-2/out )
+ )
+ ( /4F79FC47/4F79F09F $noname$ Q14 bc857
+  ( 1 VCC )
+  ( 2 N-000128 )
+  ( 3 /vacum-sensor-3/out )
+ )
+ ( /4F79FC32/4F79F09F $noname$ Q15 bc857
+  ( 1 VCC )
+  ( 2 N-000125 )
+  ( 3 /vacum-sensor-1/out )
+ )
+ ( /4F79F575/4F79EB99 $noname$ Q16 bc847
+  ( 1 GND )
+  ( 2 N-000119 )
+  ( 3 N-000120 )
+ )
+ ( /4F79F575/4F79EC1C $noname$ Q17 MOSFET_N
+  ( D /valve-isolated-4/out )
+  ( G N-000122 )
+  ( S gnd-24v )
+ )
+ ( /4F79F56D/4F79EB99 $noname$ Q18 bc847
+  ( 1 GND )
+  ( 2 N-000116 )
+  ( 3 N-000113 )
+ )
+ ( /4F79F56D/4F79EC1C $noname$ Q19 MOSFET_N
+  ( D /valve-isolated-0/out )
+  ( G N-000117 )
+  ( S gnd-24v )
+ )
+ ( /4F79F56C/4F79EB99 $noname$ Q20 bc847
+  ( 1 GND )
+  ( 2 N-000109 )
+  ( 3 N-000110 )
+ )
+ ( /4F79F56C/4F79EC1C $noname$ Q21 MOSFET_N
+  ( D /valve-isolated-1/out )
+  ( G N-000112 )
+  ( S gnd-24v )
+ )
+ ( /4F79F56B/4F79EB99 $noname$ Q22 bc847
+  ( 1 GND )
+  ( 2 N-000104 )
+  ( 3 N-000105 )
+ )
+ ( /4F79F56B/4F79EC1C $noname$ Q23 MOSFET_N
+  ( D /valve-isolated-3/out )
+  ( G N-000107 )
+  ( S gnd-24v )
+ )
+ ( /4F79F56A/4F79EB99 $noname$ Q24 bc847
+  ( 1 GND )
+  ( 2 N-000099 )
+  ( 3 N-000100 )
+ )
+ ( /4F79F56A/4F79EC1C $noname$ Q25 MOSFET_N
+  ( D /valve-isolated-2/out )
+  ( G N-000102 )
+  ( S gnd-24v )
+ )
+ ( /4F79F55E/4F79EB99 $noname$ Q26 bc847
+  ( 1 GND )
+  ( 2 N-000094 )
+  ( 3 N-000095 )
+ )
+ ( /4F79F55E/4F79EC1C $noname$ Q27 MOSFET_N
+  ( D /valve-isolated-7/out )
+  ( G N-000097 )
+  ( S gnd-24v )
+ )
+ ( /4F79F54D/4F79EB99 $noname$ Q28 bc847
+  ( 1 GND )
+  ( 2 N-000089 )
+  ( 3 N-000090 )
+ )
+ ( /4F79F54D/4F79EC1C $noname$ Q29 MOSFET_N
+  ( D /valve-isolated-6/out )
+  ( G N-000092 )
+  ( S gnd-24v )
+ )
+ ( /4F79E923/4F79EB99 $noname$ Q30 bc847
+  ( 1 GND )
+  ( 2 N-000083 )
+  ( 3 N-000080 )
+ )
+ ( /4F79E923/4F79EC1C $noname$ Q31 MOSFET_N
+  ( D /valve-isolated-5/out )
+  ( G N-000084 )
+  ( S gnd-24v )
+ )
+ ( /4F79E8DF/4F79F27D $noname$ Q32 bc857
+  ( 1 /usb/usb-vcc )
+  ( 2 N-000075 )
+  ( 3 N-000073 )
+ )
+ ( /4F79E8DF/4F79F34C $noname$ Q33 bc847
+  ( 1 GND )
+  ( 2 N-000076 )
+  ( 3 N-000077 )
+ )
+ ( /4F79EEDB/4F79F09F $noname$ Q34 bc857
+  ( 1 VCC )
+  ( 2 N-000087 )
+  ( 3 /vacum-sensor-0/out )
+ )
+ ( /4F79FF1F/4F79EF52 $noname$ R1 1k5
+  ( 1 N-000165 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79FF1F/4F79EFB2 SM1206 R2 1k
+  ( 1 N-000166 )
+  ( 2 N-000167 )
+ )
+ ( /4F79FF1F/4F79EFBA SM1206 R3 10k
+  ( 1 VCC )
+  ( 2 N-000167 )
+ )
+ ( /4F79FF1F/4F79F111 SM1206 R4 10k
+  ( 1 /vacum-sensor-15/out )
+  ( 2 GND )
+ )
+ ( /4F79FF1E/4F79EF52 $noname$ R5 1k5
+  ( 1 N-000162 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79FF1E/4F79EFB2 SM1206 R6 1k
+  ( 1 N-000163 )
+  ( 2 N-000164 )
+ )
+ ( /4F79FF1E/4F79EFBA SM1206 R7 10k
+  ( 1 VCC )
+  ( 2 N-000164 )
+ )
+ ( /4F79FF1E/4F79F111 SM1206 R8 10k
+  ( 1 /vacum-sensor-14/out )
+  ( 2 GND )
+ )
+ ( /4F79FF0A/4F79EF52 $noname$ R9 1k5
+  ( 1 N-000159 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79FF0A/4F79EFB2 SM1206 R10 1k
+  ( 1 N-000160 )
+  ( 2 N-000161 )
+ )
+ ( /4F79FF0A/4F79EFBA SM1206 R11 10k
+  ( 1 VCC )
+  ( 2 N-000161 )
+ )
+ ( /4F79FF0A/4F79F111 SM1206 R12 10k
+  ( 1 /vacum-sensor-13/out )
+  ( 2 GND )
+ )
+ ( /4F79FF09/4F79EF52 $noname$ R13 1k5
+  ( 1 N-000156 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79FF09/4F79EFB2 SM1206 R14 1k
+  ( 1 N-000157 )
+  ( 2 N-000158 )
+ )
+ ( /4F79FF09/4F79EFBA SM1206 R15 10k
+  ( 1 VCC )
+  ( 2 N-000158 )
+ )
+ ( /4F79FF09/4F79F111 SM1206 R16 10k
+  ( 1 /vacum-sensor-12/out )
+  ( 2 GND )
+ )
+ ( /4F79FF00/4F79EF52 $noname$ R17 1k5
+  ( 1 N-000153 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79FF00/4F79EFB2 SM1206 R18 1k
+  ( 1 N-000154 )
+  ( 2 N-000155 )
+ )
+ ( /4F79FF00/4F79EFBA SM1206 R19 10k
+  ( 1 VCC )
+  ( 2 N-000155 )
+ )
+ ( /4F79FF00/4F79F111 SM1206 R20 10k
+  ( 1 /vacum-sensor-10/out )
+  ( 2 GND )
+ )
+ ( /4F79FEFF/4F79EF52 $noname$ R21 1k5
+  ( 1 N-000150 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79FEFF/4F79EFB2 SM1206 R22 1k
+  ( 1 N-000151 )
+  ( 2 N-000152 )
+ )
+ ( /4F79FEFF/4F79EFBA SM1206 R23 10k
+  ( 1 VCC )
+  ( 2 N-000152 )
+ )
+ ( /4F79FEFF/4F79F111 SM1206 R24 10k
+  ( 1 /vacum-sensor-11/out )
+  ( 2 GND )
+ )
+ ( /4F79FEF8/4F79EF52 $noname$ R25 1k5
+  ( 1 N-000147 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79FEF8/4F79EFB2 SM1206 R26 1k
+  ( 1 N-000148 )
+  ( 2 N-000149 )
+ )
+ ( /4F79FEF8/4F79EFBA SM1206 R27 10k
+  ( 1 VCC )
+  ( 2 N-000149 )
+ )
+ ( /4F79FEF8/4F79F111 SM1206 R28 10k
+  ( 1 /vacum-sensor-9/out )
+  ( 2 GND )
+ )
+ ( /4F79FEC2/4F79EF52 $noname$ R29 1k5
+  ( 1 N-000144 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79FEC2/4F79EFB2 SM1206 R30 1k
+  ( 1 N-000145 )
+  ( 2 N-000146 )
+ )
+ ( /4F79FEC2/4F79EFBA SM1206 R31 10k
+  ( 1 VCC )
+  ( 2 N-000146 )
+ )
+ ( /4F79FEC2/4F79F111 SM1206 R32 10k
+  ( 1 /vacum-sensor-8/out )
+  ( 2 GND )
+ )
+ ( /4F79FC56/4F79EF52 $noname$ R33 1k5
+  ( 1 N-000141 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79FC56/4F79EFB2 SM1206 R34 1k
+  ( 1 N-000142 )
+  ( 2 N-000143 )
+ )
+ ( /4F79FC56/4F79EFBA SM1206 R35 10k
+  ( 1 VCC )
+  ( 2 N-000143 )
+ )
+ ( /4F79FC56/4F79F111 SM1206 R36 10k
+  ( 1 /vacum-sensor-4/out )
+  ( 2 GND )
+ )
+ ( /4F79FC55/4F79EF52 $noname$ R37 1k5
+  ( 1 N-000138 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79FC55/4F79EFB2 SM1206 R38 1k
+  ( 1 N-000139 )
+  ( 2 N-000140 )
+ )
+ ( /4F79FC55/4F79EFBA SM1206 R39 10k
+  ( 1 VCC )
+  ( 2 N-000140 )
+ )
+ ( /4F79FC55/4F79F111 SM1206 R40 10k
+  ( 1 /vacum-sensor-5/out )
+  ( 2 GND )
+ )
+ ( /4F79FC54/4F79EF52 $noname$ R41 1k5
+  ( 1 N-000135 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79FC54/4F79EFB2 SM1206 R42 1k
+  ( 1 N-000136 )
+  ( 2 N-000137 )
+ )
+ ( /4F79FC54/4F79EFBA SM1206 R43 10k
+  ( 1 VCC )
+  ( 2 N-000137 )
+ )
+ ( /4F79FC54/4F79F111 SM1206 R44 10k
+  ( 1 /vacum-sensor-7/out )
+  ( 2 GND )
+ )
+ ( /4F79FC53/4F79EF52 $noname$ R45 1k5
+  ( 1 N-000132 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79FC53/4F79EFB2 SM1206 R46 1k
+  ( 1 N-000133 )
+  ( 2 N-000134 )
+ )
+ ( /4F79FC53/4F79EFBA SM1206 R47 10k
+  ( 1 VCC )
+  ( 2 N-000134 )
+ )
+ ( /4F79FC53/4F79F111 SM1206 R48 10k
+  ( 1 /vacum-sensor-6/out )
+  ( 2 GND )
+ )
+ ( /4F79FC48/4F79EF52 $noname$ R49 1k5
+  ( 1 N-000129 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79FC48/4F79EFB2 SM1206 R50 1k
+  ( 1 N-000130 )
+  ( 2 N-000131 )
+ )
+ ( /4F79FC48/4F79EFBA SM1206 R51 10k
+  ( 1 VCC )
+  ( 2 N-000131 )
+ )
+ ( /4F79FC48/4F79F111 SM1206 R52 10k
+  ( 1 /vacum-sensor-2/out )
+  ( 2 GND )
+ )
+ ( /4F79FC47/4F79EF52 $noname$ R53 1k5
+  ( 1 N-000126 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79FC47/4F79EFB2 SM1206 R54 1k
+  ( 1 N-000127 )
+  ( 2 N-000128 )
+ )
+ ( /4F79FC47/4F79EFBA SM1206 R55 10k
+  ( 1 VCC )
+  ( 2 N-000128 )
+ )
+ ( /4F79FC47/4F79F111 SM1206 R56 10k
+  ( 1 /vacum-sensor-3/out )
+  ( 2 GND )
+ )
+ ( /4F79FC32/4F79EF52 $noname$ R57 1k5
+  ( 1 N-000123 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79FC32/4F79EFB2 SM1206 R58 1k
+  ( 1 N-000124 )
+  ( 2 N-000125 )
+ )
+ ( /4F79FC32/4F79EFBA SM1206 R59 10k
+  ( 1 VCC )
+  ( 2 N-000125 )
+ )
+ ( /4F79FC32/4F79F111 SM1206 R60 10k
+  ( 1 /vacum-sensor-1/out )
+  ( 2 GND )
+ )
+ ( /4F79F575/4F79EBD0 SM1206 R61 1k
+  ( 1 /valve-isolated-4/in )
+  ( 2 N-000119 )
+ )
+ ( /4F79F575/4F79EBD8 SM1206 R62 10k
+  ( 1 N-000119 )
+  ( 2 GND )
+ )
+ ( /4F79F575/4F79EBB8 SM1206 R63 330
+  ( 1 N-000118 )
+  ( 2 N-000120 )
+ )
+ ( /4F79F575/4F79EC92 SM1206 R64 1k
+  ( 1 N-000121 )
+  ( 2 N-000122 )
+ )
+ ( /4F79F575/4F79EC7E SM1206 R65 1k
+  ( 1 N-000122 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79F56D/4F79EBD0 SM1206 R66 1k
+  ( 1 /valve-isolated-0/in )
+  ( 2 N-000116 )
+ )
+ ( /4F79F56D/4F79EBD8 SM1206 R67 10k
+  ( 1 N-000116 )
+  ( 2 GND )
+ )
+ ( /4F79F56D/4F79EBB8 SM1206 R68 330
+  ( 1 N-000114 )
+  ( 2 N-000113 )
+ )
+ ( /4F79F56D/4F79EC92 SM1206 R69 1k
+  ( 1 N-000115 )
+  ( 2 N-000117 )
+ )
+ ( /4F79F56D/4F79EC7E SM1206 R70 1k
+  ( 1 N-000117 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79F56C/4F79EBD0 SM1206 R71 1k
+  ( 1 /valve-isolated-1/in )
+  ( 2 N-000109 )
+ )
+ ( /4F79F56C/4F79EBD8 SM1206 R72 10k
+  ( 1 N-000109 )
+  ( 2 GND )
+ )
+ ( /4F79F56C/4F79EBB8 SM1206 R73 330
+  ( 1 N-000108 )
+  ( 2 N-000110 )
+ )
+ ( /4F79F56C/4F79EC92 SM1206 R74 1k
+  ( 1 N-000111 )
+  ( 2 N-000112 )
+ )
+ ( /4F79F56C/4F79EC7E SM1206 R75 1k
+  ( 1 N-000112 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79F56B/4F79EBD0 SM1206 R76 1k
+  ( 1 /valve-isolated-3/in )
+  ( 2 N-000104 )
+ )
+ ( /4F79F56B/4F79EBD8 SM1206 R77 10k
+  ( 1 N-000104 )
+  ( 2 GND )
+ )
+ ( /4F79F56B/4F79EBB8 SM1206 R78 330
+  ( 1 N-000103 )
+  ( 2 N-000105 )
+ )
+ ( /4F79F56B/4F79EC92 SM1206 R79 1k
+  ( 1 N-000106 )
+  ( 2 N-000107 )
+ )
+ ( /4F79F56B/4F79EC7E SM1206 R80 1k
+  ( 1 N-000107 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79F56A/4F79EBD0 SM1206 R81 1k
+  ( 1 /valve-isolated-2/in )
+  ( 2 N-000099 )
+ )
+ ( /4F79F56A/4F79EBD8 SM1206 R82 10k
+  ( 1 N-000099 )
+  ( 2 GND )
+ )
+ ( /4F79F56A/4F79EBB8 SM1206 R83 330
+  ( 1 N-000098 )
+  ( 2 N-000100 )
+ )
+ ( /4F79F56A/4F79EC92 SM1206 R84 1k
+  ( 1 N-000101 )
+  ( 2 N-000102 )
+ )
+ ( /4F79F56A/4F79EC7E SM1206 R85 1k
+  ( 1 N-000102 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79F55E/4F79EBD0 SM1206 R86 1k
+  ( 1 /valve-isolated-7/in )
+  ( 2 N-000094 )
+ )
+ ( /4F79F55E/4F79EBD8 SM1206 R87 10k
+  ( 1 N-000094 )
+  ( 2 GND )
+ )
+ ( /4F79F55E/4F79EBB8 SM1206 R88 330
+  ( 1 N-000093 )
+  ( 2 N-000095 )
+ )
+ ( /4F79F55E/4F79EC92 SM1206 R89 1k
+  ( 1 N-000096 )
+  ( 2 N-000097 )
+ )
+ ( /4F79F55E/4F79EC7E SM1206 R90 1k
+  ( 1 N-000097 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79F54D/4F79EBD0 SM1206 R91 1k
+  ( 1 /valve-isolated-6/in )
+  ( 2 N-000089 )
+ )
+ ( /4F79F54D/4F79EBD8 SM1206 R92 10k
+  ( 1 N-000089 )
+  ( 2 GND )
+ )
+ ( /4F79F54D/4F79EBB8 SM1206 R93 330
+  ( 1 N-000088 )
+  ( 2 N-000090 )
+ )
+ ( /4F79F54D/4F79EC92 SM1206 R94 1k
+  ( 1 N-000091 )
+  ( 2 N-000092 )
+ )
+ ( /4F79F54D/4F79EC7E SM1206 R95 1k
+  ( 1 N-000092 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79E923/4F79EBD0 SM1206 R96 1k
+  ( 1 /valve-isolated-5/in )
+  ( 2 N-000083 )
+ )
+ ( /4F79E923/4F79EBD8 SM1206 R97 10k
+  ( 1 N-000083 )
+  ( 2 GND )
+ )
+ ( /4F79E923/4F79EBB8 SM1206 R98 330
+  ( 1 N-000081 )
+  ( 2 N-000080 )
+ )
+ ( /4F79E923/4F79EC92 SM1206 R99 1k
+  ( 1 N-000082 )
+  ( 2 N-000084 )
+ )
+ ( /4F79E923/4F79EC7E SM1206 R100 1k
+  ( 1 N-000084 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79E8DF/4F79E9FF $noname$ R101 1k5
+  ( 1 N-000073 )
+  ( 2 N-000079 )
+ )
+ ( /4F79E8DF/4F79E9A1 SM1206 R102 22
+  ( 1 N-000074 )
+  ( 2 /usb/d- )
+ )
+ ( /4F79E8DF/4F79F29C SM1206 R103 10k
+  ( 1 /usb/usb-vcc )
+  ( 2 N-000075 )
+ )
+ ( /4F79E8DF/4F79E9AD SM1206 R104 22
+  ( 1 N-000079 )
+  ( 2 /usb/d+ )
+ )
+ ( /4F79E8DF/4F79F31F SM1206 R105 1k
+  ( 1 N-000075 )
+  ( 2 N-000077 )
+ )
+ ( /4F79E8DF/4F79F383 SM1206 R106 10k
+  ( 1 N-000076 )
+  ( 2 GND )
+ )
+ ( /4F79E8DF/4F79F376 SM1206 R107 1k
+  ( 1 N-000076 )
+  ( 2 /usb/en )
+ )
+ ( /4F79EEDB/4F79EF52 $noname$ R108 1k5
+  ( 1 N-000085 )
+  ( 2 gnd-24v )
+ )
+ ( /4F79EEDB/4F79EFB2 SM1206 R109 1k
+  ( 1 N-000086 )
+  ( 2 N-000087 )
+ )
+ ( /4F79EEDB/4F79EFBA SM1206 R110 10k
+  ( 1 VCC )
+  ( 2 N-000087 )
+ )
+ ( /4F79EEDB/4F79F111 SM1206 R111 10k
+  ( 1 /vacum-sensor-0/out )
+  ( 2 GND )
+ )
+ ( /4F79E8CC/4F7C29AE $noname$ R112 500
+  ( 1 N-000056 )
+  ( 2 GND )
+ )
+ ( /4F79E8CC/4F7C29C9 $noname$ R113 500
+  ( 1 N-000057 )
+  ( 2 GND )
+ )
+ ( /4F79E8CC/4F7C296A SM1206 R114 10k
+  ( 1 GND )
+  ( 2 N-000067 )
+ )
+ ( /4F79E8CC/4F7A09A9 SM1206 R115 220k
+  ( 1 VCC )
+  ( 2 N-000070 )
+ )
+ ( /4F79E8CC/4F7C27D2 SM1206 R116 300
+  ( 1 N-000059 )
+  ( 2 N-000060 )
+ )
+ ( /4F79E8CC/4F7C2D5B $noname$ R117 50
+  ( 1 N-000058 )
+  ( 2 /cpu/swdio )
+ )
+ ( /4F79E8CC/4F7C2D64 $noname$ R118 50
+  ( 1 N-000061 )
+  ( 2 /cpu/swclk )
+ )
+ ( /4F79E8CC/4F7A091B $noname$ stm1 STM32F102C8T6
+  ( 1 VCC )
+  ( 2 ? )
+  ( 3 N-000068 )
+  ( 4 N-000069 )
+  ( 5 N-000066 )
+  ( 6 N-000060 )
+  ( 7 N-000070 )
+  ( 8 GND )
+  ( 9 VCC )
+  ( 10 /valve-isolated-0/in )
+  ( 11 /valve-isolated-1/in )
+  ( 12 /valve-isolated-2/in )
+  ( 13 /valve-isolated-3/in )
+  ( 14 /valve-isolated-4/in )
+  ( 15 /valve-isolated-5/in )
+  ( 16 /valve-isolated-6/in )
+  ( 17 /valve-isolated-7/in )
+  ( 18 /vacum-sensor-0/out )
+  ( 19 /vacum-sensor-1/out )
+  ( 20 /vacum-sensor-13/out )
+  ( 21 /vacum-sensor-7/out )
+  ( 22 /vacum-sensor-8/out )
+  ( 23 GND )
+  ( 24 VCC )
+  ( 25 /vacum-sensor-9/out )
+  ( 26 /vacum-sensor-10/out )
+  ( 27 /vacum-sensor-11/out )
+  ( 28 /vacum-sensor-12/out )
+  ( 29 /vacum-sensor-14/out )
+  ( 30 /vacum-sensor-15/out )
+  ( 31 /usb/en )
+  ( 32 /usb/d- )
+  ( 33 /usb/d+ )
+  ( 34 N-000058 )
+  ( 35 GND )
+  ( 36 VCC )
+  ( 37 N-000061 )
+  ( 38 ? )
+  ( 39 ? )
+  ( 40 ? )
+  ( 41 /vacum-sensor-2/out )
+  ( 42 /vacum-sensor-3/out )
+  ( 43 /vacum-sensor-4/out )
+  ( 44 N-000067 )
+  ( 45 /vacum-sensor-5/out )
+  ( 46 /vacum-sensor-6/out )
+  ( 47 GND )
+  ( 48 VCC )
+ )
+ ( /4F79FF1F/4F79EF18 $noname$ U1 PHDARL
+  ( 1 /vacum-sensor-15/in )
+  ( 2 N-000165 )
+  ( 4 GND )
+  ( 5 N-000166 )
+ )
+ ( /4F79FF1E/4F79EF18 $noname$ U2 PHDARL
+  ( 1 /vacum-sensor-14/in )
+  ( 2 N-000162 )
+  ( 4 GND )
+  ( 5 N-000163 )
+ )
+ ( /4F79FF0A/4F79EF18 $noname$ U3 PHDARL
+  ( 1 /vacum-sensor-13/in )
+  ( 2 N-000159 )
+  ( 4 GND )
+  ( 5 N-000160 )
+ )
+ ( /4F79FF09/4F79EF18 $noname$ U4 PHDARL
+  ( 1 /vacum-sensor-12/in )
+  ( 2 N-000156 )
+  ( 4 GND )
+  ( 5 N-000157 )
+ )
+ ( /4F79FF00/4F79EF18 $noname$ U5 PHDARL
+  ( 1 /vacum-sensor-10/in )
+  ( 2 N-000153 )
+  ( 4 GND )
+  ( 5 N-000154 )
+ )
+ ( /4F79FEFF/4F79EF18 $noname$ U6 PHDARL
+  ( 1 /vacum-sensor-11/in )
+  ( 2 N-000150 )
+  ( 4 GND )
+  ( 5 N-000151 )
+ )
+ ( /4F79FEF8/4F79EF18 $noname$ U7 PHDARL
+  ( 1 /vacum-sensor-9/in )
+  ( 2 N-000147 )
+  ( 4 GND )
+  ( 5 N-000148 )
+ )
+ ( /4F79FEC2/4F79EF18 $noname$ U8 PHDARL
+  ( 1 /vacum-sensor-8/in )
+  ( 2 N-000144 )
+  ( 4 GND )
+  ( 5 N-000145 )
+ )
+ ( /4F79FC56/4F79EF18 $noname$ U9 PHDARL
+  ( 1 /vacum-sensor-4/in )
+  ( 2 N-000141 )
+  ( 4 GND )
+  ( 5 N-000142 )
+ )
+ ( /4F79FC55/4F79EF18 $noname$ U10 PHDARL
+  ( 1 /vacum-sensor-5/in )
+  ( 2 N-000138 )
+  ( 4 GND )
+  ( 5 N-000139 )
+ )
+ ( /4F79FC54/4F79EF18 $noname$ U11 PHDARL
+  ( 1 /vacum-sensor-7/in )
+  ( 2 N-000135 )
+  ( 4 GND )
+  ( 5 N-000136 )
+ )
+ ( /4F79FC53/4F79EF18 $noname$ U12 PHDARL
+  ( 1 /vacum-sensor-6/in )
+  ( 2 N-000132 )
+  ( 4 GND )
+  ( 5 N-000133 )
+ )
+ ( /4F79FC48/4F79EF18 $noname$ U13 PHDARL
+  ( 1 /vacum-sensor-2/in )
+  ( 2 N-000129 )
+  ( 4 GND )
+  ( 5 N-000130 )
+ )
+ ( /4F79FC47/4F79EF18 $noname$ U14 PHDARL
+  ( 1 /vacum-sensor-3/in )
+  ( 2 N-000126 )
+  ( 4 GND )
+  ( 5 N-000127 )
+ )
+ ( /4F79FC32/4F79EF18 $noname$ U15 PHDARL
+  ( 1 /vacum-sensor-1/in )
+  ( 2 N-000123 )
+  ( 4 GND )
+  ( 5 N-000124 )
+ )
+ ( /4F79F575/4F79EB8E $noname$ U16 PHDARL
+  ( 1 VCC )
+  ( 2 N-000118 )
+  ( 4 N-000121 )
+  ( 5 vcc-24v )
+ )
+ ( /4F79F56D/4F79EB8E $noname$ U17 PHDARL
+  ( 1 VCC )
+  ( 2 N-000114 )
+  ( 4 N-000115 )
+  ( 5 vcc-24v )
+ )
+ ( /4F79F56C/4F79EB8E $noname$ U18 PHDARL
+  ( 1 VCC )
+  ( 2 N-000108 )
+  ( 4 N-000111 )
+  ( 5 vcc-24v )
+ )
+ ( /4F79F56B/4F79EB8E $noname$ U19 PHDARL
+  ( 1 VCC )
+  ( 2 N-000103 )
+  ( 4 N-000106 )
+  ( 5 vcc-24v )
+ )
+ ( /4F79F56A/4F79EB8E $noname$ U20 PHDARL
+  ( 1 VCC )
+  ( 2 N-000098 )
+  ( 4 N-000101 )
+  ( 5 vcc-24v )
+ )
+ ( /4F79F55E/4F79EB8E $noname$ U21 PHDARL
+  ( 1 VCC )
+  ( 2 N-000093 )
+  ( 4 N-000096 )
+  ( 5 vcc-24v )
+ )
+ ( /4F79F54D/4F79EB8E $noname$ U22 PHDARL
+  ( 1 VCC )
+  ( 2 N-000088 )
+  ( 4 N-000091 )
+  ( 5 vcc-24v )
+ )
+ ( /4F79E923/4F79EB8E $noname$ U23 PHDARL
+  ( 1 VCC )
+  ( 2 N-000081 )
+  ( 4 N-000082 )
+  ( 5 vcc-24v )
+ )
+ ( /4F79EEDB/4F79EF18 $noname$ U24 PHDARL
+  ( 1 /vacum-sensor-0/in )
+  ( 2 N-000085 )
+  ( 4 GND )
+  ( 5 N-000086 )
+ )
+ ( /4F79E8CC/4F7A0A14 $noname$ X1 CRYSTAL
+  ( 1 N-000059 )
+  ( 2 N-000066 )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component C4
+ SM*
+ C?
+ C1-1
+$endlist
+$component C5
+ SM*
+ C?
+ C1-1
+$endlist
+$component C6
+ SM*
+ C?
+ C1-1
+$endlist
+$component C7
+ SM*
+ C?
+ C1-1
+$endlist
+$component C8
+ SM*
+ C?
+ C1-1
+$endlist
+$component C9
+ SM*
+ C?
+ C1-1
+$endlist
+$component D1
+ D?
+ S*
+$endlist
+$component D2
+ D?
+ S*
+$endlist
+$component D3
+ D?
+ S*
+$endlist
+$component D4
+ D?
+ S*
+$endlist
+$component D5
+ D?
+ S*
+$endlist
+$component D6
+ D?
+ S*
+$endlist
+$component D7
+ D?
+ S*
+$endlist
+$component D8
+ D?
+ S*
+$endlist
+$component D9
+ D?
+ S*
+$endlist
+$component D10
+ D?
+ S*
+$endlist
+$component D11
+ D?
+ S*
+$endlist
+$component D12
+ D?
+ S*
+$endlist
+$component D13
+ D?
+ S*
+$endlist
+$component D14
+ D?
+ S*
+$endlist
+$component D15
+ D?
+ S*
+$endlist
+$component D16
+ D?
+ S*
+$endlist
+$component D17
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D18
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R5
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R6
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R7
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R8
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R9
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R10
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R11
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R12
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R13
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R14
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R15
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R16
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R17
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R18
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R19
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R20
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R21
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R22
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R23
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R24
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R25
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R26
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R27
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R28
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R29
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R30
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R31
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R32
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R33
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R34
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R35
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R36
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R37
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R38
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R39
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R40
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R41
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R42
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R43
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R44
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R45
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R46
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R47
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R48
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R49
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R50
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R51
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R52
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R53
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R54
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R55
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R56
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R57
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R58
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R59
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R60
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R61
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R62
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R63
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R64
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R65
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R66
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R67
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R68
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R69
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R70
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R71
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R72
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R73
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R74
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R75
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R76
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R77
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R78
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R79
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R80
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R81
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R82
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R83
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R84
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R85
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R86
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R87
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R88
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R89
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R90
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R91
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R92
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R93
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R94
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R95
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R96
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R97
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R98
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R99
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R100
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R101
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R102
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R103
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R104
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R105
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R106
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R107
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R108
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R109
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R110
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R111
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R112
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R113
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R114
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R115
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R116
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R117
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R118
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$endfootprintlist
+}
