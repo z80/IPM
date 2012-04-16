@@ -11,21 +11,32 @@ public:
     lua_State * L;
 };
 
-    Binder( EventHandler * handler = 0 );
-    ~Binder();
-    // For continous script execution.
-    virtual void handler() = 0;
-    // For print() function implementation.
-    virtual void echo( const std::string & stri ) = 0;
-    
-    lua_State * state();
-    //void enterCritical();
-    //void leaveCritical();
+Binder::Binder()
+{
+    pd = new PD();
+    pd->L = luaL_newstate();
+    luaL_openlibs( pd->L );
+}
 
-    bool execFile( const std::string & fileName, std::string & errorMessage );
-    bool execString( const std::string & string, std::string & errorMessage );
-    
-    PD * pd;
+Binder::~Binder()
+{
+    lua_close( pd->L );
+    delete pd;
+}
+
+lua_State * Binder::state()
+{
+    return pd->L;
+}
+
+bool Binder::execFile( const std::string & fileName, std::string & errorMessage )
+{
+    // Запуск файла с копированием или без копирования.
+}
+
+bool Binder::execString( const std::string & string, std::string & errorMessage )
+{
+}
 
 
 
