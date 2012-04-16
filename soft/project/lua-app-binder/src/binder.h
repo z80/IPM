@@ -4,7 +4,7 @@
 
 #include <string>
 #include <list>
-#include "boost::any.hpp"
+//#include "boost::any.hpp"
 
 struct lua_State;
 
@@ -23,17 +23,19 @@ public:
     }*/
 
 
-    Binder( EventHandler * handler = 0 );
+    Binder();
     ~Binder();
     // For continous script execution.
     virtual void handler() = 0;
     // For print() function implementation.
     virtual void echo( const std::string & stri ) = 0;
+    // To access resource files. If file doesn't exist it should copy it from resource.
+    virtual bool resourceFile( const std::string & fileName ) = 0;
     
     lua_State * state();
     //void enterCritical();
     //void leaveCritical();
-
+    
     bool execFile( const std::string & fileName, std::string & errorMessage );
     bool execString( const std::string & string, std::string & errorMessage );
     

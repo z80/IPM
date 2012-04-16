@@ -1,5 +1,6 @@
 
 #include "lua.hpp"
+#include "binder.h"
 
 class Binder::PD
 {
