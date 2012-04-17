@@ -18,6 +18,7 @@ elseif ( UNIX )
 endif ( WIN32 )
 
 add_subdirectory( "./3dparty-src/lua" )
+add_subdirectory( "./3dparty-src/luabind" )
 add_subdirectory( "./3dparty-src/ftdi" )
 #add_subdirectory( "./application" )
 #add_subdirectory( "./lib-application" )

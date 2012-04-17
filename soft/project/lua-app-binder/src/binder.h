@@ -36,8 +36,20 @@ public:
     //void enterCritical();
     //void leaveCritical();
     
-    bool execFile( const std::string & fileName, std::string & errorMessage );
-    bool execString( const std::string & string, std::string & errorMessage );
+    bool execFile( const std::string & fileName );
+    bool execString( const std::string & string );
+    void setCopyResourceFiles( bool en );
+    // For debugging.
+    void setTrace( bool en );
+    bool isTrace() const;
+    bool isRun() const;
+    bool stopExec();
+    bool breakExec();
+    bool contExec();
+    bool stepOver();
+    bool stepInto();
+    bool stepOut();
+    bool eval( const std::string & stri );
     
 private:
     class PD;
