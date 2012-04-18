@@ -24,6 +24,7 @@ public:
          copyFiles, 
          running;
     static const std::string BINDER;
+    static const std::string PD;
     static const std::string LOADFILE;
     static void echoDebug( Binder * b, lua_Debug * ar );
     static void placeBinder( Binder * b, lua_State * L );
@@ -34,6 +35,7 @@ public:
 };
 
 const std::string Binder::PD::BINDER   = "binder";
+const std::string Binder::PD::PD       = "binder_pd";
 const std::string Binder::PD::LOADFILE = "binder_loadfile";
 
 void Binder::PD::echoDebug( Binder * b, lua_Debug * ar )
@@ -137,7 +139,7 @@ bool Binder::execFile( const std::string & fileName )
             fp = fopen( fileName.data(), "w" );
             if ( fp )
             {
-                fwrite( content.data(), 1, content.size(), fp );
+                fwrite( content.data(), sizeof(char), content.size(), fp );
                 fclose( fp );
             }
             else
@@ -147,9 +149,9 @@ bool Binder::execFile( const std::string & fileName )
                 echo( os.str() );
             }
             // Execution from file.
-            PD::pushLoadfile( L );
-            lua_pushstring( L, fileName.data() );
-            int err = lua_pcall( L, 1, 2, 0 );            
+            PD::pushLoadfile( pd->L );
+            lua_pushstring( pd->L, fileName.data() );
+            int err = lua_pcall( pd->L, 1, 2, 0 );            
             bool res = (err == 0);
             return res;
         }
@@ -168,10 +170,10 @@ bool Binder::execFile( const std::string & fileName )
 
 bool Binder::execString( const std::string & stri )
 {
-    lua_pushstring( L, "loadstring" );
-    lua_gettable( L, LUA_GLOBALSINDEX );
-    lua_pushstring( L, stri.data() );
-    int err = lua_pcall( L, 1, 2, 0 );
+    lua_pushstring( pd->L, "loadstring" );
+    lua_gettable( pd->L, LUA_GLOBALSINDEX );
+    lua_pushstring( pd->L, stri.data() );
+    int err = lua_pcall( pd->L, 1, 2, 0 );
     bool res = (err == 0);
     return res;
 }
@@ -205,7 +207,7 @@ bool Binder::breakExec()
 {
     if ( pd->running )
     {
-        int n = lua_gettop( L );
+        int n = lua_gettop( pd->L );
         lua_Debug ar;
         lua_getstack( L, 0, &ar );
         lua_getinfo( pd->L, "lS" );
@@ -214,7 +216,7 @@ bool Binder::breakExec()
         std::ostringstream os;
         os << "Execution interrupted at " << ar.short_src << ", line number" << ar.currentline;
         lua_pushstring( pd->L, os.str().data() );
-        lua_error( L );
+        lua_error( pd->L );
 
         return true;
     }
