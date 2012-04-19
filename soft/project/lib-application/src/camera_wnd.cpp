@@ -10,6 +10,7 @@
 CameraWnd::CameraWnd()
 : QWidget()
 {
+    setMinimumSize( 160, 120 );
     //preparation of the vlc command
     const char * const vlc_args[] = {
               "-I", "dummy", /* Don't use any interface */
