@@ -56,17 +56,18 @@ MainWnd::MainWnd( QWidget * parent )
     pd->logWnd = new LogWnd( this );
     pd->logDock->setWidget( pd->logWnd );
     addDockWidget(Qt::RightDockWidgetArea, pd->logDock );
-    pd->logDock->setVisible( false );
 
     pd->intCamWnd = new CameraWnd();
     pd->intCamSub = pd->ui.mdi->addSubWindow( pd->intCamWnd );
     connect( pd->ui.intCam,  SIGNAL(toggled(bool)),          pd->intCamSub,    SLOT(setVisible(bool)) );
     connect( pd->intCamSub, SIGNAL(visibilityChanged(bool)), pd->ui.intCam, SLOT(setChecked(bool)) );
+    pd->intCamSub->setVisible( false );
 
     pd->extCamWnd = new CameraWnd();
-    pd->extCamSub = pd->ui.mdi->addSubWindow( pd->intCamWnd );
+    pd->extCamSub = pd->ui.mdi->addSubWindow( pd->extCamWnd );
     connect( pd->ui.extCam, SIGNAL(toggled(bool)),           pd->extCamSub, SLOT(setVisible(bool)) );
     connect( pd->extCamSub, SIGNAL(visibilityChanged(bool)), pd->ui.extCam, SLOT(setChecked(bool)) );
+    pd->extCamSub->setVisible( false );
 
     pd->timer = new QTimer( this );
     pd->timer->setInterval( 50 );

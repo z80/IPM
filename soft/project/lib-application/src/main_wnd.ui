@@ -28,7 +28,7 @@ background-color: rgb(199, 199, 199);</string>
     <item>
      <widget class="QMdiArea" name="mdi">
       <property name="background">
-       <brush brushstyle="NoBrush">
+       <brush brushstyle="DiagCrossPattern">
         <color alpha="255">
          <red>172</red>
          <green>168</green>
