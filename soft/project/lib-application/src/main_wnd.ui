@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWnd</class>
+ <widget class="QMainWindow" name="MainWnd">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>329</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Control</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">border-color: rgb(19, 125, 2);
+background-color: rgb(199, 199, 199);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>64</width>
+     <height>64</height>
+    </size>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="ctrl"/>
+   <addaction name="intCam"/>
+   <addaction name="extCam"/>
+   <addaction name="log"/>
+   <addaction name="separator"/>
+   <addaction name="debug"/>
+  </widget>
+  <action name="log">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/log.png</normaloff>:/images/log.png</iconset>
+   </property>
+   <property name="text">
+    <string>Log</string>
+   </property>
+  </action>
+  <action name="ctrl">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/joystick.png</normaloff>:/images/joystick.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ctrl</string>
+   </property>
+   <property name="toolTip">
+    <string>Control</string>
+   </property>
+  </action>
+  <action name="intCam">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/camera-int.png</normaloff>:/images/camera-int.png</iconset>
+   </property>
+   <property name="text">
+    <string>Internal camera</string>
+   </property>
+   <property name="toolTip">
+    <string>Internal Camera</string>
+   </property>
+  </action>
+  <action name="extCam">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/camera-ext.png</normaloff>:/images/camera-ext.png</iconset>
+   </property>
+   <property name="text">
+    <string>External camera</string>
+   </property>
+   <property name="toolTip">
+    <string>External Camera</string>
+   </property>
+  </action>
+  <action name="debug">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/debug.png</normaloff>:/images/debug.png</iconset>
+   </property>
+   <property name="text">
+    <string>Debug</string>
+   </property>
+   <property name="toolTip">
+    <string>Debug mode</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
