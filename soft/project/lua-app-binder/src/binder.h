@@ -7,6 +7,11 @@
 //#include "boost::any.hpp"
 
 struct lua_State;
+struct lua_Debug;
+static void lineHook( lua_State * L, lua_Debug * ar );
+// Overwriteble functions in Lua.
+static int  print( lua_State * L );
+static int  loadfile( lua_State * L );
 
 class Binder
 {
@@ -51,9 +56,13 @@ public:
     bool stepOut();
     bool eval( const std::string & stri );
     
-private:
+protected:
     class PD;
     PD * pd;
+    friend static void lineHook( lua_State * L, lua_Debug * ar );
+    // Overwriteble functions in Lua.
+    friend static int  print( lua_State * L );
+    friend static int  loadfile( lua_State * L );
 };
 
 #endif

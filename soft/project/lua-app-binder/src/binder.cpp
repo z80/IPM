@@ -8,11 +8,6 @@ extern "C"
 #include "binder.h"
 #include <sstream>
 
-static void lineHook( lua_State * L, lua_Debug * ar );
-// Overwriteble functions in Lua.
-static int  print( lua_State * L );
-static int  loadfile( lua_State * L );
-
 class Binder::PD
 {
 public:
@@ -24,19 +19,20 @@ public:
          copyFiles, 
          running;
     static const std::string BINDER;
-    static const std::string PD;
+    static const std::string BINDER_PD;
     static const std::string LOADFILE;
     static void echoDebug( Binder * b, lua_Debug * ar );
-    static void placeBinder( Binder * b, lua_State * L );
+    void placeBinder( Binder * b, lua_State * L );
     static void printOverwrite( Binder * b, lua_State * L );
     static void loadfileOverwrite( Binder * b, lua_State * L );
     static void pushBinder( lua_State * L );
+    static void pushPd( lua_State * L );
     static void pushLoadfile( lua_State * L );
 };
 
-const std::string Binder::PD::BINDER   = "binder";
-const std::string Binder::PD::PD       = "binder_pd";
-const std::string Binder::PD::LOADFILE = "binder_loadfile";
+const std::string Binder::PD::BINDER    = "binder";
+const std::string Binder::PD::BINDER_PD = "binder_pd";
+const std::string Binder::PD::LOADFILE  = "binder_loadfile";
 
 void Binder::PD::echoDebug( Binder * b, lua_Debug * ar )
 {
@@ -53,10 +49,15 @@ void Binder::PD::echoDebug( Binder * b, lua_Debug * ar )
 void Binder::PD::placeBinder( Binder * b, lua_State * L )
 {
     int t = lua_gettop( L );
-    lua_pushvalue( L, LUA_REGISTRYINDEX );
+    
     lua_pushstring( L, PD::BINDER.data() );
     lua_pushlightuserdata( L, reinterpret_cast<void *>( b ) );
-    lua_settable( L, -3 );
+    lua_settable( L, LUA_REGISTRYINDEX );
+    
+    lua_pushstring( L, PD::BINDER_PD.data() );
+    lua_pushlightuserdata( L, reinterpret_cast<void *>( this ) );
+    lua_settable( L, LUA_REGISTRYINDEX );
+    
     lua_settop( L, t );
 }
 
@@ -89,6 +90,12 @@ void Binder::PD::pushBinder( lua_State * L )
     lua_gettable( L, LUA_REGISTRYINDEX );
 }
 
+void Binder::PD::pushPd( lua_State * L )
+{
+    lua_pushstring( L, BINDER_PD.data() );
+    lua_gettable( L, LUA_REGISTRYINDEX );
+}
+
 void Binder::PD::pushLoadfile( lua_State * L )
 {
     lua_pushstring( L, LOADFILE.data() );
@@ -104,7 +111,7 @@ Binder::Binder()
     pd->L = luaL_newstate();
     luaL_openlibs( pd->L );
     lua_sethook( pd->L, lineHook, LUA_HOOKLINE, 0 );
-    PD::placeBinder( this, pd->L );
+    pd->placeBinder( this, pd->L );
     PD::printOverwrite( this, pd->L );
     PD::loadfileOverwrite( this, pd->L );
 }
@@ -178,7 +185,7 @@ bool Binder::execString( const std::string & stri )
     return res;
 }
 
-void setCopyResourceFiles( bool en )
+void Binder::setCopyResourceFiles( bool en )
 {
     pd->copyFiles = en;
 }
@@ -209,9 +216,9 @@ bool Binder::breakExec()
     {
         int n = lua_gettop( pd->L );
         lua_Debug ar;
-        lua_getstack( L, 0, &ar );
-        lua_getinfo( pd->L, "lS" );
-        lua_settop( L, n );
+        lua_getstack( pd->L, 0, &ar );
+        lua_getinfo( pd->L, "lS", &ar );
+        lua_settop( pd->L, n );
 
         std::ostringstream os;
         os << "Execution interrupted at " << ar.short_src << ", line number" << ar.currentline;
@@ -250,11 +257,17 @@ bool Binder::eval( const std::string & stri )
 
 static void lineHook( lua_State * L, lua_Debug * ar )
 {
-    if ( pd->trace )
-        PD::echoDebug( L, ar );
     int n = lua_gettop( L );
-    PD::pushBinder( L );
-    Binder * b = reinterpret_cast<Binder *>( lua_topointer( L, -1 ) );
+    Binder::PD::pushPd( L );
+    Binder::PD * pd = reinterpret_cast<Binder::PD *>( const_cast<void *>( lua_topointer( L, -1 ) ) );
+    Binder::PD::pushBinder( L );
+    Binder * b = reinterpret_cast<Binder *>( const_cast<void *>( lua_topointer( L, -1 ) ) );
+    if ( pd->trace )
+    {
+        lua_Debug ar;
+        lua_getstack( pd->L, 0, &ar );
+        Binder::PD::echoDebug( b, &ar );
+    }
     pd->running = true;
     b->handler();
     pd->running = false;
@@ -264,8 +277,8 @@ static void lineHook( lua_State * L, lua_Debug * ar )
 static int print( lua_State * L )
 {
     int n = lua_gettop( L );
-    PD::pushBinder( L );
-    Binder * b = reinterpret_cast<Binder *>( lua_topointer( L, -1 ) );
+    Binder::PD::pushBinder( L );
+    Binder * b = reinterpret_cast<Binder *>( const_cast<void *>( lua_topointer( L, -1 ) ) );
     lua_pushstring( L, "tostring" );
     lua_gettable( L, LUA_GLOBALSINDEX );
     for ( int i=1; i<=n; i++ )
@@ -296,15 +309,15 @@ static int loadfile( lua_State * L )
     if ( fp )
     {
         fclose( fp );
-        PD::pushLoadfile( L );
+        Binder::PD::pushLoadfile( L );
         lua_pushvalue( L, 1 );
         int res = lua_pcall( L, 1, 2, 0 );
         int nres = lua_gettop( L );
         nres -= n;
         return nres;
     }
-    PD::pushBinder( L );
-    Binder * b = reinterpret_cast<Binder *>( lua_topointer( L, -1 ) );
+    Binder::PD::pushBinder( L );
+    Binder * b = reinterpret_cast<Binder *>( const_cast<void *>( lua_topointer( L, -1 ) ) );
     
     std::basic_string<char> content;
     bool res = b->resourceFile( fileName, content );
