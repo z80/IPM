@@ -13,6 +13,11 @@ timerCb = function()
 ind = 0;
 mainWnd.logging( "entered" );
 mainWnd.setTimerCb( timerCb );
+mainWnd.setTimerCb( timerCb );
+mainWnd.setTimerCb( timerCb );
+mainWnd.setTimerCb( timerCb );
+mainWnd.setTimerCb( timerCb );
+mainWnd.setTimerCb( timerCb );
 mainWnd.setTimerInterval( 500 );
 mainWnd.setTimerEnabled( true );
 mainWnd.logging( 'left' );

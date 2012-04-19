@@ -3,6 +3,7 @@
 #include "ui_main_wnd.h"
 #include "log_wnd.h"
 #include "js-binder.h"
+#include "camera_wnd.h"
 
 class ResInit
 {
@@ -29,6 +30,10 @@ public:
     Ui_MainWnd ui;
     LogWnd      * logWnd;
     QDockWidget * logDock;
+    CameraWnd     * intCamWnd;
+    QMdiSubWindow * intCamSub;
+    CameraWnd     * extCamWnd;
+    QMdiSubWindow * extCamSub;
 
     QTimer * timer;
 
@@ -52,6 +57,16 @@ MainWnd::MainWnd( QWidget * parent )
     pd->logDock->setWidget( pd->logWnd );
     addDockWidget(Qt::RightDockWidgetArea, pd->logDock );
     pd->logDock->setVisible( false );
+
+    pd->intCamWnd = new CameraWnd();
+    pd->intCamSub = pd->ui.mdi->addSubWindow( pd->intCamWnd );
+    connect( pd->ui.intCam,  SIGNAL(toggled(bool)),          pd->intCamSub,    SLOT(setVisible(bool)) );
+    connect( pd->intCamSub, SIGNAL(visibilityChanged(bool)), pd->ui.intCam, SLOT(setChecked(bool)) );
+
+    pd->extCamWnd = new CameraWnd();
+    pd->extCamSub = pd->ui.mdi->addSubWindow( pd->intCamWnd );
+    connect( pd->ui.extCam, SIGNAL(toggled(bool)),           pd->extCamSub, SLOT(setVisible(bool)) );
+    connect( pd->extCamSub, SIGNAL(visibilityChanged(bool)), pd->ui.extCam, SLOT(setChecked(bool)) );
 
     pd->timer = new QTimer( this );
     pd->timer->setInterval( 50 );

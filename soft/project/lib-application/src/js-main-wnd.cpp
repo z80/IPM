@@ -1,8 +1,6 @@
 
 #include "js-main-wnd.h"
 #include "main_wnd.h"
-#include <QtScript/QScriptValue>
-#include <QtScript/QScriptEngine>
 
 void JsMainWnd::logging()
 {
@@ -43,10 +41,26 @@ bool JsMainWnd::isTimerEnabled()
 void JsMainWnd::setTimerCb()
 {
     int cnt = argumentCount();
-    QScriptValue timerCb = argument( 0 );
-    bool func = timerCb.isFunction();
+    if ( cnt < 1 )
+        return;
+    QScriptValue cb;
+    QScriptValue context;
+    if ( cnt > 1 )
+    {
+        context = argument( 0 );
+        cb = argument( 1 );
+    }
+    else
+        cb = argument( 0 );
     MainWnd * mw = qscriptvalue_cast<MainWnd *>( thisObject() );
-    qScriptConnect( mw, SIGNAL(timeout()), 0, timerCb );
+    
+    if ( !timerCb.isNull() )
+        qScriptDisconnect( mw, SIGNAL(timeout()), timerCbContext, timerCb );
+    timerCb        = cb;
+    timerCbContext = context;
+    if ( !cb.isFunction() )
+        return;
+    qScriptConnect( mw, SIGNAL(timeout()), context, cb );
 }
 
 void JsMainWnd::setInitCb()

@@ -4,6 +4,8 @@
 
 #include <QtCore/QObject>
 #include <QtScript/QScriptable>
+#include <QtScript/QScriptValue>
+#include <QtScript/QScriptEngine>
 
 class JsMainWnd: public QObject,
                  protected QScriptable
@@ -18,6 +20,9 @@ public slots:
     void setTimerCb();
     void setInitCb();
     void setFinitCb();
+private:
+    QScriptValue timerCb, 
+                 timerCbContext;
 };
 
 
