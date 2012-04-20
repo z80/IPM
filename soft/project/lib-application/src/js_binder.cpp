@@ -62,6 +62,26 @@ bool JsBinder::run( const QString & fileName )
      return res;
 }
 
+bool JsBinder::runText( const QString & script )
+{
+     QScriptValue result = e.evaluate( script );
+     bool res = !result.isError();
+     if ( !res )
+     {
+         QMessageBox::critical( 0, "script",
+                                QString::fromLatin1( "%0:%1: %2" )
+                               .arg( "script" )
+                               .arg( result.property( "lineNumber" ).toInt32() )
+                               .arg( result.toString()) );
+     }
+     return res;
+}
+
+void JsBinder::stop()
+{
+    e.abortEvaluation();
+}
+
 
 
 

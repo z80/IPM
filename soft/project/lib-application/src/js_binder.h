@@ -20,6 +20,8 @@ public:
     void registerMain( MainWnd * mw );
     void registerCameraWnds( CameraWnd * intCam, CameraWnd * extCam );
     bool run( const QString & scriptFile );
+    bool runText( const QString & script );
+    void stop();
 
 private:
     QScriptEngine e;

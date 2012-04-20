@@ -4,6 +4,7 @@
 #include "log_wnd.h"
 #include "js_binder.h"
 #include "camera_wnd.h"
+#include "script_editor.h"
 
 class ResInit
 {
@@ -34,6 +35,8 @@ public:
     QMdiSubWindow * intCamSub;
     CameraWnd     * extCamWnd;
     QMdiSubWindow * extCamSub;
+    ScriptEditor  * scriptEditor;
+    QDockWidget   * scriptEditorDock;
 
     QTimer * timer;
 
@@ -80,6 +83,14 @@ MainWnd::MainWnd( QWidget * parent )
     pd->binder->registerMain( this );
     pd->binder->registerCameraWnds( pd->intCamWnd, pd->extCamWnd );
     pd->binder->run( ":/js/main.js" );
+
+    pd->scriptEditor = new ScriptEditor( pd->binder );
+    pd->scriptEditorDock = new QDockWidget( "Script editor", this );
+    pd->scriptEditorDock->setWidget( pd->scriptEditor );
+    connect( pd->ui.debug,         SIGNAL(toggled(bool)),           pd->scriptEditorDock, SLOT(setVisible(bool)) );
+    connect( pd->scriptEditorDock, SIGNAL(visibilityChanged(bool)), pd->ui.debug,         SLOT(setChecked(bool)) );
+    addDockWidget(Qt::RightDockWidgetArea, pd->scriptEditorDock );
+    pd->scriptEditorDock->hide();
 }
 
 MainWnd::~MainWnd()
