@@ -29,10 +29,12 @@ CameraWnd::CameraWnd()
     _volumeSlider=new QSlider(Qt::Horizontal,this);
     _volumeSlider->setMaximum(100); //the volume is between 0 and 100
     _volumeSlider->setToolTip("Audio slider");
+    _volumeSlider->setVisible( false );
 
     // Note: if you use streaming, there is no ability to use the position slider
     _positionSlider=new QSlider(Qt::Horizontal,this);
     _positionSlider->setMaximum(POSITION_RESOLUTION);
+    _positionSlider->setVisible( false );
 
     QVBoxLayout *layout = new QVBoxLayout;
     layout->addWidget(_videoWidget);

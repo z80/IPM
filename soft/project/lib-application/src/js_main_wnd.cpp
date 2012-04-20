@@ -1,5 +1,5 @@
 
-#include "js-main-wnd.h"
+#include "js_main_wnd.h"
 #include "main_wnd.h"
 
 void JsMainWnd::logging()

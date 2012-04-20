@@ -2,7 +2,7 @@
 #include "main_wnd.h"
 #include "ui_main_wnd.h"
 #include "log_wnd.h"
-#include "js-binder.h"
+#include "js_binder.h"
 #include "camera_wnd.h"
 
 class ResInit

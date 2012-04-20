@@ -1,7 +1,7 @@
 
-#include "js-binder.h"
+#include "js_binder.h"
 #include "main_wnd.h"
-#include "js-main-wnd.h"
+#include "js_main_wnd.h"
 
 JsBinder::JsBinder( QObject * parent )
 {
