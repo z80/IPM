@@ -142,6 +142,17 @@ void CameraWnd::playFile(QString file)
     _isPlaying=true;
 }
 
+void CameraWnd::stop()
+{
+    libvlc_media_player_stop( _mp );
+}
+
+bool CameraWnd::isPlaying()
+{
+    bool res = ( libvlc_media_player_is_playing( _mp ) > 0 );
+    return res;
+}
+
 void CameraWnd::changeVolume(int newVolume)
 {
     //libvlc_exception_clear(&_vlcexcep); // [20101215 JG] Used for versions prior to VLC 1.2.0.

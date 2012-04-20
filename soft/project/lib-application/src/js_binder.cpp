@@ -2,15 +2,23 @@
 #include "js_binder.h"
 #include "main_wnd.h"
 #include "js_main_wnd.h"
+#include "camera_wnd.h"
+#include "js_camera_wnd.h"
 
-JsBinder::JsBinder( QObject * parent )
+JsBinder::JsBinder( QObject * parent, int interval )
 {
     mainWnd = 0;
     jsMainWnd = 0;
+    jsCamWnd = 0;
+    e.setProcessEventsInterval( interval );
 }
 
 JsBinder::~JsBinder()
 {
+    //if ( jsMainWnd )
+    //    jsMainWnd->deleteLater();
+    //if ( jsCamWnd )
+    //    jsCamWnd->deleteLaer();
 }
 
 void JsBinder::registerMain( MainWnd * mw )
@@ -22,7 +30,18 @@ void JsBinder::registerMain( MainWnd * mw )
     e.globalObject().setProperty( "mainWnd", e.newQObject( mainWnd ) );
 }
 
-bool JsBinder::run( const QString & fileName, int timeout )
+void JsBinder::registerCameraWnds( CameraWnd * intCam, CameraWnd * extCam )
+{
+    this->intCam = intCam;
+    this->extCam = extCam;
+    if ( !jsCamWnd )
+        jsCamWnd = new JsCameraWnd();
+    e.setDefaultPrototype( qMetaTypeId<CameraWnd*>(), e.newQObject( jsCamWnd ) );
+    e.globalObject().setProperty( "intCamWnd", e.newQObject( intCam ) );
+    e.globalObject().setProperty( "extCamWnd", e.newQObject( extCam ) );
+}
+
+bool JsBinder::run( const QString & fileName )
 {
      QFile scriptFile( fileName );
      scriptFile.open(QIODevice::ReadOnly);
@@ -30,7 +49,6 @@ bool JsBinder::run( const QString & fileName, int timeout )
      QString contents = stream.readAll();
      scriptFile.close();
 
-     e.setProcessEventsInterval( timeout );
      QScriptValue result = e.evaluate( contents, fileName );
      bool res = !result.isError();
      if ( !res )

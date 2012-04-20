@@ -3,7 +3,7 @@
 #define __CAMERA_WND_H_
 
 
-#include <QWidget>
+#include <QtGui>
 
 class QVBoxLayout;
 class QPushButton;
@@ -16,7 +16,7 @@ struct libvlc_media_t;
 
 #define POSITION_RESOLUTION 10000
 
-class CameraWnd : public QWidget
+class CameraWnd: public QWidget
 {
     Q_OBJECT
     QSlider *_positionSlider;
@@ -46,11 +46,15 @@ public:
 
 public slots:
     void playFile(QString file);
+    void stop();
+    bool isPlaying();
     void updateInterface();
     void changeVolume(int newVolume);
     void changePosition(int newPosition);
 
 };
+
+Q_DECLARE_METATYPE( CameraWnd * )
 
 #endif
 

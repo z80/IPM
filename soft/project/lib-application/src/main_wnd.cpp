@@ -78,6 +78,7 @@ MainWnd::MainWnd( QWidget * parent )
 
     pd->binder = new JsBinder( this );
     pd->binder->registerMain( this );
+    pd->binder->registerCameraWnds( pd->intCamWnd, pd->extCamWnd );
     pd->binder->run( ":/js/main.js" );
 }
 

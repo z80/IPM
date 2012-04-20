@@ -8,20 +8,26 @@
 
 class MainWnd;
 class JsMainWnd;
+class CameraWnd;
+class JsCameraWnd;
 
 class JsBinder: public QObject
 {
 public:
-    JsBinder( QObject * parent = 0 );
+    JsBinder( QObject * parent = 0, int interval = 50 );
     ~JsBinder();
 
     void registerMain( MainWnd * mw );
-    bool run( const QString & scriptFile, int timeout = -1 );
+    void registerCameraWnds( CameraWnd * intCam, CameraWnd * extCam );
+    bool run( const QString & scriptFile );
 
 private:
     QScriptEngine e;
     MainWnd * mainWnd;
     JsMainWnd * jsMainWnd;
+    CameraWnd * intCam, 
+              * extCam;
+    JsCameraWnd * jsCamWnd;
 };
 
 

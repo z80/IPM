@@ -8,7 +8,12 @@ timerCb = function()
         ind = 0;
         mainWnd.clear();
     }
+    mainWnd.logging( "internal isPlaying = " + String( intCamWnd.isPlaying() ) )
+    mainWnd.logging( "external isPlaying = " + String( extCamWnd.isPlaying() ) )
 }
+
+intCamWnd.play( "./tide.mpg" )
+extCamWnd.play( "./tide.mpg" )
 
 ind = 0;
 mainWnd.logging( "entered" );
