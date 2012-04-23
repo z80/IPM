@@ -23,10 +23,12 @@ xcopy /Y /E %ROOT_DIR%\IceE-1.3.0\* %ICEE_DIR%
 
 REM Build slice2cppe
 cd %ICEE_DIR%\cpp\
+mkdir lib
 nmake /f Makefile.mak
 
 REM Build IceE
 cd %ICEE_DIR%
+mkdir cppe\lib
 nmake DEBUG=0 /f Makefile.mak configure
 nmake DEBUG=0 /f Makefile.mak
 
