@@ -64,6 +64,7 @@ MainWnd::MainWnd( QWidget * parent )
     pd->intCamWnd = new CameraWnd();
     pd->intCamSub = pd->ui.mdi->addSubWindow( pd->intCamWnd );
     pd->intCamSub->setWindowTitle( "Internal" );
+    pd->intCamSub->setAttribute( Qt::WA_DeleteOnClose, false );
     connect( pd->ui.intCam,  SIGNAL(toggled(bool)),          pd->intCamSub,    SLOT(setVisible(bool)) );
     connect( pd->intCamSub, SIGNAL(visibilityChanged(bool)), pd->ui.intCam, SLOT(setChecked(bool)) );
     pd->intCamSub->hide();
@@ -71,6 +72,7 @@ MainWnd::MainWnd( QWidget * parent )
     pd->extCamWnd = new CameraWnd();
     pd->extCamSub = pd->ui.mdi->addSubWindow( pd->extCamWnd );
     pd->extCamSub->setWindowTitle( "External" );
+    pd->extCamSub->setAttribute( Qt::WA_DeleteOnClose, false );
     connect( pd->ui.extCam, SIGNAL(toggled(bool)),           pd->extCamSub, SLOT(setVisible(bool)) );
     connect( pd->extCamSub, SIGNAL(visibilityChanged(bool)), pd->ui.extCam, SLOT(setChecked(bool)) );
     pd->extCamSub->hide();
