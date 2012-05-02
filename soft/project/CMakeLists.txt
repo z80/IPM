@@ -22,9 +22,9 @@ endif ( WIN32 )
 add_subdirectory( "./3dparty-src/lua" )
 add_subdirectory( "./3dparty-src/luabind" )
 add_subdirectory( "./3dparty-src/ftdi" )
+add_subdirectory( "./3dparty-src/libqtlua-1.4" )
 add_subdirectory( "./application" )
 add_subdirectory( "./lib-application" )
 #add_subdirectory( "./lua-application" )
 add_subdirectory( "./lua-app-binder" )
-
 
