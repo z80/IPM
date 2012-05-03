@@ -16,6 +16,8 @@ public:
     void setTimerInterval( int ms );
     void setTimerEnabled( bool en );
     bool isTimerEnabled() const;
+protected:
+    bool eventFilter( QObject * o, QEvent * e );
 signals:
     void timeout();
 private:

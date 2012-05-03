@@ -66,6 +66,7 @@ MainWnd::MainWnd( QWidget * parent )
     pd->intCamSub->setWindowTitle( "Internal" );
     pd->intCamSub->setAttribute( Qt::WA_DeleteOnClose, false );
     connect( pd->ui.intCam,  SIGNAL(toggled(bool)),          pd->intCamSub,    SLOT(setVisible(bool)) );
+    connect( pd->ui.intCam,  SIGNAL(toggled(bool)),          pd->intCamWnd,    SLOT(setVisible(bool)) );
     connect( pd->intCamSub, SIGNAL(visibilityChanged(bool)), pd->ui.intCam, SLOT(setChecked(bool)) );
     pd->intCamSub->hide();
 
@@ -74,6 +75,7 @@ MainWnd::MainWnd( QWidget * parent )
     pd->extCamSub->setWindowTitle( "External" );
     pd->extCamSub->setAttribute( Qt::WA_DeleteOnClose, false );
     connect( pd->ui.extCam, SIGNAL(toggled(bool)),           pd->extCamSub, SLOT(setVisible(bool)) );
+    connect( pd->ui.extCam, SIGNAL(toggled(bool)),           pd->extCamWnd, SLOT(setVisible(bool)) );
     connect( pd->extCamSub, SIGNAL(visibilityChanged(bool)), pd->ui.extCam, SLOT(setChecked(bool)) );
     pd->extCamSub->hide();
 
@@ -93,6 +95,9 @@ MainWnd::MainWnd( QWidget * parent )
     connect( pd->scriptEditorDock, SIGNAL(visibilityChanged(bool)), pd->ui.debug,         SLOT(setChecked(bool)) );
     addDockWidget(Qt::RightDockWidgetArea, pd->scriptEditorDock );
     pd->scriptEditorDock->hide();
+
+    pd->intCamSub->installEventFilter( this );
+    pd->extCamSub->installEventFilter( this );
 }
 
 MainWnd::~MainWnd()
@@ -126,6 +131,19 @@ void MainWnd::setTimerEnabled( bool en )
 bool MainWnd::isTimerEnabled() const
 {
     return pd->timer->isActive();
+}
+
+bool MainWnd::eventFilter( QObject * o, QEvent * e )
+{
+    if ( e->type() == QEvent::Close )
+    {
+        QMdiSubWindow * c = qobject_cast<QMdiSubWindow *>( o );
+        if ( c == pd->intCamSub )
+            pd->ui.intCam->setChecked( false );
+        else if ( c == pd->extCamSub )
+            pd->ui.extCam->setChecked( false );
+    }
+    return false;
 }
 
 
