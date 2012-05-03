@@ -5,6 +5,8 @@ set( LIBUSB_LIB_PATH "${CMAKE_CURRENT_SOURCE_DIR}/3dparty-bin/libusb-win32-bin-1
 
 set( ICEE_LIB_PATH   "${CMAKE_CURRENT_SOURCE_DIR}/build/icee/cppe/lib" )
 set( ICEE_PATH       "${CMAKE_CURRENT_SOURCE_DIR}/build/icee/cppe/include" )
+set( SLICE2CPP       "${CMAKE_CURRENT_SOURCE_DIR}/build/icee/cpp/bin/slice2cppe.exe" )
+set( SLICE_INC       "${CMAKE_CURRENT_SOURCE_DIR}/build/icee/slice" )
 set( ICEE_UTIL_PATH  "${CMAKE_CURRENT_SOURCE_DIR}/build/icee/cpp/include" )
 set( BOOST_INC_PATH  "c:/projects/boost/boost_1_49_0" )
 set( BOOST_BIN_PATH  "c:/projects/boost/boost-1.49.0" )

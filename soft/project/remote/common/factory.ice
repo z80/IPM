@@ -9,7 +9,6 @@ module Factory
     interface Device
     {
         string status();
-        void   release();
     };
 
     interface DeviceFactory

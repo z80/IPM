@@ -1,12 +1,12 @@
 
-#ifndef __HUMIDITY_ICE_
-#define __HUMIDITY_ICE_
+#ifndef __MANIPULATOR_ICE_
+#define __MANIPULATOR_ICE_
 
 #include "factory.ice"
 
 module Device
 {
-    interface Pneumo extends Factory::Device
+    interface Manipulator extends Factory::Device
     {
     };
 };

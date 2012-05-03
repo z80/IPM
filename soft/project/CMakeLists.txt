@@ -27,4 +27,4 @@ add_subdirectory( "./application" )
 add_subdirectory( "./lib-application" )
 #add_subdirectory( "./lua-application" )
 add_subdirectory( "./lua-app-binder" )
-
+add_subdirectory( "./remote" )

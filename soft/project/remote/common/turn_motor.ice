@@ -1,12 +1,12 @@
 
-#ifndef __HUMIDITY_ICE_
-#define __HUMIDITY_ICE_
+#ifndef __TURN_MOTOR_ICE_
+#define __TURN_MOTOR_ICE_
 
 #include "factory.ice"
 
 module Device
 {
-    interface Pneumo extends Factory::Device
+    interface TurnMotor extends Factory::Device
     {
     };
 };

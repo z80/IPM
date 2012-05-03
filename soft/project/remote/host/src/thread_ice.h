@@ -11,7 +11,7 @@
 class ThreadIce: public IceUtil::Thread
 {
 public:
-    ThreadIce( const std::string & listen  = "tcp -p 31415" );
+    ThreadIce( const std::string & listen  = "tcp -p 31415", const std::string & configFile = "" );
     ~ThreadIce();
 
     void shutdown();
@@ -33,6 +33,7 @@ protected:
     std::string                      m_status;
     
     std::string                 m_listen;
+    std::string                 m_configFile;
     IceUtil::Handle<FactoryIce> m_factory;
 
     friend class FactoryIce;

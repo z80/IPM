@@ -1,6 +1,6 @@
 
-#ifndef __HUMIDITY_ICE_
-#define __HUMIDITY_ICE_
+#ifndef __PNEUMO_ICE_
+#define __PNEUMO_ICE_
 
 #include "factory.ice"
 

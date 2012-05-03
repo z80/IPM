@@ -15,11 +15,11 @@ public:
     ::Factory::DevicePrx query(const ::std::string&, const ::Ice::Current& = ::Ice::Current() );
 private:
     ::Factory::DevicePtr m_pneumo, 
-                         m_turnMoto, 
+                         m_turnMotor, 
                          m_actuator, 
                          m_manipulator;
     ::Factory::DevicePrx m_pneumoPrx, 
-                         m_turnMotoPrx, 
+                         m_turnMotorPrx, 
                          m_actuatorPrx, 
                          m_manipulatorPrx;
 };

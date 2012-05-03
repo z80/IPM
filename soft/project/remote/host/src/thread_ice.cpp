@@ -2,9 +2,10 @@
 #include "IceE/IceE.h"
 #include "thread_ice.h"
 
-ThreadIce::ThreadIce( const std::string & listen )
+ThreadIce::ThreadIce( const std::string & listen, const std::string & configFile )
 : IceUtil::Thread(), 
-  m_listen( listen )
+  m_listen( listen ), 
+  m_configFile( configFile )
 {
 }
 
@@ -60,12 +61,18 @@ void ThreadIce::run()
     try
     {
         Ice::PropertiesPtr   props = Ice::createProperties();
-        props->setProperty( "client_adapter.Endpoints", "tcp" );
+        if ( m_configFile.length() > 0 )
+            props->load( m_configFile );
+        else
+            props->setProperty( "client_adapter.Endpoints", "tcp" );
         Ice::InitializationData initData;
         initData.properties = props;
         m_comm = Ice::initialize( initData );
 
-        m_adapter = m_comm->createObjectAdapterWithEndpoints( "adapter", m_listen );
+        if ( m_configFile.length() > 0 )
+            m_adapter = m_comm->createObjectAdapter( "adapter" );
+        else
+            m_adapter = m_comm->createObjectAdapterWithEndpoints( "adapter", m_listen );
         m_factory = new FactoryIce( this );
         m_adapter->add( m_factory, m_comm->stringToIdentity( "factory" ) );
         m_adapter->activate();
