@@ -6,6 +6,10 @@
 #include <list>
 //#include "boost::any.hpp"
 
+namespace QtLua
+{
+    class State;
+}
 struct lua_State;
 struct lua_Debug;
 static void lineHook( lua_State * L, lua_Debug * ar );
@@ -28,7 +32,7 @@ public:
     }*/
 
 
-    Binder();
+    Binder( QtLua::State * state = 0 );
     virtual ~Binder();
     // For continous script execution.
     virtual void handler() = 0;
@@ -37,7 +41,8 @@ public:
     // To access resource files. If file doesn't exist it should get it from resource.
     virtual bool resourceFile( const std::string & fileName, std::basic_string<char> & content ) = 0;
     
-    lua_State * state();
+    lua_State    * state();
+    QtLua::State * qtState();
     //void enterCritical();
     //void leaveCritical();
     

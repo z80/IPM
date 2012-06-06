@@ -1,7 +1,7 @@
 
 set( BUILD_SHARED_LIBS ON )
 include_directories( ${BOOST_INC_PATH} )
-include_directories( "../lua/src" )
+include_directories( "../lua-5.1.5/src" )
 include_directories( "./" )
 # Эта строчка потому что в MinGW не понимает, что текущая директория 
 # также включена в список поиска заголовков почему-то.

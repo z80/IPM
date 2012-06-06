@@ -21,7 +21,7 @@
 	#FIND_PACKAGE (Lua51 REQUIRED)
 	#INCLUDE_DIRECTORIES (${LUA_INCLUDE_DIR})	
         set( LUA_LIBRARIES   liblua-5.1.5 )
-        set( LUA_INCLUDE_DIR ../lua/src )
+        set( LUA_INCLUDE_DIR ../lua-5.1.5/src )
         set( CMAKE_INSTALL_PREFIX ./app )
         include_directories( ${LUA_INCLUDE_DIR} )
 

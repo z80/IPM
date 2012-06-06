@@ -8,6 +8,14 @@ extern "C"
 #include "binder.h"
 #include <sstream>
 
+#include <boost/function.hpp>
+#include <boost/bind.hpp>
+#include <boost/bind/arg.hpp>
+#include <boost/bind/placeholders.hpp>
+
+#include <QtCore>
+#include "QtLua/State"
+
 class Binder::PD
 {
 public:
@@ -18,6 +26,8 @@ public:
     bool trace, 
          copyFiles, 
          running;
+    QtLua::State * qst;
+
     static const std::string BINDER;
     static const std::string BINDER_PD;
     static const std::string LOADFILE;
@@ -28,6 +38,8 @@ public:
     static void pushBinder( lua_State * L );
     static void pushPd( lua_State * L );
     static void pushLoadfile( lua_State * L );
+
+    void getLuaState( lua_State * L );
 };
 
 const std::string Binder::PD::BINDER    = "binder";
@@ -102,14 +114,36 @@ void Binder::PD::pushLoadfile( lua_State * L )
     lua_gettable( L, LUA_REGISTRYINDEX );
 }
 
-Binder::Binder()
+void Binder::PD::getLuaState( lua_State * L )
+{
+    this->L = L;
+}
+
+QMutex gm;
+lua_State * gL = 0;
+void getLuaState( lua_State * L )
+{
+    gL = L;
+}
+
+Binder::Binder( QtLua::State * state )
 {
     pd = new PD();
     pd->trace     = false;
     pd->copyFiles = true;
     pd->running   = false;
-    pd->L = luaL_newstate();
-    luaL_openlibs( pd->L );
+    pd->qst = state;
+    if ( !state )
+    {
+        pd->L = luaL_newstate();
+        luaL_openlibs( pd->L );
+    }
+    else
+    {
+        QMutexLocker lock( &gm );
+        state->lua_do( getLuaState );
+        pd->L = gL;
+    }
     lua_sethook( pd->L, lineHook, LUA_HOOKLINE, 0 );
     pd->placeBinder( this, pd->L );
     PD::printOverwrite( this, pd->L );
@@ -118,13 +152,19 @@ Binder::Binder()
 
 Binder::~Binder()
 {
-    lua_close( pd->L );
+    if ( !pd->qst )
+        lua_close( pd->L );
     delete pd;
 }
 
 lua_State * Binder::state()
 {
     return pd->L;
+}
+
+QtLua::State * Binder::qtState()
+{
+    return pd->qst;
 }
 
 bool Binder::execFile( const std::string & fileName )

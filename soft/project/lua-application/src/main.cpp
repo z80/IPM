@@ -32,7 +32,7 @@
 #include <QtLua/State>
 #include <QtLua/Console>
 
-#include "config.hh"
+//#include "config.hh"
 
 #define QTLUA_COPYRIGHT "QtLua " PACKAGE_VERSION " Copyright (C) 2008-2011, Alexandre Becoulet"
 
@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
 	    else
 	      {
 		std::cerr
-		  << QTLUA_COPYRIGHT << std::endl
+		  //<< QTLUA_COPYRIGHT << std::endl
 		  << "usage: qtlua [options] luafiles ..." << std::endl
 		  << "  -i --interactive    show a lua console dialog" << std::endl;
 	      }
@@ -99,7 +99,7 @@ int main(int argc, char *argv[])
 	QObject::connect(&state, SIGNAL(output(const QString&)),
 		console, SLOT(print(const QString&)));
 
-	console->print(QTLUA_COPYRIGHT "\n");
+	//console->print(QTLUA_COPYRIGHT "\n");
 	console->print("You may type: help(), list() and use TAB completion.\n");
 	console->show();
       }

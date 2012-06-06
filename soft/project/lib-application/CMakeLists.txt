@@ -26,6 +26,6 @@ set( src ${src} ${qrc} )
 
 add_library( application STATIC ${src} )
 find_library( libvlc NAMES libvlc PATHS "${ROOT}/3dparty-bin/vlc-2.0.1/sdk/lib" )
-target_link_libraries( application ${QT_LIBRARIES} binder ${libvlc} )
+target_link_libraries( application ${QT_LIBRARIES} ${libvlc} )
 install( DIRECTORY ${ROOT}/3dparty-bin/vlc-2.0.1/ DESTINATION "./" )
 
