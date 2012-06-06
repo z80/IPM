@@ -175,6 +175,8 @@ QtLua::State * Binder::qtState()
 
 bool Binder::execFile( const std::string & fileName )
 {
+    if ( pd->running )
+        return false;
     // Запуск файла с копированием или без копирования.
     FILE * fp = fopen( fileName.data(), "r" );
     if ( !fp )
@@ -245,6 +247,8 @@ bool Binder::execFile( const std::string & fileName )
 
 bool Binder::execString( const std::string & stri )
 {
+    if ( pd->running )
+        return false;
     //int t = lua_gettop( pd->L );
     //lua_pushstring( pd->L, "print" );
     //lua_gettable( pd->L, LUA_GLOBALSINDEX );
@@ -310,12 +314,14 @@ bool Binder::stopExec()
         lua_getstack( pd->L, 0, &ar );
         lua_getinfo( pd->L, "lS", &ar );
         lua_settop( pd->L, n );
-
+        
         std::ostringstream os;
         os << "Execution interrupted at " << ar.short_src << ", line number" << ar.currentline;
         lua_pushstring( pd->L, os.str().data() );
         lua_error( pd->L );
-
+        
+        pd->running = false;
+        
         return true;
     }
     return false;
