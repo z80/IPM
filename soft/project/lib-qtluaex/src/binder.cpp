@@ -229,6 +229,7 @@ bool Binder::execFile( const std::string & fileName )
                     std::string stri = lua_tostring( pd->L, i );
                     echo( stri );
                 }
+                lua_settop( pd->L, 0 );
             }
             return res;
         }
@@ -281,6 +282,7 @@ bool Binder::execString( const std::string & stri )
             std::string stri = lua_tostring( pd->L, i );
             echo( stri );
         }
+        lua_settop( pd->L, 0 );
     }
     return res;
 }
@@ -316,12 +318,10 @@ bool Binder::stopExec()
         lua_settop( pd->L, n );
         
         std::ostringstream os;
-        os << "Execution interrupted at " << ar.short_src << ", line number" << ar.currentline;
+        os << "Execution interrupted at " << ar.short_src << ", line number " << ar.currentline;
         lua_pushstring( pd->L, os.str().data() );
-        lua_error( pd->L );
-        
         pd->running = false;
-        
+        lua_error( pd->L );
         return true;
     }
     return false;
