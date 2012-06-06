@@ -8,8 +8,10 @@ endif ( WIN32 )
 include( ${QT_USE_FILE} )
 
 include_directories( "./src"
+                      "${ROOT}/lib-qtluaex/src" 
                      "${ROOT}/3dparty-src/lua-5.1.5/src" 
-                     "${ROOT}/3dparty-src/libqtlua-1.4/src" )
+                     "${ROOT}/3dparty-src/libqtlua-1.4/src" 
+                     ${CMAKE_CURRENT_BINARY_DIR} )
 
 file( GLOB src     "./src/*.cpp" )
 file( GLOB headers "./src/*.h" )

@@ -1,7 +1,7 @@
 
 #include "script_editor.h"
 #include "ui_script_editor.h"
-#include "js_binder.h"
+#include "binder.h"
 
 class ScriptEditor::PD
 {
@@ -31,12 +31,12 @@ ScriptEditor::~ScriptEditor()
 void ScriptEditor::run()
 {
     QString stri = pd->ui.code->toPlainText();
-    pd->binder->execString( stri );
+    pd->binder->execString( stri.toStdString() );
 }
 
 void ScriptEditor::stop()
 {
-    pd->binder->stop();
+    pd->binder->stopExec();
 }
 
 void ScriptEditor::open()
