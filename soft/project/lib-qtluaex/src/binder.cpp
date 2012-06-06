@@ -25,7 +25,8 @@ public:
     lua_State * L;
     bool trace, 
          copyFiles, 
-         running;
+         running, 
+         paused;
     QtLua::State * qst;
 
     static const std::string BINDER;
@@ -79,6 +80,15 @@ void Binder::PD::printOverwrite( Binder * b, lua_State * L )
     lua_pushstring( L, "print" );
     lua_pushcfunction( L, print );
     lua_settable( L, LUA_GLOBALSINDEX );
+    
+    //int ii = lua_gettop( L );
+    //lua_pushstring( L, "print" );
+    //lua_gettable( L, LUA_GLOBALSINDEX );
+    //lua_pushstring( L, "assdfg" );
+    //ii = lua_gettop( L );
+    //lua_pcall( L, 1, 0, 0 );
+    //lua_setglobal( L, "print" );
+    
     lua_settop( L, t );
 }
 
@@ -132,18 +142,14 @@ Binder::Binder( QtLua::State * state )
     pd->trace     = false;
     pd->copyFiles = true;
     pd->running   = false;
+    pd->paused    = false;
     pd->qst = state;
-    //if ( !state )
-    //{
-    //    pd->L = luaL_newstate();
-    //    luaL_openlibs( pd->L );
-    //}
-    //else
-    //{
-        QMutexLocker lock( &gm );
-        state->lua_do( getLuaState );
-        pd->L = gL;
-    //}
+    
+    state->openlib( QtLua::AllLibs );
+    QMutexLocker lock( &gm );
+    state->lua_do( getLuaState );
+    pd->L = gL;
+    
     lua_sethook( pd->L, lineHook, LUA_HOOKLINE, 0 );
     pd->placeBinder( this, pd->L );
     PD::printOverwrite( this, pd->L );
@@ -196,11 +202,32 @@ bool Binder::execFile( const std::string & fileName )
                 echo( os.str() );
             }
             // Execution from file.
-            PD::pushLoadfile( pd->L );
-            lua_pushstring( pd->L, fileName.data() );
-            int err = lua_pcall( pd->L, 1, 2, 0 );            
-            bool res = (err == 0);
+            //PD::pushLoadfile( pd->L );
+            //lua_pushstring( pd->L, fileName.data() );
             //pd->qst->exec_chunk( out );
+            int err = luaL_dofile( pd->L, fileName.data() );
+            switch ( err )
+            {
+            case LUA_ERRRUN:
+                echo( "Runtime error" );
+                break;
+            case LUA_ERRMEM:
+                echo( "Memory allocation error" );
+                break;
+            case LUA_ERRERR:
+                echo( "error while running the error handler function" );
+                break;
+            }
+            bool res = (err == 0);
+            if ( !res )
+            {
+                int top = lua_gettop( pd->L );
+                for ( int i=0; i<=top; i++ )
+                {
+                    std::string stri = lua_tostring( pd->L, i );
+                    echo( stri );
+                }
+            }
             return res;
         }
         else
@@ -218,11 +245,39 @@ bool Binder::execFile( const std::string & fileName )
 
 bool Binder::execString( const std::string & stri )
 {
-    lua_pushstring( pd->L, "loadstring" );
-    lua_gettable( pd->L, LUA_GLOBALSINDEX );
-    lua_pushstring( pd->L, stri.data() );
-    int err = lua_pcall( pd->L, 1, 2, 0 );
+    //int t = lua_gettop( pd->L );
+    //lua_pushstring( pd->L, "print" );
+    //lua_gettable( pd->L, LUA_GLOBALSINDEX );
+    //lua_pushstring( pd->L, "assdfg" );
+    //int ii = lua_gettop( pd->L );
+    //ii = lua_pcall( pd->L, 1, 0, 0 );
+    //ii = lua_gettop( pd->L );
+    //lua_settop( pd->L, t );
+
+    //ii = lua_gettop( pd->L );
+    int err = luaL_dostring( pd->L, stri.data() );
+    switch ( err )
+    {
+    case LUA_ERRRUN:
+        echo( "Runtime error" );
+        break;
+    case LUA_ERRMEM:
+        echo( "Memory allocation error" );
+        break;
+    case LUA_ERRERR:
+        echo( "error while running the error handler function" );
+        break;
+    }
     bool res = (err == 0);
+    if ( !res )
+    {
+        int top = lua_gettop( pd->L );
+        for ( int i=0; i<=top; i++ )
+        {
+            std::string stri = lua_tostring( pd->L, i );
+            echo( stri );
+        }
+    }
     return res;
 }
 
@@ -248,11 +303,6 @@ bool Binder::isRun() const
 
 bool Binder::stopExec()
 {
-    return true;
-}
-
-bool Binder::breakExec()
-{
     if ( pd->running )
     {
         int n = lua_gettop( pd->L );
@@ -271,8 +321,15 @@ bool Binder::breakExec()
     return false;
 }
 
+bool Binder::breakExec()
+{
+    pd->paused = true;
+    return true;
+}
+
 bool Binder::contExec()
 {
+    pd->paused = false;
     return true;
 }
 
@@ -310,7 +367,11 @@ static void lineHook( lua_State * L, lua_Debug * ar )
         Binder::PD::echoDebug( b, &ar );
     }
     pd->running = true;
-    b->handler();
+    // In handler pd->running could be overwritten in order to break the execution.
+    // But should exec at least once.
+    do {
+        b->handler();
+    } while ( pd->paused );
     pd->running = false;
     lua_settop( L, n );
 }

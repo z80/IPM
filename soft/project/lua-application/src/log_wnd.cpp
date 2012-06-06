@@ -1,6 +1,7 @@
 
 #include "log_wnd.h"
 #include "ui_log_wnd.h"
+#include <QtLua/State>
 
 class LogWnd::PD
 {
@@ -19,7 +20,7 @@ LogWnd::LogWnd( QWidget * parent, QtLua::State * st )
     pd->linesCnt = 128;
     pd->ui.setupUi( this );
 
-    connect( this, SIGNAL(output(const QString &)), this, SLOT(log(const QString &)) );
+    connect( st,   SIGNAL(output(const QString &)), this, SLOT(log(const QString &)) );
 
     connect( this, SIGNAL(sigLog(const QString &)), this, SLOT(slotLog(const QString &)), Qt::QueuedConnection );
     connect( this, SIGNAL(sigLinesCnt(int)),        this, SLOT(slotLinesCnt(int)),        Qt::QueuedConnection );

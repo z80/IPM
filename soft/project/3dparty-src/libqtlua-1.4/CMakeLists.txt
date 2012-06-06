@@ -119,34 +119,34 @@
 			LIBRARY DESTINATION ${INSTALL_LIB}
 			ARCHIVE DESTINATION ${INSTALL_LIB})
 
-        INSTALL(FILES
-                src/QtLua/Function src/QtLua/function.hh src/QtLua/function.hxx 
-                src/QtLua/Console src/QtLua/console.hh src/QtLua/console.hxx 
-                src/QtLua/Item src/QtLua/item.hh src/QtLua/item.hxx	
-                src/QtLua/TableTreeModel src/QtLua/tabletreemodel.hh 
-                src/QtLua/TableDialog src/QtLua/tabledialog.hh src/QtLua/tabledialog.hxx 
-                src/QtLua/TableGridModel src/QtLua/tablegridmodel.hh 
-                src/QtLua/ItemModel src/QtLua/itemmodel.hh 
-                src/QtLua/ItemSelectionModel src/QtLua/itemselectionmodel.hh src/QtLua/itemselectionmodel.hxx 
-                src/QtLua/Iterator src/QtLua/iterator.hh src/QtLua/iterator.hxx 
-                src/QtLua/ListItem src/QtLua/listitem.hh src/QtLua/listitem.hxx 
-                src/QtLua/Plugin src/QtLua/plugin.hh src/QtLua/plugin.hxx 
-                src/QtLua/PluginInterface src/QtLua/plugininterface.hh 
-                src/QtLua/State src/QtLua/state.hh src/QtLua/state.hxx 
-                src/QtLua/UserData src/QtLua/userdata.hh src/QtLua/userdata.hxx 
-                src/QtLua/UserObject src/QtLua/userobject.hh src/QtLua/userobject.hxx 
-                src/QtLua/Value src/QtLua/value.hh src/QtLua/value.hxx 
-                src/QtLua/ValueRef src/QtLua/valueref.hh src/QtLua/valueref.hxx 
-                src/QtLua/Ref src/QtLua/ref.hh 
-                src/QtLua/String src/QtLua/string.hh src/QtLua/string.hxx 
-                src/QtLua/QHashProxy src/QtLua/qhashproxy.hh src/QtLua/qhashproxy.hxx 
-                src/QtLua/QVectorProxy src/QtLua/qvectorproxy.hh src/QtLua/qvectorproxy.hxx 
-                src/QtLua/QListProxy src/QtLua/qlistproxy.hh src/QtLua/qlistproxy.hxx 
-                src/QtLua/QLinkedListProxy src/QtLua/qlinkedlistproxy.hh src/QtLua/qlinkedlistproxy.hxx 
-                src/QtLua/ArrayProxy src/QtLua/arrayproxy.hh src/QtLua/arrayproxy.hxx 
-                src/QtLua/MetaType src/QtLua/metatype.hh src/QtLua/metatype.hxx 
-                src/QtLua/DispatchProxy src/QtLua/dispatchproxy.hh src/QtLua/dispatchproxy.hxx
-        DESTINATION ${INSTALL_INC}/QtLua)
+#         INSTALL(FILES
+#                 src/QtLua/Function src/QtLua/qtluafunction.hh src/QtLua/qtluafunction.hxx 
+#                 src/QtLua/Console src/QtLua/qtluaconsole.hh src/QtLua/qtluaconsole.hxx 
+#                 src/QtLua/Item src/QtLua/item.hh src/QtLua/item.hxx	
+#                 src/QtLua/TableTreeModel src/QtLua/tabletreemodel.hh 
+#                 src/QtLua/TableDialog src/QtLua/tabledialog.hh src/QtLua/tabledialog.hxx 
+#                 src/QtLua/TableGridModel src/QtLua/tablegridmodel.hh 
+#                 src/QtLua/ItemModel src/QtLua/itemmodel.hh 
+#                 src/QtLua/ItemSelectionModel src/QtLua/itemselectionmodel.hh src/QtLua/itemselectionmodel.hxx 
+#                 src/QtLua/Iterator src/QtLua/iterator.hh src/QtLua/iterator.hxx 
+#                 src/QtLua/ListItem src/QtLua/listitem.hh src/QtLua/listitem.hxx 
+#                 src/QtLua/Plugin src/QtLua/plugin.hh src/QtLua/plugin.hxx 
+#                 src/QtLua/PluginInterface src/QtLua/plugininterface.hh 
+#                 src/QtLua/State src/QtLua/state.hh src/QtLua/state.hxx 
+#                 src/QtLua/UserData src/QtLua/userdata.hh src/QtLua/userdata.hxx 
+#                 src/QtLua/UserObject src/QtLua/userobject.hh src/QtLua/userobject.hxx 
+#                 src/QtLua/Value src/QtLua/value.hh src/QtLua/value.hxx 
+#                 src/QtLua/ValueRef src/QtLua/valueref.hh src/QtLua/valueref.hxx 
+#                 src/QtLua/Ref src/QtLua/ref.hh 
+#                 src/QtLua/String src/QtLua/string.hh src/QtLua/string.hxx 
+#                 src/QtLua/QHashProxy src/QtLua/qhashproxy.hh src/QtLua/qhashproxy.hxx 
+#                 src/QtLua/QVectorProxy src/QtLua/qvectorproxy.hh src/QtLua/qvectorproxy.hxx 
+#                 src/QtLua/QListProxy src/QtLua/qlistproxy.hh src/QtLua/qlistproxy.hxx 
+#                 src/QtLua/QLinkedListProxy src/QtLua/qlinkedlistproxy.hh src/QtLua/qlinkedlistproxy.hxx 
+#                 src/QtLua/ArrayProxy src/QtLua/arrayproxy.hh src/QtLua/arrayproxy.hxx 
+#                 src/QtLua/MetaType src/QtLua/metatype.hh src/QtLua/metatype.hxx 
+#                 src/QtLua/DispatchProxy src/QtLua/dispatchproxy.hh src/QtLua/dispatchproxy.hxx
+#         DESTINATION ${INSTALL_INC}/QtLua)
 	
 # tests
 #	INCLUDE_DIRECTORIES( test )

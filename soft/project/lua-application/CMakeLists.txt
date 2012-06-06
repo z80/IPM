@@ -31,3 +31,4 @@ set( src ${src} ${qrcSrc} )
 
 add_executable( qtluaex-test ${src} )
 target_link_libraries( qtluaex-test qtluaex ${QT_LIBRARIES} )
+install( TARGETS qtluaex-test DESTINATION "." )
