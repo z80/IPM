@@ -23,95 +23,22 @@
 
 */
 
-#include <QApplication>
-#include <QFile>
-#include <QDialog>
-#include <QSettings>
-#include <QPointer>
-
+#include <QtGui>
 #include <QtLua/State>
-#include <QtLua/Console>
-
-//#include "config.hh"
-
-#define QTLUA_COPYRIGHT "QtLua " PACKAGE_VERSION " Copyright (C) 2008-2011, Alexandre Becoulet"
-
+#include "binder.h"
+#include "script_editor.h"
+#include "log_wnd.h"
 int main(int argc, char *argv[])
 {
-  try {
     QApplication app(argc, argv);
-    QStringList args = app.arguments();
-    QPointer<QtLua::Console> console(0);
-    QSettings settings("QtLua", "qtlua tool");
+    QtLua::State st;
+    
+    LogWnd * log = new LogWnd( 0, &st );
+    ScriptEditor * se = new ScriptEditor( log, 0 );
+    log->show();
+    se->show();
 
-    bool interactive = argc == 1;
-    bool execute = interactive;
-
-    QtLua::State state;
-    state.openlib(QtLua::AllLibs);
-
-    state["app"] = QtLua::Value(state, &app, false);
-
-    for (int i = 1; i < argc; i++)
-      {
-	QByteArray arg(argv[i]);
-
-	if (arg[0] == '-')
-	  {
-	    // option
-	    if (arg == "--interactive" || arg == "-i")
-	      {
-		execute = interactive = true;
-	      }
-	    else
-	      {
-		std::cerr
-		  //<< QTLUA_COPYRIGHT << std::endl
-		  << "usage: qtlua [options] luafiles ..." << std::endl
-		  << "  -i --interactive    show a lua console dialog" << std::endl;
-	      }
-	  }
-	else
-	  {
-	    // lua chunk file
-	    QFile file(argv[i]);
-
-	    if (!file.open(QIODevice::ReadOnly))
-	      throw QtLua::String("Unable to open `%' file.").arg(argv[i]);
-
-	    execute = true;
-	    state.exec_chunk(file);
-	  }
-      }
-
-    if (interactive)
-      {
-	console = new QtLua::Console(0, ">>");
-
-	console->load_history(settings);
-
-	QObject::connect(console, SIGNAL(line_validate(const QString&)),
-			 &state, SLOT(exec(const QString&)));
-
-	QObject::connect(console, SIGNAL(get_completion_list(const QString &, QStringList &, int &)),
-		&state, SLOT(fill_completion_list(const QString &, QStringList &, int &)));
-
-	QObject::connect(&state, SIGNAL(output(const QString&)),
-		console, SLOT(print(const QString&)));
-
-	//console->print(QTLUA_COPYRIGHT "\n");
-	console->print("You may type: help(), list() and use TAB completion.\n");
-	console->show();
-      }
-
-    if (execute)
-      app.exec();
-
-    if (console)
-      console->save_history(settings);
-
-  } catch (QtLua::String &e) {
-    std::cerr << e.constData() << std::endl;
-  }
+    int res = app.exec();
+    return res;
 }
 

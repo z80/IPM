@@ -11,12 +11,15 @@ public:
     QString log;
 };
 
-LogWnd::LogWnd( QWidget * parent )
-: QWidget( parent )
+LogWnd::LogWnd( QWidget * parent, QtLua::State * st )
+: QWidget( parent ), 
+  Binder( st )
 {
     pd = new PD();
     pd->linesCnt = 128;
     pd->ui.setupUi( this );
+
+    connect( this, SIGNAL(output(const QString &)), this, SLOT(log(const QString &)) );
 
     connect( this, SIGNAL(sigLog(const QString &)), this, SLOT(slotLog(const QString &)), Qt::QueuedConnection );
     connect( this, SIGNAL(sigLinesCnt(int)),        this, SLOT(slotLinesCnt(int)),        Qt::QueuedConnection );
@@ -37,8 +40,7 @@ void LogWnd::handler()
 
 void LogWnd::echo( const std::string & stri )
 {
-    QString stri = QString::fromStdString( stri );
-    log( stri );
+    log( QString::fromStdString( stri ) );
 }
 
 bool LogWnd::resourceFile( const std::string & fileName, std::basic_string<char> & content )

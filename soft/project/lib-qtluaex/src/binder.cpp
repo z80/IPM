@@ -133,17 +133,17 @@ Binder::Binder( QtLua::State * state )
     pd->copyFiles = true;
     pd->running   = false;
     pd->qst = state;
-    if ( !state )
-    {
-        pd->L = luaL_newstate();
-        luaL_openlibs( pd->L );
-    }
-    else
-    {
+    //if ( !state )
+    //{
+    //    pd->L = luaL_newstate();
+    //    luaL_openlibs( pd->L );
+    //}
+    //else
+    //{
         QMutexLocker lock( &gm );
         state->lua_do( getLuaState );
         pd->L = gL;
-    }
+    //}
     lua_sethook( pd->L, lineHook, LUA_HOOKLINE, 0 );
     pd->placeBinder( this, pd->L );
     PD::printOverwrite( this, pd->L );
@@ -200,6 +200,7 @@ bool Binder::execFile( const std::string & fileName )
             lua_pushstring( pd->L, fileName.data() );
             int err = lua_pcall( pd->L, 1, 2, 0 );            
             bool res = (err == 0);
+            //pd->qst->exec_chunk( out );
             return res;
         }
         else

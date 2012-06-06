@@ -32,7 +32,7 @@ public:
     }*/
 
 
-    Binder( QtLua::State * state = 0 );
+    Binder( QtLua::State * state );
     virtual ~Binder();
     // For continous script execution.
     virtual void handler() = 0;
