@@ -38,6 +38,7 @@ int main(int argc, char *argv[])
     ScriptEditor * se = new ScriptEditor( log, 0 );
     log->show();
     se->show();
+    se->openFile( "./main.lua" );
 
     int res = app.exec();
     return res;
