@@ -30,6 +30,27 @@ ScriptEditor::~ScriptEditor()
     delete pd;
 }
 
+void ScriptEditor::openFile( const QString & stri )
+{
+    QFile scriptFile( stri );
+    scriptFile.open(QIODevice::ReadOnly);
+    QTextStream stream( &scriptFile );
+    QString contents = stream.readAll();
+    scriptFile.close();
+
+    pd->ui.code->setPlainText( contents );
+}
+
+void ScriptEditor::saveFile( const QString & stri )
+{
+    QString content = pd->ui.code->toPlainText();
+    QFile scriptFile( stri );
+    scriptFile.open(QIODevice::WriteOnly);
+    QTextStream stream( &scriptFile );
+    stream << content;
+    scriptFile.close();
+}
+
 void ScriptEditor::run()
 {
     QString stri = pd->ui.code->toPlainText();
@@ -57,32 +78,17 @@ void ScriptEditor::step()
 void ScriptEditor::open()
 {
     QString fileName = QFileDialog::getOpenFileName( this,
-       tr("Open Java script"), "./", tr("Js files (*.js)"));
+       tr("Open Lua script"), "./", tr("Lua files (*.lua)"));
     if ( !fileName.isNull() )
-    {
-        QFile scriptFile( fileName );
-        scriptFile.open(QIODevice::ReadOnly);
-        QTextStream stream( &scriptFile );
-        QString contents = stream.readAll();
-        scriptFile.close();
-
-        pd->ui.code->setPlainText( contents );
-    }
+        openFile( fileName );
 }
 
 void ScriptEditor::save()
 {
     QString fileName = QFileDialog::getSaveFileName( this,
-       tr("Save Java script"), "./", tr("Js files (*.js)"));
+       tr("Save Lua script"), "./", tr("Lua files (*.lua)"));
     if ( !fileName.isNull() )
-    {
-        QString stri = pd->ui.code->toPlainText();
-        QFile scriptFile( fileName );
-        scriptFile.open(QIODevice::WriteOnly);
-        QTextStream stream( &scriptFile );
-        stream << stri;
-        scriptFile.close();
-    }
+        saveFile( fileName );
 }
 
 

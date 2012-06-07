@@ -11,6 +11,8 @@ class ScriptEditor: public QMainWindow
 public:
     ScriptEditor( Binder * binder, QWidget * parent = 0 );
     ~ScriptEditor();
+    void openFile( const QString & stri );
+    void saveFile( const QString & stri );
 private slots:
     void run();
     void stop();
