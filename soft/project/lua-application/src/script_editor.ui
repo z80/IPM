@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>443</width>
+    <width>457</width>
     <height>548</height>
    </rect>
   </property>
@@ -47,6 +47,8 @@
    </attribute>
    <addaction name="run"/>
    <addaction name="stop"/>
+   <addaction name="debug"/>
+   <addaction name="step"/>
    <addaction name="separator"/>
    <addaction name="open"/>
    <addaction name="save"/>
@@ -97,6 +99,33 @@
    </property>
    <property name="toolTip">
     <string>Save script file</string>
+   </property>
+  </action>
+  <action name="debug">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/debug.png</normaloff>:/images/debug.png</iconset>
+   </property>
+   <property name="text">
+    <string>Debug</string>
+   </property>
+   <property name="toolTip">
+    <string>Debug on/off</string>
+   </property>
+  </action>
+  <action name="step">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/step-into.png</normaloff>:/images/step-into.png</iconset>
+   </property>
+   <property name="text">
+    <string>Step</string>
+   </property>
+   <property name="toolTip">
+    <string>Step (goto next code line)</string>
    </property>
   </action>
  </widget>

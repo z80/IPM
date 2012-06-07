@@ -28,6 +28,7 @@
 #include "binder.h"
 #include "script_editor.h"
 #include "log_wnd.h"
+
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);

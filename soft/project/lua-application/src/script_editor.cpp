@@ -17,8 +17,10 @@ ScriptEditor::ScriptEditor( Binder * binder, QWidget * parent )
     pd->binder = binder;
     pd->ui.setupUi( this );
 
-    connect( pd->ui.run,  SIGNAL(triggered()), this, SLOT(run()) );
-    connect( pd->ui.stop, SIGNAL(triggered()), this, SLOT(stop()) );
+    connect( pd->ui.run,   SIGNAL(triggered()), this, SLOT(run()) );
+    connect( pd->ui.stop,  SIGNAL(triggered()), this, SLOT(stop()) );
+    connect( pd->ui.debug, SIGNAL(triggered()), this, SLOT(debug()) );
+    connect( pd->ui.step,  SIGNAL(triggered()), this, SLOT(step()) );
     connect( pd->ui.open, SIGNAL(triggered()), this, SLOT(open()) );
     connect( pd->ui.save, SIGNAL(triggered()), this, SLOT(save()) );
 }
@@ -37,6 +39,19 @@ void ScriptEditor::run()
 void ScriptEditor::stop()
 {
     pd->binder->stopExec();
+}
+
+void ScriptEditor::debug()
+{
+    if ( pd->ui.debug->isChecked() )
+        pd->binder->breakExec();
+    else
+        pd->binder->contExec();
+}
+
+void ScriptEditor::step()
+{
+    pd->binder->stepInto();
 }
 
 void ScriptEditor::open()

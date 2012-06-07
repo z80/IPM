@@ -14,6 +14,8 @@ public:
 private slots:
     void run();
     void stop();
+    void debug();
+    void step();
     void open();
     void save();
 private:

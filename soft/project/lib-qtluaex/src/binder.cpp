@@ -26,7 +26,8 @@ public:
     bool trace, 
          copyFiles, 
          running, 
-         paused;
+         paused, 
+         makeStep;
     QtLua::State * qst;
 
     static const std::string BINDER;
@@ -143,6 +144,7 @@ Binder::Binder( QtLua::State * state )
     pd->copyFiles = true;
     pd->running   = false;
     pd->paused    = false;
+    pd->makeStep  = false;
     pd->qst = state;
     
     state->openlib( QtLua::AllLibs );
@@ -175,6 +177,7 @@ QtLua::State * Binder::qtState()
 
 bool Binder::execFile( const std::string & fileName )
 {
+    pd->makeStep = false;
     if ( pd->running )
         return false;
     // Запуск файла с копированием или без копирования.
@@ -248,6 +251,7 @@ bool Binder::execFile( const std::string & fileName )
 
 bool Binder::execString( const std::string & stri )
 {
+    pd->makeStep = false;
     if ( pd->running )
         return false;
     //int t = lua_gettop( pd->L );
@@ -330,7 +334,7 @@ bool Binder::stopExec()
 bool Binder::breakExec()
 {
     pd->paused = true;
-    return true;
+    return pd->running;
 }
 
 bool Binder::contExec()
@@ -341,17 +345,19 @@ bool Binder::contExec()
 
 bool Binder::stepOver()
 {
-    return false;
+    return pd->running;
 }
 
 bool Binder::stepInto()
 {
-    return false;
+    if ( pd->running )
+        pd->makeStep = true;
+    return pd->running;
 }
 
 bool Binder::stepOut()
 {
-    return false;
+    return pd->running;
 }
 
 bool Binder::eval( const std::string & stri )
@@ -376,7 +382,13 @@ static void lineHook( lua_State * L, lua_Debug * ar )
     // In handler pd->running could be overwritten in order to break the execution.
     // But should exec at least once.
     do {
+        pd->makeStep = false;
         b->handler();
+        if ( pd->makeStep )
+        {
+            pd->makeStep = false;
+            break;
+        }
     } while ( pd->paused );
     pd->running = false;
     lua_settop( L, n );
