@@ -1,4 +1,4 @@
-PCBNEW-LibModule-V1  Sat 16 Jun 2012 03:23:22 PM MSK
+PCBNEW-LibModule-V1  Sat 16 Jun 2012 11:11:08 PM MSK
 # encoding utf-8
 $INDEX
 side-conn-02
@@ -6,6 +6,7 @@ side-conn-03
 side-conn-04
 side-conn-08
 side-conn-12
+side-conn-20
 side-conn-8
 size-conn-02
 $EndINDEX
@@ -345,4 +346,153 @@ Ne 0 ""
 Po -3500 -700
 $EndPAD
 $EndMODULE  side-conn-08
+$MODULE side-conn-20
+Po 0 0 0 15 4FDCDA17 00000000 ~~
+Li side-conn-20
+Sc 00000000
+AR 
+Op 0 0 0
+T0 0 -3000 600 600 0 120 N V 21 N "side-conn-20"
+T1 0 -2000 600 600 0 120 N V 21 N "VAL**"
+$PAD
+Sh "17" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 6500 -690
+$EndPAD
+$PAD
+Sh "18" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 7500 -690
+$EndPAD
+$PAD
+Sh "19" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 8500 -690
+$EndPAD
+$PAD
+Sh "20" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 9500 -690
+$EndPAD
+$PAD
+Sh "16" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 5500 -690
+$EndPAD
+$PAD
+Sh "15" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 4500 -690
+$EndPAD
+$PAD
+Sh "14" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3500 -690
+$EndPAD
+$PAD
+Sh "13" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2500 -690
+$EndPAD
+$PAD
+Sh "12" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1500 -700
+$EndPAD
+$PAD
+Sh "11" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 500 -700
+$EndPAD
+$PAD
+Sh "10" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -500 -700
+$EndPAD
+$PAD
+Sh "9" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1500 -700
+$EndPAD
+$PAD
+Sh "8" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2500 -700
+$EndPAD
+$PAD
+Sh "7" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -3500 -700
+$EndPAD
+$PAD
+Sh "6" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -4500 -700
+$EndPAD
+$PAD
+Sh "5" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -5500 -700
+$EndPAD
+$PAD
+Sh "4" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -6500 -700
+$EndPAD
+$PAD
+Sh "3" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -7500 -700
+$EndPAD
+$PAD
+Sh "2" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -8500 -700
+$EndPAD
+$PAD
+Sh "1" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -9500 -700
+$EndPAD
+$EndMODULE  side-conn-20
 $EndLIBRARY

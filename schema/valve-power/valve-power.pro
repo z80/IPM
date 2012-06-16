@@ -1,16 +1,6 @@
-update=Sat 16 Jun 2012 01:44:39 PM MSK
+update=Sat 16 Jun 2012 11:00:33 PM MSK
 version=1
-last_client=eeschema
-[cvpcb]
-version=1
-NetITyp=0
-NetIExt=.net
-PkgIExt=.pkg
-NetDir=
-LibDir=
-NetType=0
-[cvpcb/libraries]
-EquName1=devcms
+last_client=cvpcb
 [pcbnew]
 version=1
 PadDrlX=320
@@ -66,7 +56,6 @@ MaxLnkS=3
 ShowRat=0
 ShowMRa=1
 [pcbnew/libraries]
-LibDir=
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -77,6 +66,15 @@ LibName7=display
 LibName8=valves
 LibName9=led
 LibName10=dip_sockets
+LibName11=/home/z80/projects/ipm/schema/libs/con-usb-2
+LibName12=/home/z80/projects/ipm/schema/libs/con-usb-3
+LibName13=/home/z80/projects/ipm/schema/libs/IRFL024
+LibName14=/home/z80/projects/ipm/schema/libs/lqfp48
+LibName15=/home/z80/projects/ipm/schema/libs/micro-sd
+LibName16=/home/z80/projects/ipm/schema/libs/my_foots
+LibName17=/home/z80/projects/ipm/schema/libs/sdc
+LibName18=/home/z80/projects/ipm/schema/libs/side-conns
+LibDir=../valve
 [general]
 version=1
 [eeschema]
@@ -150,3 +148,8 @@ LibName36=ncp3063
 LibName37=sdc
 LibName38=stm
 LibName39=usb
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
