@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 16 Jun 2012 11:30:21 PM MSK
+EESchema Schematic File Version 2  date Sun 17 Jun 2012 12:01:13 AM MSK
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -605,9 +605,9 @@ F2 "out" I R 21350 6950 60
 F3 "in-24v" I L 19800 6950 60 
 $EndSheet
 Text Label 21600 6950 0    60   ~ 0
-io17
+io9
 Text Label 21550 7650 0    60   ~ 0
-io18
+io10
 $Sheet
 S 19800 7450 1550 400 
 U 4FDC7DE5
@@ -625,9 +625,9 @@ F2 "out" I R 21350 9050 60
 F3 "in-24v" I L 19800 9050 60 
 $EndSheet
 Text Label 21550 9050 0    60   ~ 0
-io20
+io12
 Text Label 21550 8350 0    60   ~ 0
-io19
+io11
 $Sheet
 S 19800 8150 1550 400 
 U 4FDC7DE3
@@ -645,9 +645,9 @@ F2 "out" I R 21350 5550 60
 F3 "in-24v" I L 19800 5550 60 
 $EndSheet
 Text Label 21550 5550 0    60   ~ 0
-io15
+io7
 Text Label 21550 6250 0    60   ~ 0
-io16
+io8
 $Sheet
 S 19800 6050 1550 400 
 U 4FDC7DB6
@@ -665,9 +665,9 @@ F2 "out" I R 21350 4850 60
 F3 "in-24v" I L 19800 4850 60 
 $EndSheet
 Text Label 21550 4850 0    60   ~ 0
-io14
+io6
 Text Label 21600 4150 0    60   ~ 0
-io13
+io5
 $Sheet
 S 19800 3950 1550 400 
 U 4FDC7DB4
@@ -701,13 +701,13 @@ out6
 Text Label 14650 2900 0    60   ~ 0
 out5
 Text Label 12350 3800 0    60   ~ 0
-io8
+io20
 Text Label 12350 4100 0    60   ~ 0
-io7
+io19
 Text Label 12350 2900 0    60   ~ 0
-io6
+io18
 Text Label 12350 3200 0    60   ~ 0
-io5
+io17
 $Sheet
 S 12850 3700 1550 500 
 U 4FDC7CDA
@@ -1223,13 +1223,13 @@ F4 "in2" I L 12850 2300 60
 F5 "in1" I L 12850 2000 60 
 $EndSheet
 Text Label 12350 1400 0    60   ~ 0
-io1
+io13
 Text Label 12350 1100 0    60   ~ 0
-io2
+io14
 Text Label 12350 2300 0    60   ~ 0
-io3
+io15
 Text Label 12350 2000 0    60   ~ 0
-io4
+io16
 Text Label 14650 1100 0    60   ~ 0
 out1
 Text Label 14650 1400 0    60   ~ 0
@@ -1247,9 +1247,9 @@ F2 "out" I R 21350 1400 60
 F3 "in-24v" I L 19800 1400 60 
 $EndSheet
 Text Label 21600 1400 0    60   ~ 0
-io9
+io1
 Text Label 21550 2100 0    60   ~ 0
-io10
+io2
 $Sheet
 S 19800 1900 1550 400 
 U 4FDB3921
@@ -1267,9 +1267,9 @@ F2 "out" I R 21350 3500 60
 F3 "in-24v" I L 19800 3500 60 
 $EndSheet
 Text Label 21550 3500 0    60   ~ 0
-io12
+io4
 Text Label 21550 2800 0    60   ~ 0
-io11
+io3
 $Sheet
 S 19800 2600 1550 400 
 U 4FDB3936
