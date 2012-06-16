@@ -1,2 +1,3 @@
-valve - схема управления клапанами с 8 выходами и 16 входами.
-vale-hm - схема того же, но с уменьшенным числом входов/выходов для управления через usb или i2c.
+valve - 
+vale-hm - mcu with i2c to communicate with other mcus and usb for hardware upgrade.
+valve-power - power supplies for 3.3v, 10v and 24v IO lines.

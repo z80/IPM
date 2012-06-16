@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 16 Jun 2012 01:43:09 PM MSK
+EESchema Schematic File Version 2  date Sat 16 Jun 2012 01:47:18 PM MSK
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,12 +29,16 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:con-usb
+LIBS:con-usb-2
+LIBS:con-usb-3
+LIBS:mc34152
+LIBS:my_comps
 LIBS:ncp3063
 LIBS:sdc
 LIBS:stm
 LIBS:usb
-LIBS:mc34152
-LIBS:valve-hm-cache
+LIBS:valve-power-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267

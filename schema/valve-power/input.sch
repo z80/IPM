@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 16 Jun 2012 01:12:43 PM MSK
+EESchema Schematic File Version 2  date Sat 16 Jun 2012 01:47:18 PM MSK
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,12 +29,16 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:con-usb
+LIBS:con-usb-2
+LIBS:con-usb-3
+LIBS:mc34152
+LIBS:my_comps
 LIBS:ncp3063
 LIBS:sdc
 LIBS:stm
 LIBS:usb
-LIBS:mc34152
-LIBS:valve-hm-cache
+LIBS:valve-power-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
@@ -56,8 +60,8 @@ P 5800 2050
 AR Path="/4FDB3936/4FDB399C" Ref="#PWR049"  Part="1" 
 AR Path="/4FDB3935/4FDB399C" Ref="#PWR052"  Part="1" 
 AR Path="/4FDB3921/4FDB399C" Ref="#PWR055"  Part="1" 
-AR Path="/4FDB299D/4FDB399C" Ref="#PWR064"  Part="1" 
-F 0 "#PWR064" H 5800 2150 30  0001 C CNN
+AR Path="/4FDB299D/4FDB399C" Ref="#PWR068"  Part="1" 
+F 0 "#PWR068" H 5800 2150 30  0001 C CNN
 F 1 "VDD" H 5800 2160 30  0000 C CNN
 	1    5800 2050
 	1    0    0    -1  
@@ -117,8 +121,8 @@ P 4600 4700
 AR Path="/4FDB3936/4FDB2A6B" Ref="#PWR050"  Part="1" 
 AR Path="/4FDB3935/4FDB2A6B" Ref="#PWR053"  Part="1" 
 AR Path="/4FDB3921/4FDB2A6B" Ref="#PWR056"  Part="1" 
-AR Path="/4FDB299D/4FDB2A6B" Ref="#PWR065"  Part="1" 
-F 0 "#PWR065" H 4600 4700 30  0001 C CNN
+AR Path="/4FDB299D/4FDB2A6B" Ref="#PWR069"  Part="1" 
+F 0 "#PWR069" H 4600 4700 30  0001 C CNN
 F 1 "GND" H 4600 4630 30  0001 C CNN
 	1    4600 4700
 	1    0    0    -1  
@@ -130,8 +134,8 @@ P 5800 4550
 AR Path="/4FDB3936/4FDB2A62" Ref="#PWR051"  Part="1" 
 AR Path="/4FDB3935/4FDB2A62" Ref="#PWR054"  Part="1" 
 AR Path="/4FDB3921/4FDB2A62" Ref="#PWR057"  Part="1" 
-AR Path="/4FDB299D/4FDB2A62" Ref="#PWR066"  Part="1" 
-F 0 "#PWR066" H 5800 4550 30  0001 C CNN
+AR Path="/4FDB299D/4FDB2A62" Ref="#PWR070"  Part="1" 
+F 0 "#PWR070" H 5800 4550 30  0001 C CNN
 F 1 "GND" H 5800 4480 30  0001 C CNN
 	1    5800 4550
 	1    0    0    -1  
