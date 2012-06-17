@@ -1,3 +1,4 @@
 valve - 
 vale-hm - mcu with i2c to communicate with other mcus and usb for hardware upgrade.
-valve-power - power supplies for 3.3v, 10v and 24v IO lines.
+valve-power - 24v IO lines with 8 outputs and 12 inputs.
+valve-ps    - power supply board - makes 3.3V and 10V from 24V supply.

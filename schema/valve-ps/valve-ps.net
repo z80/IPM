@@ -1,0 +1,259 @@
+# EESchema Netlist Version 1.1 created  Mon 18 Jun 2012 12:15:53 AM MSK
+(
+ ( /4FDE3983 SM0805 C1 4u7
+  ( 1 24v )
+  ( 2 GND )
+ )
+ ( /4FDE398A SM0805 C2 4u7
+  ( 1 24v )
+  ( 2 GND )
+ )
+ ( /4FDE3984 SM0805 C3 100n
+  ( 1 24v )
+  ( 2 GND )
+ )
+ ( /4FDE3989 SM0805 C4 100n
+  ( 1 24v )
+  ( 2 GND )
+ )
+ ( /4FDE3980 SM0805 C5 2.2n
+  ( 1 N-000011 )
+  ( 2 GND )
+ )
+ ( /4FDE398D SM0805 C6 2.2n
+  ( 1 N-000008 )
+  ( 2 GND )
+ )
+ ( /4FDE397A SM0805 C7 100n
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /4FDE3993 SM0805 C8 100n
+  ( 1 10v )
+  ( 2 GND )
+ )
+ ( /4FDE3978 C2V10 C9 1m
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /4FDE3995 C2V10 C10 1m
+  ( 1 10v )
+  ( 2 GND )
+ )
+ ( /4FDE397C D3-with-smd-pins D1 1N5819
+  ( 1 GND )
+  ( 2 N-000013 )
+ )
+ ( /4FDE3991 D3-with-smd-pins D2 1N5819
+  ( 1 GND )
+  ( 2 N-000002 )
+ )
+ ( /4FDE397D my_inductance L1 INDUCTOR
+  ( 1 N-000013 )
+  ( 2 VDD )
+ )
+ ( /4FDE3990 my_inductance L2 INDUCTOR
+  ( 1 N-000002 )
+  ( 2 10v )
+ )
+ ( /4FDE3A0E side-conn-08 P1 CONN_6
+  ( 1 24v )
+  ( 2 24v )
+  ( 3 10v )
+  ( 4 VDD )
+  ( 5 GND )
+  ( 6 GND )
+ )
+ ( /4FDE3981 SM0805 R1 1R5
+  ( 1 N-000014 )
+  ( 2 24v )
+ )
+ ( /4FDE398C SM0805 R2 1R5
+  ( 1 N-000007 )
+  ( 2 24v )
+ )
+ ( /4FDE3982 SM0805 R3 1R5
+  ( 1 N-000014 )
+  ( 2 24v )
+ )
+ ( /4FDE398B SM0805 R4 1R5
+  ( 1 N-000007 )
+  ( 2 24v )
+ )
+ ( /4FDE3985 SM0805 R5 1R5
+  ( 1 N-000014 )
+  ( 2 24v )
+ )
+ ( /4FDE3988 SM0805 R6 1R5
+  ( 1 N-000007 )
+  ( 2 24v )
+ )
+ ( /4FDE3976 SM0805 R7 12k
+  ( 1 N-000005 )
+  ( 2 GND )
+ )
+ ( /4FDE3997 SM0805 R8 10k
+  ( 1 N-000012 )
+  ( 2 GND )
+ )
+ ( /4FDE3973 SM0805 R9 20k
+  ( 1 N-000005 )
+  ( 2 VDD )
+ )
+ ( /4FDE399A SM0805 R10 50k
+  ( 1 N-000012 )
+  ( 2 10v )
+ )
+ ( /4FDE3986 SO8E U1 NCP3063
+  ( 1 N-000014 )
+  ( 2 N-000013 )
+  ( 3 N-000011 )
+  ( 4 GND )
+  ( 5 N-000005 )
+  ( 6 24v )
+  ( 7 N-000014 )
+  ( 8 ? )
+ )
+ ( /4FDE3987 SO8E U2 NCP3063
+  ( 1 N-000007 )
+  ( 2 N-000002 )
+  ( 3 N-000008 )
+  ( 4 GND )
+  ( 5 N-000012 )
+  ( 6 24v )
+  ( 7 N-000007 )
+  ( 8 ? )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component C4
+ SM*
+ C?
+ C1-1
+$endlist
+$component C5
+ SM*
+ C?
+ C1-1
+$endlist
+$component C6
+ SM*
+ C?
+ C1-1
+$endlist
+$component C7
+ SM*
+ C?
+ C1-1
+$endlist
+$component C8
+ SM*
+ C?
+ C1-1
+$endlist
+$component C9
+ SM*
+ C?
+ C1-1
+$endlist
+$component C10
+ SM*
+ C?
+ C1-1
+$endlist
+$component D1
+ D?
+ S*
+$endlist
+$component D2
+ D?
+ S*
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R5
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R6
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R7
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R8
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R9
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R10
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$endfootprintlist
+}

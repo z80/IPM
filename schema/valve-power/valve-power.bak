@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sun 17 Jun 2012 12:01:13 AM MSK
+EESchema Schematic File Version 2  date Mon 18 Jun 2012 12:00:38 AM MSK
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -45,7 +45,7 @@ $Descr A2 23400 16535
 encoding utf-8
 Sheet 1 17
 Title ""
-Date "16 jun 2012"
+Date "17 jun 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -700,9 +700,9 @@ Text Label 14650 3200 0    60   ~ 0
 out6
 Text Label 14650 2900 0    60   ~ 0
 out5
-Text Label 12350 3800 0    60   ~ 0
-io20
 Text Label 12350 4100 0    60   ~ 0
+io20
+Text Label 12350 3800 0    60   ~ 0
 io19
 Text Label 12350 2900 0    60   ~ 0
 io18
@@ -1226,9 +1226,9 @@ Text Label 12350 1400 0    60   ~ 0
 io13
 Text Label 12350 1100 0    60   ~ 0
 io14
-Text Label 12350 2300 0    60   ~ 0
-io15
 Text Label 12350 2000 0    60   ~ 0
+io15
+Text Label 12350 2300 0    60   ~ 0
 io16
 Text Label 14650 1100 0    60   ~ 0
 out1
