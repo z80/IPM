@@ -1,9 +1,10 @@
-PCBNEW-LibModule-V1  Sat 16 Jun 2012 11:11:08 PM MSK
+PCBNEW-LibModule-V1  Mon 18 Jun 2012 01:10:14 AM MSK
 # encoding utf-8
 $INDEX
 side-conn-02
 side-conn-03
 side-conn-04
+side-conn-06
 side-conn-08
 side-conn-12
 side-conn-20
@@ -350,7 +351,7 @@ $MODULE side-conn-20
 Po 0 0 0 15 4FDCDA17 00000000 ~~
 Li side-conn-20
 Sc 00000000
-AR 
+AR
 Op 0 0 0
 T0 0 -3000 600 600 0 120 N V 21 N "side-conn-20"
 T1 0 -2000 600 600 0 120 N V 21 N "VAL**"
@@ -495,4 +496,55 @@ Ne 0 ""
 Po -9500 -700
 $EndPAD
 $EndMODULE  side-conn-20
+$MODULE side-conn-06
+Po 0 0 0 15 4FDE47A7 00000000 ~~
+Li side-conn-06
+Sc 00000000
+AR side-conn-8
+Op 0 0 0
+T0 0 -3000 206 206 0 39 N V 21 N "side-conn-06"
+T1 0 -2000 206 206 0 39 N V 21 N "VAL**"
+$PAD
+Sh "6" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2500 -700
+$EndPAD
+$PAD
+Sh "5" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1500 -700
+$EndPAD
+$PAD
+Sh "4" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 500 -700
+$EndPAD
+$PAD
+Sh "3" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -500 -700
+$EndPAD
+$PAD
+Sh "2" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1500 -700
+$EndPAD
+$PAD
+Sh "1" R 472 1181 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2500 -700
+$EndPAD
+$EndMODULE  side-conn-06
 $EndLIBRARY

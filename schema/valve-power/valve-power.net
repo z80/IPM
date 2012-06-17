@@ -1,727 +1,531 @@
-# EESchema Netlist Version 1.1 created  Mon 18 Jun 2012 12:01:17 AM MSK
+# EESchema Netlist Version 1.1 created  Mon 18 Jun 2012 01:15:45 AM MSK
 (
- ( /4FDC55CF SM0805 C1 4u7
-  ( 1 24V )
-  ( 2 GND )
- )
- ( /4FDC55C8 SM0805 C2 4u7
-  ( 1 24V )
-  ( 2 GND )
- )
- ( /4FDC55CE SM0805 C3 100n
-  ( 1 24V )
-  ( 2 GND )
- )
- ( /4FDC55C9 SM0805 C4 100n
-  ( 1 24V )
-  ( 2 GND )
- )
- ( /4FDC55D2 SM0805 C5 2.2n
-  ( 1 N-000042 )
-  ( 2 GND )
- )
- ( /4FDC55C5 SM0805 C6 2.2n
-  ( 1 N-000045 )
-  ( 2 GND )
- )
- ( /4FDC55D8 SM0805 C7 100n
-  ( 1 VDD )
-  ( 2 GND )
- )
- ( /4FDC55BF SM0805 C8 100n
-  ( 1 10V )
-  ( 2 GND )
- )
- ( /4FDC55DA C2V10 C9 1m
-  ( 1 VDD )
-  ( 2 GND )
- )
- ( /4FDC55BD C2V10 C10 1m
-  ( 1 10V )
-  ( 2 GND )
- )
- ( /4FDB2BC5/4FDE3711 SM0805 C11 100n
-  ( 1 10V )
-  ( 2 GND )
- )
- ( /4FDC7CDA/4FDE3711 SM0805 C12 100n
-  ( 1 10V )
-  ( 2 GND )
- )
- ( /4FDC7CD9/4FDE3711 SM0805 C13 100n
-  ( 1 10V )
-  ( 2 GND )
- )
- ( /4FDB33F6/4FDE3711 SM0805 C14 100n
-  ( 1 10V )
-  ( 2 GND )
- )
- ( /4FDC55D6 D3-with-smd-pins D1 1N5819
-  ( 1 GND )
-  ( 2 N-000054 )
- )
- ( /4FDC55C1 D3-with-smd-pins D2 1N5819
-  ( 1 GND )
-  ( 2 N-000057 )
- )
- ( /4FDC7CDA/4FDB2DC3 D3-with-smd-pins D3 1N4148
-  ( 1 /output2-4/out1 )
-  ( 2 24V )
- )
- ( /4FDC7CDA/4FDB2ECD D3-with-smd-pins D4 1N4148
-  ( 1 /output2-4/out2 )
-  ( 2 24V )
- )
- ( /4FDC7CD9/4FDB2DC3 D3-with-smd-pins D5 1N4148
-  ( 1 /output2-3/out1 )
-  ( 2 24V )
- )
- ( /4FDC7CD9/4FDB2ECD D3-with-smd-pins D6 1N4148
-  ( 1 /output2-3/out2 )
-  ( 2 24V )
- )
- ( /4FDB2BC5/4FDB2DC3 D3-with-smd-pins D7 1N4148
-  ( 1 /output2-1/out1 )
-  ( 2 24V )
- )
- ( /4FDB2BC5/4FDB2ECD D3-with-smd-pins D8 1N4148
-  ( 1 /output2-1/out2 )
-  ( 2 24V )
- )
- ( /4FDB33F6/4FDB2DC3 D3-with-smd-pins D9 1N4148
-  ( 1 /output2-2/out1 )
-  ( 2 24V )
- )
- ( /4FDB33F6/4FDB2ECD D3-with-smd-pins D10 1N4148
-  ( 1 /output2-2/out2 )
-  ( 2 24V )
- )
- ( /4FDC55D5 my_inductance L1 INDUCTOR
-  ( 1 N-000054 )
-  ( 2 VDD )
- )
- ( /4FDC55C2 my_inductance L2 INDUCTOR
-  ( 1 N-000057 )
-  ( 2 10V )
- )
- ( /4FDC7E25 side-conn-12 P1 CONN_12
-  ( 1 /input1/out )
-  ( 2 /input2/out )
-  ( 3 /input3/out )
-  ( 4 /input4/out )
-  ( 5 /input5/out )
-  ( 6 /input6/out )
-  ( 7 /input7/out )
-  ( 8 /input8/out )
-  ( 9 /input9/out )
-  ( 10 /input10/out )
-  ( 11 /input11/out )
-  ( 12 /input12/out )
- )
- ( /4FDC7E2E side-conn-08 P2 CONN_8
-  ( 1 /output2-1/in2 )
-  ( 2 /output2-1/in1 )
-  ( 3 /output2-2/in1 )
-  ( 4 /output2-2/in2 )
-  ( 5 /output2-3/in2 )
-  ( 6 /output2-3/in1 )
-  ( 7 /output2-4/in1 )
-  ( 8 /output2-4/in2 )
- )
- ( /4FDC5606 side-conn-02 P3 3.3v
-  ( 1 VDD )
-  ( 2 GND )
- )
- ( /4FDC7F68 side-conn-20 P4 CONN_20
-  ( 1 /output2-1/out1 )
-  ( 2 /output2-1/out2 )
-  ( 3 /output2-2/out1 )
-  ( 4 /output2-2/out2 )
-  ( 5 /output2-3/out1 )
-  ( 6 /output2-3/out2 )
-  ( 7 /output2-4/out1 )
-  ( 8 /output2-4/out2 )
-  ( 9 /input1/in-24v )
-  ( 10 /input2/in-24v )
-  ( 11 /input3/in-24v )
-  ( 12 /input4/in-24v )
-  ( 13 /input5/in-24v )
-  ( 14 /input6/in-24v )
-  ( 15 /input7/in-24v )
-  ( 16 /input8/in-24v )
-  ( 17 /input9/in-24v )
-  ( 18 /input10/in-24v )
-  ( 19 /input11/in-24v )
-  ( 20 /input12/in-24v )
- )
- ( /4FDC55FF side-conn-04 P5 24v
-  ( 1 24V )
-  ( 2 24V )
-  ( 3 GND )
-  ( 4 GND )
- )
- ( /4FDCDCAC 1pin P6 CONN_1
-  ( 1 ? )
- )
- ( /4FDCDCB5 1pin P7 CONN_1
-  ( 1 ? )
- )
- ( /4FDCDCB7 1pin P8 CONN_1
-  ( 1 ? )
- )
- ( /4FDCDCB9 1pin P9 CONN_1
-  ( 1 ? )
- )
- ( /4FDC7DE6/4FDB29D2 SOT23EBC Q1 bc847
-  ( 1 GND )
-  ( 2 N-000105 )
-  ( 3 N-000106 )
- )
- ( /4FDC7DE5/4FDB29D2 SOT23EBC Q2 bc847
-  ( 1 GND )
-  ( 2 N-000103 )
-  ( 3 N-000104 )
- )
- ( /4FDC7DE4/4FDB29D2 SOT23EBC Q3 bc847
-  ( 1 GND )
-  ( 2 N-000101 )
-  ( 3 N-000102 )
- )
- ( /4FDC7DE3/4FDB29D2 SOT23EBC Q4 bc847
-  ( 1 GND )
-  ( 2 N-000099 )
-  ( 3 N-000100 )
- )
- ( /4FDC7DB7/4FDB29D2 SOT23EBC Q5 bc847
-  ( 1 GND )
-  ( 2 N-000097 )
-  ( 3 N-000098 )
- )
- ( /4FDC7DB6/4FDB29D2 SOT23EBC Q6 bc847
-  ( 1 GND )
-  ( 2 N-000095 )
-  ( 3 N-000096 )
- )
- ( /4FDC7DB5/4FDB29D2 SOT23EBC Q7 bc847
-  ( 1 GND )
-  ( 2 N-000093 )
-  ( 3 N-000094 )
- )
- ( /4FDC7DB4/4FDB29D2 SOT23EBC Q8 bc847
-  ( 1 GND )
-  ( 2 N-000091 )
-  ( 3 N-000092 )
- )
- ( /4FDC7CDA/4FDB2C4B IRFL024 Q9 MOSFET_N
-  ( D /output2-4/out1 )
-  ( G N-000086 )
-  ( S GND )
- )
- ( /4FDC7CDA/4FDB2ECF IRFL024 Q10 MOSFET_N
-  ( D /output2-4/out2 )
-  ( G N-000090 )
-  ( S GND )
- )
- ( /4FDC7CD9/4FDB2C4B IRFL024 Q11 MOSFET_N
-  ( D /output2-3/out1 )
-  ( G N-000081 )
-  ( S GND )
- )
- ( /4FDC7CD9/4FDB2ECF IRFL024 Q12 MOSFET_N
-  ( D /output2-3/out2 )
-  ( G N-000079 )
-  ( S GND )
- )
- ( /4FDB2BC5/4FDB2C4B IRFL024 Q13 MOSFET_N
-  ( D /output2-1/out1 )
-  ( G N-000063 )
-  ( S GND )
- )
- ( /4FDB2BC5/4FDB2ECF IRFL024 Q14 MOSFET_N
-  ( D /output2-1/out2 )
-  ( G N-000066 )
-  ( S GND )
- )
- ( /4FDB33F6/4FDB2C4B IRFL024 Q15 MOSFET_N
-  ( D /output2-2/out1 )
-  ( G N-000069 )
-  ( S GND )
- )
- ( /4FDB33F6/4FDB2ECF IRFL024 Q16 MOSFET_N
-  ( D /output2-2/out2 )
-  ( G N-000072 )
-  ( S GND )
- )
- ( /4FDB299D/4FDB29D2 SOT23EBC Q17 bc847
-  ( 1 GND )
-  ( 2 N-000059 )
-  ( 3 N-000060 )
- )
- ( /4FDB3921/4FDB29D2 SOT23EBC Q18 bc847
-  ( 1 GND )
-  ( 2 N-000073 )
-  ( 3 N-000074 )
- )
- ( /4FDB3935/4FDB29D2 SOT23EBC Q19 bc847
-  ( 1 GND )
-  ( 2 N-000075 )
-  ( 3 N-000076 )
- )
- ( /4FDB3936/4FDB29D2 SOT23EBC Q20 bc847
-  ( 1 GND )
-  ( 2 N-000078 )
-  ( 3 N-000077 )
- )
- ( /4FDC55D1 SM0805 R1 1R5
-  ( 1 N-000055 )
-  ( 2 24V )
- )
- ( /4FDC55C6 SM0805 R2 1R5
-  ( 1 N-000058 )
-  ( 2 24V )
- )
- ( /4FDC55D0 SM0805 R3 1R5
-  ( 1 N-000055 )
-  ( 2 24V )
- )
- ( /4FDC55C7 SM0805 R4 1R5
-  ( 1 N-000058 )
-  ( 2 24V )
- )
- ( /4FDC55CD SM0805 R5 1R5
-  ( 1 N-000055 )
-  ( 2 24V )
- )
- ( /4FDC55CA SM0805 R6 1R5
-  ( 1 N-000058 )
-  ( 2 24V )
- )
- ( /4FDC55DC SM0805 R7 12k
-  ( 1 N-000010 )
-  ( 2 GND )
- )
- ( /4FDC55BB SM0805 R8 10k
-  ( 1 N-000044 )
-  ( 2 GND )
- )
- ( /4FDC55DF SM0805 R9 20k
-  ( 1 N-000010 )
-  ( 2 VDD )
- )
- ( /4FDC55B8 SM0805 R10 50k
-  ( 1 N-000044 )
-  ( 2 10V )
- )
- ( /4FDC7DE6/4FDB29E5 SM0805 R11 33k
-  ( 1 /input9/in-24v )
-  ( 2 GND )
- )
- ( /4FDC7DE6/4FDB29FE SM0805 R12 2k4
-  ( 1 /input9/in-24v )
-  ( 2 N-000105 )
- )
- ( /4FDC7DE6/4FDB2AE7 SM0805 R13 33k
-  ( 1 VDD )
-  ( 2 N-000106 )
- )
- ( /4FDC7DE6/4FDB2AA4 SM0805 R14 2k4
-  ( 1 N-000106 )
-  ( 2 /input9/out )
- )
- ( /4FDC7DE5/4FDB29E5 SM0805 R15 33k
-  ( 1 /input10/in-24v )
-  ( 2 GND )
- )
- ( /4FDC7DE5/4FDB29FE SM0805 R16 2k4
-  ( 1 /input10/in-24v )
-  ( 2 N-000103 )
- )
- ( /4FDC7DE5/4FDB2AE7 SM0805 R17 33k
-  ( 1 VDD )
-  ( 2 N-000104 )
- )
- ( /4FDC7DE5/4FDB2AA4 SM0805 R18 2k4
-  ( 1 N-000104 )
-  ( 2 /input10/out )
- )
- ( /4FDC7DE4/4FDB29E5 SM0805 R19 33k
-  ( 1 /input12/in-24v )
-  ( 2 GND )
- )
- ( /4FDC7DE4/4FDB29FE SM0805 R20 2k4
-  ( 1 /input12/in-24v )
-  ( 2 N-000101 )
- )
- ( /4FDC7DE4/4FDB2AE7 SM0805 R21 33k
-  ( 1 VDD )
-  ( 2 N-000102 )
- )
- ( /4FDC7DE4/4FDB2AA4 SM0805 R22 2k4
-  ( 1 N-000102 )
-  ( 2 /input12/out )
- )
- ( /4FDC7DE3/4FDB29E5 SM0805 R23 33k
-  ( 1 /input11/in-24v )
-  ( 2 GND )
- )
- ( /4FDC7DE3/4FDB29FE SM0805 R24 2k4
-  ( 1 /input11/in-24v )
-  ( 2 N-000099 )
- )
- ( /4FDC7DE3/4FDB2AE7 SM0805 R25 33k
-  ( 1 VDD )
-  ( 2 N-000100 )
- )
- ( /4FDC7DE3/4FDB2AA4 SM0805 R26 2k4
-  ( 1 N-000100 )
-  ( 2 /input11/out )
- )
- ( /4FDC7DB7/4FDB29E5 SM0805 R27 33k
-  ( 1 /input7/in-24v )
-  ( 2 GND )
- )
- ( /4FDC7DB7/4FDB29FE SM0805 R28 2k4
-  ( 1 /input7/in-24v )
-  ( 2 N-000097 )
- )
- ( /4FDC7DB7/4FDB2AE7 SM0805 R29 33k
-  ( 1 VDD )
-  ( 2 N-000098 )
- )
- ( /4FDC7DB7/4FDB2AA4 SM0805 R30 2k4
-  ( 1 N-000098 )
-  ( 2 /input7/out )
- )
- ( /4FDC7DB6/4FDB29E5 SM0805 R31 33k
-  ( 1 /input8/in-24v )
-  ( 2 GND )
- )
- ( /4FDC7DB6/4FDB29FE SM0805 R32 2k4
-  ( 1 /input8/in-24v )
-  ( 2 N-000095 )
- )
- ( /4FDC7DB6/4FDB2AE7 SM0805 R33 33k
-  ( 1 VDD )
-  ( 2 N-000096 )
- )
- ( /4FDC7DB6/4FDB2AA4 SM0805 R34 2k4
-  ( 1 N-000096 )
-  ( 2 /input8/out )
- )
- ( /4FDC7DB5/4FDB29E5 SM0805 R35 33k
-  ( 1 /input6/in-24v )
-  ( 2 GND )
- )
- ( /4FDC7DB5/4FDB29FE SM0805 R36 2k4
-  ( 1 /input6/in-24v )
-  ( 2 N-000093 )
- )
- ( /4FDC7DB5/4FDB2AE7 SM0805 R37 33k
-  ( 1 VDD )
-  ( 2 N-000094 )
- )
- ( /4FDC7DB5/4FDB2AA4 SM0805 R38 2k4
-  ( 1 N-000094 )
-  ( 2 /input6/out )
- )
- ( /4FDC7DB4/4FDB29E5 SM0805 R39 33k
-  ( 1 /input5/in-24v )
-  ( 2 GND )
- )
- ( /4FDC7DB4/4FDB29FE SM0805 R40 2k4
-  ( 1 /input5/in-24v )
-  ( 2 N-000091 )
- )
- ( /4FDC7DB4/4FDB2AE7 SM0805 R41 33k
-  ( 1 VDD )
-  ( 2 N-000092 )
- )
- ( /4FDC7DB4/4FDB2AA4 SM0805 R42 2k4
-  ( 1 N-000092 )
-  ( 2 /input5/out )
- )
- ( /4FDC7CDA/4FDC4DD8 SM0805 R43 33k
-  ( 1 GND )
-  ( 2 /output2-4/in1 )
- )
- ( /4FDC7CDA/4FDC4DF4 SM0805 R44 33k
-  ( 1 GND )
-  ( 2 /output2-4/in2 )
- )
- ( /4FDC7CDA/4FDB2C18 SM0805 R45 10
-  ( 1 /output2-4/outA )
-  ( 2 N-000086 )
- )
- ( /4FDC7CDA/4FDB2ED0 SM0805 R46 10
-  ( 1 /output2-4/outB )
-  ( 2 N-000090 )
- )
- ( /4FDC7CD9/4FDC4DD8 SM0805 R47 33k
-  ( 1 GND )
-  ( 2 /output2-3/in1 )
- )
- ( /4FDC7CD9/4FDC4DF4 SM0805 R48 33k
-  ( 1 GND )
-  ( 2 /output2-3/in2 )
- )
- ( /4FDC7CD9/4FDB2C18 SM0805 R49 10
-  ( 1 /output2-3/outA )
-  ( 2 N-000081 )
- )
- ( /4FDC7CD9/4FDB2ED0 SM0805 R50 10
-  ( 1 /output2-3/outB )
-  ( 2 N-000079 )
- )
- ( /4FDB2BC5/4FDC4DD8 SM0805 R51 33k
-  ( 1 GND )
-  ( 2 /output2-1/in1 )
- )
- ( /4FDB2BC5/4FDC4DF4 SM0805 R52 33k
-  ( 1 GND )
-  ( 2 /output2-1/in2 )
- )
- ( /4FDB2BC5/4FDB2C18 SM0805 R53 10
-  ( 1 /output2-1/outA )
-  ( 2 N-000063 )
- )
- ( /4FDB2BC5/4FDB2ED0 SM0805 R54 10
-  ( 1 /output2-1/outB )
-  ( 2 N-000066 )
- )
- ( /4FDB33F6/4FDC4DD8 SM0805 R55 33k
-  ( 1 GND )
-  ( 2 /output2-2/in1 )
- )
- ( /4FDB33F6/4FDC4DF4 SM0805 R56 33k
-  ( 1 GND )
-  ( 2 /output2-2/in2 )
- )
- ( /4FDB33F6/4FDB2C18 SM0805 R57 10
-  ( 1 /output2-2/outA )
-  ( 2 N-000069 )
- )
- ( /4FDB33F6/4FDB2ED0 SM0805 R58 10
-  ( 1 /output2-2/outB )
-  ( 2 N-000072 )
- )
- ( /4FDB299D/4FDB29E5 SM0805 R59 33k
-  ( 1 /input1/in-24v )
-  ( 2 GND )
- )
- ( /4FDB299D/4FDB29FE SM0805 R60 2k4
-  ( 1 /input1/in-24v )
-  ( 2 N-000059 )
- )
- ( /4FDB299D/4FDB2AE7 SM0805 R61 33k
-  ( 1 VDD )
-  ( 2 N-000060 )
- )
- ( /4FDB299D/4FDB2AA4 SM0805 R62 2k4
-  ( 1 N-000060 )
-  ( 2 /input1/out )
- )
- ( /4FDB3921/4FDB29E5 SM0805 R63 33k
-  ( 1 /input2/in-24v )
-  ( 2 GND )
- )
- ( /4FDB3921/4FDB29FE SM0805 R64 2k4
-  ( 1 /input2/in-24v )
-  ( 2 N-000073 )
- )
- ( /4FDB3921/4FDB2AE7 SM0805 R65 33k
-  ( 1 VDD )
-  ( 2 N-000074 )
- )
- ( /4FDB3921/4FDB2AA4 SM0805 R66 2k4
-  ( 1 N-000074 )
-  ( 2 /input2/out )
- )
- ( /4FDB3935/4FDB29E5 SM0805 R67 33k
-  ( 1 /input4/in-24v )
-  ( 2 GND )
- )
- ( /4FDB3935/4FDB29FE SM0805 R68 2k4
-  ( 1 /input4/in-24v )
-  ( 2 N-000075 )
- )
- ( /4FDB3935/4FDB2AE7 SM0805 R69 33k
-  ( 1 VDD )
-  ( 2 N-000076 )
- )
- ( /4FDB3935/4FDB2AA4 SM0805 R70 2k4
-  ( 1 N-000076 )
-  ( 2 /input4/out )
- )
- ( /4FDB3936/4FDB29E5 SM0805 R71 33k
-  ( 1 /input3/in-24v )
-  ( 2 GND )
- )
- ( /4FDB3936/4FDB29FE SM0805 R72 2k4
-  ( 1 /input3/in-24v )
-  ( 2 N-000078 )
- )
- ( /4FDB3936/4FDB2AE7 SM0805 R73 33k
-  ( 1 VDD )
-  ( 2 N-000077 )
- )
- ( /4FDB3936/4FDB2AA4 SM0805 R74 2k4
-  ( 1 N-000077 )
-  ( 2 /input3/out )
- )
- ( /4FDC55CC SO8E U1 NCP3063
-  ( 1 N-000055 )
-  ( 2 N-000054 )
-  ( 3 N-000042 )
-  ( 4 GND )
-  ( 5 N-000010 )
-  ( 6 24V )
-  ( 7 N-000055 )
-  ( 8 ? )
- )
- ( /4FDC55CB SO8E U2 NCP3063
-  ( 1 N-000058 )
-  ( 2 N-000057 )
-  ( 3 N-000045 )
-  ( 4 GND )
-  ( 5 N-000044 )
-  ( 6 24V )
-  ( 7 N-000058 )
-  ( 8 ? )
- )
- ( /4FDC7CDA/4FDB2BFB SO8E U3 MC34152
-  ( 1 ? )
-  ( 2 /output2-4/in1 )
-  ( 3 GND )
-  ( 4 /output2-4/in2 )
-  ( 5 /output2-4/outB )
-  ( 6 10V )
-  ( 7 /output2-4/outA )
-  ( 8 ? )
- )
- ( /4FDC7CD9/4FDB2BFB SO8E U4 MC34152
-  ( 1 ? )
-  ( 2 /output2-3/in1 )
-  ( 3 GND )
-  ( 4 /output2-3/in2 )
-  ( 5 /output2-3/outB )
-  ( 6 10V )
-  ( 7 /output2-3/outA )
-  ( 8 ? )
- )
- ( /4FDB2BC5/4FDB2BFB SO8E U5 MC34152
-  ( 1 ? )
-  ( 2 /output2-1/in1 )
-  ( 3 GND )
-  ( 4 /output2-1/in2 )
-  ( 5 /output2-1/outB )
-  ( 6 10V )
-  ( 7 /output2-1/outA )
-  ( 8 ? )
- )
- ( /4FDB33F6/4FDB2BFB SO8E U6 MC34152
-  ( 1 ? )
-  ( 2 /output2-2/in1 )
-  ( 3 GND )
-  ( 4 /output2-2/in2 )
-  ( 5 /output2-2/outB )
-  ( 6 10V )
-  ( 7 /output2-2/outA )
-  ( 8 ? )
+ ( /4FDE46CE $noname  P1 CONN_20 {Lib=CONN_20}
+  (    1 /input1/out )
+  (    2 /input2/out )
+  (    3 /input3/out )
+  (    4 /input4/out )
+  (    5 /input5/out )
+  (    6 /input6/out )
+  (    7 /input7/out )
+  (    8 /input8/out )
+  (    9 /input9/out )
+  (   10 /input10/out )
+  (   11 /input11/out )
+  (   12 /input12/out )
+  (   13 /output2-4/in2 )
+  (   14 /output2-4/in1 )
+  (   15 /output2-3/in1 )
+  (   16 /output2-3/in2 )
+  (   17 /output2-2/in2 )
+  (   18 /output2-2/in1 )
+  (   19 /output2-1/in1 )
+  (   20 /output2-1/in2 )
+ )
+ ( /4FDE466E $noname  P2 CONN_6 {Lib=CONN_6}
+  (    1 GND )
+  (    2 GND )
+  (    3 VDD )
+  (    4 10V )
+  (    5 24V )
+  (    6 24V )
+ )
+ ( /4FDC7F68 $noname  P4 CONN_20 {Lib=CONN_20}
+  (    1 /output2-1/out1 )
+  (    2 /output2-1/out2 )
+  (    3 /output2-2/out1 )
+  (    4 /output2-2/out2 )
+  (    5 /output2-3/out1 )
+  (    6 /output2-3/out2 )
+  (    7 /output2-4/out1 )
+  (    8 /output2-4/out2 )
+  (    9 /input1/in-24v )
+  (   10 /input2/in-24v )
+  (   11 /input3/in-24v )
+  (   12 /input4/in-24v )
+  (   13 /input5/in-24v )
+  (   14 /input6/in-24v )
+  (   15 /input7/in-24v )
+  (   16 /input8/in-24v )
+  (   17 /input9/in-24v )
+  (   18 /input10/in-24v )
+  (   19 /input11/in-24v )
+  (   20 /input12/in-24v )
+ )
+ ( /4FDB2BC5/4FDE3711 $noname  C11 100n {Lib=C}
+  (    1 10V )
+  (    2 GND )
+ )
+ ( /4FDB2BC5/4FDC4DF4 $noname  R52 33k {Lib=R}
+  (    1 GND )
+  (    2 /output2-1/in2 )
+ )
+ ( /4FDB2BC5/4FDC4DD8 $noname  R51 33k {Lib=R}
+  (    1 GND )
+  (    2 /output2-1/in1 )
+ )
+ ( /4FDB2BC5/4FDB2ED0 $noname  R54 10 {Lib=R}
+  (    1 /output2-1/outB )
+  (    2 N-000052 )
+ )
+ ( /4FDB2BC5/4FDB2ECF $noname  Q14 MOSFET_N {Lib=MOSFET_N}
+  (    D /output2-1/out2 )
+  (    G N-000052 )
+  (    S GND )
+ )
+ ( /4FDB2BC5/4FDB2ECD $noname  D8 1N4148 {Lib=DIODE}
+  (    1 /output2-1/out2 )
+  (    2 24V )
+ )
+ ( /4FDB2BC5/4FDB2DC3 $noname  D7 1N4148 {Lib=DIODE}
+  (    1 /output2-1/out1 )
+  (    2 24V )
+ )
+ ( /4FDB2BC5/4FDB2C4B $noname  Q13 MOSFET_N {Lib=MOSFET_N}
+  (    D /output2-1/out1 )
+  (    G N-000049 )
+  (    S GND )
+ )
+ ( /4FDB2BC5/4FDB2C18 $noname  R53 10 {Lib=R}
+  (    1 /output2-1/outA )
+  (    2 N-000049 )
+ )
+ ( /4FDB2BC5/4FDB2BFB $noname  U5 MC34152 {Lib=MC34152}
+  (    1 ? )
+  (    2 /output2-1/in1 )
+  (    3 GND )
+  (    4 /output2-1/in2 )
+  (    5 /output2-1/outB )
+  (    6 10V )
+  (    7 /output2-1/outA )
+  (    8 ? )
+ )
+ ( /4FDC7DE6/4FDB2AE7 $noname  R13 33k {Lib=R}
+  (    1 VDD )
+  (    2 N-000092 )
+ )
+ ( /4FDC7DE6/4FDB2AA4 $noname  R14 2k4 {Lib=R}
+  (    1 N-000092 )
+  (    2 /input9/out )
+ )
+ ( /4FDC7DE6/4FDB29FE $noname  R12 2k4 {Lib=R}
+  (    1 /input9/in-24v )
+  (    2 N-000091 )
+ )
+ ( /4FDC7DE6/4FDB29E5 $noname  R11 33k {Lib=R}
+  (    1 /input9/in-24v )
+  (    2 GND )
+ )
+ ( /4FDC7DE6/4FDB29D2 $noname  Q1 bc847 {Lib=NPN}
+  (    1 GND )
+  (    2 N-000091 )
+  (    3 N-000092 )
+ )
+ ( /4FDC7DE5/4FDB2AE7 $noname  R17 33k {Lib=R}
+  (    1 VDD )
+  (    2 N-000090 )
+ )
+ ( /4FDC7DE5/4FDB2AA4 $noname  R18 2k4 {Lib=R}
+  (    1 N-000090 )
+  (    2 /input10/out )
+ )
+ ( /4FDC7DE5/4FDB29FE $noname  R16 2k4 {Lib=R}
+  (    1 /input10/in-24v )
+  (    2 N-000089 )
+ )
+ ( /4FDC7DE5/4FDB29E5 $noname  R15 33k {Lib=R}
+  (    1 /input10/in-24v )
+  (    2 GND )
+ )
+ ( /4FDC7DE5/4FDB29D2 $noname  Q2 bc847 {Lib=NPN}
+  (    1 GND )
+  (    2 N-000089 )
+  (    3 N-000090 )
+ )
+ ( /4FDC7DE4/4FDB2AE7 $noname  R21 33k {Lib=R}
+  (    1 VDD )
+  (    2 N-000088 )
+ )
+ ( /4FDC7DE4/4FDB2AA4 $noname  R22 2k4 {Lib=R}
+  (    1 N-000088 )
+  (    2 /input12/out )
+ )
+ ( /4FDC7DE4/4FDB29FE $noname  R20 2k4 {Lib=R}
+  (    1 /input12/in-24v )
+  (    2 N-000087 )
+ )
+ ( /4FDC7DE4/4FDB29E5 $noname  R19 33k {Lib=R}
+  (    1 /input12/in-24v )
+  (    2 GND )
+ )
+ ( /4FDC7DE4/4FDB29D2 $noname  Q3 bc847 {Lib=NPN}
+  (    1 GND )
+  (    2 N-000087 )
+  (    3 N-000088 )
+ )
+ ( /4FDC7DE3/4FDB2AE7 $noname  R25 33k {Lib=R}
+  (    1 VDD )
+  (    2 N-000086 )
+ )
+ ( /4FDC7DE3/4FDB2AA4 $noname  R26 2k4 {Lib=R}
+  (    1 N-000086 )
+  (    2 /input11/out )
+ )
+ ( /4FDC7DE3/4FDB29FE $noname  R24 2k4 {Lib=R}
+  (    1 /input11/in-24v )
+  (    2 N-000085 )
+ )
+ ( /4FDC7DE3/4FDB29E5 $noname  R23 33k {Lib=R}
+  (    1 /input11/in-24v )
+  (    2 GND )
+ )
+ ( /4FDC7DE3/4FDB29D2 $noname  Q4 bc847 {Lib=NPN}
+  (    1 GND )
+  (    2 N-000085 )
+  (    3 N-000086 )
+ )
+ ( /4FDC7DB7/4FDB2AE7 $noname  R29 33k {Lib=R}
+  (    1 VDD )
+  (    2 N-000084 )
+ )
+ ( /4FDC7DB7/4FDB2AA4 $noname  R30 2k4 {Lib=R}
+  (    1 N-000084 )
+  (    2 /input7/out )
+ )
+ ( /4FDC7DB7/4FDB29FE $noname  R28 2k4 {Lib=R}
+  (    1 /input7/in-24v )
+  (    2 N-000083 )
+ )
+ ( /4FDC7DB7/4FDB29E5 $noname  R27 33k {Lib=R}
+  (    1 /input7/in-24v )
+  (    2 GND )
+ )
+ ( /4FDC7DB7/4FDB29D2 $noname  Q5 bc847 {Lib=NPN}
+  (    1 GND )
+  (    2 N-000083 )
+  (    3 N-000084 )
+ )
+ ( /4FDC7DB6/4FDB2AE7 $noname  R33 33k {Lib=R}
+  (    1 VDD )
+  (    2 N-000082 )
+ )
+ ( /4FDC7DB6/4FDB2AA4 $noname  R34 2k4 {Lib=R}
+  (    1 N-000082 )
+  (    2 /input8/out )
+ )
+ ( /4FDC7DB6/4FDB29FE $noname  R32 2k4 {Lib=R}
+  (    1 /input8/in-24v )
+  (    2 N-000081 )
+ )
+ ( /4FDC7DB6/4FDB29E5 $noname  R31 33k {Lib=R}
+  (    1 /input8/in-24v )
+  (    2 GND )
+ )
+ ( /4FDC7DB6/4FDB29D2 $noname  Q6 bc847 {Lib=NPN}
+  (    1 GND )
+  (    2 N-000081 )
+  (    3 N-000082 )
+ )
+ ( /4FDC7DB5/4FDB2AE7 $noname  R37 33k {Lib=R}
+  (    1 VDD )
+  (    2 N-000080 )
+ )
+ ( /4FDC7DB5/4FDB2AA4 $noname  R38 2k4 {Lib=R}
+  (    1 N-000080 )
+  (    2 /input6/out )
+ )
+ ( /4FDC7DB5/4FDB29FE $noname  R36 2k4 {Lib=R}
+  (    1 /input6/in-24v )
+  (    2 N-000079 )
+ )
+ ( /4FDC7DB5/4FDB29E5 $noname  R35 33k {Lib=R}
+  (    1 /input6/in-24v )
+  (    2 GND )
+ )
+ ( /4FDC7DB5/4FDB29D2 $noname  Q7 bc847 {Lib=NPN}
+  (    1 GND )
+  (    2 N-000079 )
+  (    3 N-000080 )
+ )
+ ( /4FDC7DB4/4FDB2AE7 $noname  R41 33k {Lib=R}
+  (    1 VDD )
+  (    2 N-000078 )
+ )
+ ( /4FDC7DB4/4FDB2AA4 $noname  R42 2k4 {Lib=R}
+  (    1 N-000078 )
+  (    2 /input5/out )
+ )
+ ( /4FDC7DB4/4FDB29FE $noname  R40 2k4 {Lib=R}
+  (    1 /input5/in-24v )
+  (    2 N-000077 )
+ )
+ ( /4FDC7DB4/4FDB29E5 $noname  R39 33k {Lib=R}
+  (    1 /input5/in-24v )
+  (    2 GND )
+ )
+ ( /4FDC7DB4/4FDB29D2 $noname  Q8 bc847 {Lib=NPN}
+  (    1 GND )
+  (    2 N-000077 )
+  (    3 N-000078 )
+ )
+ ( /4FDC7CDA/4FDE3711 $noname  C12 100n {Lib=C}
+  (    1 10V )
+  (    2 GND )
+ )
+ ( /4FDC7CDA/4FDC4DF4 $noname  R44 33k {Lib=R}
+  (    1 GND )
+  (    2 /output2-4/in2 )
+ )
+ ( /4FDC7CDA/4FDC4DD8 $noname  R43 33k {Lib=R}
+  (    1 GND )
+  (    2 /output2-4/in1 )
+ )
+ ( /4FDC7CDA/4FDB2ED0 $noname  R46 10 {Lib=R}
+  (    1 /output2-4/outB )
+  (    2 N-000076 )
+ )
+ ( /4FDC7CDA/4FDB2ECF $noname  Q10 MOSFET_N {Lib=MOSFET_N}
+  (    D /output2-4/out2 )
+  (    G N-000076 )
+  (    S GND )
+ )
+ ( /4FDC7CDA/4FDB2ECD $noname  D4 1N4148 {Lib=DIODE}
+  (    1 /output2-4/out2 )
+  (    2 24V )
+ )
+ ( /4FDC7CDA/4FDB2DC3 $noname  D3 1N4148 {Lib=DIODE}
+  (    1 /output2-4/out1 )
+  (    2 24V )
+ )
+ ( /4FDC7CDA/4FDB2C4B $noname  Q9 MOSFET_N {Lib=MOSFET_N}
+  (    D /output2-4/out1 )
+  (    G N-000072 )
+  (    S GND )
+ )
+ ( /4FDC7CDA/4FDB2C18 $noname  R45 10 {Lib=R}
+  (    1 /output2-4/outA )
+  (    2 N-000072 )
+ )
+ ( /4FDC7CDA/4FDB2BFB $noname  U3 MC34152 {Lib=MC34152}
+  (    1 ? )
+  (    2 /output2-4/in1 )
+  (    3 GND )
+  (    4 /output2-4/in2 )
+  (    5 /output2-4/outB )
+  (    6 10V )
+  (    7 /output2-4/outA )
+  (    8 ? )
+ )
+ ( /4FDC7CD9/4FDE3711 $noname  C13 100n {Lib=C}
+  (    1 10V )
+  (    2 GND )
+ )
+ ( /4FDC7CD9/4FDC4DF4 $noname  R48 33k {Lib=R}
+  (    1 GND )
+  (    2 /output2-3/in2 )
+ )
+ ( /4FDC7CD9/4FDC4DD8 $noname  R47 33k {Lib=R}
+  (    1 GND )
+  (    2 /output2-3/in1 )
+ )
+ ( /4FDC7CD9/4FDB2ED0 $noname  R50 10 {Lib=R}
+  (    1 /output2-3/outB )
+  (    2 N-000065 )
+ )
+ ( /4FDC7CD9/4FDB2ECF $noname  Q12 MOSFET_N {Lib=MOSFET_N}
+  (    D /output2-3/out2 )
+  (    G N-000065 )
+  (    S GND )
+ )
+ ( /4FDC7CD9/4FDB2ECD $noname  D6 1N4148 {Lib=DIODE}
+  (    1 /output2-3/out2 )
+  (    2 24V )
+ )
+ ( /4FDC7CD9/4FDB2DC3 $noname  D5 1N4148 {Lib=DIODE}
+  (    1 /output2-3/out1 )
+  (    2 24V )
+ )
+ ( /4FDC7CD9/4FDB2C4B $noname  Q11 MOSFET_N {Lib=MOSFET_N}
+  (    D /output2-3/out1 )
+  (    G N-000067 )
+  (    S GND )
+ )
+ ( /4FDC7CD9/4FDB2C18 $noname  R49 10 {Lib=R}
+  (    1 /output2-3/outA )
+  (    2 N-000067 )
+ )
+ ( /4FDC7CD9/4FDB2BFB $noname  U4 MC34152 {Lib=MC34152}
+  (    1 ? )
+  (    2 /output2-3/in1 )
+  (    3 GND )
+  (    4 /output2-3/in2 )
+  (    5 /output2-3/outB )
+  (    6 10V )
+  (    7 /output2-3/outA )
+  (    8 ? )
+ )
+ ( /4FDB33F6/4FDE3711 $noname  C14 100n {Lib=C}
+  (    1 10V )
+  (    2 GND )
+ )
+ ( /4FDB33F6/4FDC4DF4 $noname  R56 33k {Lib=R}
+  (    1 GND )
+  (    2 /output2-2/in2 )
+ )
+ ( /4FDB33F6/4FDC4DD8 $noname  R55 33k {Lib=R}
+  (    1 GND )
+  (    2 /output2-2/in1 )
+ )
+ ( /4FDB33F6/4FDB2ED0 $noname  R58 10 {Lib=R}
+  (    1 /output2-2/outB )
+  (    2 N-000058 )
+ )
+ ( /4FDB33F6/4FDB2ECF $noname  Q16 MOSFET_N {Lib=MOSFET_N}
+  (    D /output2-2/out2 )
+  (    G N-000058 )
+  (    S GND )
+ )
+ ( /4FDB33F6/4FDB2ECD $noname  D10 1N4148 {Lib=DIODE}
+  (    1 /output2-2/out2 )
+  (    2 24V )
+ )
+ ( /4FDB33F6/4FDB2DC3 $noname  D9 1N4148 {Lib=DIODE}
+  (    1 /output2-2/out1 )
+  (    2 24V )
+ )
+ ( /4FDB33F6/4FDB2C4B $noname  Q15 MOSFET_N {Lib=MOSFET_N}
+  (    D /output2-2/out1 )
+  (    G N-000055 )
+  (    S GND )
+ )
+ ( /4FDB33F6/4FDB2C18 $noname  R57 10 {Lib=R}
+  (    1 /output2-2/outA )
+  (    2 N-000055 )
+ )
+ ( /4FDB33F6/4FDB2BFB $noname  U6 MC34152 {Lib=MC34152}
+  (    1 ? )
+  (    2 /output2-2/in1 )
+  (    3 GND )
+  (    4 /output2-2/in2 )
+  (    5 /output2-2/outB )
+  (    6 10V )
+  (    7 /output2-2/outA )
+  (    8 ? )
+ )
+ ( /4FDB299D/4FDB2AE7 $noname  R61 33k {Lib=R}
+  (    1 VDD )
+  (    2 N-000046 )
+ )
+ ( /4FDB299D/4FDB2AA4 $noname  R62 2k4 {Lib=R}
+  (    1 N-000046 )
+  (    2 /input1/out )
+ )
+ ( /4FDB299D/4FDB29FE $noname  R60 2k4 {Lib=R}
+  (    1 /input1/in-24v )
+  (    2 N-000045 )
+ )
+ ( /4FDB299D/4FDB29E5 $noname  R59 33k {Lib=R}
+  (    1 /input1/in-24v )
+  (    2 GND )
+ )
+ ( /4FDB299D/4FDB29D2 $noname  Q17 bc847 {Lib=NPN}
+  (    1 GND )
+  (    2 N-000045 )
+  (    3 N-000046 )
+ )
+ ( /4FDB3921/4FDB2AE7 $noname  R65 33k {Lib=R}
+  (    1 VDD )
+  (    2 N-000060 )
+ )
+ ( /4FDB3921/4FDB2AA4 $noname  R66 2k4 {Lib=R}
+  (    1 N-000060 )
+  (    2 /input2/out )
+ )
+ ( /4FDB3921/4FDB29FE $noname  R64 2k4 {Lib=R}
+  (    1 /input2/in-24v )
+  (    2 N-000059 )
+ )
+ ( /4FDB3921/4FDB29E5 $noname  R63 33k {Lib=R}
+  (    1 /input2/in-24v )
+  (    2 GND )
+ )
+ ( /4FDB3921/4FDB29D2 $noname  Q18 bc847 {Lib=NPN}
+  (    1 GND )
+  (    2 N-000059 )
+  (    3 N-000060 )
+ )
+ ( /4FDB3935/4FDB2AE7 $noname  R69 33k {Lib=R}
+  (    1 VDD )
+  (    2 N-000062 )
+ )
+ ( /4FDB3935/4FDB2AA4 $noname  R70 2k4 {Lib=R}
+  (    1 N-000062 )
+  (    2 /input4/out )
+ )
+ ( /4FDB3935/4FDB29FE $noname  R68 2k4 {Lib=R}
+  (    1 /input4/in-24v )
+  (    2 N-000061 )
+ )
+ ( /4FDB3935/4FDB29E5 $noname  R67 33k {Lib=R}
+  (    1 /input4/in-24v )
+  (    2 GND )
+ )
+ ( /4FDB3935/4FDB29D2 $noname  Q19 bc847 {Lib=NPN}
+  (    1 GND )
+  (    2 N-000061 )
+  (    3 N-000062 )
+ )
+ ( /4FDB3936/4FDB2AE7 $noname  R73 33k {Lib=R}
+  (    1 VDD )
+  (    2 N-000063 )
+ )
+ ( /4FDB3936/4FDB2AA4 $noname  R74 2k4 {Lib=R}
+  (    1 N-000063 )
+  (    2 /input3/out )
+ )
+ ( /4FDB3936/4FDB29FE $noname  R72 2k4 {Lib=R}
+  (    1 /input3/in-24v )
+  (    2 N-000064 )
+ )
+ ( /4FDB3936/4FDB29E5 $noname  R71 33k {Lib=R}
+  (    1 /input3/in-24v )
+  (    2 GND )
+ )
+ ( /4FDB3936/4FDB29D2 $noname  Q20 bc847 {Lib=NPN}
+  (    1 GND )
+  (    2 N-000064 )
+  (    3 N-000063 )
  )
 )
 *
 { Allowed footprints by component:
-$component C1
- SM*
- C?
- C1-1
-$endlist
-$component C2
- SM*
- C?
- C1-1
-$endlist
-$component C3
- SM*
- C?
- C1-1
-$endlist
-$component C4
- SM*
- C?
- C1-1
-$endlist
-$component C5
- SM*
- C?
- C1-1
-$endlist
-$component C6
- SM*
- C?
- C1-1
-$endlist
-$component C7
- SM*
- C?
- C1-1
-$endlist
-$component C8
- SM*
- C?
- C1-1
-$endlist
-$component C9
- SM*
- C?
- C1-1
-$endlist
-$component C10
- SM*
- C?
- C1-1
-$endlist
 $component C11
  SM*
  C?
  C1-1
 $endlist
-$component C12
- SM*
- C?
- C1-1
+$component R52
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
-$component C13
- SM*
- C?
- C1-1
+$component R51
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
-$component C14
- SM*
- C?
- C1-1
+$component R54
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
-$component D1
- D?
- S*
-$endlist
-$component D2
- D?
- S*
-$endlist
-$component D3
- D?
- S*
-$endlist
-$component D4
- D?
- S*
-$endlist
-$component D5
- D?
- S*
-$endlist
-$component D6
+$component D8
  D?
  S*
 $endlist
@@ -729,96 +533,7 @@ $component D7
  D?
  S*
 $endlist
-$component D8
- D?
- S*
-$endlist
-$component D9
- D?
- S*
-$endlist
-$component D10
- D?
- S*
-$endlist
-$component R1
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R2
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R3
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R4
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R5
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R6
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R7
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R8
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R9
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R10
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R11
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R12
+$component R53
  R?
  SM0603
  SM0805
@@ -839,14 +554,14 @@ $component R14
  R?-*
  SM1206
 $endlist
-$component R15
+$component R12
  R?
  SM0603
  SM0805
  R?-*
  SM1206
 $endlist
-$component R16
+$component R11
  R?
  SM0603
  SM0805
@@ -867,14 +582,14 @@ $component R18
  R?-*
  SM1206
 $endlist
-$component R19
+$component R16
  R?
  SM0603
  SM0805
  R?-*
  SM1206
 $endlist
-$component R20
+$component R15
  R?
  SM0603
  SM0805
@@ -895,14 +610,14 @@ $component R22
  R?-*
  SM1206
 $endlist
-$component R23
+$component R20
  R?
  SM0603
  SM0805
  R?-*
  SM1206
 $endlist
-$component R24
+$component R19
  R?
  SM0603
  SM0805
@@ -923,14 +638,14 @@ $component R26
  R?-*
  SM1206
 $endlist
-$component R27
+$component R24
  R?
  SM0603
  SM0805
  R?-*
  SM1206
 $endlist
-$component R28
+$component R23
  R?
  SM0603
  SM0805
@@ -951,14 +666,14 @@ $component R30
  R?-*
  SM1206
 $endlist
-$component R31
+$component R28
  R?
  SM0603
  SM0805
  R?-*
  SM1206
 $endlist
-$component R32
+$component R27
  R?
  SM0603
  SM0805
@@ -979,14 +694,14 @@ $component R34
  R?-*
  SM1206
 $endlist
-$component R35
+$component R32
  R?
  SM0603
  SM0805
  R?-*
  SM1206
 $endlist
-$component R36
+$component R31
  R?
  SM0603
  SM0805
@@ -1007,14 +722,14 @@ $component R38
  R?-*
  SM1206
 $endlist
-$component R39
+$component R36
  R?
  SM0603
  SM0805
  R?-*
  SM1206
 $endlist
-$component R40
+$component R35
  R?
  SM0603
  SM0805
@@ -1035,12 +750,24 @@ $component R42
  R?-*
  SM1206
 $endlist
-$component R43
+$component R40
  R?
  SM0603
  SM0805
  R?-*
  SM1206
+$endlist
+$component R39
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component C12
+ SM*
+ C?
+ C1-1
 $endlist
 $component R44
  R?
@@ -1049,7 +776,7 @@ $component R44
  R?-*
  SM1206
 $endlist
-$component R45
+$component R43
  R?
  SM0603
  SM0805
@@ -1063,12 +790,25 @@ $component R46
  R?-*
  SM1206
 $endlist
-$component R47
+$component D4
+ D?
+ S*
+$endlist
+$component D3
+ D?
+ S*
+$endlist
+$component R45
  R?
  SM0603
  SM0805
  R?-*
  SM1206
+$endlist
+$component C13
+ SM*
+ C?
+ C1-1
 $endlist
 $component R48
  R?
@@ -1077,7 +817,7 @@ $component R48
  R?-*
  SM1206
 $endlist
-$component R49
+$component R47
  R?
  SM0603
  SM0805
@@ -1091,28 +831,27 @@ $component R50
  R?-*
  SM1206
 $endlist
-$component R51
+$component D6
+ D?
+ S*
+$endlist
+$component D5
+ D?
+ S*
+$endlist
+$component R49
  R?
  SM0603
  SM0805
  R?-*
  SM1206
 $endlist
-$component R52
- R?
- SM0603
- SM0805
- R?-*
- SM1206
+$component C14
+ SM*
+ C?
+ C1-1
 $endlist
-$component R53
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R54
+$component R56
  R?
  SM0603
  SM0805
@@ -1126,20 +865,6 @@ $component R55
  R?-*
  SM1206
 $endlist
-$component R56
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R57
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
 $component R58
  R?
  SM0603
@@ -1147,14 +872,15 @@ $component R58
  R?-*
  SM1206
 $endlist
-$component R59
- R?
- SM0603
- SM0805
- R?-*
- SM1206
+$component D10
+ D?
+ S*
 $endlist
-$component R60
+$component D9
+ D?
+ S*
+$endlist
+$component R57
  R?
  SM0603
  SM0805
@@ -1175,14 +901,14 @@ $component R62
  R?-*
  SM1206
 $endlist
-$component R63
+$component R60
  R?
  SM0603
  SM0805
  R?-*
  SM1206
 $endlist
-$component R64
+$component R59
  R?
  SM0603
  SM0805
@@ -1203,14 +929,14 @@ $component R66
  R?-*
  SM1206
 $endlist
-$component R67
+$component R64
  R?
  SM0603
  SM0805
  R?-*
  SM1206
 $endlist
-$component R68
+$component R63
  R?
  SM0603
  SM0805
@@ -1231,14 +957,14 @@ $component R70
  R?-*
  SM1206
 $endlist
-$component R71
+$component R68
  R?
  SM0603
  SM0805
  R?-*
  SM1206
 $endlist
-$component R72
+$component R67
  R?
  SM0603
  SM0805
@@ -1259,5 +985,388 @@ $component R74
  R?-*
  SM1206
 $endlist
+$component R72
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R71
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
 $endfootprintlist
 }
+{ Pin List by Nets
+Net 1 "/input7/out" "out"
+ R30 2
+ P1 7
+Net 2 "/input9/out" "out"
+ P1 9
+ R14 2
+Net 3 "/input11/out" "out"
+ P1 11
+ R26 2
+Net 4 "/output2-4/in2" "in2"
+ U3 4
+ P1 13
+ R44 2
+Net 5 "/output2-3/in1" "in1"
+ P1 15
+ U4 2
+ R47 2
+Net 6 "/output2-2/in2" "in2"
+ P1 17
+ R56 2
+ U6 4
+Net 7 "/output2-1/in1" "in1"
+ U5 2
+ P1 19
+ R51 2
+Net 8 "/input9/in-24v" "in-24v"
+ P4 17
+ R12 1
+ R11 1
+Net 9 "/input10/in-24v" "in-24v"
+ P4 18
+ R16 1
+ R15 1
+Net 10 "/input1/out" "out"
+ P1 1
+ R62 2
+Net 11 "/input3/out" "out"
+ P1 3
+ R74 2
+Net 12 "/input5/out" "out"
+ R42 2
+ P1 5
+Net 13 "/input8/in-24v" "in-24v"
+ P4 16
+ R31 1
+ R32 1
+Net 14 "/input7/in-24v" "in-24v"
+ P4 15
+ R27 1
+ R28 1
+Net 15 "/input6/in-24v" "in-24v"
+ P4 14
+ R36 1
+ R35 1
+Net 16 "/input5/in-24v" "in-24v"
+ R39 1
+ P4 13
+ R40 1
+Net 17 "/input4/in-24v" "in-24v"
+ R67 1
+ R68 1
+ P4 12
+Net 18 "/input3/in-24v" "in-24v"
+ P4 11
+ R72 1
+ R71 1
+Net 19 "/input2/in-24v" "in-24v"
+ R64 1
+ P4 10
+ R63 1
+Net 20 "/input1/in-24v" "in-24v"
+ P4 9
+ R60 1
+ R59 1
+Net 21 "/output2-4/out2" "out2"
+ P4 8
+ Q10 D
+ D4 1
+Net 22 "/output2-4/out1" "out1"
+ P4 7
+ Q9 D
+ D3 1
+Net 23 "/output2-3/out2" "out2"
+ D6 1
+ P4 6
+ Q12 D
+Net 24 "/output2-3/out1" "out1"
+ D5 1
+ Q11 D
+ P4 5
+Net 25 "/output2-2/out2" "out2"
+ D10 1
+ P4 4
+ Q16 D
+Net 26 "/output2-2/out1" "out1"
+ D9 1
+ Q15 D
+ P4 3
+Net 27 "/output2-1/out2" "out2"
+ Q14 D
+ D8 1
+ P4 2
+Net 28 "/output2-1/out1" "out1"
+ P4 1
+ D7 1
+ Q13 D
+Net 29 "GND" "GND"
+ R19 2
+ C13 2
+ Q4 1
+ R23 2
+ Q20 1
+ R71 2
+ Q3 1
+ R63 2
+ Q18 1
+ C14 2
+ R56 1
+ R55 1
+ R11 2
+ Q1 1
+ Q19 1
+ R67 2
+ Q2 1
+ R15 2
+ R35 2
+ Q7 1
+ U3 3
+ R43 1
+ R44 1
+ C12 2
+ Q8 1
+ R39 2
+ Q10 S
+ Q5 1
+ R27 2
+ R47 1
+ R48 1
+ Q9 S
+ Q6 1
+ Q12 S
+ R31 2
+ U4 3
+ Q11 S
+ R52 1
+ U6 3
+ C11 2
+ Q15 S
+ Q17 1
+ R59 2
+ Q14 S
+ R51 1
+ U5 3
+ Q13 S
+ Q16 S
+ P2 1
+ P2 2
+Net 30 "/input11/in-24v" "in-24v"
+ P4 19
+ R24 1
+ R23 1
+Net 31 "/input12/in-24v" "in-24v"
+ R19 1
+ R20 1
+ P4 20
+Net 32 "24V" "24V"
+ D5 2
+ D3 2
+ D8 2
+ D4 2
+ D7 2
+ D6 2
+ D10 2
+ P2 5
+ D9 2
+ P2 6
+Net 33 "10V" "10V"
+ U4 6
+ U3 6
+ U5 6
+ C14 1
+ P2 4
+ C13 1
+ U6 6
+ C12 1
+ C11 1
+Net 34 "VDD" "VDD"
+ R29 1
+ R33 1
+ P2 3
+ R25 1
+ R37 1
+ R21 1
+ R61 1
+ R41 1
+ R17 1
+ R65 1
+ R13 1
+ R73 1
+ R69 1
+Net 35 "/output2-3/in2" "in2"
+ R48 2
+ U4 4
+ P1 16
+Net 36 "/output2-4/in1" "in1"
+ R43 2
+ U3 2
+ P1 14
+Net 37 "/input12/out" "out"
+ P1 12
+ R22 2
+Net 38 "/output2-1/in2" "in2"
+ U5 4
+ P1 20
+ R52 2
+Net 39 "/input10/out" "out"
+ R18 2
+ P1 10
+Net 40 "/input8/out" "out"
+ P1 8
+ R34 2
+Net 41 "/input6/out" "out"
+ P1 6
+ R38 2
+Net 42 "/input4/out" "out"
+ R70 2
+ P1 4
+Net 43 "/input2/out" "out"
+ P1 2
+ R66 2
+Net 44 "/output2-2/in1" "in1"
+ P1 18
+ R55 2
+ U6 2
+Net 45 "" ""
+ R60 2
+ Q17 2
+Net 46 "" ""
+ R62 1
+ Q17 3
+ R61 2
+Net 47 "/output2-1/outB" "outB"
+ U5 5
+ R54 1
+Net 48 "/output2-1/outA" "outA"
+ R53 1
+ U5 7
+Net 49 "" ""
+ Q13 G
+ R53 2
+Net 52 "" ""
+ Q14 G
+ R54 2
+Net 53 "/output2-2/outB" "outB"
+ U6 5
+ R58 1
+Net 54 "/output2-2/outA" "outA"
+ R57 1
+ U6 7
+Net 55 "" ""
+ Q15 G
+ R57 2
+Net 58 "" ""
+ R58 2
+ Q16 G
+Net 59 "" ""
+ Q18 2
+ R64 2
+Net 60 "" ""
+ Q18 3
+ R66 1
+ R65 2
+Net 61 "" ""
+ R68 2
+ Q19 2
+Net 62 "" ""
+ R70 1
+ R69 2
+ Q19 3
+Net 63 "" ""
+ Q20 3
+ R73 2
+ R74 1
+Net 64 "" ""
+ Q20 2
+ R72 2
+Net 65 "" ""
+ Q12 G
+ R50 2
+Net 66 "/output2-3/outA" "outA"
+ R49 1
+ U4 7
+Net 67 "" ""
+ R49 2
+ Q11 G
+Net 70 "/output2-3/outB" "outB"
+ R50 1
+ U4 5
+Net 71 "/output2-4/outA" "outA"
+ U3 7
+ R45 1
+Net 72 "" ""
+ R45 2
+ Q9 G
+Net 75 "/output2-4/outB" "outB"
+ U3 5
+ R46 1
+Net 76 "" ""
+ Q10 G
+ R46 2
+Net 77 "" ""
+ Q8 2
+ R40 2
+Net 78 "" ""
+ Q8 3
+ R42 1
+ R41 2
+Net 79 "" ""
+ Q7 2
+ R36 2
+Net 80 "" ""
+ R38 1
+ Q7 3
+ R37 2
+Net 81 "" ""
+ Q6 2
+ R32 2
+Net 82 "" ""
+ Q6 3
+ R33 2
+ R34 1
+Net 83 "" ""
+ Q5 2
+ R28 2
+Net 84 "" ""
+ R30 1
+ Q5 3
+ R29 2
+Net 85 "" ""
+ R24 2
+ Q4 2
+Net 86 "" ""
+ R26 1
+ R25 2
+ Q4 3
+Net 87 "" ""
+ Q3 2
+ R20 2
+Net 88 "" ""
+ Q3 3
+ R22 1
+ R21 2
+Net 89 "" ""
+ Q2 2
+ R16 2
+Net 90 "" ""
+ Q2 3
+ R17 2
+ R18 1
+Net 91 "" ""
+ R12 2
+ Q1 2
+Net 92 "" ""
+ Q1 3
+ R14 1
+ R13 2
+}
+#End
