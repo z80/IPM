@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Sat 16 Jun 2012 11:22:57 PM MSK
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Sun 17 Jun 2012 09:57:21 PM MSK
 
 BeginCmp
 TimeStamp = /4FDC55CF;
@@ -74,70 +74,70 @@ BeginCmp
 TimeStamp = /4FDC55D6;
 Reference = D1;
 ValeurCmp = 1N5819;
-IdModule  = D3;
+IdModule  = D3-with-smd-pins;
 EndCmp
 
 BeginCmp
 TimeStamp = /4FDC55C1;
 Reference = D2;
 ValeurCmp = 1N5819;
-IdModule  = D3;
+IdModule  = D3-with-smd-pins;
 EndCmp
 
 BeginCmp
 TimeStamp = /4FDC7CDA/4FDB2DC3;
 Reference = D3;
 ValeurCmp = 1N4148;
-IdModule  = D3;
+IdModule  = D3-with-smd-pins;
 EndCmp
 
 BeginCmp
 TimeStamp = /4FDC7CDA/4FDB2ECD;
 Reference = D4;
 ValeurCmp = 1N4148;
-IdModule  = D3;
+IdModule  = D3-with-smd-pins;
 EndCmp
 
 BeginCmp
 TimeStamp = /4FDC7CD9/4FDB2DC3;
 Reference = D5;
 ValeurCmp = 1N4148;
-IdModule  = D3;
+IdModule  = D3-with-smd-pins;
 EndCmp
 
 BeginCmp
 TimeStamp = /4FDC7CD9/4FDB2ECD;
 Reference = D6;
 ValeurCmp = 1N4148;
-IdModule  = D3;
+IdModule  = D3-with-smd-pins;
 EndCmp
 
 BeginCmp
 TimeStamp = /4FDB2BC5/4FDB2DC3;
 Reference = D7;
 ValeurCmp = 1N4148;
-IdModule  = D3;
+IdModule  = D3-with-smd-pins;
 EndCmp
 
 BeginCmp
 TimeStamp = /4FDB2BC5/4FDB2ECD;
 Reference = D8;
 ValeurCmp = 1N4148;
-IdModule  = D3;
+IdModule  = D3-with-smd-pins;
 EndCmp
 
 BeginCmp
 TimeStamp = /4FDB33F6/4FDB2DC3;
 Reference = D9;
 ValeurCmp = 1N4148;
-IdModule  = D3;
+IdModule  = D3-with-smd-pins;
 EndCmp
 
 BeginCmp
 TimeStamp = /4FDB33F6/4FDB2ECD;
 Reference = D10;
 ValeurCmp = 1N4148;
-IdModule  = D3;
+IdModule  = D3-with-smd-pins;
 EndCmp
 
 BeginCmp
