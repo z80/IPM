@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Mon 18 Jun 2012 01:18:32 AM MSK
+EESchema Schematic File Version 2  date 19/06/2012 11:33:44
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -45,7 +45,7 @@ $Descr A2 23400 16535
 encoding utf-8
 Sheet 1 17
 Title ""
-Date "17 jun 2012"
+Date "19 jun 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -53,6 +53,16 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Sheet
+S 12850 1000 1550 500 
+U 4FDB2BC5
+F0 "output2-1" 60
+F1 "output2.sch" 60
+F2 "out2" I R 14400 1400 60 
+F3 "out1" I R 14400 1100 60 
+F4 "in2" I L 12850 1400 60 
+F5 "in1" I L 12850 1100 60 
+$EndSheet
 Wire Wire Line
 	2900 3800 2900 4000
 Wire Wire Line
@@ -307,16 +317,6 @@ F 1 "CONN_6" V 4600 4150 60  0000 C CNN
 	1    4550 4150
 	1    0    0    1   
 $EndComp
-$Sheet
-S 12850 1000 1550 500 
-U 4FDB2BC5
-F0 "output2-1" 60
-F1 "output2.sch" 60
-F2 "out2" I R 14400 1400 60 
-F3 "out1" I R 14400 1100 60 
-F4 "in2" I L 12850 1400 60 
-F5 "in1" I L 12850 1100 60 
-$EndSheet
 Text Notes 14800 6250 0    60   ~ 0
 Power IOs
 Text Label 14600 8300 0    60   ~ 0
@@ -526,9 +526,9 @@ Text Label 14650 3200 0    60   ~ 0
 out6
 Text Label 14650 2900 0    60   ~ 0
 out5
-Text Label 12350 1400 0    60   ~ 0
-io20
 Text Label 12350 1100 0    60   ~ 0
+io20
+Text Label 12350 1400 0    60   ~ 0
 io19
 Text Label 12350 2000 0    60   ~ 0
 io18
