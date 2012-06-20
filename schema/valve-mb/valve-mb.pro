@@ -1,16 +1,6 @@
-update=Mon 18 Jun 2012 01:18:46 AM MSK
+update=20/06/2012 17:08:19
 version=1
-last_client=kicad
-[cvpcb]
-version=1
-NetITyp=0
-NetIExt=.net
-PkgIExt=.pkg
-NetDir=
-LibDir=
-NetType=0
-[cvpcb/libraries]
-EquName1=devcms
+last_client=cvpcb
 [pcbnew]
 version=1
 PadDrlX=320
@@ -66,7 +56,6 @@ MaxLnkS=3
 ShowRat=0
 ShowMRa=1
 [pcbnew/libraries]
-LibDir=
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -77,6 +66,16 @@ LibName7=display
 LibName8=valves
 LibName9=led
 LibName10=dip_sockets
+LibName11=side-conns
+LibName12=con-usb-2
+LibName13=con-usb-3
+LibName14=diode
+LibName15=IRFL024
+LibName16=lqfp48
+LibName17=micro-sd
+LibName18=my_foots
+LibName19=sdc
+LibDir=../libs
 [eeschema]
 version=1
 LibDir=
@@ -143,3 +142,8 @@ LibName29=contrib
 LibName30=valves
 [general]
 version=1
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
