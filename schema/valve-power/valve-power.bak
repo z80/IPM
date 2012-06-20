@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 20/06/2012 13:02:30
+EESchema Schematic File Version 2  date 20/06/2012 15:14:02
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -319,29 +319,29 @@ F 1 "CONN_6" V 4600 4150 60  0000 C CNN
 $EndComp
 Text Notes 14800 6250 0    60   ~ 0
 Power IOs
-Text Label 14600 8300 0    60   ~ 0
-in12
-Text Label 14600 8200 0    60   ~ 0
-in11
-Text Label 14600 8100 0    60   ~ 0
-in10
-Text Label 14600 8000 0    60   ~ 0
-in9
-Text Label 14600 7900 0    60   ~ 0
-in8
-Text Label 14600 7800 0    60   ~ 0
-in7
-Text Label 14600 7700 0    60   ~ 0
-in6
-Text Label 14600 7600 0    60   ~ 0
-in5
-Text Label 14600 7500 0    60   ~ 0
-in4
-Text Label 14600 7400 0    60   ~ 0
-in3
-Text Label 14600 7300 0    60   ~ 0
-in2
 Text Label 14600 7200 0    60   ~ 0
+in12
+Text Label 14600 7300 0    60   ~ 0
+in11
+Text Label 14600 7400 0    60   ~ 0
+in10
+Text Label 14600 7500 0    60   ~ 0
+in9
+Text Label 14600 7600 0    60   ~ 0
+in8
+Text Label 14600 7700 0    60   ~ 0
+in7
+Text Label 14600 7800 0    60   ~ 0
+in6
+Text Label 14600 7900 0    60   ~ 0
+in5
+Text Label 14600 8000 0    60   ~ 0
+in4
+Text Label 14600 8100 0    60   ~ 0
+in3
+Text Label 14600 8200 0    60   ~ 0
+in2
+Text Label 14600 8300 0    60   ~ 0
 in1
 Text Label 14400 6700 0    60   ~ 0
 out8
@@ -518,9 +518,9 @@ Text Label 19300 2100 0    60   ~ 0
 in2
 Text Label 19300 1400 0    60   ~ 0
 in1
-Text Label 14650 4100 0    60   ~ 0
-out8
 Text Label 14650 3800 0    60   ~ 0
+out8
+Text Label 14650 4100 0    60   ~ 0
 out7
 Text Label 14650 3200 0    60   ~ 0
 out6

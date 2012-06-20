@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  20/06/2012 13:04:16
+# EESchema Netlist Version 1.1 created  20/06/2012 15:14:57
 (
  ( /4FDE46CE $noname  P1 CONN_20 {Lib=CONN_20}
   (    1 /input1/out )
@@ -13,8 +13,8 @@
   (   10 /input10/out )
   (   11 /input11/out )
   (   12 /input12/out )
-  (   13 /output2-4/in1 )
-  (   14 /output2-4/in2 )
+  (   13 /output2-4/in2 )
+  (   14 /output2-4/in1 )
   (   15 /output2-3/in2 )
   (   16 /output2-3/in1 )
   (   17 /output2-2/in2 )
@@ -1002,16 +1002,16 @@ $endlist
 $endfootprintlist
 }
 { Pin List by Nets
-Net 1 "/output2-4/in1" "in1"
- U3 2
+Net 1 "/output2-4/in2" "in2"
+ R44 2
+ U3 4
  P1 13
- R43 2
 Net 2 "/input5/out" "out"
- R42 2
  P1 5
+ R42 2
 Net 3 "/input7/out" "out"
- P1 7
  R30 2
+ P1 7
 Net 4 "/input9/out" "out"
  P1 9
  R14 2
@@ -1023,91 +1023,91 @@ Net 6 "/output2-3/in2" "in2"
  R48 2
  P1 15
 Net 7 "/output2-2/in2" "in2"
+ R56 2
  U6 4
  P1 17
- R56 2
 Net 8 "/output2-1/in2" "in2"
  R52 2
- P1 19
  U5 4
+ P1 19
 Net 9 "/input9/in-24v" "in-24v"
  R12 1
  P4 12
  R11 1
 Net 10 "/input10/in-24v" "in-24v"
- P4 11
- R16 1
  R15 1
+ R16 1
+ P4 11
 Net 11 "/input12/in-24v" "in-24v"
- R19 1
  R20 1
  P4 9
+ R19 1
 Net 12 "/input1/out" "out"
  P1 1
  R62 2
 Net 13 "/input3/out" "out"
- P1 3
  R74 2
+ P1 3
 Net 14 "/output2-1/out1" "out1"
  P4 1
- D7 1
  Q13 D
+ D7 1
 Net 15 "/output2-1/out2" "out2"
  D8 1
- P4 2
  Q14 D
+ P4 2
 Net 16 "/input2/in-24v" "in-24v"
+ R63 1
  P4 19
  R64 1
- R63 1
 Net 17 "/input3/in-24v" "in-24v"
- R72 1
  R71 1
  P4 18
+ R72 1
 Net 18 "/input4/in-24v" "in-24v"
  P4 17
  R68 1
  R67 1
 Net 19 "/input5/in-24v" "in-24v"
- R39 1
- R40 1
  P4 16
+ R40 1
+ R39 1
 Net 20 "/input6/in-24v" "in-24v"
- P4 15
- R35 1
  R36 1
+ R35 1
+ P4 15
 Net 21 "/input7/in-24v" "in-24v"
  P4 14
  R27 1
  R28 1
 Net 22 "/input8/in-24v" "in-24v"
- R31 1
- R32 1
  P4 13
+ R32 1
+ R31 1
 Net 23 "/input1/in-24v" "in-24v"
- P4 20
  R60 1
+ P4 20
  R59 1
 Net 24 "/output2-3/out2" "out2"
- D6 1
  Q12 D
  P4 8
+ D6 1
 Net 25 "/output2-4/out1" "out1"
  Q9 D
- D3 1
  P4 7
+ D3 1
 Net 26 "/output2-3/out1" "out1"
  D5 1
  P4 6
  Q11 D
 Net 27 "/output2-2/out2" "out2"
- Q16 D
- P4 5
  D10 1
+ P4 5
+ Q16 D
 Net 28 "/output2-4/out2" "out2"
+ Q10 D
  D4 1
  P4 4
- Q10 D
 Net 29 "GND" "GND"
  R31 2
  R67 2
@@ -1116,9 +1116,9 @@ Net 29 "GND" "GND"
  Q18 1
  C14 2
  R56 1
+ R47 1
  R48 1
  C13 2
- R47 1
  Q20 1
  R71 2
  Q4 1
@@ -1145,11 +1145,11 @@ Net 29 "GND" "GND"
  C12 2
  R44 1
  R43 1
+ R59 2
  P2 2
  Q15 S
  R55 1
  Q13 S
- R59 2
  Q17 1
  U5 3
  U6 3
@@ -1208,41 +1208,41 @@ Net 37 "/input10/out" "out"
 Net 38 "/input8/out" "out"
  P1 8
  R34 2
-Net 39 "/output2-4/in2" "in2"
- R44 2
- U3 4
+Net 39 "/output2-4/in1" "in1"
  P1 14
+ R43 2
+ U3 2
 Net 40 "/input4/out" "out"
  P1 4
  R70 2
 Net 41 "/input2/out" "out"
- P1 2
  R66 2
+ P1 2
 Net 42 "10V" "10V"
- U6 6
- P2 4
- U3 6
  C13 1
  C11 1
+ C14 1
  C12 1
  U5 6
+ U6 6
+ U3 6
  U4 6
- C14 1
+ P2 4
 Net 43 "/output2-2/in1" "in1"
  R55 2
  P1 18
  U6 2
 Net 44 "/output2-3/in1" "in1"
- U4 2
- P1 16
  R47 2
+ P1 16
+ U4 2
 Net 45 "" ""
  Q17 2
  R60 2
 Net 46 "" ""
+ R61 2
  R62 1
  Q17 3
- R61 2
 Net 49 "" ""
  R53 2
  Q13 G
@@ -1271,9 +1271,9 @@ Net 59 "" ""
  R64 2
  Q18 2
 Net 60 "" ""
+ R65 2
  R66 1
  Q18 3
- R65 2
 Net 61 "" ""
  R70 1
  Q19 3
@@ -1283,8 +1283,8 @@ Net 62 "" ""
  R68 2
 Net 63 "" ""
  R74 1
- R73 2
  Q20 3
+ R73 2
 Net 64 "" ""
  R72 2
  Q20 2
@@ -1298,8 +1298,8 @@ Net 67 "" ""
  R49 2
  Q11 G
 Net 70 "/output2-3/outB" "outB"
- U4 5
  R50 1
+ U4 5
 Net 71 "/output2-4/outA" "outA"
  U3 7
  R45 1

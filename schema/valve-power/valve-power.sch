@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 20/06/2012 13:04:10
+EESchema Schematic File Version 2  date 20/06/2012 15:14:54
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -593,9 +593,9 @@ F3 "out1" I R 14400 2000 60
 F4 "in2" I L 12850 2300 60 
 F5 "in1" I L 12850 2000 60 
 $EndSheet
-Text Label 12350 3800 0    60   ~ 0
-io13
 Text Label 12350 4100 0    60   ~ 0
+io13
+Text Label 12350 3800 0    60   ~ 0
 io14
 Text Label 12350 3200 0    60   ~ 0
 io15
