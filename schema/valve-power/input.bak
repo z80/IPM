@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 19/06/2012 13:04:18
+EESchema Schematic File Version 2  date 20/06/2012 13:02:30
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -45,7 +45,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 5 17
 Title ""
-Date "19 jun 2012"
+Date "20 jun 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -110,7 +110,7 @@ AR Path="/4FDB299D/4FDB2AE7" Ref="R61"  Part="1"
 AR Path="/4FDB3921/4FDB2AE7" Ref="R65"  Part="1" 
 AR Path="/4FDB3935/4FDB2AE7" Ref="R69"  Part="1" 
 AR Path="/4FDB3936/4FDB2AE7" Ref="R73"  Part="1" 
-F 0 "R13" V 5880 2550 50  0000 C CNN
+F 0 "R61" V 5880 2550 50  0000 C CNN
 F 1 "33k" V 5800 2550 50  0000 C CNN
 	1    5800 2550
 	1    0    0    -1  
@@ -133,7 +133,7 @@ AR Path="/4FDB299D/4FDB2AA4" Ref="R62"  Part="1"
 AR Path="/4FDB3921/4FDB2AA4" Ref="R66"  Part="1" 
 AR Path="/4FDB3935/4FDB2AA4" Ref="R70"  Part="1" 
 AR Path="/4FDB3936/4FDB2AA4" Ref="R74"  Part="1" 
-F 0 "R14" V 6580 3250 50  0000 C CNN
+F 0 "R62" V 6580 3250 50  0000 C CNN
 F 1 "2k4" V 6500 3250 50  0000 C CNN
 	1    6500 3250
 	0    -1   -1   0   
@@ -198,7 +198,7 @@ AR Path="/4FDB299D/4FDB29FE" Ref="R60"  Part="1"
 AR Path="/4FDB3921/4FDB29FE" Ref="R64"  Part="1" 
 AR Path="/4FDB3935/4FDB29FE" Ref="R68"  Part="1" 
 AR Path="/4FDB3936/4FDB29FE" Ref="R72"  Part="1" 
-F 0 "R12" V 5130 3600 50  0000 C CNN
+F 0 "R60" V 5130 3600 50  0000 C CNN
 F 1 "2k4" V 5050 3600 50  0000 C CNN
 	1    5050 3600
 	0    -1   -1   0   
@@ -219,7 +219,7 @@ AR Path="/4FDB299D/4FDB29E5" Ref="R59"  Part="1"
 AR Path="/4FDB3921/4FDB29E5" Ref="R63"  Part="1" 
 AR Path="/4FDB3935/4FDB29E5" Ref="R67"  Part="1" 
 AR Path="/4FDB3936/4FDB29E5" Ref="R71"  Part="1" 
-F 0 "R11" V 4680 4250 50  0000 C CNN
+F 0 "R59" V 4680 4250 50  0000 C CNN
 F 1 "33k" V 4600 4250 50  0000 C CNN
 	1    4600 4250
 	1    0    0    -1  
@@ -240,7 +240,7 @@ AR Path="/4FDB299D/4FDB29D2" Ref="Q17"  Part="1"
 AR Path="/4FDB3921/4FDB29D2" Ref="Q18"  Part="1" 
 AR Path="/4FDB3935/4FDB29D2" Ref="Q19"  Part="1" 
 AR Path="/4FDB3936/4FDB29D2" Ref="Q20"  Part="1" 
-F 0 "Q1" H 5700 3450 50  0000 R CNN
+F 0 "Q17" H 5700 3450 50  0000 R CNN
 F 1 "bc847" H 5700 3750 50  0000 R CNN
 	1    5700 3600
 	1    0    0    -1  

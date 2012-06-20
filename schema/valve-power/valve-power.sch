@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 19/06/2012 13:45:25
+EESchema Schematic File Version 2  date 20/06/2012 13:04:10
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -45,7 +45,7 @@ $Descr A2 23400 16535
 encoding utf-8
 Sheet 1 17
 Title ""
-Date "19 jun 2012"
+Date "20 jun 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -319,39 +319,39 @@ F 1 "CONN_6" V 4600 4150 60  0000 C CNN
 $EndComp
 Text Notes 14800 6250 0    60   ~ 0
 Power IOs
-Text Label 14600 8300 0    60   ~ 0
-in12
-Text Label 14600 8200 0    60   ~ 0
-in11
-Text Label 14600 8100 0    60   ~ 0
-in10
-Text Label 14600 8000 0    60   ~ 0
-in9
-Text Label 14600 7900 0    60   ~ 0
-in8
-Text Label 14600 7800 0    60   ~ 0
-in7
-Text Label 14600 7700 0    60   ~ 0
-in6
-Text Label 14600 7600 0    60   ~ 0
-in5
-Text Label 14600 7500 0    60   ~ 0
-in4
-Text Label 14600 7400 0    60   ~ 0
-in3
-Text Label 14600 7300 0    60   ~ 0
-in2
 Text Label 14600 7200 0    60   ~ 0
+in12
+Text Label 14600 7300 0    60   ~ 0
+in11
+Text Label 14600 7400 0    60   ~ 0
+in10
+Text Label 14600 7500 0    60   ~ 0
+in9
+Text Label 14600 7600 0    60   ~ 0
+in8
+Text Label 14600 7700 0    60   ~ 0
+in7
+Text Label 14600 7800 0    60   ~ 0
+in6
+Text Label 14600 7900 0    60   ~ 0
+in5
+Text Label 14600 8000 0    60   ~ 0
+in4
+Text Label 14600 8100 0    60   ~ 0
+in3
+Text Label 14600 8200 0    60   ~ 0
+in2
+Text Label 14600 8300 0    60   ~ 0
 in1
-Text Label 14400 7100 0    60   ~ 0
+Text Label 14400 6700 0    60   ~ 0
 out8
 Text Label 14400 7000 0    60   ~ 0
 out7
-Text Label 14400 6900 0    60   ~ 0
+Text Label 14400 7100 0    60   ~ 0
 out6
-Text Label 14400 6800 0    60   ~ 0
+Text Label 14400 6900 0    60   ~ 0
 out5
-Text Label 14400 6700 0    60   ~ 0
+Text Label 14400 6800 0    60   ~ 0
 out4
 Text Label 14400 6600 0    60   ~ 0
 out3
