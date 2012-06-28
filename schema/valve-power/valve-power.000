@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 1 date 20/06/2012 16:48:07
+PCBNEW-BOARD Version 1 date 20/06/2012 16:48:22
 
 # Created by Pcbnew(2012-01-19 BZR 3256)-stable
 
@@ -4973,7 +4973,7 @@ $TEXTPCB
 Te "Power IO"
 nl "board"
 nl "v-1.0.0"
-Po 48250 25000 600 800 120 0
+Po 48150 25000 600 800 120 0
 De 15 1 0 Normal C
 $EndTEXTPCB
 $DRAWSEGMENT
