@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wed 05 Sep 2012 02:14:24 PM MSK
+EESchema Schematic File Version 2  date Mon 27 Aug 2012 04:58:48 PM MSK
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:cable-i2c-cache
-EELAYER 25  0
+EELAYER 43  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "5 sep 2012"
+Date "27 aug 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,10 +44,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L CONN_2 P1
+L CONN_2 P?
 U 1 1 503B6F04
 P 4150 2400
-F 0 "P1" V 4100 2400 40  0000 C CNN
+F 0 "P?" V 4100 2400 40  0000 C CNN
 F 1 "CONN_2" V 4200 2400 40  0000 C CNN
 	1    4150 2400
 	-1   0    0    -1  
@@ -70,19 +69,19 @@ Wire Wire Line
 Wire Wire Line
 	4500 2800 4800 2800
 $Comp
-L CONN_2 P2
+L CONN_2 P?
 U 1 1 503B6F03
 P 4150 2900
-F 0 "P2" V 4100 2900 40  0000 C CNN
+F 0 "P?" V 4100 2900 40  0000 C CNN
 F 1 "CONN_2" V 4200 2900 40  0000 C CNN
 	1    4150 2900
 	-1   0    0    -1  
 $EndComp
 $Comp
-L CONN_2 P5
+L CONN_2 P?
 U 1 1 503B6EEB
 P 4150 4400
-F 0 "P5" V 4100 4400 40  0000 C CNN
+F 0 "P?" V 4100 4400 40  0000 C CNN
 F 1 "CONN_2" V 4200 4400 40  0000 C CNN
 	1    4150 4400
 	-1   0    0    -1  
@@ -104,19 +103,19 @@ Wire Wire Line
 Wire Wire Line
 	4500 4800 4800 4800
 $Comp
-L CONN_2 P6
+L CONN_2 P?
 U 1 1 503B6EEA
 P 4150 4900
-F 0 "P6" V 4100 4900 40  0000 C CNN
+F 0 "P?" V 4100 4900 40  0000 C CNN
 F 1 "CONN_2" V 4200 4900 40  0000 C CNN
 	1    4150 4900
 	-1   0    0    -1  
 $EndComp
 $Comp
-L CONN_2 P4
+L CONN_2 P?
 U 1 1 503B6ED8
 P 4150 3900
-F 0 "P4" V 4100 3900 40  0000 C CNN
+F 0 "P?" V 4100 3900 40  0000 C CNN
 F 1 "CONN_2" V 4200 3900 40  0000 C CNN
 	1    4150 3900
 	-1   0    0    -1  
@@ -138,10 +137,10 @@ Wire Wire Line
 Wire Wire Line
 	4500 3300 4800 3300
 $Comp
-L CONN_2 P3
+L CONN_2 P?
 U 1 1 503B6EAB
 P 4150 3400
-F 0 "P3" V 4100 3400 40  0000 C CNN
+F 0 "P?" V 4100 3400 40  0000 C CNN
 F 1 "CONN_2" V 4200 3400 40  0000 C CNN
 	1    4150 3400
 	-1   0    0    -1  

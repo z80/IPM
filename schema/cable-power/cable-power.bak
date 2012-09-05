@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wed 05 Sep 2012 02:15:02 PM MSK
+EESchema Schematic File Version 2  date Mon 27 Aug 2012 04:55:01 PM MSK
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,14 +30,13 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:my_comps
-LIBS:cable-power-cache
-EELAYER 25  0
+EELAYER 43  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "5 sep 2012"
+Date "27 aug 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -78,19 +77,19 @@ Wire Wire Line
 Wire Wire Line
 	6300 3800 4800 3800
 $Comp
-L CONN_6 P1
+L CONN_6 P?
 U 1 1 503B6DCE
 P 4450 3950
-F 0 "P1" V 4400 3950 60  0000 C CNN
+F 0 "P?" V 4400 3950 60  0000 C CNN
 F 1 "CONN_6" V 4500 3950 60  0000 C CNN
 	1    4450 3950
 	-1   0    0    -1  
 $EndComp
 $Comp
-L CONN_6 P2
+L CONN_6 P?
 U 1 1 503B6DBE
 P 6650 3950
-F 0 "P2" V 6600 3950 60  0000 C CNN
+F 0 "P?" V 6600 3950 60  0000 C CNN
 F 1 "CONN_6" V 6700 3950 60  0000 C CNN
 	1    6650 3950
 	1    0    0    -1  
