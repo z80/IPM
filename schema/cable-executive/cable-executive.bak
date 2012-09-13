@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 13/09/2012 15:37:15
+EESchema Schematic File Version 2  date Thu 13 Sep 2012 07:58:52 PM MSK
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -31,7 +31,8 @@ LIBS:contrib
 LIBS:valves
 LIBS:d-sub-37
 LIBS:camozzi
-EELAYER 43  0
+LIBS:cable-executive-cache
+EELAYER 25  0
 EELAYER END
 $Descr A1 33070 23400
 encoding utf-8
@@ -45,82 +46,279 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Label 9950 15850 0    60   ~ 0
-c59[14..16]
-Text Label 9950 15050 0    60   ~ 0
-c58[11..13]
-Text Label 9950 14250 0    60   ~ 0
-c57[8..10]
-Text Label 9950 13450 0    60   ~ 0
-c56[5..7]
-Text Label 9950 12650 0    60   ~ 0
-c55[2..4]
-Text Label 29750 20650 0    60   ~ 0
-c54[0..1]
-Text Label 10700 20400 0    60   ~ 0
-conne-31
-Text Label 10700 20200 0    60   ~ 0
-conne-30
-Text Label 10700 20000 0    60   ~ 0
-conne-29
-Text Label 10700 19600 0    60   ~ 0
-conne-28
-Text Label 10700 19400 0    60   ~ 0
-conne-27
-Text Label 10700 19200 0    60   ~ 0
-conne-26
-Text Label 10700 18800 0    60   ~ 0
-conne-25
-Text Label 10700 18600 0    60   ~ 0
-conne-24
-Text Label 10700 18400 0    60   ~ 0
-conne-23
-Text Label 10700 18000 0    60   ~ 0
-conne-22
-Text Label 10700 17800 0    60   ~ 0
-conne-21
-Text Label 10700 17600 0    60   ~ 0
-conne-20
-Text Label 10700 17200 0    60   ~ 0
-conne-19
-Text Label 10700 17000 0    60   ~ 0
-conne-18
-Text Label 10700 16800 0    60   ~ 0
-conne-17
-Text Label 10700 16400 0    60   ~ 0
-conne-16
-Text Label 10700 16200 0    60   ~ 0
-conne-15
-Text Label 10700 16000 0    60   ~ 0
-conne-14
-Text Label 10700 15600 0    60   ~ 0
-conne-13
-Text Label 10700 15400 0    60   ~ 0
-conne-12
-Text Label 10700 15200 0    60   ~ 0
-conne-11
-Text Label 10700 14800 0    60   ~ 0
-conne-10
-Text Label 10700 14600 0    60   ~ 0
-conne-9
-Text Label 10700 14400 0    60   ~ 0
-conne-8
-Text Label 10700 14000 0    60   ~ 0
-conne-7
-Text Label 10700 13800 0    60   ~ 0
-conne-6
-Text Label 10700 13600 0    60   ~ 0
-conne-5
-Text Label 10700 13200 0    60   ~ 0
-conne-4
-Text Label 10700 13000 0    60   ~ 0
-conne-3
-Text Label 24550 17200 0    60   ~ 0
-connd[0..36]
-Text Label 28800 17200 0    60   ~ 0
-connd[0..36]
-Text Label 28800 21400 0    60   ~ 0
-conne[0..36]
+$Comp
+L D-SUB-37 Conn?
+U 1 1 50520182
+P 9250 4200
+F 0 "Conn?" H 9300 4000 60  0000 C CNN
+F 1 "D-SUB-37" H 9300 4350 60  0000 C CNN
+	1    9250 4200
+	-1   0    0    -1  
+$EndComp
+Text Label 9800 700  0    60   ~ 0
+conng-0
+Text Label 9800 900  0    60   ~ 0
+conng-1
+Text Label 9800 1100 0    60   ~ 0
+conng-2
+Text Label 9800 1300 0    60   ~ 0
+conng-3
+Text Label 9800 1500 0    60   ~ 0
+conng-4
+Text Label 9800 1700 0    60   ~ 0
+conng-5
+Text Label 9800 1900 0    60   ~ 0
+conng-6
+Text Label 9800 2100 0    60   ~ 0
+conng-7
+Text Label 9800 2300 0    60   ~ 0
+conng-8
+Text Label 9800 2500 0    60   ~ 0
+conng-9
+Text Label 9800 2700 0    60   ~ 0
+conng-10
+Text Label 9800 2900 0    60   ~ 0
+conng-11
+Text Label 9800 3100 0    60   ~ 0
+conng-12
+Text Label 9800 3300 0    60   ~ 0
+conng-13
+Text Label 9800 3500 0    60   ~ 0
+conng-14
+Text Label 9800 3700 0    60   ~ 0
+conng-15
+Text Label 9800 3900 0    60   ~ 0
+conng-16
+Text Label 9800 4100 0    60   ~ 0
+conng-17
+Text Label 9800 4300 0    60   ~ 0
+conng-18
+Text Label 9800 4500 0    60   ~ 0
+conng-19
+Text Label 9800 4700 0    60   ~ 0
+conng-20
+Text Label 9800 4900 0    60   ~ 0
+conng-21
+Text Label 9800 5100 0    60   ~ 0
+conng-22
+Text Label 9800 5300 0    60   ~ 0
+conng-23
+Text Label 9800 5500 0    60   ~ 0
+conng-24
+Text Label 9800 5700 0    60   ~ 0
+conng-25
+Text Label 9800 5900 0    60   ~ 0
+conng-26
+Text Label 9800 6100 0    60   ~ 0
+conng-27
+Text Label 9800 6300 0    60   ~ 0
+conng-28
+Text Label 9800 6500 0    60   ~ 0
+conng-29
+Text Label 9800 6700 0    60   ~ 0
+conng-30
+Text Label 9800 6900 0    60   ~ 0
+conng-31
+Text Label 9800 7100 0    60   ~ 0
+conng-32
+Text Label 9800 7300 0    60   ~ 0
+conng-33
+Text Label 9800 7500 0    60   ~ 0
+conng-34
+Text Label 9800 7700 0    60   ~ 0
+conng-35
+Text Label 9800 7900 0    60   ~ 0
+conng-36
+Entry Wire Line
+	10250 700  10350 800 
+Entry Wire Line
+	10250 900  10350 1000
+Entry Wire Line
+	10250 1100 10350 1200
+Entry Wire Line
+	10250 1300 10350 1400
+Entry Wire Line
+	10250 1500 10350 1600
+Entry Wire Line
+	10250 1700 10350 1800
+Entry Wire Line
+	10250 1900 10350 2000
+Entry Wire Line
+	10250 2100 10350 2200
+Entry Wire Line
+	10250 2300 10350 2400
+Entry Wire Line
+	10250 2500 10350 2600
+Entry Wire Line
+	10250 2700 10350 2800
+Entry Wire Line
+	10250 2900 10350 3000
+Entry Wire Line
+	10250 3100 10350 3200
+Entry Wire Line
+	10250 3300 10350 3400
+Entry Wire Line
+	10250 3500 10350 3600
+Entry Wire Line
+	10250 3700 10350 3800
+Entry Wire Line
+	10250 3900 10350 4000
+Entry Wire Line
+	10250 4100 10350 4200
+Entry Wire Line
+	10250 4300 10350 4400
+Entry Wire Line
+	10250 4500 10350 4600
+Entry Wire Line
+	10250 4700 10350 4800
+Entry Wire Line
+	10250 4900 10350 5000
+Entry Wire Line
+	10250 5100 10350 5200
+Entry Wire Line
+	10250 5300 10350 5400
+Entry Wire Line
+	10250 5500 10350 5600
+Entry Wire Line
+	10250 5700 10350 5800
+Entry Wire Line
+	10250 5900 10350 6000
+Entry Wire Line
+	10250 6100 10350 6200
+Entry Wire Line
+	10250 6300 10350 6400
+Entry Wire Line
+	10250 6500 10350 6600
+Entry Wire Line
+	10250 6700 10350 6800
+Entry Wire Line
+	10250 6900 10350 7000
+Entry Wire Line
+	10250 7100 10350 7200
+Entry Wire Line
+	10250 7300 10350 7400
+Entry Wire Line
+	10250 7500 10350 7600
+Entry Wire Line
+	10250 7700 10350 7800
+Entry Wire Line
+	10250 7900 10350 8000
+Text Label 10450 8200 0    60   ~ 0
+conng[0..36]
+Wire Bus Line
+	10350 8200 11150 8200
+Wire Wire Line
+	9750 7900 10250 7900
+Wire Wire Line
+	9750 7500 10250 7500
+Wire Wire Line
+	9750 7100 10250 7100
+Wire Wire Line
+	9750 6700 10250 6700
+Wire Wire Line
+	9750 6300 10250 6300
+Wire Wire Line
+	9750 5900 10250 5900
+Wire Wire Line
+	9750 5500 10250 5500
+Wire Wire Line
+	9750 5100 10250 5100
+Wire Wire Line
+	9750 4700 10250 4700
+Wire Wire Line
+	9750 4300 10250 4300
+Wire Wire Line
+	9750 3900 10250 3900
+Wire Wire Line
+	9750 3500 10250 3500
+Wire Wire Line
+	9750 3100 10250 3100
+Wire Wire Line
+	9750 2700 10250 2700
+Wire Wire Line
+	9750 2300 10250 2300
+Wire Wire Line
+	9750 1900 10250 1900
+Wire Wire Line
+	9750 1500 10250 1500
+Wire Wire Line
+	9750 1100 10250 1100
+Wire Wire Line
+	9750 700  10250 700 
+Wire Wire Line
+	9750 900  10250 900 
+Wire Wire Line
+	9750 1300 10250 1300
+Wire Wire Line
+	9750 1700 10250 1700
+Wire Wire Line
+	9750 2100 10250 2100
+Wire Wire Line
+	9750 2500 10250 2500
+Wire Wire Line
+	9750 2900 10250 2900
+Wire Wire Line
+	9750 3300 10250 3300
+Wire Wire Line
+	9750 3700 10250 3700
+Wire Wire Line
+	9750 4100 10250 4100
+Wire Wire Line
+	9750 4500 10250 4500
+Wire Wire Line
+	9750 4900 10250 4900
+Wire Wire Line
+	9750 5300 10250 5300
+Wire Wire Line
+	9750 5700 10250 5700
+Wire Wire Line
+	9750 6100 10250 6100
+Wire Wire Line
+	9750 6500 10250 6500
+Wire Wire Line
+	9750 6900 10250 6900
+Wire Wire Line
+	9750 7300 10250 7300
+Wire Wire Line
+	9750 7700 10250 7700
+Wire Bus Line
+	10350 550  10350 8200
+Text Label 14450 15050 0    60   ~ 0
+c77
+Text Label 14450 14250 0    60   ~ 0
+c76[33..35]
+Text Label 14450 13450 0    60   ~ 0
+c75[30..32]
+Text Label 14450 12650 0    60   ~ 0
+c74[27..29]
+Wire Bus Line
+	14400 15050 14950 15050
+Wire Bus Line
+	14950 15050 14950 15550
+Wire Bus Line
+	14400 13450 14950 13450
+Wire Bus Line
+	14950 13450 14950 13950
+Wire Bus Line
+	12150 19850 12650 19850
+Wire Bus Line
+	12650 19850 12650 20350
+Wire Bus Line
+	12150 18250 12650 18250
+Wire Bus Line
+	12650 18250 12650 18750
+Wire Bus Line
+	12150 16650 12650 16650
+Wire Bus Line
+	12650 16650 12650 17150
+Wire Bus Line
+	12150 15050 12650 15050
+Wire Bus Line
+	12650 15050 12650 15550
+Wire Bus Line
+	12150 13450 12650 13450
+Wire Bus Line
+	12650 13450 12650 13950
 Wire Bus Line
 	28600 21400 29600 21400
 Wire Bus Line
@@ -161,24 +359,6 @@ Wire Wire Line
 	15700 15200 15050 15200
 Wire Wire Line
 	15700 15600 15050 15600
-Wire Wire Line
-	15700 16200 15050 16200
-Wire Wire Line
-	15700 16800 15050 16800
-Wire Wire Line
-	15700 17200 15050 17200
-Wire Wire Line
-	15700 17800 15050 17800
-Wire Wire Line
-	15700 18400 15050 18400
-Wire Wire Line
-	15700 18800 15050 18800
-Wire Wire Line
-	15700 19400 15050 19400
-Wire Wire Line
-	15700 20000 15050 20000
-Wire Wire Line
-	15700 20400 15050 20400
 Wire Wire Line
 	13400 20200 12750 20200
 Wire Wire Line
@@ -1300,24 +1480,6 @@ Wire Wire Line
 Wire Wire Line
 	13400 20400 12750 20400
 Wire Wire Line
-	15700 20200 15050 20200
-Wire Wire Line
-	15700 19600 15050 19600
-Wire Wire Line
-	15700 19200 15050 19200
-Wire Wire Line
-	15700 18600 15050 18600
-Wire Wire Line
-	15700 18000 15050 18000
-Wire Wire Line
-	15700 17600 15050 17600
-Wire Wire Line
-	15700 17000 15050 17000
-Wire Wire Line
-	15700 16400 15050 16400
-Wire Wire Line
-	15700 16000 15050 16000
-Wire Wire Line
 	15700 15400 15050 15400
 Wire Wire Line
 	15700 14800 15050 14800
@@ -1353,6 +1515,224 @@ Wire Bus Line
 	25300 20600 25300 17200
 Wire Bus Line
 	25300 17200 24350 17200
+Wire Bus Line
+	12650 13150 12650 12650
+Wire Bus Line
+	12650 12650 12150 12650
+Wire Bus Line
+	12650 14750 12650 14250
+Wire Bus Line
+	12650 14250 12150 14250
+Wire Bus Line
+	12650 16350 12650 15850
+Wire Bus Line
+	12650 15850 12150 15850
+Wire Bus Line
+	12650 17950 12650 17450
+Wire Bus Line
+	12650 17450 12150 17450
+Wire Bus Line
+	12650 19550 12650 19050
+Wire Bus Line
+	12650 19050 12150 19050
+Wire Bus Line
+	14950 13150 14950 12650
+Wire Bus Line
+	14950 12650 14400 12650
+Wire Bus Line
+	14950 14750 14950 14250
+Wire Bus Line
+	14950 14250 14400 14250
+Text Label 12200 19850 0    60   ~ 0
+c73[24..26]
+Text Label 12200 19050 0    60   ~ 0
+c72[21..23]
+Text Label 12200 18250 0    60   ~ 0
+c71[18..20]
+Text Label 12200 17450 0    60   ~ 0
+c70[15..17]
+Text Label 12200 16650 0    60   ~ 0
+c69[12..14]
+Text Label 12200 15850 0    60   ~ 0
+c68[9..11]
+Text Label 12200 15050 0    60   ~ 0
+c67[6..8]
+Text Label 12200 14250 0    60   ~ 0
+c66[3..5]
+Text Label 12200 13450 0    60   ~ 0
+c65[0..2]
+Text Label 12200 12650 0    60   ~ 0
+c64[32..34]
+Text Label 15150 15600 0    60   ~ 0
+connf-38
+Text Label 15150 15400 0    60   ~ 0
+connf-37
+Text Label 15150 15200 0    60   ~ 0
+connf-36
+Text Label 15150 14800 0    60   ~ 0
+connf-35
+Text Label 15150 14600 0    60   ~ 0
+connf-34
+Text Label 15150 14400 0    60   ~ 0
+connf-33
+Text Label 15150 14000 0    60   ~ 0
+connf-32
+Text Label 15150 13800 0    60   ~ 0
+connf-31
+Text Label 15150 13600 0    60   ~ 0
+connf-30
+Text Label 15150 13200 0    60   ~ 0
+connf-29
+Text Label 15150 13000 0    60   ~ 0
+connf-28
+Text Label 15150 12800 0    60   ~ 0
+connf-27
+Text Label 12850 20400 0    60   ~ 0
+connf-26
+Text Label 12850 20200 0    60   ~ 0
+connf-25
+Text Label 12850 20000 0    60   ~ 0
+connf-24
+Text Label 12850 19600 0    60   ~ 0
+connf-23
+Text Label 12850 19400 0    60   ~ 0
+connf-22
+Text Label 12850 19200 0    60   ~ 0
+connf-21
+Text Label 12850 18800 0    60   ~ 0
+connf-20
+Text Label 12850 18600 0    60   ~ 0
+connf-19
+Text Label 12850 18400 0    60   ~ 0
+connf-18
+Text Label 12850 18000 0    60   ~ 0
+connf-17
+Text Label 12850 17800 0    60   ~ 0
+connf-16
+Text Label 12850 17600 0    60   ~ 0
+connf-15
+Text Label 12850 17200 0    60   ~ 0
+connf-14
+Text Label 12850 17000 0    60   ~ 0
+connf-13
+Text Label 12850 16800 0    60   ~ 0
+connf-12
+Text Label 12850 16400 0    60   ~ 0
+connf-11
+Text Label 12850 16200 0    60   ~ 0
+connf-10
+Text Label 12850 16000 0    60   ~ 0
+connf-9
+Text Label 12850 15600 0    60   ~ 0
+connf-8
+Text Label 12850 15400 0    60   ~ 0
+connf-7
+Text Label 12850 15200 0    60   ~ 0
+connf-6
+Text Label 12850 14800 0    60   ~ 0
+connf-5
+Text Label 12850 14600 0    60   ~ 0
+connf-4
+Text Label 12850 14400 0    60   ~ 0
+connf-3
+Text Label 12850 14000 0    60   ~ 0
+connf-2
+Text Label 12850 13800 0    60   ~ 0
+connf-1
+Text Label 12850 13600 0    60   ~ 0
+connf-0
+Text Label 12850 13200 0    60   ~ 0
+conne-34
+Text Label 12850 13000 0    60   ~ 0
+conne-33
+Text Label 12850 12800 0    60   ~ 0
+conne-32
+Text Label 9950 19850 0    60   ~ 0
+c63[29..31]
+Text Label 9950 19050 0    60   ~ 0
+c62[26..28]
+Text Label 9950 18250 0    60   ~ 0
+c61[23..25]
+Text Label 9950 17450 0    60   ~ 0
+c60[20..22]
+Text Label 9950 16650 0    60   ~ 0
+c59[17..19]
+Text Label 9950 15850 0    60   ~ 0
+c58[14..16]
+Text Label 9950 15050 0    60   ~ 0
+c57[11..13]
+Text Label 9950 14250 0    60   ~ 0
+c56[8..10]
+Text Label 9950 13450 0    60   ~ 0
+c55[5..7]
+Text Label 9950 12650 0    60   ~ 0
+c54[2..4]
+Text Label 29750 20650 0    60   ~ 0
+c53[0..1]
+Text Label 10700 20400 0    60   ~ 0
+conne-31
+Text Label 10700 20200 0    60   ~ 0
+conne-30
+Text Label 10700 20000 0    60   ~ 0
+conne-29
+Text Label 10700 19600 0    60   ~ 0
+conne-28
+Text Label 10700 19400 0    60   ~ 0
+conne-27
+Text Label 10700 19200 0    60   ~ 0
+conne-26
+Text Label 10700 18800 0    60   ~ 0
+conne-25
+Text Label 10700 18600 0    60   ~ 0
+conne-24
+Text Label 10700 18400 0    60   ~ 0
+conne-23
+Text Label 10700 18000 0    60   ~ 0
+conne-22
+Text Label 10700 17800 0    60   ~ 0
+conne-21
+Text Label 10700 17600 0    60   ~ 0
+conne-20
+Text Label 10700 17200 0    60   ~ 0
+conne-19
+Text Label 10700 17000 0    60   ~ 0
+conne-18
+Text Label 10700 16800 0    60   ~ 0
+conne-17
+Text Label 10700 16400 0    60   ~ 0
+conne-16
+Text Label 10700 16200 0    60   ~ 0
+conne-15
+Text Label 10700 16000 0    60   ~ 0
+conne-14
+Text Label 10700 15600 0    60   ~ 0
+conne-13
+Text Label 10700 15400 0    60   ~ 0
+conne-12
+Text Label 10700 15200 0    60   ~ 0
+conne-11
+Text Label 10700 14800 0    60   ~ 0
+conne-10
+Text Label 10700 14600 0    60   ~ 0
+conne-9
+Text Label 10700 14400 0    60   ~ 0
+conne-8
+Text Label 10700 14000 0    60   ~ 0
+conne-7
+Text Label 10700 13800 0    60   ~ 0
+conne-6
+Text Label 10700 13600 0    60   ~ 0
+conne-5
+Text Label 10700 13200 0    60   ~ 0
+conne-4
+Text Label 10700 13000 0    60   ~ 0
+conne-3
+Text Label 24550 17200 0    60   ~ 0
+connd[0..36]
+Text Label 28800 17200 0    60   ~ 0
+connd[0..36]
+Text Label 28800 21400 0    60   ~ 0
+conne[0..36]
 Entry Bus Bus
 	29600 17550 29700 17650
 Entry Bus Bus
@@ -1381,42 +1761,6 @@ Entry Bus Bus
 	25300 18050 25400 18150
 Entry Bus Bus
 	25300 17550 25400 17650
-Entry Wire Line
-	14950 20300 15050 20400
-Entry Wire Line
-	14950 20100 15050 20200
-Entry Wire Line
-	14950 19900 15050 20000
-Entry Wire Line
-	14950 19500 15050 19600
-Entry Wire Line
-	14950 19300 15050 19400
-Entry Wire Line
-	14950 19100 15050 19200
-Entry Wire Line
-	14950 18700 15050 18800
-Entry Wire Line
-	14950 18500 15050 18600
-Entry Wire Line
-	14950 18300 15050 18400
-Entry Wire Line
-	14950 17900 15050 18000
-Entry Wire Line
-	14950 17700 15050 17800
-Entry Wire Line
-	14950 17500 15050 17600
-Entry Wire Line
-	14950 17100 15050 17200
-Entry Wire Line
-	14950 16900 15050 17000
-Entry Wire Line
-	14950 16700 15050 16800
-Entry Wire Line
-	14950 16300 15050 16400
-Entry Wire Line
-	14950 16100 15050 16200
-Entry Wire Line
-	14950 15900 15050 16000
 Entry Wire Line
 	14950 15500 15050 15600
 Entry Wire Line
@@ -1568,31 +1912,31 @@ conne-1
 Text Label 30500 20800 0    60   ~ 0
 conne-0
 Text Label 29750 20150 0    60   ~ 0
-c53[33.34]
+c52[33.34]
 Text Label 29750 19650 0    60   ~ 0
-c52[31..32]
+c51[31..32]
 Text Label 29750 19150 0    60   ~ 0
-c51[29..30]
+c50[29..30]
 Text Label 29750 18650 0    60   ~ 0
-c50[27..28]
+c49[27..28]
 Text Label 29750 18150 0    60   ~ 0
-c49[25..26]
+c48[25..26]
 Text Label 29750 17650 0    60   ~ 0
-c48[23..24]
+c47[23..24]
 Text Label 25450 20650 0    60   ~ 0
-c47[21..22]
+c46[21..22]
 Text Label 25450 20150 0    60   ~ 0
-c46[19..20]
+c45[19..20]
 Text Label 25450 19650 0    60   ~ 0
-c45[17..18]
+c44[17..18]
 Text Label 25450 19150 0    60   ~ 0
-c44[15..16]
+c43[15..16]
 Text Label 25450 18650 0    60   ~ 0
-c43[13..14]
+c42[13..14]
 Text Label 25450 18150 0    60   ~ 0
-c42[11..12]
+c41[11..12]
 Text Label 25450 17650 0    60   ~ 0
-c41[9..10]
+c40[9..10]
 Text Label 30500 20500 0    60   ~ 0
 connd-34
 Text Label 30500 20300 0    60   ~ 0
@@ -1702,25 +2046,25 @@ Entry Wire Line
 Entry Wire Line
 	30300 17700 30400 17800
 Text Label 29250 13400 0    60   ~ 0
-c40[6..8]
+c39[6..8]
 Text Label 29250 12200 0    60   ~ 0
-c39[3..5]
+c38[3..5]
 Text Label 29250 11000 0    60   ~ 0
-c38[0..2]
+c37[0..2]
 Text Label 29250 9800 0    60   ~ 0
-c37[33..35]
+c36[33..35]
 Text Label 29250 8600 0    60   ~ 0
-c36[30..32]
+c35[30..32]
 Text Label 29250 7400 0    60   ~ 0
-c35[27..29]
-Text Label 29250 6200 0    60   ~ 0
 c34[27..29]
+Text Label 29250 6200 0    60   ~ 0
+c33[27..29]
 Text Label 29250 5000 0    60   ~ 0
-c33[21..23]
+c32[21..23]
 Text Label 29250 3800 0    60   ~ 0
-c32[18..20]
+c31[18..20]
 Text Label 29250 2600 0    60   ~ 0
-c31[15..17]
+c30[15..17]
 Text Label 6950 8650 0    60   ~ 0
 connf-0
 Text Label 6950 8850 0    60   ~ 0
@@ -2130,15 +2474,15 @@ Entry Bus Bus
 Entry Bus Bus
 	29100 1300 29200 1400
 Text Label 29250 1400 0    60   ~ 0
-c30[12..14]
+c29[12..14]
 Text Label 26250 13400 0    60   ~ 0
-c29[9..11]
+c28[9..11]
 Text Label 26250 12200 0    60   ~ 0
-c28[6..8]
+c27[6..8]
 Text Label 26250 11000 0    60   ~ 0
-c27[3..5]
+c26[3..5]
 Text Label 26250 9800 0    60   ~ 0
-c26[0..2]
+c25[0..2]
 Entry Wire Line
 	29800 14000 29900 14100
 Entry Wire Line
@@ -2614,13 +2958,13 @@ Entry Wire Line
 Text Label 25350 800  0    60   ~ 0
 connb[0..36]
 Text Label 26250 8600 0    60   ~ 0
-c25[33..35]
+c24[33..35]
 Text Label 26250 7400 0    60   ~ 0
-c24[30..32]
+c23[30..32]
 Text Label 26250 6200 0    60   ~ 0
-c23[27..29]
+c22[27..29]
 Text Label 26250 5000 0    60   ~ 0
-c22[24..26]
+c21[24..26]
 Text Label 26250 3800 0    60   ~ 0
 c20[21..23]
 Text Label 26250 2600 0    60   ~ 0
@@ -3309,60 +3653,6 @@ P 16100 15350
 F 0 "VAC-SEN?" H 16100 15000 60  0000 C CNN
 F 1 "VACUM-RELAY" H 16100 15600 60  0000 C CNN
 	1    16100 15350
-	1    0    0    -1  
-$EndComp
-$Comp
-L VACUM-RELAY VAC-SEN?
-U 1 1 50519543
-P 16100 16150
-F 0 "VAC-SEN?" H 16100 15800 60  0000 C CNN
-F 1 "VACUM-RELAY" H 16100 16400 60  0000 C CNN
-	1    16100 16150
-	1    0    0    -1  
-$EndComp
-$Comp
-L VACUM-RELAY VAC-SEN?
-U 1 1 50519542
-P 16100 20150
-F 0 "VAC-SEN?" H 16100 19800 60  0000 C CNN
-F 1 "VACUM-RELAY" H 16100 20400 60  0000 C CNN
-	1    16100 20150
-	1    0    0    -1  
-$EndComp
-$Comp
-L VACUM-RELAY VAC-SEN?
-U 1 1 50519541
-P 16100 19350
-F 0 "VAC-SEN?" H 16100 19000 60  0000 C CNN
-F 1 "VACUM-RELAY" H 16100 19600 60  0000 C CNN
-	1    16100 19350
-	1    0    0    -1  
-$EndComp
-$Comp
-L VACUM-RELAY VAC-SEN?
-U 1 1 50519540
-P 16100 18550
-F 0 "VAC-SEN?" H 16100 18200 60  0000 C CNN
-F 1 "VACUM-RELAY" H 16100 18800 60  0000 C CNN
-	1    16100 18550
-	1    0    0    -1  
-$EndComp
-$Comp
-L VACUM-RELAY VAC-SEN?
-U 1 1 5051953F
-P 16100 17750
-F 0 "VAC-SEN?" H 16100 17400 60  0000 C CNN
-F 1 "VACUM-RELAY" H 16100 18000 60  0000 C CNN
-	1    16100 17750
-	1    0    0    -1  
-$EndComp
-$Comp
-L VACUM-RELAY VAC-SEN?
-U 1 1 5051953E
-P 16100 16950
-F 0 "VAC-SEN?" H 16100 16600 60  0000 C CNN
-F 1 "VACUM-RELAY" H 16100 17200 60  0000 C CNN
-	1    16100 16950
 	1    0    0    -1  
 $EndComp
 $Comp
