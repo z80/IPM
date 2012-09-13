@@ -1,6 +1,16 @@
-update=Fri 24 Aug 2012 06:39:00 AM MSK
+update=Mon 27 Aug 2012 04:40:37 PM MSK
 version=1
 last_client=eeschema
+[cvpcb]
+version=1
+NetITyp=0
+NetIExt=.net
+PkgIExt=.pkg
+NetDir=
+LibDir=
+NetType=0
+[cvpcb/libraries]
+EquName1=devcms
 [pcbnew]
 version=1
 PadDrlX=320
@@ -56,6 +66,7 @@ MaxLnkS=3
 ShowRat=0
 ShowMRa=1
 [pcbnew/libraries]
+LibDir=
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -66,23 +77,8 @@ LibName7=display
 LibName8=valves
 LibName9=led
 LibName10=dip_sockets
-LibName11=con-usb-2
-LibName12=con-usb-3
-LibName13=diode
-LibName14=IRFL024
-LibName15=lqfp48
-LibName16=micro-sd
-LibName17=my_foots
-LibName18=sdc
-LibName19=side-conns
-LibDir=../libs
 [general]
 version=1
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [eeschema]
 version=1
 LibDir=../libs
@@ -145,12 +141,6 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-LibName31=con-usb
-LibName32=con-usb-2
-LibName33=con-usb-3
-LibName34=mc34152
-LibName35=my_comps
-LibName36=ncp3063
-LibName37=sdc
-LibName38=stm
-LibName39=usb
+LibName31=usb
+LibName32=my_comps
+LibName33=con-usb
