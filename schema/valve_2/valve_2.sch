@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 15 Sep 2012 06:02:18 PM MSK
+EESchema Schematic File Version 2  date Sat 15 Sep 2012 08:32:19 PM MSK
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -3669,7 +3669,7 @@ L C C4
 U 1 1 50537D6B
 P 14950 3050
 F 0 "C4" H 15000 3150 50  0000 L CNN
-F 1 "4u7" H 15000 2950 50  0000 L CNN
+F 1 "10u" H 15000 2950 50  0000 L CNN
 	1    14950 3050
 	1    0    0    -1  
 $EndComp
