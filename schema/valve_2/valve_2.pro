@@ -1,6 +1,6 @@
-update=Sat 15 Sep 2012 06:07:01 PM MSK
+update=Sat 15 Sep 2012 11:42:13 PM MSK
 version=1
-last_client=cvpcb
+last_client=eeschema
 [pcbnew]
 version=1
 PadDrlX=320
@@ -78,6 +78,11 @@ LibName19=side-conns
 LibDir=../libs
 [general]
 version=1
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
 [eeschema]
 version=1
 LibDir=../libs
@@ -153,8 +158,3 @@ LibName40=stm
 LibName41=usb
 LibName42=74hc164
 LibName43=74hc165
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
