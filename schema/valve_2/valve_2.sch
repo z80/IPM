@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 15 Sep 2012 02:08:39 PM MSK
+EESchema Schematic File Version 2  date Sat 15 Sep 2012 04:44:36 PM MSK
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -57,54 +57,22 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Label 10700 21200 0    60   ~ 0
-in10
-Text Label 10800 21100 0    60   ~ 0
-24v
-Text Label 10700 21000 0    60   ~ 0
+Text Label 10700 22000 0    60   ~ 0
 gnd
-Text Label 10800 20900 0    60   ~ 0
-in9
-Text Label 10700 20800 0    60   ~ 0
+Text Label 10800 21900 0    60   ~ 0
+isock12
+Text Label 10700 21800 0    60   ~ 0
 gnd
-Text Label 10800 20700 0    60   ~ 0
+Text Label 10800 21700 0    60   ~ 0
 24v
-Text Label 10700 20600 0    60   ~ 0
-in8
-Text Label 10800 20500 0    60   ~ 0
+Text Label 10700 21600 0    60   ~ 0
+isock11
+Text Label 10800 21500 0    60   ~ 0
 24v
-Text Label 10700 20400 0    60   ~ 0
+Text Label 10700 21400 0    60   ~ 0
 gnd
-Text Label 10800 20300 0    60   ~ 0
-in7
-Text Label 10700 20200 0    60   ~ 0
-gnd
-Text Label 10800 20100 0    60   ~ 0
-24v
-Text Label 10700 20000 0    60   ~ 0
-in6
-Text Label 10800 19900 0    60   ~ 0
-24v
-Text Label 10700 19800 0    60   ~ 0
-gnd
-Text Label 10800 19700 0    60   ~ 0
-in5
-Text Label 10700 19600 0    60   ~ 0
-gnd
-Text Label 10800 19500 0    60   ~ 0
-24v
-Text Label 10700 19400 0    60   ~ 0
-in4
-Text Label 10800 19300 0    60   ~ 0
-24v
-Text Label 10700 19200 0    60   ~ 0
-gnd
-Text Label 10800 19100 0    60   ~ 0
-in3
-Text Label 10700 19000 0    60   ~ 0
-24v
-Text Label 9750 15200 1    60   ~ 0
-24v
+Text Label 10800 21300 0    60   ~ 0
+isock10
 Wire Wire Line
 	9750 14950 9750 15250
 Wire Wire Line
@@ -1434,6 +1402,54 @@ Wire Wire Line
 	11100 21800 10650 21800
 Wire Wire Line
 	11100 21900 10750 21900
+Text Label 10700 21200 0    60   ~ 0
+gnd
+Text Label 10800 21100 0    60   ~ 0
+24v
+Text Label 10700 21000 0    60   ~ 0
+isock9
+Text Label 10800 20900 0    60   ~ 0
+24v
+Text Label 10700 20800 0    60   ~ 0
+gnd
+Text Label 10800 20700 0    60   ~ 0
+isock8
+Text Label 10700 20600 0    60   ~ 0
+gnd
+Text Label 10800 20500 0    60   ~ 0
+24v
+Text Label 10700 20400 0    60   ~ 0
+isock7
+Text Label 10800 20300 0    60   ~ 0
+24v
+Text Label 10700 20200 0    60   ~ 0
+gnd
+Text Label 10800 20100 0    60   ~ 0
+isock6
+Text Label 10700 20000 0    60   ~ 0
+gnd
+Text Label 10800 19900 0    60   ~ 0
+24v
+Text Label 10700 19800 0    60   ~ 0
+isock5
+Text Label 10800 19700 0    60   ~ 0
+24v
+Text Label 10700 19600 0    60   ~ 0
+gnd
+Text Label 10800 19500 0    60   ~ 0
+sock25
+Text Label 10700 19400 0    60   ~ 0
+gnd
+Text Label 10800 19300 0    60   ~ 0
+sock24
+Text Label 10700 19200 0    60   ~ 0
+sock23
+Text Label 10800 19100 0    60   ~ 0
+sock22
+Text Label 10700 19000 0    60   ~ 0
+gnd
+Text Label 9750 15200 1    60   ~ 0
+24v
 $Comp
 L +24V #PWR?
 U 1 1 50545276
@@ -1444,85 +1460,85 @@ F 1 "+24V" H 9750 15050 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 10800 18900 0    60   ~ 0
-out25
+isock4
 Text Label 10700 18800 0    60   ~ 0
-gnd
+24v
 Text Label 10800 18700 0    60   ~ 0
-out24
+isock3
 Text Label 10700 18600 0    60   ~ 0
-out23
+24v
 Text Label 10800 18500 0    60   ~ 0
-out22
+isock2
 Text Label 10700 18400 0    60   ~ 0
-gnd
+24v
 Text Label 10700 17900 0    60   ~ 0
 24v
 Text Label 10800 17800 0    60   ~ 0
-in1
+isock1
 Text Label 10700 17700 0    60   ~ 0
 24v
 Text Label 10800 17600 0    60   ~ 0
-in0
+isock0
 Text Label 10700 17500 0    60   ~ 0
-out21
+sock21
 Text Label 10800 17400 0    60   ~ 0
-out20
+sock20
 Text Label 10700 17300 0    60   ~ 0
 gnd
 Text Label 10800 17200 0    60   ~ 0
-out19
+sock19
 Text Label 10700 17100 0    60   ~ 0
 gnd
 Text Label 10800 17000 0    60   ~ 0
-out18
+sock18
 Text Label 10700 16900 0    60   ~ 0
-out17
+sock17
 Text Label 10800 16800 0    60   ~ 0
-out16
+sock16
 Text Label 10700 16700 0    60   ~ 0
 gnd
 Text Label 10800 16600 0    60   ~ 0
-out15
+sock15
 Text Label 10700 16500 0    60   ~ 0
 gnd
 Text Label 10800 16400 0    60   ~ 0
-out14
+sock14
 Text Label 10700 16300 0    60   ~ 0
-out13
+sock13
 Text Label 10800 16200 0    60   ~ 0
-out12
+sock12
 Text Label 10700 16100 0    60   ~ 0
 gnd
 Text Label 10800 16000 0    60   ~ 0
-out11
+sock11
 Text Label 10700 15900 0    60   ~ 0
 gnd
 Text Label 10800 15800 0    60   ~ 0
-out10
+sock10
 Text Label 10700 15700 0    60   ~ 0
-out9
+sock9
 Text Label 10800 15600 0    60   ~ 0
-out8
+sock8
 Text Label 10700 15500 0    60   ~ 0
 gnd
 Text Label 10700 15300 0    60   ~ 0
 gnd
 Text Label 10800 15400 0    60   ~ 0
-out7
+sock7
 Text Label 10800 15200 0    60   ~ 0
-out6
+sock6
 Text Label 10700 14900 0    60   ~ 0
 gnd
 Text Label 10700 15100 0    60   ~ 0
-out5
+sock5
 Text Label 10800 15000 0    60   ~ 0
-out4
+sock4
 Text Label 10700 14700 0    60   ~ 0
 gnd
 Text Label 10800 14800 0    60   ~ 0
-out3
+sock3
 Text Label 10800 14600 0    60   ~ 0
-out2
+sock2
 Text Label 9750 14400 1    60   ~ 0
 gnd
 $Comp
@@ -1537,9 +1553,9 @@ $EndComp
 Text Label 10700 14300 0    60   ~ 0
 gnd
 Text Label 10700 14500 0    60   ~ 0
-out1
+sock1
 Text Label 10800 14400 0    60   ~ 0
-out0
+sock0
 $Comp
 L DB37 J?
 U 1 1 50544AD9
