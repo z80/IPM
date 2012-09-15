@@ -1,0 +1,6512 @@
+PCBNEW-BOARD Version 1 date Sat 15 Sep 2012 06:53:31 PM MSK
+
+# Created by Pcbnew(2012-01-19 BZR 3256)-stable
+
+$GENERAL
+encoding utf-8
+LayerCount 2
+Ly 1FFF8001
+EnabledLayers 13FF8001
+Links 356
+NoConn 356
+Di -2811 -2502 111962 77316
+Ndraw 70
+Ntrack 0
+Nzone 0
+BoardThickness 630
+Nmodule 85
+Nnets 127
+$EndGENERAL
+
+$SHEETDESCR
+Sheet A4 11700 8267
+Title ""
+Date "15 sep 2012"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndSHEETDESCR
+
+$SETUP
+InternalUnit 0.000100 INCH
+Layers 2
+Layer[0] Back signal
+Layer[15] Front signal
+TrackWidth 80
+TrackClearence 100
+ZoneClearence 200
+TrackMinWidth 80
+DrawSegmWidth 150
+EdgeSegmWidth 150
+ViaSize 350
+ViaDrill 250
+ViaMinSize 350
+ViaMinDrill 200
+MicroViaSize 200
+MicroViaDrill 50
+MicroViasAllowed 0
+MicroViaMinSize 200
+MicroViaMinDrill 50
+TextPcbWidth 120
+TextPcbSize 600 800
+EdgeModWidth 150
+TextModSize 600 600
+TextModWidth 120
+PadSize 600 600
+PadDrill 320
+Pad2MaskClearance 100
+AuxiliaryAxisOrg 0 0
+PcbPlotParams (pcbplotparams (layerselection 3178497) (usegerberextensions true) (excludeedgelayer true) (linewidth 60) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 2) (pscolor true) (psnegative false) (psa4output false) (plotreference true) (plotvalue true) (plotothertext true) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 1) (scaleselection 1) (outputdirectory ""))
+$EndSETUP
+
+$EQUIPOT
+Na 0 ""
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 1 "+24V"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 2 "+5V"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 3 "/VBus"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 4 "/addr0"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 5 "/addr1"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 6 "/addr2"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 7 "/fw-upgrade"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 8 "/in-scl"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 9 "/in-sda"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 10 "/in0"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 11 "/in1"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 12 "/in10"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 13 "/in11"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 14 "/in12"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 15 "/in2"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 16 "/in3"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 17 "/in4"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 18 "/in5"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 19 "/in6"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 20 "/in7"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 21 "/in8"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 22 "/in9"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 23 "/isock0"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 24 "/isock1"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 25 "/isock10"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 26 "/isock11"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 27 "/isock12"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 28 "/isock2"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 29 "/isock3"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 30 "/isock4"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 31 "/isock5"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 32 "/isock6"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 33 "/isock7"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 34 "/isock8"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 35 "/isock9"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 36 "/led1"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 37 "/led2"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 38 "/led3"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 39 "/out-en"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 40 "/out-scl"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 41 "/out-sda"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 42 "/out0"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 43 "/out1"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 44 "/out10"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 45 "/out11"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 46 "/out12"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 47 "/out13"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 48 "/out14"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 49 "/out15"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 50 "/out16"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 51 "/out17"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 52 "/out18"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 53 "/out19"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 54 "/out2"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 55 "/out20"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 56 "/out21"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 57 "/out22"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 58 "/out23"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 59 "/out24"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 60 "/out25"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 61 "/out26"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 62 "/out27"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 63 "/out3"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 64 "/out4"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 65 "/out5"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 66 "/out6"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 67 "/out7"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 68 "/out8"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 69 "/out9"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 70 "/rx"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 71 "/scl"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 72 "/sda"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 73 "/sock0"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 74 "/sock1"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 75 "/sock10"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 76 "/sock11"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 77 "/sock12"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 78 "/sock13"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 79 "/sock14"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 80 "/sock15"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 81 "/sock16"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 82 "/sock17"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 83 "/sock18"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 84 "/sock19"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 85 "/sock2"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 86 "/sock20"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 87 "/sock21"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 88 "/sock22"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 89 "/sock23"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 90 "/sock24"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 91 "/sock25"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 92 "/sock3"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 93 "/sock4"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 94 "/sock5"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 95 "/sock6"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 96 "/sock7"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 97 "/sock8"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 98 "/sock9"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 99 "/swd-clk"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 100 "/swd-io"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 101 "/synch"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 102 "/synch-ext"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 103 "/tx"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 104 "/usb-d+"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 105 "/usb-d-"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 106 "/~in-load"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 107 "/~in-scl-en"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 108 "/~out-rst"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 109 "GND"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 110 "N-000086"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 111 "N-000087"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 112 "N-000103"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 113 "N-000104"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 114 "N-000105"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 115 "N-000108"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 116 "N-000110"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 117 "N-000118"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 118 "N-000119"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 119 "N-000123"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 120 "N-000126"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 121 "N-000128"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 122 "N-000129"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 123 "N-000130"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 124 "N-000131"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 125 "N-000132"
+St ~
+$EndEQUIPOT
+$EQUIPOT
+Na 126 "VDD"
+St ~
+$EndEQUIPOT
+$NCLASS
+Name "Default"
+Desc "This is the default net class."
+Clearance 100
+TrackWidth 80
+ViaDia 350
+ViaDrill 250
+uViaDia 200
+uViaDrill 50
+AddNet ""
+AddNet "+24V"
+AddNet "+5V"
+AddNet "/VBus"
+AddNet "/addr0"
+AddNet "/addr1"
+AddNet "/addr2"
+AddNet "/fw-upgrade"
+AddNet "/in-scl"
+AddNet "/in-sda"
+AddNet "/in0"
+AddNet "/in1"
+AddNet "/in10"
+AddNet "/in11"
+AddNet "/in12"
+AddNet "/in2"
+AddNet "/in3"
+AddNet "/in4"
+AddNet "/in5"
+AddNet "/in6"
+AddNet "/in7"
+AddNet "/in8"
+AddNet "/in9"
+AddNet "/isock0"
+AddNet "/isock1"
+AddNet "/isock10"
+AddNet "/isock11"
+AddNet "/isock12"
+AddNet "/isock2"
+AddNet "/isock3"
+AddNet "/isock4"
+AddNet "/isock5"
+AddNet "/isock6"
+AddNet "/isock7"
+AddNet "/isock8"
+AddNet "/isock9"
+AddNet "/led1"
+AddNet "/led2"
+AddNet "/led3"
+AddNet "/out-en"
+AddNet "/out-scl"
+AddNet "/out-sda"
+AddNet "/out0"
+AddNet "/out1"
+AddNet "/out10"
+AddNet "/out11"
+AddNet "/out12"
+AddNet "/out13"
+AddNet "/out14"
+AddNet "/out15"
+AddNet "/out16"
+AddNet "/out17"
+AddNet "/out18"
+AddNet "/out19"
+AddNet "/out2"
+AddNet "/out20"
+AddNet "/out21"
+AddNet "/out22"
+AddNet "/out23"
+AddNet "/out24"
+AddNet "/out25"
+AddNet "/out26"
+AddNet "/out27"
+AddNet "/out3"
+AddNet "/out4"
+AddNet "/out5"
+AddNet "/out6"
+AddNet "/out7"
+AddNet "/out8"
+AddNet "/out9"
+AddNet "/rx"
+AddNet "/scl"
+AddNet "/sda"
+AddNet "/sock0"
+AddNet "/sock1"
+AddNet "/sock10"
+AddNet "/sock11"
+AddNet "/sock12"
+AddNet "/sock13"
+AddNet "/sock14"
+AddNet "/sock15"
+AddNet "/sock16"
+AddNet "/sock17"
+AddNet "/sock18"
+AddNet "/sock19"
+AddNet "/sock2"
+AddNet "/sock20"
+AddNet "/sock21"
+AddNet "/sock22"
+AddNet "/sock23"
+AddNet "/sock24"
+AddNet "/sock25"
+AddNet "/sock3"
+AddNet "/sock4"
+AddNet "/sock5"
+AddNet "/sock6"
+AddNet "/sock7"
+AddNet "/sock8"
+AddNet "/sock9"
+AddNet "/swd-clk"
+AddNet "/swd-io"
+AddNet "/synch"
+AddNet "/synch-ext"
+AddNet "/tx"
+AddNet "/usb-d+"
+AddNet "/usb-d-"
+AddNet "/~in-load"
+AddNet "/~in-scl-en"
+AddNet "/~out-rst"
+AddNet "GND"
+AddNet "N-000086"
+AddNet "N-000087"
+AddNet "N-000103"
+AddNet "N-000104"
+AddNet "N-000105"
+AddNet "N-000108"
+AddNet "N-000110"
+AddNet "N-000118"
+AddNet "N-000119"
+AddNet "N-000123"
+AddNet "N-000126"
+AddNet "N-000128"
+AddNet "N-000129"
+AddNet "N-000130"
+AddNet "N-000131"
+AddNet "N-000132"
+AddNet "VDD"
+$EndNCLASS
+$MODULE SO20L
+Po 0 0 0 15 42807090 50548C76 ~~
+Li SO20L
+Cd Cms SOJ 20 pins large
+Kw CMS SOJ
+Sc 50548C76
+AR /5054435A
+Op 0 0 0
+At SMD 
+T0 0 -500 600 600 0 50 N V 21 N "U13"
+T1 0 500 600 500 0 50 N V 21 N "L293"
+DS 2500 1450 2500 -1450 50 21
+DS -2500 -1450 -2500 1450 50 21
+DS 2500 1450 -2500 1450 50 21
+DS -2500 -1450 2500 -1450 50 21
+DS -2500 -250 -2000 -250 50 21
+DS -2000 -250 -2000 250 50 21
+DS -2000 250 -2500 250 50 21
+$PAD
+Sh "11" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 39 "/out-en"
+Po 2250 -1900
+$EndPAD
+$PAD
+Sh "12" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 57 "/out22"
+Po 1750 -1900
+$EndPAD
+$PAD
+Sh "13" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 88 "/sock22"
+Po 1250 -1900
+$EndPAD
+$PAD
+Sh "14" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 750 -1900
+$EndPAD
+$PAD
+Sh "15" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 250 -1900
+$EndPAD
+$PAD
+Sh "16" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -250 -1900
+$EndPAD
+$PAD
+Sh "17" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -750 -1900
+$EndPAD
+$PAD
+Sh "18" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 89 "/sock23"
+Po -1250 -1900
+$EndPAD
+$PAD
+Sh "19" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 58 "/out23"
+Po -1750 -1900
+$EndPAD
+$PAD
+Sh "20" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 1 "+24V"
+Po -2250 -1900
+$EndPAD
+$PAD
+Sh "1" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 39 "/out-en"
+Po -2250 1900
+$EndPAD
+$PAD
+Sh "2" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 55 "/out20"
+Po -1750 1900
+$EndPAD
+$PAD
+Sh "3" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 86 "/sock20"
+Po -1250 1900
+$EndPAD
+$PAD
+Sh "4" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -750 1900
+$EndPAD
+$PAD
+Sh "5" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -250 1900
+$EndPAD
+$PAD
+Sh "6" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 250 1900
+$EndPAD
+$PAD
+Sh "7" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 750 1900
+$EndPAD
+$PAD
+Sh "8" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 87 "/sock21"
+Po 1250 1900
+$EndPAD
+$PAD
+Sh "9" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 56 "/out21"
+Po 1750 1900
+$EndPAD
+$PAD
+Sh "10" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 2 "+5V"
+Po 2250 1900
+$EndPAD
+$SHAPE3D
+Na "smd/cms_so20.wrl"
+Sc 0.500000 0.600000 0.500000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SO20L
+$MODULE SO20L
+Po 0 0 0 15 42807090 50548C78 ~~
+Li SO20L
+Cd Cms SOJ 20 pins large
+Kw CMS SOJ
+Sc 50548C78
+AR /505440CF
+Op 0 0 0
+At SMD 
+T0 0 -500 600 600 0 50 N V 21 N "U12"
+T1 0 500 600 500 0 50 N V 21 N "L293"
+DS 2500 1450 2500 -1450 50 21
+DS -2500 -1450 -2500 1450 50 21
+DS 2500 1450 -2500 1450 50 21
+DS -2500 -1450 2500 -1450 50 21
+DS -2500 -250 -2000 -250 50 21
+DS -2000 -250 -2000 250 50 21
+DS -2000 250 -2500 250 50 21
+$PAD
+Sh "11" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 39 "/out-en"
+Po 2250 -1900
+$EndPAD
+$PAD
+Sh "12" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 44 "/out10"
+Po 1750 -1900
+$EndPAD
+$PAD
+Sh "13" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 75 "/sock10"
+Po 1250 -1900
+$EndPAD
+$PAD
+Sh "14" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 750 -1900
+$EndPAD
+$PAD
+Sh "15" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 250 -1900
+$EndPAD
+$PAD
+Sh "16" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -250 -1900
+$EndPAD
+$PAD
+Sh "17" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -750 -1900
+$EndPAD
+$PAD
+Sh "18" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 76 "/sock11"
+Po -1250 -1900
+$EndPAD
+$PAD
+Sh "19" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 45 "/out11"
+Po -1750 -1900
+$EndPAD
+$PAD
+Sh "20" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 1 "+24V"
+Po -2250 -1900
+$EndPAD
+$PAD
+Sh "1" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 39 "/out-en"
+Po -2250 1900
+$EndPAD
+$PAD
+Sh "2" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 68 "/out8"
+Po -1750 1900
+$EndPAD
+$PAD
+Sh "3" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 97 "/sock8"
+Po -1250 1900
+$EndPAD
+$PAD
+Sh "4" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -750 1900
+$EndPAD
+$PAD
+Sh "5" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -250 1900
+$EndPAD
+$PAD
+Sh "6" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 250 1900
+$EndPAD
+$PAD
+Sh "7" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 750 1900
+$EndPAD
+$PAD
+Sh "8" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 98 "/sock9"
+Po 1250 1900
+$EndPAD
+$PAD
+Sh "9" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 69 "/out9"
+Po 1750 1900
+$EndPAD
+$PAD
+Sh "10" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 2 "+5V"
+Po 2250 1900
+$EndPAD
+$SHAPE3D
+Na "smd/cms_so20.wrl"
+Sc 0.500000 0.600000 0.500000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SO20L
+$MODULE SO20L
+Po 0 0 0 15 42807090 50548C7A ~~
+Li SO20L
+Cd Cms SOJ 20 pins large
+Kw CMS SOJ
+Sc 50548C7A
+AR /5054435B
+Op 0 0 0
+At SMD 
+T0 0 -500 600 600 0 50 N V 21 N "U11"
+T1 0 500 600 500 0 50 N V 21 N "L293"
+DS 2500 1450 2500 -1450 50 21
+DS -2500 -1450 -2500 1450 50 21
+DS 2500 1450 -2500 1450 50 21
+DS -2500 -1450 2500 -1450 50 21
+DS -2500 -250 -2000 -250 50 21
+DS -2000 -250 -2000 250 50 21
+DS -2000 250 -2500 250 50 21
+$PAD
+Sh "11" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 39 "/out-en"
+Po 2250 -1900
+$EndPAD
+$PAD
+Sh "12" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 52 "/out18"
+Po 1750 -1900
+$EndPAD
+$PAD
+Sh "13" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 83 "/sock18"
+Po 1250 -1900
+$EndPAD
+$PAD
+Sh "14" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 750 -1900
+$EndPAD
+$PAD
+Sh "15" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 250 -1900
+$EndPAD
+$PAD
+Sh "16" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -250 -1900
+$EndPAD
+$PAD
+Sh "17" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -750 -1900
+$EndPAD
+$PAD
+Sh "18" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 84 "/sock19"
+Po -1250 -1900
+$EndPAD
+$PAD
+Sh "19" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 53 "/out19"
+Po -1750 -1900
+$EndPAD
+$PAD
+Sh "20" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 1 "+24V"
+Po -2250 -1900
+$EndPAD
+$PAD
+Sh "1" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 39 "/out-en"
+Po -2250 1900
+$EndPAD
+$PAD
+Sh "2" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 50 "/out16"
+Po -1750 1900
+$EndPAD
+$PAD
+Sh "3" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 81 "/sock16"
+Po -1250 1900
+$EndPAD
+$PAD
+Sh "4" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -750 1900
+$EndPAD
+$PAD
+Sh "5" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -250 1900
+$EndPAD
+$PAD
+Sh "6" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 250 1900
+$EndPAD
+$PAD
+Sh "7" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 750 1900
+$EndPAD
+$PAD
+Sh "8" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 82 "/sock17"
+Po 1250 1900
+$EndPAD
+$PAD
+Sh "9" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 51 "/out17"
+Po 1750 1900
+$EndPAD
+$PAD
+Sh "10" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 2 "+5V"
+Po 2250 1900
+$EndPAD
+$SHAPE3D
+Na "smd/cms_so20.wrl"
+Sc 0.500000 0.600000 0.500000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SO20L
+$MODULE SO20L
+Po 0 0 0 15 42807090 50548C7C ~~
+Li SO20L
+Cd Cms SOJ 20 pins large
+Kw CMS SOJ
+Sc 50548C7C
+AR /5054408F
+Op 0 0 0
+At SMD 
+T0 0 -500 600 600 0 50 N V 21 N "U10"
+T1 0 500 600 500 0 50 N V 21 N "L293"
+DS 2500 1450 2500 -1450 50 21
+DS -2500 -1450 -2500 1450 50 21
+DS 2500 1450 -2500 1450 50 21
+DS -2500 -1450 2500 -1450 50 21
+DS -2500 -250 -2000 -250 50 21
+DS -2000 -250 -2000 250 50 21
+DS -2000 250 -2500 250 50 21
+$PAD
+Sh "11" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 39 "/out-en"
+Po 2250 -1900
+$EndPAD
+$PAD
+Sh "12" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 66 "/out6"
+Po 1750 -1900
+$EndPAD
+$PAD
+Sh "13" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 95 "/sock6"
+Po 1250 -1900
+$EndPAD
+$PAD
+Sh "14" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 750 -1900
+$EndPAD
+$PAD
+Sh "15" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 250 -1900
+$EndPAD
+$PAD
+Sh "16" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -250 -1900
+$EndPAD
+$PAD
+Sh "17" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -750 -1900
+$EndPAD
+$PAD
+Sh "18" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 96 "/sock7"
+Po -1250 -1900
+$EndPAD
+$PAD
+Sh "19" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 67 "/out7"
+Po -1750 -1900
+$EndPAD
+$PAD
+Sh "20" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 1 "+24V"
+Po -2250 -1900
+$EndPAD
+$PAD
+Sh "1" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 39 "/out-en"
+Po -2250 1900
+$EndPAD
+$PAD
+Sh "2" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 64 "/out4"
+Po -1750 1900
+$EndPAD
+$PAD
+Sh "3" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 93 "/sock4"
+Po -1250 1900
+$EndPAD
+$PAD
+Sh "4" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -750 1900
+$EndPAD
+$PAD
+Sh "5" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -250 1900
+$EndPAD
+$PAD
+Sh "6" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 250 1900
+$EndPAD
+$PAD
+Sh "7" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 750 1900
+$EndPAD
+$PAD
+Sh "8" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 94 "/sock5"
+Po 1250 1900
+$EndPAD
+$PAD
+Sh "9" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 65 "/out5"
+Po 1750 1900
+$EndPAD
+$PAD
+Sh "10" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 2 "+5V"
+Po 2250 1900
+$EndPAD
+$SHAPE3D
+Na "smd/cms_so20.wrl"
+Sc 0.500000 0.600000 0.500000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SO20L
+$MODULE SO20L
+Po 0 0 0 15 42807090 50548C7E ~~
+Li SO20L
+Cd Cms SOJ 20 pins large
+Kw CMS SOJ
+Sc 50548C7E
+AR /505443E2
+Op 0 0 0
+At SMD 
+T0 0 -500 600 600 0 50 N V 21 N "U9"
+T1 0 500 600 500 0 50 N V 21 N "L293"
+DS 2500 1450 2500 -1450 50 21
+DS -2500 -1450 -2500 1450 50 21
+DS 2500 1450 -2500 1450 50 21
+DS -2500 -1450 2500 -1450 50 21
+DS -2500 -250 -2000 -250 50 21
+DS -2000 -250 -2000 250 50 21
+DS -2000 250 -2500 250 50 21
+$PAD
+Sh "11" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 39 "/out-en"
+Po 2250 -1900
+$EndPAD
+$PAD
+Sh "12" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 61 "/out26"
+Po 1750 -1900
+$EndPAD
+$PAD
+Sh "13" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1250 -1900
+$EndPAD
+$PAD
+Sh "14" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 750 -1900
+$EndPAD
+$PAD
+Sh "15" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 250 -1900
+$EndPAD
+$PAD
+Sh "16" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -250 -1900
+$EndPAD
+$PAD
+Sh "17" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -750 -1900
+$EndPAD
+$PAD
+Sh "18" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1250 -1900
+$EndPAD
+$PAD
+Sh "19" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 62 "/out27"
+Po -1750 -1900
+$EndPAD
+$PAD
+Sh "20" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 1 "+24V"
+Po -2250 -1900
+$EndPAD
+$PAD
+Sh "1" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 39 "/out-en"
+Po -2250 1900
+$EndPAD
+$PAD
+Sh "2" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 59 "/out24"
+Po -1750 1900
+$EndPAD
+$PAD
+Sh "3" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 90 "/sock24"
+Po -1250 1900
+$EndPAD
+$PAD
+Sh "4" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -750 1900
+$EndPAD
+$PAD
+Sh "5" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -250 1900
+$EndPAD
+$PAD
+Sh "6" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 250 1900
+$EndPAD
+$PAD
+Sh "7" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 750 1900
+$EndPAD
+$PAD
+Sh "8" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 91 "/sock25"
+Po 1250 1900
+$EndPAD
+$PAD
+Sh "9" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 60 "/out25"
+Po 1750 1900
+$EndPAD
+$PAD
+Sh "10" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 2 "+5V"
+Po 2250 1900
+$EndPAD
+$SHAPE3D
+Na "smd/cms_so20.wrl"
+Sc 0.500000 0.600000 0.500000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SO20L
+$MODULE SO20L
+Po 0 0 0 15 42807090 50548C80 ~~
+Li SO20L
+Cd Cms SOJ 20 pins large
+Kw CMS SOJ
+Sc 50548C80
+AR /50544364
+Op 0 0 0
+At SMD 
+T0 0 -500 600 600 0 50 N V 21 N "U8"
+T1 0 500 600 500 0 50 N V 21 N "L293"
+DS 2500 1450 2500 -1450 50 21
+DS -2500 -1450 -2500 1450 50 21
+DS 2500 1450 -2500 1450 50 21
+DS -2500 -1450 2500 -1450 50 21
+DS -2500 -250 -2000 -250 50 21
+DS -2000 -250 -2000 250 50 21
+DS -2000 250 -2500 250 50 21
+$PAD
+Sh "11" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 39 "/out-en"
+Po 2250 -1900
+$EndPAD
+$PAD
+Sh "12" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 48 "/out14"
+Po 1750 -1900
+$EndPAD
+$PAD
+Sh "13" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 79 "/sock14"
+Po 1250 -1900
+$EndPAD
+$PAD
+Sh "14" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 750 -1900
+$EndPAD
+$PAD
+Sh "15" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 250 -1900
+$EndPAD
+$PAD
+Sh "16" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -250 -1900
+$EndPAD
+$PAD
+Sh "17" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -750 -1900
+$EndPAD
+$PAD
+Sh "18" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 80 "/sock15"
+Po -1250 -1900
+$EndPAD
+$PAD
+Sh "19" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 49 "/out15"
+Po -1750 -1900
+$EndPAD
+$PAD
+Sh "20" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 1 "+24V"
+Po -2250 -1900
+$EndPAD
+$PAD
+Sh "1" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 39 "/out-en"
+Po -2250 1900
+$EndPAD
+$PAD
+Sh "2" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 46 "/out12"
+Po -1750 1900
+$EndPAD
+$PAD
+Sh "3" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 77 "/sock12"
+Po -1250 1900
+$EndPAD
+$PAD
+Sh "4" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -750 1900
+$EndPAD
+$PAD
+Sh "5" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -250 1900
+$EndPAD
+$PAD
+Sh "6" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 250 1900
+$EndPAD
+$PAD
+Sh "7" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 750 1900
+$EndPAD
+$PAD
+Sh "8" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 78 "/sock13"
+Po 1250 1900
+$EndPAD
+$PAD
+Sh "9" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 47 "/out13"
+Po 1750 1900
+$EndPAD
+$PAD
+Sh "10" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 2 "+5V"
+Po 2250 1900
+$EndPAD
+$SHAPE3D
+Na "smd/cms_so20.wrl"
+Sc 0.500000 0.600000 0.500000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SO20L
+$MODULE SO20L
+Po 0 0 0 15 42807090 50548C82 ~~
+Li SO20L
+Cd Cms SOJ 20 pins large
+Kw CMS SOJ
+Sc 50548C82
+AR /50539ABE
+Op 0 0 0
+At SMD 
+T0 0 -500 600 600 0 50 N V 21 N "U7"
+T1 0 500 600 500 0 50 N V 21 N "L293"
+DS 2500 1450 2500 -1450 50 21
+DS -2500 -1450 -2500 1450 50 21
+DS 2500 1450 -2500 1450 50 21
+DS -2500 -1450 2500 -1450 50 21
+DS -2500 -250 -2000 -250 50 21
+DS -2000 -250 -2000 250 50 21
+DS -2000 250 -2500 250 50 21
+$PAD
+Sh "11" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 39 "/out-en"
+Po 2250 -1900
+$EndPAD
+$PAD
+Sh "12" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 54 "/out2"
+Po 1750 -1900
+$EndPAD
+$PAD
+Sh "13" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 85 "/sock2"
+Po 1250 -1900
+$EndPAD
+$PAD
+Sh "14" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 750 -1900
+$EndPAD
+$PAD
+Sh "15" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 250 -1900
+$EndPAD
+$PAD
+Sh "16" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -250 -1900
+$EndPAD
+$PAD
+Sh "17" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -750 -1900
+$EndPAD
+$PAD
+Sh "18" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 92 "/sock3"
+Po -1250 -1900
+$EndPAD
+$PAD
+Sh "19" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 63 "/out3"
+Po -1750 -1900
+$EndPAD
+$PAD
+Sh "20" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 1 "+24V"
+Po -2250 -1900
+$EndPAD
+$PAD
+Sh "1" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 39 "/out-en"
+Po -2250 1900
+$EndPAD
+$PAD
+Sh "2" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 42 "/out0"
+Po -1750 1900
+$EndPAD
+$PAD
+Sh "3" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 73 "/sock0"
+Po -1250 1900
+$EndPAD
+$PAD
+Sh "4" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -750 1900
+$EndPAD
+$PAD
+Sh "5" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -250 1900
+$EndPAD
+$PAD
+Sh "6" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 250 1900
+$EndPAD
+$PAD
+Sh "7" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 750 1900
+$EndPAD
+$PAD
+Sh "8" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 74 "/sock1"
+Po 1250 1900
+$EndPAD
+$PAD
+Sh "9" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 43 "/out1"
+Po 1750 1900
+$EndPAD
+$PAD
+Sh "10" R 200 500 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 2 "+5V"
+Po 2250 1900
+$EndPAD
+$SHAPE3D
+Na "smd/cms_so20.wrl"
+Sc 0.500000 0.600000 0.500000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SO20L
+$MODULE SO16E
+Po 0 0 0 15 4280700D 50548C83 ~~
+Li SO16E
+Cd Module CMS SOJ 16 pins etroit
+Kw CMS SOJ
+Sc 50548C83
+AR /505393A6
+Op 0 0 0
+At SMD 
+T0 0 -300 400 450 0 50 N V 21 N "U1"
+T1 0 300 400 450 0 50 N V 21 N "74HC165"
+DS -2150 -700 2150 -700 80 21
+DS 2150 -700 2150 700 80 21
+DS 2150 700 -2150 700 80 21
+DS -2150 700 -2150 -700 80 21
+DS -2150 -200 -1850 -200 80 21
+DS -1850 -200 -1850 200 80 21
+DS -1850 200 -2150 200 80 21
+$PAD
+Sh "1" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 106 "/~in-load"
+Po -1750 1000
+$EndPAD
+$PAD
+Sh "2" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 8 "/in-scl"
+Po -1250 1000
+$EndPAD
+$PAD
+Sh "3" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 17 "/in4"
+Po -750 1000
+$EndPAD
+$PAD
+Sh "4" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 18 "/in5"
+Po -250 1000
+$EndPAD
+$PAD
+Sh "5" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 19 "/in6"
+Po 250 1000
+$EndPAD
+$PAD
+Sh "6" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "/in7"
+Po 750 1000
+$EndPAD
+$PAD
+Sh "7" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1250 1000
+$EndPAD
+$PAD
+Sh "8" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 1750 1000
+$EndPAD
+$PAD
+Sh "9" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 9 "/in-sda"
+Po 1750 -1000
+$EndPAD
+$PAD
+Sh "10" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 121 "N-000128"
+Po 1250 -1000
+$EndPAD
+$PAD
+Sh "11" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 10 "/in0"
+Po 750 -1000
+$EndPAD
+$PAD
+Sh "12" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 11 "/in1"
+Po 250 -1000
+$EndPAD
+$PAD
+Sh "13" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 15 "/in2"
+Po -250 -1000
+$EndPAD
+$PAD
+Sh "14" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 16 "/in3"
+Po -750 -1000
+$EndPAD
+$PAD
+Sh "15" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 107 "/~in-scl-en"
+Po -1250 -1000
+$EndPAD
+$PAD
+Sh "16" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -1750 -1000
+$EndPAD
+$SHAPE3D
+Na "smd/cms_so16.wrl"
+Sc 0.500000 0.300000 0.500000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SO16E
+$MODULE SO16E
+Po 0 0 0 15 4280700D 50548C85 ~~
+Li SO16E
+Cd Module CMS SOJ 16 pins etroit
+Kw CMS SOJ
+Sc 50548C85
+AR /5053966C
+Op 0 0 0
+At SMD 
+T0 0 -300 400 450 0 50 N V 21 N "U2"
+T1 0 300 400 450 0 50 N V 21 N "74HC165"
+DS -2150 -700 2150 -700 80 21
+DS 2150 -700 2150 700 80 21
+DS 2150 700 -2150 700 80 21
+DS -2150 700 -2150 -700 80 21
+DS -2150 -200 -1850 -200 80 21
+DS -1850 -200 -1850 200 80 21
+DS -1850 200 -2150 200 80 21
+$PAD
+Sh "1" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 106 "/~in-load"
+Po -1750 1000
+$EndPAD
+$PAD
+Sh "2" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 8 "/in-scl"
+Po -1250 1000
+$EndPAD
+$PAD
+Sh "3" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 14 "/in12"
+Po -750 1000
+$EndPAD
+$PAD
+Sh "4" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -250 1000
+$EndPAD
+$PAD
+Sh "5" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po 250 1000
+$EndPAD
+$PAD
+Sh "6" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po 750 1000
+$EndPAD
+$PAD
+Sh "7" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1250 1000
+$EndPAD
+$PAD
+Sh "8" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 1750 1000
+$EndPAD
+$PAD
+Sh "9" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 121 "N-000128"
+Po 1750 -1000
+$EndPAD
+$PAD
+Sh "10" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po 1250 -1000
+$EndPAD
+$PAD
+Sh "11" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 21 "/in8"
+Po 750 -1000
+$EndPAD
+$PAD
+Sh "12" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 22 "/in9"
+Po 250 -1000
+$EndPAD
+$PAD
+Sh "13" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 12 "/in10"
+Po -250 -1000
+$EndPAD
+$PAD
+Sh "14" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 13 "/in11"
+Po -750 -1000
+$EndPAD
+$PAD
+Sh "15" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 107 "/~in-scl-en"
+Po -1250 -1000
+$EndPAD
+$PAD
+Sh "16" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -1750 -1000
+$EndPAD
+$SHAPE3D
+Na "smd/cms_so16.wrl"
+Sc 0.500000 0.300000 0.500000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SO16E
+$MODULE SO14E
+Po 0 0 0 15 42806FBF 50548C86 ~~
+Li SO14E
+Cd module CMS SOJ 14 pins etroit
+Kw CMS SOJ
+Sc 50548C86
+AR /505399BC
+Op 0 0 0
+At SMD 
+T0 0 -300 400 450 0 50 N V 21 N "U3"
+T1 0 400 400 400 0 50 N V 21 N "74HC164"
+DS -1900 -700 1900 -700 80 21
+DS 1900 -700 1900 800 80 21
+DS 1900 800 -1900 800 80 21
+DS -1900 800 -1900 -700 80 21
+DS -1900 -200 -1600 -200 80 21
+DS -1600 -200 -1600 200 80 21
+DS -1600 200 -1900 200 80 21
+$PAD
+Sh "1" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -1500 1100
+$EndPAD
+$PAD
+Sh "2" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 58 "/out23"
+Po -1000 1100
+$EndPAD
+$PAD
+Sh "3" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 59 "/out24"
+Po -500 1100
+$EndPAD
+$PAD
+Sh "4" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 60 "/out25"
+Po 0 1100
+$EndPAD
+$PAD
+Sh "5" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 61 "/out26"
+Po 500 1100
+$EndPAD
+$PAD
+Sh "6" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 62 "/out27"
+Po 1000 1100
+$EndPAD
+$PAD
+Sh "7" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 1500 1100
+$EndPAD
+$PAD
+Sh "8" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 40 "/out-scl"
+Po 1500 -1000
+$EndPAD
+$PAD
+Sh "9" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 108 "/~out-rst"
+Po 1000 -1000
+$EndPAD
+$PAD
+Sh "10" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 500 -1000
+$EndPAD
+$PAD
+Sh "11" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 -1000
+$EndPAD
+$PAD
+Sh "12" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -500 -1000
+$EndPAD
+$PAD
+Sh "13" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1000 -1000
+$EndPAD
+$PAD
+Sh "14" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -1500 -1000
+$EndPAD
+$SHAPE3D
+Na "smd/cms_so14.wrl"
+Sc 0.500000 0.300000 0.500000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SO14E
+$MODULE SO14E
+Po 0 0 0 15 42806FBF 50548C88 ~~
+Li SO14E
+Cd module CMS SOJ 14 pins etroit
+Kw CMS SOJ
+Sc 50548C88
+AR /505399A0
+Op 0 0 0
+At SMD 
+T0 0 -300 400 450 0 50 N V 21 N "U4"
+T1 0 400 400 400 0 50 N V 21 N "74HC164"
+DS -1900 -700 1900 -700 80 21
+DS 1900 -700 1900 800 80 21
+DS 1900 800 -1900 800 80 21
+DS -1900 800 -1900 -700 80 21
+DS -1900 -200 -1600 -200 80 21
+DS -1600 -200 -1600 200 80 21
+DS -1600 200 -1900 200 80 21
+$PAD
+Sh "1" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -1500 1100
+$EndPAD
+$PAD
+Sh "2" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 49 "/out15"
+Po -1000 1100
+$EndPAD
+$PAD
+Sh "3" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 50 "/out16"
+Po -500 1100
+$EndPAD
+$PAD
+Sh "4" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 51 "/out17"
+Po 0 1100
+$EndPAD
+$PAD
+Sh "5" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 52 "/out18"
+Po 500 1100
+$EndPAD
+$PAD
+Sh "6" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 53 "/out19"
+Po 1000 1100
+$EndPAD
+$PAD
+Sh "7" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 1500 1100
+$EndPAD
+$PAD
+Sh "8" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 40 "/out-scl"
+Po 1500 -1000
+$EndPAD
+$PAD
+Sh "9" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 108 "/~out-rst"
+Po 1000 -1000
+$EndPAD
+$PAD
+Sh "10" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 55 "/out20"
+Po 500 -1000
+$EndPAD
+$PAD
+Sh "11" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 56 "/out21"
+Po 0 -1000
+$EndPAD
+$PAD
+Sh "12" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 57 "/out22"
+Po -500 -1000
+$EndPAD
+$PAD
+Sh "13" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 58 "/out23"
+Po -1000 -1000
+$EndPAD
+$PAD
+Sh "14" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -1500 -1000
+$EndPAD
+$SHAPE3D
+Na "smd/cms_so14.wrl"
+Sc 0.500000 0.300000 0.500000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SO14E
+$MODULE SO14E
+Po 0 0 0 15 42806FBF 50548C8A ~~
+Li SO14E
+Cd module CMS SOJ 14 pins etroit
+Kw CMS SOJ
+Sc 50548C8A
+AR /5053993F
+Op 0 0 0
+At SMD 
+T0 0 -300 400 450 0 50 N V 21 N "U5"
+T1 0 400 400 400 0 50 N V 21 N "74HC164"
+DS -1900 -700 1900 -700 80 21
+DS 1900 -700 1900 800 80 21
+DS 1900 800 -1900 800 80 21
+DS -1900 800 -1900 -700 80 21
+DS -1900 -200 -1600 -200 80 21
+DS -1600 -200 -1600 200 80 21
+DS -1600 200 -1900 200 80 21
+$PAD
+Sh "1" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -1500 1100
+$EndPAD
+$PAD
+Sh "2" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 67 "/out7"
+Po -1000 1100
+$EndPAD
+$PAD
+Sh "3" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 68 "/out8"
+Po -500 1100
+$EndPAD
+$PAD
+Sh "4" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 69 "/out9"
+Po 0 1100
+$EndPAD
+$PAD
+Sh "5" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 44 "/out10"
+Po 500 1100
+$EndPAD
+$PAD
+Sh "6" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 45 "/out11"
+Po 1000 1100
+$EndPAD
+$PAD
+Sh "7" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 1500 1100
+$EndPAD
+$PAD
+Sh "8" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 40 "/out-scl"
+Po 1500 -1000
+$EndPAD
+$PAD
+Sh "9" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 108 "/~out-rst"
+Po 1000 -1000
+$EndPAD
+$PAD
+Sh "10" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 46 "/out12"
+Po 500 -1000
+$EndPAD
+$PAD
+Sh "11" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 47 "/out13"
+Po 0 -1000
+$EndPAD
+$PAD
+Sh "12" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 48 "/out14"
+Po -500 -1000
+$EndPAD
+$PAD
+Sh "13" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 49 "/out15"
+Po -1000 -1000
+$EndPAD
+$PAD
+Sh "14" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -1500 -1000
+$EndPAD
+$SHAPE3D
+Na "smd/cms_so14.wrl"
+Sc 0.500000 0.300000 0.500000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SO14E
+$MODULE SO14E
+Po 0 0 0 15 42806FBF 50548C8C ~~
+Li SO14E
+Cd module CMS SOJ 14 pins etroit
+Kw CMS SOJ
+Sc 50548C8C
+AR /50539752
+Op 0 0 0
+At SMD 
+T0 0 -300 400 450 0 50 N V 21 N "U6"
+T1 0 400 400 400 0 50 N V 21 N "74HC164"
+DS -1900 -700 1900 -700 80 21
+DS 1900 -700 1900 800 80 21
+DS 1900 800 -1900 800 80 21
+DS -1900 800 -1900 -700 80 21
+DS -1900 -200 -1600 -200 80 21
+DS -1600 -200 -1600 200 80 21
+DS -1600 200 -1900 200 80 21
+$PAD
+Sh "1" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -1500 1100
+$EndPAD
+$PAD
+Sh "2" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 41 "/out-sda"
+Po -1000 1100
+$EndPAD
+$PAD
+Sh "3" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 42 "/out0"
+Po -500 1100
+$EndPAD
+$PAD
+Sh "4" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 43 "/out1"
+Po 0 1100
+$EndPAD
+$PAD
+Sh "5" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 54 "/out2"
+Po 500 1100
+$EndPAD
+$PAD
+Sh "6" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 63 "/out3"
+Po 1000 1100
+$EndPAD
+$PAD
+Sh "7" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 1500 1100
+$EndPAD
+$PAD
+Sh "8" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 40 "/out-scl"
+Po 1500 -1000
+$EndPAD
+$PAD
+Sh "9" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 108 "/~out-rst"
+Po 1000 -1000
+$EndPAD
+$PAD
+Sh "10" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 64 "/out4"
+Po 500 -1000
+$EndPAD
+$PAD
+Sh "11" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 65 "/out5"
+Po 0 -1000
+$EndPAD
+$PAD
+Sh "12" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 66 "/out6"
+Po -500 -1000
+$EndPAD
+$PAD
+Sh "13" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 67 "/out7"
+Po -1000 -1000
+$EndPAD
+$PAD
+Sh "14" R 200 450 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -1500 -1000
+$EndPAD
+$SHAPE3D
+Na "smd/cms_so14.wrl"
+Sc 0.500000 0.300000 0.500000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SO14E
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548C8D ~~
+Li SM0805
+Sc 50548C8D
+AR /50538025
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R37"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 5 "/addr1"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548C8F ~~
+Li SM0805
+Sc 50548C8F
+AR /50537FAA
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R36"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 6 "/addr2"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548C91 ~~
+Li SM0805
+Sc 50548C91
+AR /50537D93
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R35"
+T1 0 0 250 250 0 50 N I 21 N "50"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 123 "N-000130"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 118 "N-000119"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548C93 ~~
+Li SM0805
+Sc 50548C93
+AR /50537D61
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R34"
+T1 0 0 250 250 0 50 N I 21 N "500"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 38 "/led3"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 112 "N-000103"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548C95 ~~
+Li SM0805
+Sc 50548C95
+AR /50537D64
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R33"
+T1 0 0 250 250 0 50 N I 21 N "500"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 37 "/led2"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 113 "N-000104"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548C97 ~~
+Li SM0805
+Sc 50548C97
+AR /50537D67
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R32"
+T1 0 0 250 250 0 50 N I 21 N "500"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 36 "/led1"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 114 "N-000105"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548C99 ~~
+Li SM0805
+Sc 50548C99
+AR /5054482F
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R31"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 39 "/out-en"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548C9B ~~
+Li SM0805
+Sc 50548C9B
+AR /50544863
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R30"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 108 "/~out-rst"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548C9D ~~
+Li SM0805
+Sc 50548C9D
+AR /50537D71
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R29"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 119 "N-000123"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548C9F ~~
+Li SM0805
+Sc 50548C9F
+AR /505447A0
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R28"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 107 "/~in-scl-en"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CA1 ~~
+Li SM0805
+Sc 50548CA1
+AR /50544742
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R27"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 106 "/~in-load"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CA3 ~~
+Li SM0805
+Sc 50548CA3
+AR /50544666
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R26"
+T1 0 0 250 250 0 50 N I 21 N "1k5"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 14 "/in12"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CA5 ~~
+Li SM0805
+Sc 50548CA5
+AR /50544675
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R25"
+T1 0 0 250 250 0 50 N I 21 N "1k5"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 13 "/in11"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CA7 ~~
+Li SM0805
+Sc 50548CA7
+AR /50544672
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R24"
+T1 0 0 250 250 0 50 N I 21 N "1k5"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 12 "/in10"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CA9 ~~
+Li SM0805
+Sc 50548CA9
+AR /5053803B
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R38"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 4 "/addr0"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CAB ~~
+Li SM0805
+Sc 50548CAB
+AR /50537E03
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R39"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 7 "/fw-upgrade"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CAD ~~
+Li SM0805
+Sc 50548CAD
+AR /50537DDC
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R40"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 117 "N-000118"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CAF ~~
+Li SM0805
+Sc 50548CAF
+AR /505381C2
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R41"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 72 "/sda"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CB1 ~~
+Li SM0805
+Sc 50548CB1
+AR /505381D6
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R42"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 71 "/scl"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CB3 ~~
+Li SM0805
+Sc 50548CB3
+AR /50538579
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R43"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 101 "/synch"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CB5 ~~
+Li SM0805
+Sc 50548CB5
+AR /505382F7
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R44"
+T1 0 0 250 250 0 50 N I 21 N "100"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 102 "/synch-ext"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 101 "/synch"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CB7 ~~
+Li SM0805
+Sc 50548CB7
+AR /50538906
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R45"
+T1 0 0 250 250 0 50 N I 21 N "50"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 125 "N-000132"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 103 "/tx"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CB9 ~~
+Li SM0805
+Sc 50548CB9
+AR /50538858
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R46"
+T1 0 0 250 250 0 50 N I 21 N "50"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 120 "N-000126"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 70 "/rx"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CBB ~~
+Li SM0805
+Sc 50548CBB
+AR /50537D83
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R47"
+T1 0 0 250 250 0 50 N I 21 N "50"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 110 "N-000086"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 100 "/swd-io"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CBD ~~
+Li SM0805
+Sc 50548CBD
+AR /50537D84
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R48"
+T1 0 0 250 250 0 50 N I 21 N "50"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 111 "N-000087"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 99 "/swd-clk"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CBF ~~
+Li SM0805
+Sc 50548CBF
+AR /50537D82
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R49"
+T1 0 0 250 250 0 50 N I 21 N "1k5"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 124 "N-000131"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "/VBus"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CC1 ~~
+Li SM0805
+Sc 50548CC1
+AR /50537D80
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R50"
+T1 0 0 250 250 0 50 N I 21 N "22"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 105 "/usb-d-"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 115 "N-000108"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CC3 ~~
+Li SM0805
+Sc 50548CC3
+AR /50537D81
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R51"
+T1 0 0 250 250 0 50 N I 21 N "22"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 104 "/usb-d+"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 124 "N-000131"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CC5 ~~
+Li SM0805
+Sc 50548CC5
+AR /50537D7D
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R52"
+T1 0 0 250 250 0 50 N I 21 N "100k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 116 "N-000110"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CC7 ~~
+Li SM0805
+Sc 50548CC7
+AR /50537D97
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "C1"
+T1 0 0 250 250 0 50 N I 21 N "100n"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CC9 ~~
+Li SM0805
+Sc 50548CC9
+AR /50537D98
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "C2"
+T1 0 0 250 250 0 50 N I 21 N "100n"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CCB ~~
+Li SM0805
+Sc 50548CCB
+AR /50537D99
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "C3"
+T1 0 0 250 250 0 50 N I 21 N "100n"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CCD ~~
+Li SM0805
+Sc 50548CCD
+AR /50537D6B
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "C4"
+T1 0 0 250 250 0 50 N I 21 N "4u7"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CCF ~~
+Li SM0805
+Sc 50548CCF
+AR /50537D72
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "C5"
+T1 0 0 250 250 0 50 N I 21 N "100n"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 119 "N-000123"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CD1 ~~
+Li SM0805
+Sc 50548CD1
+AR /50537D75
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "C6"
+T1 0 0 250 250 0 50 N I 21 N "18p"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 122 "N-000129"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CD3 ~~
+Li SM0805
+Sc 50548CD3
+AR /50537D76
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "C7"
+T1 0 0 250 250 0 50 N I 21 N "18p"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 123 "N-000130"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CD5 ~~
+Li SM0805
+Sc 50548CD5
+AR /505385D9
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "C8"
+T1 0 0 250 250 0 50 N I 21 N "10u"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CD7 ~~
+Li SM0805
+Sc 50548CD7
+AR /505385F9
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "C9"
+T1 0 0 250 250 0 50 N I 21 N "10u"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 2 "+5V"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CD9 ~~
+Li SM0805
+Sc 50548CD9
+AR /505449FD
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "C10"
+T1 0 0 250 250 0 50 N I 21 N "10u"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 1 "+24V"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CDB ~~
+Li SM0805
+Sc 50548CDB
+AR /50544526
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R1"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 23 "/isock0"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 10 "/in0"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CDD ~~
+Li SM0805
+Sc 50548CDD
+AR /505445CD
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R2"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 24 "/isock1"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 11 "/in1"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CDF ~~
+Li SM0805
+Sc 50548CDF
+AR /505445E3
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R3"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 28 "/isock2"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 15 "/in2"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CE1 ~~
+Li SM0805
+Sc 50548CE1
+AR /505445DE
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R4"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 29 "/isock3"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 16 "/in3"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CE3 ~~
+Li SM0805
+Sc 50548CE3
+AR /5054460B
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R5"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 30 "/isock4"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 17 "/in4"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CE5 ~~
+Li SM0805
+Sc 50548CE5
+AR /50544606
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R6"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 31 "/isock5"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 18 "/in5"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CE7 ~~
+Li SM0805
+Sc 50548CE7
+AR /50544543
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R14"
+T1 0 0 250 250 0 50 N I 21 N "1k5"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 10 "/in0"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CE9 ~~
+Li SM0805
+Sc 50548CE9
+AR /505445CC
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R15"
+T1 0 0 250 250 0 50 N I 21 N "1k5"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 11 "/in1"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CEB ~~
+Li SM0805
+Sc 50548CEB
+AR /505445E2
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R16"
+T1 0 0 250 250 0 50 N I 21 N "1k5"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 15 "/in2"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CED ~~
+Li SM0805
+Sc 50548CED
+AR /505445DF
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R17"
+T1 0 0 250 250 0 50 N I 21 N "1k5"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 16 "/in3"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CEF ~~
+Li SM0805
+Sc 50548CEF
+AR /5054460A
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R18"
+T1 0 0 250 250 0 50 N I 21 N "1k5"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 17 "/in4"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CF1 ~~
+Li SM0805
+Sc 50548CF1
+AR /50544607
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R19"
+T1 0 0 250 250 0 50 N I 21 N "1k5"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 18 "/in5"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CF3 ~~
+Li SM0805
+Sc 50548CF3
+AR /50544601
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R20"
+T1 0 0 250 250 0 50 N I 21 N "1k5"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 19 "/in6"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CF5 ~~
+Li SM0805
+Sc 50548CF5
+AR /50544604
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R21"
+T1 0 0 250 250 0 50 N I 21 N "1k5"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "/in7"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CF7 ~~
+Li SM0805
+Sc 50548CF7
+AR /5054467B
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R22"
+T1 0 0 250 250 0 50 N I 21 N "1k5"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 21 "/in8"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CF9 ~~
+Li SM0805
+Sc 50548CF9
+AR /50544678
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R23"
+T1 0 0 250 250 0 50 N I 21 N "1k5"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 22 "/in9"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CFB ~~
+Li SM0805
+Sc 50548CFB
+AR /50544665
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R13"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 27 "/isock12"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 14 "/in12"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CFD ~~
+Li SM0805
+Sc 50548CFD
+AR /50544676
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R12"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 26 "/isock11"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 13 "/in11"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548CFF ~~
+Li SM0805
+Sc 50548CFF
+AR /50544671
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R11"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 25 "/isock10"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 12 "/in10"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548D01 ~~
+Li SM0805
+Sc 50548D01
+AR /50544677
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R10"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 35 "/isock9"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 22 "/in9"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548D03 ~~
+Li SM0805
+Sc 50548D03
+AR /5054467C
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R9"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 34 "/isock8"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 21 "/in8"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548D05 ~~
+Li SM0805
+Sc 50548D05
+AR /50544605
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R8"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 33 "/isock7"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 20 "/in7"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 0 0 0 15 42806E04 50548D07 ~~
+Li SM0805
+Sc 50548D07
+AR /50544600
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R7"
+T1 0 0 250 250 0 50 N I 21 N "10k"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 32 "/isock6"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 19 "/in6"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE Quarz
+Po 0 0 0 15 4F264DBC 50548D08 ~~
+Li Quarz
+Kw Quarz
+Sc 50548D08
+AR /50537D77
+Op 0 0 0
+T0 0 -374 206 206 0 39 N V 21 N "X1"
+T1 0 335 206 206 0 39 N V 21 N "8MHz"
+DS 1378 787 -1378 787 150 21
+DS -1358 -787 1378 -787 150 21
+DA -1376 0 -1376 -787 -900 150 21
+DA -1376 0 -2163 0 -900 150 21
+DA 1378 0 2165 0 900 150 21
+DA 1378 0 1378 -787 900 150 21
+$PAD
+Sh "1" O 394 600 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 123 "N-000130"
+Po -984 0
+$EndPAD
+$PAD
+Sh "2" O 394 600 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 122 "N-000129"
+Po 984 0
+$EndPAD
+$EndMODULE  Quarz
+$MODULE PIN_ARRAY_5x1
+Po 0 0 0 15 45976D86 50548D09 ~~
+Li PIN_ARRAY_5x1
+Cd Double rangee de contacts 2 x 5 pins
+Kw CONN
+Sc 50548D09
+AR /50537F2B
+Op 0 0 0
+T0 0 -1000 400 400 0 80 N V 21 N "P1"
+T1 0 1000 400 400 0 80 N I 21 N "SETUP"
+DS -2500 -500 -2500 500 120 21
+DS 2500 500 2500 -500 120 21
+DS -2500 -500 2500 -500 120 21
+DS 2500 500 -2500 500 120 21
+$PAD
+Sh "1" R 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 126 "VDD"
+Po -2000 0
+$EndPAD
+$PAD
+Sh "2" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 7 "/fw-upgrade"
+Po -1000 0
+$EndPAD
+$PAD
+Sh "3" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 6 "/addr2"
+Po 0 0
+$EndPAD
+$PAD
+Sh "4" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po 1000 0
+$EndPAD
+$PAD
+Sh "5" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 5 "/addr1"
+Po 2000 0
+$EndPAD
+$SHAPE3D
+Na "pin_array/pins_array_5x1.wrl"
+Sc 1.000000 1.000000 1.000000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  PIN_ARRAY_5x1
+$MODULE PIN_ARRAY_5x1
+Po 0 0 0 15 45976D86 50548D0B ~~
+Li PIN_ARRAY_5x1
+Cd Double rangee de contacts 2 x 5 pins
+Kw CONN
+Sc 50548D0B
+AR /5053887B
+Op 0 0 0
+T0 0 -1000 400 400 0 80 N V 21 N "P4"
+T1 0 1000 400 400 0 80 N I 21 N "SWD-IAP"
+DS -2500 -500 -2500 500 120 21
+DS 2500 500 2500 -500 120 21
+DS -2500 -500 2500 -500 120 21
+DS 2500 500 -2500 500 120 21
+$PAD
+Sh "1" R 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 125 "N-000132"
+Po -2000 0
+$EndPAD
+$PAD
+Sh "2" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 120 "N-000126"
+Po -1000 0
+$EndPAD
+$PAD
+Sh "3" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po 0 0
+$EndPAD
+$PAD
+Sh "4" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 110 "N-000086"
+Po 1000 0
+$EndPAD
+$PAD
+Sh "5" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 111 "N-000087"
+Po 2000 0
+$EndPAD
+$SHAPE3D
+Na "pin_array/pins_array_5x1.wrl"
+Sc 1.000000 1.000000 1.000000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  PIN_ARRAY_5x1
+$MODULE my-mini-usb-b
+Po 0 0 0 15 4F26799B 50548D0C ~~
+Li my-mini-usb-b
+Sc 50548D0C
+AR /50537D7C
+Op 0 0 0
+At SMD 
+T0 -2593 125 197 197 900 39 N V 21 N "U14"
+T1 0 0 197 197 0 39 N V 21 N "MINI-USB-B"
+DS -2244 -1515 -2244 1515 50 21
+DS -2244 -1515 1397 -1515 50 21
+DS 1397 -1515 1397 1515 50 21
+DS 1397 1515 -2244 1515 50 21
+DS -1718 -500 -468 -250 50 21
+DS -468 -250 -468 250 50 21
+DS -468 250 -1718 500 50 21
+DS -718 1250 -1718 1125 50 21
+DS -1718 1125 -1718 875 50 21
+DS -1718 875 -718 750 50 21
+DS -718 -1250 -1718 -1125 50 21
+DS -1718 -1125 -1718 -875 50 21
+DS -1718 -875 -718 -750 50 21
+DC 98 -885 186 -973 50 21
+DS -78 -885 275 -885 50 21
+DS 98 -708 98 -1062 50 21
+DC 98 885 186 973 50 21
+DS -78 885 275 885 50 21
+DS 98 1062 98 708 50 21
+$PAD
+Sh "3" R 984 196 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 124 "N-000131"
+Po 1082 0
+$EndPAD
+$PAD
+Sh "2" R 984 196 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 115 "N-000108"
+Po 1082 -314
+$EndPAD
+$PAD
+Sh "5" R 984 196 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 1082 629
+$EndPAD
+$PAD
+Sh "0" R 984 787 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -1082 1771
+$EndPAD
+$PAD
+Sh "0" R 984 787 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -1082 -1771
+$EndPAD
+$PAD
+Sh "0" R 984 787 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 1082 1732
+$EndPAD
+$PAD
+Sh "0" R 984 787 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 1082 -1771
+$EndPAD
+$PAD
+Sh "4" R 984 196 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 116 "N-000110"
+Po 1082 314
+$EndPAD
+$PAD
+Sh "1" R 984 196 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 3 "/VBus"
+Po 1082 -629
+$EndPAD
+$EndMODULE  my-mini-usb-b
+$MODULE LQFP48
+Po 0 0 0 15 4C433D64 50548D0D ~~
+Li LQFP48
+Sc 50548D0D
+AR /50537D6F
+Op 0 0 0
+At SMD 
+T0 0 -150 200 200 0 40 N V 25 N "stm1"
+T1 0 150 200 200 0 40 N I 25 N "STM32F102C8T6"
+DC -1574 -1574 -1574 -1653 39 21
+DS -1377 -1377 -1377 1377 39 21
+DS -1377 1377 1377 1377 39 21
+DS 1377 1377 1377 -1377 39 21
+DS 1377 -1377 -1377 -1377 39 21
+$PAD
+Sh "12" R 315 98 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 8 "/in-scl"
+Po -1613 1082
+$EndPAD
+$PAD
+Sh "11" R 315 99 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 107 "/~in-scl-en"
+Po -1613 885
+$EndPAD
+$PAD
+Sh "10" R 315 99 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 106 "/~in-load"
+Po -1613 688
+$EndPAD
+$PAD
+Sh "9" R 315 99 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -1613 491
+$EndPAD
+$PAD
+Sh "8" R 315 98 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -1613 295
+$EndPAD
+$PAD
+Sh "7" R 315 98 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 119 "N-000123"
+Po -1613 98
+$EndPAD
+$PAD
+Sh "6" R 315 98 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 118 "N-000119"
+Po -1613 -98
+$EndPAD
+$PAD
+Sh "5" R 315 98 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 122 "N-000129"
+Po -1613 -295
+$EndPAD
+$PAD
+Sh "4" R 315 99 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1613 -491
+$EndPAD
+$PAD
+Sh "3" R 315 99 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1613 -688
+$EndPAD
+$PAD
+Sh "2" R 315 99 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1613 -885
+$EndPAD
+$PAD
+Sh "1" R 315 98 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -1613 -1082
+$EndPAD
+$PAD
+Sh "48" R 98 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po -1082 -1613
+$EndPAD
+$PAD
+Sh "47" R 99 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po -885 -1613
+$EndPAD
+$PAD
+Sh "46" R 99 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 5 "/addr1"
+Po -688 -1613
+$EndPAD
+$PAD
+Sh "45" R 99 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 4 "/addr0"
+Po -491 -1613
+$EndPAD
+$PAD
+Sh "44" R 98 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 7 "/fw-upgrade"
+Po -295 -1613
+$EndPAD
+$PAD
+Sh "43" R 98 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 72 "/sda"
+Po -98 -1613
+$EndPAD
+$PAD
+Sh "42" R 98 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 71 "/scl"
+Po 98 -1613
+$EndPAD
+$PAD
+Sh "41" R 98 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 101 "/synch"
+Po 295 -1613
+$EndPAD
+$PAD
+Sh "40" R 99 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 38 "/led3"
+Po 491 -1613
+$EndPAD
+$PAD
+Sh "39" R 99 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 37 "/led2"
+Po 688 -1613
+$EndPAD
+$PAD
+Sh "38" R 99 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 36 "/led1"
+Po 885 -1613
+$EndPAD
+$PAD
+Sh "37" R 98 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 99 "/swd-clk"
+Po 1082 -1613
+$EndPAD
+$PAD
+Sh "25" R 315 98 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1613 1082
+$EndPAD
+$PAD
+Sh "26" R 315 99 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1613 885
+$EndPAD
+$PAD
+Sh "27" R 315 99 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1613 688
+$EndPAD
+$PAD
+Sh "28" R 315 99 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1613 491
+$EndPAD
+$PAD
+Sh "29" R 315 98 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1613 295
+$EndPAD
+$PAD
+Sh "30" R 315 98 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 103 "/tx"
+Po 1613 98
+$EndPAD
+$PAD
+Sh "31" R 315 98 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 70 "/rx"
+Po 1613 -98
+$EndPAD
+$PAD
+Sh "32" R 315 98 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 105 "/usb-d-"
+Po 1613 -295
+$EndPAD
+$PAD
+Sh "33" R 315 99 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 104 "/usb-d+"
+Po 1613 -491
+$EndPAD
+$PAD
+Sh "34" R 315 99 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 100 "/swd-io"
+Po 1613 -688
+$EndPAD
+$PAD
+Sh "35" R 315 99 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 1613 -885
+$EndPAD
+$PAD
+Sh "36" R 315 98 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po 1613 -1082
+$EndPAD
+$PAD
+Sh "13" R 98 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 9 "/in-sda"
+Po -1082 1613
+$EndPAD
+$PAD
+Sh "14" R 99 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 39 "/out-en"
+Po -885 1613
+$EndPAD
+$PAD
+Sh "15" R 99 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 108 "/~out-rst"
+Po -688 1613
+$EndPAD
+$PAD
+Sh "16" R 99 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 40 "/out-scl"
+Po -491 1613
+$EndPAD
+$PAD
+Sh "17" R 98 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 41 "/out-sda"
+Po -295 1613
+$EndPAD
+$PAD
+Sh "18" R 98 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -98 1613
+$EndPAD
+$PAD
+Sh "19" R 98 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 98 1613
+$EndPAD
+$PAD
+Sh "20" R 98 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 117 "N-000118"
+Po 295 1613
+$EndPAD
+$PAD
+Sh "21" R 99 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 6 "/addr2"
+Po 491 1613
+$EndPAD
+$PAD
+Sh "22" R 99 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 688 1613
+$EndPAD
+$PAD
+Sh "23" R 99 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 109 "GND"
+Po 885 1613
+$EndPAD
+$PAD
+Sh "24" R 98 315 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 126 "VDD"
+Po 1082 1613
+$EndPAD
+$EndMODULE  LQFP48
+$MODULE LED-5MM
+Po 0 0 0 15 49BFA269 50548D0E ~~
+Li LED-5MM
+Cd LED 5mm - Lead pitch 100mil (2,54mm)
+Kw LED led 5mm 5MM 100mil 2,54mm
+Sc 50548D0E
+AR /50537D68
+Op 0 0 0
+T0 0 -1500 300 300 0 35 N V 21 N "D1"
+T1 0 1500 300 300 0 35 N V 21 N "LED"
+DS 1120 750 1120 -750 80 21
+DC 100 0 -400 500 30 21
+DA 100 0 1100 750 2862 100 21
+DA 100 0 -350 0 900 60 21
+DA 100 0 550 0 900 60 21
+DA 100 0 -550 0 900 60 21
+DA 100 0 750 0 900 60 21
+DA 100 0 -750 0 900 60 21
+DA 100 0 950 0 900 60 21
+$PAD
+Sh "1" C 660 660 0 0 0
+Dr 320 0 0
+At STD N 00A8FFFF
+Ne 114 "N-000105"
+Po -500 0
+$EndPAD
+$PAD
+Sh "2" C 660 660 0 0 0
+Dr 320 0 0
+At STD N 00A8FFFF
+Ne 109 "GND"
+Po 500 0
+$EndPAD
+$SHAPE3D
+Na "discret/leds/led5_vertical_verde.wrl"
+Sc 1.000000 1.000000 1.000000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  LED-5MM
+$MODULE LED-5MM
+Po 0 0 0 15 49BFA269 50548D10 ~~
+Li LED-5MM
+Cd LED 5mm - Lead pitch 100mil (2,54mm)
+Kw LED led 5mm 5MM 100mil 2,54mm
+Sc 50548D10
+AR /50537D63
+Op 0 0 0
+T0 0 -1500 300 300 0 35 N V 21 N "D2"
+T1 0 1500 300 300 0 35 N V 21 N "LED"
+DS 1120 750 1120 -750 80 21
+DC 100 0 -400 500 30 21
+DA 100 0 1100 750 2862 100 21
+DA 100 0 -350 0 900 60 21
+DA 100 0 550 0 900 60 21
+DA 100 0 -550 0 900 60 21
+DA 100 0 750 0 900 60 21
+DA 100 0 -750 0 900 60 21
+DA 100 0 950 0 900 60 21
+$PAD
+Sh "1" C 660 660 0 0 0
+Dr 320 0 0
+At STD N 00A8FFFF
+Ne 113 "N-000104"
+Po -500 0
+$EndPAD
+$PAD
+Sh "2" C 660 660 0 0 0
+Dr 320 0 0
+At STD N 00A8FFFF
+Ne 109 "GND"
+Po 500 0
+$EndPAD
+$SHAPE3D
+Na "discret/leds/led5_vertical_verde.wrl"
+Sc 1.000000 1.000000 1.000000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  LED-5MM
+$MODULE LED-5MM
+Po 0 0 0 15 49BFA269 50548D12 ~~
+Li LED-5MM
+Cd LED 5mm - Lead pitch 100mil (2,54mm)
+Kw LED led 5mm 5MM 100mil 2,54mm
+Sc 50548D12
+AR /50537D62
+Op 0 0 0
+T0 0 -1500 300 300 0 35 N V 21 N "D3"
+T1 0 1500 300 300 0 35 N V 21 N "LED"
+DS 1120 750 1120 -750 80 21
+DC 100 0 -400 500 30 21
+DA 100 0 1100 750 2862 100 21
+DA 100 0 -350 0 900 60 21
+DA 100 0 550 0 900 60 21
+DA 100 0 -550 0 900 60 21
+DA 100 0 750 0 900 60 21
+DA 100 0 -750 0 900 60 21
+DA 100 0 950 0 900 60 21
+$PAD
+Sh "1" C 660 660 0 0 0
+Dr 320 0 0
+At STD N 00A8FFFF
+Ne 112 "N-000103"
+Po -500 0
+$EndPAD
+$PAD
+Sh "2" C 660 660 0 0 0
+Dr 320 0 0
+At STD N 00A8FFFF
+Ne 109 "GND"
+Po 500 0
+$EndPAD
+$SHAPE3D
+Na "discret/leds/led5_vertical_verde.wrl"
+Sc 1.000000 1.000000 1.000000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  LED-5MM
+$MODULE DB37FC
+Po 56693 22441 0 15 00200000 50548D13 ~~
+Li DB37FC
+Cd Connecteur DB37 femelle couche
+Kw CONN DB37
+Sc 50548D13
+AR /50544AB3
+Op 0 0 0
+T0 0 -2000 600 600 1800 120 N V 21 N "J1"
+T1 0 -3000 600 600 1800 120 N V 21 N "DB37"
+DS 13750 1250 -13750 1250 150 21
+DS -13750 1250 -13750 -4750 150 21
+DS -13750 -4750 13750 -4750 150 21
+DS 13750 -4750 13750 1250 150 21
+DS 10000 -4750 10000 -7500 150 21
+DS 10000 -7500 -10000 -7500 150 21
+DS -10000 -7500 -10000 -4750 150 21
+DS 10750 -4750 10750 1250 150 21
+DS -10750 -4750 -10750 1250 150 21
+$PAD
+Sh "1" R 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00F0FFFF
+Ne 109 "GND"
+Po -9810 560
+$EndPAD
+$PAD
+Sh "2" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 74 "/sock1"
+Po -8720 560
+$EndPAD
+$PAD
+Sh "3" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po -7630 560
+$EndPAD
+$PAD
+Sh "4" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po -6540 560
+$EndPAD
+$PAD
+Sh "5" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 94 "/sock5"
+Po -5450 560
+$EndPAD
+$PAD
+Sh "6" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po -4360 560
+$EndPAD
+$PAD
+Sh "7" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po -3270 560
+$EndPAD
+$PAD
+Sh "8" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 98 "/sock9"
+Po -2180 560
+$EndPAD
+$PAD
+Sh "9" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po -1090 560
+$EndPAD
+$PAD
+Sh "?" C 1500 1500 0 0 1800
+Dr 1200 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -12450 0
+$EndPAD
+$PAD
+Sh "?" C 1500 1500 0 0 1800
+Dr 1200 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 12550 0
+$EndPAD
+$PAD
+Sh "10" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po 0 560
+$EndPAD
+$PAD
+Sh "11" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 78 "/sock13"
+Po 1090 560
+$EndPAD
+$PAD
+Sh "12" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po 2180 560
+$EndPAD
+$PAD
+Sh "13" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po 3270 560
+$EndPAD
+$PAD
+Sh "14" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 82 "/sock17"
+Po 4360 560
+$EndPAD
+$PAD
+Sh "15" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po 5450 560
+$EndPAD
+$PAD
+Sh "16" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po 6540 560
+$EndPAD
+$PAD
+Sh "17" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 87 "/sock21"
+Po 7630 560
+$EndPAD
+$PAD
+Sh "18" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 1 "+24V"
+Po 8720 560
+$EndPAD
+$PAD
+Sh "19" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 1 "+24V"
+Po 9810 560
+$EndPAD
+$PAD
+Sh "20" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 73 "/sock0"
+Po -9270 -560
+$EndPAD
+$PAD
+Sh "21" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 85 "/sock2"
+Po -8180 -560
+$EndPAD
+$PAD
+Sh "22" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 92 "/sock3"
+Po -7090 -560
+$EndPAD
+$PAD
+Sh "23" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 93 "/sock4"
+Po -6000 -560
+$EndPAD
+$PAD
+Sh "24" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 95 "/sock6"
+Po -4910 -560
+$EndPAD
+$PAD
+Sh "25" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 96 "/sock7"
+Po -3820 -560
+$EndPAD
+$PAD
+Sh "26" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 97 "/sock8"
+Po -2730 -560
+$EndPAD
+$PAD
+Sh "27" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 75 "/sock10"
+Po -1640 -560
+$EndPAD
+$PAD
+Sh "28" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 76 "/sock11"
+Po -550 -560
+$EndPAD
+$PAD
+Sh "29" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 77 "/sock12"
+Po 540 -560
+$EndPAD
+$PAD
+Sh "30" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 79 "/sock14"
+Po 1630 -560
+$EndPAD
+$PAD
+Sh "31" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 80 "/sock15"
+Po 2720 -560
+$EndPAD
+$PAD
+Sh "32" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 81 "/sock16"
+Po 3810 -560
+$EndPAD
+$PAD
+Sh "33" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 83 "/sock18"
+Po 4900 -560
+$EndPAD
+$PAD
+Sh "34" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 84 "/sock19"
+Po 5990 -560
+$EndPAD
+$PAD
+Sh "35" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 86 "/sock20"
+Po 7080 -560
+$EndPAD
+$PAD
+Sh "36" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 23 "/isock0"
+Po 8170 -560
+$EndPAD
+$PAD
+Sh "37" C 600 600 0 0 1800
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 24 "/isock1"
+Po 9260 -560
+$EndPAD
+$SHAPE3D
+Na "conn_DBxx/db37_female_pin90deg.wrl"
+Sc 1.000000 1.000000 1.000000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  DB37FC
+$MODULE DB37FC
+Po 56693 59449 1800 15 00200000 50548D15 ~~
+Li DB37FC
+Cd Connecteur DB37 femelle couche
+Kw CONN DB37
+Sc 50548D15
+AR /50544AD9
+Op 0 0 0
+T0 0 -2000 600 600 3600 120 N V 21 N "J2"
+T1 0 -3000 600 600 3600 120 N V 21 N "DB37"
+DS 13750 1250 -13750 1250 150 21
+DS -13750 1250 -13750 -4750 150 21
+DS -13750 -4750 13750 -4750 150 21
+DS 13750 -4750 13750 1250 150 21
+DS 10000 -4750 10000 -7500 150 21
+DS 10000 -7500 -10000 -7500 150 21
+DS -10000 -7500 -10000 -4750 150 21
+DS 10750 -4750 10750 1250 150 21
+DS -10750 -4750 -10750 1250 150 21
+$PAD
+Sh "1" R 600 600 0 0 0
+Dr 400 0 0
+At STD N 00F0FFFF
+Ne 1 "+24V"
+Po -9810 560
+$EndPAD
+$PAD
+Sh "2" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 1 "+24V"
+Po -8720 560
+$EndPAD
+$PAD
+Sh "3" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 1 "+24V"
+Po -7630 560
+$EndPAD
+$PAD
+Sh "4" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po -6540 560
+$EndPAD
+$PAD
+Sh "5" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 89 "/sock23"
+Po -5450 560
+$EndPAD
+$PAD
+Sh "6" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po -4360 560
+$EndPAD
+$PAD
+Sh "7" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po -3270 560
+$EndPAD
+$PAD
+Sh "8" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 31 "/isock5"
+Po -2180 560
+$EndPAD
+$PAD
+Sh "9" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po -1090 560
+$EndPAD
+$PAD
+Sh "?" C 1500 1500 0 0 0
+Dr 1200 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -12450 0
+$EndPAD
+$PAD
+Sh "?" C 1500 1500 0 0 0
+Dr 1200 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 12550 0
+$EndPAD
+$PAD
+Sh "10" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po 0 560
+$EndPAD
+$PAD
+Sh "11" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 33 "/isock7"
+Po 1090 560
+$EndPAD
+$PAD
+Sh "12" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po 2180 560
+$EndPAD
+$PAD
+Sh "13" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po 3270 560
+$EndPAD
+$PAD
+Sh "14" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 35 "/isock9"
+Po 4360 560
+$EndPAD
+$PAD
+Sh "15" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po 5450 560
+$EndPAD
+$PAD
+Sh "16" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po 6540 560
+$EndPAD
+$PAD
+Sh "17" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 26 "/isock11"
+Po 7630 560
+$EndPAD
+$PAD
+Sh "18" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po 8720 560
+$EndPAD
+$PAD
+Sh "19" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 109 "GND"
+Po 9810 560
+$EndPAD
+$PAD
+Sh "20" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 28 "/isock2"
+Po -9270 -560
+$EndPAD
+$PAD
+Sh "21" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 29 "/isock3"
+Po -8180 -560
+$EndPAD
+$PAD
+Sh "22" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 30 "/isock4"
+Po -7090 -560
+$EndPAD
+$PAD
+Sh "23" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 88 "/sock22"
+Po -6000 -560
+$EndPAD
+$PAD
+Sh "24" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 90 "/sock24"
+Po -4910 -560
+$EndPAD
+$PAD
+Sh "25" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 91 "/sock25"
+Po -3820 -560
+$EndPAD
+$PAD
+Sh "26" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 1 "+24V"
+Po -2730 -560
+$EndPAD
+$PAD
+Sh "27" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 1 "+24V"
+Po -1640 -560
+$EndPAD
+$PAD
+Sh "28" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 32 "/isock6"
+Po -550 -560
+$EndPAD
+$PAD
+Sh "29" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 1 "+24V"
+Po 540 -560
+$EndPAD
+$PAD
+Sh "30" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 1 "+24V"
+Po 1630 -560
+$EndPAD
+$PAD
+Sh "31" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 34 "/isock8"
+Po 2720 -560
+$EndPAD
+$PAD
+Sh "32" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 1 "+24V"
+Po 3810 -560
+$EndPAD
+$PAD
+Sh "33" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 1 "+24V"
+Po 4900 -560
+$EndPAD
+$PAD
+Sh "34" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 25 "/isock10"
+Po 5990 -560
+$EndPAD
+$PAD
+Sh "35" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 1 "+24V"
+Po 7080 -560
+$EndPAD
+$PAD
+Sh "36" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 1 "+24V"
+Po 8170 -560
+$EndPAD
+$PAD
+Sh "37" C 600 600 0 0 0
+Dr 400 0 0
+At STD N 00E0FFFF
+Ne 27 "/isock12"
+Po 9260 -560
+$EndPAD
+$SHAPE3D
+Na "conn_DBxx/db37_female_pin90deg.wrl"
+Sc 1.000000 1.000000 1.000000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  DB37FC
+$DRAWSEGMENT
+Po 0 69685 62992 56693 62992 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 73228 59449 69685 62992 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 73228 55905 73228 59449 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 74409 54724 73228 55905 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 74803 54724 74409 54724 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 75591 54724 74803 54724 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 78740 51575 75591 54724 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 78740 30314 78740 51575 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 75591 27165 78740 30314 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 74409 27165 75591 27165 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 73228 25984 74409 27165 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 73228 22441 73228 25984 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 69685 18898 73228 22441 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 43700 18898 69685 18898 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 40157 22441 43700 18898 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 40157 25985 40157 22441 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 38976 27166 40157 25985 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 37795 27166 38976 27166 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 34646 30315 37795 27166 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 34646 51575 34646 30315 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 37795 54724 34646 51575 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 38976 54724 37795 54724 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 40158 55906 38976 54724 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 40158 59449 40158 55906 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 43701 62992 40158 59449 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 56693 62992 43701 62992 150
+De 28 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 74213 26772 73425 25984 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 39173 26772 39961 25984 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 39961 55906 39173 55118 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 73425 55906 74213 55118 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 3 37402 29921 37992 29921 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 3 37402 51969 37992 51969 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 3 75984 51969 76575 51969 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 3 75984 29921 76575 29921 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 38189 26772 34252 30709 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 38189 55118 34252 51181 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 75197 55118 79134 51181 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 75197 26772 79134 30709 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 3 37402 51969 38661 51969 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 3 37402 29921 38661 29921 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 3 75984 29921 77244 29921 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 3 75984 51969 77244 51969 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 74409 51969 77559 51969 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 74409 29921 77559 29921 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 35827 51969 38976 51969 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 35827 29921 38976 29921 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 37402 63386 37402 18504 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 75984 18504 75984 63386 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 73425 59449 69488 63386 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 39961 59449 43898 63386 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 73425 22441 69488 18504 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 39961 22441 43898 18504 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 39961 18504 39961 63386 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 73425 63386 73425 18504 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 34252 55118 79134 55118 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 34252 26772 79134 26772 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 79134 55118 85827 55118 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 79134 26772 85827 26772 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 34252 55118 25984 55118 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 34252 26772 25984 26772 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 73425 63386 73425 68110 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 39961 63386 39961 68110 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 39961 18504 39961 14567 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 73425 18504 73425 14567 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 34252 63386 34252 18504 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 79134 63386 34252 63386 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 79134 18504 79134 63386 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 34252 18504 79134 18504 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 5512 40945 111811 40945 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$DRAWSEGMENT
+Po 0 56693 5512 56693 77165 150
+De 24 0 900 0 0
+$EndDRAWSEGMENT
+$TRACK
+$EndTRACK
+$ZONE
+$EndZONE
+$EndBOARD
