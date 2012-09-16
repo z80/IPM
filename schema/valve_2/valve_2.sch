@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sun 16 Sep 2012 09:39:57 PM MSK
+EESchema Schematic File Version 2  date Sun 16 Sep 2012 10:22:23 PM MSK
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -545,7 +545,7 @@ Wire Wire Line
 Wire Wire Line
 	8000 8550 9100 8550
 Wire Wire Line
-	13700 8150 14800 8150
+	13700 11050 14800 11050
 Wire Wire Line
 	13700 9850 14350 9850
 Wire Wire Line
@@ -649,9 +649,9 @@ Wire Wire Line
 Wire Wire Line
 	13700 9650 14350 9650
 Wire Wire Line
-	13700 7950 14800 7950
+	13700 10850 14800 10850
 Wire Wire Line
-	13700 8350 14800 8350
+	13700 11250 14800 11250
 Wire Wire Line
 	8000 7850 9100 7850
 Wire Wire Line
@@ -2022,9 +2022,9 @@ NoConn ~ 13700 6150
 NoConn ~ 13700 8900
 NoConn ~ 13700 9100
 NoConn ~ 13700 11450
-NoConn ~ 13700 11250
-NoConn ~ 13700 11050
-NoConn ~ 13700 10850
+NoConn ~ 13700 8350
+NoConn ~ 13700 8150
+NoConn ~ 13700 7950
 NoConn ~ 13700 10650
 NoConn ~ 13700 10450
 NoConn ~ 13700 10250
@@ -4055,17 +4055,17 @@ F 1 "GND" H 2600 13230 30  0001 C CNN
 $EndComp
 Text Label 14100 9450 0    60   ~ 0
 synch
-Text Label 8050 8550 0    60   ~ 0
+Text Label 14750 4250 0    60   ~ 0
 addr2
 Text Label 8050 7850 0    60   ~ 0
 addr1
-Text Label 14700 4250 0    60   ~ 0
+Text Label 8050 8550 0    60   ~ 0
 addr0
-Text Label 14450 8350 0    60   ~ 0
+Text Label 14450 10850 0    60   ~ 0
 led3
-Text Label 14450 8150 0    60   ~ 0
+Text Label 14450 11050 0    60   ~ 0
 led2
-Text Label 14450 7950 0    60   ~ 0
+Text Label 14450 11250 0    60   ~ 0
 led1
 Text Label 14200 9850 0    60   ~ 0
 sda

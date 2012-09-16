@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  Sun 16 Sep 2012 09:40:03 PM MSK
+# EESchema Netlist Version 1.1 created  Sun 16 Sep 2012 10:22:29 PM MSK
 (
  ( /5055F431 $noname  R56 20k {Lib=R}
   (    1 N-000146 )
@@ -760,9 +760,9 @@
  )
  ( /50537D6F $noname  stm1 STM32F102C8T6 {Lib=STM32F102C8T6}
   (    1 VDD )
-  (    2 /addr0 )
+  (    2 /addr2 )
   (    3 /addr1 )
-  (    4 /addr2 )
+  (    4 /addr0 )
   (    5 N-000131 )
   (    6 N-000108 )
   (    7 N-000130 )
@@ -783,9 +783,9 @@
   (   22 ? )
   (   23 GND )
   (   24 VDD )
-  (   25 ? )
-  (   26 ? )
-  (   27 ? )
+  (   25 /led3 )
+  (   26 /led2 )
+  (   27 /led1 )
   (   28 ? )
   (   29 ? )
   (   30 /tx )
@@ -796,9 +796,9 @@
   (   35 GND )
   (   36 VDD )
   (   37 /swd-clk )
-  (   38 /led1 )
-  (   39 /led2 )
-  (   40 /led3 )
+  (   38 ? )
+  (   39 ? )
+  (   40 ? )
   (   41 /synch )
   (   42 /scl )
   (   43 /sda )
@@ -1421,22 +1421,22 @@ $endfootprintlist
 }
 { Pin List by Nets
 Net 1 "+5V" "+5V"
- U7 10
- C9 1
+ L2 2
  U12 10
+ R61 2
+ P3 10
+ P3 9
+ U9 10
+ C9 1
+ U8 10
  C20 1
  C19 1
  U13 10
- L2 2
- P3 10
- P3 9
- P2 10
- P2 9
- U8 10
- R61 2
  U10 10
- U9 10
+ U7 10
+ P2 10
  U11 10
+ P2 9
 Net 2 "/out15" "out15"
  U4 2
  U8 19
@@ -1445,20 +1445,20 @@ Net 3 "/sock15" "sock15"
  U8 18
  J1 31
 Net 4 "/out19" "out19"
- U4 6
  U11 19
+ U4 6
 Net 5 "/sock19" "sock19"
  J1 34
  U11 18
 Net 6 "/sock18" "sock18"
- U11 13
  J1 33
+ U11 13
 Net 7 "/out18" "out18"
- U11 12
  U4 5
+ U11 12
 Net 8 "/out17" "out17"
- U11 9
  U4 4
+ U11 9
 Net 9 "/sock17" "sock17"
  J1 14
  U11 8
@@ -1469,41 +1469,41 @@ Net 11 "/out16" "out16"
  U4 3
  U11 2
 Net 12 "/out24" "out24"
- U3 3
  U9 2
+ U3 3
 Net 13 "/sock24" "sock24"
  U9 3
  J2 24
 Net 14 "/isock0" "isock0"
- J1 36
  R1 1
+ J1 36
 Net 15 "/in0" "in0"
+ U1 11
  R1 2
  R14 1
- U1 11
 Net 16 "/sock14" "sock14"
  U8 13
  J1 30
 Net 17 "/out14" "out14"
- U8 12
  U5 12
+ U8 12
 Net 18 "/out-en" "out-en"
- U13 11
  U9 1
- U7 11
- U11 1
- U11 11
- U13 1
- U12 1
- R31 1
- U12 11
- U10 1
- U10 11
- U7 1
- stm1 14
  U8 11
+ R31 1
  U8 1
+ U12 1
  U9 11
+ U10 11
+ U10 1
+ U12 11
+ U13 1
+ U11 11
+ U7 11
+ U7 1
+ U13 11
+ U11 1
+ stm1 14
 Net 19 "/out13" "out13"
  U5 11
  U8 9
@@ -1514,8 +1514,8 @@ Net 21 "/sock12" "sock12"
  J1 29
  U8 3
 Net 22 "/out12" "out12"
- U5 10
  U8 2
+ U5 10
 Net 23 "/out27" "out27"
  U9 19
  U3 6
@@ -1526,20 +1526,20 @@ Net 25 "/out25" "out25"
  U9 9
  U3 4
 Net 26 "/sock25" "sock25"
- U9 8
  J2 25
+ U9 8
 Net 27 "/sock6" "sock6"
- U10 13
  J1 24
+ U10 13
 Net 28 "/sock5" "sock5"
- U10 8
  J1 5
+ U10 8
 Net 29 "/sock4" "sock4"
  U10 3
  J1 23
 Net 30 "/out6" "out6"
- U10 12
  U6 12
+ U10 12
 Net 31 "/out5" "out5"
  U10 9
  U6 11
@@ -1547,78 +1547,78 @@ Net 32 "/out4" "out4"
  U6 10
  U10 2
 Net 33 "/out7" "out7"
- U5 2
- U6 13
  U10 19
+ U6 13
+ U5 2
 Net 34 "/sock7" "sock7"
- J1 25
  U10 18
+ J1 25
 Net 35 "/out21" "out21"
- U4 11
  U13 9
+ U4 11
 Net 36 "/out20" "out20"
- U13 2
  U4 10
+ U13 2
 Net 37 "/out8" "out8"
  U12 2
  U5 3
 Net 38 "/out9" "out9"
- U12 9
  U5 4
+ U12 9
 Net 39 "/out10" "out10"
- U5 5
  U12 12
+ U5 5
 Net 40 "/out11" "out11"
- U5 6
  U12 19
+ U5 6
 Net 41 "/sock8" "sock8"
- J1 26
  U12 3
+ J1 26
 Net 42 "/sock9" "sock9"
- J1 8
  U12 8
+ J1 8
 Net 43 "/sock10" "sock10"
  U12 13
  J1 27
 Net 44 "/sock11" "sock11"
- J1 28
  U12 18
+ J1 28
 Net 45 "/sock23" "sock23"
- J2 5
  U13 18
+ J2 5
 Net 46 "/sock22" "sock22"
  J2 23
  U13 13
 Net 47 "/sock21" "sock21"
- J1 17
  U13 8
+ J1 17
 Net 48 "/sock20" "sock20"
  U13 3
  J1 35
 Net 49 "/out23" "out23"
- U13 19
- U3 2
  U4 13
+ U3 2
+ U13 19
 Net 50 "/out22" "out22"
- U4 12
  U13 12
+ U4 12
 Net 51 "/isock7" "isock7"
- R8 1
  J2 11
+ R8 1
 Net 52 "/isock5" "isock5"
- R6 1
  J2 8
+ R6 1
 Net 53 "/in5" "in5"
+ R19 1
  R6 2
  U1 4
- R19 1
 Net 54 "/isock4" "isock4"
- R5 1
  J2 22
+ R5 1
 Net 55 "/in12" "in12"
  U2 3
- R26 1
  R13 2
+ R26 1
 Net 56 "/isock1" "isock1"
  J1 37
  R2 1
@@ -1640,74 +1640,83 @@ Net 61 "/in6" "in6"
  R7 2
  R20 1
 Net 62 "/~in-load" "~in-load"
+ U1 1
  stm1 10
  U2 1
- U1 1
  R27 2
 Net 63 "/~out-rst" "~out-rst"
- U3 9
- R30 2
- U6 9
- U5 9
  U4 9
+ R30 2
  stm1 15
+ U6 9
+ U3 9
+ U5 9
 Net 64 "/isock10" "isock10"
  R11 1
  J2 34
 Net 65 "/in10" "in10"
- U2 13
  R11 2
  R24 1
+ U2 13
 Net 66 "/isock11" "isock11"
- J2 17
  R12 1
+ J2 17
 Net 67 "/isock9" "isock9"
  J2 14
  R10 1
 Net 68 "/in9" "in9"
- R23 1
  R10 2
+ R23 1
  U2 12
 Net 69 "/isock8" "isock8"
- J2 31
  R9 1
+ J2 31
 Net 70 "/fw-upgrade" "fw-upgrade"
+ stm1 44
  P1 2
  R39 1
- stm1 44
 Net 71 "/addr0" "addr0"
  P1 7
- stm1 2
  R38 2
+ stm1 4
 Net 72 "" ""
  R48 1
  P4 5
 Net 73 "" ""
- R40 1
  stm1 20
+ R40 1
+Net 76 "/led1" "led1"
+ stm1 27
+ R32 1
 Net 77 "/out-sda" "out-sda"
  stm1 17
  U6 2
+Net 79 "/led2" "led2"
+ stm1 26
+ R33 1
 Net 80 "/out-scl" "out-scl"
- U3 8
  U5 8
+ U3 8
  stm1 16
  U4 8
  U6 8
+Net 82 "/led3" "led3"
+ R34 1
+ stm1 25
 Net 83 "/sda" "sda"
- J3 5
- P2 1
- P3 1
  R41 2
+ P3 1
+ P2 1
  stm1 43
+ J3 5
 Net 84 "/in-sda" "in-sda"
  U1 9
  stm1 13
 Net 85 "/scl" "scl"
- R42 2
  P3 2
- J3 9
  stm1 42
+ R42 2
+ J3 9
  P2 2
 Net 87 "/in-scl" "in-scl"
  stm1 12
@@ -1720,24 +1729,15 @@ Net 88 "/synch" "synch"
 Net 89 "/rx" "rx"
  R46 2
  stm1 31
-Net 91 "/led3" "led3"
- stm1 40
- R34 1
 Net 92 "" ""
- R34 2
  D3 1
+ R34 2
 Net 93 "" ""
- D2 1
  R33 2
+ D2 1
 Net 94 "" ""
  D1 1
  R32 2
-Net 95 "/led2" "led2"
- R33 1
- stm1 39
-Net 98 "/led1" "led1"
- stm1 38
- R32 1
 Net 99 "/VBus" "VBus"
  U14 1
  R49 2
@@ -1751,14 +1751,14 @@ Net 102 "/usb-d-" "usb-d-"
  stm1 32
  R50 1
 Net 103 "/usb-d+" "usb-d+"
- R51 1
  stm1 33
+ R51 1
 Net 104 "/swd-io" "swd-io"
- stm1 34
  R47 2
+ stm1 34
 Net 105 "" ""
- P4 4
  R47 1
+ P4 4
 Net 106 "/swd-clk" "swd-clk"
  stm1 37
  R48 2
@@ -1769,9 +1769,9 @@ Net 108 "" ""
  R35 2
  stm1 6
 Net 109 "/addr2" "addr2"
+ stm1 2
  P1 3
  R36 2
- stm1 4
 Net 110 "/out3" "out3"
  U6 6
  U7 19
@@ -1782,8 +1782,8 @@ Net 112 "/sock2" "sock2"
  U7 13
  J1 21
 Net 113 "/out2" "out2"
- U7 12
  U6 5
+ U7 12
 Net 114 "/out1" "out1"
  U6 4
  U7 9
@@ -1791,77 +1791,77 @@ Net 115 "/sock1" "sock1"
  U7 8
  J1 2
 Net 116 "/sock0" "sock0"
- J1 20
  U7 3
+ J1 20
 Net 117 "/out0" "out0"
  U7 2
  U6 3
 Net 123 "/synch-ext" "synch-ext"
- J3 4
  P2 4
+ J3 4
  R44 1
  P3 4
 Net 124 "" ""
  P4 2
  R46 1
 Net 126 "" ""
- U1 10
  U2 9
+ U1 10
 Net 127 "" ""
- C7 2
  R35 1
+ C7 2
  X1 1
 Net 128 "" ""
- R49 1
- R51 2
  U14 3
+ R51 2
+ R49 1
 Net 129 "/addr1" "addr1"
  stm1 3
  P1 5
  R37 2
 Net 130 "" ""
  stm1 7
- R29 2
  C5 2
+ R29 2
 Net 131 "" ""
+ stm1 5
  X1 2
  C6 2
- stm1 5
 Net 132 "" ""
- R45 1
  P4 1
+ R45 1
 Net 133 "/in8" "in8"
- R22 1
- R9 2
  U2 11
+ R9 2
+ R22 1
 Net 134 "/in7" "in7"
+ R21 1
  R8 2
  U1 6
- R21 1
 Net 135 "/in4" "in4"
  U1 3
  R5 2
  R18 1
 Net 136 "/in11" "in11"
- U2 14
  R12 2
  R25 1
+ U2 14
 Net 137 "/in1" "in1"
  U1 12
  R15 1
  R2 2
 Net 138 "/in2" "in2"
- R3 2
- R16 1
  U1 13
+ R16 1
+ R3 2
 Net 139 "" ""
- L1 1
- U15 2
  D4 2
+ U15 2
+ L1 1
 Net 140 "VDD" "VDD"
- R56 2
- C15 1
  C14 1
+ C15 1
+ R56 2
  L1 2
  stm1 1
  stm1 9
