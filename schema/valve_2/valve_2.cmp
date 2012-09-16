@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Sat 15 Sep 2012 10:44:25 PM MSK
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Sun 16 Sep 2012 08:41:35 PM MSK
 
 BeginCmp
 TimeStamp = /50537D97;
@@ -71,6 +71,76 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
+TimeStamp = /5055F421;
+Reference = C11;
+ValeurCmp = 10u;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F420;
+Reference = C12;
+ValeurCmp = 100n;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F424;
+Reference = C13;
+ValeurCmp = 2.2n;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F42A;
+Reference = C14;
+ValeurCmp = 100n;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F42C;
+Reference = C15;
+ValeurCmp = 1m;
+IdModule  = C2V10;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F41A;
+Reference = C16;
+ValeurCmp = 10u;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F41B;
+Reference = C17;
+ValeurCmp = 100n;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F417;
+Reference = C18;
+ValeurCmp = 2.2n;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F411;
+Reference = C19;
+ValeurCmp = 100n;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F40F;
+Reference = C20;
+ValeurCmp = 1m;
+IdModule  = C2V10;
+EndCmp
+
+BeginCmp
 TimeStamp = /50537D68;
 Reference = D1;
 ValeurCmp = LED;
@@ -92,6 +162,20 @@ IdModule  = LED-5MM;
 EndCmp
 
 BeginCmp
+TimeStamp = /5055F428;
+Reference = D4;
+ValeurCmp = 1N5819;
+IdModule  = D3;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F413;
+Reference = D5;
+ValeurCmp = 1N5819;
+IdModule  = D3;
+EndCmp
+
+BeginCmp
 TimeStamp = /50544AB3;
 Reference = J1;
 ValeurCmp = DB37;
@@ -103,6 +187,27 @@ TimeStamp = /50544AD9;
 Reference = J2;
 ValeurCmp = DB37;
 IdModule  = DB37FC;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055EB7C;
+Reference = J3;
+ValeurCmp = DB9;
+IdModule  = DB9FC;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F427;
+Reference = L1;
+ValeurCmp = INDUCTOR;
+IdModule  = my_inductance;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F414;
+Reference = L2;
+ValeurCmp = INDUCTOR;
+IdModule  = my_inductance;
 EndCmp
 
 BeginCmp
@@ -498,6 +603,76 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
+TimeStamp = /5055F423;
+Reference = R53;
+ValeurCmp = 1R5;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F422;
+Reference = R54;
+ValeurCmp = 1R5;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F41F;
+Reference = R55;
+ValeurCmp = 1R5;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F431;
+Reference = R56;
+ValeurCmp = 20k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F42E;
+Reference = R57;
+ValeurCmp = 12k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F418;
+Reference = R58;
+ValeurCmp = 1R5;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F419;
+Reference = R59;
+ValeurCmp = 1R5;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F41C;
+Reference = R60;
+ValeurCmp = 1R5;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F40A;
+Reference = R61;
+ValeurCmp = 30k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F40D;
+Reference = R62;
+ValeurCmp = 10k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
 TimeStamp = /50537D6F;
 Reference = stm1;
 ValeurCmp = STM32F102C8T6;
@@ -603,10 +778,24 @@ IdModule  = my-mini-usb-b;
 EndCmp
 
 BeginCmp
+TimeStamp = /5055F41E;
+Reference = U15;
+ValeurCmp = NCP3063;
+IdModule  = SO8E;
+EndCmp
+
+BeginCmp
+TimeStamp = /5055F41D;
+Reference = U16;
+ValeurCmp = NCP3063;
+IdModule  = SO8E;
+EndCmp
+
+BeginCmp
 TimeStamp = /50537D77;
 Reference = X1;
 ValeurCmp = 8MHz;
-IdModule  = Quarz;
+IdModule  = C2;
 EndCmp
 
 EndListe

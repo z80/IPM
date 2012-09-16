@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  Sat 15 Sep 2012 10:44:25 PM MSK
+# EESchema Netlist Version 1.1 created  Sun 16 Sep 2012 08:41:35 PM MSK
 (
  ( /50537D97 SM0805 C1 100n
   ( 1 VDD )
@@ -18,15 +18,15 @@
  )
  ( /50537D72 SM0805 C5 100n
   ( 1 GND )
-  ( 2 N-000123 )
+  ( 2 N-000155 )
  )
  ( /50537D75 SM0805 C6 18p
   ( 1 GND )
-  ( 2 N-000129 )
+  ( 2 N-000110 )
  )
  ( /50537D76 SM0805 C7 18p
   ( 1 GND )
-  ( 2 N-000130 )
+  ( 2 N-000153 )
  )
  ( /505385D9 SM0805 C8 10u
   ( 1 VDD )
@@ -40,17 +40,65 @@
   ( 1 +24V )
   ( 2 GND )
  )
+ ( /5055F421 SM0805 C11 10u
+  ( 1 +24V )
+  ( 2 GND )
+ )
+ ( /5055F420 SM0805 C12 100n
+  ( 1 +24V )
+  ( 2 GND )
+ )
+ ( /5055F424 SM0805 C13 2.2n
+  ( 1 N-000134 )
+  ( 2 GND )
+ )
+ ( /5055F42A SM0805 C14 100n
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /5055F42C C2V10 C15 1m
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /5055F41A SM0805 C16 10u
+  ( 1 +24V )
+  ( 2 GND )
+ )
+ ( /5055F41B SM0805 C17 100n
+  ( 1 +24V )
+  ( 2 GND )
+ )
+ ( /5055F417 SM0805 C18 2.2n
+  ( 1 N-000138 )
+  ( 2 GND )
+ )
+ ( /5055F411 SM0805 C19 100n
+  ( 1 +5V )
+  ( 2 GND )
+ )
+ ( /5055F40F C2V10 C20 1m
+  ( 1 +5V )
+  ( 2 GND )
+ )
  ( /50537D68 LED-5MM D1 LED
-  ( 1 N-000105 )
+  ( 1 N-000092 )
   ( 2 GND )
  )
  ( /50537D63 LED-5MM D2 LED
-  ( 1 N-000104 )
+  ( 1 N-000091 )
   ( 2 GND )
  )
  ( /50537D62 LED-5MM D3 LED
-  ( 1 N-000103 )
+  ( 1 N-000090 )
   ( 2 GND )
+ )
+ ( /5055F428 D3 D4 1N5819
+  ( 1 GND )
+  ( 2 N-000142 )
+ )
+ ( /5055F413 D3 D5 1N5819
+  ( 1 GND )
+  ( 2 N-000131 )
  )
  ( /50544AB3 DB37FC J1 DB37
   ( 1 GND )
@@ -130,6 +178,25 @@
   ( 36 +24V )
   ( 37 /isock12 )
  )
+ ( /5055EB7C DB9FC J3 DB9
+  ( 1 +24V )
+  ( 2 +24V )
+  ( 3 GND )
+  ( 4 /synch-ext )
+  ( 5 /sda )
+  ( 6 +24V )
+  ( 7 GND )
+  ( 8 GND )
+  ( 9 /scl )
+ )
+ ( /5055F427 my_inductance L1 INDUCTOR
+  ( 1 N-000142 )
+  ( 2 VDD )
+ )
+ ( /5055F414 my_inductance L2 INDUCTOR
+  ( 1 N-000131 )
+  ( 2 +5V )
+ )
  ( /50537F2B PIN_ARRAY_8x1 P1 SETUP
   ( 1 VDD )
   ( 2 /fw-upgrade )
@@ -179,11 +246,11 @@
   ( 17 +24V )
  )
  ( /5053887B PIN_ARRAY_5x1 P4 SWD-IAP
-  ( 1 N-000132 )
+  ( 1 N-000127 )
   ( 2 N-000126 )
   ( 3 GND )
-  ( 4 N-000086 )
-  ( 5 N-000087 )
+  ( 4 N-000125 )
+  ( 5 N-000124 )
  )
  ( /50544526 SM0805 R1 10k
   ( 1 /isock0 )
@@ -299,7 +366,7 @@
  )
  ( /50537D71 SM0805 R29 10k
   ( 1 VDD )
-  ( 2 N-000123 )
+  ( 2 N-000155 )
  )
  ( /50544863 SM0805 R30 10k
   ( 1 VDD )
@@ -311,19 +378,19 @@
  )
  ( /50537D67 SM0805 R32 500
   ( 1 /led1 )
-  ( 2 N-000105 )
+  ( 2 N-000092 )
  )
  ( /50537D64 SM0805 R33 500
   ( 1 /led2 )
-  ( 2 N-000104 )
+  ( 2 N-000091 )
  )
  ( /50537D61 SM0805 R34 500
   ( 1 /led3 )
-  ( 2 N-000103 )
+  ( 2 N-000090 )
  )
  ( /50537D93 SM0805 R35 50
-  ( 1 N-000130 )
-  ( 2 N-000119 )
+  ( 1 N-000153 )
+  ( 2 N-000106 )
  )
  ( /50537FAA SM0805 R36 10k
   ( 1 VDD )
@@ -342,7 +409,7 @@
   ( 2 GND )
  )
  ( /50537DDC SM0805 R40 10k
-  ( 1 N-000118 )
+  ( 1 N-000073 )
   ( 2 GND )
  )
  ( /505381C2 SM0805 R41 10k
@@ -362,7 +429,7 @@
   ( 2 /synch )
  )
  ( /50538906 SM0805 R45 50
-  ( 1 N-000132 )
+  ( 1 N-000127 )
   ( 2 /tx )
  )
  ( /50538858 SM0805 R46 50
@@ -370,27 +437,67 @@
   ( 2 /rx )
  )
  ( /50537D83 SM0805 R47 50
-  ( 1 N-000086 )
+  ( 1 N-000125 )
   ( 2 /swd-io )
  )
  ( /50537D84 SM0805 R48 50
-  ( 1 N-000087 )
+  ( 1 N-000124 )
   ( 2 /swd-clk )
  )
  ( /50537D82 SM0805 R49 1k5
-  ( 1 N-000131 )
+  ( 1 N-000100 )
   ( 2 /VBus )
  )
  ( /50537D80 SM0805 R50 22
   ( 1 /usb-d- )
-  ( 2 N-000108 )
+  ( 2 N-000099 )
  )
  ( /50537D81 SM0805 R51 22
   ( 1 /usb-d+ )
-  ( 2 N-000131 )
+  ( 2 N-000100 )
  )
  ( /50537D7D SM0805 R52 100k
-  ( 1 N-000110 )
+  ( 1 N-000097 )
+  ( 2 GND )
+ )
+ ( /5055F423 SM0805 R53 1R5
+  ( 1 N-000140 )
+  ( 2 +24V )
+ )
+ ( /5055F422 SM0805 R54 1R5
+  ( 1 N-000140 )
+  ( 2 +24V )
+ )
+ ( /5055F41F SM0805 R55 1R5
+  ( 1 N-000140 )
+  ( 2 +24V )
+ )
+ ( /5055F431 SM0805 R56 20k
+  ( 1 N-000135 )
+  ( 2 VDD )
+ )
+ ( /5055F42E SM0805 R57 12k
+  ( 1 N-000135 )
+  ( 2 GND )
+ )
+ ( /5055F418 SM0805 R58 1R5
+  ( 1 N-000133 )
+  ( 2 +24V )
+ )
+ ( /5055F419 SM0805 R59 1R5
+  ( 1 N-000133 )
+  ( 2 +24V )
+ )
+ ( /5055F41C SM0805 R60 1R5
+  ( 1 N-000133 )
+  ( 2 +24V )
+ )
+ ( /5055F40A SM0805 R61 30k
+  ( 1 N-000137 )
+  ( 2 +5V )
+ )
+ ( /5055F40D SM0805 R62 10k
+  ( 1 N-000137 )
   ( 2 GND )
  )
  ( /50537D6F LQFP48 stm1 STM32F102C8T6
@@ -398,9 +505,9 @@
   ( 2 ? )
   ( 3 ? )
   ( 4 ? )
-  ( 5 N-000129 )
-  ( 6 N-000119 )
-  ( 7 N-000123 )
+  ( 5 N-000110 )
+  ( 6 N-000106 )
+  ( 7 N-000155 )
   ( 8 GND )
   ( 9 VDD )
   ( 10 /~in-load )
@@ -413,7 +520,7 @@
   ( 17 /out-sda )
   ( 18 ? )
   ( 19 ? )
-  ( 20 N-000118 )
+  ( 20 N-000073 )
   ( 21 /addr2 )
   ( 22 ? )
   ( 23 GND )
@@ -453,7 +560,7 @@
   ( 7 ? )
   ( 8 GND )
   ( 9 /in-sda )
-  ( 10 N-000128 )
+  ( 10 N-000129 )
   ( 11 /in0 )
   ( 12 /in1 )
   ( 13 /in2 )
@@ -470,7 +577,7 @@
   ( 6 VDD )
   ( 7 ? )
   ( 8 GND )
-  ( 9 N-000128 )
+  ( 9 N-000129 )
   ( 10 VDD )
   ( 11 /in8 )
   ( 12 /in9 )
@@ -700,14 +807,34 @@
  ( /50537D7C my-mini-usb-b U14 MINI-USB-B
   ( 0 GND )
   ( 1 /VBus )
-  ( 2 N-000108 )
-  ( 3 N-000131 )
-  ( 4 N-000110 )
+  ( 2 N-000099 )
+  ( 3 N-000100 )
+  ( 4 N-000097 )
   ( 5 GND )
  )
- ( /50537D77 Quarz X1 8MHz
-  ( 1 N-000130 )
-  ( 2 N-000129 )
+ ( /5055F41E SO8E U15 NCP3063
+  ( 1 N-000140 )
+  ( 2 N-000142 )
+  ( 3 N-000134 )
+  ( 4 GND )
+  ( 5 N-000135 )
+  ( 6 +24V )
+  ( 7 N-000140 )
+  ( 8 ? )
+ )
+ ( /5055F41D SO8E U16 NCP3063
+  ( 1 N-000133 )
+  ( 2 N-000131 )
+  ( 3 N-000138 )
+  ( 4 GND )
+  ( 5 N-000137 )
+  ( 6 +24V )
+  ( 7 N-000133 )
+  ( 8 ? )
+ )
+ ( /50537D77 C2 X1 8MHz
+  ( 1 N-000153 )
+  ( 2 N-000110 )
  )
 )
 *
@@ -762,6 +889,56 @@ $component C10
  C?
  C1-1
 $endlist
+$component C11
+ SM*
+ C?
+ C1-1
+$endlist
+$component C12
+ SM*
+ C?
+ C1-1
+$endlist
+$component C13
+ SM*
+ C?
+ C1-1
+$endlist
+$component C14
+ SM*
+ C?
+ C1-1
+$endlist
+$component C15
+ SM*
+ C?
+ C1-1
+$endlist
+$component C16
+ SM*
+ C?
+ C1-1
+$endlist
+$component C17
+ SM*
+ C?
+ C1-1
+$endlist
+$component C18
+ SM*
+ C?
+ C1-1
+$endlist
+$component C19
+ SM*
+ C?
+ C1-1
+$endlist
+$component C20
+ SM*
+ C?
+ C1-1
+$endlist
 $component D1
  LED-3MM
  LED-5MM
@@ -789,11 +966,22 @@ $component D3
  LED-1206
  LEDV
 $endlist
+$component D4
+ D?
+ S*
+$endlist
+$component D5
+ D?
+ S*
+$endlist
 $component J1
  DB37*
 $endlist
 $component J2
  DB37*
+$endlist
+$component J3
+ DB9*
 $endlist
 $component R1
  R?
@@ -1153,6 +1341,76 @@ $component R51
  SM1206
 $endlist
 $component R52
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R53
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R54
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R55
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R56
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R57
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R58
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R59
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R60
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R61
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R62
  R?
  SM0603
  SM0805
