@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Sun 16 Sep 2012 08:41:35 PM MSK
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Tue 18 Sep 2012 09:39:13 PM MSK
 
 BeginCmp
 TimeStamp = /50537D97;
@@ -67,7 +67,7 @@ BeginCmp
 TimeStamp = /505449FD;
 Reference = C10;
 ValeurCmp = 10u;
-IdModule  = SM0805;
+IdModule  = C2V8;
 EndCmp
 
 BeginCmp
@@ -78,9 +78,9 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /5055F420;
+TimeStamp = /5058B176;
 Reference = C12;
-ValeurCmp = 100n;
+ValeurCmp = 10u;
 IdModule  = SM0805;
 EndCmp
 
@@ -113,9 +113,9 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /5055F41B;
+TimeStamp = /5058B17A;
 Reference = C17;
-ValeurCmp = 100n;
+ValeurCmp = 10u;
 IdModule  = SM0805;
 EndCmp
 
@@ -138,6 +138,20 @@ TimeStamp = /5055F40F;
 Reference = C20;
 ValeurCmp = 1m;
 IdModule  = C2V10;
+EndCmp
+
+BeginCmp
+TimeStamp = /5058B136;
+Reference = C21;
+ValeurCmp = 10u;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5058B13A;
+Reference = C22;
+ValeurCmp = 10u;
+IdModule  = SM0805;
 EndCmp
 
 BeginCmp
@@ -197,6 +211,20 @@ IdModule  = DB9FC;
 EndCmp
 
 BeginCmp
+TimeStamp = /5058A7F9;
+Reference = K1;
+ValeurCmp = i2c-1;
+IdModule  = PIN_ARRAY_3X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /5058A8D2;
+Reference = K2;
+ValeurCmp = i2c-2;
+IdModule  = PIN_ARRAY_3X1;
+EndCmp
+
+BeginCmp
 TimeStamp = /5055F427;
 Reference = L1;
 ValeurCmp = INDUCTOR;
@@ -218,17 +246,17 @@ IdModule  = PIN_ARRAY_8x1;
 EndCmp
 
 BeginCmp
-TimeStamp = /50538459;
+TimeStamp = /5058A79B;
 Reference = P2;
-ValeurCmp = CROSS-BRD-1;
-IdModule  = PIN_ARRAY_17x1;
+ValeurCmp = power-1;
+IdModule  = PIN_ARRAY_12x1;
 EndCmp
 
 BeginCmp
-TimeStamp = /5053853A;
+TimeStamp = /5058A90F;
 Reference = P3;
-ValeurCmp = CROSS-BRD-2;
-IdModule  = PIN_ARRAY_17x1;
+ValeurCmp = power-2;
+IdModule  = PIN_ARRAY_12x1;
 EndCmp
 
 BeginCmp
@@ -669,6 +697,20 @@ BeginCmp
 TimeStamp = /5055F40D;
 Reference = R62;
 ValeurCmp = 10k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5058A81E;
+Reference = R63;
+ValeurCmp = 100;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5058A838;
+Reference = R64;
+ValeurCmp = 100;
 IdModule  = SM0805;
 EndCmp
 
