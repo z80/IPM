@@ -1,20 +1,20 @@
-# EESchema Netlist Version 1.1 created  Tue 18 Sep 2012 10:32:21 PM MSK
+# EESchema Netlist Version 1.1 created  Wed 19 Sep 2012 12:02:11 AM MSK
 (
  ( /5058B17A $noname  C17 10u {Lib=C}
-  (    1 N-000147 )
+  (    1 N-000136 )
   (    2 GND )
  )
  ( /5058B176 $noname  C12 10u {Lib=C}
-  (    1 N-000138 )
-  (    2 N-000147 )
+  (    1 N-000143 )
+  (    2 N-000136 )
  )
  ( /5058B13A $noname  C22 10u {Lib=C}
-  (    1 N-000146 )
+  (    1 N-000135 )
   (    2 GND )
  )
  ( /5058B136 $noname  C21 10u {Lib=C}
-  (    1 N-000137 )
-  (    2 N-000146 )
+  (    1 N-000142 )
+  (    2 N-000135 )
  )
  ( /5058A90F $noname  P3 power-2 {Lib=CONN_12}
   (    1 VDD )
@@ -63,11 +63,11 @@
   (   12 +24V )
  )
  ( /5055F431 $noname  R56 20k {Lib=R}
-  (    1 N-000148 )
+  (    1 N-000134 )
   (    2 VDD )
  )
  ( /5055F42E $noname  R57 12k {Lib=R}
-  (    1 N-000148 )
+  (    1 N-000134 )
   (    2 GND )
  )
  ( /5055F42C $noname  C15 1m {Lib=C}
@@ -80,79 +80,79 @@
  )
  ( /5055F428 $noname  D4 1N5819 {Lib=DIODESCH}
   (    1 GND )
-  (    2 N-000145 )
+  (    2 N-000138 )
  )
  ( /5055F427 $noname  L1 INDUCTOR {Lib=INDUCTOR}
-  (    1 N-000145 )
+  (    1 N-000138 )
   (    2 VDD )
  )
  ( /5055F424 $noname  C13 2.2n {Lib=C}
-  (    1 N-000149 )
+  (    1 N-000133 )
   (    2 GND )
  )
  ( /5055F423 $noname  R53 1R5 {Lib=R}
-  (    1 N-000150 )
+  (    1 N-000139 )
   (    2 +24V )
  )
  ( /5055F422 $noname  R54 1R5 {Lib=R}
-  (    1 N-000150 )
+  (    1 N-000139 )
   (    2 +24V )
  )
  ( /5055F421 $noname  C11 10u {Lib=C}
   (    1 +24V )
-  (    2 N-000138 )
+  (    2 N-000143 )
  )
  ( /5055F41F $noname  R55 1R5 {Lib=R}
-  (    1 N-000150 )
+  (    1 N-000139 )
   (    2 +24V )
  )
  ( /5055F41E $noname  U15 NCP3063 {Lib=NCP3063}
-  (    1 N-000150 )
-  (    2 N-000145 )
-  (    3 N-000149 )
+  (    1 N-000139 )
+  (    2 N-000138 )
+  (    3 N-000133 )
   (    4 GND )
-  (    5 N-000148 )
+  (    5 N-000134 )
   (    6 +24V )
-  (    7 N-000150 )
+  (    7 N-000139 )
   (    8 ? )
  )
  ( /5055F41D $noname  U16 NCP3063 {Lib=NCP3063}
-  (    1 N-000157 )
-  (    2 N-000161 )
-  (    3 N-000156 )
+  (    1 N-000131 )
+  (    2 N-000132 )
+  (    3 N-000130 )
   (    4 GND )
-  (    5 N-000151 )
+  (    5 N-000137 )
   (    6 +24V )
-  (    7 N-000157 )
+  (    7 N-000131 )
   (    8 ? )
  )
  ( /5055F41C $noname  R60 1R5 {Lib=R}
-  (    1 N-000157 )
+  (    1 N-000131 )
   (    2 +24V )
  )
  ( /5055F41A $noname  C16 10u {Lib=C}
   (    1 +24V )
-  (    2 N-000137 )
+  (    2 N-000142 )
  )
  ( /5055F419 $noname  R59 1R5 {Lib=R}
-  (    1 N-000157 )
+  (    1 N-000131 )
   (    2 +24V )
  )
  ( /5055F418 $noname  R58 1R5 {Lib=R}
-  (    1 N-000157 )
+  (    1 N-000131 )
   (    2 +24V )
  )
  ( /5055F417 $noname  C18 2.2n {Lib=C}
-  (    1 N-000156 )
+  (    1 N-000130 )
   (    2 GND )
  )
  ( /5055F414 $noname  L2 INDUCTOR {Lib=INDUCTOR}
-  (    1 N-000161 )
+  (    1 N-000132 )
   (    2 +5V )
  )
  ( /5055F413 $noname  D5 1N5819 {Lib=DIODESCH}
   (    1 GND )
-  (    2 N-000161 )
+  (    2 N-000132 )
  )
  ( /5055F411 $noname  C19 100n {Lib=C}
   (    1 +5V )
@@ -163,11 +163,11 @@
   (    2 GND )
  )
  ( /5055F40D $noname  R62 10k {Lib=R}
-  (    1 N-000151 )
+  (    1 N-000137 )
   (    2 GND )
  )
  ( /5055F40A $noname  R61 30k {Lib=R}
-  (    1 N-000151 )
+  (    1 N-000137 )
   (    2 +5V )
  )
  ( /5055EB7C $noname  J3 DB9 {Lib=DB9}
@@ -182,43 +182,43 @@
   (    9 /synch-ext )
  )
  ( /50544AD9 $noname  J2 DB37 {Lib=DB37}
-  (    1 +24V )
-  (    2 +24V )
-  (    3 +24V )
+  (    1 GND )
+  (    2 /sock23 )
+  (    3 /sock24 )
   (    4 GND )
-  (    5 /sock23 )
+  (    5 /isock10 )
   (    6 GND )
-  (    7 GND )
-  (    8 /isock5 )
+  (    7 /isock9 )
+  (    8 /isock8 )
   (    9 GND )
-  (   10 GND )
-  (   11 /isock7 )
+  (   10 /isock7 )
+  (   11 /isock6 )
   (   12 GND )
-  (   13 GND )
-  (   14 /isock9 )
+  (   13 /isock5 )
+  (   14 /isock4 )
   (   15 GND )
-  (   16 GND )
-  (   17 /isock11 )
-  (   18 GND )
-  (   19 GND )
-  (   20 /isock2 )
-  (   21 /isock3 )
-  (   22 /isock4 )
-  (   23 /sock22 )
-  (   24 /sock24 )
-  (   25 /sock25 )
-  (   26 +24V )
+  (   16 /isock3 )
+  (   17 /isock2 )
+  (   18 /isock1 )
+  (   19 /isock0 )
+  (   20 /sock22 )
+  (   21 GND )
+  (   22 /sock25 )
+  (   23 +24V )
+  (   24 GND )
+  (   25 +24V )
+  (   26 GND )
   (   27 +24V )
-  (   28 /isock6 )
-  (   29 +24V )
+  (   28 +24V )
+  (   29 GND )
   (   30 +24V )
-  (   31 /isock8 )
-  (   32 +24V )
+  (   31 +24V )
+  (   32 GND )
   (   33 +24V )
-  (   34 /isock10 )
+  (   34 +24V )
   (   35 +24V )
   (   36 +24V )
-  (   37 /isock12 )
+  (   37 +24V )
  )
  ( /50544AB3 $noname  J1 DB37 {Lib=DB37}
   (    1 GND )
@@ -238,8 +238,8 @@
   (   15 GND )
   (   16 GND )
   (   17 /sock21 )
-  (   18 +24V )
-  (   19 +24V )
+  (   18 /isock11 )
+  (   19 /isock12 )
   (   20 /sock0 )
   (   21 /sock2 )
   (   22 /sock3 )
@@ -256,8 +256,8 @@
   (   33 /sock18 )
   (   34 /sock19 )
   (   35 /sock20 )
-  (   36 /isock0 )
-  (   37 /isock1 )
+  (   36 +24V )
+  (   37 +24V )
  )
  ( /505449FD $noname  C10 10u {Lib=C}
   (    1 +24V )
@@ -610,7 +610,7 @@
   (    6 VDD )
   (    7 ? )
   (    8 GND )
-  (    9 N-000128 )
+  (    9 N-000127 )
   (   10 VDD )
   (   11 /in8 )
   (   12 /in9 )
@@ -629,7 +629,7 @@
   (    7 ? )
   (    8 GND )
   (    9 /in-sda )
-  (   10 N-000128 )
+  (   10 N-000127 )
   (   11 /in0 )
   (   12 /in1 )
   (   13 /in2 )
@@ -638,18 +638,18 @@
   (   16 VDD )
  )
  ( /50538906 $noname  R45 50 {Lib=R}
-  (    1 N-000134 )
+  (    1 N-000079 )
   (    2 /tx )
  )
  ( /5053887B $noname  P4 SWD-IAP {Lib=CONN_5}
-  (    1 N-000134 )
-  (    2 N-000076 )
+  (    1 N-000079 )
+  (    2 N-000078 )
   (    3 GND )
-  (    4 N-000109 )
-  (    5 N-000073 )
+  (    4 N-000077 )
+  (    5 N-000076 )
  )
  ( /50538858 $noname  R46 50 {Lib=R}
-  (    1 N-000076 )
+  (    1 N-000078 )
   (    2 /rx )
  )
  ( /505385F9 $noname  C9 10u {Lib=C}
@@ -719,69 +719,69 @@
   (    2 GND )
  )
  ( /50537D93 $noname  R35 50 {Lib=R}
-  (    1 N-000130 )
-  (    2 N-000111 )
+  (    1 N-000129 )
+  (    2 N-000113 )
  )
  ( /50537D84 $noname  R48 50 {Lib=R}
-  (    1 N-000073 )
+  (    1 N-000076 )
   (    2 /swd-clk )
  )
  ( /50537D83 $noname  R47 50 {Lib=R}
-  (    1 N-000109 )
+  (    1 N-000077 )
   (    2 /swd-io )
  )
  ( /50537D82 $noname  R49 1k5 {Lib=R}
-  (    1 N-000131 )
+  (    1 N-000108 )
   (    2 /VBus )
  )
  ( /50537D81 $noname  R51 22 {Lib=R}
   (    1 /usb-d+ )
-  (    2 N-000131 )
+  (    2 N-000108 )
  )
  ( /50537D80 $noname  R50 22 {Lib=R}
   (    1 /usb-d- )
-  (    2 N-000105 )
+  (    2 N-000107 )
  )
  ( /50537D7D $noname  R52 100k {Lib=R}
-  (    1 N-000104 )
+  (    1 N-000105 )
   (    2 GND )
  )
  ( /50537D7C $noname  U14 MINI-USB-B {Lib=MINI-USB-B}
   (    0 GND )
   (    1 /VBus )
-  (    2 N-000105 )
-  (    3 N-000131 )
-  (    4 N-000104 )
+  (    2 N-000107 )
+  (    3 N-000108 )
+  (    4 N-000105 )
   (    5 GND )
  )
  ( /50537D77 $noname  X1 8MHz {Lib=CRYSTAL}
-  (    1 N-000130 )
-  (    2 N-000133 )
+  (    1 N-000129 )
+  (    2 N-000117 )
  )
  ( /50537D76 $noname  C7 18p {Lib=C}
   (    1 GND )
-  (    2 N-000130 )
+  (    2 N-000129 )
  )
  ( /50537D75 $noname  C6 18p {Lib=C}
   (    1 GND )
-  (    2 N-000133 )
+  (    2 N-000117 )
  )
  ( /50537D72 $noname  C5 100n {Lib=C}
   (    1 GND )
-  (    2 N-000114 )
+  (    2 N-000116 )
  )
  ( /50537D71 $noname  R29 10k {Lib=R}
   (    1 VDD )
-  (    2 N-000114 )
+  (    2 N-000116 )
  )
  ( /50537D6F $noname  stm1 STM32F102C8T6 {Lib=STM32F102C8T6}
   (    1 VDD )
   (    2 /addr2 )
   (    3 /addr1 )
   (    4 /addr0 )
-  (    5 N-000133 )
-  (    6 N-000111 )
-  (    7 N-000114 )
+  (    5 N-000117 )
+  (    6 N-000113 )
+  (    7 N-000116 )
   (    8 GND )
   (    9 VDD )
   (   10 /~in-load )
@@ -829,28 +829,28 @@
   (    2 GND )
  )
  ( /50537D68 $noname  D1 LED {Lib=LED}
-  (    1 N-000098 )
+  (    1 N-000100 )
   (    2 GND )
  )
  ( /50537D67 $noname  R32 500 {Lib=R}
   (    1 /led1 )
-  (    2 N-000098 )
+  (    2 N-000100 )
  )
  ( /50537D64 $noname  R33 500 {Lib=R}
   (    1 /led2 )
-  (    2 N-000097 )
+  (    2 N-000099 )
  )
  ( /50537D63 $noname  D2 LED {Lib=LED}
-  (    1 N-000097 )
+  (    1 N-000099 )
   (    2 GND )
  )
  ( /50537D62 $noname  D3 LED {Lib=LED}
-  (    1 N-000096 )
+  (    1 N-000098 )
   (    2 GND )
  )
  ( /50537D61 $noname  R34 500 {Lib=R}
   (    1 /led3 )
-  (    2 N-000096 )
+  (    2 N-000098 )
  )
 )
 *
@@ -1460,736 +1460,736 @@ $endlist
 $endfootprintlist
 }
 { Pin List by Nets
-Net 1 "+5V" "+5V"
- U12 10
- P3 5
- P3 4
- P2 5
- U11 10
- P2 4
- R61 2
- C20 1
- U8 10
- C9 1
- U7 10
- U13 10
- U9 10
- U10 10
- C19 1
- L2 2
-Net 2 "/sock12" "sock12"
- U8 3
- J1 29
-Net 3 "/out12" "out12"
- U5 10
- U8 2
-Net 4 "/out15" "out15"
- U5 13
- U8 19
- U4 2
-Net 5 "/sock14" "sock14"
- J1 30
- U8 13
-Net 6 "/out14" "out14"
- U5 12
- U8 12
-Net 7 "/out-en" "out-en"
- U13 1
- U11 11
- U12 1
- R31 1
- U13 11
- U10 1
- U11 1
- U12 11
- U9 11
- U8 1
- U8 11
- U7 1
- stm1 14
- U9 1
- U7 11
- U10 11
-Net 8 "/out13" "out13"
- U5 11
- U8 9
-Net 9 "/sock13" "sock13"
- U8 8
- J1 11
-Net 10 "/isock3" "isock3"
- J2 21
- R4 1
-Net 11 "/in3" "in3"
- R4 2
- R17 1
- U1 14
-Net 12 "/isock2" "isock2"
- J2 20
- R3 1
-Net 13 "/isock6" "isock6"
- R7 1
- J2 28
-Net 14 "/in6" "in6"
- U1 5
- R7 2
- R20 1
-Net 15 "/isock7" "isock7"
- J2 11
- R8 1
-Net 16 "/out24" "out24"
- U9 2
- U3 3
-Net 17 "/out25" "out25"
- U3 4
- U9 9
-Net 18 "/out26" "out26"
- U9 12
- U3 5
-Net 19 "/out27" "out27"
- U9 19
- U3 6
-Net 20 "/sock24" "sock24"
- U9 3
- J2 24
-Net 21 "/sock25" "sock25"
- U9 8
- J2 25
-Net 22 "/isock0" "isock0"
- J1 36
- R1 1
-Net 23 "/in0" "in0"
- R14 1
- R1 2
- U1 11
-Net 24 "/isock1" "isock1"
- R2 1
- J1 37
-Net 25 "/out11" "out11"
- U12 19
- U5 6
-Net 26 "/sock11" "sock11"
- U12 18
- J1 28
-Net 27 "/sock10" "sock10"
- J1 27
- U12 13
-Net 28 "/out10" "out10"
- U12 12
- U5 5
-Net 29 "/out9" "out9"
- U12 9
- U5 4
-Net 30 "/sock9" "sock9"
- J1 8
- U12 8
-Net 31 "/sock8" "sock8"
- U12 3
- J1 26
-Net 32 "/out8" "out8"
- U5 3
- U12 2
-Net 33 "/out16" "out16"
- U11 2
- U4 3
-Net 34 "/out17" "out17"
- U4 4
- U11 9
-Net 35 "/sock16" "sock16"
- U11 3
- J1 32
-Net 36 "/sock17" "sock17"
- U11 8
- J1 14
-Net 37 "/sock15" "sock15"
- J1 31
- U8 18
-Net 38 "/out23" "out23"
- U4 13
- U13 19
- U3 2
-Net 39 "/sock23" "sock23"
- U13 18
- J2 5
-Net 40 "/sock22" "sock22"
- U13 13
- J2 23
-Net 41 "/out22" "out22"
- U13 12
- U4 12
-Net 42 "/out21" "out21"
- U4 11
- U13 9
-Net 43 "/sock21" "sock21"
- U13 8
- J1 17
-Net 44 "/sock20" "sock20"
- U13 3
- J1 35
-Net 45 "/out20" "out20"
- U13 2
- U4 10
-Net 46 "/out19" "out19"
- U4 6
- U11 19
-Net 47 "/sock19" "sock19"
- U11 18
- J1 34
-Net 48 "/sock18" "sock18"
- U11 13
- J1 33
-Net 49 "/out18" "out18"
- U4 5
- U11 12
-Net 50 "/sock2" "sock2"
- J1 21
- U7 13
-Net 51 "/sock0" "sock0"
- U7 3
- J1 20
-Net 52 "/sock1" "sock1"
- J1 2
- U7 8
-Net 53 "+24V" "+24V"
- U8 20
- U9 20
- U10 20
- U7 20
- U15 6
- R55 2
- C11 1
- R54 2
- P3 9
- P3 10
- R53 2
- P3 11
- P3 12
- U11 20
- P2 9
- P2 10
- P2 11
- J1 19
- J1 18
- P2 12
- J3 6
- J3 2
- J3 1
- J2 35
- J2 26
- J2 36
- J2 27
- U13 20
- J2 29
- J2 1
- J2 2
- J2 3
- J2 33
- J2 30
- J2 32
- U12 20
- R58 2
- R59 2
- C16 1
- R60 2
- C10 1
- U16 6
-Net 54 "/isock4" "isock4"
- J2 22
- R5 1
-Net 55 "/isock5" "isock5"
- J2 8
- R6 1
-Net 56 "/isock8" "isock8"
- R9 1
- J2 31
-Net 57 "/isock9" "isock9"
- R10 1
- J2 14
-Net 58 "/sock5" "sock5"
- U10 8
- J1 5
-Net 59 "/isock11" "isock11"
- J2 17
- R12 1
-Net 60 "/in9" "in9"
- R23 1
- R10 2
- U2 12
-Net 61 "/in5" "in5"
- U1 4
- R19 1
- R6 2
-Net 62 "/in4" "in4"
- U1 3
- R5 2
- R18 1
-Net 63 "/in12" "in12"
- R26 1
- R13 2
- U2 3
-Net 64 "/isock10" "isock10"
- R11 1
- J2 34
-Net 65 "/in10" "in10"
- U2 13
- R11 2
- R24 1
-Net 66 "/sock7" "sock7"
- J1 25
- U10 18
-Net 67 "/sock6" "sock6"
- U10 13
- J1 24
-Net 68 "/sock4" "sock4"
- U10 3
- J1 23
-Net 69 "/sock3" "sock3"
- J1 22
- U7 18
-Net 70 "/~in-scl-en" "~in-scl-en"
- U2 15
- R28 2
- U1 15
- stm1 11
-Net 71 "/~out-rst" "~out-rst"
- U6 9
- U5 9
- R30 2
- U4 9
- U3 9
- stm1 15
-Net 72 "/addr0" "addr0"
- R38 2
- stm1 4
- P1 7
-Net 73 "" ""
- P4 5
- R48 1
-Net 74 "/swd-clk" "swd-clk"
- R48 2
- stm1 37
-Net 75 "" ""
- stm1 20
- R40 1
-Net 76 "" ""
- P4 2
- R46 1
-Net 77 "/synch-ext" "synch-ext"
- R43 2
- K2 3
- K1 3
- R44 1
- J3 9
-Net 80 "/led1" "led1"
- stm1 27
- R32 1
-Net 81 "/out-sda" "out-sda"
- U6 2
- stm1 17
-Net 83 "/led2" "led2"
- stm1 26
- R33 1
-Net 84 "/out-scl" "out-scl"
- stm1 16
- U6 8
- U4 8
- U5 8
- U3 8
-Net 86 "/led3" "led3"
- stm1 25
- R34 1
-Net 87 "/sda" "sda"
- R63 2
- stm1 43
-Net 88 "/in-sda" "in-sda"
- stm1 13
- U1 9
-Net 89 "/scl" "scl"
- stm1 42
- R64 2
-Net 91 "/in-scl" "in-scl"
- stm1 12
- U1 2
- U2 2
-Net 92 "/synch" "synch"
- R44 2
- stm1 41
-Net 93 "/rx" "rx"
- R46 2
- stm1 31
-Net 96 "" ""
- R34 2
- D3 1
-Net 97 "" ""
- D2 1
- R33 2
-Net 98 "" ""
- D1 1
- R32 2
-Net 103 "/VBus" "VBus"
- U14 1
- R49 2
-Net 104 "" ""
- R52 1
- U14 4
-Net 105 "" ""
- R50 2
- U14 2
-Net 106 "/usb-d-" "usb-d-"
- R50 1
- stm1 32
-Net 107 "/usb-d+" "usb-d+"
- R51 1
- stm1 33
-Net 108 "/swd-io" "swd-io"
- stm1 34
- R47 2
-Net 109 "" ""
- P4 4
- R47 1
-Net 110 "/tx" "tx"
- R45 2
- stm1 30
-Net 111 "" ""
- stm1 6
- R35 2
-Net 112 "/addr1" "addr1"
- stm1 3
- R37 2
- P1 5
-Net 113 "/addr2" "addr2"
- R36 2
- P1 3
- stm1 2
-Net 114 "" ""
- C5 2
- R29 2
- stm1 7
-Net 119 "/out5" "out5"
- U10 9
- U6 11
-Net 120 "/out4" "out4"
- U6 10
- U10 2
-Net 121 "/out7" "out7"
- U5 2
- U6 13
- U10 19
-Net 122 "/out6" "out6"
- U6 12
- U10 12
-Net 123 "/out0" "out0"
- U7 2
- U6 3
-Net 124 "/out1" "out1"
- U6 4
- U7 9
-Net 125 "/out2" "out2"
- U7 12
- U6 5
-Net 126 "/out3" "out3"
- U7 19
- U6 6
-Net 128 "" ""
- U1 10
- U2 9
-Net 130 "" ""
- X1 1
- C7 2
- R35 1
-Net 131 "" ""
- U14 3
- R49 1
- R51 2
-Net 132 "/fw-upgrade" "fw-upgrade"
- R39 1
- P1 2
- stm1 44
-Net 133 "" ""
- X1 2
- stm1 5
- C6 2
-Net 134 "" ""
- R45 1
- P4 1
-Net 135 "/in11" "in11"
- R25 1
- U2 14
- R12 2
-Net 136 "/in8" "in8"
- R22 1
- R9 2
- U2 11
-Net 137 "" ""
- C21 1
- C16 2
-Net 138 "" ""
- C12 1
- C11 2
-Net 139 "/in1" "in1"
- U1 12
- R2 2
- R15 1
-Net 140 "/in2" "in2"
- U1 13
- R16 1
- R3 2
-Net 141 "/in7" "in7"
- R21 1
- U1 6
- R8 2
-Net 142 "/scl-ext" "scl-ext"
- R64 1
- K2 2
- R42 2
- J3 5
- K1 2
-Net 143 "/sda-ext" "sda-ext"
- K2 1
- R41 2
- R63 1
- K1 1
- J3 4
-Net 144 "VDD" "VDD"
- stm1 48
- R41 1
- stm1 24
- R43 1
- R42 1
- C4 1
- stm1 36
- R28 1
- R56 2
- C15 1
- P3 1
- P3 2
- C14 1
- L1 2
- R27 1
- C1 1
- C2 1
- C3 1
- C8 1
- U1 16
- R30 1
- P2 1
- P2 2
- P1 1
- R36 1
- R37 1
- R38 1
- U3 1
- U3 14
- U2 16
- U2 10
- R29 1
- U2 6
- stm1 1
- stm1 9
- U5 1
- U4 14
- U6 1
- U5 14
- U4 1
- U2 5
- U6 14
- U2 4
-Net 145 "" ""
- U15 2
- D4 2
- L1 1
-Net 146 "" ""
- C22 1
- C21 2
-Net 147 "" ""
- C12 2
- C17 1
-Net 148 "" ""
- R57 1
- R56 1
- U15 5
-Net 149 "" ""
- U15 3
- C13 1
-Net 150 "" ""
- R53 1
- R55 1
- U15 7
- R54 1
- U15 1
-Net 151 "" ""
- R62 1
- R61 1
- U16 5
-Net 152 "/isock12" "isock12"
- J2 37
- R13 1
-Net 156 "" ""
- U16 3
- C18 1
-Net 157 "" ""
- U16 7
- R60 1
- R58 1
- R59 1
- U16 1
-Net 159 "/~in-load" "~in-load"
- stm1 10
- R27 2
- U1 1
- U2 1
-Net 160 "GND" "GND"
- J1 10
- J1 9
- J1 7
- J1 6
- U9 14
- J1 4
- J1 3
- U9 15
- J1 1
- J2 19
- J2 18
- J2 16
- J2 15
- U9 16
- U8 5
- C14 2
- D4 1
- U1 8
- C13 2
- U15 4
- U8 6
- J3 7
- J3 8
- U16 4
- U9 17
- U8 4
- C18 2
- D5 1
- C19 2
- U12 17
- U10 4
- U10 5
- U10 6
- U11 4
- U11 5
- U11 6
- U11 7
- U12 4
- U12 5
- U12 6
- U12 7
- U12 14
- U12 15
- U12 16
- R14 2
+Net 1 "GND" "GND"
+ U7 7
+ U7 6
+ U7 5
+ U7 4
  U2 8
- R20 2
- R21 2
- U10 7
- R15 2
- R16 2
- U11 15
- U9 7
- U9 6
- J2 4
- J2 6
- J2 7
- J2 9
- J2 10
- J2 12
- J2 13
- U11 14
- U13 17
- U8 16
- U8 15
- U8 14
- U8 7
- R17 2
- U9 5
- U9 4
- U11 16
- U11 17
- U13 4
- U13 5
- U13 6
- U8 17
- U13 7
- U13 14
- U13 15
- U13 16
- C9 2
+ U1 8
+ U5 7
+ U6 7
+ P1 8
+ P1 6
+ P1 4
+ C1 2
+ C2 2
+ C3 2
  R40 2
+ C9 2
+ P4 3
+ R18 2
+ R26 2
+ R24 2
+ J1 16
+ J1 15
+ J1 13
+ J1 12
+ R31 2
+ C10 2
+ R39 2
  C5 1
  C6 1
  C7 1
- P4 3
- C1 2
  U3 7
- C3 2
- C2 2
- U14 0
- R52 2
- D2 2
- D3 2
- U14 5
- C4 2
- D1 2
- stm1 23
- stm1 35
- stm1 47
- C8 2
- stm1 8
- C22 2
- C17 2
- U10 17
- U10 16
- U10 15
- U10 14
- P2 8
- P2 7
- P2 6
- R24 2
- R26 2
- R18 2
- U7 7
- R23 2
- U7 6
- R25 2
- U7 5
- U7 4
- U5 7
- J3 3
- R19 2
- U7 14
- R62 2
- C20 2
- U6 7
- R22 2
- P2 3
- R39 2
  U7 17
  U7 16
  U7 15
  U4 7
- P1 4
- P1 6
- P1 8
+ U10 17
+ U10 16
+ U10 15
+ U10 14
+ U7 14
+ C8 2
+ stm1 47
+ stm1 35
+ stm1 23
+ D3 2
+ D2 2
+ D1 2
+ C4 2
+ U14 5
+ U14 0
+ R52 2
+ stm1 8
+ C14 2
+ C19 2
+ D5 1
+ C18 2
+ U16 4
+ R62 2
+ C20 2
+ J3 8
+ J3 7
+ U15 4
+ C13 2
+ D4 1
+ P3 3
  C15 2
  R57 2
- R31 2
- J1 12
- J1 13
- J1 15
- J1 16
- C10 2
+ P2 8
+ P2 7
+ P2 6
+ C22 2
+ C17 2
+ J3 3
+ P2 3
  P3 8
  P3 7
  P3 6
- P3 3
-Net 161 "" ""
- U16 2
+ U12 4
+ U11 7
+ R25 2
+ U11 6
+ U11 5
+ U11 4
+ U13 17
+ U13 16
+ U13 15
+ U13 14
+ U13 7
+ U13 6
+ U13 5
+ U13 4
+ U10 7
+ U10 6
+ U10 5
+ U10 4
+ U12 17
+ U12 16
+ U12 15
+ U12 14
+ R23 2
+ U12 7
+ U12 6
+ U12 5
+ J1 4
+ J1 3
+ J1 1
+ J2 29
+ J2 26
+ J2 15
+ J2 24
+ U11 17
+ U11 16
+ U11 15
+ U11 14
+ J2 32
+ J2 12
+ J2 21
+ J2 9
+ J2 6
+ J2 4
+ J2 1
+ J1 10
+ J1 9
+ J1 7
+ J1 6
+ U8 16
+ U8 17
+ R22 2
+ R19 2
+ U9 7
+ U9 6
+ U9 5
+ U9 4
+ R21 2
+ R16 2
+ R20 2
+ U8 6
+ U8 5
+ R15 2
+ U8 4
+ U9 17
+ U9 16
+ U9 15
+ U8 15
+ U8 14
+ R17 2
+ U8 7
+ U9 14
+ R14 2
+Net 2 "+5V" "+5V"
+ U13 10
+ U8 10
+ U10 10
+ U7 10
+ U9 10
+ U11 10
+ C20 1
+ U12 10
+ R61 2
+ P3 5
+ P3 4
+ P2 4
+ P2 5
+ C9 1
+ L2 2
+ C19 1
+Net 3 "/sock12" "sock12"
+ J1 29
+ U8 3
+Net 4 "/out12" "out12"
+ U8 2
+ U5 10
+Net 5 "/out15" "out15"
+ U4 2
+ U8 19
+ U5 13
+Net 6 "/sock14" "sock14"
+ J1 30
+ U8 13
+Net 7 "/out14" "out14"
+ U8 12
+ U5 12
+Net 8 "/out-en" "out-en"
+ stm1 14
+ U7 1
+ U8 11
+ U10 1
+ U11 11
+ U9 11
+ U13 1
+ U9 1
+ U12 11
+ U11 1
+ R31 1
+ U12 1
+ U7 11
+ U8 1
+ U10 11
+ U13 11
+Net 9 "/out13" "out13"
+ U5 11
+ U8 9
+Net 10 "/sock13" "sock13"
+ U8 8
+ J1 11
+Net 11 "/isock3" "isock3"
+ J2 16
+ R4 1
+Net 12 "/in2" "in2"
+ R3 2
+ U1 13
+ R16 1
+Net 13 "/isock2" "isock2"
+ J2 17
+ R3 1
+Net 14 "/isock6" "isock6"
+ R7 1
+ J2 11
+Net 15 "/in7" "in7"
+ U1 6
+ R21 1
+ R8 2
+Net 16 "/isock7" "isock7"
+ J2 10
+ R8 1
+Net 17 "/out24" "out24"
+ U3 3
+ U9 2
+Net 18 "/out25" "out25"
+ U9 9
+ U3 4
+Net 19 "/out26" "out26"
+ U9 12
+ U3 5
+Net 20 "/out27" "out27"
+ U3 6
+ U9 19
+Net 21 "/sock24" "sock24"
+ U9 3
+ J2 3
+Net 22 "/sock25" "sock25"
+ J2 22
+ U9 8
+Net 25 "/isock0" "isock0"
+ J2 19
+ R1 1
+Net 26 "/in1" "in1"
+ U1 12
+ R2 2
+ R15 1
+Net 27 "/isock1" "isock1"
+ J2 18
+ R2 1
+Net 28 "/out11" "out11"
+ U12 19
+ U5 6
+Net 29 "/sock11" "sock11"
+ U12 18
+ J1 28
+Net 30 "/sock10" "sock10"
+ J1 27
+ U12 13
+Net 31 "/out10" "out10"
+ U12 12
+ U5 5
+Net 32 "/out9" "out9"
+ U5 4
+ U12 9
+Net 33 "/sock9" "sock9"
+ J1 8
+ U12 8
+Net 34 "/sock8" "sock8"
+ J1 26
+ U12 3
+Net 35 "/out8" "out8"
+ U12 2
+ U5 3
+Net 36 "/out16" "out16"
+ U11 2
+ U4 3
+Net 37 "/out17" "out17"
+ U4 4
+ U11 9
+Net 38 "/sock16" "sock16"
+ J1 32
+ U11 3
+Net 39 "/sock17" "sock17"
+ U11 8
+ J1 14
+Net 40 "/sock15" "sock15"
+ U8 18
+ J1 31
+Net 41 "/out23" "out23"
+ U13 19
+ U3 2
+ U4 13
+Net 42 "/sock23" "sock23"
+ J2 2
+ U13 18
+Net 43 "/sock22" "sock22"
+ J2 20
+ U13 13
+Net 44 "/out22" "out22"
+ U4 12
+ U13 12
+Net 45 "/out21" "out21"
+ U13 9
+ U4 11
+Net 46 "/sock21" "sock21"
+ J1 17
+ U13 8
+Net 47 "/sock20" "sock20"
+ J1 35
+ U13 3
+Net 48 "/out20" "out20"
+ U13 2
+ U4 10
+Net 49 "/out19" "out19"
+ U11 19
+ U4 6
+Net 50 "/sock19" "sock19"
+ U11 18
+ J1 34
+Net 51 "/sock18" "sock18"
+ J1 33
+ U11 13
+Net 52 "/out18" "out18"
+ U11 12
+ U4 5
+Net 53 "/sock2" "sock2"
+ U7 13
+ J1 21
+Net 54 "/sock0" "sock0"
+ J1 20
+ U7 3
+Net 55 "/sock1" "sock1"
+ U7 8
+ J1 2
+Net 56 "+24V" "+24V"
+ R54 2
+ C11 1
+ R55 2
+ J2 33
+ R53 2
+ J2 23
+ J2 31
+ J2 30
+ U13 20
+ U15 6
+ U8 20
+ U9 20
+ P2 12
+ P2 11
+ P2 10
+ P2 9
+ U11 20
+ U7 20
+ U10 20
+ C10 1
+ J3 1
+ J3 2
+ J3 6
+ R60 2
+ U16 6
+ P3 11
+ P3 12
+ J2 37
+ J2 28
+ J1 37
+ R58 2
+ U12 20
+ J1 36
+ J2 35
+ J2 25
+ C16 1
+ R59 2
+ J2 34
+ J2 36
+ P3 9
+ J2 27
+ P3 10
+Net 57 "/isock4" "isock4"
+ J2 14
+ R5 1
+Net 58 "/isock5" "isock5"
+ J2 13
+ R6 1
+Net 59 "/isock8" "isock8"
+ J2 8
+ R9 1
+Net 60 "/isock9" "isock9"
+ J2 7
+ R10 1
+Net 61 "/sock5" "sock5"
+ J1 5
+ U10 8
+Net 62 "/in11" "in11"
+ U2 14
+ R25 1
+ R12 2
+Net 63 "/isock11" "isock11"
+ R12 1
+ J1 18
+Net 64 "/in8" "in8"
+ R9 2
+ R22 1
+ U2 11
+Net 65 "/~in-load" "~in-load"
+ U1 1
+ U2 1
+ R27 2
+ stm1 10
+Net 66 "/in4" "in4"
+ U1 3
+ R5 2
+ R18 1
+Net 67 "/isock10" "isock10"
+ J2 5
+ R11 1
+Net 68 "/sock7" "sock7"
+ J1 25
+ U10 18
+Net 69 "/sock6" "sock6"
+ J1 24
+ U10 13
+Net 70 "/sock4" "sock4"
+ U10 3
+ J1 23
+Net 71 "/sock3" "sock3"
+ U7 18
+ J1 22
+Net 72 "/~in-scl-en" "~in-scl-en"
+ R28 2
+ stm1 11
+ U2 15
+ U1 15
+Net 73 "/fw-upgrade" "fw-upgrade"
+ R39 1
+ P1 2
+ stm1 44
+Net 74 "/swd-clk" "swd-clk"
+ stm1 37
+ R48 2
+Net 75 "" ""
+ stm1 20
+ R40 1
+Net 76 "" ""
+ R48 1
+ P4 5
+Net 77 "" ""
+ P4 4
+ R47 1
+Net 78 "" ""
+ R46 1
+ P4 2
+Net 79 "" ""
+ R45 1
+ P4 1
+Net 82 "/led1" "led1"
+ R32 1
+ stm1 27
+Net 83 "/out-sda" "out-sda"
+ stm1 17
+ U6 2
+Net 85 "/led2" "led2"
+ R33 1
+ stm1 26
+Net 86 "/out-scl" "out-scl"
+ U3 8
+ U4 8
+ U5 8
+ stm1 16
+ U6 8
+Net 88 "/led3" "led3"
+ R34 1
+ stm1 25
+Net 89 "/sda" "sda"
+ R63 2
+ stm1 43
+Net 90 "/in-sda" "in-sda"
+ stm1 13
+ U1 9
+Net 91 "/scl" "scl"
+ R64 2
+ stm1 42
+Net 93 "/in-scl" "in-scl"
+ U1 2
+ stm1 12
+ U2 2
+Net 94 "/synch" "synch"
+ R44 2
+ stm1 41
+Net 95 "/rx" "rx"
+ R46 2
+ stm1 31
+Net 98 "" ""
+ R34 2
+ D3 1
+Net 99 "" ""
+ D2 1
+ R33 2
+Net 100 "" ""
+ R32 2
+ D1 1
+Net 105 "" ""
+ U14 4
+ R52 1
+Net 106 "/VBus" "VBus"
+ R49 2
+ U14 1
+Net 107 "" ""
+ R50 2
+ U14 2
+Net 108 "" ""
+ R51 2
+ U14 3
+ R49 1
+Net 109 "/usb-d-" "usb-d-"
+ R50 1
+ stm1 32
+Net 110 "/usb-d+" "usb-d+"
+ R51 1
+ stm1 33
+Net 111 "/swd-io" "swd-io"
+ stm1 34
+ R47 2
+Net 112 "/tx" "tx"
+ R45 2
+ stm1 30
+Net 113 "" ""
+ stm1 6
+ R35 2
+Net 114 "/addr1" "addr1"
+ stm1 3
+ R37 2
+ P1 5
+Net 115 "/addr2" "addr2"
+ stm1 2
+ P1 3
+ R36 2
+Net 116 "" ""
+ stm1 7
+ C5 2
+ R29 2
+Net 117 "" ""
+ stm1 5
+ C6 2
+ X1 2
+Net 118 "/out5" "out5"
+ U10 9
+ U6 11
+Net 119 "/out4" "out4"
+ U6 10
+ U10 2
+Net 120 "/out7" "out7"
+ U6 13
+ U5 2
+ U10 19
+Net 121 "/out6" "out6"
+ U10 12
+ U6 12
+Net 122 "/out0" "out0"
+ U6 3
+ U7 2
+Net 123 "/out1" "out1"
+ U6 4
+ U7 9
+Net 124 "/out2" "out2"
+ U7 12
+ U6 5
+Net 125 "/out3" "out3"
+ U7 19
+ U6 6
+Net 127 "" ""
+ U2 9
+ U1 10
+Net 129 "" ""
+ X1 1
+ R35 1
+ C7 2
+Net 130 "" ""
+ U16 3
+ C18 1
+Net 131 "" ""
+ U16 1
+ U16 7
+ R60 1
+ R59 1
+ R58 1
+Net 132 "" ""
  L2 1
  D5 2
+ U16 2
+Net 133 "" ""
+ C13 1
+ U15 3
+Net 134 "" ""
+ U15 5
+ R57 1
+ R56 1
+Net 135 "" ""
+ C21 2
+ C22 1
+Net 136 "" ""
+ C17 1
+ C12 2
+Net 137 "" ""
+ R62 1
+ R61 1
+ U16 5
+Net 138 "" ""
+ U15 2
+ L1 1
+ D4 2
+Net 139 "" ""
+ U15 7
+ U15 1
+ R55 1
+ R54 1
+ R53 1
+Net 140 "/sda-ext" "sda-ext"
+ R41 2
+ J3 4
+ K1 1
+ R63 1
+ K2 1
+Net 141 "VDD" "VDD"
+ stm1 24
+ stm1 9
+ U2 16
+ U2 10
+ U2 6
+ U2 5
+ U2 4
+ stm1 1
+ R29 1
+ U3 14
+ U3 1
+ U4 1
+ C8 1
+ R43 1
+ stm1 36
+ U6 1
+ U4 14
+ U5 1
+ U5 14
+ U1 16
+ U6 14
+ R41 1
+ R42 1
+ C4 1
+ R56 2
+ R30 1
+ stm1 48
+ R37 1
+ L1 2
+ C14 1
+ R38 1
+ R27 1
+ P2 2
+ P2 1
+ P1 1
+ P3 2
+ R36 1
+ P3 1
+ C15 1
+ C3 1
+ C2 1
+ C1 1
+ R28 1
+Net 142 "" ""
+ C21 1
+ C16 2
+Net 143 "" ""
+ C12 1
+ C11 2
+Net 144 "/synch-ext" "synch-ext"
+ K1 3
+ K2 3
+ R43 2
+ J3 9
+ R44 1
+Net 145 "/isock12" "isock12"
+ J1 19
+ R13 1
+Net 152 "/scl-ext" "scl-ext"
+ R64 1
+ K2 2
+ K1 2
+ J3 5
+ R42 2
+Net 153 "/addr0" "addr0"
+ P1 7
+ R38 2
+ stm1 4
+Net 154 "/~out-rst" "~out-rst"
+ R30 2
+ U4 9
+ U3 9
+ stm1 15
+ U6 9
+ U5 9
+Net 155 "/in9" "in9"
+ R10 2
+ R23 1
+ U2 12
+Net 156 "/in10" "in10"
+ R11 2
+ R24 1
+ U2 13
+Net 157 "/in12" "in12"
+ R13 2
+ U2 3
+ R26 1
+Net 158 "/in0" "in0"
+ U1 11
+ R1 2
+ R14 1
+Net 159 "/in5" "in5"
+ R19 1
+ U1 4
+ R6 2
+Net 160 "/in6" "in6"
+ U1 5
+ R7 2
+ R20 1
+Net 161 "/in3" "in3"
+ U1 14
+ R17 1
+ R4 2
 }
 #End
