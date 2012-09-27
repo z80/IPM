@@ -1,4 +1,4 @@
-update=Sat 15 Sep 2012 11:42:13 PM MSK
+update=27/09/2012 16:16:04
 version=1
 last_client=eeschema
 [pcbnew]
@@ -158,3 +158,4 @@ LibName40=stm
 LibName41=usb
 LibName42=74hc164
 LibName43=74hc165
+LibName44=lsm303dlh

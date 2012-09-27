@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 19/09/2012 10:43:02
+EESchema Schematic File Version 2  date 19/09/2012 11:22:24
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -2168,11 +2168,11 @@ Text Label 10800 18900 0    60   ~ 0
 sock25
 Text Label 10700 19400 0    60   ~ 0
 gnd
-Text Label 10700 18400 0    60   ~ 0
+Text Label 10700 18800 0    60   ~ 0
 sock24
 Text Label 10700 18600 0    60   ~ 0
 sock23
-Text Label 10700 18800 0    60   ~ 0
+Text Label 10700 18400 0    60   ~ 0
 sock22
 Text Label 10700 19000 0    60   ~ 0
 gnd
