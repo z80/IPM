@@ -1,4 +1,11 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Tue 18 Sep 2012 09:39:13 PM MSK
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Fri 28 Sep 2012 10:50:31 PM MSK
+
+BeginCmp
+TimeStamp = /50644390;
+Reference = ACC1;
+ValeurCmp = LSM303DLH;
+IdModule  = ;
+EndCmp
 
 BeginCmp
 TimeStamp = /50537D97;
@@ -155,6 +162,34 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
+TimeStamp = /5065EDF3;
+Reference = C23;
+ValeurCmp = 100n;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5065EE54;
+Reference = C24;
+ValeurCmp = 100n;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5065EBA9;
+Reference = C25;
+ValeurCmp = 10u;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5065EB8F;
+Reference = C26;
+ValeurCmp = 220n;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
 TimeStamp = /50537D68;
 Reference = D1;
 ValeurCmp = LED;
@@ -264,6 +299,20 @@ TimeStamp = /5053887B;
 Reference = P4;
 ValeurCmp = SWD-IAP;
 IdModule  = PIN_ARRAY_5x1;
+EndCmp
+
+BeginCmp
+TimeStamp = /5065ECBA;
+Reference = Q1;
+ValeurCmp = MOS_N;
+IdModule  = SOT23GDS;
+EndCmp
+
+BeginCmp
+TimeStamp = /5065ED2A;
+Reference = Q2;
+ValeurCmp = MOS_N;
+IdModule  = SOT23GDS;
 EndCmp
 
 BeginCmp
@@ -715,6 +764,62 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
+TimeStamp = /5065EE25;
+Reference = R65;
+ValeurCmp = 8k2;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5065EE0B;
+Reference = R66;
+ValeurCmp = 8k2;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5065EC5F;
+Reference = R67;
+ValeurCmp = 10k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5065EF67;
+Reference = R68;
+ValeurCmp = 10k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5065ECD6;
+Reference = R69;
+ValeurCmp = 10k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5065ED6B;
+Reference = R70;
+ValeurCmp = 10k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5065ED29;
+Reference = R71;
+ValeurCmp = 10k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5065ED71;
+Reference = R72;
+ValeurCmp = 10k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
 TimeStamp = /50537D6F;
 Reference = stm1;
 ValeurCmp = STM32F102C8T6;
@@ -831,6 +936,13 @@ TimeStamp = /5055F41D;
 Reference = U16;
 ValeurCmp = NCP3063;
 IdModule  = SO8E;
+EndCmp
+
+BeginCmp
+TimeStamp = /5065EDB7;
+Reference = U17;
+ValeurCmp = LM317;
+IdModule  = TO220_VERT;
 EndCmp
 
 BeginCmp
