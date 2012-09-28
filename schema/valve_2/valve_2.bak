@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 19/09/2012 11:22:24
+EESchema Schematic File Version 2  date 27/09/2012 16:16:28
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -42,6 +42,7 @@ LIBS:stm
 LIBS:usb
 LIBS:74hc164
 LIBS:74hc165
+LIBS:lsm303dlh
 LIBS:valve_2-cache
 EELAYER 25  0
 EELAYER END
@@ -49,7 +50,7 @@ $Descr A1 33070 23400
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "19 sep 2012"
+Date "27 sep 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -57,6 +58,15 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L LSM303DLH ACC?
+U 1 1 50644390
+P 18700 19600
+F 0 "ACC?" H 18700 19450 60  0000 C CNN
+F 1 "LSM303DLH" H 18700 19750 60  0000 C CNN
+	1    18700 19600
+	1    0    0    -1  
+$EndComp
 Connection ~ 24300 7000
 Wire Wire Line
 	24300 7000 24300 6800
