@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Fri 28 Sep 2012 10:47:54 PM MSK
+EESchema Schematic File Version 2  date Wed 03 Oct 2012 07:07:06 PM MSK
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -50,7 +50,7 @@ $Descr A1 33070 23400
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "28 sep 2012"
+Date "3 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -1992,7 +1992,7 @@ F 1 "LSM303DLH" H 17400 19000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 9900 17750 0    60   ~ 0
-sdy switch\n
+dry switch\n
 Text Notes 9950 20250 0    60   ~ 0
 vac relay\n
 Text Notes 9950 21750 0    60   ~ 0

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Mon 27 Aug 2012 04:55:01 PM MSK
+EESchema Schematic File Version 2  date Wed 03 Oct 2012 09:32:41 PM MSK
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,13 +30,14 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:my_comps
-EELAYER 43  0
+LIBS:cable-power-cache
+EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "27 aug 2012"
+Date "3 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -44,6 +45,15 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L DB9 J?
+U 1 1 506C76A3
+P 6750 3800
+F 0 "J?" H 6750 4350 70  0000 C CNN
+F 1 "DB9" H 6750 3250 70  0000 C CNN
+	1    6750 3800
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	4800 4100 6300 4100
 Connection ~ 6200 4100
@@ -77,21 +87,12 @@ Wire Wire Line
 Wire Wire Line
 	6300 3800 4800 3800
 $Comp
-L CONN_6 P?
+L CONN_6 P1
 U 1 1 503B6DCE
 P 4450 3950
-F 0 "P?" V 4400 3950 60  0000 C CNN
+F 0 "P1" V 4400 3950 60  0000 C CNN
 F 1 "CONN_6" V 4500 3950 60  0000 C CNN
 	1    4450 3950
 	-1   0    0    -1  
-$EndComp
-$Comp
-L CONN_6 P?
-U 1 1 503B6DBE
-P 6650 3950
-F 0 "P?" V 6600 3950 60  0000 C CNN
-F 1 "CONN_6" V 6700 3950 60  0000 C CNN
-	1    6650 3950
-	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wed 05 Sep 2012 02:15:02 PM MSK
+EESchema Schematic File Version 2  date Wed 03 Oct 2012 09:32:51 PM MSK
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -37,7 +37,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "5 sep 2012"
+Date "3 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,6 +45,15 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L DB9 J1
+U 1 1 506C76A3
+P 6750 3800
+F 0 "J1" H 6750 4350 70  0000 C CNN
+F 1 "DB9" H 6750 3250 70  0000 C CNN
+	1    6750 3800
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	4800 4100 6300 4100
 Connection ~ 6200 4100
@@ -85,14 +94,5 @@ F 0 "P1" V 4400 3950 60  0000 C CNN
 F 1 "CONN_6" V 4500 3950 60  0000 C CNN
 	1    4450 3950
 	-1   0    0    -1  
-$EndComp
-$Comp
-L CONN_6 P2
-U 1 1 503B6DBE
-P 6650 3950
-F 0 "P2" V 6600 3950 60  0000 C CNN
-F 1 "CONN_6" V 6700 3950 60  0000 C CNN
-	1    6650 3950
-	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
