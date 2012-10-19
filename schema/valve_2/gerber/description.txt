@@ -1,0 +1,10 @@
+Board size 112x112mm
+     Layer files
+Top        - valve_2-Front.gtl
+Bottom     - valve_2-Back.gbl
+TopMask    - valve_2-Mask_Front.gts
+BottomMask - valve_2-Mask_Back.gbs
+BoardEdge  - valve_2-PCB_Edges.gbr
+Drill      - valve_2.drl
+
+
