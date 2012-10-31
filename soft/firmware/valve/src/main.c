@@ -3,6 +3,7 @@
 #include "hal.h"
 
 #include "read_ctrl.h"
+#include "write_ctrl.h"
 
 int main(void)
 {
@@ -11,6 +12,7 @@ int main(void)
   chSysInit();
 
   initRead();
+  initWrite();
   while ( 1 )
   {
     chThdSleepSeconds( 1 );

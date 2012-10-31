@@ -17,9 +17,9 @@
 // OUTs
 #define OUT_PORT    GPIOA
 #define OUT_EN_PIN  4
-#define OUT_RST_PIN 6
-#define OUT_SCL_PIN 5
-#define OUT_SDA_PIN 7
+#define OUT_MR_PIN  6
+#define OUT_CP_PIN  5
+#define OUT_DSA_PIN 7
 
 // INs
 #define IN_PORT     GPIOA
