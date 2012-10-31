@@ -609,6 +609,16 @@ Discarded input sections
  .text          0x00000000        0x0 build/obj/led_ctrl.o
  .data          0x00000000        0x0 build/obj/led_ctrl.o
  .bss           0x00000000        0x0 build/obj/led_ctrl.o
+ .text.ledsThread
+                0x00000000       0x90 build/obj/led_ctrl.o
+ .text.initLed  0x00000000       0x70 build/obj/led_ctrl.o
+ .text.setLeds  0x00000000       0x20 build/obj/led_ctrl.o
+ .bss.mutex     0x00000000       0x10 build/obj/led_ctrl.o
+ .bss.arg.6171  0x00000000        0x4 build/obj/led_ctrl.o
+ .bss.value     0x00000000        0x4 build/obj/led_ctrl.o
+ .bss.waLeds    0x00000000      0x1b0 build/obj/led_ctrl.o
+ .rodata.str1.4
+                0x00000000        0x4 build/obj/led_ctrl.o
  .text          0x00000000       0xb4 c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
  .data          0x00000000        0x0 c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
  .bss           0x00000000        0x0 c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
@@ -1308,7 +1318,7 @@ destructors     0x080000ec        0x0
                 0x20005000                __heap_end__ = __ram_end__
 OUTPUT(build/ch.elf elf32-littlearm)
 
-.debug_abbrev   0x00000000     0x4a65
+.debug_abbrev   0x00000000     0x4c01
  .debug_abbrev  0x00000000       0xd9 build/obj/crt0.o
  .debug_abbrev  0x000000d9       0x74 build/obj/vectors.o
  .debug_abbrev  0x0000014d       0x41 build/obj/chcore.o
@@ -1378,9 +1388,9 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_abbrev  0x00004695      0x1ee build/obj/read_ctrl.o
  .debug_abbrev  0x00004883      0x1e0 build/obj/write_ctrl.o
  .debug_abbrev  0x00004a63        0x1 build/obj/i2c_ctrl.o
- .debug_abbrev  0x00004a64        0x1 build/obj/led_ctrl.o
+ .debug_abbrev  0x00004a64      0x19d build/obj/led_ctrl.o
 
-.debug_info     0x00000000    0x12498
+.debug_info     0x00000000    0x12a80
  .debug_info    0x00000000      0x345 build/obj/crt0.o
  .debug_info    0x00000345       0xb5 build/obj/vectors.o
  .debug_info    0x000003fa       0x8b build/obj/chcore.o
@@ -1450,9 +1460,9 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_info    0x000117c3      0x684 build/obj/read_ctrl.o
  .debug_info    0x00011e47      0x651 build/obj/write_ctrl.o
  .debug_info    0x00012498        0x0 build/obj/i2c_ctrl.o
- .debug_info    0x00012498        0x0 build/obj/led_ctrl.o
+ .debug_info    0x00012498      0x5e8 build/obj/led_ctrl.o
 
-.debug_line     0x00000000     0x81ff
+.debug_line     0x00000000     0x845a
  .debug_line    0x00000000      0x16f build/obj/crt0.o
  .debug_line    0x0000016f       0x69 build/obj/vectors.o
  .debug_line    0x000001d8       0x5e build/obj/chcore.o
@@ -1522,9 +1532,9 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_line    0x00007c37      0x34e build/obj/read_ctrl.o
  .debug_line    0x00007f85      0x27a build/obj/write_ctrl.o
  .debug_line    0x000081ff        0x0 build/obj/i2c_ctrl.o
- .debug_line    0x000081ff        0x0 build/obj/led_ctrl.o
+ .debug_line    0x000081ff      0x25b build/obj/led_ctrl.o
 
-.debug_loc      0x00000000     0x6c78
+.debug_loc      0x00000000     0x6d15
  .debug_loc     0x00000000       0x72 build/obj/crt0.o
  .debug_loc     0x00000072      0x10f build/obj/chcore_v7m.o
  .debug_loc     0x00000181      0x10a build/obj/nvic.o
@@ -1566,9 +1576,10 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_loc     0x00006b3c       0x20 build/obj/main.o
  .debug_loc     0x00006b5c       0x7f build/obj/read_ctrl.o
  .debug_loc     0x00006bdb       0x9d build/obj/write_ctrl.o
+ .debug_loc     0x00006c78       0x9d build/obj/led_ctrl.o
 
 .debug_pubnames
-                0x00000000     0x16ba
+                0x00000000     0x16e4
  .debug_pubnames
                 0x00000000       0x56 build/obj/crt0.o
  .debug_pubnames
@@ -1657,9 +1668,11 @@ OUTPUT(build/ch.elf elf32-littlearm)
                 0x00001663       0x2d build/obj/read_ctrl.o
  .debug_pubnames
                 0x00001690       0x2a build/obj/write_ctrl.o
+ .debug_pubnames
+                0x000016ba       0x2a build/obj/led_ctrl.o
 
 .debug_pubtypes
-                0x00000000     0x34a7
+                0x00000000     0x35fc
  .debug_pubtypes
                 0x00000000       0x44 build/obj/crt0.o
  .debug_pubtypes
@@ -1794,8 +1807,10 @@ OUTPUT(build/ch.elf elf32-littlearm)
                 0x000031d8      0x16e build/obj/read_ctrl.o
  .debug_pubtypes
                 0x00003346      0x161 build/obj/write_ctrl.o
+ .debug_pubtypes
+                0x000034a7      0x155 build/obj/led_ctrl.o
 
-.debug_aranges  0x00000000      0xd48
+.debug_aranges  0x00000000      0xd78
  .debug_aranges
                 0x00000000       0x38 build/obj/crt0.o
  .debug_aranges
@@ -1884,8 +1899,10 @@ OUTPUT(build/ch.elf elf32-littlearm)
                 0x00000ce8       0x30 build/obj/read_ctrl.o
  .debug_aranges
                 0x00000d18       0x30 build/obj/write_ctrl.o
+ .debug_aranges
+                0x00000d48       0x30 build/obj/led_ctrl.o
 
-.debug_ranges   0x00000000      0xf30
+.debug_ranges   0x00000000      0xf68
  .debug_ranges  0x00000000       0x58 build/obj/crt0.o
  .debug_ranges  0x00000058       0x10 build/obj/vectors.o
  .debug_ranges  0x00000068       0x10 build/obj/chcore.o
@@ -1930,8 +1947,9 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_ranges  0x00000e40       0x10 build/obj/main.o
  .debug_ranges  0x00000e50       0x90 build/obj/read_ctrl.o
  .debug_ranges  0x00000ee0       0x50 build/obj/write_ctrl.o
+ .debug_ranges  0x00000f30       0x38 build/obj/led_ctrl.o
 
-.debug_str      0x00000000     0x351f
+.debug_str      0x00000000     0x3552
  .debug_str     0x00000000      0x1c9 build/obj/crt0.o
                                 0x202 (size before relaxing)
  .debug_str     0x000001c9       0x57 build/obj/vectors.o
@@ -2066,6 +2084,8 @@ OUTPUT(build/ch.elf elf32-littlearm)
                                 0x31b (size before relaxing)
  .debug_str     0x000034cd       0x52 build/obj/write_ctrl.o
                                 0x321 (size before relaxing)
+ .debug_str     0x0000351f       0x33 build/obj/led_ctrl.o
+                                0x2f3 (size before relaxing)
 
 .comment        0x00000000       0x2a
  .comment       0x00000000       0x2a build/obj/crt0.o
@@ -2293,7 +2313,7 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .ARM.attributes
                 0x00000e0a       0x29 c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-ctype_.o)
 
-.debug_frame    0x00000000     0x231c
+.debug_frame    0x00000000     0x2394
  .debug_frame   0x00000000       0x50 build/obj/crt0.o
  .debug_frame   0x00000050       0x20 build/obj/vectors.o
  .debug_frame   0x00000070       0x20 build/obj/chcore.o
@@ -2338,10 +2358,11 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_frame   0x00002140       0x2c build/obj/main.o
  .debug_frame   0x0000216c       0x84 build/obj/read_ctrl.o
  .debug_frame   0x000021f0       0x7c build/obj/write_ctrl.o
- .debug_frame   0x0000226c       0x2c c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
- .debug_frame   0x00002298       0x2c c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strcasecmp.o)
- .debug_frame   0x000022c4       0x2c c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strchr.o)
- .debug_frame   0x000022f0       0x2c c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strspn.o)
+ .debug_frame   0x0000226c       0x78 build/obj/led_ctrl.o
+ .debug_frame   0x000022e4       0x2c c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .debug_frame   0x00002310       0x2c c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strcasecmp.o)
+ .debug_frame   0x0000233c       0x2c c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strchr.o)
+ .debug_frame   0x00002368       0x2c c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strspn.o)
 
 Cross Reference Table
 
@@ -2456,6 +2477,7 @@ _lseek_r                                          build/obj/syscalls.o
 _pal_lld_init                                     build/obj/pal_lld.o
                                                   build/obj/hal.o
 _pal_lld_setgroupmode                             build/obj/pal_lld.o
+                                                  build/obj/led_ctrl.o
                                                   build/obj/write_ctrl.o
                                                   build/obj/read_ctrl.o
                                                   build/obj/pal.o
@@ -2664,11 +2686,13 @@ chMsgRelease                                      build/obj/chmsg.o
 chMsgSend                                         build/obj/chmsg.o
 chMsgWait                                         build/obj/chmsg.o
 chMtxInit                                         build/obj/chmtx.o
+                                                  build/obj/led_ctrl.o
                                                   build/obj/write_ctrl.o
                                                   build/obj/read_ctrl.o
                                                   build/obj/adc.o
                                                   build/obj/chheap.o
 chMtxLock                                         build/obj/chmtx.o
+                                                  build/obj/led_ctrl.o
                                                   build/obj/write_ctrl.o
                                                   build/obj/read_ctrl.o
                                                   build/obj/adc.o
@@ -2678,6 +2702,7 @@ chMtxLockS                                        build/obj/chmtx.o
 chMtxTryLock                                      build/obj/chmtx.o
 chMtxTryLockS                                     build/obj/chmtx.o
 chMtxUnlock                                       build/obj/chmtx.o
+                                                  build/obj/led_ctrl.o
                                                   build/obj/write_ctrl.o
                                                   build/obj/read_ctrl.o
                                                   build/obj/adc.o
@@ -2770,6 +2795,7 @@ chThdCreateFromMemoryPool                         build/obj/chdynamic.o
 chThdCreateI                                      build/obj/chthreads.o
                                                   build/obj/chdynamic.o
 chThdCreateStatic                                 build/obj/chthreads.o
+                                                  build/obj/led_ctrl.o
                                                   build/obj/write_ctrl.o
                                                   build/obj/read_ctrl.o
                                                   build/obj/shell.o
@@ -2784,6 +2810,7 @@ chThdRelease                                      build/obj/chdynamic.o
 chThdResume                                       build/obj/chthreads.o
 chThdSetPriority                                  build/obj/chthreads.o
 chThdSleep                                        build/obj/chthreads.o
+                                                  build/obj/led_ctrl.o
                                                   build/obj/write_ctrl.o
                                                   build/obj/read_ctrl.o
                                                   build/obj/main.o
@@ -2892,6 +2919,7 @@ halIsCounterWithin                                build/obj/hal.o
 halPolledDelay                                    build/obj/hal.o
 hal_lld_init                                      build/obj/hal_lld.o
                                                   build/obj/hal.o
+initLed                                           build/obj/led_ctrl.o
 initRead                                          build/obj/read_ctrl.o
                                                   build/obj/main.o
 initWrite                                         build/obj/write_ctrl.o
@@ -2950,6 +2978,7 @@ queue_insert                                      build/obj/chlists.o
                                                   build/obj/chmsg.o
                                                   build/obj/chsem.o
 rlist                                             build/obj/chschd.o
+                                                  build/obj/led_ctrl.o
                                                   build/obj/write_ctrl.o
                                                   build/obj/read_ctrl.o
                                                   build/obj/shell.o
@@ -2974,6 +3003,7 @@ sduObjectInit                                     build/obj/serial_usb.o
 sduRequestsHook                                   build/obj/serial_usb.o
 sduStart                                          build/obj/serial_usb.o
 sduStop                                           build/obj/serial_usb.o
+setLeds                                           build/obj/led_ctrl.o
 shellCreate                                       build/obj/shell.o
 shellCreateStatic                                 build/obj/shell.o
 shellGetLine                                      build/obj/shell.o
