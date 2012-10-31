@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
   51 0008 80B1     		cbz	r0, .L2
   52              		.loc 1 84 0 is_stmt 0 discriminator 2
   53 000a 79B1     		cbz	r1, .L2
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 2
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 2
 
 
   54              	.LVL1:
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  108              		@ args = 0, pretend = 0, frame = 0
  109              		@ frame_needed = 0, uses_anonymous_args = 0
  110              	.LVL2:
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 3
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 3
 
 
  111 0000 38B5     		push	{r3, r4, r5, lr}
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  165 0030 FFF7FEFF 		bl	dbg_check_unlock
  166              	.LVL8:
  167              	@ 121 "../chibios_2.4.x/os/kernel/src/chevents.c" 1
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 4
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 4
 
 
  168 0034 FFF7FEFF 		bl      _port_unlock
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  221 0016 DA63     		str	r2, [r3, #60]
  222              		.loc 1 140 0
  223 0018 FFF7FEFF 		bl	dbg_check_unlock
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 5
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 5
 
 
  224              	.LVL11:
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  278 001a FFF7FEFF 		bl      _port_unlock
  279              	@ 0 "" 2
  280              		.loc 1 161 0
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 6
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 6
 
 
  281              		.thumb
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  334              		.loc 1 201 0
  335 001a 092B     		cmp	r3, #9
  336 001c 00D0     		beq	.L30
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 7
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 7
 
 
  337              	.L23:
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  390              		.loc 1 173 0
  391 0002 0446     		mov	r4, r0
  392              		.cfi_offset 14, -4
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 8
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 8
 
 
  393              		.cfi_offset 5, -8
@@ -478,7 +478,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  445              		@ args = 0, pretend = 0, frame = 0
  446              		@ frame_needed = 0, uses_anonymous_args = 0
  447              	.LVL22:
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 9
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 9
 
 
  448 0000 70B5     		push	{r4, r5, r6, lr}
@@ -538,7 +538,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  500              		.p2align 4,,15
  501              		.global	chEvtBroadcastFlags
  502              		.thumb
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 10
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 10
 
 
  503              		.thumb_func
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  555              		.loc 1 267 0
  556              		.cfi_startproc
  557              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 11
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 11
 
 
  558              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  612              	.LVL38:
  613              	.L55:
  614              		.loc 1 275 0 discriminator 1
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 12
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 12
 
 
  615 0034 0448     		ldr	r0, .L56
@@ -718,7 +718,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  669              	@ 0 "" 2
  670              	.LVL43:
  671              		.thumb
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 13
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 13
 
 
  672 000e FFF7FEFF 		bl	dbg_check_lock
@@ -778,7 +778,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  726              	@ 411 "../chibios_2.4.x/os/kernel/src/chevents.c" 1
  727 0056 FFF7FEFF 		bl      _port_unlock
  728              	@ 0 "" 2
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 14
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 14
 
 
  729              		.loc 1 412 0
@@ -838,7 +838,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  783 0018 0AD1     		bne	.L68
  784              		.loc 1 448 0
  785 001a 97B1     		cbz	r7, .L72
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 15
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 15
 
 
  786              		.loc 1 453 0
@@ -898,7 +898,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  840 005c AFF30080 		.section	.text.chEvtWaitAllTimeout,"ax",%progbits
  841              		.align	2
  842              		.p2align 4,,15
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 16
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 16
 
 
  843              		.global	chEvtWaitAllTimeout
@@ -958,7 +958,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  897 002e 23EA0400 		bic	r0, r3, r4
  898 0032 E863     		str	r0, [r5, #60]
  899              		.loc 1 500 0
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 17
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 17
 
 
  900 0034 FFF7FEFF 		bl	dbg_check_unlock
@@ -1018,7 +1018,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  949      7674556E 
  949      72656769 
  949      73746572 
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 18
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 18
 
 
  949      22282900 
@@ -1078,7 +1078,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  984 002b 0C000000 		.4byte	.LVL1
  985 002f 3C000000 		.4byte	.LFE0
  986 0033 0100     		.2byte	0x1
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 19
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 19
 
 
  987 0035 54       		.byte	0x54
@@ -1138,7 +1138,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  1041 00c3 0A000000 		.4byte	.LVL3
  1042 00c7 48000000 		.4byte	.LFE1
  1043 00cb 0100     		.2byte	0x1
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 20
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 20
 
 
  1044 00cd 55       		.byte	0x55
@@ -1198,7 +1198,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  1098 015c 0200     		.2byte	0x2
  1099 015e 7D       		.byte	0x7d
  1100 015f 08       		.sleb128 8
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 21
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 21
 
 
  1101 0160 00000000 		.4byte	0x0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  1155 01f0 00000000 		.4byte	0x0
  1156 01f4 00000000 		.4byte	0x0
  1157              	.LLST15:
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 22
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 22
 
 
  1158 01f8 00000000 		.4byte	.LFB4
@@ -1318,7 +1318,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  1212 0287 0100     		.2byte	0x1
  1213 0289 55       		.byte	0x55
  1214 028a 00000000 		.4byte	0x0
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 23
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 23
 
 
  1215 028e 00000000 		.4byte	0x0
@@ -1378,7 +1378,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  1269 031c 0D000000 		.4byte	.LVL29-1
  1270 0320 0100     		.2byte	0x1
  1271 0322 51       		.byte	0x51
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 24
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 24
 
 
  1272 0323 0D000000 		.4byte	.LVL29-1
@@ -1438,7 +1438,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  1326 03b3 0A000000 		.4byte	.LVL31
  1327 03b7 14000000 		.4byte	.LVL32
  1328 03bb 0200     		.2byte	0x2
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 25
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 25
 
 
  1329 03bd 30       		.byte	0x30
@@ -1498,7 +1498,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  1383 0446 1C       		.sleb128 28
  1384 0447 11000000 		.4byte	.LVL44-1
  1385 044b 60000000 		.4byte	.LFE9
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 26
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 26
 
 
  1386 044f 0100     		.2byte	0x1
@@ -1558,7 +1558,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  1440 04d2 00000000 		.4byte	.LVL49
  1441 04d6 11000000 		.4byte	.LVL52-1
  1442 04da 0100     		.2byte	0x1
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 27
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 27
 
 
  1443 04dc 51       		.byte	0x51
@@ -1618,7 +1618,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  1497 055e 00000000 		.4byte	.LVL56
  1498 0562 11000000 		.4byte	.LVL59-1
  1499 0566 0100     		.2byte	0x1
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 28
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 28
 
 
  1500 0568 50       		.byte	0x50
@@ -1678,7 +1678,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  1554 0011 FA010000 		.4byte	.LASF89
  1555 0015 16000000 		.4byte	.LASF90
  1556 0019 00000000 		.4byte	0x0
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 29
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 29
 
 
  1557 001d 00000000 		.4byte	0x0
@@ -1738,7 +1738,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  1611 0089 04       		.uleb128 0x4
  1612 008a 0D000000 		.4byte	.LASF11
  1613 008e 02       		.byte	0x2
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 30
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 30
 
 
  1614 008f 78       		.byte	0x78
@@ -1798,7 +1798,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  1668 0104 2A       		.byte	0x2a
  1669 0105 09010000 		.4byte	0x109
  1670 0109 05       		.uleb128 0x5
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 31
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 31
 
 
  1671 010a 08030000 		.4byte	.LASF22
@@ -1858,7 +1858,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  1725 016a B9030000 		.4byte	.LASF29
  1726 016e 05       		.byte	0x5
  1727 016f 6E       		.byte	0x6e
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 32
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 32
 
 
  1728 0170 D1040000 		.4byte	0x4d1
@@ -1918,7 +1918,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  1782 01d0 05       		.byte	0x5
  1783 01d1 B3       		.byte	0xb3
  1784 01d2 7B020000 		.4byte	0x27b
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 33
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 33
 
 
  1785 01d6 02       		.byte	0x2
@@ -1978,7 +1978,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  1839 0230 04       		.byte	0x4
  1840 0231 61       		.byte	0x61
  1841 0232 53020000 		.4byte	0x253
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 34
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 34
 
 
  1842 0236 06       		.uleb128 0x6
@@ -2038,7 +2038,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  1896 0299 DD       		.byte	0xdd
  1897 029a 89000000 		.4byte	0x89
  1898 029e 05       		.uleb128 0x5
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 35
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 35
 
 
  1899 029f 53030000 		.4byte	.LASF46
@@ -2098,7 +2098,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  1953 02ff 72313000 		.ascii	"r10\000"
  1954 0303 06       		.byte	0x6
  1955 0304 1701     		.2byte	0x117
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 36
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 36
 
 
  1956 0306 86020000 		.4byte	0x286
@@ -2158,7 +2158,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  2010 0369 06       		.uleb128 0x6
  2011 036a EB020000 		.4byte	.LASF49
  2012 036e 07       		.byte	0x7
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 37
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 37
 
 
  2013 036f 60       		.byte	0x60
@@ -2218,7 +2218,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  2067 03cf 08       		.byte	0x8
  2068 03d0 2C       		.byte	0x2c
  2069 03d1 00040000 		.4byte	0x400
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 38
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 38
 
 
  2070 03d5 06       		.uleb128 0x6
@@ -2278,7 +2278,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  2124 043b 09       		.byte	0x9
  2125 043c 32       		.byte	0x32
  2126 043d 53020000 		.4byte	0x253
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 39
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 39
 
 
  2127 0441 02       		.byte	0x2
@@ -2338,7 +2338,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  2181 04a4 11       		.uleb128 0x11
  2182 04a5 06000000 		.4byte	.LASF67
  2183 04a9 05       		.byte	0x5
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 40
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 40
 
 
  2184 04aa 97       		.byte	0x97
@@ -2398,7 +2398,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  2238 0522 3E000000 		.4byte	.LLST2
  2239 0526 15       		.uleb128 0x15
  2240 0527 0A010000 		.4byte	.LASF72
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 41
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 41
 
 
  2241 052b 01       		.byte	0x1
@@ -2458,7 +2458,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  2295 05ad 18       		.uleb128 0x18
  2296 05ae 6D00     		.ascii	"m\000"
  2297 05b0 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 42
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 42
 
 
  2298 05b1 85       		.byte	0x85
@@ -2518,7 +2518,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  2352 0628 01       		.byte	0x1
  2353 0629 AB       		.byte	0xab
  2354 062a 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 43
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 43
 
 
  2355 062b 00000000 		.4byte	.LFB4
@@ -2578,7 +2578,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  2409 06b1 DA020000 		.4byte	.LLST22
  2410 06b5 D8060000 		.4byte	0x6d8
  2411 06b9 14       		.uleb128 0x14
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 44
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 44
 
 
  2412 06ba 65737000 		.ascii	"esp\000"
@@ -2638,7 +2638,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  2466 0740 60000000 		.4byte	.LFE9
  2467 0744 DF030000 		.4byte	.LLST29
  2468 0748 8B070000 		.4byte	0x78b
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 45
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 45
 
 
  2469 074c 1A       		.uleb128 0x1a
@@ -2698,7 +2698,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  2523 07d9 1B       		.uleb128 0x1b
  2524 07da 6D00     		.ascii	"m\000"
  2525 07dc 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 46
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 46
 
 
  2526 07dd BB01     		.2byte	0x1bb
@@ -2758,7 +2758,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  2580 0004 0E       		.uleb128 0xe
  2581 0005 13       		.uleb128 0x13
  2582 0006 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 47
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 47
 
 
  2583 0007 03       		.uleb128 0x3
@@ -2818,7 +2818,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  2637 003d 0B       		.uleb128 0xb
  2638 003e 0B       		.uleb128 0xb
  2639 003f 3A       		.uleb128 0x3a
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 48
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 48
 
 
  2640 0040 0B       		.uleb128 0xb
@@ -2878,7 +2878,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  2694 0076 0B       		.uleb128 0xb
  2695 0077 49       		.uleb128 0x49
  2696 0078 13       		.uleb128 0x13
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 49
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 49
 
 
  2697 0079 00       		.byte	0x0
@@ -2938,7 +2938,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  2751 00af 00       		.byte	0x0
  2752 00b0 0F       		.uleb128 0xf
  2753 00b1 05       		.uleb128 0x5
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 50
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 50
 
 
  2754 00b2 00       		.byte	0x0
@@ -2998,7 +2998,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  2808 00e8 01       		.uleb128 0x1
  2809 00e9 40       		.uleb128 0x40
  2810 00ea 06       		.uleb128 0x6
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 51
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 51
 
 
  2811 00eb 01       		.uleb128 0x1
@@ -3058,7 +3058,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  2865 0121 03       		.uleb128 0x3
  2866 0122 0E       		.uleb128 0xe
  2867 0123 3A       		.uleb128 0x3a
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 52
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 52
 
 
  2868 0124 0B       		.uleb128 0xb
@@ -3118,7 +3118,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  2922 015a 00       		.byte	0x0
  2923 015b 1A       		.uleb128 0x1a
  2924 015c 05       		.uleb128 0x5
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 53
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 53
 
 
  2925 015d 00       		.byte	0x0
@@ -3178,7 +3178,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  2979 0193 34       		.uleb128 0x34
  2980 0194 00       		.byte	0x0
  2981 0195 03       		.uleb128 0x3
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 54
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 54
 
 
  2982 0196 0E       		.uleb128 0xe
@@ -3238,7 +3238,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  3014      7442726F 
  3014      61646361 
  3014      7374466C 
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 55
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 55
 
 
  3014      61677349 
@@ -3298,7 +3298,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  3042 0050 74737461 		.ascii	"tstate_t\000"
  3042      74655F74 
  3042      00
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 56
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 56
 
 
  3043 0059 B1000000 		.4byte	0xb1
@@ -3358,7 +3358,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  3073 011e C9030000 		.4byte	0x3c9
  3074 0122 4D757465 		.ascii	"Mutex\000"
  3074      7800
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 57
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 57
 
 
  3075 0128 06040000 		.4byte	0x406
@@ -3418,7 +3418,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  3115 0054 50000000 		.4byte	.LFE8-.LFB8
  3116 0058 00000000 		.4byte	.LFB9
  3117 005c 60000000 		.4byte	.LFE9-.LFB9
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 58
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 58
 
 
  3118 0060 00000000 		.4byte	.LFB10
@@ -3478,7 +3478,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  3162      00
  3163              	.LASF77:
  3164 0043 63684576 		.ascii	"chEvtSignalFlagsI\000"
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 59
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 59
 
 
  3164      74536967 
@@ -3538,7 +3538,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  3188 00e5 63684576 		.ascii	"chEvtBroadcastFlagsI\000"
  3188      7442726F 
  3188      61646361 
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 60
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 60
 
 
  3188      7374466C 
@@ -3598,7 +3598,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  3215              	.LASF4:
  3216 0186 73686F72 		.ascii	"short unsigned int\000"
  3216      7420756E 
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 61
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 61
 
 
  3216      7369676E 
@@ -3658,7 +3658,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  3242      7800
  3243              	.LASF42:
  3244 0240 54687265 		.ascii	"ThreadsQueue\000"
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 62
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 62
 
 
  3244      61647351 
@@ -3718,7 +3718,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  3272      786C6973 
  3272      7400
  3273              	.LASF3:
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 63
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 63
 
 
  3274 02d9 73686F72 		.ascii	"short int\000"
@@ -3778,7 +3778,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  3306      67717565 
  3306      756500
  3307              	.LASF33:
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 64
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 64
 
 
  3308 0365 705F7265 		.ascii	"p_refs\000"
@@ -3832,56 +3832,56 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 1
  3334      6974696E 
  3334      6700
  3335              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 65
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 65
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chevents.c
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:24     .text.chEvtRegisterMask:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:30     .text.chEvtRegisterMask:00000000 chEvtRegisterMask
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:92     .text.chEvtRegisterMask:00000034 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:98     .text.chEvtUnregister:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:104    .text.chEvtUnregister:00000000 chEvtUnregister
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:181    .text.chEvtUnregister:00000044 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:186    .text.chEvtClearFlags:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:192    .text.chEvtClearFlags:00000000 chEvtClearFlags
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:235    .text.chEvtClearFlags:00000028 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:240    .text.chEvtAddFlags:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:246    .text.chEvtAddFlags:00000000 chEvtAddFlags
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:287    .text.chEvtAddFlags:00000024 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:292    .text.chEvtSignalFlagsI:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:298    .text.chEvtSignalFlagsI:00000000 chEvtSignalFlagsI
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:369    .text.chEvtSignalFlagsI:00000044 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:374    .text.chEvtSignalFlags:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:380    .text.chEvtSignalFlags:00000000 chEvtSignalFlags
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:430    .text.chEvtSignalFlags:00000030 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:435    .text.chEvtBroadcastFlagsI:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:441    .text.chEvtBroadcastFlagsI:00000000 chEvtBroadcastFlagsI
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:494    .text.chEvtBroadcastFlagsI:00000030 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:499    .text.chEvtBroadcastFlags:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:505    .text.chEvtBroadcastFlags:00000000 chEvtBroadcastFlags
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:547    .text.chEvtDispatch:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:553    .text.chEvtDispatch:00000000 chEvtDispatch
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:629    .text.chEvtDispatch:00000048 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:635    .text.chEvtWaitOneTimeout:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:641    .text.chEvtWaitOneTimeout:00000000 chEvtWaitOneTimeout
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:735    .text.chEvtWaitOneTimeout:0000005c $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:740    .text.chEvtWaitAnyTimeout:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:746    .text.chEvtWaitAnyTimeout:00000000 chEvtWaitAnyTimeout
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:836    .text.chEvtWaitAnyTimeout:00000058 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:841    .text.chEvtWaitAllTimeout:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:847    .text.chEvtWaitAllTimeout:00000000 chEvtWaitAllTimeout
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:939    .text.chEvtWaitAllTimeout:0000005c $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:944    .rodata.str1.4:00000000 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:24     .text.chEvtRegisterMask:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:30     .text.chEvtRegisterMask:00000000 chEvtRegisterMask
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:92     .text.chEvtRegisterMask:00000034 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:98     .text.chEvtUnregister:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:104    .text.chEvtUnregister:00000000 chEvtUnregister
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:181    .text.chEvtUnregister:00000044 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:186    .text.chEvtClearFlags:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:192    .text.chEvtClearFlags:00000000 chEvtClearFlags
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:235    .text.chEvtClearFlags:00000028 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:240    .text.chEvtAddFlags:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:246    .text.chEvtAddFlags:00000000 chEvtAddFlags
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:287    .text.chEvtAddFlags:00000024 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:292    .text.chEvtSignalFlagsI:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:298    .text.chEvtSignalFlagsI:00000000 chEvtSignalFlagsI
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:369    .text.chEvtSignalFlagsI:00000044 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:374    .text.chEvtSignalFlags:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:380    .text.chEvtSignalFlags:00000000 chEvtSignalFlags
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:430    .text.chEvtSignalFlags:00000030 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:435    .text.chEvtBroadcastFlagsI:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:441    .text.chEvtBroadcastFlagsI:00000000 chEvtBroadcastFlagsI
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:494    .text.chEvtBroadcastFlagsI:00000030 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:499    .text.chEvtBroadcastFlags:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:505    .text.chEvtBroadcastFlags:00000000 chEvtBroadcastFlags
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:547    .text.chEvtDispatch:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:553    .text.chEvtDispatch:00000000 chEvtDispatch
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:629    .text.chEvtDispatch:00000048 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:635    .text.chEvtWaitOneTimeout:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:641    .text.chEvtWaitOneTimeout:00000000 chEvtWaitOneTimeout
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:735    .text.chEvtWaitOneTimeout:0000005c $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:740    .text.chEvtWaitAnyTimeout:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:746    .text.chEvtWaitAnyTimeout:00000000 chEvtWaitAnyTimeout
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:836    .text.chEvtWaitAnyTimeout:00000058 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:841    .text.chEvtWaitAllTimeout:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:847    .text.chEvtWaitAllTimeout:00000000 chEvtWaitAllTimeout
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:939    .text.chEvtWaitAllTimeout:0000005c $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:944    .rodata.str1.4:00000000 $d
                      .debug_frame:00000010 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:97     .text.chEvtRegisterMask:0000003c $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:185    .text.chEvtUnregister:00000048 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:239    .text.chEvtClearFlags:0000002c $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:291    .text.chEvtAddFlags:00000028 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:373    .text.chEvtSignalFlagsI:00000048 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:434    .text.chEvtSignalFlags:00000034 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:498    .text.chEvtBroadcastFlagsI:00000034 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s:840    .text.chEvtWaitAnyTimeout:0000005c $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:97     .text.chEvtRegisterMask:0000003c $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:185    .text.chEvtUnregister:00000048 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:239    .text.chEvtClearFlags:0000002c $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:291    .text.chEvtAddFlags:00000028 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:373    .text.chEvtSignalFlagsI:00000048 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:434    .text.chEvtSignalFlags:00000034 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:498    .text.chEvtBroadcastFlagsI:00000034 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s:840    .text.chEvtWaitAnyTimeout:0000005c $t
 
 UNDEFINED SYMBOLS
 _port_lock
@@ -3892,7 +3892,7 @@ chDbgPanic
 rlist
 chDbgCheckClassI
 chSchReadyI
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc7r9X5D.s 			page 66
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccjhDDDb.s 			page 66
 
 
 chSchRescheduleS

@@ -2,6 +2,7 @@
 #include "ch.h"
 #include "hal.h"
 
+#include "read_ctrl.h"
 
 int main(void)
 {
@@ -9,6 +10,7 @@ int main(void)
   halInit();
   chSysInit();
 
+  initRead();
   while ( 1 )
   {
     chThdSleepSeconds( 1 );

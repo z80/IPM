@@ -1,3 +1,13 @@
 soft/project/build
 soft/project/app
 soft/project/app/*
+soft/project/app/ctrl.exe
+soft/firmware/valve/.dep
+soft/firmware/valve/.settings
+soft/firmware/valve/build/lst
+soft/firmware/valve/build/obj
+soft/firmware/valve/.dep/*
+soft/firmware/valve/.settings/*
+soft/firmware/valve/build/lst/*
+soft/firmware/valve/build/obj/*
+

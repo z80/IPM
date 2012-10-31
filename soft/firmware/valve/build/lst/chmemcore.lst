@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 1
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 1
   51 0012 1A60     		str	r2, [r3, #0]
   52              		.loc 1 77 0
   53 0014 7047     		bx	lr
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 2
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s 			page 2
 
 
   54              	.L3:
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 1
  107 0020 1846     		mov	r0, r3
  108 0022 10BD     		pop	{r4, pc}
  109              	.LVL5:
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 3
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s 			page 3
 
 
  110              	.L6:
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 1
  164              		.thumb
  165 001c 2046     		mov	r0, r4
  166 001e 10BD     		pop	{r4, pc}
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 4
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s 			page 4
 
 
  167              		.cfi_endproc
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 1
  219 0000 00000000 		.4byte	.LFB2
  220 0004 02000000 		.4byte	.LCFI0
  221 0008 0200     		.2byte	0x2
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 5
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s 			page 5
 
 
  222 000a 7D       		.byte	0x7d
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 1
  276 0096 0B000000 		.4byte	.LVL8-1
  277 009a 14000000 		.4byte	.LVL9
  278 009e 0100     		.2byte	0x1
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 6
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s 			page 6
 
 
  279 00a0 54       		.byte	0x54
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 1
  333 0056 08       		.byte	0x8
  334 0057 B3000000 		.4byte	.LASF4
  335 005b 04       		.uleb128 0x4
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 7
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s 			page 7
 
 
  336 005c 02       		.byte	0x2
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 1
  390 00bf 45       		.byte	0x45
  391 00c0 C7000000 		.4byte	0xc7
  392 00c4 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 8
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s 			page 8
 
 
  393 00c5 01       		.byte	0x1
@@ -478,7 +478,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 1
  447 0145 00       		.byte	0x0
  448 0146 0E       		.uleb128 0xe
  449 0147 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 9
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s 			page 9
 
 
  450 0148 46010000 		.4byte	.LASF23
@@ -538,7 +538,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 1
  504 000c 01       		.uleb128 0x1
  505 000d 52       		.uleb128 0x52
  506 000e 01       		.uleb128 0x1
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 10
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s 			page 10
 
 
  507 000f 55       		.uleb128 0x55
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 1
  561 0045 13       		.uleb128 0x13
  562 0046 00       		.byte	0x0
  563 0047 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 11
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s 			page 11
 
 
  564 0048 07       		.uleb128 0x7
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 1
  618 007e 0B       		.uleb128 0xb
  619 007f 2E       		.uleb128 0x2e
  620 0080 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 12
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s 			page 12
 
 
  621 0081 3F       		.uleb128 0x3f
@@ -718,7 +718,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 1
  675 00b7 00       		.byte	0x0
  676 00b8 3F       		.uleb128 0x3f
  677 00b9 0C       		.uleb128 0xc
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 13
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s 			page 13
 
 
  678 00ba 03       		.uleb128 0x3
@@ -778,7 +778,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 1
  724      72655374 
  724      61747573 
  724      00
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 14
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s 			page 14
 
 
  725 004f 00000000 		.4byte	0x0
@@ -838,7 +838,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 1
  770      6E7400
  771              	.LASF19:
  772 0021 474E5520 		.ascii	"GNU C 4.5.2\000"
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 15
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s 			page 15
 
 
  772      4320342E 
@@ -898,7 +898,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 1
  796      00
  797              	.LASF5:
  798 00db 73686F72 		.ascii	"short int\000"
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 16
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s 			page 16
 
 
  798      7420696E 
@@ -939,29 +939,29 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 1
  814      61747573 
  814      00
  815              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s 			page 17
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s 			page 17
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chmemcore.c
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s:24     .text._core_init:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s:30     .text._core_init:00000000 _core_init
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s:57     .text._core_init:00000018 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s:65     .text.chCoreAllocI:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s:71     .text.chCoreAllocI:00000000 chCoreAllocI
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s:119    .text.chCoreAllocI:00000028 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s:125    .text.chCoreAlloc:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s:131    .text.chCoreAlloc:00000000 chCoreAlloc
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s:171    .text.chCoreStatus:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s:177    .text.chCoreStatus:00000000 chCoreStatus
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s:195    .text.chCoreStatus:0000000c $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s:201    .bss.endmem:00000000 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s:205    .bss.endmem:00000000 endmem
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s:208    .bss.nextmem:00000000 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s:212    .bss.nextmem:00000000 nextmem
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s:24     .text._core_init:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s:30     .text._core_init:00000000 _core_init
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s:57     .text._core_init:00000018 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s:65     .text.chCoreAllocI:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s:71     .text.chCoreAllocI:00000000 chCoreAllocI
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s:119    .text.chCoreAllocI:00000028 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s:125    .text.chCoreAlloc:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s:131    .text.chCoreAlloc:00000000 chCoreAlloc
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s:171    .text.chCoreStatus:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s:177    .text.chCoreStatus:00000000 chCoreStatus
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s:195    .text.chCoreStatus:0000000c $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s:201    .bss.endmem:00000000 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s:205    .bss.endmem:00000000 endmem
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s:208    .bss.nextmem:00000000 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s:212    .bss.nextmem:00000000 nextmem
                      .debug_frame:00000010 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s:64     .text._core_init:00000028 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRo15zW.s:200    .text.chCoreStatus:00000014 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s:64     .text._core_init:00000028 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccAFcLUG.s:200    .text.chCoreStatus:00000014 $t
 
 UNDEFINED SYMBOLS
 __heap_base__

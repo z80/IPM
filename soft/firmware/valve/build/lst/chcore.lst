@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccCfNNC6.s 			page 1
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccgW1Asj.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccCfNNC6.s 			page 1
   49              	.Letext0:
   50              		.section	.debug_info
   51 0000 87000000 		.4byte	0x87
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccCfNNC6.s 			page 2
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccgW1Asj.s 			page 2
 
 
   52 0004 0200     		.2byte	0x2
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccCfNNC6.s 			page 1
  106 0071 08       		.byte	0x8
  107 0072 DE000000 		.4byte	.LASF9
  108 0076 04       		.uleb128 0x4
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccCfNNC6.s 			page 3
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccgW1Asj.s 			page 3
 
 
  109 0077 01       		.byte	0x1
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccCfNNC6.s 			page 1
  163 002a 00       		.byte	0x0
  164 002b 04       		.uleb128 0x4
  165 002c 2E       		.uleb128 0x2e
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccCfNNC6.s 			page 4
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccgW1Asj.s 			page 4
 
 
  166 002d 00       		.byte	0x0
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccCfNNC6.s 			page 1
  218              		.section	.debug_str,"MS",%progbits,1
  219              	.LASF12:
  220 0000 433A5C70 		.ascii	"C:\\projects\\ipm\\soft\\firmware\\valve\000"
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccCfNNC6.s 			page 5
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccgW1Asj.s 			page 5
 
 
  220      726F6A65 
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccCfNNC6.s 			page 1
  241              	.LASF10:
  242 00d2 474E5520 		.ascii	"GNU C 4.5.2\000"
  242      4320342E 
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccCfNNC6.s 			page 6
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccgW1Asj.s 			page 6
 
 
  242      352E3200 
@@ -311,13 +311,13 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccCfNNC6.s 			page 1
  246      6720696E 
  246      7400
  247              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccCfNNC6.s 			page 7
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccgW1Asj.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chcore.c
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccCfNNC6.s:24     .text.port_halt:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccCfNNC6.s:30     .text.port_halt:00000000 port_halt
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccgW1Asj.s:24     .text.port_halt:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccgW1Asj.s:30     .text.port_halt:00000000 port_halt
                      .debug_frame:00000010 $d
 
 NO UNDEFINED SYMBOLS

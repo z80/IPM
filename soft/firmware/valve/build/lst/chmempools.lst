@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
   51 0008 08B1     		cbz	r0, .L2
   52              		.loc 1 63 0 is_stmt 0 discriminator 2
   53 000a 0329     		cmp	r1, #3
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 2
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 2
 
 
   54 000c 02D8     		bhi	.L3
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  107              		.loc 1 83 0
  108 0008 4CB1     		cbz	r4, .L11
  109              	.L8:
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 3
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 3
 
 
  110              		.loc 1 85 0
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  164              	@ 104 "../chibios_2.4.x/os/kernel/src/chmempools.c" 1
  165 0004 FFF7FEFF 		bl      _port_lock
  166              	@ 0 "" 2
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 4
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 4
 
 
  167              		.thumb
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  221 000e 15F0070F 		tst	r5, #7
  222 0012 02D0     		beq	.L17
  223              	.LVL17:
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 5
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 5
 
 
  224              	.L16:
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  277 0012 FFF7FEFF 		bl	chPoolFreeI
  278              		.loc 1 149 0
  279 0016 FFF7FEFF 		bl	dbg_check_unlock
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 6
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 6
 
 
  280              	@ 149 "../chibios_2.4.x/os/kernel/src/chmempools.c" 1
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  324 0035 54       		.byte	0x54
  325 0036 00000000 		.4byte	0x0
  326 003a 00000000 		.4byte	0x0
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 7
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 7
 
 
  327              	.LLST2:
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  381 00c9 1B000000 		.4byte	.LVL8-1
  382 00cd 0200     		.2byte	0x2
  383 00cf 74       		.byte	0x74
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 8
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 8
 
 
  384 00d0 00       		.sleb128 0
@@ -478,7 +478,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  438 015c 00000000 		.4byte	0x0
  439              	.LLST11:
  440 0160 00000000 		.4byte	.LVL14
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 9
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 9
 
 
  441 0164 09000000 		.4byte	.LVL16-1
@@ -538,7 +538,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  495 01f4 00000000 		.4byte	0x0
  496              	.LLST16:
  497 01f8 00000000 		.4byte	.LVL18
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 10
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 10
 
 
  498 01fc 0D000000 		.4byte	.LVL19-1
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  552 005a 71000000 		.4byte	.LASF4
  553 005e 04       		.uleb128 0x4
  554 005f 04       		.byte	0x4
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 11
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 11
 
 
  555 0060 05       		.byte	0x5
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  609 00c6 0A       		.uleb128 0xa
  610 00c7 76010000 		.4byte	.LASF12
  611 00cb 04       		.byte	0x4
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 12
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 12
 
 
  612 00cc 35       		.byte	0x35
@@ -718,7 +718,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  666 013a 84000000 		.4byte	.LASF18
  667 013e 01       		.byte	0x1
  668 013f 3D       		.byte	0x3d
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 13
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 13
 
 
  669 0140 7C000000 		.4byte	0x7c
@@ -778,7 +778,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  723 01c5 0C       		.uleb128 0xc
  724 01c6 01       		.byte	0x1
  725 01c7 8D000000 		.4byte	.LASF23
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 14
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 14
 
 
  726 01cb 01       		.byte	0x1
@@ -838,7 +838,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  780 0004 0E       		.uleb128 0xe
  781 0005 13       		.uleb128 0x13
  782 0006 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 15
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 15
 
 
  783 0007 03       		.uleb128 0x3
@@ -898,7 +898,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  837 003d 00       		.byte	0x0
  838 003e 00       		.byte	0x0
  839 003f 06       		.uleb128 0x6
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 16
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 16
 
 
  840 0040 0F       		.uleb128 0xf
@@ -958,7 +958,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  894 0076 00       		.byte	0x0
  895 0077 00       		.byte	0x0
  896 0078 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 17
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 17
 
 
  897 0079 13       		.uleb128 0x13
@@ -1018,7 +1018,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  951 00af 0E       		.uleb128 0xe
  952 00b0 3A       		.uleb128 0x3a
  953 00b1 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 18
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 18
 
 
  954 00b2 3B       		.uleb128 0x3b
@@ -1078,7 +1078,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  1008 00e8 0B       		.uleb128 0xb
  1009 00e9 3B       		.uleb128 0x3b
  1010 00ea 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 19
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 19
 
 
  1011 00eb 49       		.uleb128 0x49
@@ -1138,7 +1138,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  1054 005d 00000000 		.4byte	0x0
  1055              		.section	.debug_pubtypes,"",%progbits
  1056 0000 49000000 		.4byte	0x49
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 20
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 20
 
 
  1057 0004 0200     		.2byte	0x2
@@ -1198,7 +1198,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  1103              		.section	.debug_str,"MS",%progbits,1
  1104              	.LASF9:
  1105 0000 73697A65 		.ascii	"size_t\000"
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 21
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 21
 
 
  1105      5F7400
@@ -1258,7 +1258,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  1129      7279506F 
  1129      6F6C00
  1130              	.LASF21:
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 22
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 22
 
 
  1131 00bd 6F626A70 		.ascii	"objp\000"
@@ -1318,7 +1318,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  1155      20696E74 
  1155      00
  1156              	.LASF1:
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 23
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 23
 
 
  1157 016a 7369676E 		.ascii	"signed char\000"
@@ -1332,29 +1332,29 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 1
  1161      6F6C496E 
  1161      697400
  1162              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s 			page 24
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 24
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chmempools.c
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s:24     .text.chPoolInit:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s:30     .text.chPoolInit:00000000 chPoolInit
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s:79     .text.chPoolInit:00000024 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s:84     .text.chPoolAllocI:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s:90     .text.chPoolAllocI:00000000 chPoolAllocI
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s:138    .text.chPoolAllocI:00000028 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s:143    .text.chPoolAlloc:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s:149    .text.chPoolAlloc:00000000 chPoolAlloc
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s:189    .text.chPoolFreeI:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s:195    .text.chPoolFreeI:00000000 chPoolFreeI
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s:239    .text.chPoolFreeI:00000024 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s:244    .text.chPoolFree:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s:250    .text.chPoolFree:00000000 chPoolFree
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s:290    .rodata.str1.4:00000000 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:24     .text.chPoolInit:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:30     .text.chPoolInit:00000000 chPoolInit
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:79     .text.chPoolInit:00000024 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:84     .text.chPoolAllocI:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:90     .text.chPoolAllocI:00000000 chPoolAllocI
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:138    .text.chPoolAllocI:00000028 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:143    .text.chPoolAlloc:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:149    .text.chPoolAlloc:00000000 chPoolAlloc
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:189    .text.chPoolFreeI:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:195    .text.chPoolFreeI:00000000 chPoolFreeI
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:239    .text.chPoolFreeI:00000024 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:244    .text.chPoolFree:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:250    .text.chPoolFree:00000000 chPoolFree
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:290    .rodata.str1.4:00000000 $d
                      .debug_frame:00000010 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s:83     .text.chPoolInit:00000028 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s:142    .text.chPoolAllocI:0000002c $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccKYZCo5.s:243    .text.chPoolFreeI:00000028 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:83     .text.chPoolInit:00000028 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:142    .text.chPoolAllocI:0000002c $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:243    .text.chPoolFreeI:00000028 $t
 
 UNDEFINED SYMBOLS
 chDbgPanic

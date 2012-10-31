@@ -84,12 +84,12 @@ CSRC = $(PORTSRC) \
        $(CHIBIOS)/os/various/syscalls.c \
        $(CHIBIOS)/os/various/shell.c \
        $(CHIBIOS)/os/various/chprintf.c \
-       src/main.c \ 
-       src/usb_ctrl.c \
-       src/read_ctrl.c \
-       src/write_ctrl.c \
-       src/i2c_ctrl.c \
-       src/led_ctrl.c
+       ./src/main.c \
+       ./src/usb_ctrl.c \
+       ./src/read_ctrl.c \
+       ./src/write_ctrl.c \
+       ./src/i2c_ctrl.c \
+       ./src/led_ctrl.c
 
 # C++ sources that can be compiled in ARM or THUMB mode depending on the global
 # setting.
