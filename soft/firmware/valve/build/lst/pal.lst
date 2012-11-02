@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 1
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 1
   51              		.loc 1 78 0 discriminator 1
   52 000c 0548     		ldr	r0, .L5
   53              	.LVL1:
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 2
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s 			page 2
 
 
   54 000e FFF7FEFF 		bl	chDbgPanic
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 1
  107 0010 FFF7FEFF 		bl	chDbgPanic
  108              	.LVL4:
  109 0014 A368     		ldr	r3, [r4, #8]
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 3
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s 			page 3
 
 
  110              	.L9:
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 1
  163              		.loc 1 126 0 discriminator 1
  164 000e 0648     		ldr	r0, .L15
  165              	.LVL7:
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 4
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s 			page 4
 
 
  166 0010 FFF7FEFF 		bl	chDbgPanic
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 1
  210 0018 00000000 		.4byte	0x0
  211 001c 00000000 		.4byte	0x0
  212              	.LLST1:
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 5
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s 			page 5
 
 
  213 0020 00000000 		.4byte	.LVL0
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 1
  267 00b0 7D       		.byte	0x7d
  268 00b1 10       		.sleb128 16
  269 00b2 00000000 		.4byte	0x0
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 6
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s 			page 6
 
 
  270 00b6 00000000 		.4byte	0x0
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 1
  324 003e 03       		.uleb128 0x3
  325 003f 01       		.byte	0x1
  326 0040 08       		.byte	0x8
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 7
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s 			page 7
 
 
  327 0041 75000000 		.4byte	.LASF2
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 1
  381 00ab 43524C00 		.ascii	"CRL\000"
  382 00af 03       		.byte	0x3
  383 00b0 FA03     		.2byte	0x3fa
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 8
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s 			page 8
 
 
  384 00b2 90000000 		.4byte	0x90
@@ -478,7 +478,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 1
  438 0115 D0000000 		.4byte	.LASF15
  439 0119 03       		.byte	0x3
  440 011a 0104     		.2byte	0x401
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 9
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s 			page 9
 
 
  441 011c A1000000 		.4byte	0xa1
@@ -538,7 +538,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 1
  495 0185 0D       		.uleb128 0xd
  496 0186 01       		.byte	0x1
  497 0187 52010000 		.4byte	.LASF31
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 10
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s 			page 10
 
 
  498 018b 01       		.byte	0x1
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 1
  552 020f 7C       		.byte	0x7c
  553 0210 B2010000 		.4byte	0x1b2
  554 0214 BA000000 		.4byte	.LLST6
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 11
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s 			page 11
 
 
  555 0218 10       		.uleb128 0x10
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 1
  609 001f 00       		.byte	0x0
  610 0020 03       		.uleb128 0x3
  611 0021 24       		.uleb128 0x24
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 12
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s 			page 12
 
 
  612 0022 00       		.byte	0x0
@@ -718,7 +718,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 1
  666 0058 0A       		.uleb128 0xa
  667 0059 00       		.byte	0x0
  668 005a 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 13
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s 			page 13
 
 
  669 005b 08       		.uleb128 0x8
@@ -778,7 +778,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 1
  723 0091 0E       		.uleb128 0xe
  724 0092 3A       		.uleb128 0x3a
  725 0093 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 14
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s 			page 14
 
 
  726 0094 3B       		.uleb128 0x3b
@@ -838,7 +838,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 1
  780 00ca 0E       		.uleb128 0xe
  781 00cb 3A       		.uleb128 0x3a
  782 00cc 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 15
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s 			page 15
 
 
  783 00cd 3B       		.uleb128 0x3b
@@ -898,7 +898,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 1
  836      65616442 
  836      757300
  837 001d B8010000 		.4byte	0x1b8
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 16
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s 			page 16
 
 
  838 0021 70616C57 		.ascii	"palWriteBus\000"
@@ -958,7 +958,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 1
  870 000c 0000     		.2byte	0x0
  871 000e 0000     		.2byte	0x0
  872 0010 00000000 		.4byte	.LFB55
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 17
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s 			page 17
 
 
  873 0014 28000000 		.4byte	.LFE55-.LFB55
@@ -1018,7 +1018,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 1
  909              	.LASF17:
  910 006c 696F6D6F 		.ascii	"iomode_t\000"
  910      64655F74 
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 18
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s 			page 18
 
 
  910      00
@@ -1078,7 +1078,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 1
  934      00
  935              	.LASF23:
  936 0102 62697473 		.ascii	"bits\000"
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 19
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s 			page 19
 
 
  936      00
@@ -1122,25 +1122,25 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 1
  954 0180 494F4275 		.ascii	"IOBus\000"
  954      7300
  955              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s 			page 20
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s 			page 20
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 pal.c
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s:24     .text.palReadBus:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s:30     .text.palReadBus:00000000 palReadBus
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s:68     .text.palReadBus:00000024 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s:73     .text.palWriteBus:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s:79     .text.palWriteBus:00000000 palWriteBus
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s:127    .text.palWriteBus:00000034 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s:132    .text.palSetBusMode:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s:138    .text.palSetBusMode:00000000 palSetBusMode
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s:182    .text.palSetBusMode:00000028 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s:187    .rodata.str1.4:00000000 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s:24     .text.palReadBus:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s:30     .text.palReadBus:00000000 palReadBus
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s:68     .text.palReadBus:00000024 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s:73     .text.palWriteBus:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s:79     .text.palWriteBus:00000000 palWriteBus
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s:127    .text.palWriteBus:00000034 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s:132    .text.palSetBusMode:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s:138    .text.palSetBusMode:00000000 palSetBusMode
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s:182    .text.palSetBusMode:00000028 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s:187    .rodata.str1.4:00000000 $d
                      .debug_frame:00000010 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s:72     .text.palReadBus:00000028 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s:131    .text.palWriteBus:00000038 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccC2BsCu.s:186    .text.palSetBusMode:0000002c $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s:72     .text.palReadBus:00000028 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s:131    .text.palWriteBus:00000038 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cc1TzIei.s:186    .text.palSetBusMode:0000002c $t
 
 UNDEFINED SYMBOLS
 chDbgPanic

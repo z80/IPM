@@ -12,7 +12,7 @@ int main(void)
   halInit();
   chSysInit();
 
-  ledInit();
+  initLed();
   initRead();
   initWrite();
   while ( 1 )

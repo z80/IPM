@@ -51,6 +51,7 @@ build/obj/serial.o: ../chibios_2.4.x/os/hal/src/serial.c \
  ../chibios_2.4.x/os/hal/include/ext.h \
  ../chibios_2.4.x/os/hal/include/gpt.h \
  ../chibios_2.4.x/os/hal/include/i2c.h \
+ ../chibios_2.4.x/os/hal/platforms/STM32/i2c_lld.h \
  ../chibios_2.4.x/os/hal/include/icu.h \
  ../chibios_2.4.x/os/hal/include/mac.h \
  ../chibios_2.4.x/os/hal/include/pwm.h \
@@ -175,6 +176,8 @@ mcuconf.h:
 ../chibios_2.4.x/os/hal/include/gpt.h:
 
 ../chibios_2.4.x/os/hal/include/i2c.h:
+
+../chibios_2.4.x/os/hal/platforms/STM32/i2c_lld.h:
 
 ../chibios_2.4.x/os/hal/include/icu.h:
 

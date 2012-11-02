@@ -50,6 +50,7 @@ build/obj/main.o: src/main.c ../chibios_2.4.x/os/kernel/include/ch.h \
  ../chibios_2.4.x/os/hal/include/ext.h \
  ../chibios_2.4.x/os/hal/include/gpt.h \
  ../chibios_2.4.x/os/hal/include/i2c.h \
+ ../chibios_2.4.x/os/hal/platforms/STM32/i2c_lld.h \
  ../chibios_2.4.x/os/hal/include/icu.h \
  ../chibios_2.4.x/os/hal/include/mac.h \
  ../chibios_2.4.x/os/hal/include/pwm.h \
@@ -63,8 +64,8 @@ build/obj/main.o: src/main.c ../chibios_2.4.x/os/kernel/include/ch.h \
  ../chibios_2.4.x/os/hal/platforms/STM32/USBv1/usb_lld.h \
  ../chibios_2.4.x/os/hal/platforms/STM32/USBv1/stm32_usb.h \
  ../chibios_2.4.x/os/hal/include/mmc_spi.h \
- ../chibios_2.4.x/os/hal/include/serial_usb.h src/read_ctrl.h \
- src/write_ctrl.h
+ ../chibios_2.4.x/os/hal/include/serial_usb.h src/led_ctrl.h \
+ src/read_ctrl.h src/write_ctrl.h
 
 ../chibios_2.4.x/os/kernel/include/ch.h:
 
@@ -176,6 +177,8 @@ mcuconf.h:
 
 ../chibios_2.4.x/os/hal/include/i2c.h:
 
+../chibios_2.4.x/os/hal/platforms/STM32/i2c_lld.h:
+
 ../chibios_2.4.x/os/hal/include/icu.h:
 
 ../chibios_2.4.x/os/hal/include/mac.h:
@@ -203,6 +206,8 @@ mcuconf.h:
 ../chibios_2.4.x/os/hal/include/mmc_spi.h:
 
 ../chibios_2.4.x/os/hal/include/serial_usb.h:
+
+src/led_ctrl.h:
 
 src/read_ctrl.h:
 
