@@ -1,4 +1,4 @@
-update=Sun 04 Nov 2012 10:29:03 PM MSK
+update=Mon 05 Nov 2012 01:51:08 PM MSK
 version=1
 last_client=eeschema
 [cvpcb]
