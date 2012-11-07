@@ -13,11 +13,17 @@ int main(void)
   chSysInit();
 
   initLed();
-  setLeds( 1 );
   //initRead();
   //initWrite();
   while ( 1 )
   {
+    setLeds( 1 );
+    chThdSleepSeconds( 2 );
+    setLeds( 2 );
+    chThdSleepSeconds( 1 );
+    setLeds( 4 );
+    chThdSleepSeconds( 2 );
+    setLeds( 2 );
     chThdSleepSeconds( 1 );
   }
   return 0;
