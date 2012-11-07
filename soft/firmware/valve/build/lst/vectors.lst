@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 1
+ARM GAS  /tmp/ccZolroI.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 1
   51              		.thumb_set BusFaultVector,_unhandled_exception
   52              		.weak	UsageFaultVector
   53              		.thumb_set UsageFaultVector,_unhandled_exception
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 2
+ARM GAS  /tmp/ccZolroI.s 			page 2
 
 
   54              		.weak	Vector1C
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 1
  108              		.weak	Vector88
  109              		.thumb_set Vector88,_unhandled_exception
  110              		.weak	Vector8C
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 3
+ARM GAS  /tmp/ccZolroI.s 			page 3
 
 
  111              		.thumb_set Vector8C,_unhandled_exception
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 1
  162              	_vectors:
  163 0000 00000000 		.word	__main_stack_end__
  164 0004 00000000 		.word	ResetHandler
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 4
+ARM GAS  /tmp/ccZolroI.s 			page 4
 
 
  165 0008 00000000 		.word	NMIVector
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 1
  219 00e0 00000000 		.word	VectorE0
  220 00e4 00000000 		.word	VectorE4
  221 00e8 00000000 		.word	VectorE8
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 5
+ARM GAS  /tmp/ccZolroI.s 			page 5
 
 
  222              		.text
@@ -251,8 +251,8 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 1
  229 000b 01       		.uleb128 0x1
  230 000c 0E000000 		.4byte	.LASF10
  231 0010 01       		.byte	0x1
- 232 0011 63000000 		.4byte	.LASF11
- 233 0015 EC000000 		.4byte	.LASF12
+ 232 0011 8E000000 		.4byte	.LASF11
+ 233 0015 50000000 		.4byte	.LASF12
  234 0019 00000000 		.4byte	0x0
  235 001d 00000000 		.4byte	0x0
  236 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -268,23 +268,23 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 1
  246 0037 03       		.uleb128 0x3
  247 0038 01       		.byte	0x1
  248 0039 06       		.byte	0x6
- 249 003a CB000000 		.4byte	.LASF1
+ 249 003a EC000000 		.4byte	.LASF1
  250 003e 03       		.uleb128 0x3
  251 003f 01       		.byte	0x1
  252 0040 08       		.byte	0x8
- 253 0041 50000000 		.4byte	.LASF2
+ 253 0041 7B000000 		.4byte	.LASF2
  254 0045 03       		.uleb128 0x3
  255 0046 02       		.byte	0x2
  256 0047 05       		.byte	0x5
- 257 0048 A5000000 		.4byte	.LASF3
+ 257 0048 0D010000 		.4byte	.LASF3
  258 004c 03       		.uleb128 0x3
  259 004d 02       		.byte	0x2
  260 004e 07       		.byte	0x7
- 261 004f B8000000 		.4byte	.LASF4
+ 261 004f D9000000 		.4byte	.LASF4
  262 0053 03       		.uleb128 0x3
  263 0054 04       		.byte	0x4
  264 0055 05       		.byte	0x5
- 265 0056 9C000000 		.4byte	.LASF5
+ 265 0056 C7000000 		.4byte	.LASF5
  266 005a 03       		.uleb128 0x3
  267 005b 04       		.byte	0x4
  268 005c 07       		.byte	0x7
@@ -298,15 +298,15 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 1
  276 006a 07       		.byte	0x7
  277 006b 39000000 		.4byte	.LASF8
  278 006f 03       		.uleb128 0x3
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 6
+ARM GAS  /tmp/ccZolroI.s 			page 6
 
 
  279 0070 01       		.byte	0x1
  280 0071 08       		.byte	0x8
- 281 0072 5E000000 		.4byte	.LASF9
+ 281 0072 89000000 		.4byte	.LASF9
  282 0076 04       		.uleb128 0x4
  283 0077 01       		.byte	0x1
- 284 0078 D7000000 		.4byte	.LASF13
+ 284 0078 F8000000 		.4byte	.LASF13
  285 007c 01       		.byte	0x1
  286 007d C9       		.byte	0xc9
  287 007e 01       		.byte	0x1
@@ -328,7 +328,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 1
  303 009d 04       		.byte	0x4
  304 009e 9A000000 		.4byte	0x9a
  305 00a2 09       		.uleb128 0x9
- 306 00a3 AF000000 		.4byte	.LASF14
+ 306 00a3 D0000000 		.4byte	.LASF14
  307 00a7 01       		.byte	0x1
  308 00a8 9F       		.byte	0x9f
  309 00a9 8A000000 		.4byte	0x8a
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 1
  333 0011 10       		.uleb128 0x10
  334 0012 06       		.uleb128 0x6
  335 0013 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 7
+ARM GAS  /tmp/ccZolroI.s 			page 7
 
 
  336 0014 00       		.byte	0x0
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 1
  390 004a 21       		.uleb128 0x21
  391 004b 00       		.byte	0x0
  392 004c 49       		.uleb128 0x49
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 8
+ARM GAS  /tmp/ccZolroI.s 			page 8
 
 
  393 004d 13       		.uleb128 0x13
@@ -478,7 +478,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 1
  441 0034 00000000 		.4byte	0x0
  442              		.section	.debug_pubtypes,"",%progbits
  443 0000 0E000000 		.4byte	0xe
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 9
+ARM GAS  /tmp/ccZolroI.s 			page 9
 
 
  444 0004 0200     		.2byte	0x2
@@ -530,129 +530,129 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 1
  476      6720756E 
  476      7369676E 
  476      65642069 
- 477              	.LASF2:
- 478 0050 756E7369 		.ascii	"unsigned char\000"
- 478      676E6564 
- 478      20636861 
- 478      7200
- 479              	.LASF9:
- 480 005e 63686172 		.ascii	"char\000"
- 480      00
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 10
+ 477              	.LASF12:
+ 478 0050 2F686F6D 		.ascii	"/home/z80/projects/ipm/soft/firmware/valve\000"
+ 478      652F7A38 
+ 478      302F7072 
+ 478      6F6A6563 
+ 478      74732F69 
+ 479              	.LASF2:
+ 480 007b 756E7369 		.ascii	"unsigned char\000"
+ARM GAS  /tmp/ccZolroI.s 			page 10
 
 
- 481              	.LASF11:
- 482 0063 2E2E2F63 		.ascii	"../chibios_2.4.x/os/ports/GCC/ARMCMx/STM32F1xx/vect"
- 482      68696269 
- 482      6F735F32 
- 482      2E342E78 
- 482      2F6F732F 
- 483 0096 6F72732E 		.ascii	"ors.c\000"
- 483      6300
- 484              	.LASF5:
- 485 009c 6C6F6E67 		.ascii	"long int\000"
- 485      20696E74 
- 485      00
- 486              	.LASF3:
- 487 00a5 73686F72 		.ascii	"short int\000"
- 487      7420696E 
- 487      7400
+ 480      676E6564 
+ 480      20636861 
+ 480      7200
+ 481              	.LASF9:
+ 482 0089 63686172 		.ascii	"char\000"
+ 482      00
+ 483              	.LASF11:
+ 484 008e 2E2E2F63 		.ascii	"../chibios_2.4.x/os/ports/GCC/ARMCMx/STM32F1xx/vect"
+ 484      68696269 
+ 484      6F735F32 
+ 484      2E342E78 
+ 484      2F6F732F 
+ 485 00c1 6F72732E 		.ascii	"ors.c\000"
+ 485      6300
+ 486              	.LASF5:
+ 487 00c7 6C6F6E67 		.ascii	"long int\000"
+ 487      20696E74 
+ 487      00
  488              	.LASF14:
- 489 00af 5F766563 		.ascii	"_vectors\000"
+ 489 00d0 5F766563 		.ascii	"_vectors\000"
  489      746F7273 
  489      00
  490              	.LASF4:
- 491 00b8 73686F72 		.ascii	"short unsigned int\000"
+ 491 00d9 73686F72 		.ascii	"short unsigned int\000"
  491      7420756E 
  491      7369676E 
  491      65642069 
  491      6E7400
  492              	.LASF1:
- 493 00cb 7369676E 		.ascii	"signed char\000"
+ 493 00ec 7369676E 		.ascii	"signed char\000"
  493      65642063 
  493      68617200 
  494              	.LASF13:
- 495 00d7 5F756E68 		.ascii	"_unhandled_exception\000"
+ 495 00f8 5F756E68 		.ascii	"_unhandled_exception\000"
  495      616E646C 
  495      65645F65 
  495      78636570 
  495      74696F6E 
- 496              	.LASF12:
- 497 00ec 433A5C70 		.ascii	"C:\\projects\\ipm\\soft\\firmware\\valve\000"
- 497      726F6A65 
- 497      6374735C 
- 497      69706D5C 
- 497      736F6674 
+ 496              	.LASF3:
+ 497 010d 73686F72 		.ascii	"short int\000"
+ 497      7420696E 
+ 497      7400
  498              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 11
+ARM GAS  /tmp/ccZolroI.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 vectors.c
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:24     .text._unhandled_exception:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 _unhandled_exception
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:162    vectors:00000000 _vectors
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 NMIVector
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 HardFaultVector
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 MemManageVector
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 BusFaultVector
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 UsageFaultVector
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector1C
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector20
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector24
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector28
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 SVCallVector
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 DebugMonitorVector
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector34
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 PendSVVector
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 SysTickVector
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector40
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector44
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector48
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector4C
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector50
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector54
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector58
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector5C
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector60
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector64
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector68
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector6C
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector70
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector74
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector78
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector7C
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector80
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector84
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector88
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector8C
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector90
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector94
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector98
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 Vector9C
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 VectorA0
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 VectorA4
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 VectorA8
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 VectorAC
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 VectorB0
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 VectorB4
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 VectorB8
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 VectorBC
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 VectorC0
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 VectorC4
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 VectorC8
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 VectorCC
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 VectorD0
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 VectorD4
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s 			page 12
+     /tmp/ccZolroI.s:24     .text._unhandled_exception:00000000 $t
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 _unhandled_exception
+     /tmp/ccZolroI.s:162    vectors:00000000 _vectors
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 NMIVector
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 HardFaultVector
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 MemManageVector
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 BusFaultVector
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 UsageFaultVector
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector1C
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector20
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector24
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector28
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 SVCallVector
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 DebugMonitorVector
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector34
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 PendSVVector
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 SysTickVector
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector40
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector44
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector48
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector4C
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector50
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector54
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector58
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector5C
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector60
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector64
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector68
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector6C
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector70
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector74
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector78
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector7C
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector80
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector84
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector88
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector8C
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector90
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector94
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector98
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 Vector9C
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 VectorA0
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 VectorA4
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 VectorA8
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 VectorAC
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 VectorB0
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 VectorB4
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 VectorB8
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 VectorBC
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 VectorC0
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 VectorC4
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 VectorC8
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 VectorCC
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 VectorD0
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 VectorD4
+ARM GAS  /tmp/ccZolroI.s 			page 12
 
 
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 VectorD8
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 VectorDC
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 VectorE0
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 VectorE4
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:30     .text._unhandled_exception:00000000 VectorE8
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNjV5k0.s:159    vectors:00000000 $d
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 VectorD8
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 VectorDC
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 VectorE0
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 VectorE4
+     /tmp/ccZolroI.s:30     .text._unhandled_exception:00000000 VectorE8
+     /tmp/ccZolroI.s:159    vectors:00000000 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS
