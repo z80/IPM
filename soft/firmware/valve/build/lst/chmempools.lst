@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
+ARM GAS  /tmp/cc8BPIAS.s 			page 1
 
 
    1              		.syntax unified
@@ -20,8 +20,8 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
   17              	.Ldebug_info0:
   18              		.section	.debug_line,"",%progbits
   19              	.Ldebug_line0:
-  20 0000 7C010000 		.text
-  20      0200E300 
+  20 0000 80010000 		.text
+  20      0200E700 
   20      00000201 
   20      FB0E0D00 
   20      01010101 
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
   51 0008 08B1     		cbz	r0, .L2
   52              		.loc 1 63 0 is_stmt 0 discriminator 2
   53 000a 0329     		cmp	r1, #3
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 2
+ARM GAS  /tmp/cc8BPIAS.s 			page 2
 
 
   54 000c 02D8     		bhi	.L3
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  107              		.loc 1 83 0
  108 0008 4CB1     		cbz	r4, .L11
  109              	.L8:
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 3
+ARM GAS  /tmp/cc8BPIAS.s 			page 3
 
 
  110              		.loc 1 85 0
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  164              	@ 104 "../chibios_2.4.x/os/kernel/src/chmempools.c" 1
  165 0004 FFF7FEFF 		bl      _port_lock
  166              	@ 0 "" 2
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 4
+ARM GAS  /tmp/cc8BPIAS.s 			page 4
 
 
  167              		.thumb
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  221 000e 15F0070F 		tst	r5, #7
  222 0012 02D0     		beq	.L17
  223              	.LVL17:
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 5
+ARM GAS  /tmp/cc8BPIAS.s 			page 5
 
 
  224              	.L16:
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  277 0012 FFF7FEFF 		bl	chPoolFreeI
  278              		.loc 1 149 0
  279 0016 FFF7FEFF 		bl	dbg_check_unlock
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 6
+ARM GAS  /tmp/cc8BPIAS.s 			page 6
 
 
  280              	@ 149 "../chibios_2.4.x/os/kernel/src/chmempools.c" 1
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  324 0035 54       		.byte	0x54
  325 0036 00000000 		.4byte	0x0
  326 003a 00000000 		.4byte	0x0
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 7
+ARM GAS  /tmp/cc8BPIAS.s 			page 7
 
 
  327              	.LLST2:
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  381 00c9 1B000000 		.4byte	.LVL8-1
  382 00cd 0200     		.2byte	0x2
  383 00cf 74       		.byte	0x74
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 8
+ARM GAS  /tmp/cc8BPIAS.s 			page 8
 
 
  384 00d0 00       		.sleb128 0
@@ -478,7 +478,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  438 015c 00000000 		.4byte	0x0
  439              	.LLST11:
  440 0160 00000000 		.4byte	.LVL14
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 9
+ARM GAS  /tmp/cc8BPIAS.s 			page 9
 
 
  441 0164 09000000 		.4byte	.LVL16-1
@@ -538,7 +538,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  495 01f4 00000000 		.4byte	0x0
  496              	.LLST16:
  497 01f8 00000000 		.4byte	.LVL18
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 10
+ARM GAS  /tmp/cc8BPIAS.s 			page 10
 
 
  498 01fc 0D000000 		.4byte	.LVL19-1
@@ -550,7 +550,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  504 020d 54       		.byte	0x54
  505 020e 00000000 		.4byte	0x0
  506 0212 00000000 		.4byte	0x0
- 507              		.file 2 "c:\\programs\\codesourcery\\arm-2012.03-56\\bin\\../lib/gcc/arm-none-eabi/4.5.2/include/s
+ 507              		.file 2 "/home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/include/st
  508              		.file 3 "../chibios_2.4.x/os/kernel/include/chmemcore.h"
  509              		.file 4 "../chibios_2.4.x/os/kernel/include/chmempools.h"
  510              		.section	.debug_info
@@ -562,7 +562,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  516 000c 07000000 		.4byte	.LASF24
  517 0010 01       		.byte	0x1
  518 0011 22000000 		.4byte	.LASF25
- 519 0015 27010000 		.4byte	.LASF26
+ 519 0015 31010000 		.4byte	.LASF26
  520 0019 00000000 		.4byte	0x0
  521 001d 00000000 		.4byte	0x0
  522 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -579,11 +579,11 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  533 003b 04       		.uleb128 0x4
  534 003c 04       		.byte	0x4
  535 003d 07       		.byte	0x7
- 536 003e CF000000 		.4byte	.LASF0
+ 536 003e D9000000 		.4byte	.LASF0
  537 0042 04       		.uleb128 0x4
  538 0043 01       		.byte	0x1
  539 0044 06       		.byte	0x6
- 540 0045 6A010000 		.4byte	.LASF1
+ 540 0045 71010000 		.4byte	.LASF1
  541 0049 04       		.uleb128 0x4
  542 004a 01       		.byte	0x1
  543 004b 08       		.byte	0x8
@@ -591,18 +591,18 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  545 0050 04       		.uleb128 0x4
  546 0051 02       		.byte	0x2
  547 0052 05       		.byte	0x5
- 548 0053 4B010000 		.4byte	.LASF3
+ 548 0053 A7000000 		.4byte	.LASF3
  549 0057 04       		.uleb128 0x4
  550 0058 02       		.byte	0x2
  551 0059 07       		.byte	0x7
  552 005a 71000000 		.4byte	.LASF4
  553 005e 04       		.uleb128 0x4
  554 005f 04       		.byte	0x4
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 11
+ARM GAS  /tmp/cc8BPIAS.s 			page 11
 
 
  555 0060 05       		.byte	0x5
- 556 0061 61010000 		.4byte	.LASF5
+ 556 0061 68010000 		.4byte	.LASF5
  557 0065 04       		.uleb128 0x4
  558 0066 04       		.byte	0x4
  559 0067 07       		.byte	0x7
@@ -610,15 +610,15 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  561 006c 04       		.uleb128 0x4
  562 006d 08       		.byte	0x8
  563 006e 05       		.byte	0x5
- 564 006f 07010000 		.4byte	.LASF7
+ 564 006f 05010000 		.4byte	.LASF7
  565 0073 04       		.uleb128 0x4
  566 0074 08       		.byte	0x8
  567 0075 07       		.byte	0x7
- 568 0076 DC000000 		.4byte	.LASF8
+ 568 0076 E6000000 		.4byte	.LASF8
  569 007a 05       		.uleb128 0x5
  570 007b 04       		.byte	0x4
  571 007c 03       		.uleb128 0x3
- 572 007d 1A010000 		.4byte	.LASF10
+ 572 007d 18010000 		.4byte	.LASF10
  573 0081 03       		.byte	0x3
  574 0082 2C       		.byte	0x2c
  575 0083 87000000 		.4byte	0x87
@@ -639,7 +639,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  590 00a4 2C       		.byte	0x2c
  591 00a5 B8000000 		.4byte	0xb8
  592 00a9 0A       		.uleb128 0xa
- 593 00aa F3000000 		.4byte	.LASF11
+ 593 00aa FD000000 		.4byte	.LASF11
  594 00ae 04       		.byte	0x4
  595 00af 2D       		.byte	0x2d
  596 00b0 B8000000 		.4byte	0xb8
@@ -656,9 +656,9 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  607 00c1 34       		.byte	0x34
  608 00c2 F1000000 		.4byte	0xf1
  609 00c6 0A       		.uleb128 0xa
- 610 00c7 76010000 		.4byte	.LASF12
+ 610 00c7 7D010000 		.4byte	.LASF12
  611 00cb 04       		.byte	0x4
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 12
+ARM GAS  /tmp/cc8BPIAS.s 			page 12
 
 
  612 00cc 35       		.byte	0x35
@@ -675,7 +675,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  623 00e0 23       		.byte	0x23
  624 00e1 04       		.uleb128 0x4
  625 00e2 0A       		.uleb128 0xa
- 626 00e3 FB000000 		.4byte	.LASF14
+ 626 00e3 25010000 		.4byte	.LASF14
  627 00e7 04       		.byte	0x4
  628 00e8 38       		.byte	0x38
  629 00e9 7C000000 		.4byte	0x7c
@@ -684,17 +684,17 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  632 00ef 08       		.uleb128 0x8
  633 00f0 00       		.byte	0x0
  634 00f1 03       		.uleb128 0x3
- 635 00f2 B2000000 		.4byte	.LASF15
+ 635 00f2 BC000000 		.4byte	.LASF15
  636 00f6 04       		.byte	0x4
  637 00f7 3A       		.byte	0x3a
  638 00f8 BE000000 		.4byte	0xbe
  639 00fc 04       		.uleb128 0x4
  640 00fd 01       		.byte	0x1
  641 00fe 08       		.byte	0x8
- 642 00ff 15010000 		.4byte	.LASF16
+ 642 00ff 13010000 		.4byte	.LASF16
  643 0103 0C       		.uleb128 0xc
  644 0104 01       		.byte	0x1
- 645 0105 7E010000 		.4byte	.LASF22
+ 645 0105 85010000 		.4byte	.LASF22
  646 0109 01       		.byte	0x1
  647 010a 3D       		.byte	0x3d
  648 010b 01       		.byte	0x1
@@ -718,7 +718,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  666 013a 84000000 		.4byte	.LASF18
  667 013e 01       		.byte	0x1
  668 013f 3D       		.byte	0x3d
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 13
+ARM GAS  /tmp/cc8BPIAS.s 			page 13
 
 
  669 0140 7C000000 		.4byte	0x7c
@@ -729,7 +729,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  674 014b F1000000 		.4byte	0xf1
  675 014f 0F       		.uleb128 0xf
  676 0150 01       		.byte	0x1
- 677 0151 C2000000 		.4byte	.LASF19
+ 677 0151 CC000000 		.4byte	.LASF19
  678 0155 01       		.byte	0x1
  679 0156 4F       		.byte	0x4f
  680 0157 01       		.byte	0x1
@@ -745,7 +745,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  690 0172 49010000 		.4byte	0x149
  691 0176 A7000000 		.4byte	.LLST5
  692 017a 10       		.uleb128 0x10
- 693 017b BD000000 		.4byte	.LASF21
+ 693 017b C7000000 		.4byte	.LASF21
  694 017f 01       		.byte	0x1
  695 0180 50       		.byte	0x50
  696 0181 7A000000 		.4byte	0x7a
@@ -753,7 +753,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  698 0189 00       		.byte	0x0
  699 018a 0F       		.uleb128 0xf
  700 018b 01       		.byte	0x1
- 701 018c 55010000 		.4byte	.LASF20
+ 701 018c 5C010000 		.4byte	.LASF20
  702 0190 01       		.byte	0x1
  703 0191 65       		.byte	0x65
  704 0192 01       		.byte	0x1
@@ -769,7 +769,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  714 01ad 49010000 		.4byte	0x149
  715 01b1 04010000 		.4byte	.LLST8
  716 01b5 10       		.uleb128 0x10
- 717 01b6 BD000000 		.4byte	.LASF21
+ 717 01b6 C7000000 		.4byte	.LASF21
  718 01ba 01       		.byte	0x1
  719 01bb 66       		.byte	0x66
  720 01bc 7A000000 		.4byte	0x7a
@@ -778,7 +778,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  723 01c5 0C       		.uleb128 0xc
  724 01c6 01       		.byte	0x1
  725 01c7 8D000000 		.4byte	.LASF23
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 14
+ARM GAS  /tmp/cc8BPIAS.s 			page 14
 
 
  726 01cb 01       		.byte	0x1
@@ -795,7 +795,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  737 01e4 49010000 		.4byte	0x149
  738 01e8 60010000 		.4byte	.LLST11
  739 01ec 0E       		.uleb128 0xe
- 740 01ed BD000000 		.4byte	.LASF21
+ 740 01ed C7000000 		.4byte	.LASF21
  741 01f1 01       		.byte	0x1
  742 01f2 7A       		.byte	0x7a
  743 01f3 7A000000 		.4byte	0x7a
@@ -809,7 +809,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  751 020a 00       		.byte	0x0
  752 020b 12       		.uleb128 0x12
  753 020c 01       		.byte	0x1
- 754 020d A7000000 		.4byte	.LASF28
+ 754 020d B1000000 		.4byte	.LASF28
  755 0211 01       		.byte	0x1
  756 0212 91       		.byte	0x91
  757 0213 01       		.byte	0x1
@@ -823,7 +823,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  765 0226 49010000 		.4byte	0x149
  766 022a DA010000 		.4byte	.LLST15
  767 022e 0E       		.uleb128 0xe
- 768 022f BD000000 		.4byte	.LASF21
+ 768 022f C7000000 		.4byte	.LASF21
  769 0233 01       		.byte	0x1
  770 0234 91       		.byte	0x91
  771 0235 7A000000 		.4byte	0x7a
@@ -838,7 +838,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  780 0004 0E       		.uleb128 0xe
  781 0005 13       		.uleb128 0x13
  782 0006 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 15
+ARM GAS  /tmp/cc8BPIAS.s 			page 15
 
 
  783 0007 03       		.uleb128 0x3
@@ -898,7 +898,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  837 003d 00       		.byte	0x0
  838 003e 00       		.byte	0x0
  839 003f 06       		.uleb128 0x6
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 16
+ARM GAS  /tmp/cc8BPIAS.s 			page 16
 
 
  840 0040 0F       		.uleb128 0xf
@@ -958,7 +958,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  894 0076 00       		.byte	0x0
  895 0077 00       		.byte	0x0
  896 0078 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 17
+ARM GAS  /tmp/cc8BPIAS.s 			page 17
 
 
  897 0079 13       		.uleb128 0x13
@@ -1018,7 +1018,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  951 00af 0E       		.uleb128 0xe
  952 00b0 3A       		.uleb128 0x3a
  953 00b1 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 18
+ARM GAS  /tmp/cc8BPIAS.s 			page 18
 
 
  954 00b2 3B       		.uleb128 0x3b
@@ -1078,7 +1078,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  1008 00e8 0B       		.uleb128 0xb
  1009 00e9 3B       		.uleb128 0x3b
  1010 00ea 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 19
+ARM GAS  /tmp/cc8BPIAS.s 			page 19
 
 
  1011 00eb 49       		.uleb128 0x49
@@ -1138,7 +1138,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  1054 005d 00000000 		.4byte	0x0
  1055              		.section	.debug_pubtypes,"",%progbits
  1056 0000 49000000 		.4byte	0x49
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 20
+ARM GAS  /tmp/cc8BPIAS.s 			page 20
 
 
  1057 0004 0200     		.2byte	0x2
@@ -1198,7 +1198,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  1103              		.section	.debug_str,"MS",%progbits,1
  1104              	.LASF9:
  1105 0000 73697A65 		.ascii	"size_t\000"
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 21
+ARM GAS  /tmp/cc8BPIAS.s 			page 21
 
 
  1105      5F7400
@@ -1249,112 +1249,112 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 1
  1125      676E6564 
  1125      20636861 
  1125      7200
- 1126              	.LASF28:
- 1127 00a7 6368506F 		.ascii	"chPoolFree\000"
- 1127      6F6C4672 
- 1127      656500
- 1128              	.LASF15:
- 1129 00b2 4D656D6F 		.ascii	"MemoryPool\000"
- 1129      7279506F 
- 1129      6F6C00
- 1130              	.LASF21:
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 22
+ 1126              	.LASF3:
+ 1127 00a7 73686F72 		.ascii	"short int\000"
+ 1127      7420696E 
+ 1127      7400
+ 1128              	.LASF28:
+ 1129 00b1 6368506F 		.ascii	"chPoolFree\000"
+ 1129      6F6C4672 
+ 1129      656500
+ 1130              	.LASF15:
+ARM GAS  /tmp/cc8BPIAS.s 			page 22
 
 
- 1131 00bd 6F626A70 		.ascii	"objp\000"
- 1131      00
- 1132              	.LASF19:
- 1133 00c2 6368506F 		.ascii	"chPoolAllocI\000"
- 1133      6F6C416C 
- 1133      6C6F6349 
+ 1131 00bc 4D656D6F 		.ascii	"MemoryPool\000"
+ 1131      7279506F 
+ 1131      6F6C00
+ 1132              	.LASF21:
+ 1133 00c7 6F626A70 		.ascii	"objp\000"
  1133      00
- 1134              	.LASF0:
- 1135 00cf 756E7369 		.ascii	"unsigned int\000"
- 1135      676E6564 
- 1135      20696E74 
+ 1134              	.LASF19:
+ 1135 00cc 6368506F 		.ascii	"chPoolAllocI\000"
+ 1135      6F6C416C 
+ 1135      6C6F6349 
  1135      00
- 1136              	.LASF8:
- 1137 00dc 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1137      206C6F6E 
- 1137      6720756E 
- 1137      7369676E 
- 1137      65642069 
- 1138              	.LASF11:
- 1139 00f3 70685F6E 		.ascii	"ph_next\000"
- 1139      65787400 
- 1140              	.LASF14:
- 1141 00fb 6D705F70 		.ascii	"mp_provider\000"
- 1141      726F7669 
- 1141      64657200 
+ 1136              	.LASF0:
+ 1137 00d9 756E7369 		.ascii	"unsigned int\000"
+ 1137      676E6564 
+ 1137      20696E74 
+ 1137      00
+ 1138              	.LASF8:
+ 1139 00e6 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1139      206C6F6E 
+ 1139      6720756E 
+ 1139      7369676E 
+ 1139      65642069 
+ 1140              	.LASF11:
+ 1141 00fd 70685F6E 		.ascii	"ph_next\000"
+ 1141      65787400 
  1142              	.LASF7:
- 1143 0107 6C6F6E67 		.ascii	"long long int\000"
+ 1143 0105 6C6F6E67 		.ascii	"long long int\000"
  1143      206C6F6E 
  1143      6720696E 
  1143      7400
  1144              	.LASF16:
- 1145 0115 63686172 		.ascii	"char\000"
+ 1145 0113 63686172 		.ascii	"char\000"
  1145      00
  1146              	.LASF10:
- 1147 011a 6D656D67 		.ascii	"memgetfunc_t\000"
+ 1147 0118 6D656D67 		.ascii	"memgetfunc_t\000"
  1147      65746675 
  1147      6E635F74 
  1147      00
- 1148              	.LASF26:
- 1149 0127 433A5C70 		.ascii	"C:\\projects\\ipm\\soft\\firmware\\valve\000"
- 1149      726F6A65 
- 1149      6374735C 
- 1149      69706D5C 
- 1149      736F6674 
- 1150              	.LASF3:
- 1151 014b 73686F72 		.ascii	"short int\000"
- 1151      7420696E 
- 1151      7400
+ 1148              	.LASF14:
+ 1149 0125 6D705F70 		.ascii	"mp_provider\000"
+ 1149      726F7669 
+ 1149      64657200 
+ 1150              	.LASF26:
+ 1151 0131 2F686F6D 		.ascii	"/home/z80/projects/ipm/soft/firmware/valve\000"
+ 1151      652F7A38 
+ 1151      302F7072 
+ 1151      6F6A6563 
+ 1151      74732F69 
  1152              	.LASF20:
- 1153 0155 6368506F 		.ascii	"chPoolAlloc\000"
+ 1153 015c 6368506F 		.ascii	"chPoolAlloc\000"
  1153      6F6C416C 
  1153      6C6F6300 
  1154              	.LASF5:
- 1155 0161 6C6F6E67 		.ascii	"long int\000"
+ 1155 0168 6C6F6E67 		.ascii	"long int\000"
  1155      20696E74 
  1155      00
  1156              	.LASF1:
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 23
+ARM GAS  /tmp/cc8BPIAS.s 			page 23
 
 
- 1157 016a 7369676E 		.ascii	"signed char\000"
+ 1157 0171 7369676E 		.ascii	"signed char\000"
  1157      65642063 
  1157      68617200 
  1158              	.LASF12:
- 1159 0176 6D705F6E 		.ascii	"mp_next\000"
+ 1159 017d 6D705F6E 		.ascii	"mp_next\000"
  1159      65787400 
  1160              	.LASF22:
- 1161 017e 6368506F 		.ascii	"chPoolInit\000"
+ 1161 0185 6368506F 		.ascii	"chPoolInit\000"
  1161      6F6C496E 
  1161      697400
  1162              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s 			page 24
+ARM GAS  /tmp/cc8BPIAS.s 			page 24
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chmempools.c
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:24     .text.chPoolInit:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:30     .text.chPoolInit:00000000 chPoolInit
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:79     .text.chPoolInit:00000024 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:84     .text.chPoolAllocI:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:90     .text.chPoolAllocI:00000000 chPoolAllocI
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:138    .text.chPoolAllocI:00000028 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:143    .text.chPoolAlloc:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:149    .text.chPoolAlloc:00000000 chPoolAlloc
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:189    .text.chPoolFreeI:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:195    .text.chPoolFreeI:00000000 chPoolFreeI
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:239    .text.chPoolFreeI:00000024 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:244    .text.chPoolFree:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:250    .text.chPoolFree:00000000 chPoolFree
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:290    .rodata.str1.4:00000000 $d
+     /tmp/cc8BPIAS.s:24     .text.chPoolInit:00000000 $t
+     /tmp/cc8BPIAS.s:30     .text.chPoolInit:00000000 chPoolInit
+     /tmp/cc8BPIAS.s:79     .text.chPoolInit:00000024 $d
+     /tmp/cc8BPIAS.s:84     .text.chPoolAllocI:00000000 $t
+     /tmp/cc8BPIAS.s:90     .text.chPoolAllocI:00000000 chPoolAllocI
+     /tmp/cc8BPIAS.s:138    .text.chPoolAllocI:00000028 $d
+     /tmp/cc8BPIAS.s:143    .text.chPoolAlloc:00000000 $t
+     /tmp/cc8BPIAS.s:149    .text.chPoolAlloc:00000000 chPoolAlloc
+     /tmp/cc8BPIAS.s:189    .text.chPoolFreeI:00000000 $t
+     /tmp/cc8BPIAS.s:195    .text.chPoolFreeI:00000000 chPoolFreeI
+     /tmp/cc8BPIAS.s:239    .text.chPoolFreeI:00000024 $d
+     /tmp/cc8BPIAS.s:244    .text.chPoolFree:00000000 $t
+     /tmp/cc8BPIAS.s:250    .text.chPoolFree:00000000 chPoolFree
+     /tmp/cc8BPIAS.s:290    .rodata.str1.4:00000000 $d
                      .debug_frame:00000010 $d
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:83     .text.chPoolInit:00000028 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:142    .text.chPoolAllocI:0000002c $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvayBac.s:243    .text.chPoolFreeI:00000028 $t
+     /tmp/cc8BPIAS.s:83     .text.chPoolInit:00000028 $t
+     /tmp/cc8BPIAS.s:142    .text.chPoolAllocI:0000002c $t
+     /tmp/cc8BPIAS.s:243    .text.chPoolFreeI:00000028 $t
 
 UNDEFINED SYMBOLS
 chDbgPanic

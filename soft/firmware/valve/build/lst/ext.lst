@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRfWeRB.s 			page 1
+ARM GAS  /tmp/ccfVhZ6H.s 			page 1
 
 
    1              		.syntax unified
@@ -20,8 +20,8 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRfWeRB.s 			page 1
   17              	.Ldebug_info0:
   18              		.section	.debug_line,"",%progbits
   19              	.Ldebug_line0:
-  20 0000 D6000000 		.text
-  20      0200D000 
+  20 0000 DA000000 		.text
+  20      0200D400 
   20      00000201 
   20      FB0E0D00 
   20      01010101 
@@ -29,7 +29,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRfWeRB.s 			page 1
   22              		.cfi_sections	.debug_frame
   23              	.Letext0:
   24              		.file 1 "../chibios_2.4.x/os/ports/common/ARMCMx/CMSIS/include/core_cm3.h"
-  25              		.file 2 "c:\\programs\\codesourcery\\arm-2012.03-56\\bin\\../lib/gcc/arm-none-eabi/4.5.2/../../../
+  25              		.file 2 "/home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../.
   26              		.section	.debug_info
   27 0000 9B000000 		.4byte	0x9b
   28 0004 0200     		.2byte	0x2
@@ -39,7 +39,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRfWeRB.s 			page 1
   32 000c 21000000 		.4byte	.LASF11
   33 0010 01       		.byte	0x1
   34 0011 63000000 		.4byte	.LASF12
-  35 0015 C4000000 		.4byte	.LASF13
+  35 0015 85000000 		.4byte	.LASF13
   36 0019 00000000 		.4byte	.Ltext0
   37 001d 00000000 		.4byte	.Letext0
   38 0021 00000000 		.4byte	.Ldebug_line0
@@ -54,31 +54,31 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRfWeRB.s 			page 1
   47 0033 03       		.uleb128 0x3
   48 0034 01       		.byte	0x1
   49 0035 06       		.byte	0x6
-  50 0036 B8000000 		.4byte	.LASF1
+  50 0036 D9000000 		.4byte	.LASF1
   51 003a 03       		.uleb128 0x3
   52 003b 01       		.byte	0x1
   53 003c 08       		.byte	0x8
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRfWeRB.s 			page 2
+ARM GAS  /tmp/ccfVhZ6H.s 			page 2
 
 
-  54 003d 85000000 		.4byte	.LASF2
+  54 003d B0000000 		.4byte	.LASF2
   55 0041 03       		.uleb128 0x3
   56 0042 02       		.byte	0x2
   57 0043 05       		.byte	0x5
-  58 0044 A1000000 		.4byte	.LASF3
+  58 0044 E5000000 		.4byte	.LASF3
   59 0048 03       		.uleb128 0x3
   60 0049 02       		.byte	0x2
   61 004a 07       		.byte	0x7
   62 004b 0E000000 		.4byte	.LASF4
   63 004f 04       		.uleb128 0x4
-  64 0050 E8000000 		.4byte	.LASF14
+  64 0050 EF000000 		.4byte	.LASF14
   65 0054 02       		.byte	0x2
   66 0055 4F       		.byte	0x4f
   67 0056 5A000000 		.4byte	0x5a
   68 005a 03       		.uleb128 0x3
   69 005b 04       		.byte	0x4
   70 005c 05       		.byte	0x5
-  71 005d 98000000 		.4byte	.LASF5
+  71 005d C3000000 		.4byte	.LASF5
   72 0061 03       		.uleb128 0x3
   73 0062 04       		.byte	0x4
   74 0063 07       		.byte	0x7
@@ -94,18 +94,18 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRfWeRB.s 			page 1
   84 0076 03       		.uleb128 0x3
   85 0077 01       		.byte	0x1
   86 0078 08       		.byte	0x8
-  87 0079 93000000 		.4byte	.LASF9
+  87 0079 BE000000 		.4byte	.LASF9
   88 007d 05       		.uleb128 0x5
   89 007e 4F000000 		.4byte	0x4f
   90 0082 06       		.uleb128 0x6
-  91 0083 AB000000 		.4byte	.LASF10
+  91 0083 CC000000 		.4byte	.LASF10
   92 0087 01       		.byte	0x1
   93 0088 9404     		.2byte	0x494
   94 008a 7D000000 		.4byte	0x7d
   95 008e 01       		.byte	0x1
   96 008f 01       		.byte	0x1
   97 0090 06       		.uleb128 0x6
-  98 0091 AB000000 		.4byte	.LASF10
+  98 0091 CC000000 		.4byte	.LASF10
   99 0095 01       		.byte	0x1
  100 0096 9404     		.2byte	0x494
  101 0098 7D000000 		.4byte	0x7d
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRfWeRB.s 			page 1
  108 0002 01       		.byte	0x1
  109 0003 25       		.uleb128 0x25
  110 0004 0E       		.uleb128 0xe
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRfWeRB.s 			page 3
+ARM GAS  /tmp/ccfVhZ6H.s 			page 3
 
 
  111 0005 13       		.uleb128 0x13
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRfWeRB.s 			page 1
  165 003b 00       		.byte	0x0
  166 003c 00       		.byte	0x0
  167 003d 06       		.uleb128 0x6
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRfWeRB.s 			page 4
+ARM GAS  /tmp/ccfVhZ6H.s 			page 4
 
 
  168 003e 34       		.uleb128 0x34
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRfWeRB.s 			page 1
  205 004c 6C6F6E67 		.ascii	"long long unsigned int\000"
  205      206C6F6E 
  205      6720756E 
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRfWeRB.s 			page 5
+ARM GAS  /tmp/ccfVhZ6H.s 			page 5
 
 
  205      7369676E 
@@ -249,42 +249,42 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRfWeRB.s 			page 1
  207      6F735F32 
  207      2E342E78 
  207      2F6F732F 
- 208              	.LASF2:
- 209 0085 756E7369 		.ascii	"unsigned char\000"
- 209      676E6564 
- 209      20636861 
- 209      7200
- 210              	.LASF9:
- 211 0093 63686172 		.ascii	"char\000"
- 211      00
- 212              	.LASF5:
- 213 0098 6C6F6E67 		.ascii	"long int\000"
- 213      20696E74 
+ 208              	.LASF13:
+ 209 0085 2F686F6D 		.ascii	"/home/z80/projects/ipm/soft/firmware/valve\000"
+ 209      652F7A38 
+ 209      302F7072 
+ 209      6F6A6563 
+ 209      74732F69 
+ 210              	.LASF2:
+ 211 00b0 756E7369 		.ascii	"unsigned char\000"
+ 211      676E6564 
+ 211      20636861 
+ 211      7200
+ 212              	.LASF9:
+ 213 00be 63686172 		.ascii	"char\000"
  213      00
- 214              	.LASF3:
- 215 00a1 73686F72 		.ascii	"short int\000"
- 215      7420696E 
- 215      7400
+ 214              	.LASF5:
+ 215 00c3 6C6F6E67 		.ascii	"long int\000"
+ 215      20696E74 
+ 215      00
  216              	.LASF10:
- 217 00ab 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 217 00cc 49544D5F 		.ascii	"ITM_RxBuffer\000"
  217      52784275 
  217      66666572 
  217      00
  218              	.LASF1:
- 219 00b8 7369676E 		.ascii	"signed char\000"
+ 219 00d9 7369676E 		.ascii	"signed char\000"
  219      65642063 
  219      68617200 
- 220              	.LASF13:
- 221 00c4 433A5C70 		.ascii	"C:\\projects\\ipm\\soft\\firmware\\valve\000"
- 221      726F6A65 
- 221      6374735C 
- 221      69706D5C 
- 221      736F6674 
+ 220              	.LASF3:
+ 221 00e5 73686F72 		.ascii	"short int\000"
+ 221      7420696E 
+ 221      7400
  222              	.LASF14:
- 223 00e8 696E7433 		.ascii	"int32_t\000"
+ 223 00ef 696E7433 		.ascii	"int32_t\000"
  223      325F7400 
  224              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccRfWeRB.s 			page 6
+ARM GAS  /tmp/ccfVhZ6H.s 			page 6
 
 
 DEFINED SYMBOLS
