@@ -19,7 +19,7 @@ int main(void)
   while ( 1 )
   {
 
-    palClearPad( OUT_PORT, OUT_CP_PIN );
+    /*palClearPad( OUT_PORT, OUT_CP_PIN );
     chThdSleepMilliseconds( 1 );
     palSetPad( OUT_PORT, OUT_MR_PIN );
     chThdSleepMilliseconds( 1 );
@@ -57,8 +57,11 @@ int main(void)
         palSetPad( OUT_PORT, OUT_CP_PIN );
         chThdSleepMilliseconds( 1 );
     }
-    setLeds( 2 );
-    chThdSleepSeconds( 1 );
+    setLeds( 2 );*/
+      write( 0xFFFFFFFF );
+      chThdSleepSeconds( 1 );
+      write( 0x00000000 );
+      chThdSleepSeconds( 1 );
   }
   return 0;
 }
