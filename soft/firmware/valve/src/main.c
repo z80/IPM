@@ -19,9 +19,9 @@ int main(void)
   while ( 1 )
   {
     //setLeds( 1 );
-    palSetPad( OUT_PORT, OUT_MR_PIN );
+    palSetPad( OUT_PORT, OUT_CP_PIN );
     chThdSleepSeconds( 2 );
-    palClearPad( OUT_PORT, OUT_MR_PIN );
+    palClearPad( OUT_PORT, OUT_CP_PIN );
     chThdSleepSeconds( 2 );
     //setLeds( 2 );
     //chThdSleepSeconds( 1 );
