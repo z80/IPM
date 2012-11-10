@@ -1,4 +1,4 @@
-update=Thu 08 Nov 2012 11:29:23 PM MSK
+update=Sat 10 Nov 2012 12:29:17 PM MSK
 version=1
 last_client=eeschema
 [cvpcb]
@@ -156,3 +156,4 @@ LibName42=sdc
 LibName43=stm
 LibName44=usb
 LibName45=lsm303dlhc
+LibName46=stm3485ebdr

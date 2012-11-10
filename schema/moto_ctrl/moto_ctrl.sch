@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Fri 09 Nov 2012 12:26:15 AM MSK
+EESchema Schematic File Version 2  date Sat 10 Nov 2012 12:30:00 PM MSK
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -44,14 +44,15 @@ LIBS:sdc
 LIBS:stm
 LIBS:usb
 LIBS:lsm303dlhc
+LIBS:stm3485ebdr
 LIBS:moto_ctrl-cache
 EELAYER 25  0
 EELAYER END
 $Descr A1 33070 23400
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
-Date "8 nov 2012"
+Date "10 nov 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -59,6 +60,12 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Sheet
+S 20250 11800 3600 3400
+U 509DDBA2
+F0 "ev_moto" 60
+F1 "ev_moto.sch" 60
+$EndSheet
 NoConn ~ 31350 5000
 NoConn ~ 31350 4900
 NoConn ~ 31350 4800
