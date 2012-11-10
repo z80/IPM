@@ -18,7 +18,7 @@ static msg_t ledsThread( void *arg )
     	palClearPad( LED_PORT, LED_0_PIN );
     	palClearPad( LED_PORT, LED_1_PIN );
     	palClearPad( LED_PORT, LED_2_PIN );
-    	chThdSleepMilliseconds( 500 );
+        chThdSleepMilliseconds( 250 );
 
     	static uint32_t arg;
     	chMtxLock( &mutex );
@@ -36,7 +36,7 @@ static msg_t ledsThread( void *arg )
     		palSetPad( LED_PORT, LED_2_PIN );
     	else
     		palClearPad( LED_PORT, LED_2_PIN );
-    	chThdSleepMilliseconds( 500 );
+        chThdSleepMilliseconds( 250 );
     }
 
     return 0;

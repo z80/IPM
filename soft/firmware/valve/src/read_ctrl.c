@@ -2,6 +2,7 @@
 #include "read_ctrl.h"
 #include "hal.h"
 #include "hdw_config.h"
+#include "led_ctrl.h"
 
 static Mutex    mutex;
 static uint32_t value = 0;
@@ -10,48 +11,63 @@ static void read( uint32_t * val )
 {
 	// Enable parallel load.
     palClearPad( IN_PORT, IN_PL_PIN );
+    chThdSleepMicroseconds( 1 );
     // One clock.
     palClearPad( IN_PORT, IN_CP_PIN );
+    chThdSleepMicroseconds( 1 );
     palSetPad( IN_PORT, IN_CP_PIN );
+    chThdSleepMicroseconds( 1 );
     // Disable parallel load.
     palSetPad( IN_PORT, IN_PL_PIN );
+    chThdSleepMicroseconds( 1 );
 
     // Clock enable.
     palClearPad( IN_PORT, IN_CE_PIN );
+    chThdSleepMicroseconds( 1 );
 
     static uint32_t result;
     result = 0;
     static uint32_t bitVal;
-    bitVal = (1 << 15);
+    bitVal = 1;
     static int16_t i;
-    for ( i=15; i>=0; i-- )
+    for ( i=0; i<16; i++ )
     {
         // One clock.
         palClearPad( IN_PORT, IN_CP_PIN );
+        chThdSleepMicroseconds( 1 );
         palSetPad( IN_PORT, IN_CP_PIN );
+        chThdSleepMicroseconds( 1 );
         // Check for value;
         static uint16_t b;
-        b = 1;
+        b = palReadPad( IN_PORT, IN_Q7_PIN );
         result += (b != 0) ? bitVal : 0;
-        bitVal >>= 1;
+        bitVal <<= 1;
+        chThdSleepMicroseconds( 1 );
     }
     // Clock disable.
     palSetPad( IN_PORT, IN_CE_PIN );
+    chThdSleepMicroseconds( 1 );
 
     chMtxLock( &mutex );
     *val = result;
     chMtxUnlock();
 }
 
-static WORKING_AREA( waRead, 256 );
+static WORKING_AREA( waRead, 2048 );
 static msg_t readThread( void *arg )
 {
     (void)arg;
     chRegSetThreadName( "read" );
     while ( 1 )
     {
-    	chThdSleepSeconds( 1 );
-    	read( &value );
+        chThdSleepMilliseconds( 1 );
+        read( &value );
+
+        uint8_t v = 0;
+        uint8_t i;
+        for ( i=0; i<16; i++ )
+            v += ( value & (1<<i) ) ? 1 : 0;
+        setLeds( v | 4 );
     }
 
     return 0;
@@ -79,7 +95,7 @@ uint32_t valueRead( void )
     chMtxLock( &mutex );
     result = value;
     chMtxUnlock();
-    return value;
+    return result;
 }
 
 

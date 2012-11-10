@@ -14,8 +14,8 @@ int main(void)
   chSysInit();
 
   initLed();
-  //initRead();
-  initWrite();
+  initRead();
+  //initWrite();
   while ( 1 )
   {
 
@@ -58,9 +58,9 @@ int main(void)
         chThdSleepMilliseconds( 1 );
     }
     setLeds( 2 );*/
-      write( 0xFFFFFFFF );
-      chThdSleepSeconds( 1 );
-      write( 0x00000000 );
+      //write( 0xFFFFFFFF );
+      //chThdSleepSeconds( 1 );
+      //write( 0x00000000 );
       chThdSleepSeconds( 1 );
   }
   return 0;
