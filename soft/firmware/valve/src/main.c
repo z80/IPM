@@ -18,17 +18,47 @@ int main(void)
   initWrite();
   while ( 1 )
   {
-    //setLeds( 1 );
-    palSetPad( OUT_PORT, OUT_CP_PIN );
-    chThdSleepSeconds( 2 );
+
     palClearPad( OUT_PORT, OUT_CP_PIN );
-    chThdSleepSeconds( 2 );
-    //setLeds( 2 );
-    //chThdSleepSeconds( 1 );
-    //setLeds( 4 );
-    //chThdSleepSeconds( 2 );
-    //setLeds( 2 );
-    //chThdSleepSeconds( 1 );
+    chThdSleepMilliseconds( 1 );
+    palSetPad( OUT_PORT, OUT_MR_PIN );
+    chThdSleepMilliseconds( 1 );
+    uint8_t v = 0x0F;
+    uint8_t i;
+    for ( i=0; i<8; i++ )
+    {
+        palClearPad( OUT_PORT, OUT_CP_PIN );
+        chThdSleepMilliseconds( 1 );
+
+        if ( v & (1<<i) )
+            palSetPad( OUT_PORT, OUT_DSA_PIN );
+        else
+            palClearPad( OUT_PORT, OUT_DSA_PIN );
+        chThdSleepMilliseconds( 1 );
+
+        palSetPad( OUT_PORT, OUT_CP_PIN );
+        chThdSleepMilliseconds( 1 );
+    }
+    setLeds( 1 );
+    chThdSleepSeconds( 1 );
+
+    v = 0xF0;
+    for ( i=0; i<8; i++ )
+    {
+        palClearPad( OUT_PORT, OUT_CP_PIN );
+        chThdSleepMilliseconds( 1 );
+
+        if ( v & (1<<i) )
+            palSetPad( OUT_PORT, OUT_DSA_PIN );
+        else
+            palClearPad( OUT_PORT, OUT_DSA_PIN );
+        chThdSleepMilliseconds( 1 );
+
+        palSetPad( OUT_PORT, OUT_CP_PIN );
+        chThdSleepMilliseconds( 1 );
+    }
+    setLeds( 2 );
+    chThdSleepSeconds( 1 );
   }
   return 0;
 }
