@@ -63,11 +63,11 @@ static msg_t readThread( void *arg )
         chThdSleepMilliseconds( 1 );
         read( &value );
 
-        uint8_t v = 0;
-        uint8_t i;
-        for ( i=0; i<16; i++ )
-            v += ( value & (1<<i) ) ? 1 : 0;
-        setLeds( v | 4 );
+        //uint8_t v = 0;
+        //uint8_t i;
+        //for ( i=0; i<16; i++ )
+        //    v += ( value & (1<<i) ) ? 1 : 0;
+        //setLeds( v | 4 );
     }
 
     return 0;
