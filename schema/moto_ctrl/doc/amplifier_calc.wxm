@@ -61,6 +61,29 @@ eqgn: 3/4 = cabs( R2 + R1/(%i*w*C)/(R1 + 1/(%i*w*C)) / R2 )^2;
 solve( [eqgn], [C] );
 /* [wxMaxima: input   end   ] */
 
+/* [wxMaxima: input   start ] */
+R: 10e3;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+C: 220e-9;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+eq: 16*(9 + w2*R^2*C^2) = 25*(4 + w2*R^2*C^2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve( [eq], [w2] );
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+w: sqrt( 1010101 );
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f: w/2/%pi;
+/* [wxMaxima: input   end   ] */
 
 /* Maxima can't load/batch files which end with a comment! */
 "Created with wxMaxima"$
