@@ -10,7 +10,7 @@ static uint32_t pendValue = 0;
 
 static void writeInternal( void )
 {
-	static uint32_t val;
+    static uint32_t val;
     chMtxLock( &mutex );
     val = pendValue;
     chMtxUnlock();
@@ -29,16 +29,16 @@ static void writeInternal( void )
     bitVal = (1 << 31);
     for ( i=31; i>=0; i-- )
     {
-    	palClearPad( OUT_PORT, OUT_CP_PIN );
+        palClearPad( OUT_PORT, OUT_CP_PIN );
         chThdSleepMicroseconds( 1 );
         if ( curValue & bitVal )
-        	palSetPad( OUT_PORT, OUT_DSA_PIN );
+            palSetPad( OUT_PORT, OUT_DSA_PIN );
         else
-        	palClearPad( OUT_PORT, OUT_DSA_PIN );
+            palClearPad( OUT_PORT, OUT_DSA_PIN );
         chThdSleepMicroseconds( 1 );
         palSetPad( OUT_PORT, OUT_CP_PIN );
         chThdSleepMicroseconds( 1 );
-    	bitVal >>= 1;
+        bitVal >>= 1;
     }
 }
 
@@ -68,7 +68,8 @@ static msg_t writeThread( void *arg )
 
 void initWrite( void )
 {
-	palSetPad( OUT_PORT,     OUT_EN_PIN );
+    palSetPad( OUT_PORT,     OUT_EN_PIN );
+    //palClearPad( OUT_PORT,     OUT_EN_PIN );
 	palSetPad( OUT_PORT,     OUT_MR_PIN );
 	palSetPad( OUT_PORT,     OUT_CP_PIN );
 	palSetPad( OUT_PORT,     OUT_DSA_PIN );
