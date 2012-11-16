@@ -15,11 +15,11 @@ int main(void)
   halInit();
   chSysInit();
 
+  initUsb();
   initLed();
   //initRead();
   //initWrite();
   //initI2c();
-  //initUsb();
   setLeds( 1 );
   while ( 1 )
   {
@@ -29,7 +29,7 @@ int main(void)
       //write( 0x00000000 );
       //setLeds( 1 );
       chThdSleepSeconds( 1 );
-      processShell();
+      //processShell();
   }
   return 0;
 }

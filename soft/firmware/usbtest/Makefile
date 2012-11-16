@@ -6,7 +6,6 @@
 # Compiler options here.
 ifeq ($(USE_OPT),)
   USE_OPT = -O2 -ggdb -fomit-frame-pointer -falign-functions=16
-  #USE_OPT = -O0 -g -ggdb -fomit-frame-pointer -falign-functions=16
 endif
 
 # C specific options here (added to USE_OPT).
@@ -67,10 +66,8 @@ include $(CHIBIOS)/os/ports/GCC/ARMCMx/STM32F1xx/port.mk
 include $(CHIBIOS)/os/kernel/kernel.mk
 include $(CHIBIOS)/test/test.mk
 
-# Ovverride PORTLD to custom one.
-PORTLD=./portld
 # Define linker script file here
-LDSCRIPT= $(PORTLD)/STM32F103C8T6.ld
+LDSCRIPT= ./portld/STM32F103C8T6.ld
 
 # C sources that can be compiled in ARM or THUMB mode depending on the global
 # setting.
@@ -80,16 +77,9 @@ CSRC = $(PORTSRC) \
        $(HALSRC) \
        $(PLATFORMSRC) \
        $(BOARDSRC) \
-       $(CHIBIOS)/os/various/evtimer.c \
-       $(CHIBIOS)/os/various/syscalls.c \
        $(CHIBIOS)/os/various/shell.c \
        $(CHIBIOS)/os/various/chprintf.c \
-       ./src/main.c \
-       ./src/usb_ctrl.c \
-       ./src/read_ctrl.c \
-       ./src/write_ctrl.c \
-       ./src/i2c_ctrl.c \
-       ./src/led_ctrl.c
+       main.c
 
 # C++ sources that can be compiled in ARM or THUMB mode depending on the global
 # setting.
@@ -120,8 +110,7 @@ ASMSRC = $(PORTASM)
 
 INCDIR = $(PORTINC) $(KERNINC) $(TESTINC) \
          $(HALINC) $(PLATFORMINC) $(BOARDINC) \
-         $(CHIBIOS)/os/various \
-         ./src
+         $(CHIBIOS)/os/various
 
 #
 # Project, sources and paths
