@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccWRx76A.s 			page 1
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccqZdvhe.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccWRx76A.s 			page 1
   51 0012 FFF7FEFF 		bl	initWrite
   52              		.loc 1 20 0
   53 0016 FFF7FEFF 		bl	initUsb
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccWRx76A.s 			page 2
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccqZdvhe.s 			page 2
 
 
   54              		.loc 1 21 0
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccWRx76A.s 			page 1
  108 0033 2D000000 		.4byte	.LASF0
  109 0037 03       		.uleb128 0x3
  110 0038 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccWRx76A.s 			page 3
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccqZdvhe.s 			page 3
 
 
  111 0039 06       		.byte	0x6
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccWRx76A.s 			page 1
  165 00a2 01       		.byte	0x1
  166 00a3 0B       		.byte	0xb
  167 00a4 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccWRx76A.s 			page 4
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccqZdvhe.s 			page 4
 
 
  168 00a5 29000000 		.4byte	0x29
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccWRx76A.s 			page 1
  222 0022 00       		.byte	0x0
  223 0023 0B       		.uleb128 0xb
  224 0024 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccWRx76A.s 			page 5
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccqZdvhe.s 			page 5
 
 
  225 0025 3E       		.uleb128 0x3e
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccWRx76A.s 			page 1
  279 005b 3A       		.uleb128 0x3a
  280 005c 0B       		.uleb128 0xb
  281 005d 3B       		.uleb128 0x3b
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccWRx76A.s 			page 6
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccqZdvhe.s 			page 6
 
 
  282 005e 05       		.uleb128 0x5
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccWRx76A.s 			page 1
  330              		.section	.debug_str,"MS",%progbits,1
  331              	.LASF9:
  332 0000 6C6F6E67 		.ascii	"long long int\000"
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccWRx76A.s 			page 7
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccqZdvhe.s 			page 7
 
 
  332      206C6F6E 
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccWRx76A.s 			page 1
  354      7400
  355              	.LASF13:
  356 009f 49544D5F 		.ascii	"ITM_RxBuffer\000"
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccWRx76A.s 			page 8
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccqZdvhe.s 			page 8
 
 
  356      52784275 
@@ -445,13 +445,13 @@ ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccWRx76A.s 			page 1
  366 00ee 63686172 		.ascii	"char\000"
  366      00
  367              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccWRx76A.s 			page 9
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccqZdvhe.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccWRx76A.s:24     .text.main:00000000 $t
-C:\DOCUME~1\z_80\LOCALS~1\Temp\ccWRx76A.s:30     .text.main:00000000 main
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccqZdvhe.s:24     .text.main:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccqZdvhe.s:30     .text.main:00000000 main
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS
