@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccsJ1JuY.s 			page 1
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccfOJeHK.s 			page 1
 
 
    1              		.syntax unified
@@ -20,8 +20,8 @@ ARM GAS  /tmp/ccsJ1JuY.s 			page 1
   17              	.Ldebug_info0:
   18              		.section	.debug_line,"",%progbits
   19              	.Ldebug_line0:
-  20 0000 DA000000 		.text
-  20      0200D400 
+  20 0000 D6000000 		.text
+  20      0200D000 
   20      00000201 
   20      FB0E0D00 
   20      01010101 
@@ -29,7 +29,7 @@ ARM GAS  /tmp/ccsJ1JuY.s 			page 1
   22              		.cfi_sections	.debug_frame
   23              	.Letext0:
   24              		.file 1 "../chibios_2.4.x/os/ports/common/ARMCMx/CMSIS/include/core_cm3.h"
-  25              		.file 2 "/home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../.
+  25              		.file 2 "c:\\programs\\codesourcery\\arm-2012.03-56\\bin\\../lib/gcc/arm-none-eabi/4.5.2/../../../
   26              		.section	.debug_info
   27 0000 9B000000 		.4byte	0x9b
   28 0004 0200     		.2byte	0x2
@@ -38,8 +38,8 @@ ARM GAS  /tmp/ccsJ1JuY.s 			page 1
   31 000b 01       		.uleb128 0x1
   32 000c 21000000 		.4byte	.LASF11
   33 0010 01       		.byte	0x1
-  34 0011 D5000000 		.4byte	.LASF12
-  35 0015 63000000 		.4byte	.LASF13
+  34 0011 CE000000 		.4byte	.LASF12
+  35 0015 A2000000 		.4byte	.LASF13
   36 0019 00000000 		.4byte	.Ltext0
   37 001d 00000000 		.4byte	.Letext0
   38 0021 00000000 		.4byte	.Ldebug_line0
@@ -54,31 +54,31 @@ ARM GAS  /tmp/ccsJ1JuY.s 			page 1
   47 0033 03       		.uleb128 0x3
   48 0034 01       		.byte	0x1
   49 0035 06       		.byte	0x6
-  50 0036 B7000000 		.4byte	.LASF1
+  50 0036 96000000 		.4byte	.LASF1
   51 003a 03       		.uleb128 0x3
   52 003b 01       		.byte	0x1
   53 003c 08       		.byte	0x8
-ARM GAS  /tmp/ccsJ1JuY.s 			page 2
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccfOJeHK.s 			page 2
 
 
-  54 003d 8E000000 		.4byte	.LASF2
+  54 003d 63000000 		.4byte	.LASF2
   55 0041 03       		.uleb128 0x3
   56 0042 02       		.byte	0x2
   57 0043 05       		.byte	0x5
-  58 0044 C3000000 		.4byte	.LASF3
+  58 0044 7F000000 		.4byte	.LASF3
   59 0048 03       		.uleb128 0x3
   60 0049 02       		.byte	0x2
   61 004a 07       		.byte	0x7
   62 004b 0E000000 		.4byte	.LASF4
   63 004f 04       		.uleb128 0x4
-  64 0050 CD000000 		.4byte	.LASF14
+  64 0050 C6000000 		.4byte	.LASF14
   65 0054 02       		.byte	0x2
   66 0055 4F       		.byte	0x4f
   67 0056 5A000000 		.4byte	0x5a
   68 005a 03       		.uleb128 0x3
   69 005b 04       		.byte	0x4
   70 005c 05       		.byte	0x5
-  71 005d A1000000 		.4byte	.LASF5
+  71 005d 76000000 		.4byte	.LASF5
   72 0061 03       		.uleb128 0x3
   73 0062 04       		.byte	0x4
   74 0063 07       		.byte	0x7
@@ -94,18 +94,18 @@ ARM GAS  /tmp/ccsJ1JuY.s 			page 1
   84 0076 03       		.uleb128 0x3
   85 0077 01       		.byte	0x1
   86 0078 08       		.byte	0x8
-  87 0079 9C000000 		.4byte	.LASF9
+  87 0079 71000000 		.4byte	.LASF9
   88 007d 05       		.uleb128 0x5
   89 007e 4F000000 		.4byte	0x4f
   90 0082 06       		.uleb128 0x6
-  91 0083 AA000000 		.4byte	.LASF10
+  91 0083 89000000 		.4byte	.LASF10
   92 0087 01       		.byte	0x1
   93 0088 9404     		.2byte	0x494
   94 008a 7D000000 		.4byte	0x7d
   95 008e 01       		.byte	0x1
   96 008f 01       		.byte	0x1
   97 0090 06       		.uleb128 0x6
-  98 0091 AA000000 		.4byte	.LASF10
+  98 0091 89000000 		.4byte	.LASF10
   99 0095 01       		.byte	0x1
  100 0096 9404     		.2byte	0x494
  101 0098 7D000000 		.4byte	0x7d
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccsJ1JuY.s 			page 1
  108 0002 01       		.byte	0x1
  109 0003 25       		.uleb128 0x25
  110 0004 0E       		.uleb128 0xe
-ARM GAS  /tmp/ccsJ1JuY.s 			page 3
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccfOJeHK.s 			page 3
 
 
  111 0005 13       		.uleb128 0x13
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccsJ1JuY.s 			page 1
  165 003b 00       		.byte	0x0
  166 003c 00       		.byte	0x0
  167 003d 06       		.uleb128 0x6
-ARM GAS  /tmp/ccsJ1JuY.s 			page 4
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccfOJeHK.s 			page 4
 
 
  168 003e 34       		.uleb128 0x34
@@ -238,53 +238,53 @@ ARM GAS  /tmp/ccsJ1JuY.s 			page 1
  205 004c 6C6F6E67 		.ascii	"long long unsigned int\000"
  205      206C6F6E 
  205      6720756E 
-ARM GAS  /tmp/ccsJ1JuY.s 			page 5
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccfOJeHK.s 			page 5
 
 
  205      7369676E 
  205      65642069 
- 206              	.LASF13:
- 207 0063 2F686F6D 		.ascii	"/home/z80/projects/ipm/soft/firmware/valve\000"
- 207      652F7A38 
- 207      302F7072 
- 207      6F6A6563 
- 207      74732F69 
- 208              	.LASF2:
- 209 008e 756E7369 		.ascii	"unsigned char\000"
- 209      676E6564 
- 209      20636861 
- 209      7200
- 210              	.LASF9:
- 211 009c 63686172 		.ascii	"char\000"
+ 206              	.LASF2:
+ 207 0063 756E7369 		.ascii	"unsigned char\000"
+ 207      676E6564 
+ 207      20636861 
+ 207      7200
+ 208              	.LASF9:
+ 209 0071 63686172 		.ascii	"char\000"
+ 209      00
+ 210              	.LASF5:
+ 211 0076 6C6F6E67 		.ascii	"long int\000"
+ 211      20696E74 
  211      00
- 212              	.LASF5:
- 213 00a1 6C6F6E67 		.ascii	"long int\000"
- 213      20696E74 
- 213      00
+ 212              	.LASF3:
+ 213 007f 73686F72 		.ascii	"short int\000"
+ 213      7420696E 
+ 213      7400
  214              	.LASF10:
- 215 00aa 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 215 0089 49544D5F 		.ascii	"ITM_RxBuffer\000"
  215      52784275 
  215      66666572 
  215      00
  216              	.LASF1:
- 217 00b7 7369676E 		.ascii	"signed char\000"
+ 217 0096 7369676E 		.ascii	"signed char\000"
  217      65642063 
  217      68617200 
- 218              	.LASF3:
- 219 00c3 73686F72 		.ascii	"short int\000"
- 219      7420696E 
- 219      7400
+ 218              	.LASF13:
+ 219 00a2 433A5C70 		.ascii	"C:\\projects\\ipm\\soft\\firmware\\valve\000"
+ 219      726F6A65 
+ 219      6374735C 
+ 219      69706D5C 
+ 219      736F6674 
  220              	.LASF14:
- 221 00cd 696E7433 		.ascii	"int32_t\000"
+ 221 00c6 696E7433 		.ascii	"int32_t\000"
  221      325F7400 
  222              	.LASF12:
- 223 00d5 2E2E2F63 		.ascii	"../chibios_2.4.x/os/hal/src/spi.c\000"
+ 223 00ce 2E2E2F63 		.ascii	"../chibios_2.4.x/os/hal/src/spi.c\000"
  223      68696269 
  223      6F735F32 
  223      2E342E78 
  223      2F6F732F 
  224              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  /tmp/ccsJ1JuY.s 			page 6
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccfOJeHK.s 			page 6
 
 
 DEFINED SYMBOLS

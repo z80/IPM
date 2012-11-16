@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccthpPKa.s 			page 1
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccDVbNJU.s 			page 1
 
 
    1              		.syntax unified
@@ -20,8 +20,8 @@ ARM GAS  /tmp/ccthpPKa.s 			page 1
   17              	.Ldebug_info0:
   18              		.section	.debug_line,"",%progbits
   19              	.Ldebug_line0:
-  20 0000 DA000000 		.text
-  20      0200D400 
+  20 0000 D6000000 		.text
+  20      0200D000 
   20      00000201 
   20      FB0E0D00 
   20      01010101 
@@ -29,7 +29,7 @@ ARM GAS  /tmp/ccthpPKa.s 			page 1
   22              		.cfi_sections	.debug_frame
   23              	.Letext0:
   24              		.file 1 "../chibios_2.4.x/os/ports/common/ARMCMx/CMSIS/include/core_cm3.h"
-  25              		.file 2 "/home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../.
+  25              		.file 2 "c:\\programs\\codesourcery\\arm-2012.03-56\\bin\\../lib/gcc/arm-none-eabi/4.5.2/../../../
   26              		.section	.debug_info
   27 0000 9B000000 		.4byte	0x9b
   28 0004 0200     		.2byte	0x2
@@ -38,27 +38,27 @@ ARM GAS  /tmp/ccthpPKa.s 			page 1
   31 000b 01       		.uleb128 0x1
   32 000c 21000000 		.4byte	.LASF11
   33 0010 01       		.byte	0x1
-  34 0011 AA000000 		.4byte	.LASF12
-  35 0015 63000000 		.4byte	.LASF13
+  34 0011 89000000 		.4byte	.LASF12
+  35 0015 C8000000 		.4byte	.LASF13
   36 0019 00000000 		.4byte	.Ltext0
   37 001d 00000000 		.4byte	.Letext0
   38 0021 00000000 		.4byte	.Ldebug_line0
   39 0025 02       		.uleb128 0x2
   40 0026 01       		.byte	0x1
   41 0027 06       		.byte	0x6
-  42 0028 DD000000 		.4byte	.LASF0
+  42 0028 BC000000 		.4byte	.LASF0
   43 002c 02       		.uleb128 0x2
   44 002d 01       		.byte	0x1
   45 002e 08       		.byte	0x8
-  46 002f 8E000000 		.4byte	.LASF1
+  46 002f 6D000000 		.4byte	.LASF1
   47 0033 02       		.uleb128 0x2
   48 0034 02       		.byte	0x2
   49 0035 05       		.byte	0x5
-  50 0036 E9000000 		.4byte	.LASF2
+  50 0036 4C000000 		.4byte	.LASF2
   51 003a 02       		.uleb128 0x2
   52 003b 02       		.byte	0x2
   53 003c 07       		.byte	0x7
-ARM GAS  /tmp/ccthpPKa.s 			page 2
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccDVbNJU.s 			page 2
 
 
   54 003d 0E000000 		.4byte	.LASF3
@@ -77,11 +77,11 @@ ARM GAS  /tmp/ccthpPKa.s 			page 1
   67 0056 02       		.uleb128 0x2
   68 0057 08       		.byte	0x8
   69 0058 07       		.byte	0x7
-  70 0059 4C000000 		.4byte	.LASF6
+  70 0059 56000000 		.4byte	.LASF6
   71 005d 02       		.uleb128 0x2
   72 005e 04       		.byte	0x4
   73 005f 05       		.byte	0x5
-  74 0060 A1000000 		.4byte	.LASF7
+  74 0060 80000000 		.4byte	.LASF7
   75 0064 02       		.uleb128 0x2
   76 0065 04       		.byte	0x4
   77 0066 07       		.byte	0x7
@@ -89,23 +89,23 @@ ARM GAS  /tmp/ccthpPKa.s 			page 1
   79 006b 02       		.uleb128 0x2
   80 006c 01       		.byte	0x1
   81 006d 08       		.byte	0x8
-  82 006e 9C000000 		.4byte	.LASF9
+  82 006e 7B000000 		.4byte	.LASF9
   83 0072 04       		.uleb128 0x4
-  84 0073 F3000000 		.4byte	.LASF14
+  84 0073 EC000000 		.4byte	.LASF14
   85 0077 02       		.byte	0x2
   86 0078 4F       		.byte	0x4f
   87 0079 5D000000 		.4byte	0x5d
   88 007d 05       		.uleb128 0x5
   89 007e 72000000 		.4byte	0x72
   90 0082 06       		.uleb128 0x6
-  91 0083 D0000000 		.4byte	.LASF10
+  91 0083 AF000000 		.4byte	.LASF10
   92 0087 01       		.byte	0x1
   93 0088 9404     		.2byte	0x494
   94 008a 7D000000 		.4byte	0x7d
   95 008e 01       		.byte	0x1
   96 008f 01       		.byte	0x1
   97 0090 06       		.uleb128 0x6
-  98 0091 D0000000 		.4byte	.LASF10
+  98 0091 AF000000 		.4byte	.LASF10
   99 0095 01       		.byte	0x1
  100 0096 9404     		.2byte	0x494
  101 0098 7D000000 		.4byte	0x7d
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccthpPKa.s 			page 1
  108 0002 01       		.byte	0x1
  109 0003 25       		.uleb128 0x25
  110 0004 0E       		.uleb128 0xe
-ARM GAS  /tmp/ccthpPKa.s 			page 3
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccDVbNJU.s 			page 3
 
 
  111 0005 13       		.uleb128 0x13
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccthpPKa.s 			page 1
  165 003b 00       		.byte	0x0
  166 003c 00       		.byte	0x0
  167 003d 06       		.uleb128 0x6
-ARM GAS  /tmp/ccthpPKa.s 			page 4
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccDVbNJU.s 			page 4
 
 
  168 003e 34       		.uleb128 0x34
@@ -234,57 +234,57 @@ ARM GAS  /tmp/ccthpPKa.s 			page 1
  203      69676E65 
  203      6420696E 
  203      7400
- 204              	.LASF6:
- 205 004c 6C6F6E67 		.ascii	"long long unsigned int\000"
- 205      206C6F6E 
- 205      6720756E 
-ARM GAS  /tmp/ccthpPKa.s 			page 5
+ 204              	.LASF2:
+ 205 004c 73686F72 		.ascii	"short int\000"
+ 205      7420696E 
+ 205      7400
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccDVbNJU.s 			page 5
 
 
- 205      7369676E 
- 205      65642069 
- 206              	.LASF13:
- 207 0063 2F686F6D 		.ascii	"/home/z80/projects/ipm/soft/firmware/valve\000"
- 207      652F7A38 
- 207      302F7072 
- 207      6F6A6563 
- 207      74732F69 
+ 206              	.LASF6:
+ 207 0056 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 207      206C6F6E 
+ 207      6720756E 
+ 207      7369676E 
+ 207      65642069 
  208              	.LASF1:
- 209 008e 756E7369 		.ascii	"unsigned char\000"
+ 209 006d 756E7369 		.ascii	"unsigned char\000"
  209      676E6564 
  209      20636861 
  209      7200
  210              	.LASF9:
- 211 009c 63686172 		.ascii	"char\000"
+ 211 007b 63686172 		.ascii	"char\000"
  211      00
  212              	.LASF7:
- 213 00a1 6C6F6E67 		.ascii	"long int\000"
+ 213 0080 6C6F6E67 		.ascii	"long int\000"
  213      20696E74 
  213      00
  214              	.LASF12:
- 215 00aa 2E2E2F63 		.ascii	"../chibios_2.4.x/os/hal/src/mmc_spi.c\000"
+ 215 0089 2E2E2F63 		.ascii	"../chibios_2.4.x/os/hal/src/mmc_spi.c\000"
  215      68696269 
  215      6F735F32 
  215      2E342E78 
  215      2F6F732F 
  216              	.LASF10:
- 217 00d0 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 217 00af 49544D5F 		.ascii	"ITM_RxBuffer\000"
  217      52784275 
  217      66666572 
  217      00
  218              	.LASF0:
- 219 00dd 7369676E 		.ascii	"signed char\000"
+ 219 00bc 7369676E 		.ascii	"signed char\000"
  219      65642063 
  219      68617200 
- 220              	.LASF2:
- 221 00e9 73686F72 		.ascii	"short int\000"
- 221      7420696E 
- 221      7400
+ 220              	.LASF13:
+ 221 00c8 433A5C70 		.ascii	"C:\\projects\\ipm\\soft\\firmware\\valve\000"
+ 221      726F6A65 
+ 221      6374735C 
+ 221      69706D5C 
+ 221      736F6674 
  222              	.LASF14:
- 223 00f3 696E7433 		.ascii	"int32_t\000"
+ 223 00ec 696E7433 		.ascii	"int32_t\000"
  223      325F7400 
  224              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  /tmp/ccthpPKa.s 			page 6
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccDVbNJU.s 			page 6
 
 
 DEFINED SYMBOLS

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccXBsLlb.s 			page 1
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 1
 
 
    1              		.syntax unified
@@ -20,8 +20,8 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
   17              	.Ldebug_info0:
   18              		.section	.debug_line,"",%progbits
   19              	.Ldebug_line0:
-  20 0000 C6010000 		.text
-  20      02006401 
+  20 0000 C2010000 		.text
+  20      02006001 
   20      00000201 
   20      FB0E0D00 
   20      01010101 
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
   51 0010 00000000 		.word	.LC0
   52              		.cfi_endproc
   53              	.LFE0:
-ARM GAS  /tmp/ccXBsLlb.s 			page 2
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 2
 
 
   54              		.size	_idle_thread, .-_idle_thread
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  106              	.LBB2:
  107 0036 0023     		movs	r3, #0
  108              	.LVL2:
-ARM GAS  /tmp/ccXBsLlb.s 			page 3
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 3
 
 
  109              	@ 109 "../chibios_2.4.x/os/kernel/src/chsys.c" 1
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  163              	.LCFI2:
  164              		.cfi_def_cfa_offset 16
  165              		.loc 1 135 0
-ARM GAS  /tmp/ccXBsLlb.s 			page 4
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 4
 
 
  166              		.cfi_offset 14, -4
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  220 0040 2368     		ldr	r3, [r4, #0]
  221              	.LVL10:
  222 0042 9868     		ldr	r0, [r3, #8]
-ARM GAS  /tmp/ccXBsLlb.s 			page 5
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 5
 
 
  223 0044 0028     		cmp	r0, #0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  265 0004 02000000 		.4byte	.LVL1
  266 0008 0100     		.2byte	0x1
  267 000a 50       		.byte	0x50
-ARM GAS  /tmp/ccXBsLlb.s 			page 6
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 6
 
 
  268 000b 00000000 		.4byte	0x0
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  322 0094 42000000 		.4byte	.LVL10
  323 0098 48000000 		.4byte	.LVL11
  324 009c 0200     		.2byte	0x2
-ARM GAS  /tmp/ccXBsLlb.s 			page 7
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 7
 
 
  325 009e 74       		.byte	0x74
@@ -373,7 +373,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  334 00b3 0C       		.sleb128 12
  335 00b4 00000000 		.4byte	0x0
  336 00b8 00000000 		.4byte	0x0
- 337              		.file 2 "/home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../.
+ 337              		.file 2 "c:\\programs\\codesourcery\\arm-2012.03-56\\bin\\../lib/gcc/arm-none-eabi/4.5.2/../../../
  338              		.file 3 "../chibios_2.4.x/os/ports/GCC/ARMCMx/chtypes.h"
  339              		.file 4 "../chibios_2.4.x/os/kernel/include/chlists.h"
  340              		.file 5 "../chibios_2.4.x/os/kernel/include/chthreads.h"
@@ -388,10 +388,10 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  349 0006 00000000 		.4byte	.Ldebug_abbrev0
  350 000a 04       		.byte	0x4
  351 000b 01       		.uleb128 0x1
- 352 000c 28030000 		.4byte	.LASF82
+ 352 000c 21030000 		.4byte	.LASF82
  353 0010 01       		.byte	0x1
- 354 0011 BB020000 		.4byte	.LASF83
- 355 0015 07010000 		.4byte	.LASF84
+ 354 0011 B4020000 		.4byte	.LASF83
+ 355 0015 38000000 		.4byte	.LASF84
  356 0019 00000000 		.4byte	0x0
  357 001d 00000000 		.4byte	0x0
  358 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -403,53 +403,53 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  364 0030 03       		.uleb128 0x3
  365 0031 04       		.byte	0x4
  366 0032 07       		.byte	0x7
- 367 0033 F2000000 		.4byte	.LASF0
+ 367 0033 16010000 		.4byte	.LASF0
  368 0037 03       		.uleb128 0x3
  369 0038 01       		.byte	0x1
  370 0039 06       		.byte	0x6
- 371 003a 78000000 		.4byte	.LASF1
+ 371 003a 85000000 		.4byte	.LASF1
  372 003e 04       		.uleb128 0x4
- 373 003f 19030000 		.4byte	.LASF5
+ 373 003f 12030000 		.4byte	.LASF5
  374 0043 02       		.byte	0x2
  375 0044 2A       		.byte	0x2a
  376 0045 49000000 		.4byte	0x49
  377 0049 03       		.uleb128 0x3
  378 004a 01       		.byte	0x1
  379 004b 08       		.byte	0x8
- 380 004c FF010000 		.4byte	.LASF2
+ 380 004c F8010000 		.4byte	.LASF2
  381 0050 03       		.uleb128 0x3
-ARM GAS  /tmp/ccXBsLlb.s 			page 8
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 8
 
 
  382 0051 02       		.byte	0x2
  383 0052 05       		.byte	0x5
- 384 0053 17020000 		.4byte	.LASF3
+ 384 0053 10020000 		.4byte	.LASF3
  385 0057 03       		.uleb128 0x3
  386 0058 02       		.byte	0x2
  387 0059 07       		.byte	0x7
- 388 005a 4C010000 		.4byte	.LASF4
+ 388 005a 45010000 		.4byte	.LASF4
  389 005e 04       		.uleb128 0x4
- 390 005f F7010000 		.4byte	.LASF6
+ 390 005f F0010000 		.4byte	.LASF6
  391 0063 02       		.byte	0x2
  392 0064 4F       		.byte	0x4f
  393 0065 69000000 		.4byte	0x69
  394 0069 03       		.uleb128 0x3
  395 006a 04       		.byte	0x4
  396 006b 05       		.byte	0x5
- 397 006c 9E000000 		.4byte	.LASF7
+ 397 006c C2000000 		.4byte	.LASF7
  398 0070 04       		.uleb128 0x4
- 399 0071 58020000 		.4byte	.LASF8
+ 399 0071 51020000 		.4byte	.LASF8
  400 0075 02       		.byte	0x2
  401 0076 50       		.byte	0x50
  402 0077 7B000000 		.4byte	0x7b
  403 007b 03       		.uleb128 0x3
  404 007c 04       		.byte	0x4
  405 007d 07       		.byte	0x7
- 406 007e 32010000 		.4byte	.LASF9
+ 406 007e 2B010000 		.4byte	.LASF9
  407 0082 03       		.uleb128 0x3
  408 0083 08       		.byte	0x8
  409 0084 05       		.byte	0x5
- 410 0085 6A000000 		.4byte	.LASF10
+ 410 0085 77000000 		.4byte	.LASF10
  411 0089 04       		.uleb128 0x4
  412 008a 15000000 		.4byte	.LASF11
  413 008e 02       		.byte	0x2
@@ -458,63 +458,63 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  416 0094 03       		.uleb128 0x3
  417 0095 08       		.byte	0x8
  418 0096 07       		.byte	0x7
- 419 0097 38000000 		.4byte	.LASF12
+ 419 0097 A3000000 		.4byte	.LASF12
  420 009b 04       		.uleb128 0x4
- 421 009c 65010000 		.4byte	.LASF13
+ 421 009c 5E010000 		.4byte	.LASF13
  422 00a0 03       		.byte	0x3
  423 00a1 2F       		.byte	0x2f
  424 00a2 3E000000 		.4byte	0x3e
  425 00a6 04       		.uleb128 0x4
- 426 00a7 A7000000 		.4byte	.LASF14
+ 426 00a7 CB000000 		.4byte	.LASF14
  427 00ab 03       		.byte	0x3
  428 00ac 30       		.byte	0x30
  429 00ad 3E000000 		.4byte	0x3e
  430 00b1 04       		.uleb128 0x4
- 431 00b2 E0010000 		.4byte	.LASF15
+ 431 00b2 D9010000 		.4byte	.LASF15
  432 00b6 03       		.byte	0x3
  433 00b7 31       		.byte	0x31
  434 00b8 3E000000 		.4byte	0x3e
  435 00bc 04       		.uleb128 0x4
- 436 00bd EF010000 		.4byte	.LASF16
+ 436 00bd E8010000 		.4byte	.LASF16
  437 00c1 03       		.byte	0x3
  438 00c2 32       		.byte	0x32
-ARM GAS  /tmp/ccXBsLlb.s 			page 9
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 9
 
 
  439 00c3 70000000 		.4byte	0x70
  440 00c7 04       		.uleb128 0x4
- 441 00c8 5F010000 		.4byte	.LASF17
+ 441 00c8 58010000 		.4byte	.LASF17
  442 00cc 03       		.byte	0x3
  443 00cd 33       		.byte	0x33
  444 00ce 5E000000 		.4byte	0x5e
  445 00d2 04       		.uleb128 0x4
- 446 00d3 79010000 		.4byte	.LASF18
+ 446 00d3 72010000 		.4byte	.LASF18
  447 00d7 03       		.byte	0x3
  448 00d8 35       		.byte	0x35
  449 00d9 70000000 		.4byte	0x70
  450 00dd 04       		.uleb128 0x4
- 451 00de 9D020000 		.4byte	.LASF19
+ 451 00de 96020000 		.4byte	.LASF19
  452 00e2 03       		.byte	0x3
  453 00e3 36       		.byte	0x36
  454 00e4 70000000 		.4byte	0x70
  455 00e8 04       		.uleb128 0x4
- 456 00e9 E1000000 		.4byte	.LASF20
+ 456 00e9 05010000 		.4byte	.LASF20
  457 00ed 03       		.byte	0x3
  458 00ee 37       		.byte	0x37
  459 00ef 5E000000 		.4byte	0x5e
  460 00f3 04       		.uleb128 0x4
- 461 00f4 46020000 		.4byte	.LASF21
+ 461 00f4 3F020000 		.4byte	.LASF21
  462 00f8 04       		.byte	0x4
  463 00f9 2A       		.byte	0x2a
  464 00fa FE000000 		.4byte	0xfe
  465 00fe 05       		.uleb128 0x5
- 466 00ff 46020000 		.4byte	.LASF21
+ 466 00ff 3F020000 		.4byte	.LASF21
  467 0103 4C       		.byte	0x4c
  468 0104 05       		.byte	0x5
  469 0105 5E       		.byte	0x5e
  470 0106 23020000 		.4byte	0x223
  471 010a 06       		.uleb128 0x6
- 472 010b 37020000 		.4byte	.LASF22
+ 472 010b 30020000 		.4byte	.LASF22
  473 010f 05       		.byte	0x5
  474 0110 5F       		.byte	0x5f
  475 0111 48020000 		.4byte	0x248
@@ -522,7 +522,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  477 0116 23       		.byte	0x23
  478 0117 00       		.uleb128 0x0
  479 0118 06       		.uleb128 0x6
- 480 0119 E8010000 		.4byte	.LASF23
+ 480 0119 E1010000 		.4byte	.LASF23
  481 011d 05       		.byte	0x5
  482 011e 61       		.byte	0x61
  483 011f 48020000 		.4byte	0x248
@@ -530,7 +530,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  485 0124 23       		.byte	0x23
  486 0125 04       		.uleb128 0x4
  487 0126 06       		.uleb128 0x6
- 488 0127 63000000 		.4byte	.LASF24
+ 488 0127 70000000 		.4byte	.LASF24
  489 012b 05       		.byte	0x5
  490 012c 63       		.byte	0x63
  491 012d BC000000 		.4byte	0xbc
@@ -538,10 +538,10 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  493 0132 23       		.byte	0x23
  494 0133 08       		.uleb128 0x8
  495 0134 06       		.uleb128 0x6
-ARM GAS  /tmp/ccXBsLlb.s 			page 10
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 10
 
 
- 496 0135 5F030000 		.4byte	.LASF25
+ 496 0135 58030000 		.4byte	.LASF25
  497 0139 05       		.byte	0x5
  498 013a 64       		.byte	0x64
  499 013b 20030000 		.4byte	0x320
@@ -549,7 +549,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  501 0140 23       		.byte	0x23
  502 0141 0C       		.uleb128 0xc
  503 0142 06       		.uleb128 0x6
- 504 0143 B0000000 		.4byte	.LASF26
+ 504 0143 D4000000 		.4byte	.LASF26
  505 0147 05       		.byte	0x5
  506 0148 66       		.byte	0x66
  507 0149 48020000 		.4byte	0x248
@@ -557,7 +557,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  509 014e 23       		.byte	0x23
  510 014f 10       		.uleb128 0x10
  511 0150 06       		.uleb128 0x6
- 512 0151 A6010000 		.4byte	.LASF27
+ 512 0151 9F010000 		.4byte	.LASF27
  513 0155 05       		.byte	0x5
  514 0156 67       		.byte	0x67
  515 0157 48020000 		.4byte	0x248
@@ -565,7 +565,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  517 015c 23       		.byte	0x23
  518 015d 14       		.uleb128 0x14
  519 015e 06       		.uleb128 0x6
- 520 015f 34030000 		.4byte	.LASF28
+ 520 015f 2D030000 		.4byte	.LASF28
  521 0163 05       		.byte	0x5
  522 0164 6E       		.byte	0x6e
  523 0165 08050000 		.4byte	0x508
@@ -573,7 +573,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  525 016a 23       		.byte	0x23
  526 016b 18       		.uleb128 0x18
  527 016c 06       		.uleb128 0x6
- 528 016d E7000000 		.4byte	.LASF29
+ 528 016d 0B010000 		.4byte	.LASF29
  529 0171 05       		.byte	0x5
  530 0172 74       		.byte	0x74
  531 0173 1A050000 		.4byte	0x51a
@@ -581,7 +581,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  533 0178 23       		.byte	0x23
  534 0179 1C       		.uleb128 0x1c
  535 017a 06       		.uleb128 0x6
- 536 017b 21020000 		.4byte	.LASF30
+ 536 017b 1A020000 		.4byte	.LASF30
  537 017f 05       		.byte	0x5
  538 0180 79       		.byte	0x79
  539 0181 A6000000 		.4byte	0xa6
@@ -589,7 +589,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  541 0186 23       		.byte	0x23
  542 0187 20       		.uleb128 0x20
  543 0188 06       		.uleb128 0x6
- 544 0189 3E020000 		.4byte	.LASF31
+ 544 0189 37020000 		.4byte	.LASF31
  545 018d 05       		.byte	0x5
  546 018e 7D       		.byte	0x7d
  547 018f 9B000000 		.4byte	0x9b
@@ -597,8 +597,8 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  549 0194 23       		.byte	0x23
  550 0195 21       		.uleb128 0x21
  551 0196 06       		.uleb128 0x6
- 552 0197 02030000 		.4byte	.LASF32
-ARM GAS  /tmp/ccXBsLlb.s 			page 11
+ 552 0197 FB020000 		.4byte	.LASF32
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 11
 
 
  553 019b 05       		.byte	0x5
@@ -608,7 +608,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  557 01a2 23       		.byte	0x23
  558 01a3 22       		.uleb128 0x22
  559 01a4 06       		.uleb128 0x6
- 560 01a5 E2020000 		.4byte	.LASF33
+ 560 01a5 DB020000 		.4byte	.LASF33
  561 01a9 05       		.byte	0x5
  562 01aa 89       		.byte	0x89
  563 01ab 05040000 		.4byte	0x405
@@ -624,7 +624,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  573 01be 23       		.byte	0x23
  574 01bf 28       		.uleb128 0x28
  575 01c0 06       		.uleb128 0x6
- 576 01c1 65030000 		.4byte	.LASF34
+ 576 01c1 5E030000 		.4byte	.LASF34
  577 01c5 05       		.byte	0x5
  578 01c6 B3       		.byte	0xb3
  579 01c7 70020000 		.4byte	0x270
@@ -632,7 +632,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  581 01cc 23       		.byte	0x23
  582 01cd 2C       		.uleb128 0x2c
  583 01ce 06       		.uleb128 0x6
- 584 01cf F0020000 		.4byte	.LASF35
+ 584 01cf E9020000 		.4byte	.LASF35
  585 01d3 05       		.byte	0x5
  586 01d4 B9       		.byte	0xb9
  587 01d5 4E020000 		.4byte	0x24e
@@ -648,7 +648,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  597 01e8 23       		.byte	0x23
  598 01e9 38       		.uleb128 0x38
  599 01ea 06       		.uleb128 0x6
- 600 01eb 4D020000 		.4byte	.LASF37
+ 600 01eb 46020000 		.4byte	.LASF37
  601 01ef 05       		.byte	0x5
  602 01f0 C3       		.byte	0xc3
  603 01f1 D2000000 		.4byte	0xd2
@@ -656,9 +656,9 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  605 01f6 23       		.byte	0x23
  606 01f7 3C       		.uleb128 0x3c
  607 01f8 06       		.uleb128 0x6
- 608 01f9 0D020000 		.4byte	.LASF38
+ 608 01f9 06020000 		.4byte	.LASF38
  609 01fd 05       		.byte	0x5
-ARM GAS  /tmp/ccXBsLlb.s 			page 12
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 12
 
 
  610 01fe CA       		.byte	0xca
@@ -667,7 +667,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  613 0204 23       		.byte	0x23
  614 0205 40       		.uleb128 0x40
  615 0206 06       		.uleb128 0x6
- 616 0207 A7020000 		.4byte	.LASF39
+ 616 0207 A0020000 		.4byte	.LASF39
  617 020b 05       		.byte	0x5
  618 020c CE       		.byte	0xce
  619 020d BC000000 		.4byte	0xbc
@@ -675,7 +675,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  621 0212 23       		.byte	0x23
  622 0213 44       		.uleb128 0x44
  623 0214 06       		.uleb128 0x6
- 624 0215 8E000000 		.4byte	.LASF40
+ 624 0215 9B000000 		.4byte	.LASF40
  625 0219 05       		.byte	0x5
  626 021a D4       		.byte	0xd4
  627 021b 86020000 		.4byte	0x286
@@ -689,7 +689,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  635 0226 61       		.byte	0x61
  636 0227 48020000 		.4byte	0x248
  637 022b 06       		.uleb128 0x6
- 638 022c 37020000 		.4byte	.LASF22
+ 638 022c 30020000 		.4byte	.LASF22
  639 0230 04       		.byte	0x4
  640 0231 62       		.byte	0x62
  641 0232 48020000 		.4byte	0x248
@@ -697,7 +697,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  643 0237 23       		.byte	0x23
  644 0238 00       		.uleb128 0x0
  645 0239 06       		.uleb128 0x6
- 646 023a E8010000 		.4byte	.LASF23
+ 646 023a E1010000 		.4byte	.LASF23
  647 023e 04       		.byte	0x4
  648 023f 64       		.byte	0x64
  649 0240 48020000 		.4byte	0x248
@@ -709,7 +709,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  655 0249 04       		.byte	0x4
  656 024a F3000000 		.4byte	0xf3
  657 024e 04       		.uleb128 0x4
- 658 024f B4010000 		.4byte	.LASF41
+ 658 024f AD010000 		.4byte	.LASF41
  659 0253 04       		.byte	0x4
  660 0254 66       		.byte	0x66
  661 0255 23020000 		.4byte	0x223
@@ -718,11 +718,11 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  664 025b 04       		.byte	0x4
  665 025c 6B       		.byte	0x6b
  666 025d 70020000 		.4byte	0x270
-ARM GAS  /tmp/ccXBsLlb.s 			page 13
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 13
 
 
  667 0261 06       		.uleb128 0x6
- 668 0262 37020000 		.4byte	.LASF22
+ 668 0262 30020000 		.4byte	.LASF22
  669 0266 04       		.byte	0x4
  670 0267 6D       		.byte	0x6d
  671 0268 48020000 		.4byte	0x248
@@ -731,24 +731,24 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  674 026e 00       		.uleb128 0x0
  675 026f 00       		.byte	0x0
  676 0270 04       		.uleb128 0x4
- 677 0271 6D010000 		.4byte	.LASF42
+ 677 0271 66010000 		.4byte	.LASF42
  678 0275 04       		.byte	0x4
  679 0276 70       		.byte	0x70
  680 0277 59020000 		.4byte	0x259
  681 027b 04       		.uleb128 0x4
- 682 027c D0000000 		.4byte	.LASF43
+ 682 027c F4000000 		.4byte	.LASF43
  683 0280 06       		.byte	0x6
  684 0281 D7       		.byte	0xd7
  685 0282 86020000 		.4byte	0x286
  686 0286 0A       		.uleb128 0xa
  687 0287 04       		.byte	0x4
  688 0288 04       		.uleb128 0x4
- 689 0289 8B010000 		.4byte	.LASF44
+ 689 0289 84010000 		.4byte	.LASF44
  690 028d 06       		.byte	0x6
  691 028e DD       		.byte	0xdd
  692 028f 89000000 		.4byte	0x89
  693 0293 05       		.uleb128 0x5
- 694 0294 E9020000 		.4byte	.LASF45
+ 694 0294 E2020000 		.4byte	.LASF45
  695 0298 24       		.byte	0x24
  696 0299 06       		.byte	0x6
  697 029a FE       		.byte	0xfe
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  721 02c7 23       		.byte	0x23
  722 02c8 08       		.uleb128 0x8
  723 02c9 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccXBsLlb.s 			page 14
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 14
 
 
  724 02ca 723700   		.ascii	"r7\000"
@@ -830,7 +830,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  770 031e 20       		.uleb128 0x20
  771 031f 00       		.byte	0x0
  772 0320 0C       		.uleb128 0xc
- 773 0321 44010000 		.4byte	.LASF46
+ 773 0321 3D010000 		.4byte	.LASF46
  774 0325 04       		.byte	0x4
  775 0326 06       		.byte	0x6
  776 0327 2301     		.2byte	0x123
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  778 032d 0B       		.uleb128 0xb
  779 032e 72313300 		.ascii	"r13\000"
  780 0332 06       		.byte	0x6
-ARM GAS  /tmp/ccXBsLlb.s 			page 15
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 15
 
 
  781 0333 2401     		.2byte	0x124
@@ -851,7 +851,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  788 033e 04       		.byte	0x4
  789 033f 93020000 		.4byte	0x293
  790 0343 04       		.uleb128 0x4
- 791 0344 B2020000 		.4byte	.LASF47
+ 791 0344 AB020000 		.4byte	.LASF47
  792 0348 07       		.byte	0x7
  793 0349 53       		.byte	0x53
  794 034a 4E030000 		.4byte	0x34e
@@ -865,18 +865,18 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  802 035b 86020000 		.4byte	0x286
  803 035f 00       		.byte	0x0
  804 0360 04       		.uleb128 0x4
- 805 0361 69020000 		.4byte	.LASF48
+ 805 0361 62020000 		.4byte	.LASF48
  806 0365 07       		.byte	0x7
  807 0366 58       		.byte	0x58
  808 0367 6B030000 		.4byte	0x36b
  809 036b 05       		.uleb128 0x5
- 810 036c 69020000 		.4byte	.LASF48
+ 810 036c 62020000 		.4byte	.LASF48
  811 0370 14       		.byte	0x14
  812 0371 07       		.byte	0x7
  813 0372 5F       		.byte	0x5f
  814 0373 BE030000 		.4byte	0x3be
  815 0377 06       		.uleb128 0x6
- 816 0378 FF000000 		.4byte	.LASF49
+ 816 0378 23010000 		.4byte	.LASF49
  817 037c 07       		.byte	0x7
  818 037d 60       		.byte	0x60
  819 037e BE030000 		.4byte	0x3be
@@ -884,7 +884,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  821 0383 23       		.byte	0x23
  822 0384 00       		.uleb128 0x0
  823 0385 06       		.uleb128 0x6
- 824 0386 D9000000 		.4byte	.LASF50
+ 824 0386 FD000000 		.4byte	.LASF50
  825 038a 07       		.byte	0x7
  826 038b 62       		.byte	0x62
  827 038c BE030000 		.4byte	0x3be
@@ -892,18 +892,18 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  829 0391 23       		.byte	0x23
  830 0392 04       		.uleb128 0x4
  831 0393 06       		.uleb128 0x6
- 832 0394 96010000 		.4byte	.LASF51
+ 832 0394 8F010000 		.4byte	.LASF51
  833 0398 07       		.byte	0x7
  834 0399 64       		.byte	0x64
  835 039a DD000000 		.4byte	0xdd
  836 039e 02       		.byte	0x2
  837 039f 23       		.byte	0x23
-ARM GAS  /tmp/ccXBsLlb.s 			page 16
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 16
 
 
  838 03a0 08       		.uleb128 0x8
  839 03a1 06       		.uleb128 0x6
- 840 03a2 9E010000 		.4byte	.LASF52
+ 840 03a2 97010000 		.4byte	.LASF52
  841 03a6 07       		.byte	0x7
  842 03a7 65       		.byte	0x65
  843 03a8 43030000 		.4byte	0x343
@@ -911,7 +911,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  845 03ad 23       		.byte	0x23
  846 03ae 0C       		.uleb128 0xc
  847 03af 06       		.uleb128 0x6
- 848 03b0 FB020000 		.4byte	.LASF53
+ 848 03b0 F4020000 		.4byte	.LASF53
  849 03b4 07       		.byte	0x7
  850 03b5 67       		.byte	0x67
  851 03b6 86020000 		.4byte	0x286
@@ -928,7 +928,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  862 03c7 71       		.byte	0x71
  863 03c8 05040000 		.4byte	0x405
  864 03cc 06       		.uleb128 0x6
- 865 03cd FF000000 		.4byte	.LASF49
+ 865 03cd 23010000 		.4byte	.LASF49
  866 03d1 07       		.byte	0x7
  867 03d2 72       		.byte	0x72
  868 03d3 BE030000 		.4byte	0x3be
@@ -936,7 +936,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  870 03d8 23       		.byte	0x23
  871 03d9 00       		.uleb128 0x0
  872 03da 06       		.uleb128 0x6
- 873 03db D9000000 		.4byte	.LASF50
+ 873 03db FD000000 		.4byte	.LASF50
  874 03df 07       		.byte	0x7
  875 03e0 74       		.byte	0x74
  876 03e1 BE030000 		.4byte	0x3be
@@ -944,7 +944,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  878 03e6 23       		.byte	0x23
  879 03e7 04       		.uleb128 0x4
  880 03e8 06       		.uleb128 0x6
- 881 03e9 96010000 		.4byte	.LASF51
+ 881 03e9 8F010000 		.4byte	.LASF51
  882 03ed 07       		.byte	0x7
  883 03ee 76       		.byte	0x76
  884 03ef DD000000 		.4byte	0xdd
@@ -952,13 +952,13 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  886 03f4 23       		.byte	0x23
  887 03f5 08       		.uleb128 0x8
  888 03f6 06       		.uleb128 0x6
- 889 03f7 3B030000 		.4byte	.LASF54
+ 889 03f7 34030000 		.4byte	.LASF54
  890 03fb 07       		.byte	0x7
  891 03fc 77       		.byte	0x77
  892 03fd 05040000 		.4byte	0x405
  893 0401 02       		.byte	0x2
  894 0402 23       		.byte	0x23
-ARM GAS  /tmp/ccXBsLlb.s 			page 17
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 17
 
 
  895 0403 0C       		.uleb128 0xc
@@ -966,7 +966,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  897 0405 0F       		.uleb128 0xf
  898 0406 DD000000 		.4byte	0xdd
  899 040a 04       		.uleb128 0x4
- 900 040b 46030000 		.4byte	.LASF55
+ 900 040b 3F030000 		.4byte	.LASF55
  901 040f 07       		.byte	0x7
  902 0410 78       		.byte	0x78
  903 0411 C4030000 		.4byte	0x3c4
@@ -976,7 +976,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  907 0418 5E       		.byte	0x5e
  908 0419 80040000 		.4byte	0x480
  909 041d 06       		.uleb128 0x6
- 910 041e 61020000 		.4byte	.LASF56
+ 910 041e 5A020000 		.4byte	.LASF56
  911 0422 08       		.byte	0x8
  912 0423 5F       		.byte	0x5f
  913 0424 4E020000 		.4byte	0x24e
@@ -984,7 +984,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  915 0429 23       		.byte	0x23
  916 042a 00       		.uleb128 0x0
  917 042b 06       		.uleb128 0x6
- 918 042c 29020000 		.4byte	.LASF57
+ 918 042c 22020000 		.4byte	.LASF57
  919 0430 08       		.byte	0x8
  920 0431 60       		.byte	0x60
  921 0432 BC000000 		.4byte	0xbc
@@ -992,7 +992,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  923 0437 23       		.byte	0x23
  924 0438 08       		.uleb128 0x8
  925 0439 06       		.uleb128 0x6
- 926 043a AE010000 		.4byte	.LASF58
+ 926 043a A7010000 		.4byte	.LASF58
  927 043e 08       		.byte	0x8
  928 043f 62       		.byte	0x62
  929 0440 20030000 		.4byte	0x320
@@ -1000,7 +1000,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  931 0445 23       		.byte	0x23
  932 0446 0C       		.uleb128 0xc
  933 0447 06       		.uleb128 0x6
- 934 0448 C8000000 		.4byte	.LASF59
+ 934 0448 EC000000 		.4byte	.LASF59
  935 044c 08       		.byte	0x8
  936 044d 65       		.byte	0x65
  937 044e 48020000 		.4byte	0x248
@@ -1008,7 +1008,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  939 0453 23       		.byte	0x23
  940 0454 10       		.uleb128 0x10
  941 0455 06       		.uleb128 0x6
- 942 0456 CB010000 		.4byte	.LASF60
+ 942 0456 C4010000 		.4byte	.LASF60
  943 045a 08       		.byte	0x8
  944 045b 66       		.byte	0x66
  945 045c 48020000 		.4byte	0x248
@@ -1016,9 +1016,9 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  947 0461 23       		.byte	0x23
  948 0462 14       		.uleb128 0x14
  949 0463 06       		.uleb128 0x6
- 950 0464 4D030000 		.4byte	.LASF61
+ 950 0464 46030000 		.4byte	.LASF61
  951 0468 08       		.byte	0x8
-ARM GAS  /tmp/ccXBsLlb.s 			page 18
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 18
 
 
  952 0469 6A       		.byte	0x6a
@@ -1027,7 +1027,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  955 046f 23       		.byte	0x23
  956 0470 18       		.uleb128 0x18
  957 0471 06       		.uleb128 0x6
- 958 0472 C1010000 		.4byte	.LASF62
+ 958 0472 BA010000 		.4byte	.LASF62
  959 0476 08       		.byte	0x8
  960 0477 6C       		.byte	0x6c
  961 0478 48020000 		.4byte	0x248
@@ -1036,18 +1036,18 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  964 047e 1C       		.uleb128 0x1c
  965 047f 00       		.byte	0x0
  966 0480 04       		.uleb128 0x4
- 967 0481 09030000 		.4byte	.LASF63
+ 967 0481 02030000 		.4byte	.LASF63
  968 0485 08       		.byte	0x8
  969 0486 6E       		.byte	0x6e
  970 0487 15040000 		.4byte	0x415
  971 048b 05       		.uleb128 0x5
- 972 048c 85010000 		.4byte	.LASF64
+ 972 048c 7E010000 		.4byte	.LASF64
  973 0490 10       		.byte	0x10
  974 0491 09       		.byte	0x9
  975 0492 2C       		.byte	0x2c
  976 0493 C2040000 		.4byte	0x4c2
  977 0497 06       		.uleb128 0x6
- 978 0498 96000000 		.4byte	.LASF65
+ 978 0498 BA000000 		.4byte	.LASF65
  979 049c 09       		.byte	0x9
  980 049d 2D       		.byte	0x2d
  981 049e 4E020000 		.4byte	0x24e
@@ -1055,7 +1055,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  983 04a3 23       		.byte	0x23
  984 04a4 00       		.uleb128 0x0
  985 04a5 06       		.uleb128 0x6
- 986 04a6 57030000 		.4byte	.LASF66
+ 986 04a6 50030000 		.4byte	.LASF66
  987 04aa 09       		.byte	0x9
  988 04ab 2F       		.byte	0x2f
  989 04ac 48020000 		.4byte	0x248
@@ -1063,7 +1063,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  991 04b1 23       		.byte	0x23
  992 04b2 08       		.uleb128 0x8
  993 04b3 06       		.uleb128 0x6
- 994 04b4 96020000 		.4byte	.LASF67
+ 994 04b4 8F020000 		.4byte	.LASF67
  995 04b8 09       		.byte	0x9
  996 04b9 31       		.byte	0x31
  997 04ba C2040000 		.4byte	0x4c2
@@ -1075,10 +1075,10 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1003 04c3 04       		.byte	0x4
  1004 04c4 8B040000 		.4byte	0x48b
  1005 04c8 04       		.uleb128 0x4
- 1006 04c9 85010000 		.4byte	.LASF64
+ 1006 04c9 7E010000 		.4byte	.LASF64
  1007 04cd 09       		.byte	0x9
  1008 04ce 33       		.byte	0x33
-ARM GAS  /tmp/ccXBsLlb.s 			page 19
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 19
 
 
  1009 04cf 8B040000 		.4byte	0x48b
@@ -1093,17 +1093,17 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1018 04e1 97       		.byte	0x97
  1019 04e2 C7000000 		.4byte	0xc7
  1020 04e6 11       		.uleb128 0x11
- 1021 04e7 4F000000 		.4byte	.LASF69
+ 1021 04e7 5C000000 		.4byte	.LASF69
  1022 04eb 05       		.byte	0x5
  1023 04ec 9E       		.byte	0x9e
  1024 04ed C7000000 		.4byte	0xc7
  1025 04f1 11       		.uleb128 0x11
- 1026 04f2 21030000 		.4byte	.LASF70
+ 1026 04f2 1A030000 		.4byte	.LASF70
  1027 04f6 05       		.byte	0x5
  1028 04f7 A5       		.byte	0xa5
  1029 04f8 86020000 		.4byte	0x286
  1030 04fc 11       		.uleb128 0x11
- 1031 04fd 30020000 		.4byte	.LASF71
+ 1031 04fd 29020000 		.4byte	.LASF71
  1032 0501 05       		.byte	0x5
  1033 0502 AC       		.byte	0xac
  1034 0503 D2000000 		.4byte	0xd2
@@ -1116,7 +1116,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1041 0513 03       		.uleb128 0x3
  1042 0514 01       		.byte	0x1
  1043 0515 08       		.byte	0x8
- 1044 0516 76020000 		.4byte	.LASF72
+ 1044 0516 6F020000 		.4byte	.LASF72
  1045 051a 09       		.uleb128 0x9
  1046 051b 04       		.byte	0x4
  1047 051c 88020000 		.4byte	0x288
@@ -1138,12 +1138,12 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1063 0541 0E       		.uleb128 0xe
  1064 0542 86020000 		.4byte	0x286
  1065 0546 00       		.byte	0x0
-ARM GAS  /tmp/ccXBsLlb.s 			page 20
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 20
 
 
  1066 0547 14       		.uleb128 0x14
  1067 0548 01       		.byte	0x1
- 1068 0549 D3010000 		.4byte	.LASF74
+ 1068 0549 CC010000 		.4byte	.LASF74
  1069 054d 01       		.byte	0x1
  1070 054e 3B       		.byte	0x3b
  1071 054f 01       		.byte	0x1
@@ -1162,7 +1162,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1084 056c 00       		.byte	0x0
  1085 056d 16       		.uleb128 0x16
  1086 056e 01       		.byte	0x1
- 1087 056f 84000000 		.4byte	.LASF75
+ 1087 056f 91000000 		.4byte	.LASF75
  1088 0573 01       		.byte	0x1
  1089 0574 52       		.byte	0x52
  1090 0575 01       		.byte	0x1
@@ -1171,7 +1171,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1093 057e 13000000 		.4byte	.LLST1
  1094 0582 BE050000 		.4byte	0x5be
  1095 0586 17       		.uleb128 0x17
- 1096 0587 58000000 		.4byte	.LASF76
+ 1096 0587 65000000 		.4byte	.LASF76
  1097 058b 01       		.byte	0x1
  1098 058c 53       		.byte	0x53
  1099 058d F3000000 		.4byte	0xf3
@@ -1179,7 +1179,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1101 0592 03       		.byte	0x3
  1102 0593 00000000 		.4byte	mainthread.4697
  1103 0597 18       		.uleb128 0x18
- 1104 0598 7B020000 		.4byte	.LASF78
+ 1104 0598 74020000 		.4byte	.LASF78
  1105 059c 01       		.byte	0x1
  1106 059d 55       		.byte	0x55
  1107 059e 88020000 		.4byte	0x288
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1120 05bd 00       		.byte	0x0
  1121 05be 16       		.uleb128 0x16
  1122 05bf 01       		.byte	0x1
-ARM GAS  /tmp/ccXBsLlb.s 			page 21
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 21
 
 
  1123 05c0 25000000 		.4byte	.LASF77
@@ -1238,7 +1238,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1157 0614 01       		.byte	0x1
  1158 0615 01       		.byte	0x1
  1159 0616 18       		.uleb128 0x18
- 1160 0617 13030000 		.4byte	.LASF80
+ 1160 0617 0C030000 		.4byte	.LASF80
  1161 061b 08       		.byte	0x8
  1162 061c 72       		.byte	0x72
  1163 061d 80040000 		.4byte	0x480
@@ -1252,13 +1252,13 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1171 0631 17       		.byte	0x17
  1172 0632 00       		.byte	0x0
  1173 0633 18       		.uleb128 0x18
- 1174 0634 B8000000 		.4byte	.LASF81
+ 1174 0634 DC000000 		.4byte	.LASF81
  1175 0638 0A       		.byte	0xa
  1176 0639 6E       		.byte	0x6e
  1177 063a 23060000 		.4byte	0x623
  1178 063e 01       		.byte	0x1
  1179 063f 01       		.byte	0x1
-ARM GAS  /tmp/ccXBsLlb.s 			page 22
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 22
 
 
  1180 0640 18       		.uleb128 0x18
@@ -1269,14 +1269,14 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1185 064b 01       		.byte	0x1
  1186 064c 01       		.byte	0x1
  1187 064d 18       		.uleb128 0x18
- 1188 064e 13030000 		.4byte	.LASF80
+ 1188 064e 0C030000 		.4byte	.LASF80
  1189 0652 08       		.byte	0x8
  1190 0653 72       		.byte	0x72
  1191 0654 80040000 		.4byte	0x480
  1192 0658 01       		.byte	0x1
  1193 0659 01       		.byte	0x1
  1194 065a 1D       		.uleb128 0x1d
- 1195 065b B8000000 		.4byte	.LASF81
+ 1195 065b DC000000 		.4byte	.LASF81
  1196 065f 01       		.byte	0x1
  1197 0660 2F       		.byte	0x2f
  1198 0661 23060000 		.4byte	0x623
@@ -1285,7 +1285,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1201 0667 03       		.byte	0x3
  1202 0668 00000000 		.4byte	_idle_thread_wa
  1203 066c 18       		.uleb128 0x18
- 1204 066d 7B020000 		.4byte	.LASF78
+ 1204 066d 74020000 		.4byte	.LASF78
  1205 0671 01       		.byte	0x1
  1206 0672 55       		.byte	0x55
  1207 0673 88020000 		.4byte	0x288
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1234 0016 24       		.uleb128 0x24
  1235 0017 00       		.byte	0x0
  1236 0018 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccXBsLlb.s 			page 23
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 23
 
 
  1237 0019 0B       		.uleb128 0xb
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1291 004f 0B       		.uleb128 0xb
  1292 0050 49       		.uleb128 0x49
  1293 0051 13       		.uleb128 0x13
-ARM GAS  /tmp/ccXBsLlb.s 			page 24
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 24
 
 
  1294 0052 38       		.uleb128 0x38
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1348 0088 0B       		.uleb128 0xb
  1349 0089 3B       		.uleb128 0x3b
  1350 008a 05       		.uleb128 0x5
-ARM GAS  /tmp/ccXBsLlb.s 			page 25
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 25
 
 
  1351 008b 49       		.uleb128 0x49
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1405 00c1 13       		.uleb128 0x13
  1406 00c2 00       		.byte	0x0
  1407 00c3 00       		.byte	0x0
-ARM GAS  /tmp/ccXBsLlb.s 			page 26
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 26
 
 
  1408 00c4 11       		.uleb128 0x11
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1462 00fa 15       		.uleb128 0x15
  1463 00fb 05       		.uleb128 0x5
  1464 00fc 00       		.byte	0x0
-ARM GAS  /tmp/ccXBsLlb.s 			page 27
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 27
 
 
  1465 00fd 03       		.uleb128 0x3
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1519 0133 0E       		.uleb128 0xe
  1520 0134 3A       		.uleb128 0x3a
  1521 0135 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccXBsLlb.s 			page 28
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 28
 
 
  1522 0136 3B       		.uleb128 0x3b
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1576 016c 00       		.byte	0x0
  1577 016d 03       		.uleb128 0x3
  1578 016e 0E       		.uleb128 0xe
-ARM GAS  /tmp/ccXBsLlb.s 			page 29
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 29
 
 
  1579 016f 3A       		.uleb128 0x3a
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1617 0033 89000000 		.4byte	0x89
  1618 0037 75696E74 		.ascii	"uint64_t\000"
  1618      36345F74 
-ARM GAS  /tmp/ccXBsLlb.s 			page 30
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 30
 
 
  1618      00
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1649 0102 43030000 		.4byte	0x343
  1650 0106 76746675 		.ascii	"vtfunc_t\000"
  1650      6E635F74 
-ARM GAS  /tmp/ccXBsLlb.s 			page 31
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 31
 
 
  1650      00
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1691 0014 54000000 		.4byte	.LFE2
  1692 0018 00000000 		.4byte	0x0
  1693 001c 00000000 		.4byte	0x0
-ARM GAS  /tmp/ccXBsLlb.s 			page 32
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 32
 
 
  1694              		.section	.debug_str,"MS",%progbits,1
@@ -1884,338 +1884,338 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1706      65724861 
  1706      6E646C65 
  1706      724900
- 1707              	.LASF12:
- 1708 0038 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1708      206C6F6E 
- 1708      6720756E 
- 1708      7369676E 
- 1708      65642069 
+ 1707              	.LASF84:
+ 1708 0038 433A5C70 		.ascii	"C:\\projects\\ipm\\soft\\firmware\\valve\000"
+ 1708      726F6A65 
+ 1708      6374735C 
+ 1708      69706D5C 
+ 1708      736F6674 
  1709              	.LASF69:
- 1710 004f 65786974 		.ascii	"exitcode\000"
+ 1710 005c 65786974 		.ascii	"exitcode\000"
  1710      636F6465 
  1710      00
  1711              	.LASF76:
- 1712 0058 6D61696E 		.ascii	"mainthread\000"
+ 1712 0065 6D61696E 		.ascii	"mainthread\000"
  1712      74687265 
  1712      616400
  1713              	.LASF24:
- 1714 0063 705F7072 		.ascii	"p_prio\000"
+ 1714 0070 705F7072 		.ascii	"p_prio\000"
  1714      696F00
  1715              	.LASF10:
- 1716 006a 6C6F6E67 		.ascii	"long long int\000"
+ 1716 0077 6C6F6E67 		.ascii	"long long int\000"
  1716      206C6F6E 
  1716      6720696E 
  1716      7400
  1717              	.LASF1:
- 1718 0078 7369676E 		.ascii	"signed char\000"
+ 1718 0085 7369676E 		.ascii	"signed char\000"
  1718      65642063 
  1718      68617200 
  1719              	.LASF75:
- 1720 0084 63685379 		.ascii	"chSysInit\000"
+ 1720 0091 63685379 		.ascii	"chSysInit\000"
  1720      73496E69 
  1720      7400
  1721              	.LASF40:
- 1722 008e 705F6D70 		.ascii	"p_mpool\000"
+ 1722 009b 705F6D70 		.ascii	"p_mpool\000"
  1722      6F6F6C00 
- 1723              	.LASF65:
-ARM GAS  /tmp/ccXBsLlb.s 			page 33
+ 1723              	.LASF12:
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 33
 
 
- 1724 0096 6D5F7175 		.ascii	"m_queue\000"
- 1724      65756500 
- 1725              	.LASF7:
- 1726 009e 6C6F6E67 		.ascii	"long int\000"
- 1726      20696E74 
- 1726      00
- 1727              	.LASF14:
- 1728 00a7 74737461 		.ascii	"tstate_t\000"
- 1728      74655F74 
+ 1724 00a3 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1724      206C6F6E 
+ 1724      6720756E 
+ 1724      7369676E 
+ 1724      65642069 
+ 1725              	.LASF65:
+ 1726 00ba 6D5F7175 		.ascii	"m_queue\000"
+ 1726      65756500 
+ 1727              	.LASF7:
+ 1728 00c2 6C6F6E67 		.ascii	"long int\000"
+ 1728      20696E74 
  1728      00
- 1729              	.LASF26:
- 1730 00b0 705F6E65 		.ascii	"p_newer\000"
- 1730      77657200 
- 1731              	.LASF81:
- 1732 00b8 5F69646C 		.ascii	"_idle_thread_wa\000"
- 1732      655F7468 
- 1732      72656164 
- 1732      5F776100 
- 1733              	.LASF59:
- 1734 00c8 725F6E65 		.ascii	"r_newer\000"
- 1734      77657200 
- 1735              	.LASF43:
- 1736 00d0 72656761 		.ascii	"regarm_t\000"
- 1736      726D5F74 
- 1736      00
- 1737              	.LASF50:
- 1738 00d9 76745F70 		.ascii	"vt_prev\000"
- 1738      72657600 
- 1739              	.LASF20:
- 1740 00e1 636E745F 		.ascii	"cnt_t\000"
- 1740      7400
- 1741              	.LASF29:
- 1742 00e7 705F7374 		.ascii	"p_stklimit\000"
- 1742      6B6C696D 
- 1742      697400
- 1743              	.LASF0:
- 1744 00f2 756E7369 		.ascii	"unsigned int\000"
- 1744      676E6564 
- 1744      20696E74 
- 1744      00
- 1745              	.LASF49:
- 1746 00ff 76745F6E 		.ascii	"vt_next\000"
- 1746      65787400 
- 1747              	.LASF84:
- 1748 0107 2F686F6D 		.ascii	"/home/z80/projects/ipm/soft/firmware/valve\000"
- 1748      652F7A38 
- 1748      302F7072 
- 1748      6F6A6563 
- 1748      74732F69 
+ 1729              	.LASF14:
+ 1730 00cb 74737461 		.ascii	"tstate_t\000"
+ 1730      74655F74 
+ 1730      00
+ 1731              	.LASF26:
+ 1732 00d4 705F6E65 		.ascii	"p_newer\000"
+ 1732      77657200 
+ 1733              	.LASF81:
+ 1734 00dc 5F69646C 		.ascii	"_idle_thread_wa\000"
+ 1734      655F7468 
+ 1734      72656164 
+ 1734      5F776100 
+ 1735              	.LASF59:
+ 1736 00ec 725F6E65 		.ascii	"r_newer\000"
+ 1736      77657200 
+ 1737              	.LASF43:
+ 1738 00f4 72656761 		.ascii	"regarm_t\000"
+ 1738      726D5F74 
+ 1738      00
+ 1739              	.LASF50:
+ 1740 00fd 76745F70 		.ascii	"vt_prev\000"
+ 1740      72657600 
+ 1741              	.LASF20:
+ 1742 0105 636E745F 		.ascii	"cnt_t\000"
+ 1742      7400
+ 1743              	.LASF29:
+ 1744 010b 705F7374 		.ascii	"p_stklimit\000"
+ 1744      6B6C696D 
+ 1744      697400
+ 1745              	.LASF0:
+ 1746 0116 756E7369 		.ascii	"unsigned int\000"
+ 1746      676E6564 
+ 1746      20696E74 
+ 1746      00
+ 1747              	.LASF49:
+ 1748 0123 76745F6E 		.ascii	"vt_next\000"
+ 1748      65787400 
  1749              	.LASF9:
- 1750 0132 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1750 012b 6C6F6E67 		.ascii	"long unsigned int\000"
  1750      20756E73 
  1750      69676E65 
  1750      6420696E 
  1750      7400
  1751              	.LASF46:
- 1752 0144 636F6E74 		.ascii	"context\000"
-ARM GAS  /tmp/ccXBsLlb.s 			page 34
+ 1752 013d 636F6E74 		.ascii	"context\000"
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 34
 
 
  1752      65787400 
  1753              	.LASF4:
- 1754 014c 73686F72 		.ascii	"short unsigned int\000"
+ 1754 0145 73686F72 		.ascii	"short unsigned int\000"
  1754      7420756E 
  1754      7369676E 
  1754      65642069 
  1754      6E7400
  1755              	.LASF17:
- 1756 015f 6D73675F 		.ascii	"msg_t\000"
+ 1756 0158 6D73675F 		.ascii	"msg_t\000"
  1756      7400
  1757              	.LASF13:
- 1758 0165 746D6F64 		.ascii	"tmode_t\000"
+ 1758 015e 746D6F64 		.ascii	"tmode_t\000"
  1758      655F7400 
  1759              	.LASF42:
- 1760 016d 54687265 		.ascii	"ThreadsList\000"
+ 1760 0166 54687265 		.ascii	"ThreadsList\000"
  1760      6164734C 
  1760      69737400 
  1761              	.LASF18:
- 1762 0179 6576656E 		.ascii	"eventmask_t\000"
+ 1762 0172 6576656E 		.ascii	"eventmask_t\000"
  1762      746D6173 
  1762      6B5F7400 
  1763              	.LASF64:
- 1764 0185 4D757465 		.ascii	"Mutex\000"
+ 1764 017e 4D757465 		.ascii	"Mutex\000"
  1764      7800
  1765              	.LASF44:
- 1766 018b 73746B61 		.ascii	"stkalign_t\000"
+ 1766 0184 73746B61 		.ascii	"stkalign_t\000"
  1766      6C69676E 
  1766      5F7400
  1767              	.LASF51:
- 1768 0196 76745F74 		.ascii	"vt_time\000"
+ 1768 018f 76745F74 		.ascii	"vt_time\000"
  1768      696D6500 
  1769              	.LASF52:
- 1770 019e 76745F66 		.ascii	"vt_func\000"
+ 1770 0197 76745F66 		.ascii	"vt_func\000"
  1770      756E6300 
  1771              	.LASF27:
- 1772 01a6 705F6F6C 		.ascii	"p_older\000"
+ 1772 019f 705F6F6C 		.ascii	"p_older\000"
  1772      64657200 
  1773              	.LASF58:
- 1774 01ae 725F6374 		.ascii	"r_ctx\000"
+ 1774 01a7 725F6374 		.ascii	"r_ctx\000"
  1774      7800
  1775              	.LASF41:
- 1776 01b4 54687265 		.ascii	"ThreadsQueue\000"
+ 1776 01ad 54687265 		.ascii	"ThreadsQueue\000"
  1776      61647351 
  1776      75657565 
  1776      00
  1777              	.LASF62:
- 1778 01c1 725F6375 		.ascii	"r_current\000"
+ 1778 01ba 725F6375 		.ascii	"r_current\000"
  1778      7272656E 
  1778      7400
  1779              	.LASF60:
- 1780 01cb 725F6F6C 		.ascii	"r_older\000"
+ 1780 01c4 725F6F6C 		.ascii	"r_older\000"
  1780      64657200 
  1781              	.LASF74:
- 1782 01d3 5F69646C 		.ascii	"_idle_thread\000"
+ 1782 01cc 5F69646C 		.ascii	"_idle_thread\000"
  1782      655F7468 
  1782      72656164 
  1782      00
-ARM GAS  /tmp/ccXBsLlb.s 			page 35
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 35
 
 
  1783              	.LASF15:
- 1784 01e0 74726566 		.ascii	"trefs_t\000"
+ 1784 01d9 74726566 		.ascii	"trefs_t\000"
  1784      735F7400 
  1785              	.LASF23:
- 1786 01e8 705F7072 		.ascii	"p_prev\000"
+ 1786 01e1 705F7072 		.ascii	"p_prev\000"
  1786      657600
  1787              	.LASF16:
- 1788 01ef 74707269 		.ascii	"tprio_t\000"
+ 1788 01e8 74707269 		.ascii	"tprio_t\000"
  1788      6F5F7400 
  1789              	.LASF6:
- 1790 01f7 696E7433 		.ascii	"int32_t\000"
+ 1790 01f0 696E7433 		.ascii	"int32_t\000"
  1790      325F7400 
  1791              	.LASF2:
- 1792 01ff 756E7369 		.ascii	"unsigned char\000"
+ 1792 01f8 756E7369 		.ascii	"unsigned char\000"
  1792      676E6564 
  1792      20636861 
  1792      7200
  1793              	.LASF38:
- 1794 020d 705F6D74 		.ascii	"p_mtxlist\000"
+ 1794 0206 705F6D74 		.ascii	"p_mtxlist\000"
  1794      786C6973 
  1794      7400
  1795              	.LASF3:
- 1796 0217 73686F72 		.ascii	"short int\000"
+ 1796 0210 73686F72 		.ascii	"short int\000"
  1796      7420696E 
  1796      7400
  1797              	.LASF30:
- 1798 0221 705F7374 		.ascii	"p_state\000"
+ 1798 021a 705F7374 		.ascii	"p_state\000"
  1798      61746500 
  1799              	.LASF57:
- 1800 0229 725F7072 		.ascii	"r_prio\000"
+ 1800 0222 725F7072 		.ascii	"r_prio\000"
  1800      696F00
  1801              	.LASF71:
- 1802 0230 65776D61 		.ascii	"ewmask\000"
+ 1802 0229 65776D61 		.ascii	"ewmask\000"
  1802      736B00
  1803              	.LASF22:
- 1804 0237 705F6E65 		.ascii	"p_next\000"
+ 1804 0230 705F6E65 		.ascii	"p_next\000"
  1804      787400
  1805              	.LASF31:
- 1806 023e 705F666C 		.ascii	"p_flags\000"
+ 1806 0237 705F666C 		.ascii	"p_flags\000"
  1806      61677300 
  1807              	.LASF21:
- 1808 0246 54687265 		.ascii	"Thread\000"
+ 1808 023f 54687265 		.ascii	"Thread\000"
  1808      616400
  1809              	.LASF37:
- 1810 024d 705F6570 		.ascii	"p_epending\000"
+ 1810 0246 705F6570 		.ascii	"p_epending\000"
  1810      656E6469 
  1810      6E6700
  1811              	.LASF8:
- 1812 0258 75696E74 		.ascii	"uint32_t\000"
+ 1812 0251 75696E74 		.ascii	"uint32_t\000"
  1812      33325F74 
  1812      00
  1813              	.LASF56:
- 1814 0261 725F7175 		.ascii	"r_queue\000"
+ 1814 025a 725F7175 		.ascii	"r_queue\000"
  1814      65756500 
  1815              	.LASF48:
- 1816 0269 56697274 		.ascii	"VirtualTimer\000"
+ 1816 0262 56697274 		.ascii	"VirtualTimer\000"
  1816      75616C54 
-ARM GAS  /tmp/ccXBsLlb.s 			page 36
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 36
 
 
  1816      696D6572 
  1816      00
  1817              	.LASF72:
- 1818 0276 63686172 		.ascii	"char\000"
+ 1818 026f 63686172 		.ascii	"char\000"
  1818      00
  1819              	.LASF78:
- 1820 027b 5F5F6D61 		.ascii	"__main_thread_stack_base__\000"
+ 1820 0274 5F5F6D61 		.ascii	"__main_thread_stack_base__\000"
  1820      696E5F74 
  1820      68726561 
  1820      645F7374 
  1820      61636B5F 
  1821              	.LASF67:
- 1822 0296 6D5F6E65 		.ascii	"m_next\000"
+ 1822 028f 6D5F6E65 		.ascii	"m_next\000"
  1822      787400
  1823              	.LASF19:
- 1824 029d 73797374 		.ascii	"systime_t\000"
+ 1824 0296 73797374 		.ascii	"systime_t\000"
  1824      696D655F 
  1824      7400
  1825              	.LASF39:
- 1826 02a7 705F7265 		.ascii	"p_realprio\000"
+ 1826 02a0 705F7265 		.ascii	"p_realprio\000"
  1826      616C7072 
  1826      696F00
  1827              	.LASF47:
- 1828 02b2 76746675 		.ascii	"vtfunc_t\000"
+ 1828 02ab 76746675 		.ascii	"vtfunc_t\000"
  1828      6E635F74 
  1828      00
  1829              	.LASF83:
- 1830 02bb 2E2E2F63 		.ascii	"../chibios_2.4.x/os/kernel/src/chsys.c\000"
+ 1830 02b4 2E2E2F63 		.ascii	"../chibios_2.4.x/os/kernel/src/chsys.c\000"
  1830      68696269 
  1830      6F735F32 
  1830      2E342E78 
  1830      2F6F732F 
  1831              	.LASF33:
- 1832 02e2 705F7469 		.ascii	"p_time\000"
+ 1832 02db 705F7469 		.ascii	"p_time\000"
  1832      6D6500
  1833              	.LASF45:
- 1834 02e9 696E7463 		.ascii	"intctx\000"
+ 1834 02e2 696E7463 		.ascii	"intctx\000"
  1834      747800
  1835              	.LASF35:
- 1836 02f0 705F6D73 		.ascii	"p_msgqueue\000"
+ 1836 02e9 705F6D73 		.ascii	"p_msgqueue\000"
  1836      67717565 
  1836      756500
  1837              	.LASF53:
- 1838 02fb 76745F70 		.ascii	"vt_par\000"
+ 1838 02f4 76745F70 		.ascii	"vt_par\000"
  1838      617200
  1839              	.LASF32:
- 1840 0302 705F7265 		.ascii	"p_refs\000"
+ 1840 02fb 705F7265 		.ascii	"p_refs\000"
  1840      667300
  1841              	.LASF63:
- 1842 0309 52656164 		.ascii	"ReadyList\000"
+ 1842 0302 52656164 		.ascii	"ReadyList\000"
  1842      794C6973 
  1842      7400
  1843              	.LASF80:
- 1844 0313 726C6973 		.ascii	"rlist\000"
+ 1844 030c 726C6973 		.ascii	"rlist\000"
  1844      7400
  1845              	.LASF5:
- 1846 0319 75696E74 		.ascii	"uint8_t\000"
-ARM GAS  /tmp/ccXBsLlb.s 			page 37
+ 1846 0312 75696E74 		.ascii	"uint8_t\000"
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 37
 
 
  1846      385F7400 
  1847              	.LASF70:
- 1848 0321 77746F62 		.ascii	"wtobjp\000"
+ 1848 031a 77746F62 		.ascii	"wtobjp\000"
  1848      6A7000
  1849              	.LASF82:
- 1850 0328 474E5520 		.ascii	"GNU C 4.5.2\000"
+ 1850 0321 474E5520 		.ascii	"GNU C 4.5.2\000"
  1850      4320342E 
  1850      352E3200 
  1851              	.LASF28:
- 1852 0334 705F6E61 		.ascii	"p_name\000"
+ 1852 032d 705F6E61 		.ascii	"p_name\000"
  1852      6D6500
  1853              	.LASF54:
- 1854 033b 76745F73 		.ascii	"vt_systime\000"
+ 1854 0334 76745F73 		.ascii	"vt_systime\000"
  1854      79737469 
  1854      6D6500
  1855              	.LASF55:
- 1856 0346 56544C69 		.ascii	"VTList\000"
+ 1856 033f 56544C69 		.ascii	"VTList\000"
  1856      737400
  1857              	.LASF61:
- 1858 034d 725F7072 		.ascii	"r_preempt\000"
+ 1858 0346 725F7072 		.ascii	"r_preempt\000"
  1858      65656D70 
  1858      7400
  1859              	.LASF66:
- 1860 0357 6D5F6F77 		.ascii	"m_owner\000"
+ 1860 0350 6D5F6F77 		.ascii	"m_owner\000"
  1860      6E657200 
  1861              	.LASF25:
- 1862 035f 705F6374 		.ascii	"p_ctx\000"
+ 1862 0358 705F6374 		.ascii	"p_ctx\000"
  1862      7800
  1863              	.LASF34:
- 1864 0365 705F7761 		.ascii	"p_waiting\000"
+ 1864 035e 705F7761 		.ascii	"p_waiting\000"
  1864      6974696E 
  1864      6700
  1865              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  /tmp/ccXBsLlb.s 			page 38
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s 			page 38
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chsys.c
-     /tmp/ccXBsLlb.s:24     .text._idle_thread:00000000 $t
-     /tmp/ccXBsLlb.s:30     .text._idle_thread:00000000 _idle_thread
-     /tmp/ccXBsLlb.s:50     .text._idle_thread:0000000c $d
-     /tmp/ccXBsLlb.s:56     .text.chSysInit:00000000 $t
-     /tmp/ccXBsLlb.s:62     .text.chSysInit:00000000 chSysInit
-     /tmp/ccXBsLlb.s:140    .text.chSysInit:00000058 $d
-     /tmp/ccXBsLlb.s:150    .text.chSysTimerHandlerI:00000000 $t
-     /tmp/ccXBsLlb.s:156    .text.chSysTimerHandlerI:00000000 chSysTimerHandlerI
-     /tmp/ccXBsLlb.s:231    .text.chSysTimerHandlerI:0000004c $d
-     /tmp/ccXBsLlb.s:257    .bss._idle_thread_wa:00000000 _idle_thread_wa
-     /tmp/ccXBsLlb.s:239    .bss.mainthread.4697:00000000 $d
-     /tmp/ccXBsLlb.s:243    .bss.mainthread.4697:00000000 mainthread.4697
-     /tmp/ccXBsLlb.s:246    .rodata.str1.4:00000000 $d
-     /tmp/ccXBsLlb.s:253    .bss._idle_thread_wa:00000000 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s:24     .text._idle_thread:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s:30     .text._idle_thread:00000000 _idle_thread
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s:50     .text._idle_thread:0000000c $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s:56     .text.chSysInit:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s:62     .text.chSysInit:00000000 chSysInit
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s:140    .text.chSysInit:00000058 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s:150    .text.chSysTimerHandlerI:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s:156    .text.chSysTimerHandlerI:00000000 chSysTimerHandlerI
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s:231    .text.chSysTimerHandlerI:0000004c $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s:257    .bss._idle_thread_wa:00000000 _idle_thread_wa
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s:239    .bss.mainthread.4697:00000000 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s:243    .bss.mainthread.4697:00000000 mainthread.4697
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s:246    .rodata.str1.4:00000000 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s:253    .bss._idle_thread_wa:00000000 $d
                      .debug_frame:00000010 $d
-     /tmp/ccXBsLlb.s:55     .text._idle_thread:00000014 $t
-     /tmp/ccXBsLlb.s:238    .text.chSysTimerHandlerI:00000054 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s:55     .text._idle_thread:00000014 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\cciPcmrp.s:238    .text.chSysTimerHandlerI:00000054 $t
 
 UNDEFINED SYMBOLS
 rlist

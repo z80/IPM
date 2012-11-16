@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc05pEvX.s 			page 1
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 1
 
 
    1              		.syntax unified
@@ -20,8 +20,8 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
   17              	.Ldebug_info0:
   18              		.section	.debug_line,"",%progbits
   19              	.Ldebug_line0:
-  20 0000 44020000 		.text
-  20      0200D201 
+  20 0000 40020000 		.text
+  20      0200CE01 
   20      00000201 
   20      FB0E0D00 
   20      01010101 
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
   51              		.loc 1 91 0
   52 0014 FFF7FEFF 		bl	i2cInit
   53              		.loc 1 100 0
-ARM GAS  /tmp/cc05pEvX.s 			page 2
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 2
 
 
   54 0018 FFF7FEFF 		bl	pwmInit
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  108 0016 8342     		cmp	r3, r0
  109 0018 F8D3     		bcc	.L9
  110              		.loc 1 177 0
-ARM GAS  /tmp/cc05pEvX.s 			page 3
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 3
 
 
  111 001a 0120     		movs	r0, #1
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  164              	.L14:
  165 0012 8B42     		cmp	r3, r1
  166 0014 F7D9     		bls	.L19
-ARM GAS  /tmp/cc05pEvX.s 			page 4
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 4
 
 
  167              		.loc 1 178 0 is_stmt 1
@@ -238,11 +238,11 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  220 0051 0100     		.2byte	0x1
  221 0053 50       		.byte	0x50
  222 0054 00000000 		.4byte	0x0
-ARM GAS  /tmp/cc05pEvX.s 			page 5
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 5
 
 
  223 0058 00000000 		.4byte	0x0
- 224              		.file 2 "/home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../.
+ 224              		.file 2 "c:\\programs\\codesourcery\\arm-2012.03-56\\bin\\../lib/gcc/arm-none-eabi/4.5.2/../../../
  225              		.file 3 "../chibios_2.4.x/os/ports/GCC/ARMCMx/chtypes.h"
  226              		.file 4 "../chibios_2.4.x/os/ports/common/ARMCMx/nvic.h"
  227              		.file 5 "../chibios_2.4.x/os/hal/platforms/STM32F1xx/hal_lld.h"
@@ -257,7 +257,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  236 000c 0D000000 		.4byte	.LASF34
  237 0010 01       		.byte	0x1
  238 0011 3F000000 		.4byte	.LASF35
- 239 0015 73010000 		.4byte	.LASF36
+ 239 0015 5A010000 		.4byte	.LASF36
  240 0019 00000000 		.4byte	0x0
  241 001d 00000000 		.4byte	0x0
  242 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -273,7 +273,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  252 0037 03       		.uleb128 0x3
  253 0038 01       		.byte	0x1
  254 0039 06       		.byte	0x6
- 255 003a BF010000 		.4byte	.LASF1
+ 255 003a B8010000 		.4byte	.LASF1
  256 003e 03       		.uleb128 0x3
  257 003f 01       		.byte	0x1
  258 0040 08       		.byte	0x8
@@ -281,24 +281,24 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  260 0045 03       		.uleb128 0x3
  261 0046 02       		.byte	0x2
  262 0047 05       		.byte	0x5
- 263 0048 FF000000 		.4byte	.LASF3
+ 263 0048 8D010000 		.4byte	.LASF3
  264 004c 03       		.uleb128 0x3
  265 004d 02       		.byte	0x2
  266 004e 07       		.byte	0x7
  267 004f B3000000 		.4byte	.LASF4
  268 0053 04       		.uleb128 0x4
- 269 0054 46010000 		.4byte	.LASF6
+ 269 0054 3C010000 		.4byte	.LASF6
  270 0058 02       		.byte	0x2
  271 0059 4F       		.byte	0x4f
  272 005a 5E000000 		.4byte	0x5e
  273 005e 03       		.uleb128 0x3
  274 005f 04       		.byte	0x4
  275 0060 05       		.byte	0x5
- 276 0061 B6010000 		.4byte	.LASF5
+ 276 0061 AF010000 		.4byte	.LASF5
  277 0065 04       		.uleb128 0x4
- 278 0066 AD010000 		.4byte	.LASF7
+ 278 0066 A6010000 		.4byte	.LASF7
  279 006a 02       		.byte	0x2
-ARM GAS  /tmp/cc05pEvX.s 			page 6
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 6
 
 
  280 006b 50       		.byte	0x50
@@ -310,11 +310,11 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  286 0077 03       		.uleb128 0x3
  287 0078 08       		.byte	0x8
  288 0079 05       		.byte	0x5
- 289 007a 4E010000 		.4byte	.LASF9
+ 289 007a 44010000 		.4byte	.LASF9
  290 007e 03       		.uleb128 0x3
  291 007f 08       		.byte	0x8
  292 0080 07       		.byte	0x7
- 293 0081 CB010000 		.4byte	.LASF10
+ 293 0081 C4010000 		.4byte	.LASF10
  294 0085 04       		.uleb128 0x4
  295 0086 31000000 		.4byte	.LASF11
  296 008a 03       		.byte	0x3
@@ -328,7 +328,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  304 0098 0601     		.2byte	0x106
  305 009a 17010000 		.4byte	0x117
  306 009e 07       		.uleb128 0x7
- 307 009f 2E010000 		.4byte	.LASF12
+ 307 009f 24010000 		.4byte	.LASF12
  308 00a3 04       		.byte	0x4
  309 00a4 0701     		.2byte	0x107
  310 00a6 90000000 		.4byte	0x90
@@ -336,7 +336,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  312 00ab 23       		.byte	0x23
  313 00ac 00       		.uleb128 0x0
  314 00ad 07       		.uleb128 0x7
- 315 00ae 10010000 		.4byte	.LASF13
+ 315 00ae 06010000 		.4byte	.LASF13
  316 00b2 04       		.byte	0x4
  317 00b3 0801     		.2byte	0x108
  318 00b5 90000000 		.4byte	0x90
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  334 00d3 90000000 		.4byte	0x90
  335 00d7 02       		.byte	0x2
  336 00d8 23       		.byte	0x23
-ARM GAS  /tmp/cc05pEvX.s 			page 7
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 7
 
 
  337 00d9 0C       		.uleb128 0xc
@@ -371,7 +371,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  344 00e7 23       		.byte	0x23
  345 00e8 10       		.uleb128 0x10
  346 00e9 07       		.uleb128 0x7
- 347 00ea 09010000 		.4byte	.LASF17
+ 347 00ea FF000000 		.4byte	.LASF17
  348 00ee 04       		.byte	0x4
  349 00ef 0C01     		.2byte	0x10c
  350 00f1 90000000 		.4byte	0x90
@@ -396,18 +396,18 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  369 0115 1C       		.uleb128 0x1c
  370 0116 00       		.byte	0x0
  371 0117 08       		.uleb128 0x8
- 372 0118 A5010000 		.4byte	.LASF20
+ 372 0118 9E010000 		.4byte	.LASF20
  373 011c 04       		.byte	0x4
  374 011d 0F01     		.2byte	0x10f
  375 011f 95000000 		.4byte	0x95
  376 0123 03       		.uleb128 0x3
  377 0124 01       		.byte	0x1
  378 0125 08       		.byte	0x8
- 379 0126 29010000 		.4byte	.LASF21
+ 379 0126 1F010000 		.4byte	.LASF21
  380 012a 05       		.uleb128 0x5
  381 012b 53000000 		.4byte	0x53
  382 012f 04       		.uleb128 0x4
- 383 0130 1E010000 		.4byte	.LASF22
+ 383 0130 14010000 		.4byte	.LASF22
  384 0134 05       		.byte	0x5
  385 0135 D8       		.byte	0xd8
  386 0136 65000000 		.4byte	0x65
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  391 013e 6D010000 		.4byte	0x16d
  392 0142 0A       		.uleb128 0xa
  393 0143 6F647200 		.ascii	"odr\000"
-ARM GAS  /tmp/cc05pEvX.s 			page 8
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 8
 
 
  394 0147 06       		.byte	0x6
@@ -463,7 +463,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  433 018c 23       		.byte	0x23
  434 018d 00       		.uleb128 0x0
  435 018e 0B       		.uleb128 0xb
- 436 018f 17010000 		.4byte	.LASF25
+ 436 018f 0D010000 		.4byte	.LASF25
  437 0193 06       		.byte	0x6
  438 0194 57       		.byte	0x57
  439 0195 6D010000 		.4byte	0x16d
@@ -471,14 +471,14 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  441 019a 23       		.byte	0x23
  442 019b 0C       		.uleb128 0xc
  443 019c 0B       		.uleb128 0xb
- 444 019d 9E010000 		.4byte	.LASF26
+ 444 019d 97010000 		.4byte	.LASF26
  445 01a1 06       		.byte	0x6
  446 01a2 59       		.byte	0x59
  447 01a3 6D010000 		.4byte	0x16d
  448 01a7 02       		.byte	0x2
  449 01a8 23       		.byte	0x23
  450 01a9 18       		.uleb128 0x18
-ARM GAS  /tmp/cc05pEvX.s 			page 9
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 9
 
 
  451 01aa 0B       		.uleb128 0xb
@@ -505,7 +505,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  472 01ce 78010000 		.4byte	0x178
  473 01d2 0C       		.uleb128 0xc
  474 01d3 01       		.byte	0x1
- 475 01d4 33010000 		.4byte	.LASF37
+ 475 01d4 29010000 		.4byte	.LASF37
  476 01d8 01       		.byte	0x1
  477 01d9 AE       		.byte	0xae
  478 01da 01       		.byte	0x1
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  505 0213 30000000 		.4byte	.LFE55
  506 0217 00000000 		.4byte	.LLST0
  507 021b 11       		.uleb128 0x11
-ARM GAS  /tmp/cc05pEvX.s 			page 10
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 10
 
 
  508 021c D2010000 		.4byte	0x1d2
@@ -562,7 +562,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  526 0246 00       		.byte	0x0
  527 0247 15       		.uleb128 0x15
  528 0248 01       		.byte	0x1
- 529 0249 64010000 		.4byte	.LASF39
+ 529 0249 7E010000 		.4byte	.LASF39
  530 024d 01       		.byte	0x1
  531 024e C1       		.byte	0xc1
  532 024f 01       		.byte	0x1
@@ -586,7 +586,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  550 0279 01       		.byte	0x1
  551 027a 53       		.byte	0x53
  552 027b 17       		.uleb128 0x17
- 553 027c 5C010000 		.4byte	.LASF31
+ 553 027c 52010000 		.4byte	.LASF31
  554 0280 01       		.byte	0x1
  555 0281 C3       		.byte	0xc3
  556 0282 2F010000 		.4byte	0x12f
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  562 0291 28000000 		.4byte	.LBE4
  563 0295 01       		.byte	0x1
  564 0296 C4       		.byte	0xc4
-ARM GAS  /tmp/cc05pEvX.s 			page 11
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 11
 
 
  565 0297 13       		.uleb128 0x13
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  619 0004 0E       		.uleb128 0xe
  620 0005 13       		.uleb128 0x13
  621 0006 0B       		.uleb128 0xb
-ARM GAS  /tmp/cc05pEvX.s 			page 12
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 12
 
 
  622 0007 03       		.uleb128 0x3
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  676 003d 00       		.byte	0x0
  677 003e 00       		.byte	0x0
  678 003f 06       		.uleb128 0x6
-ARM GAS  /tmp/cc05pEvX.s 			page 13
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 13
 
 
  679 0040 13       		.uleb128 0x13
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  733 0076 0D       		.uleb128 0xd
  734 0077 00       		.byte	0x0
  735 0078 03       		.uleb128 0x3
-ARM GAS  /tmp/cc05pEvX.s 			page 14
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 14
 
 
  736 0079 08       		.uleb128 0x8
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  790 00af 3B       		.uleb128 0x3b
  791 00b0 0B       		.uleb128 0xb
  792 00b1 49       		.uleb128 0x49
-ARM GAS  /tmp/cc05pEvX.s 			page 15
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 15
 
 
  793 00b2 13       		.uleb128 0x13
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  847 00e8 13       		.uleb128 0x13
  848 00e9 11       		.uleb128 0x11
  849 00ea 01       		.uleb128 0x1
-ARM GAS  /tmp/cc05pEvX.s 			page 16
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 16
 
 
  850 00eb 12       		.uleb128 0x12
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  904 0121 01       		.uleb128 0x1
  905 0122 13       		.uleb128 0x13
  906 0123 00       		.byte	0x0
-ARM GAS  /tmp/cc05pEvX.s 			page 17
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 17
 
 
  907 0124 00       		.byte	0x0
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  961 015a 00       		.byte	0x0
  962 015b 1A       		.uleb128 0x1a
  963 015c 34       		.uleb128 0x34
-ARM GAS  /tmp/cc05pEvX.s 			page 18
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 18
 
 
  964 015d 00       		.byte	0x0
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  1007      00
  1008 0027 85000000 		.4byte	0x85
  1009 002b 626F6F6C 		.ascii	"bool_t\000"
-ARM GAS  /tmp/cc05pEvX.s 			page 19
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 19
 
 
  1009      5F7400
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  1051      4320342E 
  1051      352E3200 
  1052              	.LASF19:
-ARM GAS  /tmp/cc05pEvX.s 			page 20
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 20
 
 
  1053 0019 50435352 		.ascii	"PCSR\000"
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  1079      7420756E 
  1079      7369676E 
  1079      65642069 
-ARM GAS  /tmp/cc05pEvX.s 			page 21
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 21
 
 
  1079      6E7400
@@ -1223,102 +1223,102 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  1089      756C745F 
  1089      636F6E66 
  1089      696700
- 1090              	.LASF3:
- 1091 00ff 73686F72 		.ascii	"short int\000"
- 1091      7420696E 
- 1091      7400
- 1092              	.LASF17:
- 1093 0109 4C535543 		.ascii	"LSUCNT\000"
+ 1090              	.LASF17:
+ 1091 00ff 4C535543 		.ascii	"LSUCNT\000"
+ 1091      4E5400
+ 1092              	.LASF13:
+ 1093 0106 43594343 		.ascii	"CYCCNT\000"
  1093      4E5400
- 1094              	.LASF13:
- 1095 0110 43594343 		.ascii	"CYCCNT\000"
- 1095      4E5400
- 1096              	.LASF25:
- 1097 0117 50424461 		.ascii	"PBData\000"
- 1097      746100
- 1098              	.LASF22:
- 1099 011e 68616C72 		.ascii	"halrtcnt_t\000"
- 1099      74636E74 
- 1099      5F7400
- 1100              	.LASF21:
- 1101 0129 63686172 		.ascii	"char\000"
+ 1094              	.LASF25:
+ 1095 010d 50424461 		.ascii	"PBData\000"
+ 1095      746100
+ 1096              	.LASF22:
+ 1097 0114 68616C72 		.ascii	"halrtcnt_t\000"
+ 1097      74636E74 
+ 1097      5F7400
+ 1098              	.LASF21:
+ 1099 011f 63686172 		.ascii	"char\000"
+ 1099      00
+ 1100              	.LASF12:
+ 1101 0124 4354524C 		.ascii	"CTRL\000"
  1101      00
- 1102              	.LASF12:
- 1103 012e 4354524C 		.ascii	"CTRL\000"
- 1103      00
- 1104              	.LASF37:
- 1105 0133 68616C49 		.ascii	"halIsCounterWithin\000"
- 1105      73436F75 
- 1105      6E746572 
- 1105      57697468 
- 1105      696E00
- 1106              	.LASF6:
- 1107 0146 696E7433 		.ascii	"int32_t\000"
- 1107      325F7400 
- 1108              	.LASF9:
- 1109 014e 6C6F6E67 		.ascii	"long long int\000"
- 1109      206C6F6E 
-ARM GAS  /tmp/cc05pEvX.s 			page 22
+ 1102              	.LASF37:
+ 1103 0129 68616C49 		.ascii	"halIsCounterWithin\000"
+ 1103      73436F75 
+ 1103      6E746572 
+ 1103      57697468 
+ 1103      696E00
+ 1104              	.LASF6:
+ 1105 013c 696E7433 		.ascii	"int32_t\000"
+ 1105      325F7400 
+ 1106              	.LASF9:
+ 1107 0144 6C6F6E67 		.ascii	"long long int\000"
+ 1107      206C6F6E 
+ 1107      6720696E 
+ 1107      7400
+ 1108              	.LASF31:
+ 1109 0152 74696D65 		.ascii	"timeout\000"
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 22
 
 
- 1109      6720696E 
- 1109      7400
- 1110              	.LASF31:
- 1111 015c 74696D65 		.ascii	"timeout\000"
- 1111      6F757400 
+ 1109      6F757400 
+ 1110              	.LASF36:
+ 1111 015a 433A5C70 		.ascii	"C:\\projects\\ipm\\soft\\firmware\\valve\000"
+ 1111      726F6A65 
+ 1111      6374735C 
+ 1111      69706D5C 
+ 1111      736F6674 
  1112              	.LASF39:
- 1113 0164 68616C50 		.ascii	"halPolledDelay\000"
+ 1113 017e 68616C50 		.ascii	"halPolledDelay\000"
  1113      6F6C6C65 
  1113      6444656C 
  1113      617900
- 1114              	.LASF36:
- 1115 0173 2F686F6D 		.ascii	"/home/z80/projects/ipm/soft/firmware/valve\000"
- 1115      652F7A38 
- 1115      302F7072 
- 1115      6F6A6563 
- 1115      74732F69 
+ 1114              	.LASF3:
+ 1115 018d 73686F72 		.ascii	"short int\000"
+ 1115      7420696E 
+ 1115      7400
  1116              	.LASF26:
- 1117 019e 50434461 		.ascii	"PCData\000"
+ 1117 0197 50434461 		.ascii	"PCData\000"
  1117      746100
  1118              	.LASF20:
- 1119 01a5 434D785F 		.ascii	"CMx_DWT\000"
+ 1119 019e 434D785F 		.ascii	"CMx_DWT\000"
  1119      44575400 
  1120              	.LASF7:
- 1121 01ad 75696E74 		.ascii	"uint32_t\000"
+ 1121 01a6 75696E74 		.ascii	"uint32_t\000"
  1121      33325F74 
  1121      00
  1122              	.LASF5:
- 1123 01b6 6C6F6E67 		.ascii	"long int\000"
+ 1123 01af 6C6F6E67 		.ascii	"long int\000"
  1123      20696E74 
  1123      00
  1124              	.LASF1:
- 1125 01bf 7369676E 		.ascii	"signed char\000"
+ 1125 01b8 7369676E 		.ascii	"signed char\000"
  1125      65642063 
  1125      68617200 
  1126              	.LASF10:
- 1127 01cb 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1127 01c4 6C6F6E67 		.ascii	"long long unsigned int\000"
  1127      206C6F6E 
  1127      6720756E 
  1127      7369676E 
  1127      65642069 
  1128              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  /tmp/cc05pEvX.s 			page 23
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s 			page 23
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 hal.c
-     /tmp/cc05pEvX.s:24     .text.halInit:00000000 $t
-     /tmp/cc05pEvX.s:30     .text.halInit:00000000 halInit
-     /tmp/cc05pEvX.s:66     .text.halInit:0000002c $d
-     /tmp/cc05pEvX.s:71     .text.halIsCounterWithin:00000000 $t
-     /tmp/cc05pEvX.s:77     .text.halIsCounterWithin:00000000 halIsCounterWithin
-     /tmp/cc05pEvX.s:124    .text.halIsCounterWithin:00000024 $d
-     /tmp/cc05pEvX.s:129    .text.halPolledDelay:00000000 $t
-     /tmp/cc05pEvX.s:135    .text.halPolledDelay:00000000 halPolledDelay
-     /tmp/cc05pEvX.s:179    .text.halPolledDelay:00000024 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s:24     .text.halInit:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s:30     .text.halInit:00000000 halInit
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s:66     .text.halInit:0000002c $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s:71     .text.halIsCounterWithin:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s:77     .text.halIsCounterWithin:00000000 halIsCounterWithin
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s:124    .text.halIsCounterWithin:00000024 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s:129    .text.halPolledDelay:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s:135    .text.halPolledDelay:00000000 halPolledDelay
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s:179    .text.halPolledDelay:00000024 $d
                      .debug_frame:00000010 $d
-     /tmp/cc05pEvX.s:128    .text.halIsCounterWithin:00000028 $t
-     /tmp/cc05pEvX.s:185    .text.halPolledDelay:00000028 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s:128    .text.halIsCounterWithin:00000028 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccNkAtHL.s:185    .text.halPolledDelay:00000028 $t
 
 UNDEFINED SYMBOLS
 hal_lld_init

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccD88c4H.s 			page 1
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvh0Kcn.s 			page 1
 
 
    1              		.syntax unified
@@ -20,8 +20,8 @@ ARM GAS  /tmp/ccD88c4H.s 			page 1
   17              	.Ldebug_info0:
   18              		.section	.debug_line,"",%progbits
   19              	.Ldebug_line0:
-  20 0000 6C010000 		.text
-  20      02004501 
+  20 0000 68010000 		.text
+  20      02004101 
   20      00000201 
   20      FB0E0D00 
   20      01010101 
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccD88c4H.s 			page 1
   49              		.thumb_func
   50              		.type	boardInit, %function
   51              	boardInit:
-ARM GAS  /tmp/ccD88c4H.s 			page 2
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvh0Kcn.s 			page 2
 
 
   52              	.LFB56:
@@ -98,7 +98,7 @@ ARM GAS  /tmp/ccD88c4H.s 			page 1
   83 0038 88888888 		.word	-2004318072
   84              		.text
   85              	.Letext0:
-  86              		.file 2 "/home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../.
+  86              		.file 2 "c:\\programs\\codesourcery\\arm-2012.03-56\\bin\\../lib/gcc/arm-none-eabi/4.5.2/../../../
   87              		.file 3 "../chibios_2.4.x/os/hal/platforms/STM32/GPIOv1/pal_lld.h"
   88              		.file 4 "../chibios_2.4.x/os/ports/common/ARMCMx/CMSIS/include/core_cm3.h"
   89              		.section	.debug_info
@@ -110,7 +110,7 @@ ARM GAS  /tmp/ccD88c4H.s 			page 1
   95 000c 15000000 		.4byte	.LASF23
   96 0010 01       		.byte	0x1
   97 0011 37000000 		.4byte	.LASF24
-  98 0015 CA000000 		.4byte	.LASF25
+  98 0015 3D010000 		.4byte	.LASF25
   99 0019 00000000 		.4byte	0x0
  100 001d 00000000 		.4byte	0x0
  101 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccD88c4H.s 			page 1
  103 0029 02       		.uleb128 0x2
  104 002a 04       		.byte	0x4
  105 002b 05       		.byte	0x5
-ARM GAS  /tmp/ccD88c4H.s 			page 3
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvh0Kcn.s 			page 3
 
 
  106 002c 696E7400 		.ascii	"int\000"
@@ -129,28 +129,28 @@ ARM GAS  /tmp/ccD88c4H.s 			page 1
  111 0037 03       		.uleb128 0x3
  112 0038 01       		.byte	0x1
  113 0039 06       		.byte	0x6
- 114 003a 4B010000 		.4byte	.LASF1
+ 114 003a 2A010000 		.4byte	.LASF1
  115 003e 03       		.uleb128 0x3
  116 003f 01       		.byte	0x1
  117 0040 08       		.byte	0x8
- 118 0041 F5000000 		.4byte	.LASF2
+ 118 0041 CA000000 		.4byte	.LASF2
  119 0045 03       		.uleb128 0x3
  120 0046 02       		.byte	0x2
  121 0047 05       		.byte	0x5
- 122 0048 5E010000 		.4byte	.LASF3
+ 122 0048 ED000000 		.4byte	.LASF3
  123 004c 03       		.uleb128 0x3
  124 004d 02       		.byte	0x2
  125 004e 07       		.byte	0x7
  126 004f B7000000 		.4byte	.LASF4
  127 0053 04       		.uleb128 0x4
- 128 0054 68010000 		.4byte	.LASF6
+ 128 0054 61010000 		.4byte	.LASF6
  129 0058 02       		.byte	0x2
  130 0059 4F       		.byte	0x4f
  131 005a 5E000000 		.4byte	0x5e
  132 005e 03       		.uleb128 0x3
  133 005f 04       		.byte	0x4
  134 0060 05       		.byte	0x5
- 135 0061 0F010000 		.4byte	.LASF5
+ 135 0061 E4000000 		.4byte	.LASF5
  136 0065 04       		.uleb128 0x4
  137 0066 2E000000 		.4byte	.LASF7
  138 006a 02       		.byte	0x2
@@ -171,14 +171,14 @@ ARM GAS  /tmp/ccD88c4H.s 			page 1
  153 0085 03       		.uleb128 0x3
  154 0086 01       		.byte	0x1
  155 0087 08       		.byte	0x8
- 156 0088 03010000 		.4byte	.LASF11
+ 156 0088 D8000000 		.4byte	.LASF11
  157 008c 05       		.uleb128 0x5
  158 008d 53000000 		.4byte	0x53
  159 0091 06       		.uleb128 0x6
  160 0092 0C       		.byte	0xc
  161 0093 03       		.byte	0x3
  162 0094 43       		.byte	0x43
-ARM GAS  /tmp/ccD88c4H.s 			page 4
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvh0Kcn.s 			page 4
 
 
  163 0095 C4000000 		.4byte	0xc4
@@ -208,7 +208,7 @@ ARM GAS  /tmp/ccD88c4H.s 			page 1
  187 00c2 08       		.uleb128 0x8
  188 00c3 00       		.byte	0x0
  189 00c4 04       		.uleb128 0x4
- 190 00c5 2B010000 		.4byte	.LASF12
+ 190 00c5 0A010000 		.4byte	.LASF12
  191 00c9 03       		.byte	0x3
  192 00ca 4A       		.byte	0x4a
  193 00cb 91000000 		.4byte	0x91
@@ -234,18 +234,18 @@ ARM GAS  /tmp/ccD88c4H.s 			page 1
  213 00f1 23       		.byte	0x23
  214 00f2 0C       		.uleb128 0xc
  215 00f3 08       		.uleb128 0x8
- 216 00f4 08010000 		.4byte	.LASF15
+ 216 00f4 DD000000 		.4byte	.LASF15
  217 00f8 03       		.byte	0x3
  218 00f9 59       		.byte	0x59
  219 00fa C4000000 		.4byte	0xc4
-ARM GAS  /tmp/ccD88c4H.s 			page 5
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvh0Kcn.s 			page 5
 
 
  220 00fe 02       		.byte	0x2
  221 00ff 23       		.byte	0x23
  222 0100 18       		.uleb128 0x18
  223 0101 08       		.uleb128 0x8
- 224 0102 57010000 		.4byte	.LASF16
+ 224 0102 36010000 		.4byte	.LASF16
  225 0106 03       		.byte	0x3
  226 0107 5B       		.byte	0x5b
  227 0108 C4000000 		.4byte	0xc4
@@ -262,7 +262,7 @@ ARM GAS  /tmp/ccD88c4H.s 			page 1
  238 011c 30       		.uleb128 0x30
  239 011d 00       		.byte	0x0
  240 011e 04       		.uleb128 0x4
- 241 011f 70010000 		.4byte	.LASF18
+ 241 011f 69010000 		.4byte	.LASF18
  242 0123 03       		.byte	0x3
  243 0124 68       		.byte	0x68
  244 0125 CF000000 		.4byte	0xcf
@@ -289,16 +289,16 @@ ARM GAS  /tmp/ccD88c4H.s 			page 1
  265 014f 7D       		.byte	0x7d
  266 0150 00       		.sleb128 0
  267 0151 0A       		.uleb128 0xa
- 268 0152 3E010000 		.4byte	.LASF21
+ 268 0152 1D010000 		.4byte	.LASF21
  269 0156 04       		.byte	0x4
  270 0157 9404     		.2byte	0x494
  271 0159 8C000000 		.4byte	0x8c
  272 015d 01       		.byte	0x1
  273 015e 01       		.byte	0x1
  274 015f 0A       		.uleb128 0xa
- 275 0160 3E010000 		.4byte	.LASF21
+ 275 0160 1D010000 		.4byte	.LASF21
  276 0164 04       		.byte	0x4
-ARM GAS  /tmp/ccD88c4H.s 			page 6
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvh0Kcn.s 			page 6
 
 
  277 0165 9404     		.2byte	0x494
@@ -306,7 +306,7 @@ ARM GAS  /tmp/ccD88c4H.s 			page 1
  279 016b 01       		.byte	0x1
  280 016c 01       		.byte	0x1
  281 016d 0B       		.uleb128 0xb
- 282 016e 18010000 		.4byte	.LASF22
+ 282 016e F7000000 		.4byte	.LASF22
  283 0172 01       		.byte	0x1
  284 0173 25       		.byte	0x25
  285 0174 7F010000 		.4byte	0x17f
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccD88c4H.s 			page 1
  331 0025 3E       		.uleb128 0x3e
  332 0026 0B       		.uleb128 0xb
  333 0027 03       		.uleb128 0x3
-ARM GAS  /tmp/ccD88c4H.s 			page 7
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvh0Kcn.s 			page 7
 
 
  334 0028 0E       		.uleb128 0xe
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccD88c4H.s 			page 1
  388 005e 03       		.uleb128 0x3
  389 005f 0E       		.uleb128 0xe
  390 0060 3A       		.uleb128 0x3a
-ARM GAS  /tmp/ccD88c4H.s 			page 8
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvh0Kcn.s 			page 8
 
 
  391 0061 0B       		.uleb128 0xb
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccD88c4H.s 			page 1
  445 0097 3B       		.uleb128 0x3b
  446 0098 0B       		.uleb128 0xb
  447 0099 49       		.uleb128 0x49
-ARM GAS  /tmp/ccD88c4H.s 			page 9
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvh0Kcn.s 			page 9
 
 
  448 009a 13       		.uleb128 0x13
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccD88c4H.s 			page 1
  486 003e 1E010000 		.4byte	0x11e
  487 0042 50414C43 		.ascii	"PALConfig\000"
  487      6F6E6669 
-ARM GAS  /tmp/ccD88c4H.s 			page 10
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvh0Kcn.s 			page 10
 
 
  487      6700
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccD88c4H.s 			page 1
  525      746100
  526              	.LASF19:
  527 0070 5F5F6561 		.ascii	"__early_init\000"
-ARM GAS  /tmp/ccD88c4H.s 			page 11
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvh0Kcn.s 			page 11
 
 
  527      726C795F 
@@ -629,77 +629,77 @@ ARM GAS  /tmp/ccD88c4H.s 			page 1
  537      7369676E 
  537      65642069 
  537      6E7400
- 538              	.LASF25:
- 539 00ca 2F686F6D 		.ascii	"/home/z80/projects/ipm/soft/firmware/valve\000"
- 539      652F7A38 
- 539      302F7072 
- 539      6F6A6563 
- 539      74732F69 
- 540              	.LASF2:
- 541 00f5 756E7369 		.ascii	"unsigned char\000"
- 541      676E6564 
- 541      20636861 
- 541      7200
- 542              	.LASF11:
- 543 0103 63686172 		.ascii	"char\000"
- 543      00
- 544              	.LASF15:
- 545 0108 50434461 		.ascii	"PCData\000"
- 545      746100
- 546              	.LASF5:
- 547 010f 6C6F6E67 		.ascii	"long int\000"
- 547      20696E74 
- 547      00
+ 538              	.LASF2:
+ 539 00ca 756E7369 		.ascii	"unsigned char\000"
+ 539      676E6564 
+ 539      20636861 
+ 539      7200
+ 540              	.LASF11:
+ 541 00d8 63686172 		.ascii	"char\000"
+ 541      00
+ 542              	.LASF15:
+ 543 00dd 50434461 		.ascii	"PCData\000"
+ 543      746100
+ 544              	.LASF5:
+ 545 00e4 6C6F6E67 		.ascii	"long int\000"
+ 545      20696E74 
+ 545      00
+ 546              	.LASF3:
+ 547 00ed 73686F72 		.ascii	"short int\000"
+ 547      7420696E 
+ 547      7400
  548              	.LASF22:
- 549 0118 70616C5F 		.ascii	"pal_default_config\000"
+ 549 00f7 70616C5F 		.ascii	"pal_default_config\000"
  549      64656661 
  549      756C745F 
  549      636F6E66 
  549      696700
  550              	.LASF12:
- 551 012b 73746D33 		.ascii	"stm32_gpio_setup_t\000"
-ARM GAS  /tmp/ccD88c4H.s 			page 12
-
-
+ 551 010a 73746D33 		.ascii	"stm32_gpio_setup_t\000"
  551      325F6770 
  551      696F5F73 
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvh0Kcn.s 			page 12
+
+
  551      65747570 
  551      5F7400
  552              	.LASF21:
- 553 013e 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 553 011d 49544D5F 		.ascii	"ITM_RxBuffer\000"
  553      52784275 
  553      66666572 
  553      00
  554              	.LASF1:
- 555 014b 7369676E 		.ascii	"signed char\000"
+ 555 012a 7369676E 		.ascii	"signed char\000"
  555      65642063 
  555      68617200 
  556              	.LASF16:
- 557 0157 50444461 		.ascii	"PDData\000"
+ 557 0136 50444461 		.ascii	"PDData\000"
  557      746100
- 558              	.LASF3:
- 559 015e 73686F72 		.ascii	"short int\000"
- 559      7420696E 
- 559      7400
+ 558              	.LASF25:
+ 559 013d 433A5C70 		.ascii	"C:\\projects\\ipm\\soft\\firmware\\valve\000"
+ 559      726F6A65 
+ 559      6374735C 
+ 559      69706D5C 
+ 559      736F6674 
  560              	.LASF6:
- 561 0168 696E7433 		.ascii	"int32_t\000"
+ 561 0161 696E7433 		.ascii	"int32_t\000"
  561      325F7400 
  562              	.LASF18:
- 563 0170 50414C43 		.ascii	"PALConfig\000"
+ 563 0169 50414C43 		.ascii	"PALConfig\000"
  563      6F6E6669 
  563      6700
  564              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  /tmp/ccD88c4H.s 			page 13
+ARM GAS  C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvh0Kcn.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 board.c
-     /tmp/ccD88c4H.s:24     .text.__early_init:00000000 $t
-     /tmp/ccD88c4H.s:30     .text.__early_init:00000000 __early_init
-     /tmp/ccD88c4H.s:45     .text.boardInit:00000000 $t
-     /tmp/ccD88c4H.s:51     .text.boardInit:00000000 boardInit
-     /tmp/ccD88c4H.s:68     .rodata.pal_default_config:00000000 pal_default_config
-     /tmp/ccD88c4H.s:65     .rodata.pal_default_config:00000000 $d
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvh0Kcn.s:24     .text.__early_init:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvh0Kcn.s:30     .text.__early_init:00000000 __early_init
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvh0Kcn.s:45     .text.boardInit:00000000 $t
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvh0Kcn.s:51     .text.boardInit:00000000 boardInit
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvh0Kcn.s:68     .rodata.pal_default_config:00000000 pal_default_config
+C:\DOCUME~1\z_80\LOCALS~1\Temp\ccvh0Kcn.s:65     .rodata.pal_default_config:00000000 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS

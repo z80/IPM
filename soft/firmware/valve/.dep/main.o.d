@@ -1,8 +1,8 @@
 build/obj/main.o: src/main.c ../chibios_2.4.x/os/kernel/include/ch.h \
  chconf.h ../chibios_2.4.x/os/ports/GCC/ARMCMx/chtypes.h \
- /home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/include/stddef.h \
- /home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/include/stdint.h \
- /home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/include/stdint.h \
+ c:\programs\codesourcery\arm-2012.03-56\bin\../lib/gcc/arm-none-eabi/4.5.2/include/stddef.h \
+ c:\programs\codesourcery\arm-2012.03-56\bin\../lib/gcc/arm-none-eabi/4.5.2/include/stdint.h \
+ c:\programs\codesourcery\arm-2012.03-56\bin\../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/include/stdint.h \
  ../chibios_2.4.x/os/kernel/include/chlists.h \
  ../chibios_2.4.x/os/ports/GCC/ARMCMx/chcore.h \
  ../chibios_2.4.x/os/ports/GCC/ARMCMx/STM32F1xx/cmparams.h \
@@ -64,8 +64,8 @@ build/obj/main.o: src/main.c ../chibios_2.4.x/os/kernel/include/ch.h \
  ../chibios_2.4.x/os/hal/platforms/STM32/USBv1/usb_lld.h \
  ../chibios_2.4.x/os/hal/platforms/STM32/USBv1/stm32_usb.h \
  ../chibios_2.4.x/os/hal/include/mmc_spi.h \
- ../chibios_2.4.x/os/hal/include/serial_usb.h src/led_ctrl.h \
- src/read_ctrl.h src/write_ctrl.h
+ ../chibios_2.4.x/os/hal/include/serial_usb.h src/hdw_config.h \
+ src/led_ctrl.h src/read_ctrl.h src/write_ctrl.h
 
 ../chibios_2.4.x/os/kernel/include/ch.h:
 
@@ -73,11 +73,11 @@ chconf.h:
 
 ../chibios_2.4.x/os/ports/GCC/ARMCMx/chtypes.h:
 
-/home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/include/stddef.h:
+c:\programs\codesourcery\arm-2012.03-56\bin\../lib/gcc/arm-none-eabi/4.5.2/include/stddef.h:
 
-/home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/include/stdint.h:
+c:\programs\codesourcery\arm-2012.03-56\bin\../lib/gcc/arm-none-eabi/4.5.2/include/stdint.h:
 
-/home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/include/stdint.h:
+c:\programs\codesourcery\arm-2012.03-56\bin\../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/include/stdint.h:
 
 ../chibios_2.4.x/os/kernel/include/chlists.h:
 
@@ -206,6 +206,8 @@ mcuconf.h:
 ../chibios_2.4.x/os/hal/include/mmc_spi.h:
 
 ../chibios_2.4.x/os/hal/include/serial_usb.h:
+
+src/hdw_config.h:
 
 src/led_ctrl.h:
 
