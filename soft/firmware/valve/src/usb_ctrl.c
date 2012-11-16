@@ -12,6 +12,7 @@
 #include "chprintf.h"
 
 #include "usb_ctrl.h"
+#include "i2c_ctrl.h"
 #include "hdw_config.h"
 
 /*===========================================================================*/
@@ -323,16 +324,12 @@ static void cmd_mem(BaseChannel *chp, int argc, char *argv[])
 static const ShellCommand commands[] =
 {
     {"mem", cmd_mem},
-    //{ PWR_RST_CMD,  cmd_pwr_rst },
-    //{ PWR_CFG_CMD,  cmd_pwr_cfg },
-    //{ LED_CMD,      cmd_light },
-    //{ MOTO_CFG_CMD, cmd_moto_cfg },
-    //{ MOTO_RST_CMD, cmd_moto_rst },
-    //{ MOTO_SET_CMD, cmd_moto_set },
-    //{ "moto",       cmd_moto },
-    //{ ADC_CFG_CMD,  cmd_adc_cfg },
-    //{ ADC_CMD,      cmd_adc },
-    //{ "pwren",      cmd_pwr_en },
+    { "st",   cmd_state },
+    { "out",  cmd_set_output },
+    { "i2c_set_addr",   tst_i2c_set_addr },
+    { "i2c_set_master", tst_i2c_set_master },
+    { "i2c_set_buffer", tst_i2c_set_buffer },
+    { "i2c_io", tst_i2c_io },
     { NULL,         NULL }
 };
 
