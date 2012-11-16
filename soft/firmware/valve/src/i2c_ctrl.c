@@ -7,6 +7,7 @@
 
 #include "read_ctrl.h"
 #include "write_ctrl.h"
+#include "led_ctrl.h"
 #include "hdw_config.h"
 
 
@@ -29,7 +30,15 @@ static msg_t i2cThread( void *arg )
     chRegSetThreadName( "i" );
     while ( 1 )
     {
-    	chThdSleepMilliseconds( 1 );
+        //chThdSleepMilliseconds( 1 );
+        chThdSleepMilliseconds( 500 );
+        // Read ADDRESS pins.
+        uint16_t a = palReadPad( IN_PORT, ADDR_0_PIN ) |
+                   ( palReadPad( IN_PORT, ADDR_1_PIN ) << 1 ) |
+                   ( palReadPad( IN_PORT, ADDR_2_PIN ) << 2 );
+        setLeds( a );
+
+
     	static uint8_t master;
     	static msg_t status;
         static systime_t tmo;
@@ -38,13 +47,13 @@ static msg_t i2cThread( void *arg )
     	master = isMaster;
     	chMtxUnlock();
     	// I/O with other boards.
-    	if ( master )
+        if ( ( master ) || ( a != 0b00000111 ) )
     	{
     	    static int16_t i;
     	    for ( i=0; i<2; i++ )
     	    {
     	    	status = RDY_OK;
-    	    	status = i2cMasterTransmitTimeout( &I2CD1, addr[i],
+                status = i2cMasterTransmitTimeout( &I2CD1, 9, //addr[i],
     	    			                           (uint8_t *)&(outs[ i ]), sizeof(uint32_t),
     	    			                           (uint8_t *)&(ins[ i ]),  sizeof(uint32_t),
     	    			                           tmo );
@@ -74,6 +83,11 @@ static const I2CConfig i2cfg1 =
 
 void initI2c( void )
 {
+    // Address pins
+    palSetPadMode( GPIOC, ADDR_0_PIN, PAL_MODE_INPUT );
+    palSetPadMode( GPIOC, ADDR_1_PIN, PAL_MODE_INPUT );
+    palSetPadMode( GPIOC, ADDR_2_PIN, PAL_MODE_INPUT );
+
     i2cInit();
     i2cStart(&I2CD1, &i2cfg1);
     // tune ports for I2C1
@@ -90,7 +104,7 @@ void initI2c( void )
 	// Initializing mutex.
 	chMtxInit( &mutex );
 	// Creating thread.
-	chThdCreateStatic( waI2c, sizeof(waI2c), NORMALPRIO, i2cThread, NULL );
+    chThdCreateStatic( waI2c, sizeof(waI2c), NORMALPRIO, i2cThread, NULL );
 }
 
 void state( uint8_t index, uint32_t * val )

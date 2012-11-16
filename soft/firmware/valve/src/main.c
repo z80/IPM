@@ -6,6 +6,7 @@
 #include "led_ctrl.h"
 #include "read_ctrl.h"
 #include "write_ctrl.h"
+#include "i2c_ctrl.h"
 #include "usb_ctrl.h"
 
 int main(void)
@@ -15,8 +16,9 @@ int main(void)
   chSysInit();
 
   initLed();
-  initRead();
-  initWrite();
+  //initRead();
+  //initWrite();
+  //initI2c();
   initUsb();
   setLeds( 1 );
   while ( 1 )
