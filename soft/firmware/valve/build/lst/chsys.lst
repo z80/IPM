@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccXBsLlb.s 			page 1
+ARM GAS  /tmp/ccBeaEMw.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
   51 0010 00000000 		.word	.LC0
   52              		.cfi_endproc
   53              	.LFE0:
-ARM GAS  /tmp/ccXBsLlb.s 			page 2
+ARM GAS  /tmp/ccBeaEMw.s 			page 2
 
 
   54              		.size	_idle_thread, .-_idle_thread
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  106              	.LBB2:
  107 0036 0023     		movs	r3, #0
  108              	.LVL2:
-ARM GAS  /tmp/ccXBsLlb.s 			page 3
+ARM GAS  /tmp/ccBeaEMw.s 			page 3
 
 
  109              	@ 109 "../chibios_2.4.x/os/kernel/src/chsys.c" 1
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  163              	.LCFI2:
  164              		.cfi_def_cfa_offset 16
  165              		.loc 1 135 0
-ARM GAS  /tmp/ccXBsLlb.s 			page 4
+ARM GAS  /tmp/ccBeaEMw.s 			page 4
 
 
  166              		.cfi_offset 14, -4
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  220 0040 2368     		ldr	r3, [r4, #0]
  221              	.LVL10:
  222 0042 9868     		ldr	r0, [r3, #8]
-ARM GAS  /tmp/ccXBsLlb.s 			page 5
+ARM GAS  /tmp/ccBeaEMw.s 			page 5
 
 
  223 0044 0028     		cmp	r0, #0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  265 0004 02000000 		.4byte	.LVL1
  266 0008 0100     		.2byte	0x1
  267 000a 50       		.byte	0x50
-ARM GAS  /tmp/ccXBsLlb.s 			page 6
+ARM GAS  /tmp/ccBeaEMw.s 			page 6
 
 
  268 000b 00000000 		.4byte	0x0
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  322 0094 42000000 		.4byte	.LVL10
  323 0098 48000000 		.4byte	.LVL11
  324 009c 0200     		.2byte	0x2
-ARM GAS  /tmp/ccXBsLlb.s 			page 7
+ARM GAS  /tmp/ccBeaEMw.s 			page 7
 
 
  325 009e 74       		.byte	0x74
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  379 004b 08       		.byte	0x8
  380 004c FF010000 		.4byte	.LASF2
  381 0050 03       		.uleb128 0x3
-ARM GAS  /tmp/ccXBsLlb.s 			page 8
+ARM GAS  /tmp/ccBeaEMw.s 			page 8
 
 
  382 0051 02       		.byte	0x2
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  436 00bd EF010000 		.4byte	.LASF16
  437 00c1 03       		.byte	0x3
  438 00c2 32       		.byte	0x32
-ARM GAS  /tmp/ccXBsLlb.s 			page 9
+ARM GAS  /tmp/ccBeaEMw.s 			page 9
 
 
  439 00c3 70000000 		.4byte	0x70
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  493 0132 23       		.byte	0x23
  494 0133 08       		.uleb128 0x8
  495 0134 06       		.uleb128 0x6
-ARM GAS  /tmp/ccXBsLlb.s 			page 10
+ARM GAS  /tmp/ccBeaEMw.s 			page 10
 
 
  496 0135 5F030000 		.4byte	.LASF25
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  550 0195 21       		.uleb128 0x21
  551 0196 06       		.uleb128 0x6
  552 0197 02030000 		.4byte	.LASF32
-ARM GAS  /tmp/ccXBsLlb.s 			page 11
+ARM GAS  /tmp/ccBeaEMw.s 			page 11
 
 
  553 019b 05       		.byte	0x5
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  607 01f8 06       		.uleb128 0x6
  608 01f9 0D020000 		.4byte	.LASF38
  609 01fd 05       		.byte	0x5
-ARM GAS  /tmp/ccXBsLlb.s 			page 12
+ARM GAS  /tmp/ccBeaEMw.s 			page 12
 
 
  610 01fe CA       		.byte	0xca
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  664 025b 04       		.byte	0x4
  665 025c 6B       		.byte	0x6b
  666 025d 70020000 		.4byte	0x270
-ARM GAS  /tmp/ccXBsLlb.s 			page 13
+ARM GAS  /tmp/ccBeaEMw.s 			page 13
 
 
  667 0261 06       		.uleb128 0x6
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  721 02c7 23       		.byte	0x23
  722 02c8 08       		.uleb128 0x8
  723 02c9 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccXBsLlb.s 			page 14
+ARM GAS  /tmp/ccBeaEMw.s 			page 14
 
 
  724 02ca 723700   		.ascii	"r7\000"
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  778 032d 0B       		.uleb128 0xb
  779 032e 72313300 		.ascii	"r13\000"
  780 0332 06       		.byte	0x6
-ARM GAS  /tmp/ccXBsLlb.s 			page 15
+ARM GAS  /tmp/ccBeaEMw.s 			page 15
 
 
  781 0333 2401     		.2byte	0x124
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  835 039a DD000000 		.4byte	0xdd
  836 039e 02       		.byte	0x2
  837 039f 23       		.byte	0x23
-ARM GAS  /tmp/ccXBsLlb.s 			page 16
+ARM GAS  /tmp/ccBeaEMw.s 			page 16
 
 
  838 03a0 08       		.uleb128 0x8
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  892 03fd 05040000 		.4byte	0x405
  893 0401 02       		.byte	0x2
  894 0402 23       		.byte	0x23
-ARM GAS  /tmp/ccXBsLlb.s 			page 17
+ARM GAS  /tmp/ccBeaEMw.s 			page 17
 
 
  895 0403 0C       		.uleb128 0xc
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  949 0463 06       		.uleb128 0x6
  950 0464 4D030000 		.4byte	.LASF61
  951 0468 08       		.byte	0x8
-ARM GAS  /tmp/ccXBsLlb.s 			page 18
+ARM GAS  /tmp/ccBeaEMw.s 			page 18
 
 
  952 0469 6A       		.byte	0x6a
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1006 04c9 85010000 		.4byte	.LASF64
  1007 04cd 09       		.byte	0x9
  1008 04ce 33       		.byte	0x33
-ARM GAS  /tmp/ccXBsLlb.s 			page 19
+ARM GAS  /tmp/ccBeaEMw.s 			page 19
 
 
  1009 04cf 8B040000 		.4byte	0x48b
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1063 0541 0E       		.uleb128 0xe
  1064 0542 86020000 		.4byte	0x286
  1065 0546 00       		.byte	0x0
-ARM GAS  /tmp/ccXBsLlb.s 			page 20
+ARM GAS  /tmp/ccBeaEMw.s 			page 20
 
 
  1066 0547 14       		.uleb128 0x14
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1120 05bd 00       		.byte	0x0
  1121 05be 16       		.uleb128 0x16
  1122 05bf 01       		.byte	0x1
-ARM GAS  /tmp/ccXBsLlb.s 			page 21
+ARM GAS  /tmp/ccBeaEMw.s 			page 21
 
 
  1123 05c0 25000000 		.4byte	.LASF77
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1177 063a 23060000 		.4byte	0x623
  1178 063e 01       		.byte	0x1
  1179 063f 01       		.byte	0x1
-ARM GAS  /tmp/ccXBsLlb.s 			page 22
+ARM GAS  /tmp/ccBeaEMw.s 			page 22
 
 
  1180 0640 18       		.uleb128 0x18
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1234 0016 24       		.uleb128 0x24
  1235 0017 00       		.byte	0x0
  1236 0018 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccXBsLlb.s 			page 23
+ARM GAS  /tmp/ccBeaEMw.s 			page 23
 
 
  1237 0019 0B       		.uleb128 0xb
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1291 004f 0B       		.uleb128 0xb
  1292 0050 49       		.uleb128 0x49
  1293 0051 13       		.uleb128 0x13
-ARM GAS  /tmp/ccXBsLlb.s 			page 24
+ARM GAS  /tmp/ccBeaEMw.s 			page 24
 
 
  1294 0052 38       		.uleb128 0x38
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1348 0088 0B       		.uleb128 0xb
  1349 0089 3B       		.uleb128 0x3b
  1350 008a 05       		.uleb128 0x5
-ARM GAS  /tmp/ccXBsLlb.s 			page 25
+ARM GAS  /tmp/ccBeaEMw.s 			page 25
 
 
  1351 008b 49       		.uleb128 0x49
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1405 00c1 13       		.uleb128 0x13
  1406 00c2 00       		.byte	0x0
  1407 00c3 00       		.byte	0x0
-ARM GAS  /tmp/ccXBsLlb.s 			page 26
+ARM GAS  /tmp/ccBeaEMw.s 			page 26
 
 
  1408 00c4 11       		.uleb128 0x11
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1462 00fa 15       		.uleb128 0x15
  1463 00fb 05       		.uleb128 0x5
  1464 00fc 00       		.byte	0x0
-ARM GAS  /tmp/ccXBsLlb.s 			page 27
+ARM GAS  /tmp/ccBeaEMw.s 			page 27
 
 
  1465 00fd 03       		.uleb128 0x3
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1519 0133 0E       		.uleb128 0xe
  1520 0134 3A       		.uleb128 0x3a
  1521 0135 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccXBsLlb.s 			page 28
+ARM GAS  /tmp/ccBeaEMw.s 			page 28
 
 
  1522 0136 3B       		.uleb128 0x3b
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1576 016c 00       		.byte	0x0
  1577 016d 03       		.uleb128 0x3
  1578 016e 0E       		.uleb128 0xe
-ARM GAS  /tmp/ccXBsLlb.s 			page 29
+ARM GAS  /tmp/ccBeaEMw.s 			page 29
 
 
  1579 016f 3A       		.uleb128 0x3a
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1617 0033 89000000 		.4byte	0x89
  1618 0037 75696E74 		.ascii	"uint64_t\000"
  1618      36345F74 
-ARM GAS  /tmp/ccXBsLlb.s 			page 30
+ARM GAS  /tmp/ccBeaEMw.s 			page 30
 
 
  1618      00
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1649 0102 43030000 		.4byte	0x343
  1650 0106 76746675 		.ascii	"vtfunc_t\000"
  1650      6E635F74 
-ARM GAS  /tmp/ccXBsLlb.s 			page 31
+ARM GAS  /tmp/ccBeaEMw.s 			page 31
 
 
  1650      00
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1691 0014 54000000 		.4byte	.LFE2
  1692 0018 00000000 		.4byte	0x0
  1693 001c 00000000 		.4byte	0x0
-ARM GAS  /tmp/ccXBsLlb.s 			page 32
+ARM GAS  /tmp/ccBeaEMw.s 			page 32
 
 
  1694              		.section	.debug_str,"MS",%progbits,1
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1722 008e 705F6D70 		.ascii	"p_mpool\000"
  1722      6F6F6C00 
  1723              	.LASF65:
-ARM GAS  /tmp/ccXBsLlb.s 			page 33
+ARM GAS  /tmp/ccBeaEMw.s 			page 33
 
 
  1724 0096 6D5F7175 		.ascii	"m_queue\000"
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1750      7400
  1751              	.LASF46:
  1752 0144 636F6E74 		.ascii	"context\000"
-ARM GAS  /tmp/ccXBsLlb.s 			page 34
+ARM GAS  /tmp/ccBeaEMw.s 			page 34
 
 
  1752      65787400 
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1782      655F7468 
  1782      72656164 
  1782      00
-ARM GAS  /tmp/ccXBsLlb.s 			page 35
+ARM GAS  /tmp/ccBeaEMw.s 			page 35
 
 
  1783              	.LASF15:
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1815              	.LASF48:
  1816 0269 56697274 		.ascii	"VirtualTimer\000"
  1816      75616C54 
-ARM GAS  /tmp/ccXBsLlb.s 			page 36
+ARM GAS  /tmp/ccBeaEMw.s 			page 36
 
 
  1816      696D6572 
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1844      7400
  1845              	.LASF5:
  1846 0319 75696E74 		.ascii	"uint8_t\000"
-ARM GAS  /tmp/ccXBsLlb.s 			page 37
+ARM GAS  /tmp/ccBeaEMw.s 			page 37
 
 
  1846      385F7400 
@@ -2194,28 +2194,28 @@ ARM GAS  /tmp/ccXBsLlb.s 			page 1
  1864      6974696E 
  1864      6700
  1865              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  /tmp/ccXBsLlb.s 			page 38
+ARM GAS  /tmp/ccBeaEMw.s 			page 38
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chsys.c
-     /tmp/ccXBsLlb.s:24     .text._idle_thread:00000000 $t
-     /tmp/ccXBsLlb.s:30     .text._idle_thread:00000000 _idle_thread
-     /tmp/ccXBsLlb.s:50     .text._idle_thread:0000000c $d
-     /tmp/ccXBsLlb.s:56     .text.chSysInit:00000000 $t
-     /tmp/ccXBsLlb.s:62     .text.chSysInit:00000000 chSysInit
-     /tmp/ccXBsLlb.s:140    .text.chSysInit:00000058 $d
-     /tmp/ccXBsLlb.s:150    .text.chSysTimerHandlerI:00000000 $t
-     /tmp/ccXBsLlb.s:156    .text.chSysTimerHandlerI:00000000 chSysTimerHandlerI
-     /tmp/ccXBsLlb.s:231    .text.chSysTimerHandlerI:0000004c $d
-     /tmp/ccXBsLlb.s:257    .bss._idle_thread_wa:00000000 _idle_thread_wa
-     /tmp/ccXBsLlb.s:239    .bss.mainthread.4697:00000000 $d
-     /tmp/ccXBsLlb.s:243    .bss.mainthread.4697:00000000 mainthread.4697
-     /tmp/ccXBsLlb.s:246    .rodata.str1.4:00000000 $d
-     /tmp/ccXBsLlb.s:253    .bss._idle_thread_wa:00000000 $d
+     /tmp/ccBeaEMw.s:24     .text._idle_thread:00000000 $t
+     /tmp/ccBeaEMw.s:30     .text._idle_thread:00000000 _idle_thread
+     /tmp/ccBeaEMw.s:50     .text._idle_thread:0000000c $d
+     /tmp/ccBeaEMw.s:56     .text.chSysInit:00000000 $t
+     /tmp/ccBeaEMw.s:62     .text.chSysInit:00000000 chSysInit
+     /tmp/ccBeaEMw.s:140    .text.chSysInit:00000058 $d
+     /tmp/ccBeaEMw.s:150    .text.chSysTimerHandlerI:00000000 $t
+     /tmp/ccBeaEMw.s:156    .text.chSysTimerHandlerI:00000000 chSysTimerHandlerI
+     /tmp/ccBeaEMw.s:231    .text.chSysTimerHandlerI:0000004c $d
+     /tmp/ccBeaEMw.s:257    .bss._idle_thread_wa:00000000 _idle_thread_wa
+     /tmp/ccBeaEMw.s:239    .bss.mainthread.4697:00000000 $d
+     /tmp/ccBeaEMw.s:243    .bss.mainthread.4697:00000000 mainthread.4697
+     /tmp/ccBeaEMw.s:246    .rodata.str1.4:00000000 $d
+     /tmp/ccBeaEMw.s:253    .bss._idle_thread_wa:00000000 $d
                      .debug_frame:00000010 $d
-     /tmp/ccXBsLlb.s:55     .text._idle_thread:00000014 $t
-     /tmp/ccXBsLlb.s:238    .text.chSysTimerHandlerI:00000054 $t
+     /tmp/ccBeaEMw.s:55     .text._idle_thread:00000014 $t
+     /tmp/ccBeaEMw.s:238    .text.chSysTimerHandlerI:00000054 $t
 
 UNDEFINED SYMBOLS
 rlist

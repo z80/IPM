@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccYTX8hg.s 			page 1
+ARM GAS  /tmp/ccPSPGfg.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
   51              	.LFE57:
   52              		.size	Vector8C, .-Vector8C
   53 0012 00BFAFF3 		.section	.text.usb_lld_init,"ax",%progbits
-ARM GAS  /tmp/ccYTX8hg.s 			page 2
+ARM GAS  /tmp/ccPSPGfg.s 			page 2
 
 
   53      0080AFF3 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  105              		.cfi_offset 5, -12
  106              		.cfi_offset 4, -16
  107              		.loc 1 287 0
-ARM GAS  /tmp/ccYTX8hg.s 			page 3
+ARM GAS  /tmp/ccPSPGfg.s 			page 3
 
 
  108 0008 00D0     		beq	.L9
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  162              		.thumb
  163              		.thumb_func
  164              		.type	usb_lld_stop, %function
-ARM GAS  /tmp/ccYTX8hg.s 			page 4
+ARM GAS  /tmp/ccPSPGfg.s 			page 4
 
 
  165              	usb_lld_stop:
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  219              		.align	2
  220              		.p2align 4,,15
  221              		.global	usb_lld_set_address
-ARM GAS  /tmp/ccYTX8hg.s 			page 5
+ARM GAS  /tmp/ccPSPGfg.s 			page 5
 
 
  222              		.thumb
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  274              		.cfi_offset 5, -20
  275              		.cfi_offset 4, -24
  276              	.LVL9:
-ARM GAS  /tmp/ccYTX8hg.s 			page 6
+ARM GAS  /tmp/ccPSPGfg.s 			page 6
 
 
  277              		.loc 1 383 0
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  331              		.loc 1 423 0
  332 006c 3E2B     		cmp	r3, #62
  333              		.loc 1 420 0
-ARM GAS  /tmp/ccYTX8hg.s 			page 7
+ARM GAS  /tmp/ccPSPGfg.s 			page 7
 
 
  334 006e 47F82160 		str	r6, [r7, r1, lsl #2]
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  388 00ae EE64     		str	r6, [r5, #76]
  389              		.loc 1 115 0
  390 00b0 19D8     		bhi	.L31
-ARM GAS  /tmp/ccYTX8hg.s 			page 8
+ARM GAS  /tmp/ccPSPGfg.s 			page 8
 
 
  391              	.LVL21:
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  445 00ec 638A     		ldrh	r3, [r4, #18]
  446 00ee EE6C     		ldr	r6, [r5, #76]
  447 00f0 DFE7     		b	.L28
-ARM GAS  /tmp/ccYTX8hg.s 			page 9
+ARM GAS  /tmp/ccPSPGfg.s 			page 9
 
 
  448              	.L33:
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  502              		.loc 1 353 0
  503 0020 1D64     		str	r5, [r3, #64]
  504              		.loc 1 359 0
-ARM GAS  /tmp/ccYTX8hg.s 			page 10
+ARM GAS  /tmp/ccPSPGfg.s 			page 10
 
 
  505 0022 044B     		ldr	r3, .L37+4
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  558 000a 5960     		str	r1, [r3, #4]
  559              		.loc 1 451 0
  560 000c 5A60     		str	r2, [r3, #4]
-ARM GAS  /tmp/ccYTX8hg.s 			page 11
+ARM GAS  /tmp/ccPSPGfg.s 			page 11
 
 
  561              	.LVL33:
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  614              		.type	usb_lld_get_status_out, %function
  615              	usb_lld_get_status_out:
  616              	.LFB66:
-ARM GAS  /tmp/ccYTX8hg.s 			page 12
+ARM GAS  /tmp/ccPSPGfg.s 			page 12
 
 
  617              		.loc 1 467 0
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  671 0014 7047     		bx	lr
  672              	.L53:
  673 0016 00BF     		.align	2
-ARM GAS  /tmp/ccYTX8hg.s 			page 13
+ARM GAS  /tmp/ccPSPGfg.s 			page 13
 
 
  674              	.L52:
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  728 0038 9980     		strh	r1, [r3, #4]	@ movhi
  729 003a 5A80     		strh	r2, [r3, #2]	@ movhi
  730              	.LVL51:
-ARM GAS  /tmp/ccYTX8hg.s 			page 14
+ARM GAS  /tmp/ccPSPGfg.s 			page 14
 
 
  731              		.loc 1 531 0
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  783 0020 0346     		movcs	r3, r0
  784              	.LVL59:
  785 0022 0133     		adds	r3, r3, #1
-ARM GAS  /tmp/ccYTX8hg.s 			page 15
+ARM GAS  /tmp/ccPSPGfg.s 			page 15
 
 
  786              	.LVL60:
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  840 006c 7047     		bx	lr
  841              	.L67:
  842 006e 00BF     		.align	2
-ARM GAS  /tmp/ccYTX8hg.s 			page 16
+ARM GAS  /tmp/ccPSPGfg.s 			page 16
 
 
  843              	.L66:
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  895 0022 0139     		subs	r1, r1, #1
  896 0024 0CF54053 		add	r3, ip, #12288
  897              		.loc 1 596 0
-ARM GAS  /tmp/ccYTX8hg.s 			page 17
+ARM GAS  /tmp/ccPSPGfg.s 			page 17
 
 
  898 0028 32F8020B 		ldrh	r0, [r2], #2
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  951              	.LFB58:
  952              		.loc 1 141 0
  953              		.cfi_startproc
-ARM GAS  /tmp/ccYTX8hg.s 			page 18
+ARM GAS  /tmp/ccPSPGfg.s 			page 18
 
 
  954              		@ args = 0, pretend = 0, frame = 0
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  1008              	.L82:
  1009              		.loc 1 168 0
  1010 003a 14F4805F 		tst	r4, #4096
-ARM GAS  /tmp/ccYTX8hg.s 			page 19
+ARM GAS  /tmp/ccPSPGfg.s 			page 19
 
 
  1011 003e 09D0     		beq	.L84
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  1065 0098 2146     		mov	r1, r4
  1066 009a 9047     		blx	r2
  1067              	.LVL80:
-ARM GAS  /tmp/ccYTX8hg.s 			page 20
+ARM GAS  /tmp/ccPSPGfg.s 			page 20
 
 
  1068              	.L92:
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  1122 00f6 D218     		adds	r2, r2, r3
  1123              		.loc 1 207 0
  1124 00f8 C018     		adds	r0, r0, r3
-ARM GAS  /tmp/ccYTX8hg.s 			page 21
+ARM GAS  /tmp/ccPSPGfg.s 			page 21
 
 
  1125              		.loc 1 208 0
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  1179 0156 BB69     		ldr	r3, [r7, #24]
  1180              		.loc 1 238 0
  1181 0158 E6B2     		uxtb	r6, r4
-ARM GAS  /tmp/ccYTX8hg.s 			page 22
+ARM GAS  /tmp/ccPSPGfg.s 			page 22
 
 
  1182              	.LVL91:
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  1236              		.loc 1 242 0
  1237 0192 5F60     		str	r7, [r3, #4]
  1238              		.loc 1 243 0
-ARM GAS  /tmp/ccYTX8hg.s 			page 23
+ARM GAS  /tmp/ccPSPGfg.s 			page 23
 
 
  1239 0194 D960     		str	r1, [r3, #12]
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  1293              		.loc 1 252 0
  1294 01f4 0121     		movs	r1, #1
  1295 01f6 11FA04F0 		lsls	r0, r1, r4
-ARM GAS  /tmp/ccYTX8hg.s 			page 24
+ARM GAS  /tmp/ccPSPGfg.s 			page 24
 
 
  1296 01fa BAF80EC0 		ldrh	ip, [sl, #14]
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  1350 024a E4E6     		b	.L80
  1351              	.L103:
  1352              		.align	2
-ARM GAS  /tmp/ccYTX8hg.s 			page 25
+ARM GAS  /tmp/ccPSPGfg.s 			page 25
 
 
  1353              	.L102:
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  1405              		.cfi_endproc
  1406              	.LFE71:
  1407              		.size	usb_lld_prepare_receive, .-usb_lld_prepare_receive
-ARM GAS  /tmp/ccYTX8hg.s 			page 26
+ARM GAS  /tmp/ccPSPGfg.s 			page 26
 
 
  1408 0028 AFF30080 		.section	.text.usb_lld_prepare_transmit,"ax",%progbits
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  1461              		.global	usb_lld_start_out
  1462              		.thumb
  1463              		.thumb_func
-ARM GAS  /tmp/ccYTX8hg.s 			page 27
+ARM GAS  /tmp/ccPSPGfg.s 			page 27
 
 
  1464              		.type	usb_lld_start_out, %function
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  1518 0018 005C0040 		.word	1073765376
  1519              		.cfi_endproc
  1520              	.LFE74:
-ARM GAS  /tmp/ccYTX8hg.s 			page 28
+ARM GAS  /tmp/ccPSPGfg.s 			page 28
 
 
  1521              		.size	usb_lld_start_in, .-usb_lld_start_in
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  1575 000e 80F01002 		eor	r2, r0, #16
  1576 0012 43F82120 		str	r2, [r3, r1, lsl #2]
  1577              		.loc 1 706 0
-ARM GAS  /tmp/ccYTX8hg.s 			page 29
+ARM GAS  /tmp/ccPSPGfg.s 			page 29
 
 
  1578 0016 7047     		bx	lr
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  1632              		.loc 1 734 0
  1633              		.cfi_startproc
  1634              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccYTX8hg.s 			page 30
+ARM GAS  /tmp/ccPSPGfg.s 			page 30
 
 
  1635              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  1684 0001 02       		.byte	2
  1685 0002 02       		.byte	2
  1686 0003 02       		.byte	2
-ARM GAS  /tmp/ccYTX8hg.s 			page 31
+ARM GAS  /tmp/ccPSPGfg.s 			page 31
 
 
  1687 0004 02       		.byte	2
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  1735 0010 12000000 		.4byte	.LFE57
  1736 0014 0200     		.2byte	0x2
  1737 0016 7D       		.byte	0x7d
-ARM GAS  /tmp/ccYTX8hg.s 			page 32
+ARM GAS  /tmp/ccPSPGfg.s 			page 32
 
 
  1738 0017 08       		.sleb128 8
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  1792 00a4 0100     		.2byte	0x1
  1793 00a6 50       		.byte	0x50
  1794 00a7 00000000 		.4byte	0x0
-ARM GAS  /tmp/ccYTX8hg.s 			page 33
+ARM GAS  /tmp/ccPSPGfg.s 			page 33
 
 
  1795 00ab 00000000 		.4byte	0x0
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  1849 013c 0100     		.2byte	0x1
  1850 013e 53       		.byte	0x53
  1851 013f 2A000000 		.4byte	.LVL13
-ARM GAS  /tmp/ccYTX8hg.s 			page 34
+ARM GAS  /tmp/ccPSPGfg.s 			page 34
 
 
  1852 0143 42000000 		.4byte	.LVL14
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  1906 01cb E6000000 		.4byte	.LVL26
  1907 01cf EB000000 		.4byte	.LVL27-1
  1908 01d3 0100     		.2byte	0x1
-ARM GAS  /tmp/ccYTX8hg.s 			page 35
+ARM GAS  /tmp/ccPSPGfg.s 			page 35
 
 
  1909 01d5 5C       		.byte	0x5c
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  1963 0263 0200     		.2byte	0x2
  1964 0265 32       		.byte	0x32
  1965 0266 9F       		.byte	0x9f
-ARM GAS  /tmp/ccYTX8hg.s 			page 36
+ARM GAS  /tmp/ccPSPGfg.s 			page 36
 
 
  1966 0267 14000000 		.4byte	.LVL35
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  2020 02f0 00000000 		.4byte	.LFB68
  2021 02f4 04000000 		.4byte	.LCFI5
  2022 02f8 0200     		.2byte	0x2
-ARM GAS  /tmp/ccYTX8hg.s 			page 37
+ARM GAS  /tmp/ccPSPGfg.s 			page 37
 
 
  2023 02fa 7D       		.byte	0x7d
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  2077 037f 44000000 		.4byte	.LFE68
  2078 0383 0300     		.2byte	0x3
  2079 0385 7C       		.byte	0x7c
-ARM GAS  /tmp/ccYTX8hg.s 			page 38
+ARM GAS  /tmp/ccPSPGfg.s 			page 38
 
 
  2080 0386 0C       		.sleb128 12
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  2134 040d 00000000 		.4byte	0x0
  2135 0411 00000000 		.4byte	0x0
  2136              	.LLST32:
-ARM GAS  /tmp/ccYTX8hg.s 			page 39
+ARM GAS  /tmp/ccPSPGfg.s 			page 39
 
 
  2137 0415 00000000 		.4byte	.LVL52
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  2189 0488 9F       		.byte	0x9f
  2190 0489 00000000 		.4byte	0x0
  2191 048d 00000000 		.4byte	0x0
-ARM GAS  /tmp/ccYTX8hg.s 			page 40
+ARM GAS  /tmp/ccPSPGfg.s 			page 40
 
 
  2192              	.LLST34:
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  2245 050e 00000000 		.4byte	0x0
  2246              	.LLST38:
  2247 0512 00000000 		.4byte	.LVL67
-ARM GAS  /tmp/ccYTX8hg.s 			page 41
+ARM GAS  /tmp/ccPSPGfg.s 			page 41
 
 
  2248 0516 14000000 		.4byte	.LVL69
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  2301 059b 04000000 		.4byte	.LCFI8
  2302 059f 0200     		.2byte	0x2
  2303 05a1 7D       		.byte	0x7d
-ARM GAS  /tmp/ccYTX8hg.s 			page 42
+ARM GAS  /tmp/ccPSPGfg.s 			page 42
 
 
  2304 05a2 00       		.sleb128 0
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  2358 0633 0100     		.2byte	0x1
  2359 0635 51       		.byte	0x51
  2360 0636 00000000 		.4byte	0x0
-ARM GAS  /tmp/ccYTX8hg.s 			page 43
+ARM GAS  /tmp/ccPSPGfg.s 			page 43
 
 
  2361 063a 00000000 		.4byte	0x0
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  2415 06c2 BA000000 		.4byte	.LVL85
  2416 06c6 1D010000 		.4byte	.LVL89-1
  2417 06ca 0700     		.2byte	0x7
-ARM GAS  /tmp/ccYTX8hg.s 			page 44
+ARM GAS  /tmp/ccPSPGfg.s 			page 44
 
 
  2418 06cc 78       		.byte	0x78
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  2472 0754 03       		.byte	0x3
  2473 0755 00000000 		.4byte	USBD1
  2474 0759 9F       		.byte	0x9f
-ARM GAS  /tmp/ccYTX8hg.s 			page 45
+ARM GAS  /tmp/ccPSPGfg.s 			page 45
 
 
  2475 075a 00000000 		.4byte	0x0
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  2529 07e1 16000000 		.4byte	.LVL106
  2530 07e5 28000000 		.4byte	.LFE71
  2531 07e9 0100     		.2byte	0x1
-ARM GAS  /tmp/ccYTX8hg.s 			page 46
+ARM GAS  /tmp/ccPSPGfg.s 			page 46
 
 
  2532 07eb 50       		.byte	0x50
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  2586 0877 00000000 		.4byte	0x0
  2587 087b 00000000 		.4byte	0x0
  2588              	.LLST65:
-ARM GAS  /tmp/ccYTX8hg.s 			page 47
+ARM GAS  /tmp/ccPSPGfg.s 			page 47
 
 
  2589 087f 00000000 		.4byte	.LVL120
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  2643 0048 696E7400 		.ascii	"int\000"
  2644 004c 02       		.uleb128 0x2
  2645 004d 04       		.byte	0x4
-ARM GAS  /tmp/ccYTX8hg.s 			page 48
+ARM GAS  /tmp/ccPSPGfg.s 			page 48
 
 
  2646 004e 07       		.byte	0x7
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  2700 00ba 06       		.uleb128 0x6
  2701 00bb A4000000 		.4byte	0xa4
  2702 00bf 07       		.uleb128 0x7
-ARM GAS  /tmp/ccYTX8hg.s 			page 49
+ARM GAS  /tmp/ccPSPGfg.s 			page 49
 
 
  2703 00c0 04       		.byte	0x4
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  2757 012d 0C       		.uleb128 0xc
  2758 012e 0D       		.uleb128 0xd
  2759 012f DB030000 		.4byte	.LASF18
-ARM GAS  /tmp/ccYTX8hg.s 			page 50
+ARM GAS  /tmp/ccPSPGfg.s 			page 50
 
 
  2760 0133 05       		.byte	0x5
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  2814 019a 06       		.byte	0x6
  2815 019b D2       		.byte	0xd2
  2816 019c A0010000 		.4byte	0x1a0
-ARM GAS  /tmp/ccYTX8hg.s 			page 51
+ARM GAS  /tmp/ccPSPGfg.s 			page 51
 
 
  2817 01a0 0F       		.uleb128 0xf
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  2871 0203 0D       		.uleb128 0xd
  2872 0204 07050000 		.4byte	.LASF30
  2873 0208 07       		.byte	0x7
-ARM GAS  /tmp/ccYTX8hg.s 			page 52
+ARM GAS  /tmp/ccPSPGfg.s 			page 52
 
 
  2874 0209 0F01     		.2byte	0x10f
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  2928 026d 22030000 		.4byte	.LASF37
  2929 0271 07       		.byte	0x7
  2930 0272 2B01     		.2byte	0x12b
-ARM GAS  /tmp/ccYTX8hg.s 			page 53
+ARM GAS  /tmp/ccPSPGfg.s 			page 53
 
 
  2931 0274 83000000 		.4byte	0x83
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  2985 02db 01       		.sleb128 1
  2986 02dc 12       		.uleb128 0x12
  2987 02dd 47000000 		.4byte	.LASF48
-ARM GAS  /tmp/ccYTX8hg.s 			page 54
+ARM GAS  /tmp/ccPSPGfg.s 			page 54
 
 
  2988 02e1 02       		.sleb128 2
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  3042 0347 12020000 		.4byte	.LASF61
  3043 034b 04       		.sleb128 4
  3044 034c 12       		.uleb128 0x12
-ARM GAS  /tmp/ccYTX8hg.s 			page 55
+ARM GAS  /tmp/ccPSPGfg.s 			page 55
 
 
  3045 034d 3A020000 		.4byte	.LASF62
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  3099 03bc 06       		.byte	0x6
  3100 03bd 2201     		.2byte	0x122
  3101 03bf C3030000 		.4byte	0x3c3
-ARM GAS  /tmp/ccYTX8hg.s 			page 56
+ARM GAS  /tmp/ccPSPGfg.s 			page 56
 
 
  3102 03c3 07       		.uleb128 0x7
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  3156 043b 14       		.uleb128 0x14
  3157 043c B1030000 		.4byte	0x3b1
  3158 0440 14       		.uleb128 0x14
-ARM GAS  /tmp/ccYTX8hg.s 			page 57
+ARM GAS  /tmp/ccPSPGfg.s 			page 57
 
 
  3159 0441 83000000 		.4byte	0x83
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  3213 04a7 23       		.byte	0x23
  3214 04a8 48       		.uleb128 0x48
  3215 04a9 10       		.uleb128 0x10
-ARM GAS  /tmp/ccYTX8hg.s 			page 58
+ARM GAS  /tmp/ccPSPGfg.s 			page 58
 
 
  3216 04aa 04060000 		.4byte	.LASF75
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  3270 050d 10       		.uleb128 0x10
  3271 050e 8F040000 		.4byte	.LASF81
  3272 0512 08       		.byte	0x8
-ARM GAS  /tmp/ccYTX8hg.s 			page 59
+ARM GAS  /tmp/ccPSPGfg.s 			page 59
 
 
  3273 0513 64       		.byte	0x64
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  3327 0573 23       		.byte	0x23
  3328 0574 08       		.uleb128 0x8
  3329 0575 00       		.byte	0x0
-ARM GAS  /tmp/ccYTX8hg.s 			page 60
+ARM GAS  /tmp/ccPSPGfg.s 			page 60
 
 
  3330 0576 05       		.uleb128 0x5
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  3384 05d6 15060000 		.4byte	.LASF94
  3385 05da 07       		.byte	0x7
  3386 05db 9F       		.byte	0x9f
-ARM GAS  /tmp/ccYTX8hg.s 			page 61
+ARM GAS  /tmp/ccPSPGfg.s 			page 61
 
 
  3387 05dc A4000000 		.4byte	0xa4
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  3441 063c 07       		.byte	0x7
  3442 063d D0       		.byte	0xd0
  3443 063e 4C060000 		.4byte	0x64c
-ARM GAS  /tmp/ccYTX8hg.s 			page 62
+ARM GAS  /tmp/ccPSPGfg.s 			page 62
 
 
  3444 0642 02       		.byte	0x2
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  3498 069f 10050000 		.4byte	.LASF107
  3499 06a3 07       		.byte	0x7
  3500 06a4 ED       		.byte	0xed
-ARM GAS  /tmp/ccYTX8hg.s 			page 63
+ARM GAS  /tmp/ccPSPGfg.s 			page 63
 
 
  3501 06a5 5D060000 		.4byte	0x65d
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  3555 0716 1C       		.uleb128 0x1c
  3556 0717 3E000000 		.4byte	.LASF146
  3557 071b 01       		.byte	0x1
-ARM GAS  /tmp/ccYTX8hg.s 			page 64
+ARM GAS  /tmp/ccPSPGfg.s 			page 64
 
 
  3558 071c 6E       		.byte	0x6e
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  3612 078c 657000   		.ascii	"ep\000"
  3613 078f 01       		.byte	0x1
  3614 0790 9002     		.2byte	0x290
-ARM GAS  /tmp/ccYTX8hg.s 			page 65
+ARM GAS  /tmp/ccPSPGfg.s 			page 65
 
 
  3615 0792 8B020000 		.4byte	0x28b
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  3669 0812 7E000000 		.4byte	.LLST4
  3670 0816 00       		.byte	0x0
  3671 0817 25       		.uleb128 0x25
-ARM GAS  /tmp/ccYTX8hg.s 			page 66
+ARM GAS  /tmp/ccPSPGfg.s 			page 66
 
 
  3672 0818 01       		.byte	0x1
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  3726 089e 01       		.byte	0x1
  3727 089f 8101     		.2byte	0x181
  3728 08a1 08090000 		.4byte	0x908
-ARM GAS  /tmp/ccYTX8hg.s 			page 67
+ARM GAS  /tmp/ccPSPGfg.s 			page 67
 
 
  3729 08a5 7E010000 		.4byte	.LLST11
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  3783 092d 01       		.byte	0x1
  3784 092e 5401     		.2byte	0x154
  3785 0930 B1030000 		.4byte	0x3b1
-ARM GAS  /tmp/ccYTX8hg.s 			page 68
+ARM GAS  /tmp/ccPSPGfg.s 			page 68
 
 
  3786 0934 29020000 		.4byte	.LLST16
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  3840 09b1 1C000000 		.4byte	.LFE66
  3841 09b5 02       		.byte	0x2
  3842 09b6 7D       		.byte	0x7d
-ARM GAS  /tmp/ccYTX8hg.s 			page 69
+ARM GAS  /tmp/ccPSPGfg.s 			page 69
 
 
  3843 09b7 00       		.sleb128 0
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  3897 0a36 01       		.byte	0x1
  3898 0a37 0702     		.2byte	0x207
  3899 0a39 B1030000 		.4byte	0x3b1
-ARM GAS  /tmp/ccYTX8hg.s 			page 70
+ARM GAS  /tmp/ccPSPGfg.s 			page 70
 
 
  3900 0a3d 10030000 		.4byte	.LLST23
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  3954 0ac7 01       		.byte	0x1
  3955 0ac8 2602     		.2byte	0x226
  3956 0aca 8B020000 		.4byte	0x28b
-ARM GAS  /tmp/ccYTX8hg.s 			page 71
+ARM GAS  /tmp/ccPSPGfg.s 			page 71
 
 
  3957 0ace 02040000 		.4byte	.LLST31
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  4011 0b54 12050000 		.4byte	.LLST38
  4012 0b58 26       		.uleb128 0x26
  4013 0b59 62756600 		.ascii	"buf\000"
-ARM GAS  /tmp/ccYTX8hg.s 			page 72
+ARM GAS  /tmp/ccPSPGfg.s 			page 72
 
 
  4014 0b5d 01       		.byte	0x1
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  4068 0bde 39       		.uleb128 0x39
  4069 0bdf 90000000 		.4byte	.Ldebug_ranges0+0x90
  4070 0be3 F70B0000 		.4byte	0xbf7
-ARM GAS  /tmp/ccYTX8hg.s 			page 73
+ARM GAS  /tmp/ccPSPGfg.s 			page 73
 
 
  4071 0be7 37       		.uleb128 0x37
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  4125 0c70 00       		.byte	0x0
  4126 0c71 00       		.byte	0x0
  4127 0c72 25       		.uleb128 0x25
-ARM GAS  /tmp/ccYTX8hg.s 			page 74
+ARM GAS  /tmp/ccPSPGfg.s 			page 74
 
 
  4128 0c73 01       		.byte	0x1
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  4182 0cf8 01       		.byte	0x1
  4183 0cf9 7C02     		.2byte	0x27c
  4184 0cfb B1030000 		.4byte	0x3b1
-ARM GAS  /tmp/ccYTX8hg.s 			page 75
+ARM GAS  /tmp/ccPSPGfg.s 			page 75
 
 
  4185 0cff 01       		.byte	0x1
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  4239 0d72 2A       		.uleb128 0x2a
  4240 0d73 58070000 		.4byte	0x758
  4241 0d77 46080000 		.4byte	.LLST62
-ARM GAS  /tmp/ccYTX8hg.s 			page 76
+ARM GAS  /tmp/ccPSPGfg.s 			page 76
 
 
  4242 0d7b 3F       		.uleb128 0x3f
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  4296 0dee 01       		.byte	0x1
  4297 0def 51       		.byte	0x51
  4298 0df0 00       		.byte	0x0
-ARM GAS  /tmp/ccYTX8hg.s 			page 77
+ARM GAS  /tmp/ccPSPGfg.s 			page 77
 
 
  4299 0df1 25       		.uleb128 0x25
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  4353 0e64 09       		.byte	0x9
  4354 0e65 9404     		.2byte	0x494
  4355 0e67 E5000000 		.4byte	0xe5
-ARM GAS  /tmp/ccYTX8hg.s 			page 78
+ARM GAS  /tmp/ccPSPGfg.s 			page 78
 
 
  4356 0e6b 01       		.byte	0x1
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  4410 000b 11       		.uleb128 0x11
  4411 000c 01       		.uleb128 0x1
  4412 000d 52       		.uleb128 0x52
-ARM GAS  /tmp/ccYTX8hg.s 			page 79
+ARM GAS  /tmp/ccPSPGfg.s 			page 79
 
 
  4413 000e 01       		.uleb128 0x1
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  4467 0044 00       		.byte	0x0
  4468 0045 00       		.byte	0x0
  4469 0046 07       		.uleb128 0x7
-ARM GAS  /tmp/ccYTX8hg.s 			page 80
+ARM GAS  /tmp/ccPSPGfg.s 			page 80
 
 
  4470 0047 0F       		.uleb128 0xf
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  4524 007d 05       		.uleb128 0x5
  4525 007e 49       		.uleb128 0x49
  4526 007f 13       		.uleb128 0x13
-ARM GAS  /tmp/ccYTX8hg.s 			page 81
+ARM GAS  /tmp/ccPSPGfg.s 			page 81
 
 
  4527 0080 38       		.uleb128 0x38
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  4581 00b6 3B       		.uleb128 0x3b
  4582 00b7 0B       		.uleb128 0xb
  4583 00b8 49       		.uleb128 0x49
-ARM GAS  /tmp/ccYTX8hg.s 			page 82
+ARM GAS  /tmp/ccPSPGfg.s 			page 82
 
 
  4584 00b9 13       		.uleb128 0x13
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  4638 00ef 16       		.uleb128 0x16
  4639 00f0 13       		.uleb128 0x13
  4640 00f1 01       		.byte	0x1
-ARM GAS  /tmp/ccYTX8hg.s 			page 83
+ARM GAS  /tmp/ccPSPGfg.s 			page 83
 
 
  4641 00f2 0B       		.uleb128 0xb
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  4695 0128 03       		.uleb128 0x3
  4696 0129 0E       		.uleb128 0xe
  4697 012a 3A       		.uleb128 0x3a
-ARM GAS  /tmp/ccYTX8hg.s 			page 84
+ARM GAS  /tmp/ccPSPGfg.s 			page 84
 
 
  4698 012b 0B       		.uleb128 0xb
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  4752 0161 00       		.byte	0x0
  4753 0162 00       		.byte	0x0
  4754 0163 1E       		.uleb128 0x1e
-ARM GAS  /tmp/ccYTX8hg.s 			page 85
+ARM GAS  /tmp/ccPSPGfg.s 			page 85
 
 
  4755 0164 2E       		.uleb128 0x2e
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  4809 019a 0B       		.uleb128 0xb
  4810 019b 27       		.uleb128 0x27
  4811 019c 0C       		.uleb128 0xc
-ARM GAS  /tmp/ccYTX8hg.s 			page 86
+ARM GAS  /tmp/ccPSPGfg.s 			page 86
 
 
  4812 019d 11       		.uleb128 0x11
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  4866 01d3 00       		.byte	0x0
  4867 01d4 03       		.uleb128 0x3
  4868 01d5 0E       		.uleb128 0xe
-ARM GAS  /tmp/ccYTX8hg.s 			page 87
+ARM GAS  /tmp/ccPSPGfg.s 			page 87
 
 
  4869 01d6 3A       		.uleb128 0x3a
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  4923 020c 0B       		.uleb128 0xb
  4924 020d 3B       		.uleb128 0x3b
  4925 020e 05       		.uleb128 0x5
-ARM GAS  /tmp/ccYTX8hg.s 			page 88
+ARM GAS  /tmp/ccPSPGfg.s 			page 88
 
 
  4926 020f 49       		.uleb128 0x49
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  4980 0245 2C       		.uleb128 0x2c
  4981 0246 34       		.uleb128 0x34
  4982 0247 00       		.byte	0x0
-ARM GAS  /tmp/ccYTX8hg.s 			page 89
+ARM GAS  /tmp/ccPSPGfg.s 			page 89
 
 
  4983 0248 31       		.uleb128 0x31
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5037 027e 13       		.uleb128 0x13
  5038 027f 11       		.uleb128 0x11
  5039 0280 01       		.uleb128 0x1
-ARM GAS  /tmp/ccYTX8hg.s 			page 90
+ARM GAS  /tmp/ccPSPGfg.s 			page 90
 
 
  5040 0281 12       		.uleb128 0x12
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5094 02b7 0E       		.uleb128 0xe
  5095 02b8 3A       		.uleb128 0x3a
  5096 02b9 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccYTX8hg.s 			page 91
+ARM GAS  /tmp/ccPSPGfg.s 			page 91
 
 
  5097 02ba 3B       		.uleb128 0x3b
@@ -5458,7 +5458,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5151 02f0 37       		.uleb128 0x37
  5152 02f1 34       		.uleb128 0x34
  5153 02f2 00       		.byte	0x0
-ARM GAS  /tmp/ccYTX8hg.s 			page 92
+ARM GAS  /tmp/ccPSPGfg.s 			page 92
 
 
  5154 02f3 03       		.uleb128 0x3
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5208 0329 1D       		.uleb128 0x1d
  5209 032a 01       		.byte	0x1
  5210 032b 31       		.uleb128 0x31
-ARM GAS  /tmp/ccYTX8hg.s 			page 93
+ARM GAS  /tmp/ccPSPGfg.s 			page 93
 
 
  5211 032c 13       		.uleb128 0x13
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5265 0362 00       		.byte	0x0
  5266 0363 00       		.byte	0x0
  5267 0364 3F       		.uleb128 0x3f
-ARM GAS  /tmp/ccYTX8hg.s 			page 94
+ARM GAS  /tmp/ccPSPGfg.s 			page 94
 
 
  5268 0365 05       		.uleb128 0x5
@@ -5638,7 +5638,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5319      6C6C645F 
  5319      696E6974 
  5319      00
-ARM GAS  /tmp/ccYTX8hg.s 			page 95
+ARM GAS  /tmp/ccPSPGfg.s 			page 95
 
 
  5320 002c C1070000 		.4byte	0x7c1
@@ -5698,7 +5698,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5339      72656164 
  5339      5F706163 
  5339      6B65745F 
-ARM GAS  /tmp/ccYTX8hg.s 			page 96
+ARM GAS  /tmp/ccPSPGfg.s 			page 96
 
 
  5340 011c 1F0B0000 		.4byte	0xb1f
@@ -5758,7 +5758,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5359      6C6C645F 
  5359      636C6561 
  5359      725F696E 
-ARM GAS  /tmp/ccYTX8hg.s 			page 97
+ARM GAS  /tmp/ccPSPGfg.s 			page 97
 
 
  5359      00
@@ -5818,7 +5818,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5391      7400
  5392 00b3 53030000 		.4byte	0x353
  5393 00b7 75736265 		.ascii	"usbevent_t\000"
-ARM GAS  /tmp/ccYTX8hg.s 			page 98
+ARM GAS  /tmp/ccPSPGfg.s 			page 98
 
 
  5393      76656E74 
@@ -5878,7 +5878,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5413      61746500 
  5414 0190 52060000 		.4byte	0x652
  5415 0194 55534245 		.ascii	"USBEndpointConfig\000"
-ARM GAS  /tmp/ccYTX8hg.s 			page 99
+ARM GAS  /tmp/ccPSPGfg.s 			page 99
 
 
  5415      6E64706F 
@@ -5938,7 +5938,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5462 0094 1C000000 		.4byte	.LFE73-.LFB73
  5463 0098 00000000 		.4byte	.LFB74
  5464 009c 1C000000 		.4byte	.LFE74-.LFB74
-ARM GAS  /tmp/ccYTX8hg.s 			page 100
+ARM GAS  /tmp/ccPSPGfg.s 			page 100
 
 
  5465 00a0 00000000 		.4byte	.LFB75
@@ -5998,7 +5998,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5519 00a8 78000000 		.4byte	.LBB35
  5520 00ac 9E000000 		.4byte	.LBE35
  5521 00b0 CA010000 		.4byte	.LBB47
-ARM GAS  /tmp/ccYTX8hg.s 			page 101
+ARM GAS  /tmp/ccPSPGfg.s 			page 101
 
 
  5522 00b4 14020000 		.4byte	.LBE47
@@ -6058,7 +6058,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5576 018c 1C000000 		.4byte	.LFE76
  5577 0190 00000000 		.4byte	.LFB77
  5578 0194 2C000000 		.4byte	.LFE77
-ARM GAS  /tmp/ccYTX8hg.s 			page 102
+ARM GAS  /tmp/ccPSPGfg.s 			page 102
 
 
  5579 0198 00000000 		.4byte	.LFB78
@@ -6118,7 +6118,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5608              	.LASF123:
  5609 0087 7573625F 		.ascii	"usb_lld_get_status_out\000"
  5609      6C6C645F 
-ARM GAS  /tmp/ccYTX8hg.s 			page 103
+ARM GAS  /tmp/ccPSPGfg.s 			page 103
 
 
  5609      6765745F 
@@ -6178,7 +6178,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5633      6720696E 
  5633      7400
  5634              	.LASF0:
-ARM GAS  /tmp/ccYTX8hg.s 			page 104
+ARM GAS  /tmp/ccPSPGfg.s 			page 104
 
 
  5635 0132 7369676E 		.ascii	"signed char\000"
@@ -6238,7 +6238,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5659      5F7400
  5660              	.LASF73:
  5661 01cc 434E5452 		.ascii	"CNTR\000"
-ARM GAS  /tmp/ccYTX8hg.s 			page 105
+ARM GAS  /tmp/ccPSPGfg.s 			page 105
 
 
  5661      00
@@ -6298,7 +6298,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5684              	.LASF44:
  5685 026c 5553425F 		.ascii	"USB_ACTIVE\000"
  5685      41435449 
-ARM GAS  /tmp/ccYTX8hg.s 			page 106
+ARM GAS  /tmp/ccPSPGfg.s 			page 106
 
 
  5685      564500
@@ -6358,7 +6358,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5711      6E7400
  5712              	.LASF103:
  5713 0319 6576656E 		.ascii	"event_cb\000"
-ARM GAS  /tmp/ccYTX8hg.s 			page 107
+ARM GAS  /tmp/ccPSPGfg.s 			page 107
 
 
  5713      745F6362 
@@ -6418,7 +6418,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5739      6500
  5740              	.LASF27:
  5741 03ab 70617261 		.ascii	"param\000"
-ARM GAS  /tmp/ccYTX8hg.s 			page 108
+ARM GAS  /tmp/ccPSPGfg.s 			page 108
 
 
  5741      6D00
@@ -6478,7 +6478,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5765 044b 5553425F 		.ascii	"USB_READY\000"
  5765      52454144 
  5765      5900
-ARM GAS  /tmp/ccYTX8hg.s 			page 109
+ARM GAS  /tmp/ccPSPGfg.s 			page 109
 
 
  5766              	.LASF32:
@@ -6538,7 +6538,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5793 04e3 7573625F 		.ascii	"usb_lld_stall_out\000"
  5793      6C6C645F 
  5793      7374616C 
-ARM GAS  /tmp/ccYTX8hg.s 			page 110
+ARM GAS  /tmp/ccPSPGfg.s 			page 110
 
 
  5793      6C5F6F75 
@@ -6598,7 +6598,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5818              	.LASF120:
  5819 0580 7573625F 		.ascii	"usb_lld_reset\000"
  5819      6C6C645F 
-ARM GAS  /tmp/ccYTX8hg.s 			page 111
+ARM GAS  /tmp/ccPSPGfg.s 			page 111
 
 
  5819      72657365 
@@ -6658,7 +6658,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5846      7063616C 
  5846      6C626163 
  5846      6B5F7400 
-ARM GAS  /tmp/ccYTX8hg.s 			page 112
+ARM GAS  /tmp/ccPSPGfg.s 			page 112
 
 
  5847              	.LASF88:
@@ -6718,7 +6718,7 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5872 06e3 7573625F 		.ascii	"usb_lld_init_endpoint\000"
  5872      6C6C645F 
  5872      696E6974 
-ARM GAS  /tmp/ccYTX8hg.s 			page 113
+ARM GAS  /tmp/ccPSPGfg.s 			page 113
 
 
  5872      5F656E64 
@@ -6743,106 +6743,106 @@ ARM GAS  /tmp/ccYTX8hg.s 			page 1
  5880      6C5F696E 
  5880      00
  5881              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  /tmp/ccYTX8hg.s 			page 114
+ARM GAS  /tmp/ccPSPGfg.s 			page 114
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usb_lld.c
-     /tmp/ccYTX8hg.s:24     .text.Vector8C:00000000 $t
-     /tmp/ccYTX8hg.s:30     .text.Vector8C:00000000 Vector8C
-     /tmp/ccYTX8hg.s:54     .text.usb_lld_init:00000000 $t
-     /tmp/ccYTX8hg.s:60     .text.usb_lld_init:00000000 usb_lld_init
-     /tmp/ccYTX8hg.s:75     .text.usb_lld_init:00000008 $d
-     /tmp/ccYTX8hg.s:80     .text.usb_lld_start:00000000 $t
-     /tmp/ccYTX8hg.s:86     .text.usb_lld_start:00000000 usb_lld_start
-     /tmp/ccYTX8hg.s:152    .text.usb_lld_start:00000040 $d
-     /tmp/ccYTX8hg.s:159    .text.usb_lld_stop:00000000 $t
-     /tmp/ccYTX8hg.s:165    .text.usb_lld_stop:00000000 usb_lld_stop
-     /tmp/ccYTX8hg.s:212    .text.usb_lld_stop:00000030 $d
-     /tmp/ccYTX8hg.s:219    .text.usb_lld_set_address:00000000 $t
-     /tmp/ccYTX8hg.s:225    .text.usb_lld_set_address:00000000 usb_lld_set_address
-     /tmp/ccYTX8hg.s:244    .text.usb_lld_set_address:00000010 $d
-     /tmp/ccYTX8hg.s:249    .text.usb_lld_init_endpoint:00000000 $t
-     /tmp/ccYTX8hg.s:255    .text.usb_lld_init_endpoint:00000000 usb_lld_init_endpoint
-     /tmp/ccYTX8hg.s:451    .text.usb_lld_init_endpoint:000000f4 $d
-     /tmp/ccYTX8hg.s:460    .text.usb_lld_reset:00000000 $t
-     /tmp/ccYTX8hg.s:466    .text.usb_lld_reset:00000000 usb_lld_reset
-     /tmp/ccYTX8hg.s:523    .text.usb_lld_reset:00000030 $d
-     /tmp/ccYTX8hg.s:529    .text.usb_lld_disable_endpoints:00000000 $t
-     /tmp/ccYTX8hg.s:535    .text.usb_lld_disable_endpoints:00000000 usb_lld_disable_endpoints
-     /tmp/ccYTX8hg.s:604    .text.usb_lld_disable_endpoints:00000034 $d
-     /tmp/ccYTX8hg.s:609    .text.usb_lld_get_status_out:00000000 $t
-     /tmp/ccYTX8hg.s:615    .text.usb_lld_get_status_out:00000000 usb_lld_get_status_out
-     /tmp/ccYTX8hg.s:640    .text.usb_lld_get_status_out:00000018 $d
-     /tmp/ccYTX8hg.s:645    .text.usb_lld_get_status_in:00000000 $t
-     /tmp/ccYTX8hg.s:651    .text.usb_lld_get_status_in:00000000 usb_lld_get_status_in
-     /tmp/ccYTX8hg.s:675    .text.usb_lld_get_status_in:00000018 $d
-     /tmp/ccYTX8hg.s:681    .text.usb_lld_read_setup:00000000 $t
-     /tmp/ccYTX8hg.s:687    .text.usb_lld_read_setup:00000000 usb_lld_read_setup
-     /tmp/ccYTX8hg.s:737    .text.usb_lld_read_setup:00000040 $d
-     /tmp/ccYTX8hg.s:742    .text.usb_lld_read_packet_buffer:00000000 $t
-     /tmp/ccYTX8hg.s:748    .text.usb_lld_read_packet_buffer:00000000 usb_lld_read_packet_buffer
-     /tmp/ccYTX8hg.s:844    .text.usb_lld_read_packet_buffer:00000070 $d
-     /tmp/ccYTX8hg.s:849    .text.usb_lld_write_packet_buffer:00000000 $t
-     /tmp/ccYTX8hg.s:855    .text.usb_lld_write_packet_buffer:00000000 usb_lld_write_packet_buffer
-     /tmp/ccYTX8hg.s:939    .text.usb_lld_write_packet_buffer:00000064 $d
-     /tmp/ccYTX8hg.s:944    .text.Vector90:00000000 $t
-     /tmp/ccYTX8hg.s:950    .text.Vector90:00000000 Vector90
-     /tmp/ccYTX8hg.s:1354   .text.Vector90:0000024c $d
-     /tmp/ccYTX8hg.s:1360   .text.usb_lld_prepare_receive:00000000 $t
-     /tmp/ccYTX8hg.s:1366   .text.usb_lld_prepare_receive:00000000 usb_lld_prepare_receive
-     /tmp/ccYTX8hg.s:1409   .text.usb_lld_prepare_transmit:00000000 $t
-     /tmp/ccYTX8hg.s:1415   .text.usb_lld_prepare_transmit:00000000 usb_lld_prepare_transmit
-     /tmp/ccYTX8hg.s:1459   .text.usb_lld_start_out:00000000 $t
-     /tmp/ccYTX8hg.s:1465   .text.usb_lld_start_out:00000000 usb_lld_start_out
-     /tmp/ccYTX8hg.s:1486   .text.usb_lld_start_out:00000018 $d
-     /tmp/ccYTX8hg.s:1491   .text.usb_lld_start_in:00000000 $t
-     /tmp/ccYTX8hg.s:1497   .text.usb_lld_start_in:00000000 usb_lld_start_in
-     /tmp/ccYTX8hg.s:1518   .text.usb_lld_start_in:00000018 $d
-     /tmp/ccYTX8hg.s:1523   .text.usb_lld_stall_out:00000000 $t
-     /tmp/ccYTX8hg.s:1529   .text.usb_lld_stall_out:00000000 usb_lld_stall_out
-     /tmp/ccYTX8hg.s:1550   .text.usb_lld_stall_out:00000018 $d
-     /tmp/ccYTX8hg.s:1555   .text.usb_lld_stall_in:00000000 $t
-ARM GAS  /tmp/ccYTX8hg.s 			page 115
+     /tmp/ccPSPGfg.s:24     .text.Vector8C:00000000 $t
+     /tmp/ccPSPGfg.s:30     .text.Vector8C:00000000 Vector8C
+     /tmp/ccPSPGfg.s:54     .text.usb_lld_init:00000000 $t
+     /tmp/ccPSPGfg.s:60     .text.usb_lld_init:00000000 usb_lld_init
+     /tmp/ccPSPGfg.s:75     .text.usb_lld_init:00000008 $d
+     /tmp/ccPSPGfg.s:80     .text.usb_lld_start:00000000 $t
+     /tmp/ccPSPGfg.s:86     .text.usb_lld_start:00000000 usb_lld_start
+     /tmp/ccPSPGfg.s:152    .text.usb_lld_start:00000040 $d
+     /tmp/ccPSPGfg.s:159    .text.usb_lld_stop:00000000 $t
+     /tmp/ccPSPGfg.s:165    .text.usb_lld_stop:00000000 usb_lld_stop
+     /tmp/ccPSPGfg.s:212    .text.usb_lld_stop:00000030 $d
+     /tmp/ccPSPGfg.s:219    .text.usb_lld_set_address:00000000 $t
+     /tmp/ccPSPGfg.s:225    .text.usb_lld_set_address:00000000 usb_lld_set_address
+     /tmp/ccPSPGfg.s:244    .text.usb_lld_set_address:00000010 $d
+     /tmp/ccPSPGfg.s:249    .text.usb_lld_init_endpoint:00000000 $t
+     /tmp/ccPSPGfg.s:255    .text.usb_lld_init_endpoint:00000000 usb_lld_init_endpoint
+     /tmp/ccPSPGfg.s:451    .text.usb_lld_init_endpoint:000000f4 $d
+     /tmp/ccPSPGfg.s:460    .text.usb_lld_reset:00000000 $t
+     /tmp/ccPSPGfg.s:466    .text.usb_lld_reset:00000000 usb_lld_reset
+     /tmp/ccPSPGfg.s:523    .text.usb_lld_reset:00000030 $d
+     /tmp/ccPSPGfg.s:529    .text.usb_lld_disable_endpoints:00000000 $t
+     /tmp/ccPSPGfg.s:535    .text.usb_lld_disable_endpoints:00000000 usb_lld_disable_endpoints
+     /tmp/ccPSPGfg.s:604    .text.usb_lld_disable_endpoints:00000034 $d
+     /tmp/ccPSPGfg.s:609    .text.usb_lld_get_status_out:00000000 $t
+     /tmp/ccPSPGfg.s:615    .text.usb_lld_get_status_out:00000000 usb_lld_get_status_out
+     /tmp/ccPSPGfg.s:640    .text.usb_lld_get_status_out:00000018 $d
+     /tmp/ccPSPGfg.s:645    .text.usb_lld_get_status_in:00000000 $t
+     /tmp/ccPSPGfg.s:651    .text.usb_lld_get_status_in:00000000 usb_lld_get_status_in
+     /tmp/ccPSPGfg.s:675    .text.usb_lld_get_status_in:00000018 $d
+     /tmp/ccPSPGfg.s:681    .text.usb_lld_read_setup:00000000 $t
+     /tmp/ccPSPGfg.s:687    .text.usb_lld_read_setup:00000000 usb_lld_read_setup
+     /tmp/ccPSPGfg.s:737    .text.usb_lld_read_setup:00000040 $d
+     /tmp/ccPSPGfg.s:742    .text.usb_lld_read_packet_buffer:00000000 $t
+     /tmp/ccPSPGfg.s:748    .text.usb_lld_read_packet_buffer:00000000 usb_lld_read_packet_buffer
+     /tmp/ccPSPGfg.s:844    .text.usb_lld_read_packet_buffer:00000070 $d
+     /tmp/ccPSPGfg.s:849    .text.usb_lld_write_packet_buffer:00000000 $t
+     /tmp/ccPSPGfg.s:855    .text.usb_lld_write_packet_buffer:00000000 usb_lld_write_packet_buffer
+     /tmp/ccPSPGfg.s:939    .text.usb_lld_write_packet_buffer:00000064 $d
+     /tmp/ccPSPGfg.s:944    .text.Vector90:00000000 $t
+     /tmp/ccPSPGfg.s:950    .text.Vector90:00000000 Vector90
+     /tmp/ccPSPGfg.s:1354   .text.Vector90:0000024c $d
+     /tmp/ccPSPGfg.s:1360   .text.usb_lld_prepare_receive:00000000 $t
+     /tmp/ccPSPGfg.s:1366   .text.usb_lld_prepare_receive:00000000 usb_lld_prepare_receive
+     /tmp/ccPSPGfg.s:1409   .text.usb_lld_prepare_transmit:00000000 $t
+     /tmp/ccPSPGfg.s:1415   .text.usb_lld_prepare_transmit:00000000 usb_lld_prepare_transmit
+     /tmp/ccPSPGfg.s:1459   .text.usb_lld_start_out:00000000 $t
+     /tmp/ccPSPGfg.s:1465   .text.usb_lld_start_out:00000000 usb_lld_start_out
+     /tmp/ccPSPGfg.s:1486   .text.usb_lld_start_out:00000018 $d
+     /tmp/ccPSPGfg.s:1491   .text.usb_lld_start_in:00000000 $t
+     /tmp/ccPSPGfg.s:1497   .text.usb_lld_start_in:00000000 usb_lld_start_in
+     /tmp/ccPSPGfg.s:1518   .text.usb_lld_start_in:00000018 $d
+     /tmp/ccPSPGfg.s:1523   .text.usb_lld_stall_out:00000000 $t
+     /tmp/ccPSPGfg.s:1529   .text.usb_lld_stall_out:00000000 usb_lld_stall_out
+     /tmp/ccPSPGfg.s:1550   .text.usb_lld_stall_out:00000018 $d
+     /tmp/ccPSPGfg.s:1555   .text.usb_lld_stall_in:00000000 $t
+ARM GAS  /tmp/ccPSPGfg.s 			page 115
 
 
-     /tmp/ccYTX8hg.s:1561   .text.usb_lld_stall_in:00000000 usb_lld_stall_in
-     /tmp/ccYTX8hg.s:1582   .text.usb_lld_stall_in:00000018 $d
-     /tmp/ccYTX8hg.s:1587   .text.usb_lld_clear_out:00000000 $t
-     /tmp/ccYTX8hg.s:1593   .text.usb_lld_clear_out:00000000 usb_lld_clear_out
-     /tmp/ccYTX8hg.s:1619   .text.usb_lld_clear_out:00000028 $d
-     /tmp/ccYTX8hg.s:1624   .text.usb_lld_clear_in:00000000 $t
-     /tmp/ccYTX8hg.s:1630   .text.usb_lld_clear_in:00000000 usb_lld_clear_in
-     /tmp/ccYTX8hg.s:1656   .text.usb_lld_clear_in:00000024 $d
-     /tmp/ccYTX8hg.s:1675   .bss.USBD1:00000000 USBD1
-     /tmp/ccYTX8hg.s:1662   .rodata.CSWTCH.7:00000000 $d
-     /tmp/ccYTX8hg.s:1666   .rodata.CSWTCH.7:00000000 CSWTCH.7
-     /tmp/ccYTX8hg.s:1671   .bss.USBD1:00000000 $d
-     /tmp/ccYTX8hg.s:1678   .rodata.CSWTCH.10:00000000 $d
-     /tmp/ccYTX8hg.s:1682   .rodata.CSWTCH.10:00000000 CSWTCH.10
-     /tmp/ccYTX8hg.s:1701   .rodata.str1.4:00000000 $d
-     /tmp/ccYTX8hg.s:1705   .rodata.ep0config:00000000 $d
-     /tmp/ccYTX8hg.s:1709   .rodata.ep0config:00000000 ep0config
-     /tmp/ccYTX8hg.s:1722   .bss.ep0_state:00000000 ep0_state
-     /tmp/ccYTX8hg.s:1719   .bss.ep0_state:00000000 $d
+     /tmp/ccPSPGfg.s:1561   .text.usb_lld_stall_in:00000000 usb_lld_stall_in
+     /tmp/ccPSPGfg.s:1582   .text.usb_lld_stall_in:00000018 $d
+     /tmp/ccPSPGfg.s:1587   .text.usb_lld_clear_out:00000000 $t
+     /tmp/ccPSPGfg.s:1593   .text.usb_lld_clear_out:00000000 usb_lld_clear_out
+     /tmp/ccPSPGfg.s:1619   .text.usb_lld_clear_out:00000028 $d
+     /tmp/ccPSPGfg.s:1624   .text.usb_lld_clear_in:00000000 $t
+     /tmp/ccPSPGfg.s:1630   .text.usb_lld_clear_in:00000000 usb_lld_clear_in
+     /tmp/ccPSPGfg.s:1656   .text.usb_lld_clear_in:00000024 $d
+     /tmp/ccPSPGfg.s:1675   .bss.USBD1:00000000 USBD1
+     /tmp/ccPSPGfg.s:1662   .rodata.CSWTCH.7:00000000 $d
+     /tmp/ccPSPGfg.s:1666   .rodata.CSWTCH.7:00000000 CSWTCH.7
+     /tmp/ccPSPGfg.s:1671   .bss.USBD1:00000000 $d
+     /tmp/ccPSPGfg.s:1678   .rodata.CSWTCH.10:00000000 $d
+     /tmp/ccPSPGfg.s:1682   .rodata.CSWTCH.10:00000000 CSWTCH.10
+     /tmp/ccPSPGfg.s:1701   .rodata.str1.4:00000000 $d
+     /tmp/ccPSPGfg.s:1705   .rodata.ep0config:00000000 $d
+     /tmp/ccPSPGfg.s:1709   .rodata.ep0config:00000000 ep0config
+     /tmp/ccPSPGfg.s:1722   .bss.ep0_state:00000000 ep0_state
+     /tmp/ccPSPGfg.s:1719   .bss.ep0_state:00000000 $d
                      .debug_frame:00000010 $d
-     /tmp/ccYTX8hg.s:79     .text.usb_lld_init:0000000c $t
-     /tmp/ccYTX8hg.s:158    .text.usb_lld_start:0000004c $t
-     /tmp/ccYTX8hg.s:218    .text.usb_lld_stop:0000003c $t
-     /tmp/ccYTX8hg.s:248    .text.usb_lld_set_address:00000014 $t
-     /tmp/ccYTX8hg.s:528    .text.usb_lld_reset:00000038 $t
-     /tmp/ccYTX8hg.s:608    .text.usb_lld_disable_endpoints:00000038 $t
-     /tmp/ccYTX8hg.s:644    .text.usb_lld_get_status_out:0000001c $t
-     /tmp/ccYTX8hg.s:741    .text.usb_lld_read_setup:00000044 $t
-     /tmp/ccYTX8hg.s:848    .text.usb_lld_read_packet_buffer:00000074 $t
-     /tmp/ccYTX8hg.s:943    .text.usb_lld_write_packet_buffer:00000068 $t
-     /tmp/ccYTX8hg.s:1359   .text.Vector90:00000254 $t
-     /tmp/ccYTX8hg.s:1490   .text.usb_lld_start_out:0000001c $t
-     /tmp/ccYTX8hg.s:1522   .text.usb_lld_start_in:0000001c $t
-     /tmp/ccYTX8hg.s:1554   .text.usb_lld_stall_out:0000001c $t
-     /tmp/ccYTX8hg.s:1586   .text.usb_lld_stall_in:0000001c $t
-     /tmp/ccYTX8hg.s:1623   .text.usb_lld_clear_out:0000002c $t
-     /tmp/ccYTX8hg.s:1661   .text.usb_lld_clear_in:00000028 $t
+     /tmp/ccPSPGfg.s:79     .text.usb_lld_init:0000000c $t
+     /tmp/ccPSPGfg.s:158    .text.usb_lld_start:0000004c $t
+     /tmp/ccPSPGfg.s:218    .text.usb_lld_stop:0000003c $t
+     /tmp/ccPSPGfg.s:248    .text.usb_lld_set_address:00000014 $t
+     /tmp/ccPSPGfg.s:528    .text.usb_lld_reset:00000038 $t
+     /tmp/ccPSPGfg.s:608    .text.usb_lld_disable_endpoints:00000038 $t
+     /tmp/ccPSPGfg.s:644    .text.usb_lld_get_status_out:0000001c $t
+     /tmp/ccPSPGfg.s:741    .text.usb_lld_read_setup:00000044 $t
+     /tmp/ccPSPGfg.s:848    .text.usb_lld_read_packet_buffer:00000074 $t
+     /tmp/ccPSPGfg.s:943    .text.usb_lld_write_packet_buffer:00000068 $t
+     /tmp/ccPSPGfg.s:1359   .text.Vector90:00000254 $t
+     /tmp/ccPSPGfg.s:1490   .text.usb_lld_start_out:0000001c $t
+     /tmp/ccPSPGfg.s:1522   .text.usb_lld_start_in:0000001c $t
+     /tmp/ccPSPGfg.s:1554   .text.usb_lld_stall_out:0000001c $t
+     /tmp/ccPSPGfg.s:1586   .text.usb_lld_stall_in:0000001c $t
+     /tmp/ccPSPGfg.s:1623   .text.usb_lld_clear_out:0000002c $t
+     /tmp/ccPSPGfg.s:1661   .text.usb_lld_clear_in:00000028 $t
 
 UNDEFINED SYMBOLS
 dbg_check_enter_isr

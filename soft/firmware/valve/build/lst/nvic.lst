@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc7kAIl4.s 			page 1
+ARM GAS  /tmp/ccROlEZm.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
   51 000a 13FA06F2 		lsls	r2, r3, r6
   52              		.loc 1 50 0
   53 000e 00F01F04 		and	r4, r0, #31
-ARM GAS  /tmp/cc7kAIl4.s 			page 2
+ARM GAS  /tmp/ccROlEZm.s 			page 2
 
 
   54              		.loc 1 49 0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  106              		.cfi_def_cfa_offset 4
  107              		.loc 1 63 0
  108 0002 00F01F02 		and	r2, r0, #31
-ARM GAS  /tmp/cc7kAIl4.s 			page 3
+ARM GAS  /tmp/ccROlEZm.s 			page 3
 
 
  109 0006 0124     		movs	r4, #1
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  162              		.cfi_def_cfa_offset 4
  163              		.loc 1 78 0
  164 0006 FF23     		movs	r3, #255
-ARM GAS  /tmp/cc7kAIl4.s 			page 4
+ARM GAS  /tmp/ccROlEZm.s 			page 4
 
 
  165              		.loc 1 75 0
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  219 0037 14000000 		.4byte	.LVL1
  220 003b 0100     		.2byte	0x1
  221 003d 51       		.byte	0x51
-ARM GAS  /tmp/cc7kAIl4.s 			page 5
+ARM GAS  /tmp/ccROlEZm.s 			page 5
 
 
  222 003e 00000000 		.4byte	0x0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  276 00b7 06000000 		.4byte	.LCFI2
  277 00bb 30000000 		.4byte	.LFE2
  278 00bf 0200     		.2byte	0x2
-ARM GAS  /tmp/cc7kAIl4.s 			page 6
+ARM GAS  /tmp/ccROlEZm.s 			page 6
 
 
  279 00c1 7D       		.byte	0x7d
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  333 0033 CE000000 		.4byte	.LASF0
  334 0037 03       		.uleb128 0x3
  335 0038 01       		.byte	0x1
-ARM GAS  /tmp/cc7kAIl4.s 			page 7
+ARM GAS  /tmp/ccROlEZm.s 			page 7
 
 
  336 0039 06       		.byte	0x6
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  390 009d 6F010000 		.4byte	0x16f
  391 00a1 02       		.byte	0x2
  392 00a2 23       		.byte	0x23
-ARM GAS  /tmp/cc7kAIl4.s 			page 8
+ARM GAS  /tmp/ccROlEZm.s 			page 8
 
 
  393 00a3 20       		.uleb128 0x20
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  447 0109 03       		.byte	0x3
  448 010a 23       		.byte	0x23
  449 010b 8004     		.uleb128 0x200
-ARM GAS  /tmp/cc7kAIl4.s 			page 9
+ARM GAS  /tmp/ccROlEZm.s 			page 9
 
 
  450 010d 07       		.uleb128 0x7
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  504 017a 5F010000 		.4byte	0x15f
  505 017e 05       		.uleb128 0x5
  506 017f 4A010000 		.4byte	0x14a
-ARM GAS  /tmp/cc7kAIl4.s 			page 10
+ARM GAS  /tmp/ccROlEZm.s 			page 10
 
 
  507 0183 05       		.uleb128 0x5
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  561 01f9 FC000000 		.4byte	.LASF24
  562 01fd 02       		.byte	0x2
  563 01fe 8B       		.byte	0x8b
-ARM GAS  /tmp/cc7kAIl4.s 			page 11
+ARM GAS  /tmp/ccROlEZm.s 			page 11
 
 
  564 01ff 7A000000 		.4byte	0x7a
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  618 025f 02       		.byte	0x2
  619 0260 92       		.byte	0x92
  620 0261 7A000000 		.4byte	0x7a
-ARM GAS  /tmp/cc7kAIl4.s 			page 12
+ARM GAS  /tmp/ccROlEZm.s 			page 12
 
 
  621 0265 02       		.byte	0x2
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  675 02c2 99       		.byte	0x99
  676 02c3 7A000000 		.4byte	0x7a
  677 02c7 02       		.byte	0x2
-ARM GAS  /tmp/cc7kAIl4.s 			page 13
+ARM GAS  /tmp/ccROlEZm.s 			page 13
 
 
  678 02c8 23       		.byte	0x23
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  732 032c 37030000 		.4byte	0x337
  733 0330 0A       		.uleb128 0xa
  734 0331 30000000 		.4byte	0x30
-ARM GAS  /tmp/cc7kAIl4.s 			page 14
+ARM GAS  /tmp/ccROlEZm.s 			page 14
 
 
  735 0335 01       		.byte	0x1
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  789 03ae 33000000 		.4byte	.LLST2
  790 03b2 10       		.uleb128 0x10
  791 03b3 736800   		.ascii	"sh\000"
-ARM GAS  /tmp/cc7kAIl4.s 			page 15
+ARM GAS  /tmp/ccROlEZm.s 			page 15
 
 
  792 03b6 01       		.byte	0x1
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  846 0433 F1000000 		.4byte	.LLST10
  847 0437 00       		.byte	0x0
  848 0438 00       		.byte	0x0
-ARM GAS  /tmp/cc7kAIl4.s 			page 16
+ARM GAS  /tmp/ccROlEZm.s 			page 16
 
 
  849              		.section	.debug_abbrev
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  903 0035 13       		.uleb128 0x13
  904 0036 00       		.byte	0x0
  905 0037 00       		.byte	0x0
-ARM GAS  /tmp/cc7kAIl4.s 			page 17
+ARM GAS  /tmp/ccROlEZm.s 			page 17
 
 
  906 0038 05       		.uleb128 0x5
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  960 006e 13       		.uleb128 0x13
  961 006f 01       		.uleb128 0x1
  962 0070 13       		.uleb128 0x13
-ARM GAS  /tmp/cc7kAIl4.s 			page 18
+ARM GAS  /tmp/ccROlEZm.s 			page 18
 
 
  963 0071 00       		.byte	0x0
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  1017 00a7 00       		.byte	0x0
  1018 00a8 00       		.byte	0x0
  1019 00a9 0E       		.uleb128 0xe
-ARM GAS  /tmp/cc7kAIl4.s 			page 19
+ARM GAS  /tmp/ccROlEZm.s 			page 19
 
 
  1020 00aa 05       		.uleb128 0x5
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  1074 00e0 0B       		.uleb128 0xb
  1075 00e1 27       		.uleb128 0x27
  1076 00e2 0C       		.uleb128 0xc
-ARM GAS  /tmp/cc7kAIl4.s 			page 20
+ARM GAS  /tmp/ccROlEZm.s 			page 20
 
 
  1077 00e3 11       		.uleb128 0x11
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  1114 000a 04       		.byte	0x4
  1115 000b 00       		.byte	0x0
  1116 000c 0000     		.2byte	0x0
-ARM GAS  /tmp/cc7kAIl4.s 			page 21
+ARM GAS  /tmp/ccROlEZm.s 			page 21
 
 
  1117 000e 0000     		.2byte	0x0
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  1156 0048 756E7573 		.ascii	"unused1\000"
  1156      65643100 
  1157              	.LASF12:
-ARM GAS  /tmp/cc7kAIl4.s 			page 22
+ARM GAS  /tmp/ccROlEZm.s 			page 22
 
 
  1158 0050 756E7573 		.ascii	"unused2\000"
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  1187              	.LASF13:
  1188 00db 49535052 		.ascii	"ISPR\000"
  1188      00
-ARM GAS  /tmp/cc7kAIl4.s 			page 23
+ARM GAS  /tmp/ccROlEZm.s 			page 23
 
 
  1189              	.LASF31:
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  1218 0199 75696E74 		.ascii	"uint32_t\000"
  1218      33325F74 
  1218      00
-ARM GAS  /tmp/cc7kAIl4.s 			page 24
+ARM GAS  /tmp/ccROlEZm.s 			page 24
 
 
  1219              	.LASF5:
@@ -1408,22 +1408,22 @@ ARM GAS  /tmp/cc7kAIl4.s 			page 1
  1230      63746F72 
  1230      00
  1231              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  /tmp/cc7kAIl4.s 			page 25
+ARM GAS  /tmp/ccROlEZm.s 			page 25
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 nvic.c
-     /tmp/cc7kAIl4.s:24     .text.nvicEnableVector:00000000 $t
-     /tmp/cc7kAIl4.s:30     .text.nvicEnableVector:00000000 nvicEnableVector
-     /tmp/cc7kAIl4.s:85     .text.nvicEnableVector:00000040 $d
-     /tmp/cc7kAIl4.s:90     .text.nvicDisableVector:00000000 $t
-     /tmp/cc7kAIl4.s:96     .text.nvicDisableVector:00000000 nvicDisableVector
-     /tmp/cc7kAIl4.s:138    .text.nvicDisableVector:00000034 $d
-     /tmp/cc7kAIl4.s:143    .text.nvicSetSystemHandlerPriority:00000000 $t
-     /tmp/cc7kAIl4.s:149    .text.nvicSetSystemHandlerPriority:00000000 nvicSetSystemHandlerPriority
-     /tmp/cc7kAIl4.s:189    .text.nvicSetSystemHandlerPriority:0000002c $d
+     /tmp/ccROlEZm.s:24     .text.nvicEnableVector:00000000 $t
+     /tmp/ccROlEZm.s:30     .text.nvicEnableVector:00000000 nvicEnableVector
+     /tmp/ccROlEZm.s:85     .text.nvicEnableVector:00000040 $d
+     /tmp/ccROlEZm.s:90     .text.nvicDisableVector:00000000 $t
+     /tmp/ccROlEZm.s:96     .text.nvicDisableVector:00000000 nvicDisableVector
+     /tmp/ccROlEZm.s:138    .text.nvicDisableVector:00000034 $d
+     /tmp/ccROlEZm.s:143    .text.nvicSetSystemHandlerPriority:00000000 $t
+     /tmp/ccROlEZm.s:149    .text.nvicSetSystemHandlerPriority:00000000 nvicSetSystemHandlerPriority
+     /tmp/ccROlEZm.s:189    .text.nvicSetSystemHandlerPriority:0000002c $d
                      .debug_frame:00000010 $d
-     /tmp/cc7kAIl4.s:89     .text.nvicEnableVector:00000044 $t
-     /tmp/cc7kAIl4.s:142    .text.nvicDisableVector:00000038 $t
+     /tmp/ccROlEZm.s:89     .text.nvicEnableVector:00000044 $t
+     /tmp/ccROlEZm.s:142    .text.nvicDisableVector:00000038 $t
 
 NO UNDEFINED SYMBOLS

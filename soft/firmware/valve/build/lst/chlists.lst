@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccE5kNsk.s 			page 1
+ARM GAS  /tmp/cchwYhKR.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
   51 000a 9442     		cmp	r4, r2
   52 000c 09D3     		bcc	.L6
   53              	.L3:
-ARM GAS  /tmp/ccE5kNsk.s 			page 2
+ARM GAS  /tmp/cchwYhKR.s 			page 2
 
 
   54              		.loc 1 57 0 discriminator 1
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  106 0006 4860     		str	r0, [r1, #4]
  107 0008 1860     		str	r0, [r3, #0]
  108              		.loc 1 79 0
-ARM GAS  /tmp/ccE5kNsk.s 			page 3
+ARM GAS  /tmp/cchwYhKR.s 			page 3
 
 
  109 000a 7047     		bx	lr
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  163 0004 4268     		ldr	r2, [r0, #4]
  164 0006 5A60     		str	r2, [r3, #4]
  165 0008 1360     		str	r3, [r2, #0]
-ARM GAS  /tmp/ccE5kNsk.s 			page 4
+ARM GAS  /tmp/cchwYhKR.s 			page 4
 
 
  166              		.loc 1 113 0
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  220              		.cfi_endproc
  221              	.LFE5:
  222              		.size	list_insert, .-list_insert
-ARM GAS  /tmp/ccE5kNsk.s 			page 5
+ARM GAS  /tmp/cchwYhKR.s 			page 5
 
 
  223 0008 AFF30080 		.section	.text.list_remove,"ax",%progbits
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  275 0033 0100     		.2byte	0x1
  276 0035 51       		.byte	0x51
  277 0036 00000000 		.4byte	0x0
-ARM GAS  /tmp/ccE5kNsk.s 			page 6
+ARM GAS  /tmp/cchwYhKR.s 			page 6
 
 
  278 003a 00000000 		.4byte	0x0
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  332              		.file 3 "../chibios_2.4.x/os/ports/GCC/ARMCMx/chtypes.h"
  333              		.file 4 "../chibios_2.4.x/os/kernel/include/chlists.h"
  334              		.file 5 "../chibios_2.4.x/os/kernel/include/chthreads.h"
-ARM GAS  /tmp/ccE5kNsk.s 			page 7
+ARM GAS  /tmp/cchwYhKR.s 			page 7
 
 
  335              		.file 6 "../chibios_2.4.x/os/ports/GCC/ARMCMx/chcore_v7m.h"
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  389 0070 04       		.uleb128 0x4
  390 0071 F0010000 		.4byte	.LASF8
  391 0075 02       		.byte	0x2
-ARM GAS  /tmp/ccE5kNsk.s 			page 8
+ARM GAS  /tmp/cchwYhKR.s 			page 8
 
 
  392 0076 50       		.byte	0x50
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  446 00e8 04       		.uleb128 0x4
  447 00e9 DE010000 		.4byte	.LASF20
  448 00ed 04       		.byte	0x4
-ARM GAS  /tmp/ccE5kNsk.s 			page 9
+ARM GAS  /tmp/cchwYhKR.s 			page 9
 
 
  449 00ee 2A       		.byte	0x2a
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  503 0151 23       		.byte	0x23
  504 0152 14       		.uleb128 0x14
  505 0153 06       		.uleb128 0x6
-ARM GAS  /tmp/ccE5kNsk.s 			page 10
+ARM GAS  /tmp/cchwYhKR.s 			page 10
 
 
  506 0154 6D020000 		.4byte	.LASF27
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  560 01b4 28       		.uleb128 0x28
  561 01b5 06       		.uleb128 0x6
  562 01b6 AB020000 		.4byte	.LASF33
-ARM GAS  /tmp/ccE5kNsk.s 			page 11
+ARM GAS  /tmp/cchwYhKR.s 			page 11
 
 
  563 01ba 05       		.byte	0x5
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  617 0217 00       		.byte	0x0
  618 0218 08       		.uleb128 0x8
  619 0219 08       		.byte	0x8
-ARM GAS  /tmp/ccE5kNsk.s 			page 12
+ARM GAS  /tmp/cchwYhKR.s 			page 12
 
 
  620 021a 04       		.byte	0x4
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  674 027d 04       		.uleb128 0x4
  675 027e 4B010000 		.4byte	.LASF43
  676 0282 06       		.byte	0x6
-ARM GAS  /tmp/ccE5kNsk.s 			page 13
+ARM GAS  /tmp/cchwYhKR.s 			page 13
 
 
  677 0283 DD       		.byte	0xdd
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  731 02e6 23       		.byte	0x23
  732 02e7 14       		.uleb128 0x14
  733 02e8 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccE5kNsk.s 			page 14
+ARM GAS  /tmp/cchwYhKR.s 			page 14
 
 
  734 02e9 72313000 		.ascii	"r10\000"
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  788 0350 43020000 		.4byte	0x243
  789 0354 02       		.byte	0x2
  790 0355 23       		.byte	0x23
-ARM GAS  /tmp/ccE5kNsk.s 			page 15
+ARM GAS  /tmp/cchwYhKR.s 			page 15
 
 
  791 0356 00       		.uleb128 0x0
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  845 03bc C0030000 		.4byte	0x3c0
  846 03c0 10       		.uleb128 0x10
  847 03c1 C5030000 		.4byte	0x3c5
-ARM GAS  /tmp/ccE5kNsk.s 			page 16
+ARM GAS  /tmp/cchwYhKR.s 			page 16
 
 
  848 03c5 03       		.uleb128 0x3
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  902 0435 53040000 		.4byte	0x453
  903 0439 12       		.uleb128 0x12
  904 043a 747000   		.ascii	"tp\000"
-ARM GAS  /tmp/ccE5kNsk.s 			page 17
+ARM GAS  /tmp/cchwYhKR.s 			page 17
 
 
  905 043d 01       		.byte	0x1
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  959 04a8 13       		.uleb128 0x13
  960 04a9 74717000 		.ascii	"tqp\000"
  961 04ad 01       		.byte	0x1
-ARM GAS  /tmp/ccE5kNsk.s 			page 18
+ARM GAS  /tmp/cchwYhKR.s 			page 18
 
 
  962 04ae 6C       		.byte	0x6c
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  1016 0517 01       		.byte	0x1
  1017 0518 8C       		.byte	0x8c
  1018 0519 20050000 		.4byte	0x520
-ARM GAS  /tmp/ccE5kNsk.s 			page 19
+ARM GAS  /tmp/cchwYhKR.s 			page 19
 
 
  1019 051d 01       		.byte	0x1
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  1073 0013 00       		.byte	0x0
  1074 0014 00       		.byte	0x0
  1075 0015 02       		.uleb128 0x2
-ARM GAS  /tmp/ccE5kNsk.s 			page 20
+ARM GAS  /tmp/cchwYhKR.s 			page 20
 
 
  1076 0016 24       		.uleb128 0x24
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  1130 004c 3A       		.uleb128 0x3a
  1131 004d 0B       		.uleb128 0xb
  1132 004e 3B       		.uleb128 0x3b
-ARM GAS  /tmp/ccE5kNsk.s 			page 21
+ARM GAS  /tmp/cchwYhKR.s 			page 21
 
 
  1133 004f 0B       		.uleb128 0xb
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  1187 0085 03       		.uleb128 0x3
  1188 0086 08       		.uleb128 0x8
  1189 0087 3A       		.uleb128 0x3a
-ARM GAS  /tmp/ccE5kNsk.s 			page 22
+ARM GAS  /tmp/cchwYhKR.s 			page 22
 
 
  1190 0088 0B       		.uleb128 0xb
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  1244 00be 13       		.uleb128 0x13
  1245 00bf 00       		.byte	0x0
  1246 00c0 00       		.byte	0x0
-ARM GAS  /tmp/ccE5kNsk.s 			page 23
+ARM GAS  /tmp/cchwYhKR.s 			page 23
 
 
  1247 00c1 10       		.uleb128 0x10
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  1301 00f7 49       		.uleb128 0x49
  1302 00f8 13       		.uleb128 0x13
  1303 00f9 02       		.uleb128 0x2
-ARM GAS  /tmp/ccE5kNsk.s 			page 24
+ARM GAS  /tmp/cchwYhKR.s 			page 24
 
 
  1304 00fa 06       		.uleb128 0x6
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  1358 0130 49       		.uleb128 0x49
  1359 0131 13       		.uleb128 0x13
  1360 0132 11       		.uleb128 0x11
-ARM GAS  /tmp/ccE5kNsk.s 			page 25
+ARM GAS  /tmp/cchwYhKR.s 			page 25
 
 
  1361 0133 01       		.uleb128 0x1
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  1415 0012 7072696F 		.ascii	"prio_insert\000"
  1415      5F696E73 
  1415      65727400 
-ARM GAS  /tmp/ccE5kNsk.s 			page 26
+ARM GAS  /tmp/cchwYhKR.s 			page 26
 
 
  1416 001e 21040000 		.4byte	0x421
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  1448 0065 BC000000 		.4byte	0xbc
  1449 0069 74707269 		.ascii	"tprio_t\000"
  1449      6F5F7400 
-ARM GAS  /tmp/ccE5kNsk.s 			page 27
+ARM GAS  /tmp/cchwYhKR.s 			page 27
 
 
  1450 0071 C7000000 		.4byte	0xc7
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  1484 000e 0000     		.2byte	0x0
  1485 0010 00000000 		.4byte	.LFB0
  1486 0014 26000000 		.4byte	.LFE0-.LFB0
-ARM GAS  /tmp/ccE5kNsk.s 			page 28
+ARM GAS  /tmp/cchwYhKR.s 			page 28
 
 
  1487 0018 00000000 		.4byte	.LFB1
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  1530              	.LASF51:
  1531 003a 65786974 		.ascii	"exitcode\000"
  1531      636F6465 
-ARM GAS  /tmp/ccE5kNsk.s 			page 29
+ARM GAS  /tmp/cchwYhKR.s 			page 29
 
 
  1531      00
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  1559 00e6 6C6F6E67 		.ascii	"long unsigned int\000"
  1559      20756E73 
  1559      69676E65 
-ARM GAS  /tmp/ccE5kNsk.s 			page 30
+ARM GAS  /tmp/cchwYhKR.s 			page 30
 
 
  1559      6420696E 
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  1588              	.LASF22:
  1589 0187 705F7072 		.ascii	"p_prev\000"
  1589      657600
-ARM GAS  /tmp/ccE5kNsk.s 			page 31
+ARM GAS  /tmp/cchwYhKR.s 			page 31
 
 
  1590              	.LASF16:
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  1621      696D655F 
  1621      7400
  1622              	.LASF38:
-ARM GAS  /tmp/ccE5kNsk.s 			page 32
+ARM GAS  /tmp/cchwYhKR.s 			page 32
 
 
  1623 021b 705F7265 		.ascii	"p_realprio\000"
@@ -1911,25 +1911,25 @@ ARM GAS  /tmp/ccE5kNsk.s 			page 1
  1649      6974696E 
  1649      6700
  1650              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  /tmp/ccE5kNsk.s 			page 33
+ARM GAS  /tmp/cchwYhKR.s 			page 33
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chlists.c
-     /tmp/ccE5kNsk.s:24     .text.prio_insert:00000000 $t
-     /tmp/ccE5kNsk.s:30     .text.prio_insert:00000000 prio_insert
-     /tmp/ccE5kNsk.s:85     .text.queue_insert:00000000 $t
-     /tmp/ccE5kNsk.s:91     .text.queue_insert:00000000 queue_insert
-     /tmp/ccE5kNsk.s:114    .text.fifo_remove:00000000 $t
-     /tmp/ccE5kNsk.s:120    .text.fifo_remove:00000000 fifo_remove
-     /tmp/ccE5kNsk.s:143    .text.lifo_remove:00000000 $t
-     /tmp/ccE5kNsk.s:149    .text.lifo_remove:00000000 lifo_remove
-     /tmp/ccE5kNsk.s:172    .text.dequeue:00000000 $t
-     /tmp/ccE5kNsk.s:178    .text.dequeue:00000000 dequeue
-     /tmp/ccE5kNsk.s:199    .text.list_insert:00000000 $t
-     /tmp/ccE5kNsk.s:205    .text.list_insert:00000000 list_insert
-     /tmp/ccE5kNsk.s:224    .text.list_remove:00000000 $t
-     /tmp/ccE5kNsk.s:230    .text.list_remove:00000000 list_remove
+     /tmp/cchwYhKR.s:24     .text.prio_insert:00000000 $t
+     /tmp/cchwYhKR.s:30     .text.prio_insert:00000000 prio_insert
+     /tmp/cchwYhKR.s:85     .text.queue_insert:00000000 $t
+     /tmp/cchwYhKR.s:91     .text.queue_insert:00000000 queue_insert
+     /tmp/cchwYhKR.s:114    .text.fifo_remove:00000000 $t
+     /tmp/cchwYhKR.s:120    .text.fifo_remove:00000000 fifo_remove
+     /tmp/cchwYhKR.s:143    .text.lifo_remove:00000000 $t
+     /tmp/cchwYhKR.s:149    .text.lifo_remove:00000000 lifo_remove
+     /tmp/cchwYhKR.s:172    .text.dequeue:00000000 $t
+     /tmp/cchwYhKR.s:178    .text.dequeue:00000000 dequeue
+     /tmp/cchwYhKR.s:199    .text.list_insert:00000000 $t
+     /tmp/cchwYhKR.s:205    .text.list_insert:00000000 list_insert
+     /tmp/cchwYhKR.s:224    .text.list_remove:00000000 $t
+     /tmp/cchwYhKR.s:230    .text.list_remove:00000000 list_remove
                      .debug_frame:00000010 $d
 
 NO UNDEFINED SYMBOLS

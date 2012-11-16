@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cckhZTot.s 			page 1
+ARM GAS  /tmp/ccHnYpyY.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
   51              		.loc 1 55 0
   52 0010 7047     		bx	lr
   53              	.L3:
-ARM GAS  /tmp/cckhZTot.s 			page 2
+ARM GAS  /tmp/ccHnYpyY.s 			page 2
 
 
   54 0012 00BF     		.align	2
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  107              		.loc 1 87 0
  108 001c 9A68     		ldr	r2, [r3, #8]
  109 001e 9542     		cmp	r5, r2
-ARM GAS  /tmp/cckhZTot.s 			page 3
+ARM GAS  /tmp/ccHnYpyY.s 			page 3
 
 
  110 0020 04D9     		bls	.L7
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  162              		.global	chVTResetI
  163              		.thumb
  164              		.thumb_func
-ARM GAS  /tmp/cckhZTot.s 			page 4
+ARM GAS  /tmp/ccHnYpyY.s 			page 4
 
 
  165              		.type	chVTResetI, %function
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  219 0032 EAE7     		b	.L16
  220              	.L20:
  221              		.loc 1 111 0 discriminator 1
-ARM GAS  /tmp/cckhZTot.s 			page 5
+ARM GAS  /tmp/ccHnYpyY.s 			page 5
 
 
  222 0034 0348     		ldr	r0, .L21+8
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  275 001a 0120     		movs	r0, #1
  276              	.LVL14:
  277              		.loc 1 140 0 is_stmt 1
-ARM GAS  /tmp/cckhZTot.s 			page 6
+ARM GAS  /tmp/ccHnYpyY.s 			page 6
 
 
  278 001c 7047     		bx	lr
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  318 000a 7D       		.byte	0x7d
  319 000b 00       		.sleb128 0
  320 000c 02000000 		.4byte	.LCFI0
-ARM GAS  /tmp/cckhZTot.s 			page 7
+ARM GAS  /tmp/ccHnYpyY.s 			page 7
 
 
  321 0010 54000000 		.4byte	.LFE1
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  375 00a0 0D000000 		.4byte	.LVL1-1
  376 00a4 0100     		.2byte	0x1
  377 00a6 53       		.byte	0x53
-ARM GAS  /tmp/cckhZTot.s 			page 8
+ARM GAS  /tmp/ccHnYpyY.s 			page 8
 
 
  378 00a7 0D000000 		.4byte	.LVL1-1
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  432 013a 50       		.byte	0x50
  433 013b 1E000000 		.4byte	.LVL15
  434 013f 20000000 		.4byte	.LVL16
-ARM GAS  /tmp/cckhZTot.s 			page 9
+ARM GAS  /tmp/ccHnYpyY.s 			page 9
 
 
  435 0143 0100     		.2byte	0x1
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  489 0065 04       		.uleb128 0x4
  490 0066 64010000 		.4byte	.LASF7
  491 006a 02       		.byte	0x2
-ARM GAS  /tmp/cckhZTot.s 			page 10
+ARM GAS  /tmp/ccHnYpyY.s 			page 10
 
 
  492 006b 50       		.byte	0x50
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  546 00d7 60       		.byte	0x60
  547 00d8 18010000 		.4byte	0x118
  548 00dc 02       		.byte	0x2
-ARM GAS  /tmp/cckhZTot.s 			page 11
+ARM GAS  /tmp/ccHnYpyY.s 			page 11
 
 
  549 00dd 23       		.byte	0x23
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  603 013a 74       		.byte	0x74
  604 013b 18010000 		.4byte	0x118
  605 013f 02       		.byte	0x2
-ARM GAS  /tmp/cckhZTot.s 			page 12
+ARM GAS  /tmp/ccHnYpyY.s 			page 12
 
 
  606 0140 23       		.byte	0x23
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  660 01a9 4D       		.byte	0x4d
  661 01aa 18010000 		.4byte	0x118
  662 01ae 20000000 		.4byte	.LLST1
-ARM GAS  /tmp/cckhZTot.s 			page 13
+ARM GAS  /tmp/ccHnYpyY.s 			page 13
 
 
  663 01b2 10       		.uleb128 0x10
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  717 022e 60020000 		.4byte	0x260
  718 0232 10       		.uleb128 0x10
  719 0233 1F000000 		.4byte	.LASF27
-ARM GAS  /tmp/cckhZTot.s 			page 14
+ARM GAS  /tmp/ccHnYpyY.s 			page 14
 
 
  720 0237 01       		.byte	0x1
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  774 0010 06       		.uleb128 0x6
  775 0011 10       		.uleb128 0x10
  776 0012 06       		.uleb128 0x6
-ARM GAS  /tmp/cckhZTot.s 			page 15
+ARM GAS  /tmp/ccHnYpyY.s 			page 15
 
 
  777 0013 00       		.byte	0x0
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  831 0049 15       		.uleb128 0x15
  832 004a 01       		.byte	0x1
  833 004b 27       		.uleb128 0x27
-ARM GAS  /tmp/cckhZTot.s 			page 16
+ARM GAS  /tmp/ccHnYpyY.s 			page 16
 
 
  834 004c 0C       		.uleb128 0xc
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  888 0082 00       		.byte	0x0
  889 0083 0C       		.uleb128 0xc
  890 0084 35       		.uleb128 0x35
-ARM GAS  /tmp/cckhZTot.s 			page 17
+ARM GAS  /tmp/ccHnYpyY.s 			page 17
 
 
  891 0085 00       		.byte	0x0
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  945 00bb 3A       		.uleb128 0x3a
  946 00bc 0B       		.uleb128 0xb
  947 00bd 3B       		.uleb128 0x3b
-ARM GAS  /tmp/cckhZTot.s 			page 18
+ARM GAS  /tmp/ccHnYpyY.s 			page 18
 
 
  948 00be 0B       		.uleb128 0xb
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  1002 00f4 12       		.uleb128 0x12
  1003 00f5 01       		.uleb128 0x1
  1004 00f6 40       		.uleb128 0x40
-ARM GAS  /tmp/cckhZTot.s 			page 19
+ARM GAS  /tmp/ccHnYpyY.s 			page 19
 
 
  1005 00f7 0A       		.uleb128 0xa
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  1059 012d 00       		.byte	0x0
  1060 012e 03       		.uleb128 0x3
  1061 012f 0E       		.uleb128 0xe
-ARM GAS  /tmp/cckhZTot.s 			page 20
+ARM GAS  /tmp/ccHnYpyY.s 			page 20
 
 
  1062 0130 3A       		.uleb128 0x3a
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  1102 0032 90000000 		.4byte	0x90
  1103 0036 73797374 		.ascii	"systime_t\000"
  1103      696D655F 
-ARM GAS  /tmp/cckhZTot.s 			page 21
+ARM GAS  /tmp/ccHnYpyY.s 			page 21
 
 
  1103      7400
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  1146              	.LASF29:
  1147 0009 474E5520 		.ascii	"GNU C 4.5.2\000"
  1147      4320342E 
-ARM GAS  /tmp/cckhZTot.s 			page 22
+ARM GAS  /tmp/ccHnYpyY.s 			page 22
 
 
  1147      352E3200 
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  1171      20696E74 
  1171      00
  1172              	.LASF10:
-ARM GAS  /tmp/cckhZTot.s 			page 23
+ARM GAS  /tmp/ccHnYpyY.s 			page 23
 
 
  1173 00bb 6C6F6E67 		.ascii	"long long unsigned int\000"
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  1201      33325F74 
  1201      00
  1202              	.LASF5:
-ARM GAS  /tmp/cckhZTot.s 			page 24
+ARM GAS  /tmp/ccHnYpyY.s 			page 24
 
 
  1203 016d 6C6F6E67 		.ascii	"long int\000"
@@ -1399,31 +1399,31 @@ ARM GAS  /tmp/cckhZTot.s 			page 1
  1211      52657365 
  1211      744900
  1212              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  /tmp/cckhZTot.s 			page 25
+ARM GAS  /tmp/ccHnYpyY.s 			page 25
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chvt.c
-     /tmp/cckhZTot.s:24     .text._vt_init:00000000 $t
-     /tmp/cckhZTot.s:30     .text._vt_init:00000000 _vt_init
-     /tmp/cckhZTot.s:56     .text._vt_init:00000014 $d
-     /tmp/cckhZTot.s:61     .text.chVTSetI:00000000 $t
-     /tmp/cckhZTot.s:67     .text.chVTSetI:00000000 chVTSetI
-     /tmp/cckhZTot.s:154    .text.chVTSetI:0000004c $d
-     /tmp/cckhZTot.s:160    .text.chVTResetI:00000000 $t
-     /tmp/cckhZTot.s:166    .text.chVTResetI:00000000 chVTResetI
-     /tmp/cckhZTot.s:228    .text.chVTResetI:0000003c $d
-     /tmp/cckhZTot.s:235    .text.chTimeIsWithin:00000000 $t
-     /tmp/cckhZTot.s:241    .text.chTimeIsWithin:00000000 chTimeIsWithin
-     /tmp/cckhZTot.s:288    .text.chTimeIsWithin:00000024 $d
-     /tmp/cckhZTot.s:298    .bss.vtlist:00000000 vtlist
-     /tmp/cckhZTot.s:294    .bss.vtlist:00000000 $d
-     /tmp/cckhZTot.s:301    .rodata.str1.4:00000000 $d
+     /tmp/ccHnYpyY.s:24     .text._vt_init:00000000 $t
+     /tmp/ccHnYpyY.s:30     .text._vt_init:00000000 _vt_init
+     /tmp/ccHnYpyY.s:56     .text._vt_init:00000014 $d
+     /tmp/ccHnYpyY.s:61     .text.chVTSetI:00000000 $t
+     /tmp/ccHnYpyY.s:67     .text.chVTSetI:00000000 chVTSetI
+     /tmp/ccHnYpyY.s:154    .text.chVTSetI:0000004c $d
+     /tmp/ccHnYpyY.s:160    .text.chVTResetI:00000000 $t
+     /tmp/ccHnYpyY.s:166    .text.chVTResetI:00000000 chVTResetI
+     /tmp/ccHnYpyY.s:228    .text.chVTResetI:0000003c $d
+     /tmp/ccHnYpyY.s:235    .text.chTimeIsWithin:00000000 $t
+     /tmp/ccHnYpyY.s:241    .text.chTimeIsWithin:00000000 chTimeIsWithin
+     /tmp/ccHnYpyY.s:288    .text.chTimeIsWithin:00000024 $d
+     /tmp/ccHnYpyY.s:298    .bss.vtlist:00000000 vtlist
+     /tmp/ccHnYpyY.s:294    .bss.vtlist:00000000 $d
+     /tmp/ccHnYpyY.s:301    .rodata.str1.4:00000000 $d
                      .debug_frame:00000010 $d
-     /tmp/cckhZTot.s:60     .text._vt_init:00000018 $t
-     /tmp/cckhZTot.s:159    .text.chVTSetI:00000054 $t
-     /tmp/cckhZTot.s:234    .text.chVTResetI:00000048 $t
-     /tmp/cckhZTot.s:293    .text.chTimeIsWithin:00000028 $t
+     /tmp/ccHnYpyY.s:60     .text._vt_init:00000018 $t
+     /tmp/ccHnYpyY.s:159    .text.chVTSetI:00000054 $t
+     /tmp/ccHnYpyY.s:234    .text.chVTResetI:00000048 $t
+     /tmp/ccHnYpyY.s:293    .text.chTimeIsWithin:00000028 $t
 
 UNDEFINED SYMBOLS
 chDbgCheckClassI

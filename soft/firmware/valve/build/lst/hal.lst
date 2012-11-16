@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc05pEvX.s 			page 1
+ARM GAS  /tmp/ccYYGBVt.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
   51              		.loc 1 91 0
   52 0014 FFF7FEFF 		bl	i2cInit
   53              		.loc 1 100 0
-ARM GAS  /tmp/cc05pEvX.s 			page 2
+ARM GAS  /tmp/ccYYGBVt.s 			page 2
 
 
   54 0018 FFF7FEFF 		bl	pwmInit
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  108 0016 8342     		cmp	r3, r0
  109 0018 F8D3     		bcc	.L9
  110              		.loc 1 177 0
-ARM GAS  /tmp/cc05pEvX.s 			page 3
+ARM GAS  /tmp/ccYYGBVt.s 			page 3
 
 
  111 001a 0120     		movs	r0, #1
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  164              	.L14:
  165 0012 8B42     		cmp	r3, r1
  166 0014 F7D9     		bls	.L19
-ARM GAS  /tmp/cc05pEvX.s 			page 4
+ARM GAS  /tmp/ccYYGBVt.s 			page 4
 
 
  167              		.loc 1 178 0 is_stmt 1
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  220 0051 0100     		.2byte	0x1
  221 0053 50       		.byte	0x50
  222 0054 00000000 		.4byte	0x0
-ARM GAS  /tmp/cc05pEvX.s 			page 5
+ARM GAS  /tmp/ccYYGBVt.s 			page 5
 
 
  223 0058 00000000 		.4byte	0x0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  277 0065 04       		.uleb128 0x4
  278 0066 AD010000 		.4byte	.LASF7
  279 006a 02       		.byte	0x2
-ARM GAS  /tmp/cc05pEvX.s 			page 6
+ARM GAS  /tmp/ccYYGBVt.s 			page 6
 
 
  280 006b 50       		.byte	0x50
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  334 00d3 90000000 		.4byte	0x90
  335 00d7 02       		.byte	0x2
  336 00d8 23       		.byte	0x23
-ARM GAS  /tmp/cc05pEvX.s 			page 7
+ARM GAS  /tmp/ccYYGBVt.s 			page 7
 
 
  337 00d9 0C       		.uleb128 0xc
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  391 013e 6D010000 		.4byte	0x16d
  392 0142 0A       		.uleb128 0xa
  393 0143 6F647200 		.ascii	"odr\000"
-ARM GAS  /tmp/cc05pEvX.s 			page 8
+ARM GAS  /tmp/ccYYGBVt.s 			page 8
 
 
  394 0147 06       		.byte	0x6
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  448 01a7 02       		.byte	0x2
  449 01a8 23       		.byte	0x23
  450 01a9 18       		.uleb128 0x18
-ARM GAS  /tmp/cc05pEvX.s 			page 9
+ARM GAS  /tmp/ccYYGBVt.s 			page 9
 
 
  451 01aa 0B       		.uleb128 0xb
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  505 0213 30000000 		.4byte	.LFE55
  506 0217 00000000 		.4byte	.LLST0
  507 021b 11       		.uleb128 0x11
-ARM GAS  /tmp/cc05pEvX.s 			page 10
+ARM GAS  /tmp/ccYYGBVt.s 			page 10
 
 
  508 021c D2010000 		.4byte	0x1d2
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  562 0291 28000000 		.4byte	.LBE4
  563 0295 01       		.byte	0x1
  564 0296 C4       		.byte	0xc4
-ARM GAS  /tmp/cc05pEvX.s 			page 11
+ARM GAS  /tmp/ccYYGBVt.s 			page 11
 
 
  565 0297 13       		.uleb128 0x13
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  619 0004 0E       		.uleb128 0xe
  620 0005 13       		.uleb128 0x13
  621 0006 0B       		.uleb128 0xb
-ARM GAS  /tmp/cc05pEvX.s 			page 12
+ARM GAS  /tmp/ccYYGBVt.s 			page 12
 
 
  622 0007 03       		.uleb128 0x3
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  676 003d 00       		.byte	0x0
  677 003e 00       		.byte	0x0
  678 003f 06       		.uleb128 0x6
-ARM GAS  /tmp/cc05pEvX.s 			page 13
+ARM GAS  /tmp/ccYYGBVt.s 			page 13
 
 
  679 0040 13       		.uleb128 0x13
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  733 0076 0D       		.uleb128 0xd
  734 0077 00       		.byte	0x0
  735 0078 03       		.uleb128 0x3
-ARM GAS  /tmp/cc05pEvX.s 			page 14
+ARM GAS  /tmp/ccYYGBVt.s 			page 14
 
 
  736 0079 08       		.uleb128 0x8
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  790 00af 3B       		.uleb128 0x3b
  791 00b0 0B       		.uleb128 0xb
  792 00b1 49       		.uleb128 0x49
-ARM GAS  /tmp/cc05pEvX.s 			page 15
+ARM GAS  /tmp/ccYYGBVt.s 			page 15
 
 
  793 00b2 13       		.uleb128 0x13
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  847 00e8 13       		.uleb128 0x13
  848 00e9 11       		.uleb128 0x11
  849 00ea 01       		.uleb128 0x1
-ARM GAS  /tmp/cc05pEvX.s 			page 16
+ARM GAS  /tmp/ccYYGBVt.s 			page 16
 
 
  850 00eb 12       		.uleb128 0x12
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  904 0121 01       		.uleb128 0x1
  905 0122 13       		.uleb128 0x13
  906 0123 00       		.byte	0x0
-ARM GAS  /tmp/cc05pEvX.s 			page 17
+ARM GAS  /tmp/ccYYGBVt.s 			page 17
 
 
  907 0124 00       		.byte	0x0
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  961 015a 00       		.byte	0x0
  962 015b 1A       		.uleb128 0x1a
  963 015c 34       		.uleb128 0x34
-ARM GAS  /tmp/cc05pEvX.s 			page 18
+ARM GAS  /tmp/ccYYGBVt.s 			page 18
 
 
  964 015d 00       		.byte	0x0
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  1007      00
  1008 0027 85000000 		.4byte	0x85
  1009 002b 626F6F6C 		.ascii	"bool_t\000"
-ARM GAS  /tmp/cc05pEvX.s 			page 19
+ARM GAS  /tmp/ccYYGBVt.s 			page 19
 
 
  1009      5F7400
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  1051      4320342E 
  1051      352E3200 
  1052              	.LASF19:
-ARM GAS  /tmp/cc05pEvX.s 			page 20
+ARM GAS  /tmp/ccYYGBVt.s 			page 20
 
 
  1053 0019 50435352 		.ascii	"PCSR\000"
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  1079      7420756E 
  1079      7369676E 
  1079      65642069 
-ARM GAS  /tmp/cc05pEvX.s 			page 21
+ARM GAS  /tmp/ccYYGBVt.s 			page 21
 
 
  1079      6E7400
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  1108              	.LASF9:
  1109 014e 6C6F6E67 		.ascii	"long long int\000"
  1109      206C6F6E 
-ARM GAS  /tmp/cc05pEvX.s 			page 22
+ARM GAS  /tmp/ccYYGBVt.s 			page 22
 
 
  1109      6720696E 
@@ -1302,23 +1302,23 @@ ARM GAS  /tmp/cc05pEvX.s 			page 1
  1127      7369676E 
  1127      65642069 
  1128              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  /tmp/cc05pEvX.s 			page 23
+ARM GAS  /tmp/ccYYGBVt.s 			page 23
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 hal.c
-     /tmp/cc05pEvX.s:24     .text.halInit:00000000 $t
-     /tmp/cc05pEvX.s:30     .text.halInit:00000000 halInit
-     /tmp/cc05pEvX.s:66     .text.halInit:0000002c $d
-     /tmp/cc05pEvX.s:71     .text.halIsCounterWithin:00000000 $t
-     /tmp/cc05pEvX.s:77     .text.halIsCounterWithin:00000000 halIsCounterWithin
-     /tmp/cc05pEvX.s:124    .text.halIsCounterWithin:00000024 $d
-     /tmp/cc05pEvX.s:129    .text.halPolledDelay:00000000 $t
-     /tmp/cc05pEvX.s:135    .text.halPolledDelay:00000000 halPolledDelay
-     /tmp/cc05pEvX.s:179    .text.halPolledDelay:00000024 $d
+     /tmp/ccYYGBVt.s:24     .text.halInit:00000000 $t
+     /tmp/ccYYGBVt.s:30     .text.halInit:00000000 halInit
+     /tmp/ccYYGBVt.s:66     .text.halInit:0000002c $d
+     /tmp/ccYYGBVt.s:71     .text.halIsCounterWithin:00000000 $t
+     /tmp/ccYYGBVt.s:77     .text.halIsCounterWithin:00000000 halIsCounterWithin
+     /tmp/ccYYGBVt.s:124    .text.halIsCounterWithin:00000024 $d
+     /tmp/ccYYGBVt.s:129    .text.halPolledDelay:00000000 $t
+     /tmp/ccYYGBVt.s:135    .text.halPolledDelay:00000000 halPolledDelay
+     /tmp/ccYYGBVt.s:179    .text.halPolledDelay:00000024 $d
                      .debug_frame:00000010 $d
-     /tmp/cc05pEvX.s:128    .text.halIsCounterWithin:00000028 $t
-     /tmp/cc05pEvX.s:185    .text.halPolledDelay:00000028 $t
+     /tmp/ccYYGBVt.s:128    .text.halIsCounterWithin:00000028 $t
+     /tmp/ccYYGBVt.s:185    .text.halPolledDelay:00000028 $t
 
 UNDEFINED SYMBOLS
 hal_lld_init

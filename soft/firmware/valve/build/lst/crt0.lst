@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc9W0cqa.s 			page 1
+ARM GAS  /tmp/ccKc9kdg.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
   48              		.thumb_func
   49              		.type	__late_init, %function
   50              	__late_init:
-ARM GAS  /tmp/cc9W0cqa.s 			page 2
+ARM GAS  /tmp/ccKc9kdg.s 			page 2
 
 
   51              	.LFB1:
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
   99              	.LVL0:
  100              		.loc 1 262 0
  101              		.thumb
-ARM GAS  /tmp/cc9W0cqa.s 			page 3
+ARM GAS  /tmp/ccKc9kdg.s 			page 3
 
 
  102 0002 6348     		ldr	r0, .L55
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  156 004c 8242     		cmp	r2, r0
  157 004e 17D2     		bcs	.L8
  158              		.loc 1 290 0 is_stmt 0 discriminator 2
-ARM GAS  /tmp/cc9W0cqa.s 			page 4
+ARM GAS  /tmp/ccKc9kdg.s 			page 4
 
 
  159 0050 1346     		mov	r3, r2
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  213              	.LVL10:
  214              		.loc 1 305 0
  215 00b6 A342     		cmp	r3, r4
-ARM GAS  /tmp/cc9W0cqa.s 			page 5
+ARM GAS  /tmp/ccKc9kdg.s 			page 5
 
 
  216 00b8 0BD2     		bcs	.L10
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  270              	.LBE6:
  271              		.loc 1 316 0
  272 010e FFF7FEFF 		bl	__late_init
-ARM GAS  /tmp/cc9W0cqa.s 			page 6
+ARM GAS  /tmp/ccKc9kdg.s 			page 6
 
 
  273              	.LVL14:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  327              		.loc 1 337 0
  328 0156 2C46     		mov	r4, r5
  329 0158 EF43     		mvns	r7, r5
-ARM GAS  /tmp/cc9W0cqa.s 			page 7
+ARM GAS  /tmp/ccKc9kdg.s 			page 7
 
 
  330 015a 54F8043B 		ldr	r3, [r4], #4
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  384              	.LFE3:
  385              		.size	ResetHandler, .-ResetHandler
  386 01c4 AFF30080 		.text
-ARM GAS  /tmp/cc9W0cqa.s 			page 8
+ARM GAS  /tmp/ccKc9kdg.s 			page 8
 
 
  386      AFF30080 
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  439 000c 23000000 		.4byte	.LASF30
  440 0010 01       		.byte	0x1
  441 0011 1B010000 		.4byte	.LASF31
-ARM GAS  /tmp/cc9W0cqa.s 			page 9
+ARM GAS  /tmp/ccKc9kdg.s 			page 9
 
 
  442 0015 76010000 		.4byte	.LASF32
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  496 0081 E4000000 		.4byte	.LASF10
  497 0085 03       		.uleb128 0x3
  498 0086 01       		.byte	0x1
-ARM GAS  /tmp/cc9W0cqa.s 			page 10
+ARM GAS  /tmp/ccKc9kdg.s 			page 10
 
 
  499 0087 08       		.byte	0x8
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  553 00ed 01       		.byte	0x1
  554 00ee 89000000 		.4byte	.LASF33
  555 00f2 01       		.byte	0x1
-ARM GAS  /tmp/cc9W0cqa.s 			page 11
+ARM GAS  /tmp/ccKc9kdg.s 			page 11
 
 
  556 00f3 FE       		.byte	0xfe
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  610 0174 93010000 		.4byte	0x193
  611 0178 0D       		.uleb128 0xd
  612 0179 747000   		.ascii	"tp\000"
-ARM GAS  /tmp/cc9W0cqa.s 			page 12
+ARM GAS  /tmp/ccKc9kdg.s 			page 12
 
 
  613 017c 01       		.byte	0x1
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  667 01fd 01       		.byte	0x1
  668 01fe 01       		.byte	0x1
  669 01ff 10       		.uleb128 0x10
-ARM GAS  /tmp/cc9W0cqa.s 			page 13
+ARM GAS  /tmp/ccKc9kdg.s 			page 13
 
 
  670 0200 F6010000 		.4byte	.LASF18
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  724 0266 01       		.byte	0x1
  725 0267 10       		.uleb128 0x10
  726 0268 E3010000 		.4byte	.LASF26
-ARM GAS  /tmp/cc9W0cqa.s 			page 14
+ARM GAS  /tmp/ccKc9kdg.s 			page 14
 
 
  727 026c 01       		.byte	0x1
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  781 02cf 10       		.uleb128 0x10
  782 02d0 04010000 		.4byte	.LASF21
  783 02d4 01       		.byte	0x1
-ARM GAS  /tmp/cc9W0cqa.s 			page 15
+ARM GAS  /tmp/ccKc9kdg.s 			page 15
 
 
  784 02d5 99       		.byte	0x99
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  838 0338 12000000 		.4byte	.LASF29
  839 033c 01       		.byte	0x1
  840 033d C9       		.byte	0xc9
-ARM GAS  /tmp/cc9W0cqa.s 			page 16
+ARM GAS  /tmp/ccKc9kdg.s 			page 16
 
 
  841 033e 8C000000 		.4byte	0x8c
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  895 0031 0B       		.uleb128 0xb
  896 0032 3B       		.uleb128 0x3b
  897 0033 0B       		.uleb128 0xb
-ARM GAS  /tmp/cc9W0cqa.s 			page 17
+ARM GAS  /tmp/ccKc9kdg.s 			page 17
 
 
  898 0034 49       		.uleb128 0x49
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  952 006a 11       		.uleb128 0x11
  953 006b 01       		.uleb128 0x1
  954 006c 12       		.uleb128 0x12
-ARM GAS  /tmp/cc9W0cqa.s 			page 18
+ARM GAS  /tmp/ccKc9kdg.s 			page 18
 
 
  955 006d 01       		.uleb128 0x1
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  1009 00a3 05       		.uleb128 0x5
  1010 00a4 49       		.uleb128 0x49
  1011 00a5 13       		.uleb128 0x13
-ARM GAS  /tmp/cc9W0cqa.s 			page 19
+ARM GAS  /tmp/ccKc9kdg.s 			page 19
 
 
  1012 00a6 02       		.uleb128 0x2
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  1066 0006 00000000 		.4byte	.Ldebug_info0
  1067 000a 45030000 		.4byte	0x345
  1068 000e B0000000 		.4byte	0xb0
-ARM GAS  /tmp/cc9W0cqa.s 			page 20
+ARM GAS  /tmp/ccKc9kdg.s 			page 20
 
 
  1069 0012 5F5F6561 		.ascii	"__early_init\000"
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  1106 002c C4010000 		.4byte	.LFE3-.LFB3
  1107 0030 00000000 		.4byte	0x0
  1108 0034 00000000 		.4byte	0x0
-ARM GAS  /tmp/cc9W0cqa.s 			page 21
+ARM GAS  /tmp/ccKc9kdg.s 			page 21
 
 
  1109              		.section	.debug_ranges,"",%progbits
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  1147      61756C74 
  1147      5F657869 
  1147      7400
-ARM GAS  /tmp/cc9W0cqa.s 			page 22
+ARM GAS  /tmp/ccKc9kdg.s 			page 22
 
 
  1148              	.LASF2:
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  1169 00fb 5F627373 		.ascii	"_bss_end\000"
  1169      5F656E64 
  1169      00
-ARM GAS  /tmp/cc9W0cqa.s 			page 23
+ARM GAS  /tmp/ccKc9kdg.s 			page 23
 
 
  1170              	.LASF21:
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  1195      65642063 
  1195      68617200 
  1196              	.LASF20:
-ARM GAS  /tmp/cc9W0cqa.s 			page 24
+ARM GAS  /tmp/ccKc9kdg.s 			page 24
 
 
  1197 01cd 5F5F7072 		.ascii	"__process_stack_end__\000"
@@ -1399,22 +1399,22 @@ ARM GAS  /tmp/cc9W0cqa.s 			page 1
  1201      5F656E64 
  1201      5F5F00
  1202              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  /tmp/cc9W0cqa.s 			page 25
+ARM GAS  /tmp/ccKc9kdg.s 			page 25
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 crt0.c
-     /tmp/cc9W0cqa.s:24     .text.__early_init:00000000 $t
-     /tmp/cc9W0cqa.s:30     .text.__early_init:00000000 __early_init
-     /tmp/cc9W0cqa.s:44     .text.__late_init:00000000 $t
-     /tmp/cc9W0cqa.s:50     .text.__late_init:00000000 __late_init
-     /tmp/cc9W0cqa.s:63     .text._default_exit:00000000 $t
-     /tmp/cc9W0cqa.s:69     .text._default_exit:00000000 _default_exit
-     /tmp/cc9W0cqa.s:82     .text.ResetHandler:00000000 $t
-     /tmp/cc9W0cqa.s:88     .text.ResetHandler:00000000 ResetHandler
-     /tmp/cc9W0cqa.s:370    .text.ResetHandler:00000190 $d
+     /tmp/ccKc9kdg.s:24     .text.__early_init:00000000 $t
+     /tmp/ccKc9kdg.s:30     .text.__early_init:00000000 __early_init
+     /tmp/ccKc9kdg.s:44     .text.__late_init:00000000 $t
+     /tmp/ccKc9kdg.s:50     .text.__late_init:00000000 __late_init
+     /tmp/ccKc9kdg.s:63     .text._default_exit:00000000 $t
+     /tmp/ccKc9kdg.s:69     .text._default_exit:00000000 _default_exit
+     /tmp/ccKc9kdg.s:82     .text.ResetHandler:00000000 $t
+     /tmp/ccKc9kdg.s:88     .text.ResetHandler:00000000 ResetHandler
+     /tmp/ccKc9kdg.s:370    .text.ResetHandler:00000190 $d
                      .debug_frame:00000010 $d
-     /tmp/cc9W0cqa.s:386    .text.ResetHandler:000001c4 $t
+     /tmp/ccKc9kdg.s:386    .text.ResetHandler:000001c4 $t
 
 UNDEFINED SYMBOLS
 main

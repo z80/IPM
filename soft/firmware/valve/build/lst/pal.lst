@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccUVyxgk.s 			page 1
+ARM GAS  /tmp/cciKYv8c.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccUVyxgk.s 			page 1
   51              		.loc 1 78 0 discriminator 1
   52 000c 0548     		ldr	r0, .L5
   53              	.LVL1:
-ARM GAS  /tmp/ccUVyxgk.s 			page 2
+ARM GAS  /tmp/cciKYv8c.s 			page 2
 
 
   54 000e FFF7FEFF 		bl	chDbgPanic
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccUVyxgk.s 			page 1
  107 0010 FFF7FEFF 		bl	chDbgPanic
  108              	.LVL4:
  109 0014 A368     		ldr	r3, [r4, #8]
-ARM GAS  /tmp/ccUVyxgk.s 			page 3
+ARM GAS  /tmp/cciKYv8c.s 			page 3
 
 
  110              	.L9:
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccUVyxgk.s 			page 1
  163              		.loc 1 126 0 discriminator 1
  164 000e 0648     		ldr	r0, .L15
  165              	.LVL7:
-ARM GAS  /tmp/ccUVyxgk.s 			page 4
+ARM GAS  /tmp/cciKYv8c.s 			page 4
 
 
  166 0010 FFF7FEFF 		bl	chDbgPanic
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccUVyxgk.s 			page 1
  210 0018 00000000 		.4byte	0x0
  211 001c 00000000 		.4byte	0x0
  212              	.LLST1:
-ARM GAS  /tmp/ccUVyxgk.s 			page 5
+ARM GAS  /tmp/cciKYv8c.s 			page 5
 
 
  213 0020 00000000 		.4byte	.LVL0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccUVyxgk.s 			page 1
  267 00b0 7D       		.byte	0x7d
  268 00b1 10       		.sleb128 16
  269 00b2 00000000 		.4byte	0x0
-ARM GAS  /tmp/ccUVyxgk.s 			page 6
+ARM GAS  /tmp/cciKYv8c.s 			page 6
 
 
  270 00b6 00000000 		.4byte	0x0
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccUVyxgk.s 			page 1
  324 003e 03       		.uleb128 0x3
  325 003f 01       		.byte	0x1
  326 0040 08       		.byte	0x8
-ARM GAS  /tmp/ccUVyxgk.s 			page 7
+ARM GAS  /tmp/cciKYv8c.s 			page 7
 
 
  327 0041 6E000000 		.4byte	.LASF2
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccUVyxgk.s 			page 1
  381 00ab 43524C00 		.ascii	"CRL\000"
  382 00af 03       		.byte	0x3
  383 00b0 FA03     		.2byte	0x3fa
-ARM GAS  /tmp/ccUVyxgk.s 			page 8
+ARM GAS  /tmp/cciKYv8c.s 			page 8
 
 
  384 00b2 90000000 		.4byte	0x90
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccUVyxgk.s 			page 1
  438 0115 D3000000 		.4byte	.LASF15
  439 0119 03       		.byte	0x3
  440 011a 0104     		.2byte	0x401
-ARM GAS  /tmp/ccUVyxgk.s 			page 9
+ARM GAS  /tmp/cciKYv8c.s 			page 9
 
 
  441 011c A1000000 		.4byte	0xa1
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccUVyxgk.s 			page 1
  495 0185 0D       		.uleb128 0xd
  496 0186 01       		.byte	0x1
  497 0187 59010000 		.4byte	.LASF31
-ARM GAS  /tmp/ccUVyxgk.s 			page 10
+ARM GAS  /tmp/cciKYv8c.s 			page 10
 
 
  498 018b 01       		.byte	0x1
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccUVyxgk.s 			page 1
  552 020f 7C       		.byte	0x7c
  553 0210 B2010000 		.4byte	0x1b2
  554 0214 BA000000 		.4byte	.LLST6
-ARM GAS  /tmp/ccUVyxgk.s 			page 11
+ARM GAS  /tmp/cciKYv8c.s 			page 11
 
 
  555 0218 10       		.uleb128 0x10
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccUVyxgk.s 			page 1
  609 001f 00       		.byte	0x0
  610 0020 03       		.uleb128 0x3
  611 0021 24       		.uleb128 0x24
-ARM GAS  /tmp/ccUVyxgk.s 			page 12
+ARM GAS  /tmp/cciKYv8c.s 			page 12
 
 
  612 0022 00       		.byte	0x0
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccUVyxgk.s 			page 1
  666 0058 0A       		.uleb128 0xa
  667 0059 00       		.byte	0x0
  668 005a 00       		.byte	0x0
-ARM GAS  /tmp/ccUVyxgk.s 			page 13
+ARM GAS  /tmp/cciKYv8c.s 			page 13
 
 
  669 005b 08       		.uleb128 0x8
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccUVyxgk.s 			page 1
  723 0091 0E       		.uleb128 0xe
  724 0092 3A       		.uleb128 0x3a
  725 0093 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccUVyxgk.s 			page 14
+ARM GAS  /tmp/cciKYv8c.s 			page 14
 
 
  726 0094 3B       		.uleb128 0x3b
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccUVyxgk.s 			page 1
  780 00ca 0E       		.uleb128 0xe
  781 00cb 3A       		.uleb128 0x3a
  782 00cc 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccUVyxgk.s 			page 15
+ARM GAS  /tmp/cciKYv8c.s 			page 15
 
 
  783 00cd 3B       		.uleb128 0x3b
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccUVyxgk.s 			page 1
  836      65616442 
  836      757300
  837 001d B8010000 		.4byte	0x1b8
-ARM GAS  /tmp/ccUVyxgk.s 			page 16
+ARM GAS  /tmp/cciKYv8c.s 			page 16
 
 
  838 0021 70616C57 		.ascii	"palWriteBus\000"
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccUVyxgk.s 			page 1
  870 000c 0000     		.2byte	0x0
  871 000e 0000     		.2byte	0x0
  872 0010 00000000 		.4byte	.LFB55
-ARM GAS  /tmp/ccUVyxgk.s 			page 17
+ARM GAS  /tmp/cciKYv8c.s 			page 17
 
 
  873 0014 28000000 		.4byte	.LFE55-.LFB55
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccUVyxgk.s 			page 1
  908      00
  909              	.LASF2:
  910 006e 756E7369 		.ascii	"unsigned char\000"
-ARM GAS  /tmp/ccUVyxgk.s 			page 18
+ARM GAS  /tmp/cciKYv8c.s 			page 18
 
 
  910      676E6564 
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccUVyxgk.s 			page 1
  934 0100 6D61736B 		.ascii	"mask\000"
  934      00
  935              	.LASF23:
-ARM GAS  /tmp/ccUVyxgk.s 			page 19
+ARM GAS  /tmp/cciKYv8c.s 			page 19
 
 
  936 0105 62697473 		.ascii	"bits\000"
@@ -1122,25 +1122,25 @@ ARM GAS  /tmp/ccUVyxgk.s 			page 1
  954 0187 494F4275 		.ascii	"IOBus\000"
  954      7300
  955              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  /tmp/ccUVyxgk.s 			page 20
+ARM GAS  /tmp/cciKYv8c.s 			page 20
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 pal.c
-     /tmp/ccUVyxgk.s:24     .text.palReadBus:00000000 $t
-     /tmp/ccUVyxgk.s:30     .text.palReadBus:00000000 palReadBus
-     /tmp/ccUVyxgk.s:68     .text.palReadBus:00000024 $d
-     /tmp/ccUVyxgk.s:73     .text.palWriteBus:00000000 $t
-     /tmp/ccUVyxgk.s:79     .text.palWriteBus:00000000 palWriteBus
-     /tmp/ccUVyxgk.s:127    .text.palWriteBus:00000034 $d
-     /tmp/ccUVyxgk.s:132    .text.palSetBusMode:00000000 $t
-     /tmp/ccUVyxgk.s:138    .text.palSetBusMode:00000000 palSetBusMode
-     /tmp/ccUVyxgk.s:182    .text.palSetBusMode:00000028 $d
-     /tmp/ccUVyxgk.s:187    .rodata.str1.4:00000000 $d
+     /tmp/cciKYv8c.s:24     .text.palReadBus:00000000 $t
+     /tmp/cciKYv8c.s:30     .text.palReadBus:00000000 palReadBus
+     /tmp/cciKYv8c.s:68     .text.palReadBus:00000024 $d
+     /tmp/cciKYv8c.s:73     .text.palWriteBus:00000000 $t
+     /tmp/cciKYv8c.s:79     .text.palWriteBus:00000000 palWriteBus
+     /tmp/cciKYv8c.s:127    .text.palWriteBus:00000034 $d
+     /tmp/cciKYv8c.s:132    .text.palSetBusMode:00000000 $t
+     /tmp/cciKYv8c.s:138    .text.palSetBusMode:00000000 palSetBusMode
+     /tmp/cciKYv8c.s:182    .text.palSetBusMode:00000028 $d
+     /tmp/cciKYv8c.s:187    .rodata.str1.4:00000000 $d
                      .debug_frame:00000010 $d
-     /tmp/ccUVyxgk.s:72     .text.palReadBus:00000028 $t
-     /tmp/ccUVyxgk.s:131    .text.palWriteBus:00000038 $t
-     /tmp/ccUVyxgk.s:186    .text.palSetBusMode:0000002c $t
+     /tmp/cciKYv8c.s:72     .text.palReadBus:00000028 $t
+     /tmp/cciKYv8c.s:131    .text.palWriteBus:00000038 $t
+     /tmp/cciKYv8c.s:186    .text.palSetBusMode:0000002c $t
 
 UNDEFINED SYMBOLS
 chDbgPanic

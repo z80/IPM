@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccAZCrX2.s 			page 1
+ARM GAS  /tmp/cceCmjGp.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
   51              	.LVL1:
   52              		.loc 1 55 0
   53 000c 94F82230 		ldrb	r3, [r4, #34]	@ zero_extendqisi2
-ARM GAS  /tmp/ccAZCrX2.s 			page 2
+ARM GAS  /tmp/cceCmjGp.s 			page 2
 
 
   54 0010 FF2B     		cmp	r3, #255
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  107              	.LCFI1:
  108              		.cfi_def_cfa_offset 16
  109              		.loc 1 74 0
-ARM GAS  /tmp/ccAZCrX2.s 			page 3
+ARM GAS  /tmp/cceCmjGp.s 			page 3
 
 
  110 0002 0446     		mov	r4, r0
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  164              		.loc 1 98 0
  165 004c 5361     		str	r3, [r2, #20]
  166              		.loc 1 105 0
-ARM GAS  /tmp/ccAZCrX2.s 			page 4
+ARM GAS  /tmp/cceCmjGp.s 			page 4
 
 
  167 004e BDE87040 		pop	{r4, r5, r6, lr}
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  221              		.cfi_offset 14, -4
  222              		.cfi_offset 8, -8
  223              		.cfi_offset 7, -12
-ARM GAS  /tmp/ccAZCrX2.s 			page 5
+ARM GAS  /tmp/cceCmjGp.s 			page 5
 
 
  224              		.cfi_offset 6, -16
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  278              	@ 0 "" 2
  279              	.LVL14:
  280              		.thumb
-ARM GAS  /tmp/ccAZCrX2.s 			page 6
+ARM GAS  /tmp/cceCmjGp.s 			page 6
 
 
  281              	.L17:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  335              		.loc 1 191 0
  336 001c 00F14C09 		add	r9, r0, #76
  337 0020 4946     		mov	r1, r9
-ARM GAS  /tmp/ccAZCrX2.s 			page 7
+ARM GAS  /tmp/cceCmjGp.s 			page 7
 
 
  338 0022 FF22     		movs	r2, #255
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  392              		.align	2
  393              	.L24:
  394 0074 28000000 		.word	.LC2
-ARM GAS  /tmp/ccAZCrX2.s 			page 8
+ARM GAS  /tmp/cceCmjGp.s 			page 8
 
 
  395              		.cfi_endproc
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  436              	.LLST2:
  437 003e 00000000 		.4byte	.LFB1
  438 0042 02000000 		.4byte	.LCFI1
-ARM GAS  /tmp/ccAZCrX2.s 			page 9
+ARM GAS  /tmp/cceCmjGp.s 			page 9
 
 
  439 0046 0200     		.2byte	0x2
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  493 00d0 50       		.byte	0x50
  494 00d1 00000000 		.4byte	0x0
  495 00d5 00000000 		.4byte	0x0
-ARM GAS  /tmp/ccAZCrX2.s 			page 10
+ARM GAS  /tmp/cceCmjGp.s 			page 10
 
 
  496              	.LLST7:
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  550              	.LLST11:
  551 016a 4C000000 		.4byte	.LVL12
  552 016e 4F000000 		.4byte	.LVL13-1
-ARM GAS  /tmp/ccAZCrX2.s 			page 11
+ARM GAS  /tmp/cceCmjGp.s 			page 11
 
 
  553 0172 0100     		.2byte	0x1
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  607 01ff 78000000 		.4byte	.LFE3
  608 0203 0100     		.2byte	0x1
  609 0205 56       		.byte	0x56
-ARM GAS  /tmp/ccAZCrX2.s 			page 12
+ARM GAS  /tmp/cceCmjGp.s 			page 12
 
 
  610 0206 00000000 		.4byte	0x0
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  664 0006 00000000 		.4byte	.Ldebug_abbrev0
  665 000a 04       		.byte	0x4
  666 000b 01       		.uleb128 0x1
-ARM GAS  /tmp/ccAZCrX2.s 			page 13
+ARM GAS  /tmp/cceCmjGp.s 			page 13
 
 
  667 000c 34030000 		.4byte	.LASF79
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  721 0081 50       		.byte	0x50
  722 0082 86000000 		.4byte	0x86
  723 0086 04       		.uleb128 0x4
-ARM GAS  /tmp/ccAZCrX2.s 			page 14
+ARM GAS  /tmp/cceCmjGp.s 			page 14
 
 
  724 0087 04       		.byte	0x4
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  778 00f9 2A       		.byte	0x2a
  779 00fa FE000000 		.4byte	0xfe
  780 00fe 05       		.uleb128 0x5
-ARM GAS  /tmp/ccAZCrX2.s 			page 15
+ARM GAS  /tmp/cceCmjGp.s 			page 15
 
 
  781 00ff B8020000 		.4byte	.LASF21
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  835 015f 40030000 		.4byte	.LASF28
  836 0163 06       		.byte	0x6
  837 0164 6E       		.byte	0x6e
-ARM GAS  /tmp/ccAZCrX2.s 			page 16
+ARM GAS  /tmp/cceCmjGp.s 			page 16
 
 
  838 0165 F6040000 		.4byte	0x4f6
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  892 01c5 06       		.byte	0x6
  893 01c6 B3       		.byte	0xb3
  894 01c7 70020000 		.4byte	0x270
-ARM GAS  /tmp/ccAZCrX2.s 			page 17
+ARM GAS  /tmp/cceCmjGp.s 			page 17
 
 
  895 01cb 02       		.byte	0x2
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  949 0225 05       		.byte	0x5
  950 0226 61       		.byte	0x61
  951 0227 48020000 		.4byte	0x248
-ARM GAS  /tmp/ccAZCrX2.s 			page 18
+ARM GAS  /tmp/cceCmjGp.s 			page 18
 
 
  952 022b 06       		.uleb128 0x6
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  1006 028e DD       		.byte	0xdd
  1007 028f 94000000 		.4byte	0x94
  1008 0293 05       		.uleb128 0x5
-ARM GAS  /tmp/ccAZCrX2.s 			page 19
+ARM GAS  /tmp/cceCmjGp.s 			page 19
 
 
  1009 0294 00030000 		.4byte	.LASF45
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  1063 02f4 72313000 		.ascii	"r10\000"
  1064 02f8 07       		.byte	0x7
  1065 02f9 1701     		.2byte	0x117
-ARM GAS  /tmp/ccAZCrX2.s 			page 20
+ARM GAS  /tmp/cceCmjGp.s 			page 20
 
 
  1066 02fb 7B020000 		.4byte	0x27b
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  1120 0361 00       		.uleb128 0x0
  1121 0362 06       		.uleb128 0x6
  1122 0363 47030000 		.4byte	.LASF49
-ARM GAS  /tmp/ccAZCrX2.s 			page 21
+ARM GAS  /tmp/cceCmjGp.s 			page 21
 
 
  1123 0367 08       		.byte	0x8
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  1177 03d3 02       		.byte	0x2
  1178 03d4 23       		.byte	0x23
  1179 03d5 00       		.uleb128 0x0
-ARM GAS  /tmp/ccAZCrX2.s 			page 22
+ARM GAS  /tmp/cceCmjGp.s 			page 22
 
 
  1180 03d6 06       		.uleb128 0x6
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  1234 043a 04       		.byte	0x4
  1235 043b B1030000 		.4byte	0x3b1
  1236 043f 08       		.uleb128 0x8
-ARM GAS  /tmp/ccAZCrX2.s 			page 23
+ARM GAS  /tmp/cceCmjGp.s 			page 23
 
 
  1237 0440 08       		.byte	0x8
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  1291 049e 0B       		.byte	0xb
  1292 049f 36       		.byte	0x36
  1293 04a0 30000000 		.4byte	0x30
-ARM GAS  /tmp/ccAZCrX2.s 			page 24
+ARM GAS  /tmp/cceCmjGp.s 			page 24
 
 
  1294 04a4 02       		.byte	0x2
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  1348 050a 88020000 		.4byte	0x288
  1349 050e 09       		.uleb128 0x9
  1350 050f 04       		.byte	0x4
-ARM GAS  /tmp/ccAZCrX2.s 			page 25
+ARM GAS  /tmp/cceCmjGp.s 			page 25
 
 
  1351 0510 85030000 		.4byte	0x385
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  1405 058f BC000000 		.4byte	0xbc
  1406 0593 7C000000 		.4byte	.LLST4
  1407 0597 00       		.byte	0x0
-ARM GAS  /tmp/ccAZCrX2.s 			page 26
+ARM GAS  /tmp/cceCmjGp.s 			page 26
 
 
  1408 0598 15       		.uleb128 0x15
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  1462 0617 6A010000 		.4byte	.LLST11
  1463 061b 00       		.byte	0x0
  1464 061c 15       		.uleb128 0x15
-ARM GAS  /tmp/ccAZCrX2.s 			page 27
+ARM GAS  /tmp/cceCmjGp.s 			page 27
 
 
  1465 061d 01       		.byte	0x1
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  1519 0002 01       		.byte	0x1
  1520 0003 25       		.uleb128 0x25
  1521 0004 0E       		.uleb128 0xe
-ARM GAS  /tmp/ccAZCrX2.s 			page 28
+ARM GAS  /tmp/cceCmjGp.s 			page 28
 
 
  1522 0005 13       		.uleb128 0x13
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  1576 003b 03       		.uleb128 0x3
  1577 003c 0E       		.uleb128 0xe
  1578 003d 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccAZCrX2.s 			page 29
+ARM GAS  /tmp/cceCmjGp.s 			page 29
 
 
  1579 003e 0B       		.uleb128 0xb
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  1633 0074 00       		.byte	0x0
  1634 0075 0B       		.uleb128 0xb
  1635 0076 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccAZCrX2.s 			page 30
+ARM GAS  /tmp/cceCmjGp.s 			page 30
 
 
  1636 0077 49       		.uleb128 0x49
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  1690 00ad 13       		.uleb128 0x13
  1691 00ae 01       		.uleb128 0x1
  1692 00af 13       		.uleb128 0x13
-ARM GAS  /tmp/ccAZCrX2.s 			page 31
+ARM GAS  /tmp/cceCmjGp.s 			page 31
 
 
  1693 00b0 00       		.byte	0x0
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  1747 00e6 08       		.uleb128 0x8
  1748 00e7 3A       		.uleb128 0x3a
  1749 00e8 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccAZCrX2.s 			page 32
+ARM GAS  /tmp/cceCmjGp.s 			page 32
 
 
  1750 00e9 3B       		.uleb128 0x3b
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  1804 011f 2E       		.uleb128 0x2e
  1805 0120 01       		.byte	0x1
  1806 0121 3F       		.uleb128 0x3f
-ARM GAS  /tmp/ccAZCrX2.s 			page 33
+ARM GAS  /tmp/cceCmjGp.s 			page 33
 
 
  1807 0122 0C       		.uleb128 0xc
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  1861 0158 3A       		.uleb128 0x3a
  1862 0159 0B       		.uleb128 0xb
  1863 015a 3B       		.uleb128 0x3b
-ARM GAS  /tmp/ccAZCrX2.s 			page 34
+ARM GAS  /tmp/cceCmjGp.s 			page 34
 
 
  1864 015b 0B       		.uleb128 0xb
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  1905 000a 98060000 		.4byte	0x698
  1906 000e 30000000 		.4byte	0x30
  1907 0012 73697A65 		.ascii	"size_t\000"
-ARM GAS  /tmp/ccAZCrX2.s 			page 35
+ARM GAS  /tmp/cceCmjGp.s 			page 35
 
 
  1907      5F7400
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  1937      00
  1938 00dd 88020000 		.4byte	0x288
  1939 00e1 73746B61 		.ascii	"stkalign_t\000"
-ARM GAS  /tmp/ccAZCrX2.s 			page 36
+ARM GAS  /tmp/cceCmjGp.s 			page 36
 
 
  1939      6C69676E 
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  1973 0010 00000000 		.4byte	.LFB0
  1974 0014 48000000 		.4byte	.LFE0-.LFB0
  1975 0018 00000000 		.4byte	.LFB1
-ARM GAS  /tmp/ccAZCrX2.s 			page 37
+ARM GAS  /tmp/cceCmjGp.s 			page 37
 
 
  1976 001c 7C000000 		.4byte	.LFE1-.LFB1
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  2013      6720756E 
  2013      7369676E 
  2013      65642069 
-ARM GAS  /tmp/ccAZCrX2.s 			page 38
+ARM GAS  /tmp/cceCmjGp.s 			page 38
 
 
  2014              	.LASF68:
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  2044              	.LASF78:
  2045 0107 63685468 		.ascii	"chThdCreateFromMemoryPool\000"
  2045      64437265 
-ARM GAS  /tmp/ccAZCrX2.s 			page 39
+ARM GAS  /tmp/cceCmjGp.s 			page 39
 
 
  2045      61746546 
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  2071 01bf 54687265 		.ascii	"ThreadsList\000"
  2071      6164734C 
  2071      69737400 
-ARM GAS  /tmp/ccAZCrX2.s 			page 40
+ARM GAS  /tmp/cceCmjGp.s 			page 40
 
 
  2072              	.LASF19:
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  2103 0254 756E7369 		.ascii	"unsigned char\000"
  2103      676E6564 
  2103      20636861 
-ARM GAS  /tmp/ccAZCrX2.s 			page 41
+ARM GAS  /tmp/cceCmjGp.s 			page 41
 
 
  2103      7200
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  2134              	.LASF20:
  2135 02e4 73797374 		.ascii	"systime_t\000"
  2135      696D655F 
-ARM GAS  /tmp/ccAZCrX2.s 			page 42
+ARM GAS  /tmp/cceCmjGp.s 			page 42
 
 
  2135      7400
@@ -2511,27 +2511,27 @@ ARM GAS  /tmp/ccAZCrX2.s 			page 1
  2163      72795F68 
  2163      65617000 
  2164              		.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
-ARM GAS  /tmp/ccAZCrX2.s 			page 43
+ARM GAS  /tmp/cceCmjGp.s 			page 43
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 chdynamic.c
-     /tmp/ccAZCrX2.s:24     .text.chThdAddRef:00000000 $t
-     /tmp/ccAZCrX2.s:30     .text.chThdAddRef:00000000 chThdAddRef
-     /tmp/ccAZCrX2.s:88     .text.chThdAddRef:00000044 $d
-     /tmp/ccAZCrX2.s:93     .text.chThdRelease:00000000 $t
-     /tmp/ccAZCrX2.s:99     .text.chThdRelease:00000000 chThdRelease
-     /tmp/ccAZCrX2.s:195    .text.chThdRelease:00000078 $d
-     /tmp/ccAZCrX2.s:200    .text.chThdCreateFromHeap:00000000 $t
-     /tmp/ccAZCrX2.s:206    .text.chThdCreateFromHeap:00000000 chThdCreateFromHeap
-     /tmp/ccAZCrX2.s:290    .text.chThdCreateFromMemoryPool:00000000 $t
-     /tmp/ccAZCrX2.s:296    .text.chThdCreateFromMemoryPool:00000000 chThdCreateFromMemoryPool
-     /tmp/ccAZCrX2.s:394    .text.chThdCreateFromMemoryPool:00000074 $d
-     /tmp/ccAZCrX2.s:399    .rodata.str1.4:00000000 $d
+     /tmp/cceCmjGp.s:24     .text.chThdAddRef:00000000 $t
+     /tmp/cceCmjGp.s:30     .text.chThdAddRef:00000000 chThdAddRef
+     /tmp/cceCmjGp.s:88     .text.chThdAddRef:00000044 $d
+     /tmp/cceCmjGp.s:93     .text.chThdRelease:00000000 $t
+     /tmp/cceCmjGp.s:99     .text.chThdRelease:00000000 chThdRelease
+     /tmp/cceCmjGp.s:195    .text.chThdRelease:00000078 $d
+     /tmp/cceCmjGp.s:200    .text.chThdCreateFromHeap:00000000 $t
+     /tmp/cceCmjGp.s:206    .text.chThdCreateFromHeap:00000000 chThdCreateFromHeap
+     /tmp/cceCmjGp.s:290    .text.chThdCreateFromMemoryPool:00000000 $t
+     /tmp/cceCmjGp.s:296    .text.chThdCreateFromMemoryPool:00000000 chThdCreateFromMemoryPool
+     /tmp/cceCmjGp.s:394    .text.chThdCreateFromMemoryPool:00000074 $d
+     /tmp/cceCmjGp.s:399    .rodata.str1.4:00000000 $d
                      .debug_frame:00000010 $d
-     /tmp/ccAZCrX2.s:92     .text.chThdAddRef:00000048 $t
-     /tmp/ccAZCrX2.s:2164   .text.chThdRelease:0000007c $t
-     /tmp/ccAZCrX2.s:398    .text.chThdCreateFromMemoryPool:00000078 $t
+     /tmp/cceCmjGp.s:92     .text.chThdAddRef:00000048 $t
+     /tmp/cceCmjGp.s:2164   .text.chThdRelease:0000007c $t
+     /tmp/cceCmjGp.s:398    .text.chThdCreateFromMemoryPool:00000078 $t
 
 UNDEFINED SYMBOLS
 _port_lock
