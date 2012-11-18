@@ -161,17 +161,6 @@ void i2c_lld_master_receive(I2CDriver *i2cp, size_t n, uint8_t *rxbuf) {
 
 }
 
-void i2c_lld_slave_receive( I2CDriver *i2cp, size_t n, uint8_t * rxbuf)
-{
-
-}
-
-void i2c_lld_slave_transmit(I2CDriver *i2cp, size_t n, const uint8_t * txbuf )
-{
-
-}
-
-
 #endif /* HAL_USE_I2C */
 
 /** @} */
