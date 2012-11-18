@@ -53,7 +53,7 @@ static void read( uint32_t * val )
     chMtxUnlock();
 }
 
-static WORKING_AREA( waRead, 2048 );
+static WORKING_AREA( waRead, 256 );
 static msg_t readThread( void *arg )
 {
     (void)arg;

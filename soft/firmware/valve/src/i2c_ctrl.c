@@ -23,7 +23,7 @@ static uint8_t testAddr = 9;
 static uint8_t testCnt = 0;
 static uint8_t testBuffer[ TEST_BUFFER_SIZE ];
 
-static WORKING_AREA( waI2c, 256 );
+static WORKING_AREA( waI2c, 1024 );
 static msg_t i2cThread( void *arg )
 {
     (void)arg;
@@ -87,24 +87,24 @@ void initI2c( void )
     palSetPadMode( GPIOC, ADDR_0_PIN, PAL_MODE_INPUT );
     palSetPadMode( GPIOC, ADDR_1_PIN, PAL_MODE_INPUT );
     palSetPadMode( GPIOC, ADDR_2_PIN, PAL_MODE_INPUT );
+    palSetPadMode( GPIOB, 6, PAL_MODE_STM32_ALTERNATE_OPENDRAIN );
+    palSetPadMode( GPIOB, 7, PAL_MODE_STM32_ALTERNATE_OPENDRAIN );
 
     i2cInit();
-    i2cStart(&I2CD1, &i2cfg1);
+    i2cStart( &I2CD1, &i2cfg1 );
     // tune ports for I2C1
-    palSetPadMode(IOPORT2, 6, PAL_MODE_STM32_ALTERNATE_OPENDRAIN );
-    palSetPadMode(IOPORT2, 7, PAL_MODE_STM32_ALTERNATE_OPENDRAIN );
     int16_t i;
     for ( i=0; i<I2C_SLAVES_CNT; i++ )
-    	addr[i] = I2C_BASE_ADDR + i;
+        addr[i] = I2C_BASE_ADDR + i;
     outs[0] = 0;
     ins[0]  = 0;
     outs[1] = 0;
     ins[1]  = 0;
 
 	// Initializing mutex.
-	chMtxInit( &mutex );
+    chMtxInit( &mutex );
 	// Creating thread.
-    chThdCreateStatic( waI2c, sizeof(waI2c), NORMALPRIO, i2cThread, NULL );
+    //chThdCreateStatic( waI2c, sizeof(waI2c), NORMALPRIO, i2cThread, NULL );
 }
 
 void state( uint8_t index, uint32_t * val )
