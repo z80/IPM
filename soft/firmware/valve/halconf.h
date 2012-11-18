@@ -59,7 +59,7 @@
  * @brief   Enables the ADC subsystem.
  */
 #if !defined(HAL_USE_ADC) || defined(__DOXYGEN__)
-#define HAL_USE_ADC                 TRUE
+#define HAL_USE_ADC                 FALSE
 #endif
 
 /**
@@ -86,11 +86,10 @@
 /**
  * @brief   Enables the I2C subsystem.
  */
-#define HAL_USE_I2C TRUE
-
 #if !defined(HAL_USE_I2C) || defined(__DOXYGEN__)
-#define HAL_USE_I2C                 FALSE
+#define HAL_USE_I2C                 TRUE
 #endif
+#define I2C_USE_SLAVE_MODE TRUE
 
 /**
  * @brief   Enables the ICU subsystem.
@@ -117,7 +116,7 @@
  * @brief   Enables the PWM subsystem.
  */
 #if !defined(HAL_USE_PWM) || defined(__DOXYGEN__)
-#define HAL_USE_PWM                 TRUE
+#define HAL_USE_PWM                 FALSE
 #endif
 
 /**
@@ -210,13 +209,6 @@
 #if !defined(I2C_USE_MUTUAL_EXCLUSION) || defined(__DOXYGEN__)
 #define I2C_USE_MUTUAL_EXCLUSION    TRUE
 #endif
-
-#define I2C_USE_SLAVE_MODE TRUE
-
-#if !defined(I2C_USE_SLAVE_MODE) || defined(__DOXYGEN__)
-#define I2C_USE_SLAVE_MODE    TRUE
-#endif
-
 
 /*===========================================================================*/
 /* MAC driver related settings.                                              */
