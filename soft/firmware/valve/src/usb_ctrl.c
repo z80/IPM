@@ -1,19 +1,15 @@
 
 
-
 #include <stdio.h>
 #include <string.h>
 
 #include "ch.h"
 #include "hal.h"
+#include "test.h"
 
 #include "usb_cdc.h"
 #include "shell.h"
 #include "chprintf.h"
-
-#include "usb_ctrl.h"
-#include "i2c_ctrl.h"
-#include "hdw_config.h"
 
 /*===========================================================================*/
 /* USB related stuff.                                                        */
@@ -181,12 +177,11 @@ static const uint8_t vcom_string3[] = {
 /*
  * Strings wrappers array.
  */
-static const USBDescriptor vcom_strings[] =
-{
-  { sizeof( vcom_string0 ), vcom_string0 },
-  { sizeof( vcom_string1 ), vcom_string1 },
-  { sizeof( vcom_string2 ), vcom_string2 },
-  { sizeof( vcom_string3 ), vcom_string3 }
+static const USBDescriptor vcom_strings[] = {
+  {sizeof vcom_string0, vcom_string0},
+  {sizeof vcom_string1, vcom_string1},
+  {sizeof vcom_string2, vcom_string2},
+  {sizeof vcom_string3, vcom_string3}
 };
 
 /*
@@ -196,8 +191,8 @@ static const USBDescriptor vcom_strings[] =
 static const USBDescriptor *get_descriptor(USBDriver *usbp,
                                            uint8_t dtype,
                                            uint8_t dindex,
-                                           uint16_t lang)
-{
+                                           uint16_t lang) {
+
   (void)usbp;
   (void)lang;
   switch (dtype) {
@@ -269,9 +264,9 @@ static void usb_event(USBDriver *usbp, usbevent_t event) {
        Note, this callback is invoked from an ISR so I-Class functions
        must be used.*/
     chSysLockFromIsr();
-    usbInitEndpointI( usbp, USB_CDC_DATA_REQUEST_EP,      &ep1config );
-    usbInitEndpointI( usbp, USB_CDC_INTERRUPT_REQUEST_EP, &ep2config );
-    usbInitEndpointI( usbp, USB_CDC_DATA_AVAILABLE_EP,    &ep3config );
+    usbInitEndpointI(usbp, USB_CDC_DATA_REQUEST_EP, &ep1config);
+    usbInitEndpointI(usbp, USB_CDC_INTERRUPT_REQUEST_EP, &ep2config);
+    usbInitEndpointI(usbp, USB_CDC_DATA_AVAILABLE_EP, &ep3config);
     chSysUnlockFromIsr();
     return;
   case USB_EVENT_SUSPEND:
@@ -287,8 +282,7 @@ static void usb_event(USBDriver *usbp, usbevent_t event) {
 /*
  * Serial over USB driver configuration.
  */
-static const SerialUSBConfig serusbcfg =
-{
+static const SerialUSBConfig serusbcfg = {
   &USBD1,
   {
     usb_event,
@@ -302,23 +296,58 @@ static const SerialUSBConfig serusbcfg =
 /* Command line related.                                                     */
 /*===========================================================================*/
 
-#define SHELL_WA_SIZE   THD_WA_SIZE( (1024 * 3) )
-uint8_t                 SHELL_PTR[SHELL_WA_SIZE];
+#define SHELL_WA_SIZE   THD_WA_SIZE(2048)
+#define TEST_WA_SIZE    THD_WA_SIZE(256)
 
-static void cmd_mem(BaseChannel *chp, int argc, char *argv[])
-{
+static void cmd_mem(BaseChannel *chp, int argc, char *argv[]) {
   size_t n, size;
 
   (void)argv;
-  if (argc > 0)
-  {
-    chprintf(chp, "Usage: mem\n");
+  if (argc > 0) {
+    chprintf(chp, "Usage: mem\r\n");
     return;
   }
   n = chHeapStatus(NULL, &size);
-  chprintf(chp, "core free memory : %u bytes\n", chCoreStatus());
-  chprintf(chp, "heap fragments   : %u\n", n);
-  chprintf(chp, "heap free total  : %u bytes\n", size);
+  chprintf(chp, "core free memory : %u bytes\r\n", chCoreStatus());
+  chprintf(chp, "heap fragments   : %u\r\n", n);
+  chprintf(chp, "heap free total  : %u bytes\r\n", size);
+}
+
+static void cmd_threads(BaseChannel *chp, int argc, char *argv[]) {
+  static const char *states[] = {THD_STATE_NAMES};
+  Thread *tp;
+
+  (void)argv;
+  if (argc > 0) {
+    chprintf(chp, "Usage: threads\r\n");
+    return;
+  }
+  chprintf(chp, "    addr    stack prio refs     state time\r\n");
+  tp = chRegFirstThread();
+  do {
+    chprintf(chp, "%.8lx %.8lx %4lu %4lu %9s %lu\r\n",
+            (uint32_t)tp, (uint32_t)tp->p_ctx.r13,
+            (uint32_t)tp->p_prio, (uint32_t)(tp->p_refs - 1),
+            states[tp->p_state], (uint32_t)tp->p_time);
+    tp = chRegNextThread(tp);
+  } while (tp != NULL);
+}
+
+static void cmd_test(BaseChannel *chp, int argc, char *argv[]) {
+  Thread *tp;
+
+  (void)argv;
+  if (argc > 0) {
+    chprintf(chp, "Usage: test\r\n");
+    return;
+  }
+  tp = chThdCreateFromHeap(NULL, TEST_WA_SIZE, chThdGetPriority(),
+                           TestThread, chp);
+  if (tp == NULL) {
+    chprintf(chp, "out of memory\r\n");
+    return;
+  }
+  chThdWait(tp);
 }
 
 static const ShellCommand commands[] =
@@ -339,24 +368,43 @@ static const ShellConfig shell_cfg1 =
   commands
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*===========================================================================*/
 /* Generic code.                                                             */
 /*===========================================================================*/
 
-Thread * shelltp = NULL;
-/*
- * Application entry point.
- */
+static Thread * shelltp = NULL;
+
 void initUsb( void )
 {
-  sduObjectInit( &SDU1 );
-  sduStart( &SDU1, &serusbcfg );
-  usbConnectBus( serusbcfg.usbp );
+    sduObjectInit(&SDU1);
+    sduStart(&SDU1, &serusbcfg);
+    usbConnectBus(serusbcfg.usbp);
 
-  shellInit();
-  //if ( !shelltp )
-  shelltp = shellCreateStatic( &shell_cfg1, SHELL_PTR, SHELL_WA_SIZE, NORMALPRIO );
-  //shelltp = shellCreate( &shell_cfg1, SHELL_WA_SIZE, NORMALPRIO );
+    shellInit();
 }
 
 void finitUsb( void )
@@ -366,15 +414,12 @@ void finitUsb( void )
 
 void processShell( void )
 {
-    if ( !shelltp && ( SDU1.config->usbp->state == USB_ACTIVE ) )
-      //shelltp = shellCreate( &shell_cfg1, SHELL_WA_SIZE, NORMALPRIO );
-      shelltp = shellCreateStatic( &shell_cfg1, SHELL_PTR, SHELL_WA_SIZE, NORMALPRIO );
-    else if ( chThdTerminated( shelltp ) )
-    {
-      chThdRelease( shelltp );  // Recovers memory of the previous shell.
-      shelltp = NULL;           // Triggers spawning of a new shell.
+    if (!shelltp && (SDU1.config->usbp->state == USB_ACTIVE))
+        shelltp = shellCreate(&shell_cfg1, SHELL_WA_SIZE, NORMALPRIO);
+    else if (chThdTerminated(shelltp)) {
+        chThdRelease( shelltp );    // Recovers memory of the previous shell.
+        shelltp = NULL;             // Triggers spawning of a new shell.
     }
-    //chThdSleepMilliseconds( 1000 );
 }
 
 
