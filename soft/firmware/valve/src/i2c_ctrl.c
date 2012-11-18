@@ -33,11 +33,10 @@ static msg_t i2cThread( void *arg )
         //chThdSleepMilliseconds( 1 );
         chThdSleepMilliseconds( 500 );
         // Read ADDRESS pins.
-        uint16_t a = palReadPad( IN_PORT, ADDR_0_PIN ) |
-                   ( palReadPad( IN_PORT, ADDR_1_PIN ) << 1 ) |
-                   ( palReadPad( IN_PORT, ADDR_2_PIN ) << 2 );
+        uint16_t a = palReadPad( ADDR_PORT, ADDR_0_PIN ) |
+                   ( palReadPad( ADDR_PORT, ADDR_1_PIN ) << 1 ) |
+                   ( palReadPad( ADDR_PORT, ADDR_2_PIN ) << 2 );
         setLeds( a );
-
 
     	static uint8_t master;
     	static msg_t status;
@@ -47,17 +46,18 @@ static msg_t i2cThread( void *arg )
     	master = isMaster;
     	chMtxUnlock();
     	// I/O with other boards.
-        if ( ( master ) || ( a != 0b00000111 ) )
+        /*if ( ( master ) || ( a != 0b00000111 ) )
     	{
-    	    static int16_t i;
-    	    for ( i=0; i<2; i++ )
+            static int16_t i;
+            // Excluding itself. That's why beginning from 1.
+            for ( i=1; i<I2C_SLAVES_CNT; i++ )
     	    {
     	    	status = RDY_OK;
-                status = i2cMasterTransmitTimeout( &I2CD1, 9, //addr[i],
+                status = i2cMasterTransmitTimeout( &I2CD1, addr[i],
     	    			                           (uint8_t *)&(outs[ i ]), sizeof(uint32_t),
     	    			                           (uint8_t *)&(ins[ i ]),  sizeof(uint32_t),
     	    			                           tmo );
-    	    }
+            }
     	}
     	else
     	{
@@ -68,7 +68,17 @@ static msg_t i2cThread( void *arg )
 	    			                         (uint8_t *)&out, sizeof( out ),
 	    			                         tmo );
 	    	write( out );
-    	}
+        }*/
+        if ( a == 0b00000111 )
+        {
+            static uint32_t out = 0x12345678;
+            status = RDY_OK;
+            status = i2cMasterTransmitTimeout( &I2CD1, testAddr,
+                                               (uint8_t *)(&out), sizeof(out),
+                                               0,  0,
+                                               tmo );
+        }
+
     }
 
     return 0;
@@ -84,9 +94,9 @@ static const I2CConfig i2cfg1 =
 void initI2c( void )
 {
     // Address pins
-    palSetPadMode( GPIOC, ADDR_0_PIN, PAL_MODE_INPUT );
-    palSetPadMode( GPIOC, ADDR_1_PIN, PAL_MODE_INPUT );
-    palSetPadMode( GPIOC, ADDR_2_PIN, PAL_MODE_INPUT );
+    palSetPadMode( ADDR_PORT, ADDR_0_PIN, PAL_MODE_INPUT );
+    palSetPadMode( ADDR_PORT, ADDR_1_PIN, PAL_MODE_INPUT );
+    palSetPadMode( ADDR_PORT, ADDR_2_PIN, PAL_MODE_INPUT );
     palSetPadMode( GPIOB, 6, PAL_MODE_STM32_ALTERNATE_OPENDRAIN );
     palSetPadMode( GPIOB, 7, PAL_MODE_STM32_ALTERNATE_OPENDRAIN );
     chThdSleepMilliseconds( 100 );
@@ -261,6 +271,20 @@ void tst_i2c_io( BaseChannel *chp, int argc, char * argv[] )
 				                         tmo );
 		chprintf( chp, "ok:%d", status );
 	}
+}
+
+void tst_i2c_buffer( BaseChannel *chp, int argc, char * argv[] )
+{
+    if ( argc > 0 )
+    {
+        uint8_t cnt = atoi( argv[0] );
+        uint8_t i;
+        for ( i=0; i<cnt; i++ )
+        {
+            chprintf( chp, "%d ", testBuffer[i] );
+        }
+        chprintf( chp, "ok\r\n" );
+    }
 }
 
 

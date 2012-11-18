@@ -22,6 +22,7 @@ void tst_i2c_set_addr( BaseChannel *chp, int argc, char * argv[] );
 void tst_i2c_set_master( BaseChannel *chp, int argc, char * argv[] );
 void tst_i2c_set_buffer( BaseChannel *chp, int argc, char * argv[] );
 void tst_i2c_io( BaseChannel *chp, int argc, char * argv[] );
+void tst_i2c_buffer( BaseChannel *chp, int argc, char * argv[] );
 
 #endif
 
