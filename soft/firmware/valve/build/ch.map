@@ -2144,7 +2144,7 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_info    0x0001e642     0x10e5 build/obj/i2c_ctrl.o
  .debug_info    0x0001f727      0x5e8 build/obj/led_ctrl.o
 
-.debug_line     0x00000000     0xc10d
+.debug_line     0x00000000     0xc10f
  .debug_line    0x00000000      0x173 build/obj/crt0.o
  .debug_line    0x00000173       0x69 build/obj/vectors.o
  .debug_line    0x000001dc       0x5e build/obj/chcore.o
@@ -2200,33 +2200,33 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_line    0x00007bdd      0x4ea build/obj/serial_usb.o
  .debug_line    0x000080c7       0xde build/obj/rtc.o
  .debug_line    0x000081a5      0x2a8 build/obj/stm32_dma.o
- .debug_line    0x0000844d      0x1dd build/obj/hal_lld.o
- .debug_line    0x0000862a      0x3d5 build/obj/adc_lld.o
- .debug_line    0x000089ff       0xde build/obj/can_lld.o
- .debug_line    0x00008add       0xde build/obj/ext_lld.o
- .debug_line    0x00008bbb       0xde build/obj/gpt_lld.o
- .debug_line    0x00008c99      0x6d1 build/obj/i2c_lld.o
- .debug_line    0x0000936a       0xde build/obj/icu_lld.o
- .debug_line    0x00009448       0xde build/obj/mac_lld.o
- .debug_line    0x00009526      0x2a6 build/obj/pwm_lld.o
- .debug_line    0x000097cc       0xde build/obj/serial_lld.o
- .debug_line    0x000098aa       0xde build/obj/sdc_lld.o
- .debug_line    0x00009988       0xde build/obj/spi_lld.o
- .debug_line    0x00009a66       0xde build/obj/uart_lld.o
- .debug_line    0x00009b44      0x227 build/obj/pal_lld.o
- .debug_line    0x00009d6b      0x550 build/obj/usb_lld.o
- .debug_line    0x0000a2bb       0xde build/obj/rtc_lld.o
- .debug_line    0x0000a399      0x170 build/obj/board.o
- .debug_line    0x0000a509      0x1b8 build/obj/evtimer.o
- .debug_line    0x0000a6c1      0x1f0 build/obj/syscalls.o
- .debug_line    0x0000a8b1      0x3b5 build/obj/shell.o
- .debug_line    0x0000ac66      0x33d build/obj/chprintf.o
- .debug_line    0x0000afa3      0x139 build/obj/main.o
- .debug_line    0x0000b0dc      0x3ae build/obj/usb_ctrl.o
- .debug_line    0x0000b48a      0x2ee build/obj/read_ctrl.o
- .debug_line    0x0000b778      0x29b build/obj/write_ctrl.o
- .debug_line    0x0000ba13      0x49b build/obj/i2c_ctrl.o
- .debug_line    0x0000beae      0x25f build/obj/led_ctrl.o
+ .debug_line    0x0000844d      0x1df build/obj/hal_lld.o
+ .debug_line    0x0000862c      0x3d5 build/obj/adc_lld.o
+ .debug_line    0x00008a01       0xde build/obj/can_lld.o
+ .debug_line    0x00008adf       0xde build/obj/ext_lld.o
+ .debug_line    0x00008bbd       0xde build/obj/gpt_lld.o
+ .debug_line    0x00008c9b      0x6d1 build/obj/i2c_lld.o
+ .debug_line    0x0000936c       0xde build/obj/icu_lld.o
+ .debug_line    0x0000944a       0xde build/obj/mac_lld.o
+ .debug_line    0x00009528      0x2a6 build/obj/pwm_lld.o
+ .debug_line    0x000097ce       0xde build/obj/serial_lld.o
+ .debug_line    0x000098ac       0xde build/obj/sdc_lld.o
+ .debug_line    0x0000998a       0xde build/obj/spi_lld.o
+ .debug_line    0x00009a68       0xde build/obj/uart_lld.o
+ .debug_line    0x00009b46      0x227 build/obj/pal_lld.o
+ .debug_line    0x00009d6d      0x550 build/obj/usb_lld.o
+ .debug_line    0x0000a2bd       0xde build/obj/rtc_lld.o
+ .debug_line    0x0000a39b      0x170 build/obj/board.o
+ .debug_line    0x0000a50b      0x1b8 build/obj/evtimer.o
+ .debug_line    0x0000a6c3      0x1f0 build/obj/syscalls.o
+ .debug_line    0x0000a8b3      0x3b5 build/obj/shell.o
+ .debug_line    0x0000ac68      0x33d build/obj/chprintf.o
+ .debug_line    0x0000afa5      0x139 build/obj/main.o
+ .debug_line    0x0000b0de      0x3ae build/obj/usb_ctrl.o
+ .debug_line    0x0000b48c      0x2ee build/obj/read_ctrl.o
+ .debug_line    0x0000b77a      0x29b build/obj/write_ctrl.o
+ .debug_line    0x0000ba15      0x49b build/obj/i2c_ctrl.o
+ .debug_line    0x0000beb0      0x25f build/obj/led_ctrl.o
 
 .debug_loc      0x00000000     0xcab8
  .debug_loc     0x00000000       0x72 build/obj/crt0.o
