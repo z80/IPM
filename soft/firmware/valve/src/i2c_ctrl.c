@@ -23,7 +23,7 @@ static uint8_t testAddr = 9;
 static uint8_t testCnt = 0;
 static uint8_t testBuffer[ TEST_BUFFER_SIZE ];
 
-static WORKING_AREA( waI2c, 1024 );
+static WORKING_AREA( waI2c, 256 );
 static msg_t i2cThread( void *arg )
 {
     (void)arg;
@@ -108,7 +108,7 @@ void initI2c( void )
 	// Initializing mutex.
     chMtxInit( &mutex );
 	// Creating thread.
-    //chThdCreateStatic( waI2c, sizeof(waI2c), NORMALPRIO, i2cThread, NULL );
+    chThdCreateStatic( waI2c, sizeof(waI2c), NORMALPRIO, i2cThread, NULL );
 }
 
 void state( uint8_t index, uint32_t * val )

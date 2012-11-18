@@ -19,7 +19,7 @@ int main(void)
     initI2c();
     initUsb();
 
-    setLeds( 1 );
+    setLeds( 2 );
 
     while (TRUE)
     {
