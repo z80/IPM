@@ -5,8 +5,8 @@
 
 # Compiler options here.
 ifeq ($(USE_OPT),)
-  #USE_OPT = -O2 -ggdb -fomit-frame-pointer -falign-functions=16
-  USE_OPT = -O0 -g -ggdb -fomit-frame-pointer -falign-functions=16
+  USE_OPT = -O0 -ggdb -fomit-frame-pointer -falign-functions=16 -Wall -Wextra
+  #USE_OPT = -O2 -ggdb -fomit-frame-pointer -falign-functions=16 -Wall -Wextra
 endif
 
 # C specific options here (added to USE_OPT).
@@ -58,19 +58,17 @@ endif
 # Define project name here
 PROJECT = ch
 
-# Imported source files and paths
+# Define linker script file here
+LDSCRIPT= ./portld/STM32F103C8T6.ld
+
+# Imported source files
 CHIBIOS = ../chibios_2.4.x
-include ./board/board.mk
+include $(CHIBIOS)/boards/OLIMEX_STM32_103STK/board.mk
 include $(CHIBIOS)/os/hal/platforms/STM32F1xx/platform.mk
 include $(CHIBIOS)/os/hal/hal.mk
 include $(CHIBIOS)/os/ports/GCC/ARMCMx/STM32F1xx/port.mk
 include $(CHIBIOS)/os/kernel/kernel.mk
-include $(CHIBIOS)/test/test.mk
-
-# Ovverride PORTLD to custom one.
-PORTLD=./portld
-# Define linker script file here
-LDSCRIPT= $(PORTLD)/STM32F103C8T6.ld
+#include $(CHIBIOS)/test/test.mk
 
 # C sources that can be compiled in ARM or THUMB mode depending on the global
 # setting.
@@ -82,15 +80,15 @@ CSRC = $(PORTSRC) \
        $(BOARDSRC) \
        $(CHIBIOS)/os/various/evtimer.c \
        $(CHIBIOS)/os/various/syscalls.c \
-       $(CHIBIOS)/os/various/shell.c \
-       $(CHIBIOS)/os/various/chprintf.c \
-       ./src/main.c \
-       ./src/usb_ctrl.c \
-       ./src/read_ctrl.c \
-       ./src/write_ctrl.c \
-       ./src/i2c_ctrl.c \
-       ./src/led_ctrl.c
+       main.c \
+       i2c_pns.c \
+  	   tmp75.c \
+  	   fake.c \
+  	   lis3.c
+  	   
 
+	   
+       
 # C++ sources that can be compiled in ARM or THUMB mode depending on the global
 # setting.
 CPPSRC =
@@ -120,8 +118,7 @@ ASMSRC = $(PORTASM)
 
 INCDIR = $(PORTINC) $(KERNINC) $(TESTINC) \
          $(HALINC) $(PLATFORMINC) $(BOARDINC) \
-         $(CHIBIOS)/os/various \
-         ./src
+         $(CHIBIOS)/os/various
 
 #
 # Project, sources and paths
@@ -140,7 +137,8 @@ CPPC = $(TRGT)g++
 # Enable loading with g++ only if you need C++ runtime support.
 # NOTE: You can use C++ even without C++ support if you are careful. C++
 #       runtime support makes code size explode.
-LD   = $(TRGT)gcc
+
+LD   = $(TRGT)gcc 
 #LD   = $(TRGT)g++
 CP   = $(TRGT)objcopy
 AS   = $(TRGT)gcc -x assembler-with-cpp
@@ -149,13 +147,13 @@ HEX  = $(CP) -O ihex
 BIN  = $(CP) -O binary
 
 # ARM-specific options here
-AOPT =
+AOPT = 
 
 # THUMB-specific options here
 TOPT = -mthumb -DTHUMB
 
 # Define C warning options here
-CWARN = -Wall -Wextra -Wstrict-prototypes
+CWARN = -Wall -Wextra -Wstrict-prototypes 
 
 # Define C++ warning options here
 CPPWARN = -Wall -Wextra
@@ -201,7 +199,7 @@ UADEFS =
 UINCDIR =
 
 # List the user directory to look for the libraries here
-ULIBDIR =
+ULIBDIR = 
 
 # List all user libraries here
 ULIBS =
@@ -218,3 +216,5 @@ ifeq ($(USE_FWLIB),yes)
 endif
 
 include $(CHIBIOS)/os/ports/GCC/ARMCMx/rules.mk
+
+

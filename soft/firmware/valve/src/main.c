@@ -16,14 +16,14 @@ int main(void)
     initLed();
     initRead();
     initWrite();
-    initI2c();
-    initUsb();
+    //initUsb();
 
     setLeds( 1 );
+    initI2c();
 
     while (TRUE)
     {
-        processShell();
+        //processShell();
         chThdSleepMilliseconds(1000);
     }
     return 0;

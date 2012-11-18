@@ -89,9 +89,14 @@ void initI2c( void )
     palSetPadMode( GPIOC, ADDR_2_PIN, PAL_MODE_INPUT );
     palSetPadMode( GPIOB, 6, PAL_MODE_STM32_ALTERNATE_OPENDRAIN );
     palSetPadMode( GPIOB, 7, PAL_MODE_STM32_ALTERNATE_OPENDRAIN );
+    chThdSleepMilliseconds( 500 );
 
     i2cInit();
-    i2cStart( &I2CD1, &i2cfg1 );
+    chThdSleepMilliseconds( 500 );
+
+    //i2cStart( &I2CD1, &i2cfg1 );
+    chThdSleepMilliseconds( 500 );
+
     // tune ports for I2C1
     int16_t i;
     for ( i=0; i<I2C_SLAVES_CNT; i++ )

@@ -14,6 +14,10 @@ soft/firmware/usbtest/.dep/*
 soft/firmware/usbtest/.settings/*
 soft/firmware/usbtest/build/lst/*
 soft/firmware/usbtest/build/obj/*
+soft/firmware/i2ctest/.dep/*
+soft/firmware/i2ctest/.settings/*
+soft/firmware/i2ctest/build/lst/*
+soft/firmware/i2ctest/build/obj/*
 soft/firmware/tests/build
 soft/firmware/tests/build.app
 
