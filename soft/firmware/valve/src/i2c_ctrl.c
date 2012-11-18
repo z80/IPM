@@ -30,8 +30,8 @@ static msg_t i2cThread( void *arg )
     chRegSetThreadName( "i" );
     while ( 1 )
     {
-        //chThdSleepMilliseconds( 1 );
-        chThdSleepMilliseconds( 500 );
+        chThdSleepMilliseconds( 1 );
+        //chThdSleepMilliseconds( 500 );
         // Read ADDRESS pins.
         uint16_t a = palReadPad( ADDR_PORT, ADDR_0_PIN ) |
                    ( palReadPad( ADDR_PORT, ADDR_1_PIN ) << 1 ) |
@@ -41,7 +41,7 @@ static msg_t i2cThread( void *arg )
     	static uint8_t master;
     	static msg_t status;
         static systime_t tmo;
-        tmo = MS2ST( 1000 );
+        tmo = MS2ST( 100 );
     	chMtxLock( &mutex );
     	master = isMaster;
     	chMtxUnlock();
@@ -250,7 +250,7 @@ void tst_i2c_io( BaseChannel *chp, int argc, char * argv[] )
 	{
 		static msg_t status;
 	    static systime_t tmo;
-	    tmo = MS2ST( 1000 );
+        tmo = MS2ST( 1000 );
 		status = RDY_OK;
 		status = i2cMasterTransmitTimeout( &I2CD1, testAddr,
 				                           testBuffer, testCnt,

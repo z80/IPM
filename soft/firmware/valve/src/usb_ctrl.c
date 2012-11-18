@@ -11,6 +11,10 @@
 #include "shell.h"
 #include "chprintf.h"
 
+#include "read_ctrl.h"
+#include "write_ctrl.h"
+#include "i2c_ctrl.h"
+
 /*===========================================================================*/
 /* USB related stuff.                                                        */
 /*===========================================================================*/
@@ -296,8 +300,7 @@ static const SerialUSBConfig serusbcfg = {
 /* Command line related.                                                     */
 /*===========================================================================*/
 
-#define SHELL_WA_SIZE   THD_WA_SIZE(2048)
-#define TEST_WA_SIZE    THD_WA_SIZE(256)
+#define SHELL_WA_SIZE   THD_WA_SIZE( (1024 * 3) )
 
 static void cmd_mem(BaseChannel *chp, int argc, char *argv[]) {
   size_t n, size;
@@ -333,33 +336,16 @@ static void cmd_threads(BaseChannel *chp, int argc, char *argv[]) {
   } while (tp != NULL);
 }
 
-static void cmd_test(BaseChannel *chp, int argc, char *argv[]) {
-  Thread *tp;
-
-  (void)argv;
-  if (argc > 0) {
-    chprintf(chp, "Usage: test\r\n");
-    return;
-  }
-  tp = chThdCreateFromHeap(NULL, TEST_WA_SIZE, chThdGetPriority(),
-                           TestThread, chp);
-  if (tp == NULL) {
-    chprintf(chp, "out of memory\r\n");
-    return;
-  }
-  chThdWait(tp);
-}
-
 static const ShellCommand commands[] =
 {
     { "mem", cmd_mem },
-    { "st",   cmd_state },
+    /*{ "st",   cmd_state },
     { "out",  cmd_set_output },
     { "i2c_set_addr",   tst_i2c_set_addr },
     { "i2c_set_master", tst_i2c_set_master },
     { "i2c_set_buffer", tst_i2c_set_buffer },
     { "i2c_io",         tst_i2c_io },
-    { "i2c_buffer",     tst_i2c_buffer },
+    { "i2c_buffer",     tst_i2c_buffer },*/
     { NULL,         NULL }
 };
 
