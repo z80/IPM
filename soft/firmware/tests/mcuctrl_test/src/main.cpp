@@ -34,6 +34,14 @@ int main( int argc, char * argv[] )
     cnt = c.read( stri );
     std::cout << stri;
 
+    cnt = c.write( "i2c_io\r\n" );
+    cnt = c.read( stri );
+    std::cout << stri;
+
+    cnt = c.write( "i2c_io\r\n" );
+    cnt = c.read( stri );
+    std::cout << stri;
+
     cnt = c.write( "i2c_buffer 4\r\n" );
     cnt = c.read( stri );
     std::cout << stri;

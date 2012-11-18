@@ -23,7 +23,7 @@ int main(void)
 
     while (TRUE)
     {
-        //processShell();
+        processShell();
         chThdSleepMilliseconds(1000);
     }
     return 0;

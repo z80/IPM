@@ -338,14 +338,15 @@ static void cmd_threads(BaseChannel *chp, int argc, char *argv[]) {
 
 static const ShellCommand commands[] =
 {
-    { "mem", cmd_mem },
-    /*{ "st",   cmd_state },
-    { "out",  cmd_set_output },
+    { "mem",     cmd_mem },
+    { "threads", cmd_threads },
+    { "st",      cmd_state },
+    { "out",     cmd_set_output },
     { "i2c_set_addr",   tst_i2c_set_addr },
     { "i2c_set_master", tst_i2c_set_master },
     { "i2c_set_buffer", tst_i2c_set_buffer },
     { "i2c_io",         tst_i2c_io },
-    { "i2c_buffer",     tst_i2c_buffer },*/
+    { "i2c_buffer",     tst_i2c_buffer },
     { NULL,         NULL }
 };
 
