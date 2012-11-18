@@ -77,8 +77,8 @@ static msg_t i2cThread( void *arg )
 static const I2CConfig i2cfg1 =
 {
     OPMODE_I2C,
-    1000, //400000,
-    FAST_DUTY_CYCLE_2,
+    10000,
+    STD_DUTY_CYCLE,
 };
 
 void initI2c( void )
@@ -89,13 +89,12 @@ void initI2c( void )
     palSetPadMode( GPIOC, ADDR_2_PIN, PAL_MODE_INPUT );
     palSetPadMode( GPIOB, 6, PAL_MODE_STM32_ALTERNATE_OPENDRAIN );
     palSetPadMode( GPIOB, 7, PAL_MODE_STM32_ALTERNATE_OPENDRAIN );
-    chThdSleepMilliseconds( 500 );
+    chThdSleepMilliseconds( 100 );
 
     i2cInit();
-    chThdSleepMilliseconds( 500 );
-
-    //i2cStart( &I2CD1, &i2cfg1 );
-    chThdSleepMilliseconds( 500 );
+    //chThdSleepMilliseconds( 100 );
+    i2cStart( &I2CD1, &i2cfg1 );
+    //chThdSleepMilliseconds( 200 );
 
     // tune ports for I2C1
     int16_t i;

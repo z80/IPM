@@ -16,10 +16,10 @@ int main(void)
     initLed();
     initRead();
     initWrite();
-    //initUsb();
+    initI2c();
+    initUsb();
 
     setLeds( 1 );
-    initI2c();
 
     while (TRUE)
     {

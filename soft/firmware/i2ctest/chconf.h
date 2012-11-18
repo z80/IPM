@@ -40,7 +40,10 @@
 #define _CHCONF_H_
 
 /*===========================================================================*/
-/* Kernel parameters.                                                        */
+/**
+ * @name Kernel parameters and options
+ * @{
+ */
 /*===========================================================================*/
 
 /**
@@ -64,7 +67,7 @@
  *          and generally faster.
  */
 #if !defined(CH_TIME_QUANTUM) || defined(__DOXYGEN__)
-#define CH_TIME_QUANTUM                 0//20
+#define CH_TIME_QUANTUM                 20
 #endif
 
 /**
@@ -99,8 +102,13 @@
 #define CH_NO_IDLE_THREAD               FALSE
 #endif
 
+/** @} */
+
 /*===========================================================================*/
-/* Performance options.                                                      */
+/**
+ * @name Performance options
+ * @{
+ */
 /*===========================================================================*/
 
 /**
@@ -112,11 +120,16 @@
  * @note    The default is @p TRUE.
  */
 #if !defined(CH_OPTIMIZE_SPEED) || defined(__DOXYGEN__)
-#define CH_OPTIMIZE_SPEED               FALSE
+#define CH_OPTIMIZE_SPEED               TRUE
 #endif
 
+/** @} */
+
 /*===========================================================================*/
-/* Subsystem options.                                                        */
+/**
+ * @name Subsystem options
+ * @{
+ */
 /*===========================================================================*/
 
 /**
@@ -193,7 +206,7 @@
  * @note    Requires @p CH_USE_MUTEXES.
  */
 #if !defined(CH_USE_CONDVARS) || defined(__DOXYGEN__)
-#define CH_USE_CONDVARS                 FALSE
+#define CH_USE_CONDVARS                 TRUE
 #endif
 
 /**
@@ -227,7 +240,7 @@
  * @note    Requires @p CH_USE_EVENTS.
  */
 #if !defined(CH_USE_EVENTS_TIMEOUT) || defined(__DOXYGEN__)
-#define CH_USE_EVENTS_TIMEOUT           FALSE
+#define CH_USE_EVENTS_TIMEOUT           TRUE
 #endif
 
 /**
@@ -297,7 +310,7 @@
  * @note    Mutexes are recommended.
  */
 #if !defined(CH_USE_HEAP) || defined(__DOXYGEN__)
-#define CH_USE_HEAP                     FALSE
+#define CH_USE_HEAP                     TRUE
 #endif
 
 /**
@@ -322,7 +335,7 @@
  * @note    The default is @p TRUE.
  */
 #if !defined(CH_USE_MEMPOOLS) || defined(__DOXYGEN__)
-#define CH_USE_MEMPOOLS                 FALSE
+#define CH_USE_MEMPOOLS                 TRUE
 #endif
 
 /**
@@ -335,12 +348,18 @@
  * @note    Requires @p CH_USE_HEAP and/or @p CH_USE_MEMPOOLS.
  */
 #if !defined(CH_USE_DYNAMIC) || defined(__DOXYGEN__)
-#define CH_USE_DYNAMIC                  FALSE
+#define CH_USE_DYNAMIC                  TRUE
 #endif
 
+/** @} */
+
 /*===========================================================================*/
-/* Debug options.                                                            */
+/**
+ * @name Debug options
+ * @{
+ */
 /*===========================================================================*/
+
 /**
  * @brief   Debug option, system state check.
  * @details If enabled the correct call protocol for system APIs is checked
@@ -383,7 +402,7 @@
  * @note    The default is @p FALSE.
  */
 #if !defined(CH_DBG_ENABLE_TRACE) || defined(__DOXYGEN__)
-#define CH_DBG_ENABLE_TRACE             FALSE
+#define CH_DBG_ENABLE_TRACE             TRUE
 #endif
 
 /**
@@ -425,8 +444,13 @@
 #define CH_DBG_THREADS_PROFILING        TRUE
 #endif
 
+/** @} */
+
 /*===========================================================================*/
-/* Kernel hooks.                                                             */
+/**
+ * @name Kernel hooks
+ * @{
+ */
 /*===========================================================================*/
 
 /**
@@ -506,6 +530,8 @@
   /* System halt code here.*/                                               \
 }
 #endif
+
+/** @} */
 
 /*===========================================================================*/
 /* Port-specific settings (override port settings defaulted in chcore.h).    */
