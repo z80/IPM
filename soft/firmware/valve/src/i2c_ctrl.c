@@ -63,10 +63,10 @@ static msg_t i2cThread( void *arg )
     	{
     		static uint32_t out, in;
     		in = valueRead();
-	    	status = i2cSlaveReceiveTimeout( &I2CD1, addr[0],
-	    			                         (uint8_t *)&in,  sizeof( in ),
-	    			                         (uint8_t *)&out, sizeof( out ),
-	    			                         tmo );
+            status = i2cSlaveIoTimeout( &I2CD1, addr[0],
+                                        (uint8_t *)&in,  sizeof( in ),
+                                        (uint8_t *)&out, sizeof( out ),
+                                        tmo );
 	    	write( out );
         }*/
         if ( a == 0b00000111 )
@@ -195,10 +195,10 @@ uint8_t testReceive( uint8_t addr, uint32_t * val )
     static systime_t tmo;
     tmo = MS2ST( 1000 );
 	status = RDY_OK;
-	status = i2cSlaveReceiveTimeout( &I2CD1, addr,
-			                         (uint8_t *)val,  sizeof( uint32_t ),
-			                         0, 0,
-			                         tmo );
+    status = i2cSlaveIoTimeout( &I2CD1, addr,
+                                (uint8_t *)val,  sizeof( uint32_t ),
+                                0, 0,
+                                tmo );
     return ( status = RDY_OK ) ? 0 : 1;
 }
 
@@ -265,10 +265,10 @@ void tst_i2c_io( BaseChannel *chp, int argc, char * argv[] )
 	    static systime_t tmo;
 	    tmo = MS2ST( 1000 );
 		status = RDY_OK;
-		status = i2cSlaveReceiveTimeout( &I2CD1, testAddr,
-				                         0,  0,
-				                         testBuffer, testCnt,
-				                         tmo );
+        status = i2cSlaveIoTimeout( &I2CD1, testAddr,
+                                    testBuffer, testCnt,
+                                    0,  0,
+                                    tmo );
 		chprintf( chp, "ok:%d", status );
 	}
 }
