@@ -905,135 +905,65 @@ msg_t i2c_lld_master_transmit_timeout(I2CDriver *i2cp, i2caddr_t addr,
 
 #if I2C_USE_SLAVE_MODE
 
-msg_t i2c_lld_slave_receive_timeout( I2CDriver *i2cp, i2caddr_t addr,
-                                     uint8_t * rxbuf, size_t rxbytes,
-                                     const uint8_t * txbuf, size_t txbytes,
-                                     systime_t timeout )
+msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
+                                uint8_t * rxbuf, size_t rxbytes,
+                                const uint8_t * txbuf, size_t txbytes,
+                                systime_t timeout )
 {
-  I2C_TypeDef *dp = i2cp->i2c;
-  VirtualTimer vt;
+    I2C_TypeDef *dp = i2cp->i2c;
+    VirtualTimer vt;
 
-  #if defined(STM32F1XX_I2C)
-    chDbgCheck( ((rxbytes == 0) || ((rxbytes > 1) && (rxbuf != NULL))),
-                "i2c_lld_master_transmit_timeout");
-  #endif
+    /* Global timeout for the whole operation.*/
+    if (timeout != TIME_INFINITE)
+        chVTSetI(&vt, timeout, i2c_lld_safety_timeout, (void *)i2cp);
 
-  /* Global timeout for the whole operation.*/
-  if (timeout != TIME_INFINITE)
-    chVTSetI(&vt, timeout, i2c_lld_safety_timeout, (void *)i2cp);
-
-  /* Releases the lock from high level driver.*/
-  chSysUnlock();
-
-  /* Initializes driver fields, LSB = 1 -> read.*/
-  i2cp->addr = (addr << 1) | 0x01;
-  i2cp->errors = 0;
-
-  /* RX DMA setup.*/
-  dmaStreamSetMemory0( i2cp->dmarx, rxbuf );
-  dmaStreamSetTransactionSize( i2cp->dmarx, rxbytes );
-
-  /* TX DMA setup.*/
-  dmaStreamSetMemory0( i2cp->dmatx, txbuf );
-  dmaStreamSetTransactionSize( i2cp->dmatx, txbytes );
-
-  /* Waits until BUSY flag is reset and the STOP from the previous operation
-     is completed, alternatively for a timeout condition.*/
-  while ( (dp->SR2 & I2C_SR2_BUSY) || (dp->CR1 & I2C_CR1_STOP) )
-  {
-    chSysLock();
-    if ((timeout != TIME_INFINITE) && !chVTIsArmedI(&vt))
-      return RDY_TIMEOUT;
+    /* Releases the lock from high level driver.*/
     chSysUnlock();
-  }
 
-  /* This lock will be released in high level driver.*/
-  chSysLock();
+    /* Initializes driver fields, LSB = 1 -> read.*/
+    i2cp->addr = (addr << 1) | 0x01;
+    i2cp->errors = 0;
 
-  /* Atomic check on the timer in order to make sure that a timeout didn't
-     happen outside the critical zone.*/
-  if ((timeout != TIME_INFINITE) && !chVTIsArmedI(&vt))
-    return RDY_TIMEOUT;
+    /* RX DMA setup.*/
+    dmaStreamSetMemory0( i2cp->dmarx, rxbuf );
+    dmaStreamSetTransactionSize( i2cp->dmarx, rxbytes );
 
-  /* Starts the operation.*/
-  dp->OAR1 = ((addr << 1) & (0xFE));
-  dp->CR2 |= I2C_CR2_ITEVTEN;
-  dp->CR1 |= /*I2C_CR1_START*/ I2C_CR1_ACK;
+    /* TX DMA setup.*/
+    dmaStreamSetMemory0( i2cp->dmatx, txbuf );
+    dmaStreamSetTransactionSize( i2cp->dmatx, txbytes );
 
+    /* Waits until BUSY flag is reset and the STOP from the previous operation
+       is completed, alternatively for a timeout condition.*/
+    while ( (dp->SR2 & I2C_SR2_BUSY) || (dp->CR1 & I2C_CR1_STOP) )
+    {
+        chSysLock();
+        if ((timeout != TIME_INFINITE) && !chVTIsArmedI(&vt))
+            return RDY_TIMEOUT;
+        chSysUnlock();
+    }
 
-  /* Waits for the operation completion or a timeout.*/
-  i2cp->thread = chThdSelf();
-  chSchGoSleepS(THD_STATE_SUSPENDED);
-  if ((timeout != TIME_INFINITE) && chVTIsArmedI(&vt))
-    chVTResetI(&vt);
+    /* This lock will be released in high level driver.*/
+    chSysLock();
 
-  return chThdSelf()->p_u.rdymsg;
+    /* Atomic check on the timer in order to make sure that a timeout didn't
+       happen outside the critical zone.*/
+    if ((timeout != TIME_INFINITE) && !chVTIsArmedI(&vt))
+        return RDY_TIMEOUT;
+
+    /* Starts the operation.*/
+    dp->OAR1 = ((addr << 1) & (0xFE));
+    dp->CR2 |= I2C_CR2_ITEVTEN;
+    dp->CR1 |= /*I2C_CR1_START*/ I2C_CR1_ACK;
+
+    /* Waits for the operation completion or a timeout.*/
+    i2cp->thread = chThdSelf();
+    chSchGoSleepS(THD_STATE_SUSPENDED);
+    if ((timeout != TIME_INFINITE) && chVTIsArmedI(&vt))
+        chVTResetI(&vt);
+
+    return chThdSelf()->p_u.rdymsg;
 }
 
-msg_t i2c_lld_slave_transmit_timeout( I2CDriver *i2cp, i2caddr_t addr,
-                                      const uint8_t * txbuf, size_t txbytes,
-                                      uint8_t * rxbuf, size_t rxbytes,
-                                      systime_t timeout )
-{
-	  I2C_TypeDef *dp = i2cp->i2c;
-	  VirtualTimer vt;
-
-	  #if defined(STM32F1XX_I2C)
-	    chDbgCheck( ((rxbytes == 0) || ((rxbytes > 1) && (rxbuf != NULL))),
-	                "i2c_lld_master_transmit_timeout");
-	  #endif
-
-	  /* Global timeout for the whole operation.*/
-	  if (timeout != TIME_INFINITE)
-	    chVTSetI(&vt, timeout, i2c_lld_safety_timeout, (void *)i2cp);
-
-	  /* Releases the lock from high level driver.*/
-	  chSysUnlock();
-
-	  /* Initializes driver fields, LSB = 0 -> transmit.*/
-	  i2cp->addr = (addr << 1);
-	  i2cp->errors = 0;
-
-	  /* TX DMA setup.*/
-	  dmaStreamSetMemory0( i2cp->dmatx, txbuf );
-	  dmaStreamSetTransactionSize( i2cp->dmatx, txbytes );
-
-	  /* RX DMA setup.*/
-	  dmaStreamSetMemory0( i2cp->dmarx, rxbuf );
-	  dmaStreamSetTransactionSize( i2cp->dmarx, rxbytes );
-
-	  /* Waits until BUSY flag is reset and the STOP from the previous operation
-	     is completed, alternatively for a timeout condition.*/
-	  while ( (dp->SR2 & I2C_SR2_BUSY) || (dp->CR1 & I2C_CR1_STOP) )
-	  {
-	    chSysLock();
-	    if ((timeout != TIME_INFINITE) && !chVTIsArmedI(&vt))
-	      return RDY_TIMEOUT;
-	    chSysUnlock();
-	  }
-
-	  /* This lock will be released in high level driver.*/
-	  chSysLock();
-
-	  /* Atomic check on the timer in order to make sure that a timeout didn't
-	     happen outside the critical zone.*/
-	  if ((timeout != TIME_INFINITE) && !chVTIsArmedI(&vt))
-	    return RDY_TIMEOUT;
-
-	  /* Starts the operation.*/
-	  dp->OAR1 = ((addr << 1) & (0xFE));
-	  dp->CR2 |= I2C_CR2_ITEVTEN;
-	  dp->CR1 |= /*I2C_CR1_START |*/ I2C_CR1_ACK;
-
-
-	  /* Waits for the operation completion or a timeout.*/
-	  i2cp->thread = chThdSelf();
-	  chSchGoSleepS(THD_STATE_SUSPENDED);
-	  if ((timeout != TIME_INFINITE) && chVTIsArmedI(&vt))
-	    chVTResetI(&vt);
-
-	  return chThdSelf()->p_u.rdymsg;
-}
 
 #endif
 

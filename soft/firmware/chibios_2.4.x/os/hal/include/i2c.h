@@ -145,16 +145,12 @@ extern "C" {
 #endif /* I2C_USE_MUTUAL_EXCLUSION */
 
 #if I2C_USE_SLAVE_MODE
-  msg_t i2cSlaveReceiveTimeout( I2CDriver * i2cp,
-		                        i2caddr_t addr,
-		                        uint8_t * rxbuf, size_t rxbytes,
-		                        const uint8_t * txbuf, size_t txbytes,
-		                        systime_t timeout );
-  msg_t i2cSlaveTransmitTimeout( I2CDriver * i2cp,
-          	  	  	  	         i2caddr_t addr,
-                                 const uint8_t * txbuf, size_t txbytes,
-                                 uint8_t * rxbuf, size_t rxbytes,
-                                 systime_t timeout );
+  msg_t i2cSlaveIoTimeout( I2CDriver * i2cp,
+                           i2caddr_t addr,
+                           uint8_t * rxbuf, size_t rxbytes,
+                           const uint8_t * txbuf, size_t txbytes,
+                           systime_t timeout );
+
 #endif /* I2C_ISE_SLAVE_MODE */
 
 #ifdef __cplusplus
