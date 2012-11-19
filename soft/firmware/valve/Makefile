@@ -6,7 +6,9 @@
 # Compiler options here.
 ifeq ($(USE_OPT),)
   #USE_OPT = -O2 -ggdb -fomit-frame-pointer -falign-functions=16
+  # -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
   USE_OPT = -O0 -g -ggdb -fomit-frame-pointer -falign-functions=16
+  # -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
 endif
 
 # C specific options here (added to USE_OPT).
@@ -89,7 +91,17 @@ CSRC = $(PORTSRC) \
        ./src/read_ctrl.c \
        ./src/write_ctrl.c \
        ./src/i2c_ctrl.c \
-       ./src/led_ctrl.c
+       ./src/led_ctrl.c #\
+       #./src/cpal_usercallback.c \
+       #./cpal_i2c/cpal_hal.c \
+       #./cpal_i2c/cpal_i2c.c \
+       #./cpal_i2c/cpal_i2c_hal_stm32f10x.c \
+       #./stdperiph/stm32f10x_dma.c \
+       #./stdperiph/stm32f10x_i2c.c \
+       #./stdperiph/stm32f10x_rcc.c \
+       #./stdperiph/stm32f10x_gpio.c \
+       #./stdperiph/system_stm32f10x.c \
+       #./stdperiph/misc.c
 
 # C++ sources that can be compiled in ARM or THUMB mode depending on the global
 # setting.
@@ -121,7 +133,9 @@ ASMSRC = $(PORTASM)
 INCDIR = $(PORTINC) $(KERNINC) $(TESTINC) \
          $(HALINC) $(PLATFORMINC) $(BOARDINC) \
          $(CHIBIOS)/os/various \
-         ./src
+         ./src #\
+         #./cpal_i2c \
+         #./stdperiph
 
 #
 # Project, sources and paths
