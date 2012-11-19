@@ -253,7 +253,7 @@ void tst_i2c_io( BaseChannel *chp, int argc, char * argv[] )
         tmo = MS2ST( 1000 );
 		status = RDY_OK;
 		status = i2cMasterTransmitTimeout( &I2CD1, testAddr,
-				                           testBuffer, testCnt,
+                                           testBuffer, /*testCnt*/ 4,
 				                           0,  0,
 				                           tmo );
 	    chprintf( chp, "ok:%d", status );
@@ -266,7 +266,7 @@ void tst_i2c_io( BaseChannel *chp, int argc, char * argv[] )
 	    tmo = MS2ST( 1000 );
 		status = RDY_OK;
         status = i2cSlaveIoTimeout( &I2CD1, testAddr,
-                                    testBuffer, testCnt,
+                                    testBuffer, /*testCnt*/ 4,
                                     0,  0,
                                     tmo );
 		chprintf( chp, "ok:%d", status );

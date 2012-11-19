@@ -22,7 +22,7 @@ int main( int argc, char * argv[] )
     cnt = c.read( stri );
     std::cout << stri;
 
-    cnt = c.write( "i2c_set_buffer 4 3 2 1\r\n" );
+    cnt = c.write( "i2c_set_buffer 1 3 2 1\r\n" );
     cnt = c.read( stri );
     std::cout << stri;
 
