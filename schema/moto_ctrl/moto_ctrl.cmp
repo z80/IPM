@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Tue 20 Nov 2012 10:37:23 PM MSK
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Tue 20 Nov 2012 11:19:13 PM MSK
 
 BeginCmp
 TimeStamp = /509DDBA2/509E3AD6;
@@ -533,24 +533,24 @@ IdModule  = lga14;
 EndCmp
 
 BeginCmp
-TimeStamp = /509784BF;
+TimeStamp = /50ABD6A8;
 Reference = P1;
-ValeurCmp = CONN_2;
-IdModule  = PIN_ARRAY_2X1;
+ValeurCmp = SETUP;
+IdModule  = PIN_ARRAY_8x1;
 EndCmp
 
 BeginCmp
 TimeStamp = /509E4966;
 Reference = P2;
 ValeurCmp = power-1;
-IdModule  = PIN_ARRAY_2X1;
+IdModule  = PIN_ARRAY_12x1;
 EndCmp
 
 BeginCmp
 TimeStamp = /509E4965;
 Reference = P3;
 ValeurCmp = power-2;
-IdModule  = PIN_ARRAY_2X1;
+IdModule  = PIN_ARRAY_12x1;
 EndCmp
 
 BeginCmp
@@ -563,22 +563,22 @@ EndCmp
 BeginCmp
 TimeStamp = /50ABC853;
 Reference = P5;
-ValeurCmp = CONN_2;
-IdModule  = PIN_ARRAY_2X1;
+ValeurCmp = PWR-IN;
+IdModule  = clemm-02;
 EndCmp
 
 BeginCmp
 TimeStamp = /50ABC84B;
 Reference = P6;
-ValeurCmp = CONN_2;
-IdModule  = PIN_ARRAY_2X1;
+ValeurCmp = PWR-OUT;
+IdModule  = clemm-02;
 EndCmp
 
 BeginCmp
 TimeStamp = /509DDBA2/509DDF04;
 Reference = P7;
 ValeurCmp = CONN_6X2;
-IdModule  = pin_array_6x2;
+IdModule  = idc-6x2-2mm;
 EndCmp
 
 BeginCmp
@@ -680,6 +680,20 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
+TimeStamp = /50ABD6A6;
+Reference = R7;
+ValeurCmp = 10k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50ABD6A4;
+Reference = R8;
+ValeurCmp = 10k;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
 TimeStamp = /5096B3CA;
 Reference = R9;
 ValeurCmp = 12k;
@@ -697,6 +711,13 @@ BeginCmp
 TimeStamp = /509B76B6;
 Reference = R11;
 ValeurCmp = 100;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /50ABD6A2;
+Reference = R12;
+ValeurCmp = 10k;
 IdModule  = SM0805;
 EndCmp
 
