@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  20/11/2012 17:14:25
+# EESchema Netlist Version 1.1 created  20/11/2012 17:39:58
 (
  ( /509E4978 $noname  C18 10u {Lib=C}
   (    1 VDD )
@@ -546,49 +546,44 @@
   (    1 N-000050 )
   (    2 GND )
  )
- ( /509DDBA2/50AB81C3 $noname  J7 DB9 {Lib=DB9}
-  (    1 GND )
-  (    2 /ev_moto/B4- )
-  (    3 /ev_moto/B4+ )
-  (    4 /ev_moto/A4- )
-  (    5 /ev_moto/A4+ )
-  (    6 /ev_moto/B4- )
-  (    7 /ev_moto/B4+ )
-  (    8 /ev_moto/A4- )
-  (    9 /ev_moto/A4+ )
- )
- ( /509DDBA2/50AB81A9 $noname  J6 DB9 {Lib=DB9}
-  (    1 GND )
-  (    2 /ev_moto/B3- )
-  (    3 /ev_moto/B3+ )
-  (    4 /ev_moto/A3- )
-  (    5 /ev_moto/A3+ )
-  (    6 /ev_moto/B3- )
-  (    7 /ev_moto/B3+ )
-  (    8 /ev_moto/A3- )
-  (    9 /ev_moto/A3+ )
- )
- ( /509DDBA2/50AB8192 $noname  J5 DB9 {Lib=DB9}
-  (    1 GND )
-  (    2 /ev_moto/B2- )
-  (    3 /ev_moto/B2+ )
-  (    4 /ev_moto/A2- )
-  (    5 /ev_moto/A2+ )
-  (    6 /ev_moto/B2- )
-  (    7 /ev_moto/B2+ )
-  (    8 /ev_moto/A2- )
-  (    9 /ev_moto/A2+ )
- )
- ( /509DDBA2/50AB80AA $noname  J4 DB9 {Lib=DB9}
-  (    1 GND )
-  (    2 /ev_moto/B1- )
+ ( /509DDBA2/50AB87C9 $noname  J4 DB37 {Lib=DB37}
+  (    1 /ev_moto/A1+ )
+  (    2 /ev_moto/A1- )
   (    3 /ev_moto/B1+ )
-  (    4 /ev_moto/A1- )
-  (    5 /ev_moto/A1+ )
-  (    6 /ev_moto/B1- )
-  (    7 /ev_moto/B1+ )
-  (    8 /ev_moto/A1- )
-  (    9 /ev_moto/A1+ )
+  (    4 /ev_moto/B1- )
+  (    5 GND )
+  (    6 /ev_moto/A2+ )
+  (    7 /ev_moto/A2- )
+  (    8 /ev_moto/B2+ )
+  (    9 /ev_moto/B2- )
+  (   10 /ev_moto/A3+ )
+  (   11 /ev_moto/A3- )
+  (   12 /ev_moto/B3+ )
+  (   13 /ev_moto/B3- )
+  (   14 GND )
+  (   15 /ev_moto/A4+ )
+  (   16 /ev_moto/A4- )
+  (   17 /ev_moto/B4+ )
+  (   18 /ev_moto/B4- )
+  (   19 ? )
+  (   20 /ev_moto/A1+ )
+  (   21 /ev_moto/A1- )
+  (   22 /ev_moto/B1+ )
+  (   23 /ev_moto/B1- )
+  (   24 /ev_moto/A2+ )
+  (   25 /ev_moto/A2- )
+  (   26 /ev_moto/B2+ )
+  (   27 /ev_moto/B2- )
+  (   28 GND )
+  (   29 /ev_moto/A3+ )
+  (   30 /ev_moto/A3- )
+  (   31 /ev_moto/B3+ )
+  (   32 /ev_moto/B3- )
+  (   33 /ev_moto/A4+ )
+  (   34 /ev_moto/A4- )
+  (   35 /ev_moto/B4+ )
+  (   36 /ev_moto/B4- )
+  (   37 GND )
  )
  ( /509DDBA2/50AB7E68 $noname  C62 100n {Lib=C}
   (    1 VDD )
@@ -596,7 +591,7 @@
  )
  ( /509DDBA2/50AB7E65 $noname  adc4 AD5300 {Lib=AD5300}
   (    1 VDD )
-  (    4 N-000227 )
+  (    4 N-000226 )
   (    5 /ev_moto/~analog3-cs~ )
   (    6 /ev_moto/dac-sclk )
   (    7 /ev_moto/dac-din )
@@ -612,7 +607,7 @@
  )
  ( /509DDBA2/50AB7E60 $noname  adc5 AD5300 {Lib=AD5300}
   (    1 VDD )
-  (    4 N-000228 )
+  (    4 N-000225 )
   (    5 /ev_moto/~analog4-cs~ )
   (    6 /ev_moto/dac-sclk )
   (    7 /ev_moto/dac-din )
@@ -624,80 +619,80 @@
  )
  ( /509DDBA2/50AB7E5B $noname  D9 AD8607 {Lib=AD8607}
   (    1 /ev_moto/analog-out3 )
-  (    2 N-000231 )
-  (    3 N-000230 )
+  (    2 N-000229 )
+  (    3 N-000228 )
   (    4 GND )
-  (    5 N-000229 )
-  (    6 N-000144 )
+  (    5 N-000224 )
+  (    6 N-000137 )
   (    7 /ev_moto/analog-out4 )
   (    8 +5V )
  )
  ( /509DDBA2/50AB7E5A $noname  R135 10k {Lib=R}
-  (    1 N-000227 )
-  (    2 N-000230 )
+  (    1 N-000226 )
+  (    2 N-000228 )
  )
  ( /509DDBA2/50AB7E59 $noname  C66 220n {Lib=C}
-  (    1 N-000230 )
+  (    1 N-000228 )
   (    2 GND )
  )
  ( /509DDBA2/50AB7E56 $noname  C67 220n {Lib=C}
-  (    1 N-000229 )
+  (    1 N-000224 )
   (    2 GND )
  )
  ( /509DDBA2/50AB7E55 $noname  R136 10k {Lib=R}
-  (    1 N-000228 )
-  (    2 N-000229 )
+  (    1 N-000225 )
+  (    2 N-000224 )
  )
  ( /509DDBA2/50AB7E54 $noname  R140 10k {Lib=R}
-  (    1 N-000231 )
+  (    1 N-000229 )
   (    2 GND )
  )
  ( /509DDBA2/50AB7E52 $noname  R142 10k {Lib=R}
   (    1 /ev_moto/analog-out3 )
-  (    2 N-000231 )
+  (    2 N-000229 )
  )
  ( /509DDBA2/50AB7E51 $noname  C69 220n {Lib=C}
   (    1 /ev_moto/analog-out3 )
-  (    2 N-000231 )
+  (    2 N-000229 )
  )
  ( /509DDBA2/50AB7E50 $noname  R139 10k {Lib=R}
   (    1 /ev_moto/analog-out3 )
-  (    2 N-000231 )
+  (    2 N-000229 )
  )
  ( /509DDBA2/50AB7E4D $noname  C72 100n {Lib=C}
   (    1 +5V )
   (    2 GND )
  )
  ( /509DDBA2/50AB7E4A $noname  R144 10k {Lib=R}
-  (    1 N-000144 )
+  (    1 N-000137 )
   (    2 GND )
  )
  ( /509DDBA2/50AB7E48 $noname  R146 10k {Lib=R}
   (    1 /ev_moto/analog-out4 )
-  (    2 N-000144 )
+  (    2 N-000137 )
  )
  ( /509DDBA2/50AB7E47 $noname  C71 220n {Lib=C}
   (    1 /ev_moto/analog-out4 )
-  (    2 N-000144 )
+  (    2 N-000137 )
  )
  ( /509DDBA2/50AB7E46 $noname  R148 10k {Lib=R}
   (    1 /ev_moto/analog-out4 )
-  (    2 N-000144 )
+  (    2 N-000137 )
  )
  ( /509DDBA2/50AB7E1E $noname  R147 10k {Lib=R}
   (    1 /ev_moto/analog-out2 )
-  (    2 N-000233 )
+  (    2 N-000138 )
  )
  ( /509DDBA2/50AB7E1D $noname  C70 220n {Lib=C}
   (    1 /ev_moto/analog-out2 )
-  (    2 N-000233 )
+  (    2 N-000138 )
  )
  ( /509DDBA2/50AB7E1C $noname  R145 10k {Lib=R}
   (    1 /ev_moto/analog-out2 )
-  (    2 N-000233 )
+  (    2 N-000138 )
  )
  ( /509DDBA2/50AB7E0A $noname  R143 10k {Lib=R}
-  (    1 N-000233 )
+  (    1 N-000138 )
   (    2 GND )
  )
  ( /509DDBA2/50AB7DE0 $noname  C73 100n {Lib=C}
@@ -710,43 +705,43 @@
  )
  ( /509DDBA2/50AB7D86 $noname  R137 10k {Lib=R}
   (    1 /ev_moto/analog-out1 )
-  (    2 N-000139 )
+  (    2 N-000234 )
  )
  ( /509DDBA2/50AB7D85 $noname  C68 220n {Lib=C}
   (    1 /ev_moto/analog-out1 )
-  (    2 N-000139 )
+  (    2 N-000234 )
  )
  ( /509DDBA2/50AB7D84 $noname  R141 10k {Lib=R}
   (    1 /ev_moto/analog-out1 )
-  (    2 N-000139 )
+  (    2 N-000234 )
  )
  ( /509DDBA2/50AB7D58 $noname  R138 10k {Lib=R}
-  (    1 N-000139 )
+  (    1 N-000234 )
   (    2 GND )
  )
  ( /509DDBA2/50AB7D21 $noname  R134 10k {Lib=R}
-  (    1 N-000140 )
-  (    2 N-000232 )
+  (    1 N-000133 )
+  (    2 N-000132 )
  )
  ( /509DDBA2/50AB7D20 $noname  C65 220n {Lib=C}
-  (    1 N-000232 )
+  (    1 N-000132 )
   (    2 GND )
  )
  ( /509DDBA2/50AB7D02 $noname  C64 220n {Lib=C}
-  (    1 N-000138 )
+  (    1 N-000233 )
   (    2 GND )
  )
  ( /509DDBA2/50AB7CE7 $noname  R133 10k {Lib=R}
-  (    1 N-000153 )
-  (    2 N-000138 )
+  (    1 N-000147 )
+  (    2 N-000233 )
  )
  ( /509DDBA2/50AB7CDA $noname  D8 AD8607 {Lib=AD8607}
   (    1 /ev_moto/analog-out1 )
-  (    2 N-000139 )
-  (    3 N-000138 )
+  (    2 N-000234 )
+  (    3 N-000233 )
   (    4 GND )
-  (    5 N-000232 )
-  (    6 N-000233 )
+  (    5 N-000132 )
+  (    6 N-000138 )
   (    7 /ev_moto/analog-out2 )
   (    8 +5V )
  )
@@ -756,7 +751,7 @@
  )
  ( /509DDBA2/50AB7CCB $noname  adc3 AD5300 {Lib=AD5300}
   (    1 VDD )
-  (    4 N-000140 )
+  (    4 N-000133 )
   (    5 /ev_moto/~analog2-cs~ )
   (    6 /ev_moto/dac-sclk )
   (    7 /ev_moto/dac-din )
@@ -776,7 +771,7 @@
  )
  ( /509DDBA2/50AB7C66 $noname  adc2 AD5300 {Lib=AD5300}
   (    1 VDD )
-  (    4 N-000153 )
+  (    4 N-000147 )
   (    5 /ev_moto/~analog1-cs~ )
   (    6 /ev_moto/dac-sclk )
   (    7 /ev_moto/dac-din )
@@ -787,39 +782,39 @@
   (    2 GND )
  )
  ( /509DDBA2/50AB7C06 $noname  R116 50 {Lib=R}
-  (    1 N-000182 )
+  (    1 N-000174 )
   (    2 /ev_moto/A1 )
  )
  ( /509DDBA2/50AB7C05 $noname  R117 50 {Lib=R}
-  (    1 N-000179 )
+  (    1 N-000171 )
   (    2 /ev_moto/B1 )
  )
  ( /509DDBA2/50AB7BF3 $noname  R123 50 {Lib=R}
-  (    1 N-000181 )
+  (    1 N-000173 )
   (    2 /ev_moto/B4 )
  )
  ( /509DDBA2/50AB7BF2 $noname  R122 50 {Lib=R}
-  (    1 N-000183 )
+  (    1 N-000175 )
   (    2 /ev_moto/A4 )
  )
  ( /509DDBA2/50AB7BE5 $noname  R120 50 {Lib=R}
-  (    1 N-000175 )
+  (    1 N-000168 )
   (    2 /ev_moto/A3 )
  )
  ( /509DDBA2/50AB7BE4 $noname  R121 50 {Lib=R}
-  (    1 N-000173 )
+  (    1 N-000166 )
   (    2 /ev_moto/B3 )
  )
  ( /509DDBA2/50AB7BDB $noname  R119 50 {Lib=R}
-  (    1 N-000184 )
+  (    1 N-000176 )
   (    2 /ev_moto/B2 )
  )
  ( /509DDBA2/50AB7BB6 $noname  R118 50 {Lib=R}
-  (    1 N-000185 )
+  (    1 N-000177 )
   (    2 /ev_moto/A2 )
  )
  ( /509DDBA2/50AB7B31 $noname  R127 10k {Lib=R}
-  (    1 N-000240 )
+  (    1 N-000231 )
   (    2 GND )
  )
  ( /509DDBA2/50AB7B2D $noname  C57 100n {Lib=C}
@@ -828,8 +823,8 @@
  )
  ( /509DDBA2/50AB7B2C $noname  rs10 STM3485EBDR {Lib=STM3485EBDR}
   (    1 /ev_moto/A4 )
-  (    2 N-000240 )
-  (    3 N-000240 )
+  (    2 N-000231 )
+  (    3 N-000231 )
   (    4 ? )
   (    5 GND )
   (    6 /ev_moto/A4- )
@@ -838,8 +833,8 @@
  )
  ( /509DDBA2/50AB7B2B $noname  rs11 STM3485EBDR {Lib=STM3485EBDR}
   (    1 /ev_moto/B4 )
-  (    2 N-000241 )
-  (    3 N-000241 )
+  (    2 N-000230 )
+  (    3 N-000230 )
   (    4 ? )
   (    5 GND )
   (    6 /ev_moto/B4- )
@@ -851,7 +846,7 @@
   (    2 GND )
  )
  ( /509DDBA2/50AB7B26 $noname  R128 10k {Lib=R}
-  (    1 N-000241 )
+  (    1 N-000230 )
   (    2 GND )
  )
  ( /509DDBA2/50AB7B23 $noname  C59 10u {Lib=C}
@@ -863,7 +858,7 @@
   (    2 GND )
  )
  ( /509DDBA2/50AB7B09 $noname  R125 10k {Lib=R}
-  (    1 N-000107 )
+  (    1 N-000232 )
   (    2 GND )
  )
  ( /509DDBA2/50AB7B05 $noname  C54 100n {Lib=C}
@@ -872,8 +867,8 @@
  )
  ( /509DDBA2/50AB7B04 $noname  rs9 STM3485EBDR {Lib=STM3485EBDR}
   (    1 /ev_moto/B3 )
-  (    2 N-000107 )
-  (    3 N-000107 )
+  (    2 N-000232 )
+  (    3 N-000232 )
   (    4 ? )
   (    5 GND )
   (    6 /ev_moto/B3- )
@@ -882,8 +877,8 @@
  )
  ( /509DDBA2/50AB7B03 $noname  rs8 STM3485EBDR {Lib=STM3485EBDR}
   (    1 /ev_moto/A3 )
-  (    2 N-000243 )
-  (    3 N-000243 )
+  (    2 N-000105 )
+  (    3 N-000105 )
   (    4 ? )
   (    5 GND )
   (    6 /ev_moto/A3- )
@@ -895,11 +890,11 @@
   (    2 GND )
  )
  ( /509DDBA2/50AB7AFE $noname  R124 10k {Lib=R}
-  (    1 N-000243 )
+  (    1 N-000105 )
   (    2 GND )
  )
  ( /509DDBA2/50AB7AE5 $noname  R114 10k {Lib=R}
-  (    1 N-000109 )
+  (    1 N-000217 )
   (    2 GND )
  )
  ( /509DDBA2/50AB7AE1 $noname  C50 100n {Lib=C}
@@ -908,8 +903,8 @@
  )
  ( /509DDBA2/50AB7AE0 $noname  rs6 STM3485EBDR {Lib=STM3485EBDR}
   (    1 /ev_moto/A2 )
-  (    2 N-000109 )
-  (    3 N-000109 )
+  (    2 N-000217 )
+  (    3 N-000217 )
   (    4 ? )
   (    5 GND )
   (    6 /ev_moto/A2- )
@@ -918,8 +913,8 @@
  )
  ( /509DDBA2/50AB7ADF $noname  rs7 STM3485EBDR {Lib=STM3485EBDR}
   (    1 /ev_moto/B2 )
-  (    2 N-000242 )
-  (    3 N-000242 )
+  (    2 N-000216 )
+  (    3 N-000216 )
   (    4 ? )
   (    5 GND )
   (    6 /ev_moto/B2- )
@@ -931,7 +926,7 @@
   (    2 GND )
  )
  ( /509DDBA2/50AB7ADA $noname  R115 10k {Lib=R}
-  (    1 N-000242 )
+  (    1 N-000216 )
   (    2 GND )
  )
  ( /509DDBA2/50AB7AD7 $noname  C52 10u {Lib=C}
@@ -943,7 +938,7 @@
   (    2 GND )
  )
  ( /509DDBA2/50AB7A9A $noname  R113 10k {Lib=R}
-  (    1 N-000137 )
+  (    1 N-000218 )
   (    2 GND )
  )
  ( /509DDBA2/50AB7A96 $noname  C48 100n {Lib=C}
@@ -952,8 +947,8 @@
  )
  ( /509DDBA2/50AB7A95 $noname  rs5 STM3485EBDR {Lib=STM3485EBDR}
   (    1 /ev_moto/B1 )
-  (    2 N-000137 )
-  (    3 N-000137 )
+  (    2 N-000218 )
+  (    3 N-000218 )
   (    4 ? )
   (    5 GND )
   (    6 /ev_moto/B1- )
@@ -962,8 +957,8 @@
  )
  ( /509DDBA2/50AB7A79 $noname  rs4 STM3485EBDR {Lib=STM3485EBDR}
   (    1 /ev_moto/A1 )
-  (    2 N-000131 )
-  (    3 N-000131 )
+  (    2 N-000126 )
+  (    3 N-000126 )
   (    4 ? )
   (    5 GND )
   (    6 /ev_moto/A1- )
@@ -975,16 +970,16 @@
   (    2 GND )
  )
  ( /509DDBA2/50AB7A74 $noname  R79 10k {Lib=R}
-  (    1 N-000131 )
+  (    1 N-000126 )
   (    2 GND )
  )
  ( /509DDBA2/50A2902E $noname  C33 220n {Lib=C}
-  (    1 N-000217 )
+  (    1 N-000215 )
   (    2 GND )
  )
  ( /509DDBA2/50A29023 $noname  R65 10k {Lib=R}
-  (    1 N-000224 )
-  (    2 N-000217 )
+  (    1 N-000238 )
+  (    2 N-000215 )
  )
  ( /509DDBA2/50A28F59 $noname  rs3 STM3485EBDR {Lib=STM3485EBDR}
   (    1 /ev_moto/bmsd-rx )
@@ -1009,117 +1004,117 @@
   (    2 /ev_moto/bmsd-dir )
  )
  ( /509DDBA2/50A28E24 $noname  R97 100 {Lib=R}
-  (    1 N-000120 )
+  (    1 N-000239 )
   (    2 /ev_moto/en+ )
  )
  ( /509DDBA2/50A28E02 $noname  R83 100 {Lib=R}
-  (    1 N-000119 )
+  (    1 N-000240 )
   (    2 /ev_moto/dir+ )
  )
  ( /509DDBA2/50A28D4E $noname  Q4 MOSFET_P {Lib=MOSFET_P}
-  (    D N-000118 )
-  (    G N-000116 )
-  (    S N-000120 )
+  (    D N-000117 )
+  (    G N-000115 )
+  (    S N-000239 )
  )
  ( /509DDBA2/50A28D4D $noname  R105 100 {Lib=R}
-  (    1 N-000118 )
+  (    1 N-000117 )
   (    2 /ev_moto/en- )
  )
  ( /509DDBA2/50A28D4C $noname  R101 1k {Lib=R}
-  (    1 N-000117 )
-  (    2 N-000116 )
+  (    1 N-000116 )
+  (    2 N-000115 )
  )
  ( /509DDBA2/50A28D4B $noname  Q5 NPN {Lib=NPN}
   (    1 GND )
-  (    2 N-000124 )
-  (    3 N-000117 )
+  (    2 N-000222 )
+  (    3 N-000116 )
  )
  ( /509DDBA2/50A28D4A $noname  R96 10k {Lib=R}
-  (    1 N-000116 )
-  (    2 N-000120 )
+  (    1 N-000115 )
+  (    2 N-000239 )
  )
  ( /509DDBA2/50A28D47 $noname  R110 10k {Lib=R}
   (    1 GND )
-  (    2 N-000124 )
+  (    2 N-000222 )
  )
  ( /509DDBA2/50A28D46 $noname  R104 1k {Lib=R}
   (    1 /ev_moto/en-input )
-  (    2 N-000124 )
+  (    2 N-000222 )
  )
  ( /509DDBA2/50A28D0B $noname  R109 100 {Lib=R}
-  (    1 N-000123 )
+  (    1 N-000241 )
   (    2 /ev_moto/en- )
  )
  ( /509DDBA2/50A28CF3 $noname  R92 100 {Lib=R}
-  (    1 N-000122 )
+  (    1 N-000242 )
   (    2 /ev_moto/dir- )
  )
  ( /509DDBA2/50A28CBE $noname  R90 1k {Lib=R}
   (    1 /ev_moto/dir-input )
-  (    2 N-000238 )
+  (    2 N-000118 )
  )
  ( /509DDBA2/50A28CBD $noname  R94 10k {Lib=R}
   (    1 GND )
-  (    2 N-000238 )
+  (    2 N-000118 )
  )
  ( /509DDBA2/50A28C6B $noname  R82 10k {Lib=R}
-  (    1 N-000239 )
-  (    2 N-000119 )
+  (    1 N-000200 )
+  (    2 N-000240 )
  )
  ( /509DDBA2/50A28C55 $noname  Q3 NPN {Lib=NPN}
   (    1 GND )
-  (    2 N-000238 )
-  (    3 N-000205 )
+  (    2 N-000118 )
+  (    3 N-000199 )
  )
  ( /509DDBA2/50A28C4D $noname  R85 1k {Lib=R}
-  (    1 N-000205 )
-  (    2 N-000239 )
+  (    1 N-000199 )
+  (    2 N-000200 )
  )
  ( /509DDBA2/50A28C29 $noname  R91 100 {Lib=R}
-  (    1 N-000204 )
+  (    1 N-000197 )
   (    2 /ev_moto/dir- )
  )
  ( /509DDBA2/50A28BF6 $noname  Q1 MOSFET_P {Lib=MOSFET_P}
-  (    D N-000204 )
-  (    G N-000239 )
-  (    S N-000119 )
+  (    D N-000197 )
+  (    G N-000200 )
+  (    S N-000240 )
  )
  ( /509DDBA2/50A28BE5 $noname  R112 1k {Lib=R}
   (    1 GND )
-  (    2 N-000123 )
+  (    2 N-000241 )
  )
  ( /509DDBA2/50A28BD6 $noname  Q6 MOSFET_N {Lib=MOSFET_N}
-  (    D N-000202 )
-  (    G N-000225 )
-  (    S N-000123 )
+  (    D N-000186 )
+  (    G N-000213 )
+  (    S N-000241 )
  )
  ( /509DDBA2/50A28B82 $noname  Q2 MOSFET_N {Lib=MOSFET_N}
-  (    D N-000201 )
-  (    G N-000216 )
-  (    S N-000122 )
+  (    D N-000196 )
+  (    G N-000244 )
+  (    S N-000242 )
  )
  ( /509DDBA2/50A28A70 $noname  R95 1k {Lib=R}
   (    1 GND )
-  (    2 N-000122 )
+  (    2 N-000242 )
  )
  ( /509DDBA2/50A2890D $noname  R64 10k {Lib=R}
   (    1 VDD )
-  (    2 N-000168 )
+  (    2 N-000219 )
  )
  ( /509DDBA2/50A288F7 $noname  R71 10k {Lib=R}
-  (    1 N-000169 )
+  (    1 N-000162 )
   (    2 GND )
  )
  ( /509DDBA2/509E4B86 $noname  R77 50 {Lib=R}
-  (    1 N-000209 )
+  (    1 N-000204 )
   (    2 /ev_moto/sda-ext )
  )
  ( /509DDBA2/509E4B84 $noname  R76 50 {Lib=R}
-  (    1 N-000208 )
+  (    1 N-000203 )
   (    2 /ev_moto/scl-ext )
  )
  ( /509DDBA2/509E4B7C $noname  R74 50 {Lib=R}
-  (    1 N-000207 )
+  (    1 N-000202 )
   (    2 /ev_moto/synch-ext )
  )
  ( /509DDBA2/509E498C $noname  P8 CONN_2 {Lib=CONN_2}
@@ -1127,19 +1122,19 @@
   (    2 /ev_moto/fw-upgrade )
  )
  ( /509DDBA2/509E48D6 $noname  D5 LED {Lib=LED}
-  (    1 N-000206 )
+  (    1 N-000201 )
   (    2 GND )
  )
  ( /509DDBA2/509E48D5 $noname  R80 500 {Lib=R}
   (    1 /ev_moto/led1 )
-  (    2 N-000206 )
+  (    2 N-000201 )
  )
  ( /509DDBA2/509E48D2 $noname  R81 500 {Lib=R}
   (    1 /ev_moto/led2 )
-  (    2 N-000194 )
+  (    2 N-000189 )
  )
  ( /509DDBA2/509E48D1 $noname  D6 LED {Lib=LED}
-  (    1 N-000194 )
+  (    1 N-000189 )
   (    2 GND )
  )
  ( /509DDBA2/509E4824 $noname  J3 DB9 {Lib=DB9}
@@ -1154,51 +1149,51 @@
   (    9 /ev_moto/rs-a )
  )
  ( /509DDBA2/509E46BE $noname  R103 100 {Lib=R}
-  (    1 N-000202 )
+  (    1 N-000186 )
   (    2 /ev_moto/en+ )
  )
  ( /509DDBA2/509E4667 $noname  R84 100 {Lib=R}
-  (    1 N-000201 )
+  (    1 N-000196 )
   (    2 /ev_moto/dir+ )
  )
  ( /509DDBA2/509E4640 $noname  R99 50 {Lib=R}
-  (    1 N-000199 )
+  (    1 N-000223 )
   (    2 /ev_moto/tx )
  )
  ( /509DDBA2/509E463E $noname  P9 SWD-IAP {Lib=CONN_5}
-  (    1 N-000199 )
-  (    2 N-000198 )
+  (    1 N-000223 )
+  (    2 N-000194 )
   (    3 GND )
-  (    4 N-000197 )
-  (    5 N-000221 )
+  (    4 N-000192 )
+  (    5 N-000193 )
  )
  ( /509DDBA2/509E463D $noname  R102 50 {Lib=R}
-  (    1 N-000198 )
+  (    1 N-000194 )
   (    2 /ev_moto/rx )
  )
  ( /509DDBA2/509E463C $noname  R108 50 {Lib=R}
-  (    1 N-000221 )
+  (    1 N-000193 )
   (    2 /ev_moto/swd-clk )
  )
  ( /509DDBA2/509E463B $noname  R107 50 {Lib=R}
-  (    1 N-000197 )
+  (    1 N-000192 )
   (    2 /ev_moto/swd-io )
  )
  ( /509DDBA2/509E4495 $noname  R106 1k {Lib=R}
   (    1 /ev_moto/en-input )
-  (    2 N-000225 )
+  (    2 N-000213 )
  )
  ( /509DDBA2/509E4494 $noname  R111 10k {Lib=R}
   (    1 GND )
-  (    2 N-000225 )
+  (    2 N-000213 )
  )
  ( /509DDBA2/509E4441 $noname  R93 10k {Lib=R}
   (    1 GND )
-  (    2 N-000216 )
+  (    2 N-000244 )
  )
  ( /509DDBA2/509E4411 $noname  R89 1k {Lib=R}
   (    1 /ev_moto/dir-input )
-  (    2 N-000216 )
+  (    2 N-000244 )
  )
  ( /509DDBA2/509E4337 $noname  R67 10k {Lib=R}
   (    1 /ev_moto/out-gain )
@@ -1206,18 +1201,18 @@
  )
  ( /509DDBA2/509E3D82 $noname  R69 10k {Lib=R}
   (    1 /ev_moto/out-gain )
-  (    2 N-000236 )
+  (    2 N-000220 )
  )
  ( /509DDBA2/509E3C81 $noname  C36 220n {Lib=C}
   (    1 /ev_moto/out-gain )
-  (    2 N-000236 )
+  (    2 N-000220 )
  )
  ( /509DDBA2/509E3C77 $noname  R68 10k {Lib=R}
   (    1 /ev_moto/out-gain )
-  (    2 N-000236 )
+  (    2 N-000220 )
  )
  ( /509DDBA2/509E3C08 $noname  R70 10k {Lib=R}
-  (    1 N-000236 )
+  (    1 N-000220 )
   (    2 GND )
  )
  ( /509DDBA2/509E3BE6 $noname  C30 100n {Lib=C}
@@ -1225,29 +1220,29 @@
   (    2 GND )
  )
  ( /509DDBA2/509E3B67 $noname  D4 AD8607 {Lib=AD8607}
-  (    1 N-000224 )
-  (    2 N-000224 )
-  (    3 N-000218 )
+  (    1 N-000238 )
+  (    2 N-000238 )
+  (    3 N-000214 )
   (    4 GND )
-  (    5 N-000217 )
-  (    6 N-000236 )
+  (    5 N-000215 )
+  (    6 N-000220 )
   (    7 /ev_moto/out-gain )
   (    8 +5V )
  )
  ( /509DDBA2/509E3AD6 $noname  adc1 AD5300 {Lib=AD5300}
   (    1 VDD )
-  (    4 N-000218 )
+  (    4 N-000214 )
   (    5 /ev_moto/~dac-synch~ )
   (    6 /ev_moto/dac-sclk )
   (    7 /ev_moto/dac-din )
   (    8 GND )
  )
  ( /509DDBA2/509E37B3 $noname  R98 30k {Lib=R}
-  (    1 N-000210 )
+  (    1 N-000206 )
   (    2 +5V )
  )
  ( /509DDBA2/509E37B1 $noname  R100 10k {Lib=R}
-  (    1 N-000210 )
+  (    1 N-000206 )
   (    2 GND )
  )
  ( /509DDBA2/509E37AF $noname  C45 1m {Lib=C}
@@ -1260,48 +1255,48 @@
  )
  ( /509DDBA2/509E37AB $noname  D7 1N5819 {Lib=DIODESCH}
   (    1 GND )
-  (    2 N-000220 )
+  (    2 N-000205 )
  )
  ( /509DDBA2/509E37AA $noname  L2 INDUCTOR {Lib=INDUCTOR}
-  (    1 N-000220 )
+  (    1 N-000205 )
   (    2 +5V )
  )
  ( /509DDBA2/509E37A7 $noname  C43 2.2n {Lib=C}
-  (    1 N-000215 )
+  (    1 N-000209 )
   (    2 GND )
  )
  ( /509DDBA2/509E37A6 $noname  R86 1R5 {Lib=R}
-  (    1 N-000214 )
+  (    1 N-000210 )
   (    2 +24V )
  )
  ( /509DDBA2/509E37A5 $noname  R87 1R5 {Lib=R}
-  (    1 N-000214 )
+  (    1 N-000210 )
   (    2 +24V )
  )
  ( /509DDBA2/509E37A4 $noname  C42 10u {Lib=C}
   (    1 +24V )
-  (    2 N-000213 )
+  (    2 N-000211 )
  )
  ( /509DDBA2/509E37A3 $noname  R88 1R5 {Lib=R}
-  (    1 N-000214 )
+  (    1 N-000210 )
   (    2 +24V )
  )
  ( /509DDBA2/509E37A2 $noname  U3 NCP3063 {Lib=NCP3063}
-  (    1 N-000214 )
-  (    2 N-000220 )
-  (    3 N-000215 )
+  (    1 N-000210 )
+  (    2 N-000205 )
+  (    3 N-000209 )
   (    4 GND )
-  (    5 N-000210 )
+  (    5 N-000206 )
   (    6 +24V )
-  (    7 N-000214 )
+  (    7 N-000210 )
   (    8 ? )
  )
  ( /509DDBA2/509E379F $noname  C46 10u {Lib=C}
-  (    1 N-000213 )
-  (    2 N-000166 )
+  (    1 N-000211 )
+  (    2 N-000160 )
  )
  ( /509DDBA2/509E379E $noname  C47 10u {Lib=C}
-  (    1 N-000166 )
+  (    1 N-000160 )
   (    2 GND )
  )
  ( /509DDBA2/509E3729 $noname  C32 10u {Lib=C}
@@ -1322,8 +1317,8 @@
  )
  ( /509DDBA2/509E1075 $noname  rs2 STM3485EBDR {Lib=STM3485EBDR}
   (    1 /ev_moto/enc-data )
-  (    2 N-000169 )
-  (    3 N-000169 )
+  (    2 N-000162 )
+  (    3 N-000162 )
   (    4 ? )
   (    5 GND )
   (    6 /ev_moto/data- )
@@ -1332,8 +1327,8 @@
  )
  ( /509DDBA2/509E106E $noname  rs1 STM3485EBDR {Lib=STM3485EBDR}
   (    1 ? )
-  (    2 N-000168 )
-  (    3 N-000168 )
+  (    2 N-000219 )
+  (    3 N-000219 )
   (    4 /ev_moto/enc-clock )
   (    5 GND )
   (    6 /ev_moto/clock- )
@@ -1367,7 +1362,7 @@
   (    2 GND )
  )
  ( /509DDBA2/509DDC2C $noname  R78 10k {Lib=R}
-  (    1 N-000176 )
+  (    1 N-000179 )
   (    2 GND )
  )
  ( /509DDBA2/509DDC2A $noname  C28 100n {Lib=C}
@@ -1383,37 +1378,37 @@
   (    2 GND )
  )
  ( /509DDBA2/509DDC27 $noname  R72 50 {Lib=R}
-  (    1 N-000190 )
-  (    2 N-000186 )
+  (    1 N-000221 )
+  (    2 N-000178 )
  )
  ( /509DDBA2/509DDC22 $noname  X2 8MHz {Lib=CRYSTAL}
-  (    1 N-000190 )
-  (    2 N-000223 )
+  (    1 N-000221 )
+  (    2 N-000182 )
  )
  ( /509DDBA2/509DDC21 $noname  C38 18p {Lib=C}
   (    1 GND )
-  (    2 N-000190 )
+  (    2 N-000221 )
  )
  ( /509DDBA2/509DDC20 $noname  C37 18p {Lib=C}
   (    1 GND )
-  (    2 N-000223 )
+  (    2 N-000182 )
  )
  ( /509DDBA2/509DDC1E $noname  C34 100n {Lib=C}
   (    1 GND )
-  (    2 N-000222 )
+  (    2 N-000237 )
  )
  ( /509DDBA2/509DDC1D $noname  R66 10k {Lib=R}
   (    1 VDD )
-  (    2 N-000222 )
+  (    2 N-000237 )
  )
  ( /509DDBA2/509DDC1B $noname  stm2 STM32F102C8T6 {Lib=STM32F102C8T6}
   (    1 VDD )
   (    2 /ev_moto/~dac-synch~ )
   (    3 /ev_moto/~analog1-cs~ )
   (    4 /ev_moto/~analog2-cs~ )
-  (    5 N-000223 )
-  (    6 N-000186 )
-  (    7 N-000222 )
+  (    5 N-000182 )
+  (    6 N-000178 )
+  (    7 N-000237 )
   (    8 GND )
   (    9 VDD )
   (   10 /ev_moto/dac-sclk )
@@ -1424,17 +1419,17 @@
   (   15 /ev_moto/en-input )
   (   16 /ev_moto/enc-clock )
   (   17 /ev_moto/enc-data )
-  (   18 N-000182 )
-  (   19 N-000179 )
-  (   20 N-000176 )
-  (   21 N-000175 )
-  (   22 N-000173 )
+  (   18 N-000174 )
+  (   19 N-000171 )
+  (   20 N-000179 )
+  (   21 N-000168 )
+  (   22 N-000166 )
   (   23 GND )
   (   24 VDD )
   (   25 /ev_moto/led2 )
   (   26 /ev_moto/led1 )
-  (   27 N-000183 )
-  (   28 N-000181 )
+  (   27 N-000175 )
+  (   28 N-000173 )
   (   29 /ev_moto/bmsd-dir )
   (   30 /ev_moto/tx )
   (   31 /ev_moto/rx )
@@ -1447,12 +1442,12 @@
   (   38 ? )
   (   39 ? )
   (   40 ? )
-  (   41 N-000207 )
-  (   42 N-000208 )
-  (   43 N-000209 )
+  (   41 N-000202 )
+  (   42 N-000203 )
+  (   43 N-000204 )
   (   44 /ev_moto/fw-upgrade )
-  (   45 N-000185 )
-  (   46 N-000184 )
+  (   45 N-000177 )
+  (   46 N-000176 )
   (   47 GND )
   (   48 VDD )
  )
@@ -2052,17 +2047,8 @@ $component C14
  C?
  C1-1
 $endlist
-$component J7
- DB9*
-$endlist
-$component J6
- DB9*
-$endlist
-$component J5
- DB9*
-$endlist
 $component J4
- DB9*
+ DB37*
 $endlist
 $component C62
  SM*
@@ -2932,162 +2918,162 @@ $endfootprintlist
 }
 { Pin List by Nets
 Net 1 "/dr-io-32" "dr-io-32"
- R43 2
- J1 32
  R24 2
+ J1 32
+ R43 2
 Net 2 "VDD" "VDD"
- P3 1
- stm1 48
- P3 2
- lsm1 14
- stm2 1
- rs3 8
- stm2 36
- rs6 8
- stm2 48
- rs7 8
- C51 1
- C29 1
- R18 1
- stm2 9
- stm2 24
- rs2 8
- C32 1
- R129 1
- C22 1
- C23 1
- P2 2
- P2 1
- lsm1 1
+ rs9 8
+ C7 1
+ L1 2
+ C54 1
+ rs8 8
  C53 1
  C8 1
  C52 1
+ C30 1
+ stm1 36
+ C40 1
+ stm1 9
+ adc1 1
+ R73 1
+ C50 1
+ R4 2
+ rs7 8
+ C51 1
+ R48 1
+ R49 1
+ P3 2
  C49 1
+ C48 1
+ R50 1
+ rs6 8
+ adc2 1
+ R126 1
+ adc3 1
+ rs1 8
+ R130 1
+ R129 1
+ C31 1
+ C35 1
+ C57 1
+ C58 1
+ rs11 8
+ rs10 8
+ C55 1
+ C59 1
+ C61 1
+ C60 1
+ C27 1
+ C28 1
+ rs5 8
  C41 1
+ C1 1
+ C2 1
  C3 1
  R66 1
- C4 1
- rs4 8
- R4 2
- stm1 1
- C2 1
- C54 1
- L1 2
- rs9 8
- rs8 8
- C7 1
  C26 1
- C28 1
- R50 1
- C27 1
- C48 1
- adc5 1
- R48 1
- C1 1
- R49 1
- rs5 8
- R73 1
- P1 1
- R19 1
- C57 1
- R20 1
- stm1 36
- rs10 8
- C40 1
- C59 1
+ C4 1
+ stm1 1
+ rs4 8
  C39 1
- R64 1
- stm1 24
- R23 1
- R24 1
- rs11 8
- C58 1
- stm1 9
- C55 1
- adc1 1
- C30 1
- adc3 1
- adc4 1
- rs1 8
- C62 1
  P8 1
- C35 1
- C50 1
- R130 1
- C63 1
- R132 1
- C31 1
- R131 1
- R126 1
- adc2 1
- R26 1
- C61 1
- R25 1
- C60 1
+ stm1 24
+ C32 1
+ rs2 8
+ stm1 48
+ R64 1
+ stm2 24
+ R18 1
+ stm2 9
+ stm2 1
+ C29 1
+ stm2 48
+ rs3 8
+ stm2 36
+ adc5 1
  R21 1
  R22 1
+ C63 1
+ C62 1
+ adc4 1
+ R20 1
+ R25 1
+ R131 1
+ R132 1
+ R24 1
+ P2 1
+ P2 2
+ R19 1
+ P1 1
+ lsm1 14
+ P3 1
+ R23 1
+ lsm1 1
+ C23 1
+ C22 1
  C18 1
+ R26 1
 Net 3 "/io-3-2" "io-3-2"
- stm1 10
  R43 1
+ stm1 10
 Net 4 "/io-3-1" "io-3-1"
- stm1 2
  R37 1
+ stm1 2
 Net 5 "/i-3-2" "i-3-2"
- stm1 19
  R33 1
+ stm1 19
 Net 6 "+24V" "+24V"
- R6 1
- R8 1
- U3 6
- C42 1
- R5 1
- P6 1
  C25 1
- P5 1
+ C42 1
+ R7 1
+ P6 1
+ C20 1
+ R6 1
+ C9 1
+ R8 1
+ R5 1
+ J1 23
  P3 12
  P3 11
  P3 10
  P3 9
- J1 21
- J1 20
- J1 24
+ U3 6
  P2 12
  P2 11
  P2 10
  P2 9
- J1 23
- C12 1
- C20 1
- C9 1
- C11 1
- C10 1
- R88 2
- R7 1
- R2 2
+ J1 24
  C5 1
+ C12 1
+ R1 2
+ R2 2
  R3 2
  U1 6
- R1 2
+ P5 1
  R86 2
  R87 2
+ R88 2
+ C10 1
+ J1 21
+ J1 20
+ C11 1
 Net 7 "/dr-io-11" "dr-io-11"
+ J1 8
  R19 2
  R35 2
- J1 8
 Net 8 "/sensor-4" "sensor-4"
- stm1 27
  R13 1
+ stm1 27
 Net 9 "/dr-io-41" "dr-io-41"
- J1 34
  R38 2
+ J1 34
  R25 2
 Net 10 "/dr-i-11" "dr-i-11"
- R27 2
  J1 7
+ R27 2
 Net 11 "/dr-i-12" "dr-i-12"
- R31 2
  J1 26
+ R31 2
 Net 12 "/dr-i-22" "dr-i-22"
  R32 2
  J1 10
@@ -3096,195 +3082,195 @@ Net 13 "/dr-io-22" "dr-io-22"
  J1 11
  R22 2
 Net 14 "GND" "GND"
- R114 2
- R124 2
- C40 2
- C56 2
- R144 2
- Q5 1
- C72 2
- R94 1
- C39 2
- C34 1
- C33 2
- rs7 5
- rs6 5
- R115 2
- rs3 5
- C51 2
- C53 2
- rs8 5
- C41 2
- C49 2
- R79 2
  R113 2
  rs4 5
  rs5 5
- C48 2
- adc3 8
- C50 2
+ C49 2
  C52 2
- C61 2
- R110 1
- C65 2
+ C72 2
+ C53 2
+ R144 2
+ C56 2
+ C51 2
+ rs3 5
+ C33 2
+ C48 2
+ rs7 5
+ rs6 5
+ R115 2
  D8 4
- C64 2
- rs9 5
- C54 2
+ C39 2
+ C40 2
+ Q5 1
+ adc3 8
+ R94 1
+ R110 1
  R138 2
- J7 1
- J6 1
- J5 1
- adc4 8
- D9 4
+ C65 2
+ C64 2
+ C41 2
+ C54 2
+ rs9 5
+ rs8 5
+ R79 2
+ C61 2
+ C50 2
+ R114 2
+ R124 2
  C66 2
  C67 2
  R140 2
+ adc4 8
  adc5 8
+ D9 4
+ J4 5
  C62 2
- J4 1
+ J4 14
+ J4 28
+ J4 37
  C63 2
- C47 2
  C32 2
  C35 2
  C31 2
+ C47 2
  C25 2
  rs1 5
  P5 2
+ stm2 47
  R78 2
  C28 2
  C27 2
  C26 2
  stm2 35
- stm2 47
  C29 2
  stm2 8
  stm2 23
  P6 2
  rs2 5
- rs10 5
- C55 2
+ rs11 5
  R125 2
  C59 2
  C57 2
- rs11 5
+ rs10 5
+ C55 2
  C58 2
  R143 2
+ C73 2
+ C60 2
  P7 5
  P7 8
  R127 2
  adc2 8
- R75 2
- C60 2
  R128 2
- C43 2
- R93 1
- R111 1
  U3 4
+ R93 1
+ C43 2
  adc1 8
  R100 2
  C45 2
  R70 2
  C30 2
  D4 4
+ R111 1
  P9 3
  D6 2
  J3 4
  J3 6
  C38 1
  C37 1
- D5 2
+ C34 1
+ R75 2
  C44 2
  D7 1
  R71 2
- C73 2
+ D5 2
  Q3 1
  R95 1
  R112 1
+ U1 4
  U2 5
- U2 0
- C8 2
- C7 2
- R14 2
- R16 2
- R47 2
- R46 2
- J1 2
- C9 2
- C6 2
- C14 2
- R9 2
- C4 2
- C12 2
- C11 2
- D1 1
+ J1 9
+ J1 30
  J1 22
- J1 35
- C16 1
- J1 19
- P4 3
- C15 1
+ J1 2
+ stm1 35
+ stm1 47
+ stm1 23
+ stm1 8
+ R16 2
+ C8 2
  lsm1 7
  lsm1 10
  lsm1 11
- C17 1
+ U2 0
+ C7 2
+ D1 1
  J1 14
  J1 25
- C2 2
- C1 2
+ J1 35
+ J1 19
+ R9 2
  J1 5
- J1 9
- R63 2
- J1 30
- C3 2
- D2 2
- C23 2
- C21 2
+ C14 2
  C22 2
- J2 3
- J2 7
- J2 8
- D3 2
- stm1 23
- P3 8
- stm1 35
- P2 3
- P2 7
- P2 8
- P3 3
- P2 6
- R15 2
- P3 7
- U1 4
- stm1 47
- stm1 8
- C20 2
+ C21 2
+ C23 2
+ C6 2
  C18 2
- C19 2
- P3 6
+ C20 2
+ R46 2
  R17 2
  C10 2
+ C17 1
+ C4 2
+ R14 2
+ C19 2
+ J2 8
+ J2 7
+ C15 1
+ J2 3
+ C3 2
+ C16 1
+ R47 2
+ C2 2
+ C1 2
+ P3 3
+ C11 2
+ D3 2
+ R15 2
+ P2 6
+ D2 2
+ P2 3
+ C12 2
+ C9 2
+ R63 2
+ P4 3
+ P2 7
+ P2 8
+ P3 8
+ P3 7
+ P3 6
 Net 15 "/dr-i-32" "dr-i-32"
- R33 2
  J1 31
+ R33 2
 Net 16 "/dr-i-42" "dr-i-42"
- R34 2
  J1 15
+ R34 2
 Net 17 "/dr-i-41" "dr-i-41"
- J1 33
  R30 2
+ J1 33
 Net 20 "" ""
  lsm1 6
  C21 1
 Net 23 "/i-3-1" "i-3-1"
- stm1 18
  R29 1
+ stm1 18
 Net 24 "/sensor-3" "sensor-3"
  R12 1
  stm1 28
 Net 25 "/dr-i-31" "dr-i-31"
- J1 12
  R29 2
+ J1 12
 Net 26 "" ""
  lsm1 13
  C24 2
@@ -3292,52 +3278,52 @@ Net 27 "" ""
  C24 1
  lsm1 12
 Net 28 "/dr-io-21" "dr-io-21"
- J1 29
  R36 2
  R21 2
+ J1 29
 Net 29 "/dr-i-21" "dr-i-21"
- R28 2
  J1 28
+ R28 2
 Net 30 "" ""
  R58 2
  lsm1 3
 Net 31 "/ev_moto/sda-ext" "sda-ext"
- J2 4
- R48 2
- R51 1
  R58 1
+ R48 2
  K1 1
+ R51 1
+ J2 4
  R77 2
 Net 32 "/ev_moto/scl-ext" "scl-ext"
- K1 2
  J2 5
- R59 1
+ K1 2
  R49 2
- R76 2
  R52 1
+ R59 1
+ R76 2
 Net 33 "" ""
- lsm1 2
  R59 2
+ lsm1 2
 Net 34 "/fw-upgrade" "fw-upgrade"
  R46 1
- P1 2
  stm1 44
+ P1 2
 Net 35 "/swd-clk" "swd-clk"
- R57 2
  stm1 37
+ R57 2
 Net 36 "/swd-io" "swd-io"
- stm1 34
  R56 2
+ stm1 34
 Net 37 "" ""
- R60 1
- R62 2
  U2 3
+ R62 2
+ R60 1
 Net 38 "" ""
  P4 2
  R55 1
 Net 39 "" ""
- P4 1
  R54 1
+ P4 1
 Net 40 "" ""
  R39 2
  D2 1
@@ -3348,8 +3334,8 @@ Net 42 "/led2" "led2"
  stm1 25
  R40 1
 Net 43 "" ""
- D3 1
  R40 2
+ D3 1
 Net 44 "/usb-d+" "usb-d+"
  stm1 33
  R62 1
@@ -3357,8 +3343,8 @@ Net 45 "/usb-d-" "usb-d-"
  R61 1
  stm1 32
 Net 46 "" ""
- P4 4
  R56 1
+ P4 4
 Net 47 "" ""
  R63 1
  U2 4
@@ -3369,12 +3355,12 @@ Net 49 "/VBus" "VBus"
  U2 1
  R60 2
 Net 50 "" ""
- C13 2
  C14 1
+ C13 2
 Net 51 "" ""
- U1 5
  R9 1
  R4 1
+ U1 5
 Net 52 "/synch" "synch"
  stm1 41
  R53 2
@@ -3382,8 +3368,8 @@ Net 53 "/scl" "scl"
  R52 2
  stm1 42
 Net 54 "/sda" "sda"
- stm1 43
  R51 2
+ stm1 43
 Net 55 "/tx" "tx"
  R54 2
  stm1 30
@@ -3391,14 +3377,14 @@ Net 56 "/rx" "rx"
  R55 2
  stm1 31
 Net 57 "" ""
- P4 5
  R57 1
+ P4 5
 Net 59 "" ""
- R3 1
- R1 1
- U1 7
- R2 1
  U1 1
+ U1 7
+ R3 1
+ R2 1
+ R1 1
 Net 60 "" ""
  C13 1
  C5 2
@@ -3415,17 +3401,17 @@ Net 64 "/io-4-2" "io-4-2"
  stm1 22
  R44 1
 Net 65 "/i-1-2" "i-1-2"
- stm1 12
  R31 1
+ stm1 12
 Net 66 "/i-1-1" "i-1-1"
- R27 1
  stm1 11
+ R27 1
 Net 68 "/i-2-1" "i-2-1"
  R28 1
  stm1 16
 Net 69 "/i-2-2" "i-2-2"
- R32 1
  stm1 17
+ R32 1
 Net 70 "/i-4-2" "i-4-2"
  stm1 46
  R34 1
@@ -3433,14 +3419,14 @@ Net 71 "/i-4-1" "i-4-1"
  stm1 45
  R30 1
 Net 72 "/io-2-1" "io-2-1"
- R36 1
  stm1 15
+ R36 1
 Net 73 "/io-1-2" "io-1-2"
- stm1 14
  R41 1
+ stm1 14
 Net 74 "/sensor-2" "sensor-2"
- R11 1
  stm1 4
+ R11 1
 Net 75 "/sensor-1" "sensor-1"
  stm1 3
  R10 1
@@ -3455,9 +3441,9 @@ Net 78 "/24v" "24v"
  J2 2
  J2 6
 Net 81 "" ""
- stm1 7
- R18 2
  C15 2
+ R18 2
+ stm1 7
 Net 82 "/io-2-2" "io-2-2"
  R42 1
  stm1 29
@@ -3467,562 +3453,562 @@ Net 83 "/sen-2" "sen-2"
  R11 2
  R6 2
 Net 84 "/sen-4" "sen-4"
- J1 6
- R8 2
- R17 1
  R13 2
+ R8 2
+ J1 6
+ R17 1
 Net 85 "/sen-3" "sen-3"
- R16 1
- J1 4
- R7 2
  R12 2
+ R16 1
+ R7 2
+ J1 4
 Net 86 "/dr-io-42" "dr-io-42"
+ J1 16
  R26 2
  R44 2
- J1 16
 Net 87 "" ""
  D1 2
- U1 2
  L1 1
+ U1 2
 Net 88 "/dr-io-31" "dr-io-31"
- R37 2
  J1 13
  R23 2
+ R37 2
 Net 89 "/ev_moto/analog-out1" "analog-out1"
- R137 1
- D8 1
  J1 17
+ R137 1
  R141 1
+ D8 1
  C68 1
 Net 90 "/ev_moto/analog-out3" "analog-out3"
+ C69 1
  R139 1
  D9 1
- C69 1
- J1 18
  R142 1
+ J1 18
 Net 91 "/ev_moto/analog-out2" "analog-out2"
- D8 7
- J1 36
- C70 1
- R145 1
  R147 1
+ J1 36
+ R145 1
+ C70 1
+ D8 7
 Net 92 "/ev_moto/analog-out4" "analog-out4"
- J1 37
- D9 7
- R148 1
  C71 1
  R146 1
+ R148 1
+ D9 7
+ J1 37
 Net 93 "" ""
- X1 1
  C17 2
  R45 1
+ X1 1
 Net 94 "" ""
  stm1 5
  C16 2
  X1 2
 Net 95 "/ev_moto/synch-ext" "synch-ext"
- R50 2
- R74 2
- R53 1
- K1 3
  J2 9
+ R53 1
+ R74 2
+ K1 3
+ R50 2
 Net 96 "/dr-io-12" "dr-io-12"
- R20 2
  R41 2
+ R20 2
  J1 27
 Net 97 "/sen-1" "sen-1"
- R10 2
  J1 1
+ R10 2
  R14 1
  R5 2
 Net 99 "/ev_moto/B2+" "B2+"
  rs7 7
- J5 7
- J5 3
+ J4 8
+ J4 26
 Net 100 "/ev_moto/B2-" "B2-"
- J5 2
+ J4 9
+ J4 27
  rs7 6
- J5 6
 Net 101 "/ev_moto/B2" "B2"
  rs7 1
  R119 2
 Net 103 "/ev_moto/B1" "B1"
- R117 2
  rs5 1
-Net 105 "/ev_moto/A3" "A3"
- R120 2
+ R117 2
+Net 105 "" ""
+ rs8 2
+ R124 1
+ rs8 3
+Net 106 "/ev_moto/A3" "A3"
  rs8 1
-Net 107 "" ""
- rs9 2
- rs9 3
- R125 1
+ R120 2
 Net 108 "/ev_moto/B3" "B3"
- R121 2
  rs9 1
-Net 109 "" ""
- rs6 3
- rs6 2
- R114 1
-Net 110 "/ev_moto/A2" "A2"
+ R121 2
+Net 109 "/ev_moto/A2" "A2"
  rs6 1
  R118 2
-Net 111 "/ev_moto/A2+" "A2+"
+Net 110 "/ev_moto/A2+" "A2+"
+ J4 24
  rs6 7
- J5 9
- J5 5
-Net 112 "/ev_moto/A2-" "A2-"
+ J4 6
+Net 111 "/ev_moto/A2-" "A2-"
+ J4 7
+ J4 25
  rs6 6
- J5 8
- J5 4
-Net 114 "/ev_moto/A3-" "A3-"
+Net 113 "/ev_moto/A3-" "A3-"
+ J4 11
  rs8 6
- J6 8
- J6 4
-Net 115 "/ev_moto/A3+" "A3+"
- J6 5
- J6 9
+ J4 30
+Net 114 "/ev_moto/A3+" "A3+"
+ J4 29
+ J4 10
  rs8 7
-Net 116 "" ""
+Net 115 "" ""
+ R96 1
  R101 2
  Q4 G
- R96 1
-Net 117 "" ""
- Q5 3
+Net 116 "" ""
  R101 1
-Net 118 "" ""
- Q4 D
+ Q5 3
+Net 117 "" ""
  R105 1
-Net 119 "" ""
- Q1 S
- R83 1
- R82 2
-Net 120 "" ""
- R96 2
- Q4 S
- R97 1
-Net 121 "/ev_moto/dir-input" "dir-input"
+ Q4 D
+Net 118 "" ""
+ R94 2
+ Q3 2
+ R90 2
+Net 119 "/ev_moto/dir-input" "dir-input"
  stm2 14
- R90 1
  R89 1
-Net 122 "" ""
- R92 1
- R95 2
- Q2 S
-Net 123 "" ""
- Q6 S
- R109 1
- R112 2
-Net 124 "" ""
- R110 2
- Q5 2
- R104 2
-Net 125 "/ev_moto/en-input" "en-input"
+ R90 1
+Net 120 "/ev_moto/en-input" "en-input"
  stm2 15
- R106 1
  R104 1
-Net 126 "/ev_moto/en-" "en-"
+ R106 1
+Net 121 "/ev_moto/en-" "en-"
  R109 2
- R105 2
  J3 8
-Net 127 "/ev_moto/en+" "en+"
+ R105 2
+Net 122 "/ev_moto/en+" "en+"
  R97 2
  J3 3
  R103 2
-Net 129 "/ev_moto/A1+" "A1+"
+Net 124 "/ev_moto/A1+" "A1+"
+ J4 20
  rs4 7
- J4 9
- J4 5
-Net 130 "/ev_moto/A1-" "A1-"
- J4 4
- J4 8
+ J4 1
+Net 125 "/ev_moto/A1-" "A1-"
+ J4 21
+ J4 2
  rs4 6
-Net 131 "" ""
+Net 126 "" ""
  rs4 2
- rs4 3
  R79 1
-Net 132 "/ev_moto/A1" "A1"
+ rs4 3
+Net 127 "/ev_moto/A1" "A1"
  rs4 1
  R116 2
-Net 133 "/ev_moto/B1+" "B1+"
- J4 3
- J4 7
+Net 128 "/ev_moto/B1+" "B1+"
+ J4 22
  rs5 7
-Net 134 "/ev_moto/B1-" "B1-"
- J4 6
+ J4 3
+Net 129 "/ev_moto/B1-" "B1-"
  rs5 6
- J4 2
-Net 135 "/ev_moto/rs-b" "rs-b"
- J3 5
+ J4 23
+ J4 4
+Net 130 "/ev_moto/rs-b" "rs-b"
  rs3 7
-Net 136 "/ev_moto/rs-a" "rs-a"
+ J3 5
+Net 131 "/ev_moto/rs-a" "rs-a"
  rs3 6
  J3 9
-Net 137 "" ""
- rs5 3
- rs5 2
- R113 1
-Net 138 "" ""
- C64 1
- D8 3
- R133 2
-Net 139 "" ""
- D8 2
- C68 2
- R137 2
- R141 2
- R138 1
-Net 140 "" ""
- adc3 4
+Net 132 "" ""
+ R134 2
+ D8 5
+ C65 1
+Net 133 "" ""
  R134 1
-Net 141 "/ev_moto/~analog1-cs~" "~analog1-cs~"
- adc2 5
- stm2 3
- R129 2
-Net 142 "/ev_moto/dac-sclk" "dac-sclk"
- stm2 10
+ adc3 4
+Net 134 "/ev_moto/~analog2-cs~" "~analog2-cs~"
+ R130 2
+ adc3 5
+ stm2 4
+Net 135 "/ev_moto/dac-sclk" "dac-sclk"
  adc3 6
- adc4 6
- adc1 6
- adc5 6
  adc2 6
-Net 143 "/ev_moto/dac-din" "dac-din"
- adc4 7
+ adc4 6
+ adc5 6
+ stm2 10
+ adc1 6
+Net 136 "/ev_moto/dac-din" "dac-din"
+ adc2 7
  stm2 11
  adc1 7
+ adc4 7
  adc3 7
  adc5 7
- adc2 7
-Net 144 "" ""
- D9 6
- R148 2
+Net 137 "" ""
  C71 2
- R146 2
  R144 1
-Net 145 "/ev_moto/B4" "B4"
- rs11 1
+ D9 6
+ R146 2
+ R148 2
+Net 138 "" ""
+ R143 1
+ R145 2
+ C70 2
+ R147 2
+ D8 6
+Net 139 "/ev_moto/B4" "B4"
  R123 2
-Net 148 "/ev_moto/A4" "A4"
- R122 2
+ rs11 1
+Net 142 "/ev_moto/A4" "A4"
  rs10 1
-Net 149 "/ev_moto/B3+" "B3+"
- J6 7
+ R122 2
+Net 143 "/ev_moto/B3+" "B3+"
+ J4 31
+ J4 12
  rs9 7
- J6 3
-Net 150 "/ev_moto/B3-" "B3-"
- J6 2
- J6 6
+Net 144 "/ev_moto/B3-" "B3-"
  rs9 6
-Net 151 "/ev_moto/B4-" "B4-"
- J7 6
+ J4 13
+ J4 32
+Net 145 "/ev_moto/B4-" "B4-"
+ J4 18
+ J4 36
  rs11 6
- J7 2
-Net 152 "/ev_moto/B4+" "B4+"
+Net 146 "/ev_moto/B4+" "B4+"
  rs11 7
- J7 3
- J7 7
-Net 153 "" ""
+ J4 35
+ J4 17
+Net 147 "" ""
  adc2 4
  R133 1
-Net 154 "/ev_moto/A4+" "A4+"
- J7 5
- J7 9
+Net 148 "/ev_moto/A4+" "A4+"
+ J4 33
+ J4 15
  rs10 7
-Net 155 "/ev_moto/A4-" "A4-"
- J7 4
+Net 149 "/ev_moto/A4-" "A4-"
+ J4 34
  rs10 6
- J7 8
-Net 159 "/ev_moto/data-" "data-"
+ J4 16
+Net 153 "/ev_moto/data-" "data-"
  rs2 6
  P7 1
-Net 160 "/ev_moto/clock-" "clock-"
- rs1 6
+Net 154 "/ev_moto/clock-" "clock-"
  P7 9
-Net 161 "/ev_moto/clock+" "clock+"
+ rs1 6
+Net 155 "/ev_moto/clock+" "clock+"
  P7 4
  rs1 7
-Net 163 "/ev_moto/data+" "data+"
+Net 157 "/ev_moto/data+" "data+"
  rs2 7
  P7 12
-Net 166 "" ""
+Net 160 "" ""
  C47 1
  C46 2
-Net 167 "/ev_moto/enc-clock" "enc-clock"
+Net 161 "/ev_moto/enc-clock" "enc-clock"
  stm2 16
  rs1 4
-Net 168 "" ""
- rs1 2
- rs1 3
- R64 2
-Net 169 "" ""
+Net 162 "" ""
+ R71 1
  rs2 2
  rs2 3
- R71 1
-Net 170 "/ev_moto/enc-data" "enc-data"
+Net 163 "/ev_moto/enc-data" "enc-data"
  rs2 1
  stm2 17
-Net 172 "/ev_moto/bmsd-rx" "bmsd-rx"
+Net 165 "/ev_moto/bmsd-rx" "bmsd-rx"
  rs3 1
  stm2 13
-Net 173 "" ""
- stm2 22
+Net 166 "" ""
  R121 1
-Net 174 "/ev_moto/bmsd-tx" "bmsd-tx"
- stm2 12
+ stm2 22
+Net 167 "/ev_moto/bmsd-tx" "bmsd-tx"
  rs3 4
-Net 175 "" ""
+ stm2 12
+Net 168 "" ""
  R120 1
  stm2 21
-Net 176 "" ""
- stm2 20
- R78 1
-Net 178 "/ev_moto/bmsd-dir" "bmsd-dir"
- rs3 3
+Net 170 "/ev_moto/bmsd-dir" "bmsd-dir"
  stm2 29
- rs3 2
  R73 2
-Net 179 "" ""
+ rs3 3
+ rs3 2
+Net 171 "" ""
  R117 1
  stm2 19
-Net 181 "" ""
+Net 173 "" ""
  R123 1
  stm2 28
-Net 182 "" ""
+Net 174 "" ""
  R116 1
  stm2 18
-Net 183 "" ""
+Net 175 "" ""
  stm2 27
  R122 1
-Net 184 "" ""
- R119 1
+Net 176 "" ""
  stm2 46
-Net 185 "" ""
- R118 1
+ R119 1
+Net 177 "" ""
  stm2 45
-Net 186 "" ""
+ R118 1
+Net 178 "" ""
  stm2 6
  R72 2
-Net 187 "/ev_moto/led2" "led2"
+Net 179 "" ""
+ R78 1
+ stm2 20
+Net 180 "/ev_moto/led2" "led2"
  stm2 25
  R81 1
-Net 188 "/ev_moto/swd-io" "swd-io"
+Net 181 "/ev_moto/fw-upgrade" "fw-upgrade"
+ R75 1
+ P8 2
+ stm2 44
+Net 182 "" ""
+ stm2 5
+ C37 2
+ X2 2
+Net 183 "/ev_moto/swd-io" "swd-io"
  stm2 34
  R107 2
-Net 189 "/ev_moto/swd-clk" "swd-clk"
+Net 184 "/ev_moto/swd-clk" "swd-clk"
  R108 2
  stm2 37
-Net 190 "" ""
- R72 1
- C38 2
- X2 1
-Net 191 "/ev_moto/led1" "led1"
- R80 1
+Net 185 "/ev_moto/led1" "led1"
  stm2 26
-Net 192 "/ev_moto/dac-out" "dac-out"
- J3 1
- R67 2
-Net 193 "/ev_moto/dir+" "dir+"
- R83 2
- R84 2
- J3 2
-Net 194 "" ""
- R81 2
- D6 1
-Net 195 "/ev_moto/rx" "rx"
- R102 2
- stm2 31
-Net 196 "/ev_moto/~dac-synch~" "~dac-synch~"
- stm2 2
- adc1 5
- R126 2
-Net 197 "" ""
- R107 1
- P9 4
-Net 198 "" ""
- R102 1
- P9 2
-Net 199 "" ""
- P9 1
- R99 1
-Net 200 "/ev_moto/tx" "tx"
- R99 2
- stm2 30
-Net 201 "" ""
- R84 1
- Q2 D
-Net 202 "" ""
+ R80 1
+Net 186 "" ""
  Q6 D
  R103 1
-Net 203 "/ev_moto/dir-" "dir-"
+Net 187 "/ev_moto/dac-out" "dac-out"
+ J3 1
+ R67 2
+Net 188 "/ev_moto/dir+" "dir+"
+ J3 2
+ R83 2
+ R84 2
+Net 189 "" ""
+ R81 2
+ D6 1
+Net 190 "/ev_moto/rx" "rx"
+ stm2 31
+ R102 2
+Net 191 "/ev_moto/~dac-synch~" "~dac-synch~"
+ adc1 5
+ stm2 2
+ R126 2
+Net 192 "" ""
+ R107 1
+ P9 4
+Net 193 "" ""
+ P9 5
+ R108 1
+Net 194 "" ""
+ R102 1
+ P9 2
+Net 195 "/ev_moto/tx" "tx"
+ stm2 30
+ R99 2
+Net 196 "" ""
+ Q2 D
+ R84 1
+Net 197 "" ""
+ R91 1
+ Q1 D
+Net 198 "/ev_moto/dir-" "dir-"
  J3 7
  R92 2
  R91 2
-Net 204 "" ""
- R91 1
- Q1 D
-Net 205 "" ""
+Net 199 "" ""
  R85 1
  Q3 3
-Net 206 "" ""
- R80 2
+Net 200 "" ""
+ Q1 G
+ R85 2
+ R82 1
+Net 201 "" ""
  D5 1
-Net 207 "" ""
+ R80 2
+Net 202 "" ""
  stm2 41
  R74 1
-Net 208 "" ""
- R76 1
+Net 203 "" ""
  stm2 42
-Net 209 "" ""
+ R76 1
+Net 204 "" ""
  R77 1
  stm2 43
-Net 210 "" ""
+Net 205 "" ""
+ U3 2
+ L2 1
+ D7 2
+Net 206 "" ""
+ U3 5
  R100 1
  R98 1
- U3 5
-Net 211 "+5V" "+5V"
+Net 207 "+5V" "+5V"
+ C45 1
+ P7 2
+ R98 2
  C19 1
  D9 8
- D8 8
+ L2 2
  P3 4
  P2 5
  P2 4
- P3 5
- D4 8
- C73 1
- P7 2
  P7 11
- C45 1
- R98 2
- C72 1
+ P3 5
  C44 1
  C56 1
- L2 2
-Net 213 "" ""
- C42 2
- C46 1
-Net 214 "" ""
+ C73 1
+ D4 8
+ D8 8
+ C72 1
+Net 209 "" ""
+ C43 1
+ U3 3
+Net 210 "" ""
  U3 7
  U3 1
  R88 1
  R87 1
  R86 1
+Net 211 "" ""
+ C46 1
+ C42 2
+Net 212 "/ev_moto/out-gain" "out-gain"
+ D4 7
+ R69 1
+ R68 1
+ C36 1
+ R67 1
+Net 213 "" ""
+ R106 2
+ R111 2
+ Q6 G
+Net 214 "" ""
+ D4 3
+ adc1 4
 Net 215 "" ""
- U3 3
- C43 1
+ C33 1
+ D4 5
+ R65 2
 Net 216 "" ""
+ rs7 2
+ rs7 3
+ R115 1
+Net 217 "" ""
+ rs6 2
+ R114 1
+ rs6 3
+Net 218 "" ""
+ rs5 2
+ rs5 3
+ R113 1
+Net 219 "" ""
+ R64 2
+ rs1 3
+ rs1 2
+Net 220 "" ""
+ R69 2
+ R70 1
+ C36 2
+ D4 6
+ R68 2
+Net 221 "" ""
+ X2 1
+ C38 2
+ R72 1
+Net 222 "" ""
+ R110 2
+ Q5 2
+ R104 2
+Net 223 "" ""
+ R99 1
+ P9 1
+Net 224 "" ""
+ C67 1
+ D9 5
+ R136 2
+Net 225 "" ""
+ R136 1
+ adc5 4
+Net 226 "" ""
+ R135 1
+ adc4 4
+Net 228 "" ""
+ R135 2
+ C66 1
+ D9 3
+Net 229 "" ""
+ R139 2
+ D9 2
+ R140 1
+ C69 2
+ R142 2
+Net 230 "" ""
+ rs11 3
+ R128 1
+ rs11 2
+Net 231 "" ""
+ rs10 3
+ rs10 2
+ R127 1
+Net 232 "" ""
+ rs9 3
+ rs9 2
+ R125 1
+Net 233 "" ""
+ D8 3
+ R133 2
+ C64 1
+Net 234 "" ""
+ R141 2
+ R138 1
+ R137 2
+ D8 2
+ C68 2
+Net 235 "/ev_moto/~analog4-cs~" "~analog4-cs~"
+ R132 2
+ adc5 5
+ stm2 33
+Net 236 "/ev_moto/~analog3-cs~" "~analog3-cs~"
+ R131 2
+ stm2 32
+ adc4 5
+Net 237 "" ""
+ R66 2
+ C34 2
+ stm2 7
+Net 238 "" ""
+ D4 2
+ R65 1
+ D4 1
+Net 239 "" ""
+ Q4 S
+ R96 2
+ R97 1
+Net 240 "" ""
+ R83 1
+ Q1 S
+ R82 2
+Net 241 "" ""
+ R109 1
+ Q6 S
+ R112 2
+Net 242 "" ""
+ R95 2
+ Q2 S
+ R92 1
+Net 243 "/ev_moto/~analog1-cs~" "~analog1-cs~"
+ R129 2
+ adc2 5
+ stm2 3
+Net 244 "" ""
  R93 2
  R89 2
  Q2 G
-Net 217 "" ""
- R65 2
- C33 1
- D4 5
-Net 218 "" ""
- D4 3
- adc1 4
-Net 219 "/ev_moto/fw-upgrade" "fw-upgrade"
- R75 1
- stm2 44
- P8 2
-Net 220 "" ""
- D7 2
- L2 1
- U3 2
-Net 221 "" ""
- P9 5
- R108 1
-Net 222 "" ""
- stm2 7
- C34 2
- R66 2
-Net 223 "" ""
- X2 2
- stm2 5
- C37 2
-Net 224 "" ""
- D4 1
- D4 2
- R65 1
-Net 225 "" ""
- R111 2
- R106 2
- Q6 G
-Net 226 "/ev_moto/~analog2-cs~" "~analog2-cs~"
- stm2 4
- R130 2
- adc3 5
-Net 227 "" ""
- adc4 4
- R135 1
-Net 228 "" ""
- R136 1
- adc5 4
-Net 229 "" ""
- C67 1
- R136 2
- D9 5
-Net 230 "" ""
- D9 3
- C66 1
- R135 2
-Net 231 "" ""
- R140 1
- R139 2
- D9 2
- R142 2
- C69 2
-Net 232 "" ""
- R134 2
- C65 1
- D8 5
-Net 233 "" ""
- R147 2
- C70 2
- R145 2
- R143 1
- D8 6
-Net 234 "/ev_moto/~analog4-cs~" "~analog4-cs~"
- stm2 33
- adc5 5
- R132 2
-Net 235 "/ev_moto/~analog3-cs~" "~analog3-cs~"
- R131 2
- adc4 5
- stm2 32
-Net 236 "" ""
- R69 2
- D4 6
- C36 2
- R68 2
- R70 1
-Net 237 "/ev_moto/out-gain" "out-gain"
- R67 1
- D4 7
- R69 1
- C36 1
- R68 1
-Net 238 "" ""
- R94 2
- R90 2
- Q3 2
-Net 239 "" ""
- R85 2
- Q1 G
- R82 1
-Net 240 "" ""
- rs10 3
- R127 1
- rs10 2
-Net 241 "" ""
- rs11 2
- rs11 3
- R128 1
-Net 242 "" ""
- rs7 2
- R115 1
- rs7 3
-Net 243 "" ""
- rs8 2
- R124 1
- rs8 3
 }
 #End
