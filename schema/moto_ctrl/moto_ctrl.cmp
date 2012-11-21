@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Tue 20 Nov 2012 11:19:13 PM MSK
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Wed 21 Nov 2012 07:47:02 PM MSK
 
 BeginCmp
 TimeStamp = /509DDBA2/509E3AD6;
@@ -74,7 +74,7 @@ BeginCmp
 TimeStamp = /5096B3CC;
 Reference = C8;
 ValeurCmp = 1m;
-IdModule  = SM0805;
+IdModule  = C2V10;
 EndCmp
 
 BeginCmp
@@ -312,7 +312,7 @@ BeginCmp
 TimeStamp = /509DDBA2/509E37AF;
 Reference = C45;
 ValeurCmp = 1m;
-IdModule  = SM0805;
+IdModule  = C2V10;
 EndCmp
 
 BeginCmp
@@ -481,13 +481,6 @@ TimeStamp = /509C126B;
 Reference = J1;
 ValeurCmp = DB37;
 IdModule  = DB37FC;
-EndCmp
-
-BeginCmp
-TimeStamp = /5096B4B8;
-Reference = J2;
-ValeurCmp = DB9;
-IdModule  = DB9FC;
 EndCmp
 
 BeginCmp
