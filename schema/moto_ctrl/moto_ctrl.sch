@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 21/11/2012 16:13:24
+EESchema Schematic File Version 2  date Wed 21 Nov 2012 10:25:09 PM MSK
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -61,6 +61,44 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+NoConn ~ 29500 1450
+NoConn ~ 29500 1550
+NoConn ~ 29500 1650
+NoConn ~ 29500 1750
+NoConn ~ 29500 1850
+NoConn ~ 29500 1950
+NoConn ~ 29500 2050
+NoConn ~ 29500 2150
+NoConn ~ 29500 2250
+NoConn ~ 29500 2350
+NoConn ~ 29500 2450
+NoConn ~ 29500 2550
+NoConn ~ 29500 2650
+NoConn ~ 29500 2750
+NoConn ~ 29500 2850
+NoConn ~ 29500 2950
+NoConn ~ 29500 3050
+NoConn ~ 29500 3150
+$Sheet
+S 20250 11800 3600 3400
+U 509DDBA2
+F0 "ev_moto" 60
+F1 "ev_moto.sch" 60
+F2 "+5v" I L 20250 12400 60 
+F3 "synch-ext" I L 20250 14400 60 
+F4 "sda-ext" I L 20250 14000 60 
+F5 "scl-ext" I L 20250 13600 60 
+F6 "gnd" I L 20250 13200 60 
+F7 "+24v" I L 20250 12000 60 
+F8 "vdd" I L 20250 12800 60 
+F9 "analog-out2" I R 23850 13100 60 
+F10 "analog-out1" I R 23850 12900 60 
+F11 "addr3" I R 23850 14400 60 
+F12 "addr2" I R 23850 14200 60 
+F13 "addr1" I R 23850 14000 60 
+F14 "usb+" I R 23850 14750 60 
+F15 "usb-" I R 23850 14950 60 
+$EndSheet
 NoConn ~ 13950 5900
 NoConn ~ 13950 5700
 Wire Wire Line
@@ -129,7 +167,7 @@ Wire Wire Line
 Wire Wire Line
 	3250 21450 3250 21650
 Wire Wire Line
-	29500 3050 28750 3050
+	29500 4950 28750 4950
 Wire Wire Line
 	23850 12900 24300 12900
 Wire Wire Line
@@ -265,23 +303,23 @@ Wire Wire Line
 Wire Wire Line
 	28050 11250 28050 11350
 Wire Wire Line
-	29500 2950 28850 2950
+	29500 4850 28850 4850
 Wire Wire Line
-	29500 2850 28750 2850
+	29500 4750 28750 4750
 Wire Wire Line
-	29500 2650 28750 2650
+	29500 4550 28750 4550
 Wire Wire Line
-	29500 2450 28750 2450
+	29500 4350 28750 4350
 Wire Wire Line
-	29500 2250 28750 2250
+	29500 4150 28750 4150
 Wire Wire Line
-	29500 2050 28750 2050
+	29500 3950 28750 3950
 Wire Wire Line
-	29500 1850 28750 1850
+	29500 3750 28750 3750
 Wire Wire Line
-	29500 1650 28750 1650
+	29500 3550 28750 3550
 Wire Wire Line
-	29500 1450 28750 1450
+	29500 3350 28750 3350
 Wire Wire Line
 	11600 15200 11600 15000
 Wire Wire Line
@@ -779,19 +817,19 @@ Wire Wire Line
 Wire Wire Line
 	12000 15200 12000 15000
 Wire Wire Line
-	29500 1550 28850 1550
+	29500 3450 28850 3450
 Wire Wire Line
-	29500 1750 28850 1750
+	29500 3650 28850 3650
 Wire Wire Line
-	29500 1950 28850 1950
+	29500 3850 28850 3850
 Wire Wire Line
-	29500 2150 28850 2150
+	29500 4050 28850 4050
 Wire Wire Line
-	29500 2350 28850 2350
+	29500 4250 28850 4250
 Wire Wire Line
-	29500 2550 28850 2550
+	29500 4450 28850 4450
 Wire Wire Line
-	29500 2750 28850 2750
+	29500 4650 28850 4650
 Wire Wire Line
 	20250 12000 19900 12000
 Wire Wire Line
@@ -807,7 +845,7 @@ Wire Wire Line
 Wire Wire Line
 	23850 13100 24300 13100
 Wire Wire Line
-	29500 3150 28850 3150
+	29500 5050 28850 5050
 Wire Wire Line
 	1600 10500 2400 10500
 Wire Wire Line
@@ -934,8 +972,7 @@ F 1 "i2c-1" V 1300 10600 40  0000 C CNN
 	1    1250 10600
 	-1   0    0    -1  
 $EndComp
-NoConn ~ 29500 5050
-Text Label 28900 2350 0    60   ~ 0
+Text Label 28900 4250 0    60   ~ 0
 sen-vdd-2
 $Comp
 L CONN_2 P5
@@ -1023,23 +1060,6 @@ High power input
 Text Notes 3150 20800 0    60   ~ 0
 Driver power socket (output)
 NoConn ~ 29500 3250
-NoConn ~ 29500 3350
-NoConn ~ 29500 3450
-NoConn ~ 29500 3550
-NoConn ~ 29500 3650
-NoConn ~ 29500 3750
-NoConn ~ 29500 3850
-NoConn ~ 29500 3950
-NoConn ~ 29500 4050
-NoConn ~ 29500 4150
-NoConn ~ 29500 4250
-NoConn ~ 29500 4350
-NoConn ~ 29500 4450
-NoConn ~ 29500 4550
-NoConn ~ 29500 4650
-NoConn ~ 29500 4750
-NoConn ~ 29500 4850
-NoConn ~ 29500 4950
 NoConn ~ 13950 3200
 NoConn ~ 13950 3500
 NoConn ~ 13950 7850
@@ -1047,9 +1067,9 @@ NoConn ~ 13950 8050
 NoConn ~ 13950 9200
 NoConn ~ 13950 9000
 NoConn ~ 13950 10400
-Text Label 28900 3150 0    60   ~ 0
+Text Label 28900 5050 0    60   ~ 0
 an-out2
-Text Label 28800 2250 0    60   ~ 0
+Text Label 28800 4150 0    60   ~ 0
 an-out1
 Text Label 23950 13100 0    60   ~ 0
 an-out2
@@ -1097,26 +1117,6 @@ F 1 "+24V" H 19900 12000 30  0000 C CNN
 	1    19900 11900
 	1    0    0    -1  
 $EndComp
-$Sheet
-S 20250 11800 3600 3400
-U 509DDBA2
-F0 "ev_moto" 60
-F1 "ev_moto.sch" 60
-F2 "+5v" I L 20250 12400 60 
-F3 "synch-ext" I L 20250 14400 60 
-F4 "sda-ext" I L 20250 14000 60 
-F5 "scl-ext" I L 20250 13600 60 
-F6 "gnd" I L 20250 13200 60 
-F7 "+24v" I L 20250 12000 60 
-F8 "vdd" I L 20250 12800 60 
-F9 "analog-out2" I R 23850 13100 60 
-F10 "analog-out1" I R 23850 12900 60 
-F11 "addr3" I R 23850 14400 60 
-F12 "addr2" I R 23850 14200 60 
-F13 "addr1" I R 23850 14000 60 
-F14 "usb+" I R 23850 14750 60 
-F15 "usb-" I R 23850 14950 60 
-$EndSheet
 $Comp
 L PWR_FLAG #FLG016
 U 1 1 509E4981
@@ -1351,35 +1351,35 @@ F 1 "power-2" V 28550 11200 60  0000 C CNN
 	1    28500 11200
 	-1   0    0    -1  
 $EndComp
-Text Label 28800 3050 0    60   ~ 0
+Text Label 28800 4950 0    60   ~ 0
 dr-gnd-2
-Text Label 28900 2950 0    60   ~ 0
+Text Label 28900 4850 0    60   ~ 0
 dr-io-22
-Text Label 28800 2850 0    60   ~ 0
+Text Label 28800 4750 0    60   ~ 0
 dr-io-21
-Text Label 28900 2750 0    60   ~ 0
+Text Label 28900 4650 0    60   ~ 0
 dr-i-22
-Text Label 28800 2650 0    60   ~ 0
+Text Label 28800 4550 0    60   ~ 0
 dr-i-21
-Text Label 28900 1750 0    60   ~ 0
+Text Label 28900 3650 0    60   ~ 0
 dr-i-11
-Text Label 28800 1850 0    60   ~ 0
+Text Label 28800 3750 0    60   ~ 0
 dr-i-12
-Text Label 28900 1950 0    60   ~ 0
+Text Label 28900 3850 0    60   ~ 0
 dr-io-11
-Text Label 28800 2050 0    60   ~ 0
+Text Label 28800 3950 0    60   ~ 0
 dr-io-12
-Text Label 28900 2150 0    60   ~ 0
+Text Label 28900 4050 0    60   ~ 0
 dr-gnd-1
-Text Label 28900 2550 0    60   ~ 0
+Text Label 28900 4450 0    60   ~ 0
 sen-gnd-2
-Text Label 28800 2450 0    60   ~ 0
+Text Label 28800 4350 0    60   ~ 0
 sen-2
-Text Label 28800 1650 0    60   ~ 0
+Text Label 28800 3550 0    60   ~ 0
 sen-gnd-1
-Text Label 28900 1550 0    60   ~ 0
+Text Label 28900 3450 0    60   ~ 0
 sen-vdd-1
-Text Label 28800 1450 0    60   ~ 0
+Text Label 28800 3350 0    60   ~ 0
 sen-1
 Text Label 21400 5350 0    60   ~ 0
 dr-i-21
@@ -2303,9 +2303,9 @@ F 1 "50" V 2300 14500 50  0000 C CNN
 	1    2300 14500
 	0    -1   -1   0   
 $EndComp
-Text Label 2800 14300 0    60   ~ 0
+Text Label 2850 13800 0    60   ~ 0
 swd-io
-Text Label 2800 14500 0    60   ~ 0
+Text Label 2850 13600 0    60   ~ 0
 swd-clk
 $Comp
 L R R48
@@ -2403,7 +2403,7 @@ F 1 "GND" H 3500 14180 30  0001 C CNN
 	1    3500 14250
 	1    0    0    -1  
 $EndComp
-Text Label 3050 13800 0    60   ~ 0
+Text Label 3000 14500 0    60   ~ 0
 rx
 $Comp
 L R R54
@@ -2414,7 +2414,7 @@ F 1 "50" V 2300 13600 50  0000 C CNN
 	1    2300 13600
 	0    -1   -1   0   
 $EndComp
-Text Label 3050 13600 0    60   ~ 0
+Text Label 3000 14300 0    60   ~ 0
 tx
 $Comp
 L CONN_3 K1
