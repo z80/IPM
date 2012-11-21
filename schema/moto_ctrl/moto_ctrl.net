@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  21/11/2012 10:11:44
+# EESchema Netlist Version 1.1 created  21/11/2012 16:13:29
 (
  ( /50ABD6A8 $noname  P1 SETUP {Lib=CONN_8}
   (    1 VDD )
@@ -361,11 +361,11 @@
   (    2 GND )
  )
  ( /5096B4A4 $noname  R61 22 {Lib=R}
-  (    1 /ev_moto/usb+ )
+  (    1 /ev_moto/usb- )
   (    2 N-000057 )
  )
  ( /5096B4A3 $noname  R62 22 {Lib=R}
-  (    1 /ev_moto/usb- )
+  (    1 /ev_moto/usb+ )
   (    2 N-000097 )
  )
  ( /5096B4A2 $noname  R60 1k5 {Lib=R}
@@ -2601,12 +2601,12 @@ Net 56 "" ""
 Net 57 "" ""
  R61 2
  U2 2
-Net 58 "/ev_moto/usb+" "usb+"
+Net 58 "/ev_moto/usb-" "usb-"
  R61 1
- stm2 33
-Net 59 "/ev_moto/usb-" "usb-"
  stm2 32
+Net 59 "/ev_moto/usb+" "usb+"
  R62 1
+ stm2 33
 Net 60 "/swd-io" "swd-io"
  R56 2
  stm1 34

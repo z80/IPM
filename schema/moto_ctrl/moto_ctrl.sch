@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 21/11/2012 10:11:49
+EESchema Schematic File Version 2  date 21/11/2012 16:13:24
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -1949,9 +1949,9 @@ F 1 "GND" H 11650 11630 30  0001 C CNN
 	1    11650 11700
 	1    0    0    -1  
 $EndComp
-Text Label 24250 14750 0    60   ~ 0
-usb-d-
 Text Label 24250 14950 0    60   ~ 0
+usb-d-
+Text Label 24250 14750 0    60   ~ 0
 usb-d+
 Text Label 14300 6500 0    60   ~ 0
 swd-io
