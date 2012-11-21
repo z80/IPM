@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Tue 20 Nov 2012 11:19:17 PM MSK
+EESchema Schematic File Version 2  date 21/11/2012 10:11:49
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -53,7 +53,7 @@ $Descr A1 33070 23400
 encoding utf-8
 Sheet 2 2
 Title ""
-Date "20 nov 2012"
+Date "21 nov 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -61,12 +61,12 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 9000 10200 2    60   Input ~ 0
-addr3
-Text HLabel 9000 10000 2    60   Input ~ 0
-addr2
-Text HLabel 9000 9800 2    60   Input ~ 0
-addr1
+Text HLabel 8750 5900 2    60   Input ~ 0
+usb+
+Text HLabel 8750 5700 2    60   Input ~ 0
+usb-
+Wire Wire Line
+	8250 5900 8750 5900
 Wire Wire Line
 	8250 10200 9000 10200
 Wire Wire Line
@@ -1102,6 +1102,14 @@ Wire Notes Line
 	25800 2550 25800 900 
 Wire Wire Line
 	8250 10000 9000 10000
+Wire Wire Line
+	8250 5700 8750 5700
+Text HLabel 9000 10200 2    60   Input ~ 0
+addr3
+Text HLabel 9000 10000 2    60   Input ~ 0
+addr2
+Text HLabel 9000 9800 2    60   Input ~ 0
+addr1
 NoConn ~ 27200 2600
 NoConn ~ 27200 2700
 NoConn ~ 27200 2800
@@ -1143,8 +1151,6 @@ F 1 "GND" H 26100 2030 30  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 8250 10400
-NoConn ~ 8250 5900
-NoConn ~ 8250 5700
 $Comp
 L GND #PWR091
 U 1 1 50AB87F8

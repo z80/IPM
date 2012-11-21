@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 1 date Tue 20 Nov 2012 11:52:13 PM MSK
+PCBNEW-BOARD Version 1 date 21/11/2012 10:14:58
 
 # Created by Pcbnew(2012-01-19 BZR 3256)-stable
 
@@ -7,21 +7,21 @@ encoding utf-8
 LayerCount 2
 Ly 1FFF8001
 EnabledLayers 10FF8001
-Links 532
-NoConn 532
-Di 27785 11546 97145 76857
+Links 524
+NoConn 524
+Di 32825 11546 99929 77745
 Ndraw 24
 Ntrack 4
 Nzone 0
 BoardThickness 630
-Nmodule 220
-Nnets 171
+Nmodule 219
+Nnets 170
 $EndGENERAL
 
 $SHEETDESCR
 Sheet A4 11700 8267
 Title ""
-Date "20 nov 2012"
+Date "21 nov 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -84,375 +84,375 @@ Na 2 "+5V"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 3 "/24v"
+Na 3 "/VBus"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 4 "/VBus"
+Na 4 "/dr-i-11"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 5 "/dr-i-11"
+Na 5 "/dr-i-12"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 6 "/dr-i-12"
+Na 6 "/dr-i-21"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 7 "/dr-i-21"
+Na 7 "/dr-i-22"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 8 "/dr-i-22"
+Na 8 "/dr-io-11"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 9 "/dr-io-11"
+Na 9 "/dr-io-12"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 10 "/dr-io-12"
+Na 10 "/dr-io-21"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 11 "/dr-io-21"
+Na 11 "/dr-io-22"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 12 "/dr-io-22"
+Na 12 "/ev_moto/A1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 13 "/ev_moto/A1"
+Na 13 "/ev_moto/A1+"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 14 "/ev_moto/A1+"
+Na 14 "/ev_moto/A1-"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 15 "/ev_moto/A1-"
+Na 15 "/ev_moto/A2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 16 "/ev_moto/A2"
+Na 16 "/ev_moto/A2+"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 17 "/ev_moto/A2+"
+Na 17 "/ev_moto/A2-"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 18 "/ev_moto/A2-"
+Na 18 "/ev_moto/B1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 19 "/ev_moto/B1"
+Na 19 "/ev_moto/B1+"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 20 "/ev_moto/B1+"
+Na 20 "/ev_moto/B1-"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 21 "/ev_moto/B1-"
+Na 21 "/ev_moto/B2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 22 "/ev_moto/B2"
+Na 22 "/ev_moto/B2+"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 23 "/ev_moto/B2+"
+Na 23 "/ev_moto/B2-"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 24 "/ev_moto/B2-"
+Na 24 "/ev_moto/addr1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 25 "/ev_moto/addr1"
+Na 25 "/ev_moto/addr2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 26 "/ev_moto/addr2"
+Na 26 "/ev_moto/addr3"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 27 "/ev_moto/addr3"
+Na 27 "/ev_moto/analog-out1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 28 "/ev_moto/analog-out1"
+Na 28 "/ev_moto/analog-out2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 29 "/ev_moto/analog-out2"
+Na 29 "/ev_moto/bmsd-dir"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 30 "/ev_moto/bmsd-dir"
+Na 30 "/ev_moto/bmsd-rx"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 31 "/ev_moto/bmsd-rx"
+Na 31 "/ev_moto/bmsd-tx"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 32 "/ev_moto/bmsd-tx"
+Na 32 "/ev_moto/clock+"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 33 "/ev_moto/clock+"
+Na 33 "/ev_moto/clock-"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 34 "/ev_moto/clock-"
+Na 34 "/ev_moto/dac-din"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 35 "/ev_moto/dac-din"
+Na 35 "/ev_moto/dac-out"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 36 "/ev_moto/dac-out"
+Na 36 "/ev_moto/dac-sclk"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 37 "/ev_moto/dac-sclk"
+Na 37 "/ev_moto/data+"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 38 "/ev_moto/data+"
+Na 38 "/ev_moto/data-"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 39 "/ev_moto/data-"
+Na 39 "/ev_moto/dir+"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 40 "/ev_moto/dir+"
+Na 40 "/ev_moto/dir-"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 41 "/ev_moto/dir-"
+Na 41 "/ev_moto/dir-input"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 42 "/ev_moto/dir-input"
+Na 42 "/ev_moto/en+"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 43 "/ev_moto/en+"
+Na 43 "/ev_moto/en-"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 44 "/ev_moto/en-"
+Na 44 "/ev_moto/en-input"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 45 "/ev_moto/en-input"
+Na 45 "/ev_moto/enc-clock"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 46 "/ev_moto/enc-clock"
+Na 46 "/ev_moto/enc-data"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 47 "/ev_moto/enc-data"
+Na 47 "/ev_moto/fw-upgrade"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 48 "/ev_moto/fw-upgrade"
+Na 48 "/ev_moto/led1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 49 "/ev_moto/led1"
+Na 49 "/ev_moto/led2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 50 "/ev_moto/led2"
+Na 50 "/ev_moto/out-gain"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 51 "/ev_moto/out-gain"
+Na 51 "/ev_moto/rs-a"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 52 "/ev_moto/rs-a"
+Na 52 "/ev_moto/rs-b"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 53 "/ev_moto/rs-b"
+Na 53 "/ev_moto/rx"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 54 "/ev_moto/rx"
+Na 54 "/ev_moto/scl-ext"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 55 "/ev_moto/scl-ext"
+Na 55 "/ev_moto/sda-ext"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 56 "/ev_moto/sda-ext"
+Na 56 "/ev_moto/swd-clk"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 57 "/ev_moto/swd-clk"
+Na 57 "/ev_moto/swd-io"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 58 "/ev_moto/swd-io"
+Na 58 "/ev_moto/synch-ext"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 59 "/ev_moto/synch-ext"
+Na 59 "/ev_moto/tx"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 60 "/ev_moto/tx"
+Na 60 "/ev_moto/usb+"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 61 "/ev_moto/~analog1-cs~"
+Na 61 "/ev_moto/usb-"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 62 "/ev_moto/~analog2-cs~"
+Na 62 "/ev_moto/~analog1-cs~"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 63 "/ev_moto/~dac-synch~"
+Na 63 "/ev_moto/~analog2-cs~"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 64 "/fw-upgrade"
+Na 64 "/ev_moto/~dac-synch~"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 65 "/i-1-1"
+Na 65 "/fw-upgrade"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 66 "/i-1-2"
+Na 66 "/i-1-1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 67 "/i-2-1"
+Na 67 "/i-1-2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 68 "/i-2-2"
+Na 68 "/i-2-1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 69 "/io-1-1"
+Na 69 "/i-2-2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 70 "/io-1-2"
+Na 70 "/io-1-1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 71 "/io-2-1"
+Na 71 "/io-1-2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 72 "/io-2-2"
+Na 72 "/io-2-1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 73 "/led1"
+Na 73 "/io-2-2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 74 "/led2"
+Na 74 "/led1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 75 "/rx"
+Na 75 "/led2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 76 "/scl"
+Na 76 "/rx"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 77 "/sda"
+Na 77 "/scl"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 78 "/sen-1"
+Na 78 "/sda"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 79 "/sen-2"
+Na 79 "/sen-1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 80 "/sensor-1"
+Na 80 "/sen-2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 81 "/sensor-2"
+Na 81 "/sensor-1"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 82 "/swd-clk"
+Na 82 "/sensor-2"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 83 "/swd-io"
+Na 83 "/swd-clk"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 84 "/synch"
+Na 84 "/swd-io"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 85 "/tx"
+Na 85 "/synch"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 86 "/usb-d+"
+Na 86 "/tx"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 87 "/usb-d-"
+Na 87 "GND"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 88 "GND"
+Na 88 "N-000005"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 89 "N-000005"
+Na 89 "N-000013"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 90 "N-000008"
+Na 90 "N-000016"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 91 "N-000009"
+Na 91 "N-000017"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 92 "N-000010"
+Na 92 "N-000018"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 93 "N-000011"
+Na 93 "N-000048"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 94 "N-000046"
+Na 94 "N-000049"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 95 "N-000049"
+Na 95 "N-000050"
 St ~
 $EndEQUIPOT
 $EQUIPOT
@@ -460,11 +460,11 @@ Na 96 "N-000051"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 97 "N-000053"
+Na 97 "N-000054"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 98 "N-000055"
+Na 98 "N-000056"
 St ~
 $EndEQUIPOT
 $EQUIPOT
@@ -472,147 +472,147 @@ Na 99 "N-000057"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 100 "N-000059"
+Na 100 "N-000062"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 101 "N-000060"
+Na 101 "N-000064"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 102 "N-000061"
+Na 102 "N-000068"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 103 "N-000066"
+Na 103 "N-000069"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 104 "N-000067"
+Na 104 "N-000071"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 105 "N-000069"
+Na 105 "N-000088"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 106 "N-000075"
+Na 106 "N-000089"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 107 "N-000088"
+Na 107 "N-000091"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 108 "N-000090"
+Na 108 "N-000094"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 109 "N-000091"
+Na 109 "N-000095"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 110 "N-000092"
+Na 110 "N-000097"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 111 "N-000093"
+Na 111 "N-000098"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 112 "N-000095"
+Na 112 "N-000104"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 113 "N-000099"
+Na 113 "N-000106"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 114 "N-000105"
+Na 114 "N-000107"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 115 "N-000106"
+Na 115 "N-000108"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 116 "N-000107"
+Na 116 "N-000109"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 117 "N-000108"
+Na 117 "N-000110"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 118 "N-000109"
+Na 118 "N-000111"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 119 "N-000111"
+Na 119 "N-000113"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 120 "N-000112"
+Na 120 "N-000114"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 121 "N-000120"
+Na 121 "N-000118"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 122 "N-000125"
+Na 122 "N-000123"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 123 "N-000127"
+Na 123 "N-000128"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 124 "N-000128"
+Na 124 "N-000130"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 125 "N-000129"
+Na 125 "N-000131"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 126 "N-000131"
+Na 126 "N-000133"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 127 "N-000132"
+Na 127 "N-000134"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 128 "N-000141"
+Na 128 "N-000143"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 129 "N-000142"
+Na 129 "N-000144"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 130 "N-000144"
+Na 130 "N-000145"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 131 "N-000150"
+Na 131 "N-000151"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 132 "N-000162"
+Na 132 "N-000164"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 133 "N-000165"
+Na 133 "N-000167"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 134 "N-000171"
+Na 134 "N-000172"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 135 "N-000172"
+Na 135 "N-000173"
 St ~
 $EndEQUIPOT
 $EQUIPOT
@@ -620,107 +620,107 @@ Na 136 "N-000175"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 137 "N-000178"
+Na 137 "N-000177"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 138 "N-000180"
+Na 138 "N-000178"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 139 "N-000182"
+Na 139 "N-000180"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 140 "N-000183"
+Na 140 "N-000181"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 141 "N-000184"
+Na 141 "N-000182"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 142 "N-000185"
+Na 142 "N-000183"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 143 "N-000186"
+Na 143 "N-000184"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 144 "N-000189"
+Na 144 "N-000187"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 145 "N-000190"
+Na 145 "N-000191"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 146 "N-000194"
+Na 146 "N-000192"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 147 "N-000195"
+Na 147 "N-000193"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 148 "N-000196"
+Na 148 "N-000194"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 149 "N-000197"
+Na 149 "N-000195"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 150 "N-000198"
+Na 150 "N-000196"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 151 "N-000199"
+Na 151 "N-000197"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 152 "N-000201"
+Na 152 "N-000199"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 153 "N-000203"
+Na 153 "N-000201"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 154 "N-000204"
+Na 154 "N-000202"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 155 "N-000205"
+Na 155 "N-000203"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 156 "N-000206"
+Na 156 "N-000204"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 157 "N-000207"
+Na 157 "N-000205"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 158 "N-000208"
+Na 158 "N-000206"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 159 "N-000210"
+Na 159 "N-000209"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 160 "N-000211"
+Na 160 "N-000213"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 161 "N-000215"
+Na 161 "N-000214"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 162 "N-000216"
+Na 162 "N-000215"
 St ~
 $EndEQUIPOT
 $EQUIPOT
@@ -748,11 +748,7 @@ Na 168 "N-000222"
 St ~
 $EndEQUIPOT
 $EQUIPOT
-Na 169 "N-000223"
-St ~
-$EndEQUIPOT
-$EQUIPOT
-Na 170 "VDD"
+Na 169 "VDD"
 St ~
 $EndEQUIPOT
 $NCLASS
@@ -767,7 +763,6 @@ uViaDrill 50
 AddNet ""
 AddNet "+24V"
 AddNet "+5V"
-AddNet "/24v"
 AddNet "/VBus"
 AddNet "/dr-i-11"
 AddNet "/dr-i-12"
@@ -825,6 +820,8 @@ AddNet "/ev_moto/swd-clk"
 AddNet "/ev_moto/swd-io"
 AddNet "/ev_moto/synch-ext"
 AddNet "/ev_moto/tx"
+AddNet "/ev_moto/usb+"
+AddNet "/ev_moto/usb-"
 AddNet "/ev_moto/~analog1-cs~"
 AddNet "/ev_moto/~analog2-cs~"
 AddNet "/ev_moto/~dac-synch~"
@@ -850,90 +847,88 @@ AddNet "/swd-clk"
 AddNet "/swd-io"
 AddNet "/synch"
 AddNet "/tx"
-AddNet "/usb-d+"
-AddNet "/usb-d-"
 AddNet "GND"
 AddNet "N-000005"
-AddNet "N-000008"
-AddNet "N-000009"
-AddNet "N-000010"
-AddNet "N-000011"
-AddNet "N-000046"
+AddNet "N-000013"
+AddNet "N-000016"
+AddNet "N-000017"
+AddNet "N-000018"
+AddNet "N-000048"
 AddNet "N-000049"
+AddNet "N-000050"
 AddNet "N-000051"
-AddNet "N-000053"
-AddNet "N-000055"
+AddNet "N-000054"
+AddNet "N-000056"
 AddNet "N-000057"
-AddNet "N-000059"
-AddNet "N-000060"
-AddNet "N-000061"
-AddNet "N-000066"
-AddNet "N-000067"
+AddNet "N-000062"
+AddNet "N-000064"
+AddNet "N-000068"
 AddNet "N-000069"
-AddNet "N-000075"
+AddNet "N-000071"
 AddNet "N-000088"
-AddNet "N-000090"
+AddNet "N-000089"
 AddNet "N-000091"
-AddNet "N-000092"
-AddNet "N-000093"
+AddNet "N-000094"
 AddNet "N-000095"
-AddNet "N-000099"
-AddNet "N-000105"
+AddNet "N-000097"
+AddNet "N-000098"
+AddNet "N-000104"
 AddNet "N-000106"
 AddNet "N-000107"
 AddNet "N-000108"
 AddNet "N-000109"
+AddNet "N-000110"
 AddNet "N-000111"
-AddNet "N-000112"
-AddNet "N-000120"
-AddNet "N-000125"
-AddNet "N-000127"
+AddNet "N-000113"
+AddNet "N-000114"
+AddNet "N-000118"
+AddNet "N-000123"
 AddNet "N-000128"
-AddNet "N-000129"
+AddNet "N-000130"
 AddNet "N-000131"
-AddNet "N-000132"
-AddNet "N-000141"
-AddNet "N-000142"
+AddNet "N-000133"
+AddNet "N-000134"
+AddNet "N-000143"
 AddNet "N-000144"
-AddNet "N-000150"
-AddNet "N-000162"
-AddNet "N-000165"
-AddNet "N-000171"
+AddNet "N-000145"
+AddNet "N-000151"
+AddNet "N-000164"
+AddNet "N-000167"
 AddNet "N-000172"
+AddNet "N-000173"
 AddNet "N-000175"
+AddNet "N-000177"
 AddNet "N-000178"
 AddNet "N-000180"
+AddNet "N-000181"
 AddNet "N-000182"
 AddNet "N-000183"
 AddNet "N-000184"
-AddNet "N-000185"
-AddNet "N-000186"
-AddNet "N-000189"
-AddNet "N-000190"
+AddNet "N-000187"
+AddNet "N-000191"
+AddNet "N-000192"
+AddNet "N-000193"
 AddNet "N-000194"
 AddNet "N-000195"
 AddNet "N-000196"
 AddNet "N-000197"
-AddNet "N-000198"
 AddNet "N-000199"
 AddNet "N-000201"
+AddNet "N-000202"
 AddNet "N-000203"
 AddNet "N-000204"
 AddNet "N-000205"
 AddNet "N-000206"
-AddNet "N-000207"
-AddNet "N-000208"
-AddNet "N-000210"
-AddNet "N-000211"
+AddNet "N-000209"
+AddNet "N-000213"
+AddNet "N-000214"
 AddNet "N-000215"
-AddNet "N-000216"
 AddNet "N-000217"
 AddNet "N-000218"
 AddNet "N-000219"
 AddNet "N-000220"
 AddNet "N-000221"
 AddNet "N-000222"
-AddNet "N-000223"
 AddNet "VDD"
 $EndNCLASS
 $NCLASS
@@ -957,7 +952,7 @@ uViaDia 200
 uViaDrill 50
 $EndNCLASS
 $MODULE SOT23GDS
-Po 78103 64993 0 15 451262E6 50ABD4F9 ~~
+Po 69291 72047 0 15 451262E6 50ABD4F9 ~~
 Li SOT23GDS
 Cd Module CMS SOT23 Transistore EBC
 Kw CMS SOT
@@ -975,21 +970,21 @@ $PAD
 Sh "S" R 360 360 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 119 "N-000111"
+Ne 119 "N-000113"
 Po -350 -400
 $EndPAD
 $PAD
 Sh "G" R 360 360 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 159 "N-000210"
+Ne 150 "N-000196"
 Po 350 -400
 $EndPAD
 $PAD
 Sh "D" R 360 360 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 127 "N-000132"
+Ne 127 "N-000134"
 Po 0 400
 $EndPAD
 $SHAPE3D
@@ -1000,7 +995,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SOT23GDS
 $MODULE SOT23GDS
-Po 78103 64993 0 15 451262E6 50ABD4FB ~~
+Po 69134 70079 0 15 451262E6 50ABD4FB ~~
 Li SOT23GDS
 Cd Module CMS SOT23 Transistore EBC
 Kw CMS SOT
@@ -1018,21 +1013,21 @@ $PAD
 Sh "S" R 360 360 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 117 "N-000108"
+Ne 116 "N-000109"
 Po -350 -400
 $EndPAD
 $PAD
 Sh "G" R 360 360 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 115 "N-000106"
+Ne 120 "N-000114"
 Po 350 -400
 $EndPAD
 $PAD
 Sh "D" R 360 360 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 116 "N-000107"
+Ne 113 "N-000106"
 Po 0 400
 $EndPAD
 $SHAPE3D
@@ -1043,7 +1038,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SOT23GDS
 $MODULE SOT23GDS
-Po 78103 64993 0 15 451262E6 50ABD4FD ~~
+Po 69134 68425 0 15 451262E6 50ABD4FD ~~
 Li SOT23GDS
 Cd Module CMS SOT23 Transistore EBC
 Kw CMS SOT
@@ -1061,21 +1056,21 @@ $PAD
 Sh "S" R 360 360 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 118 "N-000109"
+Ne 118 "N-000111"
 Po -350 -400
 $EndPAD
 $PAD
 Sh "G" R 360 360 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 150 "N-000198"
+Ne 149 "N-000195"
 Po 350 -400
 $EndPAD
 $PAD
 Sh "D" R 360 360 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 126 "N-000131"
+Ne 126 "N-000133"
 Po 0 400
 $EndPAD
 $SHAPE3D
@@ -1086,7 +1081,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SOT23GDS
 $MODULE SOT23GDS
-Po 78103 64993 0 15 451262E6 50ABD4FF ~~
+Po 68898 66929 0 15 451262E6 50ABD4FF ~~
 Li SOT23GDS
 Cd Module CMS SOT23 Transistore EBC
 Kw CMS SOT
@@ -1104,21 +1099,21 @@ $PAD
 Sh "S" R 360 360 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 125 "N-000129"
+Ne 115 "N-000108"
 Po -350 -400
 $EndPAD
 $PAD
 Sh "G" R 360 360 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 165 "N-000219"
+Ne 164 "N-000218"
 Po 350 -400
 $EndPAD
 $PAD
 Sh "D" R 360 360 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 123 "N-000127"
+Ne 124 "N-000130"
 Po 0 400
 $EndPAD
 $SHAPE3D
@@ -1129,7 +1124,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SOT23GDS
 $MODULE SOT23EBC
-Po 78103 64993 0 15 3F980186 50ABD500 ~~
+Po 68898 65433 0 15 3F980186 50ABD500 ~~
 Li SOT23EBC
 Cd Module CMS SOT23 Transistore EBC
 Kw CMS SOT
@@ -1147,21 +1142,21 @@ $PAD
 Sh "1" R 360 360 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -350 -400
 $EndPAD
 $PAD
 Sh "2" R 360 360 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 120 "N-000112"
+Ne 117 "N-000110"
 Po 350 -400
 $EndPAD
 $PAD
 Sh "3" R 360 360 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 114 "N-000105"
+Ne 114 "N-000107"
 Po 0 400
 $EndPAD
 $SHAPE3D
@@ -1172,7 +1167,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SOT23EBC
 $MODULE SOT23EBC
-Po 78103 64993 0 15 3F980186 50ABD502 ~~
+Po 70394 65276 0 15 3F980186 50ABD502 ~~
 Li SOT23EBC
 Cd Module CMS SOT23 Transistore EBC
 Kw CMS SOT
@@ -1190,21 +1185,21 @@ $PAD
 Sh "1" R 360 360 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -350 -400
 $EndPAD
 $PAD
 Sh "2" R 360 360 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 164 "N-000218"
+Ne 163 "N-000217"
 Po 350 -400
 $EndPAD
 $PAD
 Sh "3" R 360 360 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 124 "N-000128"
+Ne 125 "N-000131"
 Po 0 400
 $EndPAD
 $SHAPE3D
@@ -1215,7 +1210,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SOT23EBC
 $MODULE SO8E
-Po 78103 64993 0 15 42806F54 50ABD503 ~~
+Po 57402 67165 0 15 42806F54 50ABD503 ~~
 Li SO8E
 Cd module CMS SOJ 8 pins etroit
 Kw CMS SOJ
@@ -1244,49 +1239,49 @@ $PAD
 Sh "1" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 28 "/ev_moto/analog-out1"
+Ne 27 "/ev_moto/analog-out1"
 Po -750 1050
 $EndPAD
 $PAD
 Sh "7" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 29 "/ev_moto/analog-out2"
+Ne 28 "/ev_moto/analog-out2"
 Po -250 -1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 163 "N-000217"
+Ne 162 "N-000215"
 Po 250 -1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 162 "N-000216"
+Ne 161 "N-000214"
 Po 750 -1050
 $EndPAD
 $PAD
 Sh "2" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 161 "N-000215"
+Ne 160 "N-000213"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "3" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 129 "N-000142"
+Ne 129 "N-000144"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "4" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 750 1050
 $EndPAD
 $SHAPE3D
@@ -1297,7 +1292,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SO8E
 $MODULE SO8E
-Po 78103 64993 0 15 42806F54 50ABD505 ~~
+Po 59921 67165 0 15 42806F54 50ABD505 ~~
 Li SO8E
 Cd module CMS SOJ 8 pins etroit
 Kw CMS SOJ
@@ -1326,49 +1321,49 @@ $PAD
 Sh "1" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 160 "N-000211"
+Ne 159 "N-000209"
 Po -750 1050
 $EndPAD
 $PAD
 Sh "7" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 51 "/ev_moto/out-gain"
+Ne 50 "/ev_moto/out-gain"
 Po -250 -1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 169 "N-000223"
+Ne 168 "N-000222"
 Po 250 -1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 144 "N-000189"
+Ne 121 "N-000118"
 Po 750 -1050
 $EndPAD
 $PAD
 Sh "2" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 160 "N-000211"
+Ne 159 "N-000209"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "3" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 145 "N-000190"
+Ne 144 "N-000187"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "4" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 750 1050
 $EndPAD
 $SHAPE3D
@@ -1379,7 +1374,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SO8E
 $MODULE SO8E
-Po 78103 64993 0 15 42806F54 50ABD507 ~~
+Po 59921 70000 0 15 42806F54 50ABD507 ~~
 Li SO8E
 Cd module CMS SOJ 8 pins etroit
 Kw CMS SOJ
@@ -1401,7 +1396,7 @@ $PAD
 Sh "8" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -750 -1050
 $EndPAD
 $PAD
@@ -1415,42 +1410,42 @@ $PAD
 Sh "7" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 33 "/ev_moto/clock+"
+Ne 32 "/ev_moto/clock+"
 Po -250 -1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 34 "/ev_moto/clock-"
+Ne 33 "/ev_moto/clock-"
 Po 250 -1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 750 -1050
 $EndPAD
 $PAD
 Sh "2" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 132 "N-000162"
+Ne 132 "N-000164"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "3" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 132 "N-000162"
+Ne 132 "N-000164"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "4" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 46 "/ev_moto/enc-clock"
+Ne 45 "/ev_moto/enc-clock"
 Po 750 1050
 $EndPAD
 $SHAPE3D
@@ -1461,7 +1456,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SO8E
 $MODULE SO8E
-Po 78103 64993 0 15 42806F54 50ABD509 ~~
+Po 62126 67008 0 15 42806F54 50ABD509 ~~
 Li SO8E
 Cd module CMS SOJ 8 pins etroit
 Kw CMS SOJ
@@ -1483,49 +1478,49 @@ $PAD
 Sh "8" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -750 -1050
 $EndPAD
 $PAD
 Sh "1" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 47 "/ev_moto/enc-data"
+Ne 46 "/ev_moto/enc-data"
 Po -750 1050
 $EndPAD
 $PAD
 Sh "7" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 38 "/ev_moto/data+"
+Ne 37 "/ev_moto/data+"
 Po -250 -1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 39 "/ev_moto/data-"
+Ne 38 "/ev_moto/data-"
 Po 250 -1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 750 -1050
 $EndPAD
 $PAD
 Sh "2" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 133 "N-000165"
+Ne 133 "N-000167"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "3" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 133 "N-000165"
+Ne 133 "N-000167"
 Po 250 1050
 $EndPAD
 $PAD
@@ -1543,7 +1538,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SO8E
 $MODULE SO8E
-Po 78103 64993 0 15 42806F54 50ABD50B ~~
+Po 62205 69764 0 15 42806F54 50ABD50B ~~
 Li SO8E
 Cd module CMS SOJ 8 pins etroit
 Kw CMS SOJ
@@ -1565,56 +1560,56 @@ $PAD
 Sh "8" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -750 -1050
 $EndPAD
 $PAD
 Sh "1" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 31 "/ev_moto/bmsd-rx"
+Ne 30 "/ev_moto/bmsd-rx"
 Po -750 1050
 $EndPAD
 $PAD
 Sh "7" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 53 "/ev_moto/rs-b"
+Ne 52 "/ev_moto/rs-b"
 Po -250 -1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 52 "/ev_moto/rs-a"
+Ne 51 "/ev_moto/rs-a"
 Po 250 -1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 750 -1050
 $EndPAD
 $PAD
 Sh "2" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 30 "/ev_moto/bmsd-dir"
+Ne 29 "/ev_moto/bmsd-dir"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "3" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 30 "/ev_moto/bmsd-dir"
+Ne 29 "/ev_moto/bmsd-dir"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "4" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 32 "/ev_moto/bmsd-tx"
+Ne 31 "/ev_moto/bmsd-tx"
 Po 750 1050
 $EndPAD
 $SHAPE3D
@@ -1625,7 +1620,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SO8E
 $MODULE SO8E
-Po 78103 64993 0 15 42806F54 50ABD50D ~~
+Po 59764 72835 0 15 42806F54 50ABD50D ~~
 Li SO8E
 Cd module CMS SOJ 8 pins etroit
 Kw CMS SOJ
@@ -1647,49 +1642,49 @@ $PAD
 Sh "8" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -750 -1050
 $EndPAD
 $PAD
 Sh "1" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 13 "/ev_moto/A1"
+Ne 12 "/ev_moto/A1"
 Po -750 1050
 $EndPAD
 $PAD
 Sh "7" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 14 "/ev_moto/A1+"
+Ne 13 "/ev_moto/A1+"
 Po -250 -1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 15 "/ev_moto/A1-"
+Ne 14 "/ev_moto/A1-"
 Po 250 -1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 750 -1050
 $EndPAD
 $PAD
 Sh "2" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 168 "N-000222"
+Ne 167 "N-000221"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "3" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 168 "N-000222"
+Ne 167 "N-000221"
 Po 250 1050
 $EndPAD
 $PAD
@@ -1707,7 +1702,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SO8E
 $MODULE SO8E
-Po 78103 64993 0 15 42806F54 50ABD50F ~~
+Po 62126 72677 0 15 42806F54 50ABD50F ~~
 Li SO8E
 Cd module CMS SOJ 8 pins etroit
 Kw CMS SOJ
@@ -1729,49 +1724,49 @@ $PAD
 Sh "8" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -750 -1050
 $EndPAD
 $PAD
 Sh "1" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 19 "/ev_moto/B1"
+Ne 18 "/ev_moto/B1"
 Po -750 1050
 $EndPAD
 $PAD
 Sh "7" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 20 "/ev_moto/B1+"
+Ne 19 "/ev_moto/B1+"
 Po -250 -1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 21 "/ev_moto/B1-"
+Ne 20 "/ev_moto/B1-"
 Po 250 -1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 750 -1050
 $EndPAD
 $PAD
 Sh "2" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 131 "N-000150"
+Ne 131 "N-000151"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "3" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 131 "N-000150"
+Ne 131 "N-000151"
 Po 250 1050
 $EndPAD
 $PAD
@@ -1789,7 +1784,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SO8E
 $MODULE SO8E
-Po 78103 64993 0 15 42806F54 50ABD511 ~~
+Po 59843 75669 0 15 42806F54 50ABD511 ~~
 Li SO8E
 Cd module CMS SOJ 8 pins etroit
 Kw CMS SOJ
@@ -1811,35 +1806,35 @@ $PAD
 Sh "8" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -750 -1050
 $EndPAD
 $PAD
 Sh "1" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 16 "/ev_moto/A2"
+Ne 15 "/ev_moto/A2"
 Po -750 1050
 $EndPAD
 $PAD
 Sh "7" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 17 "/ev_moto/A2+"
+Ne 16 "/ev_moto/A2+"
 Po -250 -1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 18 "/ev_moto/A2-"
+Ne 17 "/ev_moto/A2-"
 Po 250 -1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 750 -1050
 $EndPAD
 $PAD
@@ -1871,7 +1866,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SO8E
 $MODULE SO8E
-Po 78103 64993 0 15 42806F54 50ABD513 ~~
+Po 64646 67008 0 15 42806F54 50ABD513 ~~
 Li SO8E
 Cd module CMS SOJ 8 pins etroit
 Kw CMS SOJ
@@ -1893,49 +1888,49 @@ $PAD
 Sh "8" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -750 -1050
 $EndPAD
 $PAD
 Sh "1" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 22 "/ev_moto/B2"
+Ne 21 "/ev_moto/B2"
 Po -750 1050
 $EndPAD
 $PAD
 Sh "7" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 23 "/ev_moto/B2+"
+Ne 22 "/ev_moto/B2+"
 Po -250 -1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 24 "/ev_moto/B2-"
+Ne 23 "/ev_moto/B2-"
 Po 250 -1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 750 -1050
 $EndPAD
 $PAD
 Sh "2" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 167 "N-000221"
+Ne 165 "N-000219"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "3" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 167 "N-000221"
+Ne 165 "N-000219"
 Po 250 1050
 $EndPAD
 $PAD
@@ -1953,7 +1948,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SO8E
 $MODULE SO8E
-Po 78103 64993 0 15 42806F54 50ABD515 ~~
+Po 64488 69921 0 15 42806F54 50ABD515 ~~
 Li SO8E
 Cd module CMS SOJ 8 pins etroit
 Kw CMS SOJ
@@ -1982,14 +1977,14 @@ $PAD
 Sh "1" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 105 "N-000069"
+Ne 103 "N-000069"
 Po -750 1050
 $EndPAD
 $PAD
 Sh "7" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 105 "N-000069"
+Ne 103 "N-000069"
 Po -250 -1050
 $EndPAD
 $PAD
@@ -2003,28 +1998,28 @@ $PAD
 Sh "5" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 102 "N-000061"
+Ne 101 "N-000064"
 Po 750 -1050
 $EndPAD
 $PAD
 Sh "2" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 112 "N-000095"
+Ne 111 "N-000098"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "3" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 103 "N-000066"
+Ne 102 "N-000068"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "4" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 750 1050
 $EndPAD
 $SHAPE3D
@@ -2035,7 +2030,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SO8E
 $MODULE SO8E
-Po 78103 64993 0 15 42806F54 50ABD517 ~~
+Po 62126 75591 0 15 42806F54 50ABD517 ~~
 Li SO8E
 Cd module CMS SOJ 8 pins etroit
 Kw CMS SOJ
@@ -2064,14 +2059,14 @@ $PAD
 Sh "1" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 154 "N-000204"
+Ne 154 "N-000202"
 Po -750 1050
 $EndPAD
 $PAD
 Sh "7" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 154 "N-000204"
+Ne 154 "N-000202"
 Po -250 -1050
 $EndPAD
 $PAD
@@ -2085,28 +2080,28 @@ $PAD
 Sh "5" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 152 "N-000201"
+Ne 152 "N-000199"
 Po 750 -1050
 $EndPAD
 $PAD
 Sh "2" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 156 "N-000206"
+Ne 156 "N-000204"
 Po -250 1050
 $EndPAD
 $PAD
 Sh "3" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 155 "N-000205"
+Ne 155 "N-000203"
 Po 250 1050
 $EndPAD
 $PAD
 Sh "4" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 750 1050
 $EndPAD
 $SHAPE3D
@@ -2117,7 +2112,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SO8E
 $MODULE SO8E
-Po 78103 64993 0 15 42806F54 50ABD519 ~~
+Po 67087 66929 0 15 42806F54 50ABD519 ~~
 Li SO8E
 Cd module CMS SOJ 8 pins etroit
 Kw CMS SOJ
@@ -2139,35 +2134,35 @@ $PAD
 Sh "8" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -750 -1050
 $EndPAD
 $PAD
 Sh "1" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -750 1050
 $EndPAD
 $PAD
 Sh "7" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 35 "/ev_moto/dac-din"
+Ne 34 "/ev_moto/dac-din"
 Po -250 -1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 37 "/ev_moto/dac-sclk"
+Ne 36 "/ev_moto/dac-sclk"
 Po 250 -1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 62 "/ev_moto/~analog2-cs~"
+Ne 63 "/ev_moto/~analog2-cs~"
 Po 750 -1050
 $EndPAD
 $PAD
@@ -2188,7 +2183,7 @@ $PAD
 Sh "4" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 130 "N-000144"
+Ne 130 "N-000145"
 Po 750 1050
 $EndPAD
 $SHAPE3D
@@ -2199,7 +2194,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SO8E
 $MODULE SO8E
-Po 78103 64993 0 15 42806F54 50ABD51B ~~
+Po 64409 72913 0 15 42806F54 50ABD51B ~~
 Li SO8E
 Cd module CMS SOJ 8 pins etroit
 Kw CMS SOJ
@@ -2221,35 +2216,35 @@ $PAD
 Sh "8" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -750 -1050
 $EndPAD
 $PAD
 Sh "1" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -750 1050
 $EndPAD
 $PAD
 Sh "7" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 35 "/ev_moto/dac-din"
+Ne 34 "/ev_moto/dac-din"
 Po -250 -1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 37 "/ev_moto/dac-sclk"
+Ne 36 "/ev_moto/dac-sclk"
 Po 250 -1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 61 "/ev_moto/~analog1-cs~"
+Ne 62 "/ev_moto/~analog1-cs~"
 Po 750 -1050
 $EndPAD
 $PAD
@@ -2270,7 +2265,7 @@ $PAD
 Sh "4" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 128 "N-000141"
+Ne 128 "N-000143"
 Po 750 1050
 $EndPAD
 $SHAPE3D
@@ -2281,7 +2276,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SO8E
 $MODULE SO8E
-Po 78103 64993 0 15 42806F54 50ABD51D ~~
+Po 64409 75748 0 15 42806F54 50ABD51D ~~
 Li SO8E
 Cd module CMS SOJ 8 pins etroit
 Kw CMS SOJ
@@ -2303,35 +2298,35 @@ $PAD
 Sh "8" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -750 -1050
 $EndPAD
 $PAD
 Sh "1" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -750 1050
 $EndPAD
 $PAD
 Sh "7" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 35 "/ev_moto/dac-din"
+Ne 34 "/ev_moto/dac-din"
 Po -250 -1050
 $EndPAD
 $PAD
 Sh "6" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 37 "/ev_moto/dac-sclk"
+Ne 36 "/ev_moto/dac-sclk"
 Po 250 -1050
 $EndPAD
 $PAD
 Sh "5" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 63 "/ev_moto/~dac-synch~"
+Ne 64 "/ev_moto/~dac-synch~"
 Po 750 -1050
 $EndPAD
 $PAD
@@ -2352,7 +2347,7 @@ $PAD
 Sh "4" R 200 450 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 145 "N-000190"
+Ne 144 "N-000187"
 Po 750 1050
 $EndPAD
 $SHAPE3D
@@ -2363,7 +2358,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SO8E
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD51E ~~
+Po 70787 66535 0 15 42806E04 50ABD51E ~~
 Li SM0805
 Sc 50ABD51E
 AR /5096B4A3
@@ -2382,14 +2377,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 86 "/usb-d+"
+Ne 61 "/ev_moto/usb-"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 98 "N-000055"
+Ne 110 "N-000097"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -2400,7 +2395,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD520 ~~
+Po 70787 67323 0 15 42806E04 50ABD520 ~~
 Li SM0805
 Sc 50ABD520
 AR /5096B4A7
@@ -2419,14 +2414,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 100 "N-000059"
+Ne 98 "N-000056"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -2437,7 +2432,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD522 ~~
+Po 70709 68110 0 15 42806E04 50ABD522 ~~
 Li SM0805
 Sc 50ABD522
 AR /509DDBA2/50A2890D
@@ -2456,14 +2451,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 132 "N-000162"
+Ne 132 "N-000164"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -2474,7 +2469,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD524 ~~
+Po 70551 68976 0 15 42806E04 50ABD524 ~~
 Li SM0805
 Sc 50ABD524
 AR /509DDBA2/50A29023
@@ -2493,14 +2488,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 160 "N-000211"
+Ne 159 "N-000209"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 144 "N-000189"
+Ne 121 "N-000118"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -2511,7 +2506,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD526 ~~
+Po 70472 69764 0 15 42806E04 50ABD526 ~~
 Li SM0805
 Sc 50ABD526
 AR /509DDBA2/509DDC1D
@@ -2530,14 +2525,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 157 "N-000207"
+Ne 157 "N-000205"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -2548,7 +2543,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD528 ~~
+Po 70315 70472 0 15 42806E04 50ABD528 ~~
 Li SM0805
 Sc 50ABD528
 AR /509DDBA2/509E4337
@@ -2567,14 +2562,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 51 "/ev_moto/out-gain"
+Ne 50 "/ev_moto/out-gain"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 36 "/ev_moto/dac-out"
+Ne 35 "/ev_moto/dac-out"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -2585,7 +2580,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD52A ~~
+Po 70394 71181 0 15 42806E04 50ABD52A ~~
 Li SM0805
 Sc 50ABD52A
 AR /509DDBA2/509E3C77
@@ -2604,14 +2599,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 51 "/ev_moto/out-gain"
+Ne 50 "/ev_moto/out-gain"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 169 "N-000223"
+Ne 168 "N-000222"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -2622,7 +2617,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD52C ~~
+Po 71417 65669 0 15 42806E04 50ABD52C ~~
 Li SM0805
 Sc 50ABD52C
 AR /509DDBA2/509E3D82
@@ -2641,14 +2636,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 51 "/ev_moto/out-gain"
+Ne 50 "/ev_moto/out-gain"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 169 "N-000223"
+Ne 168 "N-000222"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -2659,7 +2654,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD52E ~~
+Po 71811 64803 0 15 42806E04 50ABD52E ~~
 Li SM0805
 Sc 50ABD52E
 AR /509DDBA2/509E3C08
@@ -2678,14 +2673,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 169 "N-000223"
+Ne 168 "N-000222"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -2696,7 +2691,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD530 ~~
+Po 72835 65827 0 15 42806E04 50ABD530 ~~
 Li SM0805
 Sc 50ABD530
 AR /509DDBA2/50A288F7
@@ -2715,14 +2710,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 133 "N-000165"
+Ne 133 "N-000167"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -2733,7 +2728,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD532 ~~
+Po 72441 66614 0 15 42806E04 50ABD532 ~~
 Li SM0805
 Sc 50ABD532
 AR /509DDBA2/509DDC27
@@ -2752,14 +2747,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 141 "N-000184"
+Ne 141 "N-000182"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 143 "N-000186"
+Ne 143 "N-000184"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -2770,7 +2765,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD534 ~~
+Po 72283 67323 0 15 42806E04 50ABD534 ~~
 Li SM0805
 Sc 50ABD534
 AR /509DDBA2/50A28F4B
@@ -2789,14 +2784,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 30 "/ev_moto/bmsd-dir"
+Ne 29 "/ev_moto/bmsd-dir"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -2807,7 +2802,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD536 ~~
+Po 72205 68110 0 15 42806E04 50ABD536 ~~
 Li SM0805
 Sc 50ABD536
 AR /509DDBA2/509E4B7C
@@ -2826,14 +2821,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 137 "N-000178"
+Ne 137 "N-000177"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 59 "/ev_moto/synch-ext"
+Ne 58 "/ev_moto/synch-ext"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -2844,7 +2839,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD538 ~~
+Po 72047 68976 0 15 42806E04 50ABD538 ~~
 Li SM0805
 Sc 50ABD538
 AR /509DDBA2/509DDC2E
@@ -2863,14 +2858,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 48 "/ev_moto/fw-upgrade"
+Ne 47 "/ev_moto/fw-upgrade"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -2881,7 +2876,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD53A ~~
+Po 71890 69764 0 15 42806E04 50ABD53A ~~
 Li SM0805
 Sc 50ABD53A
 AR /509DDBA2/509E4B84
@@ -2907,7 +2902,7 @@ $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 55 "/ev_moto/scl-ext"
+Ne 54 "/ev_moto/scl-ext"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -2918,7 +2913,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD53C ~~
+Po 71732 70472 0 15 42806E04 50ABD53C ~~
 Li SM0805
 Sc 50ABD53C
 AR /509DDBA2/509E4B86
@@ -2937,14 +2932,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 135 "N-000172"
+Ne 135 "N-000173"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 56 "/ev_moto/sda-ext"
+Ne 55 "/ev_moto/sda-ext"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -2955,7 +2950,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD53E ~~
+Po 71732 71181 0 15 42806E04 50ABD53E ~~
 Li SM0805
 Sc 50ABD53E
 AR /509DDBA2/509DDC2C
@@ -2974,14 +2969,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 142 "N-000185"
+Ne 142 "N-000183"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -2992,7 +2987,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD540 ~~
+Po 73228 64803 0 15 42806E04 50ABD540 ~~
 Li SM0805
 Sc 50ABD540
 AR /509DDBA2/50AB7A74
@@ -3011,14 +3006,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 168 "N-000222"
+Ne 167 "N-000221"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3029,7 +3024,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD542 ~~
+Po 74488 64724 0 15 42806E04 50ABD542 ~~
 Li SM0805
 Sc 50ABD542
 AR /509DDBA2/509E48D5
@@ -3048,14 +3043,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 49 "/ev_moto/led1"
+Ne 48 "/ev_moto/led1"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 121 "N-000120"
+Ne 122 "N-000123"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3066,7 +3061,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD544 ~~
+Po 74331 65512 0 15 42806E04 50ABD544 ~~
 Li SM0805
 Sc 50ABD544
 AR /50978806
@@ -3085,14 +3080,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 71 "/io-2-1"
+Ne 72 "/io-2-1"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 11 "/dr-io-21"
+Ne 10 "/dr-io-21"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3103,7 +3098,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD546 ~~
+Po 74173 66220 0 15 42806E04 50ABD546 ~~
 Li SM0805
 Sc 50ABD546
 AR /5096B4AD
@@ -3122,14 +3117,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 73 "/led1"
+Ne 74 "/led1"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 97 "N-000053"
+Ne 97 "N-000054"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3140,7 +3135,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD548 ~~
+Po 74016 67008 0 15 42806E04 50ABD548 ~~
 Li SM0805
 Sc 50ABD548
 AR /5096B4B0
@@ -3159,14 +3154,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 74 "/led2"
+Ne 75 "/led2"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 107 "N-000088"
+Ne 107 "N-000091"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3177,7 +3172,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD54A ~~
+Po 73780 67717 0 15 42806E04 50ABD54A ~~
 Li SM0805
 Sc 50ABD54A
 AR /509787C9
@@ -3196,14 +3191,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 70 "/io-1-2"
+Ne 71 "/io-1-2"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 10 "/dr-io-12"
+Ne 9 "/dr-io-12"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3214,7 +3209,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD54C ~~
+Po 73622 68583 0 15 42806E04 50ABD54C ~~
 Li SM0805
 Sc 50ABD54C
 AR /50978805
@@ -3233,14 +3228,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 72 "/io-2-2"
+Ne 73 "/io-2-2"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 12 "/dr-io-22"
+Ne 11 "/dr-io-22"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3251,7 +3246,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD54E ~~
+Po 73465 69291 0 15 42806E04 50ABD54E ~~
 Li SM0805
 Sc 50ABD54E
 AR /5096B4CC
@@ -3270,14 +3265,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 113 "N-000099"
+Ne 112 "N-000104"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 110 "N-000092"
+Ne 106 "N-000089"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3288,7 +3283,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD550 ~~
+Po 73150 70079 0 15 42806E04 50ABD550 ~~
 Li SM0805
 Sc 50ABD550
 AR /5096B4C5
@@ -3307,14 +3302,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 64 "/fw-upgrade"
+Ne 65 "/fw-upgrade"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3325,7 +3320,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD552 ~~
+Po 73071 70866 0 15 42806E04 50ABD552 ~~
 Li SM0805
 Sc 50ABD552
 AR /5096B4C7
@@ -3344,14 +3339,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 109 "N-000091"
+Ne 105 "N-000088"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3362,7 +3357,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD554 ~~
+Po 75984 64646 0 15 42806E04 50ABD554 ~~
 Li SM0805
 Sc 50ABD554
 AR /5096B494
@@ -3381,14 +3376,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 56 "/ev_moto/sda-ext"
+Ne 55 "/ev_moto/sda-ext"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3399,7 +3394,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD556 ~~
+Po 75827 65433 0 15 42806E04 50ABD556 ~~
 Li SM0805
 Sc 50ABD556
 AR /5096B493
@@ -3418,14 +3413,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 55 "/ev_moto/scl-ext"
+Ne 54 "/ev_moto/scl-ext"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3436,7 +3431,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD558 ~~
+Po 75748 66142 0 15 42806E04 50ABD558 ~~
 Li SM0805
 Sc 50ABD558
 AR /5096B48C
@@ -3455,14 +3450,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 59 "/ev_moto/synch-ext"
+Ne 58 "/ev_moto/synch-ext"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3473,7 +3468,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD55A ~~
+Po 75512 67008 0 15 42806E04 50ABD55A ~~
 Li SM0805
 Sc 50ABD55A
 AR /5096B470
@@ -3492,14 +3487,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 56 "/ev_moto/sda-ext"
+Ne 55 "/ev_moto/sda-ext"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 77 "/sda"
+Ne 78 "/sda"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3510,7 +3505,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD55C ~~
+Po 75276 67795 0 15 42806E04 50ABD55C ~~
 Li SM0805
 Sc 50ABD55C
 AR /5096B46F
@@ -3529,14 +3524,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 55 "/ev_moto/scl-ext"
+Ne 54 "/ev_moto/scl-ext"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 76 "/scl"
+Ne 77 "/scl"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3547,7 +3542,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD55E ~~
+Po 75118 68504 0 15 42806E04 50ABD55E ~~
 Li SM0805
 Sc 50ABD55E
 AR /5096B490
@@ -3566,14 +3561,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 59 "/ev_moto/synch-ext"
+Ne 58 "/ev_moto/synch-ext"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 84 "/synch"
+Ne 85 "/synch"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3584,7 +3579,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD560 ~~
+Po 74882 69213 0 15 42806E04 50ABD560 ~~
 Li SM0805
 Sc 50ABD560
 AR /5096B47F
@@ -3603,14 +3598,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 111 "N-000093"
+Ne 93 "N-000048"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 85 "/tx"
+Ne 86 "/tx"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3621,13 +3616,87 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD562 ~~
+Po 74724 70000 0 15 42806E04 50ABD562 ~~
 Li SM0805
 Sc 50ABD562
 AR /5096B482
 Op 0 0 0
 At SMD 
 T0 0 0 250 250 0 50 N V 21 N "R55"
+T1 0 0 250 250 0 50 N I 21 N "50"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 94 "N-000049"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 76 "/rx"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 74567 70866 0 15 42806E04 50ABD564 ~~
+Li SM0805
+Sc 50ABD564
+AR /5096B4A1
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R56"
+T1 0 0 250 250 0 50 N I 21 N "50"
+DC -650 300 -650 250 50 21
+DS -200 300 -600 300 50 21
+DS -600 300 -600 -300 50 21
+DS -600 -300 -200 -300 50 21
+DS 200 -300 600 -300 50 21
+DS 600 -300 600 300 50 21
+DS 600 300 200 300 50 21
+$PAD
+Sh "1" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 95 "N-000050"
+Po -375 0
+$EndPAD
+$PAD
+Sh "2" R 350 550 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 84 "/swd-io"
+Po 375 0
+$EndPAD
+$SHAPE3D
+Na "smd/chip_cms.wrl"
+Sc 0.100000 0.100000 0.100000
+Of 0.000000 0.000000 0.000000
+Ro 0.000000 0.000000 0.000000
+$EndSHAPE3D
+$EndMODULE  SM0805
+$MODULE SM0805
+Po 75984 70866 0 15 42806E04 50ABD566 ~~
+Li SM0805
+Sc 50ABD566
+AR /5096B4A0
+Op 0 0 0
+At SMD 
+T0 0 0 250 250 0 50 N V 21 N "R57"
 T1 0 0 250 250 0 50 N I 21 N "50"
 DC -650 300 -650 250 50 21
 DS -200 300 -600 300 50 21
@@ -3647,7 +3716,7 @@ $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 75 "/rx"
+Ne 83 "/swd-clk"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3658,81 +3727,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD564 ~~
-Li SM0805
-Sc 50ABD564
-AR /5096B4A1
-Op 0 0 0
-At SMD 
-T0 0 0 250 250 0 50 N V 21 N "R56"
-T1 0 0 250 250 0 50 N I 21 N "50"
-DC -650 300 -650 250 50 21
-DS -200 300 -600 300 50 21
-DS -600 300 -600 -300 50 21
-DS -600 -300 -200 -300 50 21
-DS 200 -300 600 -300 50 21
-DS 600 -300 600 300 50 21
-DS 600 300 200 300 50 21
-$PAD
-Sh "1" R 350 550 0 0 0
-Dr 0 0 0
-At SMD N 00888000
-Ne 94 "N-000046"
-Po -375 0
-$EndPAD
-$PAD
-Sh "2" R 350 550 0 0 0
-Dr 0 0 0
-At SMD N 00888000
-Ne 83 "/swd-io"
-Po 375 0
-$EndPAD
-$SHAPE3D
-Na "smd/chip_cms.wrl"
-Sc 0.100000 0.100000 0.100000
-Of 0.000000 0.000000 0.000000
-Ro 0.000000 0.000000 0.000000
-$EndSHAPE3D
-$EndMODULE  SM0805
-$MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD566 ~~
-Li SM0805
-Sc 50ABD566
-AR /5096B4A0
-Op 0 0 0
-At SMD 
-T0 0 0 250 250 0 50 N V 21 N "R57"
-T1 0 0 250 250 0 50 N I 21 N "50"
-DC -650 300 -650 250 50 21
-DS -200 300 -600 300 50 21
-DS -600 300 -600 -300 50 21
-DS -600 -300 -200 -300 50 21
-DS 200 -300 600 -300 50 21
-DS 600 -300 600 300 50 21
-DS 600 300 200 300 50 21
-$PAD
-Sh "1" R 350 550 0 0 0
-Dr 0 0 0
-At SMD N 00888000
-Ne 95 "N-000049"
-Po -375 0
-$EndPAD
-$PAD
-Sh "2" R 350 550 0 0 0
-Dr 0 0 0
-At SMD N 00888000
-Ne 82 "/swd-clk"
-Po 375 0
-$EndPAD
-$SHAPE3D
-Na "smd/chip_cms.wrl"
-Sc 0.100000 0.100000 0.100000
-Of 0.000000 0.000000 0.000000
-Ro 0.000000 0.000000 0.000000
-$EndSHAPE3D
-$EndMODULE  SM0805
-$MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD568 ~~
+Po 76142 69921 0 15 42806E04 50ABD568 ~~
 Li SM0805
 Sc 50ABD568
 AR /509C0996
@@ -3751,14 +3746,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 56 "/ev_moto/sda-ext"
+Ne 55 "/ev_moto/sda-ext"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 90 "N-000008"
+Ne 90 "N-000016"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3769,7 +3764,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD56A ~~
+Po 76378 68976 0 15 42806E04 50ABD56A ~~
 Li SM0805
 Sc 50ABD56A
 AR /509C0B9A
@@ -3788,14 +3783,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 55 "/ev_moto/scl-ext"
+Ne 54 "/ev_moto/scl-ext"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 89 "N-000005"
+Ne 89 "N-000013"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3806,7 +3801,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD56C ~~
+Po 76693 68031 0 15 42806E04 50ABD56C ~~
 Li SM0805
 Sc 50ABD56C
 AR /5096B4A2
@@ -3825,14 +3820,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 98 "N-000055"
+Ne 110 "N-000097"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 4 "/VBus"
+Ne 3 "/VBus"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3843,7 +3838,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD56E ~~
+Po 76929 67087 0 15 42806E04 50ABD56E ~~
 Li SM0805
 Sc 50ABD56E
 AR /5096B4A4
@@ -3862,7 +3857,7 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 87 "/usb-d-"
+Ne 60 "/ev_moto/usb+"
 Po -375 0
 $EndPAD
 $PAD
@@ -3880,7 +3875,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD570 ~~
+Po 77165 66142 0 15 42806E04 50ABD570 ~~
 Li SM0805
 Sc 50ABD570
 AR /509DDBA2/509E4495
@@ -3899,14 +3894,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 45 "/ev_moto/en-input"
+Ne 44 "/ev_moto/en-input"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 159 "N-000210"
+Ne 150 "N-000196"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3917,7 +3912,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD572 ~~
+Po 77480 63937 0 15 42806E04 50ABD572 ~~
 Li SM0805
 Sc 50ABD572
 AR /509DDBA2/509E463B
@@ -3936,14 +3931,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 147 "N-000195"
+Ne 146 "N-000192"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 58 "/ev_moto/swd-io"
+Ne 57 "/ev_moto/swd-io"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3954,7 +3949,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD574 ~~
+Po 78898 63858 0 15 42806E04 50ABD574 ~~
 Li SM0805
 Sc 50ABD574
 AR /509DDBA2/509E463C
@@ -3973,14 +3968,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 146 "N-000194"
+Ne 145 "N-000191"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 57 "/ev_moto/swd-clk"
+Ne 56 "/ev_moto/swd-clk"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -3991,7 +3986,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD576 ~~
+Po 80394 63780 0 15 42806E04 50ABD576 ~~
 Li SM0805
 Sc 50ABD576
 AR /509DDBA2/50A28D0B
@@ -4010,14 +4005,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 119 "N-000111"
+Ne 119 "N-000113"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 44 "/ev_moto/en-"
+Ne 43 "/ev_moto/en-"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4028,7 +4023,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD578 ~~
+Po 80236 64724 0 15 42806E04 50ABD578 ~~
 Li SM0805
 Sc 50ABD578
 AR /509DDBA2/50A28D47
@@ -4047,14 +4042,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 120 "N-000112"
+Ne 117 "N-000110"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4065,7 +4060,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD57A ~~
+Po 80315 65591 0 15 42806E04 50ABD57A ~~
 Li SM0805
 Sc 50ABD57A
 AR /509DDBA2/509E4494
@@ -4084,14 +4079,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 159 "N-000210"
+Ne 150 "N-000196"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4102,7 +4097,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD57C ~~
+Po 80236 66378 0 15 42806E04 50ABD57C ~~
 Li SM0805
 Sc 50ABD57C
 AR /509DDBA2/50A28BE5
@@ -4121,14 +4116,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 119 "N-000111"
+Ne 119 "N-000113"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4139,7 +4134,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD57E ~~
+Po 80079 67244 0 15 42806E04 50ABD57E ~~
 Li SM0805
 Sc 50ABD57E
 AR /509DDBA2/50AB7A9A
@@ -4158,14 +4153,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 131 "N-000150"
+Ne 131 "N-000151"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4176,7 +4171,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD580 ~~
+Po 78661 66142 0 15 42806E04 50ABD580 ~~
 Li SM0805
 Sc 50ABD580
 AR /509DDBA2/50AB7AE5
@@ -4202,7 +4197,7 @@ $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4213,7 +4208,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD582 ~~
+Po 78504 67008 0 15 42806E04 50ABD582 ~~
 Li SM0805
 Sc 50ABD582
 AR /509DDBA2/50AB7ADA
@@ -4232,14 +4227,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 167 "N-000221"
+Ne 165 "N-000219"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4250,7 +4245,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD584 ~~
+Po 78425 67874 0 15 42806E04 50ABD584 ~~
 Li SM0805
 Sc 50ABD584
 AR /509DDBA2/50AB7C06
@@ -4269,14 +4264,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 139 "N-000182"
+Ne 139 "N-000180"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 13 "/ev_moto/A1"
+Ne 12 "/ev_moto/A1"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4287,7 +4282,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD586 ~~
+Po 78189 68661 0 15 42806E04 50ABD586 ~~
 Li SM0805
 Sc 50ABD586
 AR /509DDBA2/50AB7C05
@@ -4306,14 +4301,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 138 "N-000180"
+Ne 138 "N-000178"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 19 "/ev_moto/B1"
+Ne 18 "/ev_moto/B1"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4324,7 +4319,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD588 ~~
+Po 78031 69449 0 15 42806E04 50ABD588 ~~
 Li SM0805
 Sc 50ABD588
 AR /509DDBA2/50AB7BB6
@@ -4343,14 +4338,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 134 "N-000171"
+Ne 134 "N-000172"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 16 "/ev_moto/A2"
+Ne 15 "/ev_moto/A2"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4361,7 +4356,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD58A ~~
+Po 77795 70236 0 15 42806E04 50ABD58A ~~
 Li SM0805
 Sc 50ABD58A
 AR /509DDBA2/50AB7BDB
@@ -4380,14 +4375,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 140 "N-000183"
+Ne 140 "N-000181"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 22 "/ev_moto/B2"
+Ne 21 "/ev_moto/B2"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4398,7 +4393,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD58C ~~
+Po 77638 71102 0 15 42806E04 50ABD58C ~~
 Li SM0805
 Sc 50ABD58C
 AR /509DDBA2/50AB7C73
@@ -4417,14 +4412,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 63 "/ev_moto/~dac-synch~"
+Ne 64 "/ev_moto/~dac-synch~"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4435,7 +4430,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD58E ~~
+Po 79843 68031 0 15 42806E04 50ABD58E ~~
 Li SM0805
 Sc 50ABD58E
 AR /509DDBA2/50AB7C92
@@ -4454,14 +4449,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 61 "/ev_moto/~analog1-cs~"
+Ne 62 "/ev_moto/~analog1-cs~"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4472,7 +4467,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD590 ~~
+Po 79606 68819 0 15 42806E04 50ABD590 ~~
 Li SM0805
 Sc 50ABD590
 AR /509DDBA2/50AB7CC9
@@ -4491,14 +4486,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 62 "/ev_moto/~analog2-cs~"
+Ne 63 "/ev_moto/~analog2-cs~"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4509,7 +4504,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD592 ~~
+Po 79528 69606 0 15 42806E04 50ABD592 ~~
 Li SM0805
 Sc 50ABD592
 AR /509DDBA2/50AB7CE7
@@ -4528,14 +4523,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 128 "N-000141"
+Ne 128 "N-000143"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 129 "N-000142"
+Ne 129 "N-000144"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4546,7 +4541,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD594 ~~
+Po 79291 70315 0 15 42806E04 50ABD594 ~~
 Li SM0805
 Sc 50ABD594
 AR /509DDBA2/50AB7D21
@@ -4565,14 +4560,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 130 "N-000144"
+Ne 130 "N-000145"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 162 "N-000216"
+Ne 161 "N-000214"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4583,7 +4578,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD596 ~~
+Po 79134 71102 0 15 42806E04 50ABD596 ~~
 Li SM0805
 Sc 50ABD596
 AR /509DDBA2/50AB7D86
@@ -4602,14 +4597,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 28 "/ev_moto/analog-out1"
+Ne 27 "/ev_moto/analog-out1"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 161 "N-000215"
+Ne 160 "N-000213"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4620,7 +4615,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD598 ~~
+Po 81732 64409 0 15 42806E04 50ABD598 ~~
 Li SM0805
 Sc 50ABD598
 AR /509DDBA2/50AB7D58
@@ -4639,14 +4634,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 161 "N-000215"
+Ne 160 "N-000213"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4657,7 +4652,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD59A ~~
+Po 81732 65197 0 15 42806E04 50ABD59A ~~
 Li SM0805
 Sc 50ABD59A
 AR /509DDBA2/50AB7D84
@@ -4676,14 +4671,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 28 "/ev_moto/analog-out1"
+Ne 27 "/ev_moto/analog-out1"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 161 "N-000215"
+Ne 160 "N-000213"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4694,7 +4689,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD59C ~~
+Po 81732 65984 0 15 42806E04 50ABD59C ~~
 Li SM0805
 Sc 50ABD59C
 AR /509DDBA2/50AB7E0A
@@ -4713,14 +4708,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 163 "N-000217"
+Ne 162 "N-000215"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4731,7 +4726,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD59E ~~
+Po 81654 66772 0 15 42806E04 50ABD59E ~~
 Li SM0805
 Sc 50ABD59E
 AR /509DDBA2/50AB7E1C
@@ -4750,14 +4745,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 29 "/ev_moto/analog-out2"
+Ne 28 "/ev_moto/analog-out2"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 163 "N-000217"
+Ne 162 "N-000215"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4768,7 +4763,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5A0 ~~
+Po 81496 67638 0 15 42806E04 50ABD5A0 ~~
 Li SM0805
 Sc 50ABD5A0
 AR /509DDBA2/50AB7E1E
@@ -4787,14 +4782,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 29 "/ev_moto/analog-out2"
+Ne 28 "/ev_moto/analog-out2"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 163 "N-000217"
+Ne 162 "N-000215"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4805,7 +4800,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5A2 ~~
+Po 81339 68346 0 15 42806E04 50ABD5A2 ~~
 Li SM0805
 Sc 50ABD5A2
 AR /509DDBA2/509E48D2
@@ -4824,14 +4819,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 50 "/ev_moto/led2"
+Ne 49 "/ev_moto/led2"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 122 "N-000125"
+Ne 123 "N-000128"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4842,7 +4837,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5A4 ~~
+Po 81102 69055 0 15 42806E04 50ABD5A4 ~~
 Li SM0805
 Sc 50ABD5A4
 AR /509DDBA2/50A28C6B
@@ -4861,14 +4856,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 165 "N-000219"
+Ne 164 "N-000218"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 125 "N-000129"
+Ne 115 "N-000108"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4879,7 +4874,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5A6 ~~
+Po 80787 69764 0 15 42806E04 50ABD5A6 ~~
 Li SM0805
 Sc 50ABD5A6
 AR /509DDBA2/50A28E02
@@ -4898,14 +4893,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 125 "N-000129"
+Ne 115 "N-000108"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 40 "/ev_moto/dir+"
+Ne 39 "/ev_moto/dir+"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4916,7 +4911,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5A8 ~~
+Po 80709 70551 0 15 42806E04 50ABD5A8 ~~
 Li SM0805
 Sc 50ABD5A8
 AR /509DDBA2/509E4667
@@ -4935,14 +4930,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 126 "N-000131"
+Ne 126 "N-000133"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 40 "/ev_moto/dir+"
+Ne 39 "/ev_moto/dir+"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4953,7 +4948,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5AA ~~
+Po 80551 71496 0 15 42806E04 50ABD5AA ~~
 Li SM0805
 Sc 50ABD5AA
 AR /509DDBA2/50A28C4D
@@ -4972,14 +4967,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 124 "N-000128"
+Ne 125 "N-000131"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 165 "N-000219"
+Ne 164 "N-000218"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -4990,7 +4985,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5AC ~~
+Po 81969 71575 0 15 42806E04 50ABD5AC ~~
 Li SM0805
 Sc 50ABD5AC
 AR /509DDBA2/509E37A6
@@ -5009,7 +5004,7 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 154 "N-000204"
+Ne 154 "N-000202"
 Po -375 0
 $EndPAD
 $PAD
@@ -5027,7 +5022,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5AE ~~
+Po 82126 70709 0 15 42806E04 50ABD5AE ~~
 Li SM0805
 Sc 50ABD5AE
 AR /509DDBA2/509E37A5
@@ -5046,7 +5041,7 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 154 "N-000204"
+Ne 154 "N-000202"
 Po -375 0
 $EndPAD
 $PAD
@@ -5064,7 +5059,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5B0 ~~
+Po 82205 69843 0 15 42806E04 50ABD5B0 ~~
 Li SM0805
 Sc 50ABD5B0
 AR /509DDBA2/509E37A3
@@ -5083,7 +5078,7 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 154 "N-000204"
+Ne 154 "N-000202"
 Po -375 0
 $EndPAD
 $PAD
@@ -5101,7 +5096,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5B2 ~~
+Po 82520 69055 0 15 42806E04 50ABD5B2 ~~
 Li SM0805
 Sc 50ABD5B2
 AR /509DDBA2/509E4411
@@ -5120,14 +5115,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 42 "/ev_moto/dir-input"
+Ne 41 "/ev_moto/dir-input"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 150 "N-000198"
+Ne 149 "N-000195"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5138,7 +5133,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5B4 ~~
+Po 82835 68346 0 15 42806E04 50ABD5B4 ~~
 Li SM0805
 Sc 50ABD5B4
 AR /509DDBA2/50A28CBE
@@ -5157,14 +5152,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 42 "/ev_moto/dir-input"
+Ne 41 "/ev_moto/dir-input"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 164 "N-000218"
+Ne 163 "N-000217"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5175,7 +5170,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5B6 ~~
+Po 82913 67559 0 15 42806E04 50ABD5B6 ~~
 Li SM0805
 Sc 50ABD5B6
 AR /509DDBA2/50A28C29
@@ -5194,14 +5189,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 123 "N-000127"
+Ne 124 "N-000130"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 41 "/ev_moto/dir-"
+Ne 40 "/ev_moto/dir-"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5212,7 +5207,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5B8 ~~
+Po 82992 66772 0 15 42806E04 50ABD5B8 ~~
 Li SM0805
 Sc 50ABD5B8
 AR /509DDBA2/50A28CF3
@@ -5231,14 +5226,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 118 "N-000109"
+Ne 118 "N-000111"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 41 "/ev_moto/dir-"
+Ne 40 "/ev_moto/dir-"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5249,7 +5244,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5BA ~~
+Po 82992 65906 0 15 42806E04 50ABD5BA ~~
 Li SM0805
 Sc 50ABD5BA
 AR /509DDBA2/509E4441
@@ -5268,14 +5263,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 150 "N-000198"
+Ne 149 "N-000195"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5286,7 +5281,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5BC ~~
+Po 83071 65118 0 15 42806E04 50ABD5BC ~~
 Li SM0805
 Sc 50ABD5BC
 AR /509DDBA2/50A28CBD
@@ -5305,14 +5300,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 164 "N-000218"
+Ne 163 "N-000217"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5323,7 +5318,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5BE ~~
+Po 84488 65118 0 15 42806E04 50ABD5BE ~~
 Li SM0805
 Sc 50ABD5BE
 AR /509DDBA2/50A28A70
@@ -5342,14 +5337,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 118 "N-000109"
+Ne 118 "N-000111"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5360,7 +5355,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5C0 ~~
+Po 84488 65984 0 15 42806E04 50ABD5C0 ~~
 Li SM0805
 Sc 50ABD5C0
 AR /509DDBA2/50A28D4A
@@ -5379,14 +5374,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 115 "N-000106"
+Ne 120 "N-000114"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 117 "N-000108"
+Ne 116 "N-000109"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5397,7 +5392,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5C2 ~~
+Po 84488 66693 0 15 42806E04 50ABD5C2 ~~
 Li SM0805
 Sc 50ABD5C2
 AR /509DDBA2/50A28E24
@@ -5416,14 +5411,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 117 "N-000108"
+Ne 116 "N-000109"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 43 "/ev_moto/en+"
+Ne 42 "/ev_moto/en+"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5434,7 +5429,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5C4 ~~
+Po 84409 67402 0 15 42806E04 50ABD5C4 ~~
 Li SM0805
 Sc 50ABD5C4
 AR /509DDBA2/509E37B3
@@ -5453,7 +5448,7 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 152 "N-000201"
+Ne 152 "N-000199"
 Po -375 0
 $EndPAD
 $PAD
@@ -5471,7 +5466,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5C6 ~~
+Po 84331 68268 0 15 42806E04 50ABD5C6 ~~
 Li SM0805
 Sc 50ABD5C6
 AR /509DDBA2/509E4640
@@ -5490,14 +5485,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 149 "N-000197"
+Ne 148 "N-000194"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 60 "/ev_moto/tx"
+Ne 59 "/ev_moto/tx"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5508,7 +5503,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5C8 ~~
+Po 84016 69055 0 15 42806E04 50ABD5C8 ~~
 Li SM0805
 Sc 50ABD5C8
 AR /509DDBA2/509E37B1
@@ -5527,14 +5522,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 152 "N-000201"
+Ne 152 "N-000199"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5545,7 +5540,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5CA ~~
+Po 83622 69843 0 15 42806E04 50ABD5CA ~~
 Li SM0805
 Sc 50ABD5CA
 AR /509DDBA2/50A28D4C
@@ -5564,14 +5559,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 114 "N-000105"
+Ne 114 "N-000107"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 115 "N-000106"
+Ne 120 "N-000114"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5582,7 +5577,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5CC ~~
+Po 83465 70630 0 15 42806E04 50ABD5CC ~~
 Li SM0805
 Sc 50ABD5CC
 AR /509DDBA2/509E463D
@@ -5601,14 +5596,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 148 "N-000196"
+Ne 147 "N-000193"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 54 "/ev_moto/rx"
+Ne 53 "/ev_moto/rx"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5619,7 +5614,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5CE ~~
+Po 83465 71496 0 15 42806E04 50ABD5CE ~~
 Li SM0805
 Sc 50ABD5CE
 AR /509DDBA2/509E46BE
@@ -5638,14 +5633,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 127 "N-000132"
+Ne 127 "N-000134"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 43 "/ev_moto/en+"
+Ne 42 "/ev_moto/en+"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5656,7 +5651,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5D0 ~~
+Po 84882 71496 0 15 42806E04 50ABD5D0 ~~
 Li SM0805
 Sc 50ABD5D0
 AR /509DDBA2/50A28D46
@@ -5675,14 +5670,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 45 "/ev_moto/en-input"
+Ne 44 "/ev_moto/en-input"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 120 "N-000112"
+Ne 117 "N-000110"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5693,7 +5688,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5D2 ~~
+Po 84882 70551 0 15 42806E04 50ABD5D2 ~~
 Li SM0805
 Sc 50ABD5D2
 AR /509DDBA2/50A28D4D
@@ -5712,14 +5707,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 116 "N-000107"
+Ne 113 "N-000106"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 44 "/ev_moto/en-"
+Ne 43 "/ev_moto/en-"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5730,7 +5725,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5D4 ~~
+Po 85197 69764 0 15 42806E04 50ABD5D4 ~~
 Li SM0805
 Sc 50ABD5D4
 AR /509DDBA2/509E3BE6
@@ -5749,14 +5744,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5767,7 +5762,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5D6 ~~
+Po 85512 68976 0 15 42806E04 50ABD5D6 ~~
 Li SM0805
 Sc 50ABD5D6
 AR /509DDBA2/509E36D1
@@ -5786,14 +5781,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5804,7 +5799,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5D8 ~~
+Po 85827 68189 0 15 42806E04 50ABD5D8 ~~
 Li SM0805
 Sc 50ABD5D8
 AR /509DDBA2/509E3729
@@ -5823,14 +5818,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5841,7 +5836,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5DA ~~
+Po 85984 67323 0 15 42806E04 50ABD5DA ~~
 Li SM0805
 Sc 50ABD5DA
 AR /509DDBA2/50A2902E
@@ -5860,14 +5855,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 144 "N-000189"
+Ne 121 "N-000118"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5878,7 +5873,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5DC ~~
+Po 85984 65512 0 15 42806E04 50ABD5DC ~~
 Li SM0805
 Sc 50ABD5DC
 AR /509DDBA2/509DDC1E
@@ -5897,14 +5892,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 157 "N-000207"
+Ne 157 "N-000205"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5915,7 +5910,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5DE ~~
+Po 85984 64724 0 15 42806E04 50ABD5DE ~~
 Li SM0805
 Sc 50ABD5DE
 AR /509DDBA2/509E36EC
@@ -5934,14 +5929,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5952,7 +5947,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5E0 ~~
+Po 87402 64724 0 15 42806E04 50ABD5E0 ~~
 Li SM0805
 Sc 50ABD5E0
 AR /509DDBA2/509E3C81
@@ -5971,14 +5966,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 51 "/ev_moto/out-gain"
+Ne 50 "/ev_moto/out-gain"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 169 "N-000223"
+Ne 168 "N-000222"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -5989,7 +5984,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5E2 ~~
+Po 87402 65512 0 15 42806E04 50ABD5E2 ~~
 Li SM0805
 Sc 50ABD5E2
 AR /509DDBA2/509DDC20
@@ -6008,14 +6003,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 158 "N-000208"
+Ne 158 "N-000206"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6026,7 +6021,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5E4 ~~
+Po 87480 67402 0 15 42806E04 50ABD5E4 ~~
 Li SM0805
 Sc 50ABD5E4
 AR /509DDBA2/509DDC21
@@ -6045,14 +6040,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 141 "N-000184"
+Ne 141 "N-000182"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6063,7 +6058,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5E6 ~~
+Po 87480 68268 0 15 42806E04 50ABD5E6 ~~
 Li SM0805
 Sc 50ABD5E6
 AR /509DDBA2/50A28F54
@@ -6082,14 +6077,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6100,7 +6095,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5E8 ~~
+Po 87087 69134 0 15 42806E04 50ABD5E8 ~~
 Li SM0805
 Sc 50ABD5E8
 AR /509DDBA2/50A28F4F
@@ -6119,14 +6114,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6137,7 +6132,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5EA ~~
+Po 86772 69921 0 15 42806E04 50ABD5EA ~~
 Li SM0805
 Sc 50ABD5EA
 AR /509DDBA2/50AB7A78
@@ -6156,14 +6151,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6174,7 +6169,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5EC ~~
+Po 86535 70709 0 15 42806E04 50ABD5EC ~~
 Li SM0805
 Sc 50ABD5EC
 AR /509DDBA2/509E37A4
@@ -6200,7 +6195,7 @@ $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 153 "N-000203"
+Ne 153 "N-000201"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6211,7 +6206,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5EE ~~
+Po 86457 71496 0 15 42806E04 50ABD5EE ~~
 Li SM0805
 Sc 50ABD5EE
 AR /509DDBA2/509E37A7
@@ -6230,14 +6225,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 155 "N-000205"
+Ne 155 "N-000203"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6248,7 +6243,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5F0 ~~
+Po 88898 67402 0 15 42806E04 50ABD5F0 ~~
 Li SM0805
 Sc 50ABD5F0
 AR /509DDBA2/509E37AD
@@ -6274,7 +6269,7 @@ $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6285,7 +6280,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5F2 ~~
+Po 88898 68268 0 15 42806E04 50ABD5F2 ~~
 Li SM0805
 Sc 50ABD5F2
 AR /509DDBA2/509E37AF
@@ -6311,7 +6306,7 @@ $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6322,7 +6317,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5F4 ~~
+Po 88819 69055 0 15 42806E04 50ABD5F4 ~~
 Li SM0805
 Sc 50ABD5F4
 AR /509DDBA2/509E379F
@@ -6341,14 +6336,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 153 "N-000203"
+Ne 153 "N-000201"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 151 "N-000199"
+Ne 151 "N-000197"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6359,7 +6354,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5F6 ~~
+Po 88583 69921 0 15 42806E04 50ABD5F6 ~~
 Li SM0805
 Sc 50ABD5F6
 AR /509DDBA2/509E379E
@@ -6378,14 +6373,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 151 "N-000199"
+Ne 151 "N-000197"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6396,7 +6391,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5F8 ~~
+Po 88189 70709 0 15 42806E04 50ABD5F8 ~~
 Li SM0805
 Sc 50ABD5F8
 AR /509DDBA2/50AB7A96
@@ -6415,14 +6410,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6433,7 +6428,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5FA ~~
+Po 88031 71496 0 15 42806E04 50ABD5FA ~~
 Li SM0805
 Sc 50ABD5FA
 AR /509DDBA2/50AB7AD0
@@ -6452,14 +6447,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6470,7 +6465,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5FC ~~
+Po 89528 71575 0 15 42806E04 50ABD5FC ~~
 Li SM0805
 Sc 50ABD5FC
 AR /509DDBA2/50AB7AE1
@@ -6489,14 +6484,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6507,7 +6502,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD5FE ~~
+Po 89843 70787 0 15 42806E04 50ABD5FE ~~
 Li SM0805
 Sc 50ABD5FE
 AR /509DDBA2/50AB7ADE
@@ -6526,14 +6521,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6544,7 +6539,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD600 ~~
+Po 90157 69921 0 15 42806E04 50ABD600 ~~
 Li SM0805
 Sc 50ABD600
 AR /509DDBA2/50AB7AD7
@@ -6563,14 +6558,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6581,7 +6576,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD602 ~~
+Po 90236 68976 0 15 42806E04 50ABD602 ~~
 Li SM0805
 Sc 50ABD602
 AR /509DDBA2/50AB7DB3
@@ -6607,7 +6602,7 @@ $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6618,7 +6613,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD604 ~~
+Po 90236 68110 0 15 42806E04 50ABD604 ~~
 Li SM0805
 Sc 50ABD604
 AR /509DDBA2/50AB7C63
@@ -6637,14 +6632,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6655,7 +6650,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD606 ~~
+Po 90236 67244 0 15 42806E04 50ABD606 ~~
 Li SM0805
 Sc 50ABD606
 AR /5096B4CB
@@ -6674,14 +6669,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6692,7 +6687,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD608 ~~
+Po 90394 66457 0 15 42806E04 50ABD608 ~~
 Li SM0805
 Sc 50ABD608
 AR /5096B4CA
@@ -6711,14 +6706,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6729,7 +6724,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD60A ~~
+Po 88740 65512 0 15 42806E04 50ABD60A ~~
 Li SM0805
 Sc 50ABD60A
 AR /5096B4C9
@@ -6748,14 +6743,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6766,7 +6761,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD60C ~~
+Po 88819 64724 0 15 42806E04 50ABD60C ~~
 Li SM0805
 Sc 50ABD60C
 AR /5096B4D9
@@ -6785,14 +6780,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6803,7 +6798,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD60E ~~
+Po 90394 65591 0 15 42806E04 50ABD60E ~~
 Li SM0805
 Sc 50ABD60E
 AR /5096B3D7
@@ -6829,7 +6824,7 @@ $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 104 "N-000067"
+Ne 104 "N-000071"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6840,7 +6835,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD610 ~~
+Po 90315 64724 0 15 42806E04 50ABD610 ~~
 Li SM0805
 Sc 50ABD610
 AR /5096B3D4
@@ -6859,14 +6854,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 103 "N-000066"
+Ne 102 "N-000068"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6877,7 +6872,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD612 ~~
+Po 91811 64646 0 15 42806E04 50ABD612 ~~
 Li SM0805
 Sc 50ABD612
 AR /5096B3CE
@@ -6896,14 +6891,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6914,7 +6909,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD614 ~~
+Po 91811 65591 0 15 42806E04 50ABD614 ~~
 Li SM0805
 Sc 50ABD614
 AR /5096B3CC
@@ -6933,14 +6928,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6951,7 +6946,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD616 ~~
+Po 91890 66457 0 15 42806E04 50ABD616 ~~
 Li SM0805
 Sc 50ABD616
 AR /50978B64
@@ -6977,7 +6972,7 @@ $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -6988,7 +6983,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD618 ~~
+Po 91732 67165 0 15 42806E04 50ABD618 ~~
 Li SM0805
 Sc 50ABD618
 AR /50978BA2
@@ -7014,7 +7009,7 @@ $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7025,7 +7020,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD61A ~~
+Po 91575 68031 0 15 42806E04 50ABD61A ~~
 Li SM0805
 Sc 50ABD61A
 AR /5096B3C5
@@ -7044,14 +7039,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 104 "N-000067"
+Ne 104 "N-000071"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 101 "N-000060"
+Ne 100 "N-000062"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7062,7 +7057,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD61C ~~
+Po 91732 68976 0 15 42806E04 50ABD61C ~~
 Li SM0805
 Sc 50ABD61C
 AR /5096B3C4
@@ -7081,14 +7076,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 101 "N-000060"
+Ne 100 "N-000062"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7099,7 +7094,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD61E ~~
+Po 91575 69764 0 15 42806E04 50ABD61E ~~
 Li SM0805
 Sc 50ABD61E
 AR /5096B4D5
@@ -7118,14 +7113,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 106 "N-000075"
+Ne 108 "N-000094"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7136,7 +7131,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD620 ~~
+Po 91260 70630 0 15 42806E04 50ABD620 ~~
 Li SM0805
 Sc 50ABD620
 AR /5096B4D3
@@ -7155,14 +7150,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 108 "N-000090"
+Ne 109 "N-000095"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7173,7 +7168,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD622 ~~
+Po 91102 71496 0 15 42806E04 50ABD622 ~~
 Li SM0805
 Sc 50ABD622
 AR /5096B4D2
@@ -7192,14 +7187,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 113 "N-000099"
+Ne 112 "N-000104"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7210,7 +7205,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD624 ~~
+Po 92598 71417 0 15 42806E04 50ABD624 ~~
 Li SM0805
 Sc 50ABD624
 AR /509E4978
@@ -7229,14 +7224,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7247,7 +7242,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD626 ~~
+Po 92835 70551 0 15 42806E04 50ABD626 ~~
 Li SM0805
 Sc 50ABD626
 AR /509E4975
@@ -7273,7 +7268,7 @@ $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7284,7 +7279,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD628 ~~
+Po 93071 69685 0 15 42806E04 50ABD628 ~~
 Li SM0805
 Sc 50ABD628
 AR /509C0855
@@ -7303,14 +7298,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 91 "N-000009"
+Ne 88 "N-000005"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7321,7 +7316,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD62A ~~
+Po 93150 68740 0 15 42806E04 50ABD62A ~~
 Li SM0805
 Sc 50ABD62A
 AR /509C0895
@@ -7340,14 +7335,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7358,7 +7353,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD62C ~~
+Po 93150 67874 0 15 42806E04 50ABD62C ~~
 Li SM0805
 Sc 50ABD62C
 AR /509C087D
@@ -7377,14 +7372,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7395,7 +7390,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD62E ~~
+Po 93150 67008 0 15 42806E04 50ABD62E ~~
 Li SM0805
 Sc 50ABD62E
 AR /509C08DB
@@ -7414,14 +7409,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 93 "N-000011"
+Ne 91 "N-000017"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 92 "N-000010"
+Ne 92 "N-000018"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7432,7 +7427,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD630 ~~
+Po 93307 66142 0 15 42806E04 50ABD630 ~~
 Li SM0805
 Sc 50ABD630
 AR /509DDBA2/509DDC28
@@ -7451,14 +7446,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7469,7 +7464,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD632 ~~
+Po 93307 65276 0 15 42806E04 50ABD632 ~~
 Li SM0805
 Sc 50ABD632
 AR /509DDBA2/509DDC29
@@ -7488,14 +7483,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7506,7 +7501,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD634 ~~
+Po 93307 64409 0 15 42806E04 50ABD634 ~~
 Li SM0805
 Sc 50ABD634
 AR /509DDBA2/509DDC2A
@@ -7525,14 +7520,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7543,7 +7538,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD636 ~~
+Po 94646 64409 0 15 42806E04 50ABD636 ~~
 Li SM0805
 Sc 50ABD636
 AR /509DDBA2/509DDC1A
@@ -7562,14 +7557,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7580,7 +7575,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD638 ~~
+Po 94724 65276 0 15 42806E04 50ABD638 ~~
 Li SM0805
 Sc 50ABD638
 AR /5096B3D5
@@ -7599,7 +7594,7 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 105 "N-000069"
+Ne 103 "N-000069"
 Po -375 0
 $EndPAD
 $PAD
@@ -7617,7 +7612,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD63A ~~
+Po 94724 66142 0 15 42806E04 50ABD63A ~~
 Li SM0805
 Sc 50ABD63A
 AR /5096B3D6
@@ -7636,7 +7631,7 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 105 "N-000069"
+Ne 103 "N-000069"
 Po -375 0
 $EndPAD
 $PAD
@@ -7654,7 +7649,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD63C ~~
+Po 94724 67008 0 15 42806E04 50ABD63C ~~
 Li SM0805
 Sc 50ABD63C
 AR /5096B3D8
@@ -7673,7 +7668,7 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 105 "N-000069"
+Ne 103 "N-000069"
 Po -375 0
 $EndPAD
 $PAD
@@ -7691,7 +7686,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD63E ~~
+Po 94724 67795 0 15 42806E04 50ABD63E ~~
 Li SM0805
 Sc 50ABD63E
 AR /5096B3C8
@@ -7710,14 +7705,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 102 "N-000061"
+Ne 101 "N-000064"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7728,7 +7723,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD640 ~~
+Po 94646 68661 0 15 42806E04 50ABD640 ~~
 Li SM0805
 Sc 50ABD640
 AR /50977EDC
@@ -7754,7 +7749,7 @@ $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 78 "/sen-1"
+Ne 79 "/sen-1"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7765,7 +7760,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD642 ~~
+Po 94567 69449 0 15 42806E04 50ABD642 ~~
 Li SM0805
 Sc 50ABD642
 AR /5097840D
@@ -7791,7 +7786,7 @@ $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 79 "/sen-2"
+Ne 80 "/sen-2"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7802,7 +7797,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD644 ~~
+Po 94409 70315 0 15 42806E04 50ABD644 ~~
 Li SM0805
 Sc 50ABD644
 AR /5096B3CA
@@ -7821,14 +7816,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 102 "N-000061"
+Ne 101 "N-000064"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7839,7 +7834,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD646 ~~
+Po 94252 71260 0 15 42806E04 50ABD646 ~~
 Li SM0805
 Sc 50ABD646
 AR /509B76A0
@@ -7858,14 +7853,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 80 "/sensor-1"
+Ne 81 "/sensor-1"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 78 "/sen-1"
+Ne 79 "/sen-1"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7876,7 +7871,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD648 ~~
+Po 96142 64409 0 15 42806E04 50ABD648 ~~
 Li SM0805
 Sc 50ABD648
 AR /509B76B6
@@ -7895,14 +7890,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 81 "/sensor-2"
+Ne 82 "/sensor-2"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 79 "/sen-2"
+Ne 80 "/sen-2"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7913,7 +7908,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD64A ~~
+Po 96063 65354 0 15 42806E04 50ABD64A ~~
 Li SM0805
 Sc 50ABD64A
 AR /50977F06
@@ -7932,14 +7927,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 78 "/sen-1"
+Ne 79 "/sen-1"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7950,7 +7945,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD64C ~~
+Po 96220 66142 0 15 42806E04 50ABD64C ~~
 Li SM0805
 Sc 50ABD64C
 AR /5097840C
@@ -7969,14 +7964,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 79 "/sen-2"
+Ne 80 "/sen-2"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -7987,7 +7982,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD64E ~~
+Po 96220 67008 0 15 42806E04 50ABD64E ~~
 Li SM0805
 Sc 50ABD64E
 AR /5096B4D6
@@ -8006,14 +8001,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 106 "N-000075"
+Ne 108 "N-000094"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -8024,7 +8019,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD650 ~~
+Po 96299 67874 0 15 42806E04 50ABD650 ~~
 Li SM0805
 Sc 50ABD650
 AR /50978762
@@ -8043,14 +8038,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 9 "/dr-io-11"
+Ne 8 "/dr-io-11"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -8061,7 +8056,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD652 ~~
+Po 96299 68740 0 15 42806E04 50ABD652 ~~
 Li SM0805
 Sc 50ABD652
 AR /50978772
@@ -8080,14 +8075,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 10 "/dr-io-12"
+Ne 9 "/dr-io-12"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -8098,7 +8093,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD654 ~~
+Po 96063 69606 0 15 42806E04 50ABD654 ~~
 Li SM0805
 Sc 50ABD654
 AR /5097880C
@@ -8117,14 +8112,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 11 "/dr-io-21"
+Ne 10 "/dr-io-21"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -8135,7 +8130,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD656 ~~
+Po 95827 70472 0 15 42806E04 50ABD656 ~~
 Li SM0805
 Sc 50ABD656
 AR /5097880B
@@ -8154,14 +8149,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 12 "/dr-io-22"
+Ne 11 "/dr-io-22"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -8172,7 +8167,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD658 ~~
+Po 95748 71496 0 15 42806E04 50ABD658 ~~
 Li SM0805
 Sc 50ABD658
 AR /509787AE
@@ -8191,14 +8186,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 65 "/i-1-1"
+Ne 66 "/i-1-1"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 5 "/dr-i-11"
+Ne 4 "/dr-i-11"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -8209,7 +8204,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD65A ~~
+Po 97717 64488 0 15 42806E04 50ABD65A ~~
 Li SM0805
 Sc 50ABD65A
 AR /50978808
@@ -8228,14 +8223,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 67 "/i-2-1"
+Ne 68 "/i-2-1"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 7 "/dr-i-21"
+Ne 6 "/dr-i-21"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -8246,7 +8241,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD65C ~~
+Po 97638 65276 0 15 42806E04 50ABD65C ~~
 Li SM0805
 Sc 50ABD65C
 AR /509787C4
@@ -8265,14 +8260,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 66 "/i-1-2"
+Ne 67 "/i-1-2"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 6 "/dr-i-12"
+Ne 5 "/dr-i-12"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -8283,7 +8278,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD65E ~~
+Po 97717 66142 0 15 42806E04 50ABD65E ~~
 Li SM0805
 Sc 50ABD65E
 AR /50978807
@@ -8302,14 +8297,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 68 "/i-2-2"
+Ne 69 "/i-2-2"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 8 "/dr-i-22"
+Ne 7 "/dr-i-22"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -8320,7 +8315,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD660 ~~
+Po 97717 67008 0 15 42806E04 50ABD660 ~~
 Li SM0805
 Sc 50ABD660
 AR /509787C7
@@ -8339,14 +8334,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 69 "/io-1-1"
+Ne 70 "/io-1-1"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 9 "/dr-io-11"
+Ne 8 "/dr-io-11"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -8357,7 +8352,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD662 ~~
+Po 97717 67874 0 15 42806E04 50ABD662 ~~
 Li SM0805
 Sc 50ABD662
 AR /509DDBA2/50AB7DE0
@@ -8383,7 +8378,7 @@ $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -8394,7 +8389,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD664 ~~
+Po 97717 68740 0 15 42806E04 50ABD664 ~~
 Li SM0805
 Sc 50ABD664
 AR /509DDBA2/50AB7E1D
@@ -8413,14 +8408,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 29 "/ev_moto/analog-out2"
+Ne 28 "/ev_moto/analog-out2"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 163 "N-000217"
+Ne 162 "N-000215"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -8431,7 +8426,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD666 ~~
+Po 97638 69528 0 15 42806E04 50ABD666 ~~
 Li SM0805
 Sc 50ABD666
 AR /509DDBA2/50AB7D85
@@ -8450,14 +8445,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 28 "/ev_moto/analog-out1"
+Ne 27 "/ev_moto/analog-out1"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 161 "N-000215"
+Ne 160 "N-000213"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -8468,7 +8463,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD668 ~~
+Po 97559 70394 0 15 42806E04 50ABD668 ~~
 Li SM0805
 Sc 50ABD668
 AR /509DDBA2/50AB7D20
@@ -8487,14 +8482,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 162 "N-000216"
+Ne 161 "N-000214"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -8505,7 +8500,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD66A ~~
+Po 97402 71260 0 15 42806E04 50ABD66A ~~
 Li SM0805
 Sc 50ABD66A
 AR /509DDBA2/50AB7D02
@@ -8524,14 +8519,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 129 "N-000142"
+Ne 129 "N-000144"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -8542,7 +8537,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD66C ~~
+Po 98898 71339 0 15 42806E04 50ABD66C ~~
 Li SM0805
 Sc 50ABD66C
 AR /509DDBA2/50AB7CCE
@@ -8561,14 +8556,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -8596,35 +8591,35 @@ $PAD
 Sh "1" R 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 149 "N-000197"
+Ne 148 "N-000194"
 Po -2000 0
 $EndPAD
 $PAD
 Sh "2" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 148 "N-000196"
+Ne 147 "N-000193"
 Po -1000 0
 $EndPAD
 $PAD
 Sh "3" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po 0 0
 $EndPAD
 $PAD
 Sh "4" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 147 "N-000195"
+Ne 146 "N-000192"
 Po 1000 0
 $EndPAD
 $PAD
 Sh "5" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 146 "N-000194"
+Ne 145 "N-000191"
 Po 2000 0
 $EndPAD
 $SHAPE3D
@@ -8652,35 +8647,35 @@ $PAD
 Sh "1" R 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 111 "N-000093"
+Ne 93 "N-000048"
 Po -2000 0
 $EndPAD
 $PAD
 Sh "2" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 96 "N-000051"
+Ne 94 "N-000049"
 Po -1000 0
 $EndPAD
 $PAD
 Sh "3" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po 0 0
 $EndPAD
 $PAD
 Sh "4" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 94 "N-000046"
+Ne 95 "N-000050"
 Po 1000 0
 $EndPAD
 $PAD
 Sh "5" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 95 "N-000049"
+Ne 96 "N-000051"
 Po 2000 0
 $EndPAD
 $SHAPE3D
@@ -8709,21 +8704,21 @@ $PAD
 Sh "1" R 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 56 "/ev_moto/sda-ext"
+Ne 55 "/ev_moto/sda-ext"
 Po -1000 0
 $EndPAD
 $PAD
 Sh "2" C 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 55 "/ev_moto/scl-ext"
+Ne 54 "/ev_moto/scl-ext"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 59 "/ev_moto/synch-ext"
+Ne 58 "/ev_moto/synch-ext"
 Po 1000 0
 $EndPAD
 $SHAPE3D
@@ -8752,21 +8747,21 @@ $PAD
 Sh "1" R 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 56 "/ev_moto/sda-ext"
+Ne 55 "/ev_moto/sda-ext"
 Po -1000 0
 $EndPAD
 $PAD
 Sh "2" C 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 55 "/ev_moto/scl-ext"
+Ne 54 "/ev_moto/scl-ext"
 Po 0 0
 $EndPAD
 $PAD
 Sh "3" C 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 59 "/ev_moto/synch-ext"
+Ne 58 "/ev_moto/synch-ext"
 Po 1000 0
 $EndPAD
 $SHAPE3D
@@ -8777,7 +8772,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  PIN_ARRAY_3X1
 $MODULE PIN_ARRAY_2X1
-Po 78103 64993 0 15 4565C520 50ABD673 ~~
+Po 69843 73622 0 15 4565C520 50ABD673 ~~
 Li PIN_ARRAY_2X1
 Cd Connecteurs 2 pins
 Kw CONN DEV
@@ -8794,14 +8789,14 @@ $PAD
 Sh "1" R 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -500 0
 $EndPAD
 $PAD
 Sh "2" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 48 "/ev_moto/fw-upgrade"
+Ne 47 "/ev_moto/fw-upgrade"
 Po 500 0
 $EndPAD
 $SHAPE3D
@@ -8812,7 +8807,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  PIN_ARRAY_2X1
 $MODULE LED-5MM
-Po 78103 64993 0 15 49BFA269 50ABD676 ~~
+Po 67087 69921 0 15 49BFA269 50ABD676 ~~
 Li LED-5MM
 Cd LED 5mm - Lead pitch 100mil (2,54mm)
 Kw LED led 5mm 5MM 100mil 2,54mm
@@ -8834,14 +8829,14 @@ $PAD
 Sh "1" C 660 660 0 0 0
 Dr 320 0 0
 At STD N 00A8FFFF
-Ne 97 "N-000053"
+Ne 97 "N-000054"
 Po -500 0
 $EndPAD
 $PAD
 Sh "2" C 660 660 0 0 0
 Dr 320 0 0
 At STD N 00A8FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po 500 0
 $EndPAD
 $SHAPE3D
@@ -8852,7 +8847,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  LED-5MM
 $MODULE LED-5MM
-Po 78103 64993 0 15 49BFA269 50ABD678 ~~
+Po 67087 72913 0 15 49BFA269 50ABD678 ~~
 Li LED-5MM
 Cd LED 5mm - Lead pitch 100mil (2,54mm)
 Kw LED led 5mm 5MM 100mil 2,54mm
@@ -8874,14 +8869,14 @@ $PAD
 Sh "1" C 660 660 0 0 0
 Dr 320 0 0
 At STD N 00A8FFFF
-Ne 107 "N-000088"
+Ne 107 "N-000091"
 Po -500 0
 $EndPAD
 $PAD
 Sh "2" C 660 660 0 0 0
 Dr 320 0 0
 At STD N 00A8FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po 500 0
 $EndPAD
 $SHAPE3D
@@ -8892,7 +8887,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  LED-5MM
 $MODULE LED-5MM
-Po 78103 64993 0 15 49BFA269 50ABD67A ~~
+Po 67087 75827 0 15 49BFA269 50ABD67A ~~
 Li LED-5MM
 Cd LED 5mm - Lead pitch 100mil (2,54mm)
 Kw LED led 5mm 5MM 100mil 2,54mm
@@ -8914,14 +8909,14 @@ $PAD
 Sh "1" C 660 660 0 0 0
 Dr 320 0 0
 At STD N 00A8FFFF
-Ne 121 "N-000120"
+Ne 122 "N-000123"
 Po -500 0
 $EndPAD
 $PAD
 Sh "2" C 660 660 0 0 0
 Dr 320 0 0
 At STD N 00A8FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po 500 0
 $EndPAD
 $SHAPE3D
@@ -8932,7 +8927,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  LED-5MM
 $MODULE LED-5MM
-Po 78103 64993 0 15 49BFA269 50ABD67C ~~
+Po 69528 75984 0 15 49BFA269 50ABD67C ~~
 Li LED-5MM
 Cd LED 5mm - Lead pitch 100mil (2,54mm)
 Kw LED led 5mm 5MM 100mil 2,54mm
@@ -8954,14 +8949,14 @@ $PAD
 Sh "1" C 660 660 0 0 0
 Dr 320 0 0
 At STD N 00A8FFFF
-Ne 122 "N-000125"
+Ne 123 "N-000128"
 Po -500 0
 $EndPAD
 $PAD
 Sh "2" C 660 660 0 0 0
 Dr 320 0 0
 At STD N 00A8FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po 500 0
 $EndPAD
 $SHAPE3D
@@ -8971,110 +8966,6 @@ Of 0.000000 0.000000 0.000000
 Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  LED-5MM
-$MODULE DB9FC
-Po 37500 40850 900 15 00200000 50ABD67D ~~
-Li DB9FC
-Cd Connecteur DB9 femelle couche
-Kw CONN DB9
-Sc 50ABD67D
-AR /5096B4B8
-Op 0 0 0
-T0 500 -4000 600 600 900 120 N V 21 N "J2"
-T1 500 -1500 600 600 900 120 N V 21 N "DB9"
-DS -6350 900 6450 900 120 21
-DS 6450 900 6450 -6100 120 21
-DS 6450 -6100 -6350 -6100 120 21
-DS -6350 -6100 -6350 900 120 21
-DS -3550 -6100 -3550 -3100 120 21
-DS -3550 -3100 3650 -3100 120 21
-DS 3650 -3100 3650 -6100 120 21
-DS -2950 -6100 -2950 -9500 120 21
-DS -2950 -9500 3050 -9500 120 21
-DS 3050 -9500 3050 -6100 120 21
-$PAD
-Sh "" C 1500 1500 0 0 900
-Dr 1200 0 0
-At STD N 00E0FFFF
-Ne 0 ""
-Po 5050 -500
-$EndPAD
-$PAD
-Sh "" C 1500 1500 0 0 900
-Dr 1200 0 0
-At STD N 00E0FFFF
-Ne 0 ""
-Po -4950 -500
-$EndPAD
-$PAD
-Sh "1" R 600 600 0 0 900
-Dr 400 0 0
-At STD N 00E0FFFF
-Ne 3 "/24v"
-Po -2150 500
-$EndPAD
-$PAD
-Sh "2" C 600 600 0 0 900
-Dr 400 0 0
-At STD N 00E0FFFF
-Ne 3 "/24v"
-Po -1050 500
-$EndPAD
-$PAD
-Sh "3" C 600 600 0 0 900
-Dr 400 0 0
-At STD N 00E0FFFF
-Ne 88 "GND"
-Po 0 500
-$EndPAD
-$PAD
-Sh "4" C 600 600 0 0 900
-Dr 400 0 0
-At STD N 00E0FFFF
-Ne 56 "/ev_moto/sda-ext"
-Po 1100 500
-$EndPAD
-$PAD
-Sh "5" C 600 600 0 0 900
-Dr 400 0 0
-At STD N 00E0FFFF
-Ne 55 "/ev_moto/scl-ext"
-Po 2200 500
-$EndPAD
-$PAD
-Sh "6" C 600 600 0 0 900
-Dr 400 0 0
-At STD N 00E0FFFF
-Ne 3 "/24v"
-Po -1600 -500
-$EndPAD
-$PAD
-Sh "7" C 600 600 0 0 900
-Dr 400 0 0
-At STD N 00E0FFFF
-Ne 88 "GND"
-Po -500 -500
-$EndPAD
-$PAD
-Sh "8" C 600 600 0 0 900
-Dr 400 0 0
-At STD N 00E0FFFF
-Ne 88 "GND"
-Po 550 -500
-$EndPAD
-$PAD
-Sh "9" C 600 600 0 0 900
-Dr 400 0 0
-At STD N 00E0FFFF
-Ne 59 "/ev_moto/synch-ext"
-Po 1650 -500
-$EndPAD
-$SHAPE3D
-Na "conn_DBxx/db9_female_pin90deg.wrl"
-Sc 1.000000 1.000000 1.000000
-Of 0.000000 0.000000 0.000000
-Ro 0.000000 0.000000 0.000000
-$EndSHAPE3D
-$EndMODULE  DB9FC
 $MODULE DB37FC
 Po 55906 19291 0 15 00200000 50ABD67E ~~
 Li DB37FC
@@ -9098,63 +8989,63 @@ $PAD
 Sh "1" R 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00F0FFFF
-Ne 78 "/sen-1"
+Ne 79 "/sen-1"
 Po -9810 560
 $EndPAD
 $PAD
 Sh "2" C 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po -8720 560
 $EndPAD
 $PAD
 Sh "3" C 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 6 "/dr-i-12"
+Ne 5 "/dr-i-12"
 Po -7630 560
 $EndPAD
 $PAD
 Sh "4" C 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 10 "/dr-io-12"
+Ne 9 "/dr-io-12"
 Po -6540 560
 $EndPAD
 $PAD
 Sh "5" C 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 28 "/ev_moto/analog-out1"
+Ne 27 "/ev_moto/analog-out1"
 Po -5450 560
 $EndPAD
 $PAD
 Sh "6" C 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 79 "/sen-2"
+Ne 80 "/sen-2"
 Po -4360 560
 $EndPAD
 $PAD
 Sh "7" C 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 7 "/dr-i-21"
+Ne 6 "/dr-i-21"
 Po -3270 560
 $EndPAD
 $PAD
 Sh "8" C 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 11 "/dr-io-21"
+Ne 10 "/dr-io-21"
 Po -2180 560
 $EndPAD
 $PAD
 Sh "9" C 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po -1090 560
 $EndPAD
 $PAD
@@ -9252,21 +9143,21 @@ $PAD
 Sh "21" C 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 5 "/dr-i-11"
+Ne 4 "/dr-i-11"
 Po -8180 -560
 $EndPAD
 $PAD
 Sh "22" C 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 9 "/dr-io-11"
+Ne 8 "/dr-io-11"
 Po -7090 -560
 $EndPAD
 $PAD
 Sh "23" C 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po -6000 -560
 $EndPAD
 $PAD
@@ -9280,28 +9171,28 @@ $PAD
 Sh "25" C 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po -3820 -560
 $EndPAD
 $PAD
 Sh "26" C 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 8 "/dr-i-22"
+Ne 7 "/dr-i-22"
 Po -2730 -560
 $EndPAD
 $PAD
 Sh "27" C 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 12 "/dr-io-22"
+Ne 11 "/dr-io-22"
 Po -1640 -560
 $EndPAD
 $PAD
 Sh "28" C 600 600 0 0 1800
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 29 "/ev_moto/analog-out2"
+Ne 28 "/ev_moto/analog-out2"
 Po -550 -560
 $EndPAD
 $PAD
@@ -9397,56 +9288,56 @@ $PAD
 Sh "1" R 600 600 0 0 0
 Dr 400 0 0
 At STD N 00F0FFFF
-Ne 36 "/ev_moto/dac-out"
+Ne 35 "/ev_moto/dac-out"
 Po -9810 560
 $EndPAD
 $PAD
 Sh "2" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 40 "/ev_moto/dir+"
+Ne 39 "/ev_moto/dir+"
 Po -8720 560
 $EndPAD
 $PAD
 Sh "3" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 43 "/ev_moto/en+"
+Ne 42 "/ev_moto/en+"
 Po -7630 560
 $EndPAD
 $PAD
 Sh "4" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po -6540 560
 $EndPAD
 $PAD
 Sh "5" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 53 "/ev_moto/rs-b"
+Ne 52 "/ev_moto/rs-b"
 Po -5450 560
 $EndPAD
 $PAD
 Sh "6" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 38 "/ev_moto/data+"
+Ne 37 "/ev_moto/data+"
 Po -4360 560
 $EndPAD
 $PAD
 Sh "7" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 33 "/ev_moto/clock+"
+Ne 32 "/ev_moto/clock+"
 Po -3270 560
 $EndPAD
 $PAD
 Sh "8" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po -2180 560
 $EndPAD
 $PAD
@@ -9481,112 +9372,112 @@ $PAD
 Sh "11" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 14 "/ev_moto/A1+"
+Ne 13 "/ev_moto/A1+"
 Po 1090 560
 $EndPAD
 $PAD
 Sh "12" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 15 "/ev_moto/A1-"
+Ne 14 "/ev_moto/A1-"
 Po 2180 560
 $EndPAD
 $PAD
 Sh "13" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 20 "/ev_moto/B1+"
+Ne 19 "/ev_moto/B1+"
 Po 3270 560
 $EndPAD
 $PAD
 Sh "14" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 21 "/ev_moto/B1-"
+Ne 20 "/ev_moto/B1-"
 Po 4360 560
 $EndPAD
 $PAD
 Sh "15" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 17 "/ev_moto/A2+"
+Ne 16 "/ev_moto/A2+"
 Po 5450 560
 $EndPAD
 $PAD
 Sh "16" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 18 "/ev_moto/A2-"
+Ne 17 "/ev_moto/A2-"
 Po 6540 560
 $EndPAD
 $PAD
 Sh "17" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 23 "/ev_moto/B2+"
+Ne 22 "/ev_moto/B2+"
 Po 7630 560
 $EndPAD
 $PAD
 Sh "18" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 24 "/ev_moto/B2-"
+Ne 23 "/ev_moto/B2-"
 Po 8720 560
 $EndPAD
 $PAD
 Sh "19" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po 9810 560
 $EndPAD
 $PAD
 Sh "20" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po -9270 -560
 $EndPAD
 $PAD
 Sh "21" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 41 "/ev_moto/dir-"
+Ne 40 "/ev_moto/dir-"
 Po -8180 -560
 $EndPAD
 $PAD
 Sh "22" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 44 "/ev_moto/en-"
+Ne 43 "/ev_moto/en-"
 Po -7090 -560
 $EndPAD
 $PAD
 Sh "23" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 52 "/ev_moto/rs-a"
+Ne 51 "/ev_moto/rs-a"
 Po -6000 -560
 $EndPAD
 $PAD
 Sh "24" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po -4910 -560
 $EndPAD
 $PAD
 Sh "25" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 39 "/ev_moto/data-"
+Ne 38 "/ev_moto/data-"
 Po -3820 -560
 $EndPAD
 $PAD
 Sh "26" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 34 "/ev_moto/clock-"
+Ne 33 "/ev_moto/clock-"
 Po -2730 -560
 $EndPAD
 $PAD
@@ -9607,63 +9498,63 @@ $PAD
 Sh "29" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 14 "/ev_moto/A1+"
+Ne 13 "/ev_moto/A1+"
 Po 540 -560
 $EndPAD
 $PAD
 Sh "30" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 15 "/ev_moto/A1-"
+Ne 14 "/ev_moto/A1-"
 Po 1630 -560
 $EndPAD
 $PAD
 Sh "31" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 20 "/ev_moto/B1+"
+Ne 19 "/ev_moto/B1+"
 Po 2720 -560
 $EndPAD
 $PAD
 Sh "32" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 21 "/ev_moto/B1-"
+Ne 20 "/ev_moto/B1-"
 Po 3810 -560
 $EndPAD
 $PAD
 Sh "33" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po 4900 -560
 $EndPAD
 $PAD
 Sh "34" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 17 "/ev_moto/A2+"
+Ne 16 "/ev_moto/A2+"
 Po 5990 -560
 $EndPAD
 $PAD
 Sh "35" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 18 "/ev_moto/A2-"
+Ne 17 "/ev_moto/A2-"
 Po 7080 -560
 $EndPAD
 $PAD
 Sh "36" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 23 "/ev_moto/B2+"
+Ne 22 "/ev_moto/B2+"
 Po 8170 -560
 $EndPAD
 $PAD
 Sh "37" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 24 "/ev_moto/B2-"
+Ne 23 "/ev_moto/B2-"
 Po 9260 -560
 $EndPAD
 $SHAPE3D
@@ -9697,14 +9588,14 @@ $PAD
 Sh "2" R 550 550 0 0 0
 Dr 320 0 0
 At STD N 00E0FFFF
-Ne 156 "N-000206"
+Ne 156 "N-000204"
 Po 1500 0
 $EndPAD
 $PAD
 Sh "1" C 550 550 0 0 0
 Dr 320 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po -1500 0
 $EndPAD
 $SHAPE3D
@@ -9738,14 +9629,14 @@ $PAD
 Sh "2" R 550 550 0 0 0
 Dr 320 0 0
 At STD N 00E0FFFF
-Ne 112 "N-000095"
+Ne 111 "N-000098"
 Po 1500 0
 $EndPAD
 $PAD
 Sh "1" C 550 550 0 0 0
 Dr 320 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po -1500 0
 $EndPAD
 $SHAPE3D
@@ -9756,7 +9647,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  D3
 $MODULE C2V10
-Po 63150 72900 0 15 41854742 50ABD684 ~~
+Po 52756 68740 0 15 41854742 50ABD684 ~~
 Li C2V10
 Cd Condensateur polarise
 Kw CP
@@ -9777,7 +9668,7 @@ $PAD
 Sh "2" C 700 700 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po 1000 0
 $EndPAD
 $SHAPE3D
@@ -9806,14 +9697,14 @@ $PAD
 Sh "1" C 550 550 0 0 0
 Dr 320 0 0
 At STD N 00E0FFFF
-Ne 113 "N-000099"
+Ne 112 "N-000104"
 Po -1000 0
 $EndPAD
 $PAD
 Sh "2" C 550 550 0 0 0
 Dr 320 0 0
 At STD N 00E0FFFF
-Ne 108 "N-000090"
+Ne 109 "N-000095"
 Po 1000 0
 $EndPAD
 $SHAPE3D
@@ -9824,32 +9715,32 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  C2
 $MODULE C2
-Po 87525 68175 0 15 00200000 50ABD687 ~~
+Po 47244 30315 2700 15 00200000 50ABD687 ~~
 Li C2
 Cd Condensateur = 2 pas
 Kw C
 Sc 50ABD687
 AR /509DDBA2/509DDC22
 Op 0 0 0
-T0 0 0 400 400 0 80 N V 21 N "X2"
-T1 0 0 400 400 0 80 N I 21 N "8MHz"
+T0 0 0 400 400 2700 80 N V 21 N "X2"
+T1 0 0 400 400 2700 80 N I 21 N "8MHz"
 DS -1400 -400 1400 -400 120 21
 DS 1400 -400 1400 400 120 21
 DS 1400 400 -1400 400 120 21
 DS -1400 400 -1400 -400 120 21
 DS -1400 -200 -1200 -400 120 21
 $PAD
-Sh "1" C 550 550 0 0 0
+Sh "1" C 550 550 0 0 2700
 Dr 320 0 0
 At STD N 00E0FFFF
-Ne 141 "N-000184"
+Ne 141 "N-000182"
 Po -1000 0
 $EndPAD
 $PAD
-Sh "2" C 550 550 0 0 0
+Sh "2" C 550 550 0 0 2700
 Dr 320 0 0
 At STD N 00E0FFFF
-Ne 158 "N-000208"
+Ne 158 "N-000206"
 Po 1000 0
 $EndPAD
 $SHAPE3D
@@ -9877,21 +9768,21 @@ $PAD
 Sh "1" R 600 600 0 0 2700
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -5500 100
 $EndPAD
 $PAD
 Sh "2" C 600 600 0 0 2700
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -4500 100
 $EndPAD
 $PAD
 Sh "3" C 600 600 0 0 2700
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po -3500 100
 $EndPAD
 $PAD
@@ -9912,21 +9803,21 @@ $PAD
 Sh "6" C 600 600 0 0 2700
 Dr 320 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po -500 100
 $EndPAD
 $PAD
 Sh "7" C 600 600 0 0 2700
 Dr 320 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po 500 100
 $EndPAD
 $PAD
 Sh "8" C 600 600 0 0 2700
 Dr 320 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po 1500 100
 $EndPAD
 $PAD
@@ -9982,21 +9873,21 @@ $PAD
 Sh "1" R 600 600 0 0 2700
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -5500 100
 $EndPAD
 $PAD
 Sh "2" C 600 600 0 0 2700
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -4500 100
 $EndPAD
 $PAD
 Sh "3" C 600 600 0 0 2700
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po -3500 100
 $EndPAD
 $PAD
@@ -10017,21 +9908,21 @@ $PAD
 Sh "6" C 600 600 0 0 2700
 Dr 320 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po -500 100
 $EndPAD
 $PAD
 Sh "7" C 600 600 0 0 2700
 Dr 320 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po 500 100
 $EndPAD
 $PAD
 Sh "8" C 600 600 0 0 2700
 Dr 320 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po 1500 100
 $EndPAD
 $PAD
@@ -10070,7 +9961,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  PIN_ARRAY_12x1
 $MODULE my_inductance
-Po 54300 69350 0 15 4E2DA5BE 50ABD68B ~~
+Po 42126 69213 0 15 4E2DA5BE 50ABD68B ~~
 Li my_inductance
 Sc 50ABD68B
 AR /5096B3D1
@@ -10090,19 +9981,19 @@ $PAD
 Sh "1" C 600 600 0 0 0
 Dr 320 0 0
 At STD N 00E0FFFF
-Ne 112 "N-000095"
+Ne 111 "N-000098"
 Po 0 -984
 $EndPAD
 $PAD
 Sh "2" C 600 600 0 0 0
 Dr 320 0 0
 At STD N 00E0FFFF
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po 0 984
 $EndPAD
 $EndMODULE  my_inductance
 $MODULE my_inductance
-Po 58300 73450 0 15 4E2DA5BE 50ABD68D ~~
+Po 47559 69213 0 15 4E2DA5BE 50ABD68D ~~
 Li my_inductance
 Sc 50ABD68D
 AR /509DDBA2/509E37AA
@@ -10122,7 +10013,7 @@ $PAD
 Sh "1" C 600 600 0 0 0
 Dr 320 0 0
 At STD N 00E0FFFF
-Ne 156 "N-000206"
+Ne 156 "N-000204"
 Po 0 -984
 $EndPAD
 $PAD
@@ -10165,7 +10056,7 @@ $PAD
 Sh "3" R 984 196 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 98 "N-000055"
+Ne 110 "N-000097"
 Po 1082 0
 $EndPAD
 $PAD
@@ -10179,54 +10070,54 @@ $PAD
 Sh "5" R 984 196 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 1082 629
 $EndPAD
 $PAD
 Sh "0" R 984 787 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -1082 1771
 $EndPAD
 $PAD
 Sh "0" R 984 787 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -1082 -1771
 $EndPAD
 $PAD
 Sh "0" R 984 787 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 1082 1732
 $EndPAD
 $PAD
 Sh "0" R 984 787 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 1082 -1771
 $EndPAD
 $PAD
 Sh "4" R 984 196 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 100 "N-000059"
+Ne 98 "N-000056"
 Po 1082 314
 $EndPAD
 $PAD
 Sh "1" R 984 196 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 4 "/VBus"
+Ne 3 "/VBus"
 Po 1082 -629
 $EndPAD
 $EndMODULE  my-mini-usb-b
 $MODULE LQFP48
-Po 68800 68600 0 15 4C433D64 50ABD68F ~~
+Po 47480 74882 0 15 4C433D64 50ABD68F ~~
 Li LQFP48
 Sc 50ABD68F
 AR /5096B4D8
@@ -10243,14 +10134,14 @@ $PAD
 Sh "12" R 315 98 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 66 "/i-1-2"
+Ne 67 "/i-1-2"
 Po -1613 1082
 $EndPAD
 $PAD
 Sh "11" R 315 99 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 65 "/i-1-1"
+Ne 66 "/i-1-1"
 Po -1613 885
 $EndPAD
 $PAD
@@ -10264,49 +10155,49 @@ $PAD
 Sh "9" R 315 99 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -1613 491
 $EndPAD
 $PAD
 Sh "8" R 315 98 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -1613 295
 $EndPAD
 $PAD
 Sh "7" R 315 98 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 106 "N-000075"
+Ne 108 "N-000094"
 Po -1613 98
 $EndPAD
 $PAD
 Sh "6" R 315 98 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 110 "N-000092"
+Ne 106 "N-000089"
 Po -1613 -98
 $EndPAD
 $PAD
 Sh "5" R 315 98 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 108 "N-000090"
+Ne 109 "N-000095"
 Po -1613 -295
 $EndPAD
 $PAD
 Sh "4" R 315 99 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 81 "/sensor-2"
+Ne 82 "/sensor-2"
 Po -1613 -491
 $EndPAD
 $PAD
 Sh "3" R 315 99 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 80 "/sensor-1"
+Ne 81 "/sensor-1"
 Po -1613 -688
 $EndPAD
 $PAD
@@ -10320,21 +10211,21 @@ $PAD
 Sh "1" R 315 98 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -1613 -1082
 $EndPAD
 $PAD
 Sh "48" R 98 315 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -1082 -1613
 $EndPAD
 $PAD
 Sh "47" R 99 315 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -885 -1613
 $EndPAD
 $PAD
@@ -10355,28 +10246,28 @@ $PAD
 Sh "44" R 98 315 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 64 "/fw-upgrade"
+Ne 65 "/fw-upgrade"
 Po -295 -1613
 $EndPAD
 $PAD
 Sh "43" R 98 315 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 77 "/sda"
+Ne 78 "/sda"
 Po -98 -1613
 $EndPAD
 $PAD
 Sh "42" R 98 315 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 76 "/scl"
+Ne 77 "/scl"
 Po 98 -1613
 $EndPAD
 $PAD
 Sh "41" R 98 315 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 84 "/synch"
+Ne 85 "/synch"
 Po 295 -1613
 $EndPAD
 $PAD
@@ -10404,28 +10295,28 @@ $PAD
 Sh "37" R 98 315 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 82 "/swd-clk"
+Ne 83 "/swd-clk"
 Po 1082 -1613
 $EndPAD
 $PAD
 Sh "25" R 315 98 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 25 "/ev_moto/addr1"
+Ne 24 "/ev_moto/addr1"
 Po 1613 1082
 $EndPAD
 $PAD
 Sh "26" R 315 99 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 26 "/ev_moto/addr2"
+Ne 25 "/ev_moto/addr2"
 Po 1613 885
 $EndPAD
 $PAD
 Sh "27" R 315 99 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 27 "/ev_moto/addr3"
+Ne 26 "/ev_moto/addr3"
 Po 1613 688
 $EndPAD
 $PAD
@@ -10439,91 +10330,91 @@ $PAD
 Sh "29" R 315 98 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 72 "/io-2-2"
+Ne 73 "/io-2-2"
 Po 1613 295
 $EndPAD
 $PAD
 Sh "30" R 315 98 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 85 "/tx"
+Ne 86 "/tx"
 Po 1613 98
 $EndPAD
 $PAD
 Sh "31" R 315 98 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 75 "/rx"
+Ne 76 "/rx"
 Po 1613 -98
 $EndPAD
 $PAD
 Sh "32" R 315 98 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 87 "/usb-d-"
+Ne 0 ""
 Po 1613 -295
 $EndPAD
 $PAD
 Sh "33" R 315 99 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 86 "/usb-d+"
+Ne 0 ""
 Po 1613 -491
 $EndPAD
 $PAD
 Sh "34" R 315 99 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 83 "/swd-io"
+Ne 84 "/swd-io"
 Po 1613 -688
 $EndPAD
 $PAD
 Sh "35" R 315 99 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 1613 -885
 $EndPAD
 $PAD
 Sh "36" R 315 98 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po 1613 -1082
 $EndPAD
 $PAD
 Sh "13" R 98 315 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 69 "/io-1-1"
+Ne 70 "/io-1-1"
 Po -1082 1613
 $EndPAD
 $PAD
 Sh "14" R 99 315 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 70 "/io-1-2"
+Ne 71 "/io-1-2"
 Po -885 1613
 $EndPAD
 $PAD
 Sh "15" R 99 315 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 71 "/io-2-1"
+Ne 72 "/io-2-1"
 Po -688 1613
 $EndPAD
 $PAD
 Sh "16" R 99 315 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 67 "/i-2-1"
+Ne 68 "/i-2-1"
 Po -491 1613
 $EndPAD
 $PAD
 Sh "17" R 98 315 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 68 "/i-2-2"
+Ne 69 "/i-2-2"
 Po -295 1613
 $EndPAD
 $PAD
@@ -10544,391 +10435,391 @@ $PAD
 Sh "20" R 98 315 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 109 "N-000091"
+Ne 105 "N-000088"
 Po 295 1613
 $EndPAD
 $PAD
 Sh "21" R 99 315 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 74 "/led2"
+Ne 75 "/led2"
 Po 491 1613
 $EndPAD
 $PAD
 Sh "22" R 99 315 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 73 "/led1"
+Ne 74 "/led1"
 Po 688 1613
 $EndPAD
 $PAD
 Sh "23" R 99 315 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 885 1613
 $EndPAD
 $PAD
 Sh "24" R 98 315 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po 1082 1613
 $EndPAD
 $EndMODULE  LQFP48
 $MODULE LQFP48
-Po 61450 68650 0 15 4C433D64 50ABD691 ~~
+Po 42520 30315 1800 15 4C433D64 50ABD691 ~~
 Li LQFP48
 Sc 50ABD691
 AR /509DDBA2/509DDC1B
 Op 0 0 0
 At SMD 
-T0 0 -150 200 200 0 40 N V 25 N "stm2"
-T1 0 150 200 200 0 40 N I 25 N "STM32F102C8T6"
+T0 0 -150 200 200 1800 40 N V 25 N "stm2"
+T1 0 150 200 200 1800 40 N I 25 N "STM32F102C8T6"
 DC -1574 -1574 -1574 -1653 39 21
 DS -1377 -1377 -1377 1377 39 21
 DS -1377 1377 1377 1377 39 21
 DS 1377 1377 1377 -1377 39 21
 DS 1377 -1377 -1377 -1377 39 21
 $PAD
-Sh "12" R 315 98 0 0 0
+Sh "12" R 315 98 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 32 "/ev_moto/bmsd-tx"
+Ne 31 "/ev_moto/bmsd-tx"
 Po -1613 1082
 $EndPAD
 $PAD
-Sh "11" R 315 99 0 0 0
+Sh "11" R 315 99 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 35 "/ev_moto/dac-din"
+Ne 34 "/ev_moto/dac-din"
 Po -1613 885
 $EndPAD
 $PAD
-Sh "10" R 315 99 0 0 0
+Sh "10" R 315 99 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 37 "/ev_moto/dac-sclk"
+Ne 36 "/ev_moto/dac-sclk"
 Po -1613 688
 $EndPAD
 $PAD
-Sh "9" R 315 99 0 0 0
+Sh "9" R 315 99 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -1613 491
 $EndPAD
 $PAD
-Sh "8" R 315 98 0 0 0
+Sh "8" R 315 98 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -1613 295
 $EndPAD
 $PAD
-Sh "7" R 315 98 0 0 0
+Sh "7" R 315 98 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 157 "N-000207"
+Ne 157 "N-000205"
 Po -1613 98
 $EndPAD
 $PAD
-Sh "6" R 315 98 0 0 0
+Sh "6" R 315 98 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 143 "N-000186"
+Ne 143 "N-000184"
 Po -1613 -98
 $EndPAD
 $PAD
-Sh "5" R 315 98 0 0 0
+Sh "5" R 315 98 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 158 "N-000208"
+Ne 158 "N-000206"
 Po -1613 -295
 $EndPAD
 $PAD
-Sh "4" R 315 99 0 0 0
+Sh "4" R 315 99 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 62 "/ev_moto/~analog2-cs~"
+Ne 63 "/ev_moto/~analog2-cs~"
 Po -1613 -491
 $EndPAD
 $PAD
-Sh "3" R 315 99 0 0 0
+Sh "3" R 315 99 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 61 "/ev_moto/~analog1-cs~"
+Ne 62 "/ev_moto/~analog1-cs~"
 Po -1613 -688
 $EndPAD
 $PAD
-Sh "2" R 315 99 0 0 0
+Sh "2" R 315 99 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 63 "/ev_moto/~dac-synch~"
+Ne 64 "/ev_moto/~dac-synch~"
 Po -1613 -885
 $EndPAD
 $PAD
-Sh "1" R 315 98 0 0 0
+Sh "1" R 315 98 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -1613 -1082
 $EndPAD
 $PAD
-Sh "48" R 98 315 0 0 0
+Sh "48" R 98 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -1082 -1613
 $EndPAD
 $PAD
-Sh "47" R 99 315 0 0 0
+Sh "47" R 99 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -885 -1613
 $EndPAD
 $PAD
-Sh "46" R 99 315 0 0 0
+Sh "46" R 99 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 140 "N-000183"
+Ne 140 "N-000181"
 Po -688 -1613
 $EndPAD
 $PAD
-Sh "45" R 99 315 0 0 0
+Sh "45" R 99 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 134 "N-000171"
+Ne 134 "N-000172"
 Po -491 -1613
 $EndPAD
 $PAD
-Sh "44" R 98 315 0 0 0
+Sh "44" R 98 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 48 "/ev_moto/fw-upgrade"
+Ne 47 "/ev_moto/fw-upgrade"
 Po -295 -1613
 $EndPAD
 $PAD
-Sh "43" R 98 315 0 0 0
+Sh "43" R 98 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 135 "N-000172"
+Ne 135 "N-000173"
 Po -98 -1613
 $EndPAD
 $PAD
-Sh "42" R 98 315 0 0 0
+Sh "42" R 98 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
 Ne 136 "N-000175"
 Po 98 -1613
 $EndPAD
 $PAD
-Sh "41" R 98 315 0 0 0
+Sh "41" R 98 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 137 "N-000178"
+Ne 137 "N-000177"
 Po 295 -1613
 $EndPAD
 $PAD
-Sh "40" R 99 315 0 0 0
+Sh "40" R 99 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
 Ne 0 ""
 Po 491 -1613
 $EndPAD
 $PAD
-Sh "39" R 99 315 0 0 0
+Sh "39" R 99 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
 Ne 0 ""
 Po 688 -1613
 $EndPAD
 $PAD
-Sh "38" R 99 315 0 0 0
+Sh "38" R 99 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
 Ne 0 ""
 Po 885 -1613
 $EndPAD
 $PAD
-Sh "37" R 98 315 0 0 0
+Sh "37" R 98 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 57 "/ev_moto/swd-clk"
+Ne 56 "/ev_moto/swd-clk"
 Po 1082 -1613
 $EndPAD
 $PAD
-Sh "25" R 315 98 0 0 0
+Sh "25" R 315 98 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 25 "/ev_moto/addr1"
+Ne 24 "/ev_moto/addr1"
 Po 1613 1082
 $EndPAD
 $PAD
-Sh "26" R 315 99 0 0 0
+Sh "26" R 315 99 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 26 "/ev_moto/addr2"
+Ne 25 "/ev_moto/addr2"
 Po 1613 885
 $EndPAD
 $PAD
-Sh "27" R 315 99 0 0 0
+Sh "27" R 315 99 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 27 "/ev_moto/addr3"
+Ne 26 "/ev_moto/addr3"
 Po 1613 688
 $EndPAD
 $PAD
-Sh "28" R 315 99 0 0 0
+Sh "28" R 315 99 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
 Ne 0 ""
 Po 1613 491
 $EndPAD
 $PAD
-Sh "29" R 315 98 0 0 0
+Sh "29" R 315 98 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 30 "/ev_moto/bmsd-dir"
+Ne 29 "/ev_moto/bmsd-dir"
 Po 1613 295
 $EndPAD
 $PAD
-Sh "30" R 315 98 0 0 0
+Sh "30" R 315 98 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 60 "/ev_moto/tx"
+Ne 59 "/ev_moto/tx"
 Po 1613 98
 $EndPAD
 $PAD
-Sh "31" R 315 98 0 0 0
+Sh "31" R 315 98 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 54 "/ev_moto/rx"
+Ne 53 "/ev_moto/rx"
 Po 1613 -98
 $EndPAD
 $PAD
-Sh "32" R 315 98 0 0 0
+Sh "32" R 315 98 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 0 ""
+Ne 61 "/ev_moto/usb-"
 Po 1613 -295
 $EndPAD
 $PAD
-Sh "33" R 315 99 0 0 0
+Sh "33" R 315 99 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 0 ""
+Ne 60 "/ev_moto/usb+"
 Po 1613 -491
 $EndPAD
 $PAD
-Sh "34" R 315 99 0 0 0
+Sh "34" R 315 99 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 58 "/ev_moto/swd-io"
+Ne 57 "/ev_moto/swd-io"
 Po 1613 -688
 $EndPAD
 $PAD
-Sh "35" R 315 99 0 0 0
+Sh "35" R 315 99 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 1613 -885
 $EndPAD
 $PAD
-Sh "36" R 315 98 0 0 0
+Sh "36" R 315 98 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po 1613 -1082
 $EndPAD
 $PAD
-Sh "13" R 98 315 0 0 0
+Sh "13" R 98 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 31 "/ev_moto/bmsd-rx"
+Ne 30 "/ev_moto/bmsd-rx"
 Po -1082 1613
 $EndPAD
 $PAD
-Sh "14" R 99 315 0 0 0
+Sh "14" R 99 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 42 "/ev_moto/dir-input"
+Ne 41 "/ev_moto/dir-input"
 Po -885 1613
 $EndPAD
 $PAD
-Sh "15" R 99 315 0 0 0
+Sh "15" R 99 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 45 "/ev_moto/en-input"
+Ne 44 "/ev_moto/en-input"
 Po -688 1613
 $EndPAD
 $PAD
-Sh "16" R 99 315 0 0 0
+Sh "16" R 99 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 46 "/ev_moto/enc-clock"
+Ne 45 "/ev_moto/enc-clock"
 Po -491 1613
 $EndPAD
 $PAD
-Sh "17" R 98 315 0 0 0
+Sh "17" R 98 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 47 "/ev_moto/enc-data"
+Ne 46 "/ev_moto/enc-data"
 Po -295 1613
 $EndPAD
 $PAD
-Sh "18" R 98 315 0 0 0
+Sh "18" R 98 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 139 "N-000182"
+Ne 139 "N-000180"
 Po -98 1613
 $EndPAD
 $PAD
-Sh "19" R 98 315 0 0 0
+Sh "19" R 98 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 138 "N-000180"
+Ne 138 "N-000178"
 Po 98 1613
 $EndPAD
 $PAD
-Sh "20" R 98 315 0 0 0
+Sh "20" R 98 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 142 "N-000185"
+Ne 142 "N-000183"
 Po 295 1613
 $EndPAD
 $PAD
-Sh "21" R 99 315 0 0 0
+Sh "21" R 99 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 50 "/ev_moto/led2"
+Ne 49 "/ev_moto/led2"
 Po 491 1613
 $EndPAD
 $PAD
-Sh "22" R 99 315 0 0 0
+Sh "22" R 99 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 49 "/ev_moto/led1"
+Ne 48 "/ev_moto/led1"
 Po 688 1613
 $EndPAD
 $PAD
-Sh "23" R 99 315 0 0 0
+Sh "23" R 99 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 885 1613
 $EndPAD
 $PAD
-Sh "24" R 98 315 0 0 0
+Sh "24" R 98 315 0 0 1800
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po 1082 1613
 $EndPAD
 $EndMODULE  LQFP48
 $MODULE lga14
-Po 78103 64993 0 15 509A2308 50ABD692 ~~
+Po 56929 70157 0 15 509A2308 50ABD692 ~~
 Li lga14
 Sc 50ABD692
 AR /509C081B
@@ -10947,14 +10838,14 @@ $PAD
 Sh "11" R 197 787 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po 157 630
 $EndPAD
 $PAD
 Sh "10" R 197 787 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -157 630
 $EndPAD
 $PAD
@@ -10975,21 +10866,21 @@ $PAD
 Sh "12" R 197 787 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 93 "N-000011"
+Ne 91 "N-000017"
 Po 472 630
 $EndPAD
 $PAD
 Sh "13" R 197 787 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 92 "N-000010"
+Ne 92 "N-000018"
 Po 787 630
 $EndPAD
 $PAD
 Sh "14" R 787 197 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po 1024 0
 $EndPAD
 $PAD
@@ -11003,21 +10894,21 @@ $PAD
 Sh "3" R 197 787 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 90 "N-000008"
+Ne 90 "N-000016"
 Po 157 -630
 $EndPAD
 $PAD
 Sh "2" R 197 787 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 89 "N-000005"
+Ne 89 "N-000013"
 Po 472 -630
 $EndPAD
 $PAD
 Sh "1" R 197 787 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po 787 -630
 $EndPAD
 $PAD
@@ -11031,165 +10922,165 @@ $PAD
 Sh "6" R 197 787 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 91 "N-000009"
+Ne 88 "N-000005"
 Po -787 -630
 $EndPAD
 $PAD
 Sh "7" R 787 197 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 88 "GND"
+Ne 87 "GND"
 Po -1024 0
 $EndPAD
 $EndMODULE  lga14
 $MODULE idc-6x2-2mm
-Po 82500 60800 0 15 50ABD48A 50ABD693 ~~
+Po 59055 53543 1800 0 50ABD48A 50ABD693 ~~
 Li idc-6x2-2mm
 Sc 50ABD693
 AR /509DDBA2/509DDF04
 Op 0 0 0
-T0 0 -1181 206 206 0 52 N V 21 N "P7"
-T1 0 787 206 206 0 52 N V 21 N "CONN_6X2"
-DS -2362 -984 2362 -984 150 21
-DS 2362 -984 2362 591 150 21
-DS 2362 591 -2362 591 150 21
-DS -2362 591 -2362 -984 150 21
+T0 0 1181 206 206 1800 52 M V 20 N "P7"
+T1 0 -787 206 206 1800 52 M V 20 N "CONN_6X2"
+DS -2362 984 2362 984 150 20
+DS 2362 984 2362 -591 150 20
+DS 2362 -591 -2362 -591 150 20
+DS -2362 -591 -2362 984 150 20
 $PAD
-Sh "1" C 600 600 0 0 0
+Sh "1" C 600 600 0 0 1800
 Dr 400 0 0
-At STD N 00E0FFFF
-Ne 39 "/ev_moto/data-"
-Po -1969 -591
+At STD N 00D0FFFF
+Ne 38 "/ev_moto/data-"
+Po -1969 591
 $EndPAD
 $PAD
-Sh "2" C 600 600 0 0 0
+Sh "2" C 600 600 0 0 1800
 Dr 400 0 0
-At STD N 00E0FFFF
+At STD N 00D0FFFF
 Ne 2 "+5V"
-Po -1181 -591
+Po -1181 591
 $EndPAD
 $PAD
-Sh "3" C 600 600 0 0 0
+Sh "3" C 600 600 0 0 1800
 Dr 400 0 0
-At STD N 00E0FFFF
+At STD N 00D0FFFF
 Ne 0 ""
-Po -394 -591
+Po -394 591
 $EndPAD
 $PAD
-Sh "4" C 600 600 0 0 0
+Sh "4" C 600 600 0 0 1800
 Dr 400 0 0
-At STD N 00E0FFFF
-Ne 33 "/ev_moto/clock+"
-Po 394 -591
+At STD N 00D0FFFF
+Ne 32 "/ev_moto/clock+"
+Po 394 591
 $EndPAD
 $PAD
-Sh "5" C 600 600 0 0 0
+Sh "5" C 600 600 0 0 1800
 Dr 400 0 0
-At STD N 00E0FFFF
-Ne 88 "GND"
-Po 1181 -591
+At STD N 00D0FFFF
+Ne 87 "GND"
+Po 1181 591
 $EndPAD
 $PAD
-Sh "6" C 600 600 0 0 0
+Sh "6" C 600 600 0 0 1800
 Dr 400 0 0
-At STD N 00E0FFFF
+At STD N 00D0FFFF
 Ne 0 ""
-Po 1969 -591
+Po 1969 591
 $EndPAD
 $PAD
-Sh "7" C 600 600 0 0 0
+Sh "7" C 600 600 0 0 1800
 Dr 400 0 0
-At STD N 00E0FFFF
+At STD N 00D0FFFF
 Ne 0 ""
-Po -1969 197
+Po -1969 -197
 $EndPAD
 $PAD
-Sh "8" C 600 600 0 0 0
+Sh "8" C 600 600 0 0 1800
 Dr 400 0 0
-At STD N 00E0FFFF
-Ne 88 "GND"
-Po -1181 197
+At STD N 00D0FFFF
+Ne 87 "GND"
+Po -1181 -197
 $EndPAD
 $PAD
-Sh "9" C 600 600 0 0 0
+Sh "9" C 600 600 0 0 1800
 Dr 400 0 0
-At STD N 00E0FFFF
-Ne 34 "/ev_moto/clock-"
-Po -394 197
+At STD N 00D0FFFF
+Ne 33 "/ev_moto/clock-"
+Po -394 -197
 $EndPAD
 $PAD
-Sh "10" C 600 600 0 0 0
+Sh "10" C 600 600 0 0 1800
 Dr 400 0 0
-At STD N 00E0FFFF
+At STD N 00D0FFFF
 Ne 0 ""
-Po 394 197
+Po 394 -197
 $EndPAD
 $PAD
-Sh "11" C 600 600 0 0 0
+Sh "11" C 600 600 0 0 1800
 Dr 400 0 0
-At STD N 00E0FFFF
+At STD N 00D0FFFF
 Ne 2 "+5V"
-Po 1181 197
+Po 1181 -197
 $EndPAD
 $PAD
-Sh "12" C 600 600 0 0 0
+Sh "12" C 600 600 0 0 1800
 Dr 400 0 0
-At STD N 00E0FFFF
-Ne 38 "/ev_moto/data+"
-Po 1969 197
+At STD N 00D0FFFF
+Ne 37 "/ev_moto/data+"
+Po 1969 -197
 $EndPAD
 $EndMODULE  idc-6x2-2mm
 $MODULE clemm-02
-Po 93200 65950 0 15 50ABD1EF 50ABD694 ~~
+Po 35827 41732 900 15 50ABD1EF 50ABD694 ~~
 Li clemm-02
 Sc 50ABD694
 AR /50ABC853
 Op 0 0 0
-T0 0 -1575 206 206 0 52 N V 21 N "P5"
-T1 0 1181 206 206 0 52 N V 21 N "PWR-IN"
+T0 0 -1575 206 206 900 52 N V 21 N "P5"
+T1 0 1181 206 206 900 52 N V 21 N "PWR-IN"
 DS -1969 -1969 1969 -1969 150 21
 DS 1969 -1969 1969 1969 150 21
 DS 1969 1969 -1969 1969 150 21
 DS -1969 1969 -1969 -1969 150 21
 $PAD
-Sh "1" C 906 906 0 0 0
+Sh "1" C 906 906 0 0 900
 Dr 555 0 0
 At STD N 00E0FFFF
 Ne 1 "+24V"
 Po -984 0
 $EndPAD
 $PAD
-Sh "2" C 906 906 0 0 0
+Sh "2" C 906 906 0 0 900
 Dr 555 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po 984 0
 $EndPAD
 $EndMODULE  clemm-02
 $MODULE clemm-02
-Po 90550 50850 0 15 50ABD1EF 50ABD696 ~~
+Po 35827 45669 2700 15 50ABD1EF 50ABD696 ~~
 Li clemm-02
 Sc 50ABD696
 AR /50ABC84B
 Op 0 0 0
-T0 0 -1575 206 206 0 52 N V 21 N "P6"
-T1 0 1181 206 206 0 52 N V 21 N "PWR-OUT"
+T0 0 -1575 206 206 2700 52 N V 21 N "P6"
+T1 0 1181 206 206 2700 52 N V 21 N "PWR-OUT"
 DS -1969 -1969 1969 -1969 150 21
 DS 1969 -1969 1969 1969 150 21
 DS 1969 1969 -1969 1969 150 21
 DS -1969 1969 -1969 -1969 150 21
 $PAD
-Sh "1" C 906 906 0 0 0
+Sh "1" C 906 906 0 0 2700
 Dr 555 0 0
 At STD N 00E0FFFF
 Ne 1 "+24V"
 Po -984 0
 $EndPAD
 $PAD
-Sh "2" C 906 906 0 0 0
+Sh "2" C 906 906 0 0 2700
 Dr 555 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po 984 0
 $EndPAD
 $EndMODULE  clemm-02
@@ -11211,56 +11102,56 @@ $PAD
 Sh "1" R 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -3500 100
 $EndPAD
 $PAD
 Sh "2" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 64 "/fw-upgrade"
+Ne 65 "/fw-upgrade"
 Po -2500 100
 $EndPAD
 $PAD
 Sh "3" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 27 "/ev_moto/addr3"
+Ne 26 "/ev_moto/addr3"
 Po -1500 100
 $EndPAD
 $PAD
 Sh "4" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po -500 100
 $EndPAD
 $PAD
 Sh "5" C 600 600 0 0 0
 Dr 400 0 0
 At STD N 00E0FFFF
-Ne 26 "/ev_moto/addr2"
+Ne 25 "/ev_moto/addr2"
 Po 500 100
 $EndPAD
 $PAD
 Sh "6" C 600 600 0 0 0
 Dr 320 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po 1500 100
 $EndPAD
 $PAD
 Sh "7" C 600 600 0 0 0
 Dr 320 0 0
 At STD N 00E0FFFF
-Ne 25 "/ev_moto/addr1"
+Ne 24 "/ev_moto/addr1"
 Po 2500 100
 $EndPAD
 $PAD
 Sh "8" C 600 600 0 0 0
 Dr 320 0 0
 At STD N 00E0FFFF
-Ne 88 "GND"
+Ne 87 "GND"
 Po 3500 100
 $EndPAD
 $SHAPE3D
@@ -11271,7 +11162,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  PIN_ARRAY_8x1
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD7BD ~~
+Po 98819 70394 0 15 42806E04 50ABD7BD ~~
 Li SM0805
 Sc 50ABD7BD
 AR /50ABD6A6
@@ -11290,14 +11181,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 27 "/ev_moto/addr3"
+Ne 26 "/ev_moto/addr3"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -11308,7 +11199,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD7BF ~~
+Po 99055 69528 0 15 42806E04 50ABD7BF ~~
 Li SM0805
 Sc 50ABD7BF
 AR /50ABD6A4
@@ -11327,14 +11218,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 26 "/ev_moto/addr2"
+Ne 25 "/ev_moto/addr2"
 Po 375 0
 $EndPAD
 $SHAPE3D
@@ -11345,7 +11236,7 @@ Ro 0.000000 0.000000 0.000000
 $EndSHAPE3D
 $EndMODULE  SM0805
 $MODULE SM0805
-Po 78103 64993 0 15 42806E04 50ABD7C1 ~~
+Po 99134 68661 0 15 42806E04 50ABD7C1 ~~
 Li SM0805
 Sc 50ABD7C1
 AR /50ABD6A2
@@ -11364,14 +11255,14 @@ $PAD
 Sh "1" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 170 "VDD"
+Ne 169 "VDD"
 Po -375 0
 $EndPAD
 $PAD
 Sh "2" R 350 550 0 0 0
 Dr 0 0 0
 At SMD N 00888000
-Ne 25 "/ev_moto/addr1"
+Ne 24 "/ev_moto/addr1"
 Po 375 0
 $EndPAD
 $SHAPE3D
