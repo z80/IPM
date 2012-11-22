@@ -235,6 +235,8 @@
       (place R7 5210 -3480 front 270 (PN 10k))
       (place R8 5210 -3680 front 270 (PN 10k))
       (place R12 5210 -3880 front 270 (PN 10k))
+      (place R13 3858.3 -3189 back 90 (PN 1k5))
+      (place R16 3779.5 -3189 back 90 (PN 15k))
     )
     (component PIN_ARRAY_5x1
       (place P9 3680 -3890 front 0 (PN "SWD-IAP"))
@@ -262,7 +264,7 @@
       (place D1 7066.9 -3543.3 front 0 (PN 1N5819))
     )
     (component C2V10
-      (place C11 4020 -5060 front 90 (PN 54u))
+      (place C11 7555.1 -4734.3 front 180 (PN 54u))
       (place C8 7116.1 -2834.6 front 180 (PN 1m))
       (place C45 6960 -2300 front 0 (PN 1m))
     )
@@ -293,7 +295,7 @@
     )
     (component "clemm-02"
       (place P5 3582.7 -4173.2 front 90 (PN "PWR-IN"))
-      (place P6 3582.7 -4566.9 front 270 (PN "PWR-OUT"))
+      (place P6 3584.6 -4566.9 front 90 (PN "PWR-OUT"))
     )
     (component PIN_ARRAY_8x1
       (place P1 5340 -3680 front 270 (PN SETUP))
@@ -860,7 +862,7 @@
       (pins D8-7 R145-1 R147-1 C70-1 J1-28)
     )
     (net "/ev_moto/bmsd-dir"
-      (pins rs3-2 rs3-3 R73-2 stm2-29)
+      (pins rs3-2 rs3-3 R73-2 stm2-28)
     )
     (net "/ev_moto/bmsd-rx"
       (pins rs3-1 stm2-13)
@@ -958,6 +960,9 @@
     (net "/ev_moto/usb-"
       (pins R61-1 stm2-32)
     )
+    (net "/ev_moto/usb-en"
+      (pins stm2-29 R13-2 R16-2)
+    )
     (net "/ev_moto/~analog1-cs~"
       (pins adc2-5 R129-2 stm2-3)
     )
@@ -1044,250 +1049,250 @@
         D6-2 J1-2 J1-9 J1-23 J1-25 J4-4 J4-8 J4-19 J4-20 J4-24 J4-33 D7-1 D1-1 C11-2
         P2-3 P2-6 P2-7 P2-8 P3-3 P3-6 P3-7 P3-8 U2-5 U2-0 U2-0@1 U2-0@2 U2-0@3 stm1-8
         stm1-47 stm1-35 stm1-23 stm2-8 stm2-47 stm2-35 stm2-23 lsm1-11 lsm1-10 lsm1-7
-        P7-5 P7-8 P5-2 P6-2 P1-4 P1-6 P1-8 C8-2 C45-2)
+        P7-5 P7-8 P5-2 P6-2 P1-4 P1-6 P1-8 C8-2 C45-2 R16-1)
     )
-    (net "N-000004"
-      (pins C21-1 lsm1-6)
-    )
-    (net "N-000006"
+    (net "N-000005"
       (pins C24-2 lsm1-13)
     )
-    (net "N-000013"
-      (pins R59-2 lsm1-2)
-    )
-    (net "N-000016"
-      (pins R58-2 lsm1-3)
-    )
-    (net "N-000017"
+    (net "N-000006"
       (pins C24-1 lsm1-12)
     )
-    (net "N-000045"
+    (net "N-000007"
+      (pins C21-1 lsm1-6)
+    )
+    (net "N-000020"
+      (pins R59-2 lsm1-2)
+    )
+    (net "N-000023"
+      (pins R58-2 lsm1-3)
+    )
+    (net "N-000043"
       (pins R55-1 P4-2)
+    )
+    (net "N-000046"
+      (pins R57-1 P4-5)
+    )
+    (net "N-000047"
+      (pins R56-1 P4-4)
     )
     (net "N-000048"
       (pins R54-1 P4-1)
     )
-    (net "N-000051"
+    (net "N-000050"
       (pins R39-2 D2-1)
     )
     (net "N-000053"
       (pins R63-1 U2-4)
     )
     (net "N-000054"
-      (pins R57-1 P4-5)
-    )
-    (net "N-000055"
-      (pins R56-1 P4-4)
-    )
-    (net "N-000056"
-      (pins R62-2 R60-1 U2-3)
-    )
-    (net "N-000058"
       (pins R61-2 U2-2)
     )
-    (net "N-000060"
+    (net "N-000057"
       (pins U1-2 D1-2 L1-1)
+    )
+    (net "N-000059"
+      (pins C13-2 C14-1)
     )
     (net "N-000061"
       (pins U1-5 R4-1 R9-1)
     )
-    (net "N-000063"
-      (pins C13-2 C14-1)
-    )
-    (net "N-000068"
-      (pins U1-3 C6-1)
-    )
-    (net "N-000069"
-      (pins U1-1 U1-7 R1-1 R2-1 R3-1)
-    )
-    (net "N-000070"
+    (net "N-000065"
       (pins C5-2 C13-1)
     )
-    (net "N-000087"
-      (pins R45-2 stm1-6)
+    (net "N-000066"
+      (pins U1-1 U1-7 R1-1 R2-1 R3-1)
     )
-    (net "N-000088"
+    (net "N-000067"
+      (pins U1-3 C6-1)
+    )
+    (net "N-000080"
       (pins R47-1 stm1-20)
     )
-    (net "N-000090"
+    (net "N-000081"
+      (pins R45-2 stm1-6)
+    )
+    (net "N-000085"
       (pins R40-2 D3-1)
     )
-    (net "N-000094"
-      (pins R45-1 C17-2 X1-1)
-    )
-    (net "N-000102"
+    (net "N-000087"
       (pins C15-2 R18-2 stm1-7)
     )
-    (net "N-000105"
+    (net "N-000095"
+      (pins R62-2 R60-1 U2-3 R13-1)
+    )
+    (net "N-000103"
       (pins C16-2 X1-2 stm1-5)
     )
-    (net "N-000106"
-      (pins Q4-D R105-1)
+    (net "N-000104"
+      (pins R45-1 C17-2 X1-1)
     )
     (net "N-000107"
-      (pins Q5-3 R101-1)
-    )
-    (net "N-000108"
-      (pins Q1-S R82-2 R83-1)
+      (pins Q4-D R105-1)
     )
     (net "N-000109"
-      (pins Q4-S R96-2 R97-1)
-    )
-    (net "N-000110"
-      (pins Q2-S R92-1 R95-2)
-    )
-    (net "N-000112"
-      (pins Q6-S R109-1 R112-2)
+      (pins Q5-3 R101-1)
     )
     (net "N-000113"
-      (pins Q5-2 R110-2 R104-2)
-    )
-    (net "N-000117"
       (pins Q4-G R96-1 R101-2)
     )
     (net "N-000118"
-      (pins D4-5 R65-2 C33-1)
-    )
-    (net "N-000123"
       (pins R80-2 D5-1)
     )
-    (net "N-000128"
+    (net "N-000121"
       (pins R81-2 D6-1)
     )
-    (net "N-000130"
+    (net "N-000123"
       (pins Q1-D R91-1)
     )
-    (net "N-000131"
+    (net "N-000124"
       (pins Q3-3 R85-1)
     )
-    (net "N-000133"
-      (pins Q2-D R84-1)
-    )
-    (net "N-000134"
-      (pins Q6-D R103-1)
-    )
-    (net "N-000143"
-      (pins adc2-4 R133-1)
-    )
-    (net "N-000144"
-      (pins D8-3 R133-2 C64-1)
-    )
-    (net "N-000146"
-      (pins adc3-4 R134-1)
-    )
-    (net "N-000152"
-      (pins rs5-2 rs5-3 R113-1)
-    )
-    (net "N-000164"
-      (pins rs1-2 rs1-3 R64-2)
-    )
-    (net "N-000167"
-      (pins rs2-2 rs2-3 R71-1)
-    )
-    (net "N-000173"
-      (pins R118-1 stm2-45)
-    )
-    (net "N-000174"
-      (pins R77-1 stm2-43)
-    )
-    (net "N-000176"
-      (pins R76-1 stm2-42)
-    )
-    (net "N-000178"
-      (pins R74-1 stm2-41)
-    )
-    (net "N-000180"
-      (pins R117-1 stm2-19)
-    )
-    (net "N-000182"
-      (pins R116-1 stm2-18)
-    )
-    (net "N-000183"
-      (pins R119-1 stm2-46)
-    )
-    (net "N-000184"
-      (pins R72-1 C38-2 X2-1)
-    )
-    (net "N-000185"
-      (pins R78-1 stm2-20)
-    )
-    (net "N-000186"
-      (pins R72-2 stm2-6)
-    )
-    (net "N-000189"
-      (pins D4-3 adc1-4)
-    )
-    (net "N-000193"
-      (pins R108-1 P9-5)
-    )
-    (net "N-000194"
-      (pins R107-1 P9-4)
-    )
-    (net "N-000195"
-      (pins R102-1 P9-2)
-    )
-    (net "N-000196"
-      (pins R99-1 P9-1)
-    )
-    (net "N-000197"
-      (pins Q2-G R89-2 R93-2)
-    )
-    (net "N-000198"
-      (pins C46-2 C47-1)
-    )
-    (net "N-000200"
-      (pins U3-5 R98-1 R100-1)
-    )
-    (net "N-000202"
-      (pins C42-2 C46-1)
-    )
-    (net "N-000203"
-      (pins U3-1 U3-7 R86-1 R87-1 R88-1)
-    )
-    (net "N-000204"
-      (pins U3-3 C43-1)
-    )
-    (net "N-000205"
-      (pins U3-2 D7-2 L2-1)
-    )
-    (net "N-000206"
-      (pins R66-2 C34-2 stm2-7)
-    )
-    (net "N-000207"
-      (pins C37-2 X2-2 stm2-5)
-    )
-    (net "N-000209"
-      (pins Q6-G R106-2 R111-2)
-    )
-    (net "N-000210"
-      (pins D4-1 D4-2 R65-1)
-    )
-    (net "N-000214"
-      (pins D8-2 R137-2 R138-1 R141-2 C68-2)
-    )
-    (net "N-000215"
-      (pins D8-5 R134-2 C65-1)
-    )
-    (net "N-000216"
-      (pins D8-6 R143-1 R145-2 R147-2 C70-2)
-    )
-    (net "N-000217"
-      (pins Q3-2 R90-2 R94-2)
-    )
-    (net "N-000218"
+    (net "N-000125"
       (pins Q1-G R82-1 R85-2)
     )
-    (net "N-000219"
-      (pins rs6-2 rs6-3 R114-1)
+    (net "N-000127"
+      (pins Q2-D R84-1)
     )
-    (net "N-000220"
-      (pins rs7-2 rs7-3 R115-1)
+    (net "N-000128"
+      (pins Q6-D R103-1)
     )
-    (net "N-000221"
+    (net "N-000136"
+      (pins adc2-4 R133-1)
+    )
+    (net "N-000138"
+      (pins adc3-4 R134-1)
+    )
+    (net "N-000142"
       (pins rs4-2 rs4-3 R79-1)
     )
-    (net "N-000222"
+    (net "N-000146"
+      (pins rs7-2 rs7-3 R115-1)
+    )
+    (net "N-000149"
+      (pins rs6-2 rs6-3 R114-1)
+    )
+    (net "N-000160"
+      (pins rs2-2 rs2-3 R71-1)
+    )
+    (net "N-000167"
+      (pins R77-1 stm2-43)
+    )
+    (net "N-000168"
+      (pins R118-1 stm2-45)
+    )
+    (net "N-000169"
+      (pins R76-1 stm2-42)
+    )
+    (net "N-000171"
+      (pins R74-1 stm2-41)
+    )
+    (net "N-000173"
+      (pins R117-1 stm2-19)
+    )
+    (net "N-000174"
+      (pins R116-1 stm2-18)
+    )
+    (net "N-000175"
+      (pins R119-1 stm2-46)
+    )
+    (net "N-000176"
+      (pins R72-1 C38-2 X2-1)
+    )
+    (net "N-000177"
+      (pins R78-1 stm2-20)
+    )
+    (net "N-000178"
+      (pins R72-2 stm2-6)
+    )
+    (net "N-000182"
+      (pins D4-3 adc1-4)
+    )
+    (net "N-000183"
+      (pins D4-1 D4-2 R65-1)
+    )
+    (net "N-000186"
+      (pins R107-1 P9-4)
+    )
+    (net "N-000187"
+      (pins R108-1 P9-5)
+    )
+    (net "N-000189"
+      (pins R102-1 P9-2)
+    )
+    (net "N-000190"
+      (pins Q6-G R106-2 R111-2)
+    )
+    (net "N-000191"
+      (pins C46-2 C47-1)
+    )
+    (net "N-000193"
+      (pins U3-1 U3-7 R86-1 R87-1 R88-1)
+    )
+    (net "N-000194"
+      (pins U3-5 R98-1 R100-1)
+    )
+    (net "N-000195"
+      (pins U3-3 C43-1)
+    )
+    (net "N-000197"
+      (pins C42-2 C46-1)
+    )
+    (net "N-000198"
+      (pins U3-2 D7-2 L2-1)
+    )
+    (net "N-000199"
+      (pins R99-1 P9-1)
+    )
+    (net "N-000200"
+      (pins rs1-2 rs1-3 R64-2)
+    )
+    (net "N-000201"
+      (pins Q5-2 R110-2 R104-2)
+    )
+    (net "N-000202"
+      (pins Q3-2 R90-2 R94-2)
+    )
+    (net "N-000203"
+      (pins R66-2 C34-2 stm2-7)
+    )
+    (net "N-000204"
+      (pins C37-2 X2-2 stm2-5)
+    )
+    (net "N-000205"
+      (pins D8-5 R134-2 C65-1)
+    )
+    (net "N-000206"
+      (pins D8-3 R133-2 C64-1)
+    )
+    (net "N-000207"
+      (pins D8-6 R143-1 R145-2 R147-2 C70-2)
+    )
+    (net "N-000208"
+      (pins D4-5 R65-2 C33-1)
+    )
+    (net "N-000209"
       (pins D4-6 R68-2 R69-2 R70-1 C36-2)
+    )
+    (net "N-000210"
+      (pins rs5-2 rs5-3 R113-1)
+    )
+    (net "N-000216"
+      (pins D8-2 R137-2 R138-1 R141-2 C68-2)
+    )
+    (net "N-000217"
+      (pins Q4-S R96-2 R97-1)
+    )
+    (net "N-000218"
+      (pins Q1-S R82-2 R83-1)
+    )
+    (net "N-000219"
+      (pins Q6-S R109-1 R112-2)
+    )
+    (net "N-000222"
+      (pins Q2-G R89-2 R93-2)
+    )
+    (net "N-000223"
+      (pins Q2-S R92-1 R95-2)
     )
     (net VDD
       (pins rs1-8 rs2-8 rs3-8 rs4-8 rs5-8 rs6-8 rs7-8 adc3-1 adc2-1 adc1-1 R64-1 R66-1
@@ -1297,28 +1302,30 @@
         P8-1 P2-1 P2-2 P3-1 P3-2 L1-2 stm1-9 stm1-1 stm1-48 stm1-36 stm1-24 stm2-9
         stm2-1 stm2-48 stm2-36 stm2-24 lsm1-14 lsm1-1 P1-1 R7-1 R8-1 R12-1 C8-1)
     )
-    (class kicad_default "" +5V /VBus /ev_moto/A1 /ev_moto/A2 /ev_moto/B1
-      /ev_moto/B2 /ev_moto/addr1 /ev_moto/addr2 /ev_moto/addr3 "/ev_moto/bmsd-dir"
-      "/ev_moto/bmsd-rx" "/ev_moto/bmsd-tx" "/ev_moto/dac-din" "/ev_moto/dac-out"
-      "/ev_moto/dac-sclk" "/ev_moto/dir-input" "/ev_moto/en-input" "/ev_moto/enc-clock"
-      "/ev_moto/enc-data" "/ev_moto/fw-upgrade" /ev_moto/led1 /ev_moto/led2
-      "/ev_moto/out-gain" "/ev_moto/rs-a" "/ev_moto/rs-b" /ev_moto/rx "/ev_moto/scl-ext"
-      "/ev_moto/sda-ext" "/ev_moto/swd-clk" "/ev_moto/swd-io" "/ev_moto/synch-ext"
-      /ev_moto/tx /ev_moto/usb+ "/ev_moto/usb-" "/ev_moto/~analog1-cs~" "/ev_moto/~analog2-cs~"
-      "/ev_moto/~dac-synch~" "/fw-upgrade" /led1 /led2 /rx /scl /sda "/sen-1"
-      "/sen-2" "/sensor-1" "/sensor-2" "/swd-clk" "/swd-io" /synch /tx GND
-      "N-000004" "N-000006" "N-000013" "N-000016" "N-000017" "N-000045" "N-000048"
-      "N-000051" "N-000053" "N-000054" "N-000055" "N-000056" "N-000058" "N-000060"
-      "N-000061" "N-000063" "N-000068" "N-000069" "N-000070" "N-000087" "N-000088"
-      "N-000090" "N-000094" "N-000102" "N-000105" "N-000106" "N-000107" "N-000108"
-      "N-000109" "N-000110" "N-000112" "N-000113" "N-000117" "N-000118" "N-000123"
-      "N-000128" "N-000130" "N-000131" "N-000133" "N-000134" "N-000143" "N-000144"
-      "N-000146" "N-000152" "N-000164" "N-000167" "N-000173" "N-000174" "N-000176"
-      "N-000178" "N-000180" "N-000182" "N-000183" "N-000184" "N-000185" "N-000186"
-      "N-000189" "N-000193" "N-000194" "N-000195" "N-000196" "N-000197" "N-000198"
-      "N-000200" "N-000202" "N-000203" "N-000204" "N-000205" "N-000206" "N-000207"
-      "N-000209" "N-000210" "N-000214" "N-000215" "N-000216" "N-000217" "N-000218"
-      "N-000219" "N-000220" "N-000221" "N-000222" VDD
+    (class kicad_default "" /ev_moto/A1 /ev_moto/A2 /ev_moto/B1 /ev_moto/B2
+      /ev_moto/addr1 /ev_moto/addr2 /ev_moto/addr3 "/ev_moto/bmsd-dir" "/ev_moto/bmsd-rx"
+      "/ev_moto/bmsd-tx" "/ev_moto/dac-din" "/ev_moto/dac-out" "/ev_moto/dac-sclk"
+      "/ev_moto/dir-input" "/ev_moto/en-input" "/ev_moto/enc-clock" "/ev_moto/enc-data"
+      "/ev_moto/fw-upgrade" /ev_moto/led1 /ev_moto/led2 "/ev_moto/out-gain"
+      "/ev_moto/rs-a" "/ev_moto/rs-b" /ev_moto/rx "/ev_moto/scl-ext" "/ev_moto/sda-ext"
+      "/ev_moto/swd-clk" "/ev_moto/swd-io" "/ev_moto/synch-ext" /ev_moto/tx
+      /ev_moto/usb+ "/ev_moto/usb-" "/ev_moto/usb-en" "/ev_moto/~analog1-cs~"
+      "/ev_moto/~analog2-cs~" "/ev_moto/~dac-synch~" "/fw-upgrade" "/i-1-1"
+      "/i-1-2" "/i-2-1" "/i-2-2" "/io-1-1" "/io-1-2" "/io-2-1" "/io-2-2" /led1
+      /led2 /rx /scl /sda "/sen-1" "/sen-2" "/sensor-1" "/sensor-2" "/swd-clk"
+      "/swd-io" /synch /tx GND "N-000005" "N-000006" "N-000007" "N-000020"
+      "N-000023" "N-000043" "N-000046" "N-000047" "N-000048" "N-000050" "N-000053"
+      "N-000054" "N-000057" "N-000059" "N-000061" "N-000065" "N-000066" "N-000067"
+      "N-000080" "N-000081" "N-000085" "N-000087" "N-000095" "N-000103" "N-000104"
+      "N-000107" "N-000109" "N-000113" "N-000118" "N-000121" "N-000123" "N-000124"
+      "N-000125" "N-000127" "N-000128" "N-000136" "N-000138" "N-000142" "N-000146"
+      "N-000149" "N-000160" "N-000167" "N-000168" "N-000169" "N-000171" "N-000173"
+      "N-000174" "N-000175" "N-000176" "N-000177" "N-000178" "N-000182" "N-000183"
+      "N-000186" "N-000187" "N-000189" "N-000190" "N-000191" "N-000193" "N-000194"
+      "N-000195" "N-000197" "N-000198" "N-000199" "N-000200" "N-000201" "N-000202"
+      "N-000203" "N-000204" "N-000205" "N-000206" "N-000207" "N-000208" "N-000209"
+      "N-000210" "N-000216" "N-000217" "N-000218" "N-000219" "N-000222" "N-000223"
+      VDD
       (circuit
         (use_via Via[0-1]_35:25_mil)
       )
@@ -1332,8 +1339,7 @@
       "/ev_moto/A2-" /ev_moto/B1+ "/ev_moto/B1-" /ev_moto/B2+ "/ev_moto/B2-"
       "/ev_moto/analog-out1" "/ev_moto/analog-out2" /ev_moto/clock+ "/ev_moto/clock-"
       /ev_moto/data+ "/ev_moto/data-" /ev_moto/dir+ "/ev_moto/dir-" /ev_moto/en+
-      "/ev_moto/en-" "/i-1-1" "/i-1-2" "/i-2-1" "/i-2-2" "/io-1-1" "/io-1-2"
-      "/io-2-1" "/io-2-2"
+      "/ev_moto/en-"
       (circuit
         (use_via Via[0-1]_35:25_mil)
       )
@@ -1342,7 +1348,7 @@
         (clearance 9.5)
       )
     )
-    (class power +24V
+    (class power +24V +5V /VBus
       (circuit
         (use_via Via[0-1]_35:25_mil)
       )
@@ -1353,69 +1359,152 @@
     )
   )
   (wiring
-    (wire (path Back 118.1  3870 -4750  3870 -5070)(net +24V)(type protect))
-    (wire (path Back 118.1  7310 -5080  7310 -4780)(net +24V)(type protect))
-    (wire (path Back 118.1  7150 -5240  7310 -5080)(net +24V)(type protect))
-    (wire (path Back 118.1  6850 -5890  7150 -5590)(net +24V)(type protect))
-    (wire (path Back 118.1  4330 -5890  6850 -5890)(net +24V)(type protect))
-    (wire (path Back 118.1  4020 -5580  4330 -5890)(net +24V)(type protect))
-    (wire (path Back 118.1  3582.7 -4468.5  3588.5 -4468.5)(net +24V)(type protect))
-    (wire (path Back 118.1  3960 -5160  4020 -5160)(net +24V)(type protect))
-    (wire (path Back 118.1  3870 -5070  3960 -5160)(net +24V)(type protect))
-    (wire (path Back 118.1  7150 -5590  7150 -5240)(net +24V)(type protect))
-    (wire (path Back 118.1  3588.5 -4468.5  3870 -4750)(net +24V)(type protect))
-    (wire (path Back 118.1  3582.7 -4271.6  3582.7 -4468.5)(net +24V)(type protect))
-    (wire (path Back 118.1  7600 -4230  7730 -4230)(net +24V)(type protect))
-    (wire (path Back 118.1  7600 -4330  7730 -4330)(net +24V)(type protect))
-    (wire (path Back 118.1  7310 -4780  7420 -4670)(net +24V)(type protect))
-    (wire (path Back 118.1  7600 -4130  7730 -4130)(net +24V)(type protect))
-    (wire (path Back 118.1  7600 -4030  7730 -4030)(net +24V)(type protect))
-    (wire (path Back 118.1  7600 -4130  7600 -4030)(net +24V)(type protect))
-    (wire (path Back 118.1  7600 -4230  7600 -4130)(net +24V)(type protect))
-    (wire (path Back 118.1  7600 -4330  7600 -4230)(net +24V)(type protect))
-    (wire (path Back 118.1  4020 -5160  4020 -5580)(net +24V)(type protect))
-    (wire (path Back 118.1  7600 -4580  7600 -4330)(net +24V)(type protect))
-    (wire (path Back 118.1  7510 -4670  7600 -4580)(net +24V)(type protect))
-    (wire (path Back 118.1  7420 -4670  7510 -4670)(net +24V)(type protect))
-    (wire (path Front 23.6  7600 -3530  7730 -3530)(net +5V)(type protect))
+    (wire (path Front 118.1  7600 -4030  7730 -4030)(net +24V)(type protect))
+    (wire (path Front 118.1  7600 -4130  7730 -4130)(net +24V)(type protect))
+    (wire (path Front 118.1  7600 -4230  7730 -4230)(net +24V)(type protect))
+    (wire (path Front 118.1  7600 -4330  7730 -4330)(net +24V)(type protect))
+    (wire (path Front 118.1  7600 -4130  7600 -4030)(net +24V)(type protect))
+    (wire (path Front 118.1  7600 -4230  7600 -4130)(net +24V)(type protect))
+    (wire (path Front 118.1  7600 -4330  7600 -4230)(net +24V)(type protect))
+    (wire (path Front 118.1  7655.1 -4734.3  7655.1 -4385.1  7600 -4330)(net +24V)(type protect))
+    (wire (path Front 118.1  3584.6 -4665.3  3584.6 -4850.4)(net +24V)(type protect))
+    (wire (path Front 118.1  7655.1 -4862.6  7655.1 -4734.3)(net +24V)(type protect))
+    (wire (path Front 118.1  7439 -5078.7  7655.1 -4862.6)(net +24V)(type protect))
+    (wire (path Front 118.1  7328.8 -5078.7  7439 -5078.7)(net +24V)(type protect))
+    (wire (path Front 118.1  7167.3 -5240.2  7328.8 -5078.7)(net +24V)(type protect))
+    (wire (path Front 118.1  7167.3 -5588.6  7167.3 -5240.2)(net +24V)(type protect))
+    (wire (path Front 118.1  6854.3 -5901.6  7167.3 -5588.6)(net +24V)(type protect))
+    (wire (path Front 118.1  4328.8 -5901.6  6854.3 -5901.6)(net +24V)(type protect))
+    (wire (path Front 118.1  4019.7 -5592.5  4328.8 -5901.6)(net +24V)(type protect))
+    (wire (path Front 118.1  4019.7 -5236.2  4019.7 -5592.5)(net +24V)(type protect))
+    (wire (path Front 118.1  3846.5 -5063  4019.7 -5236.2)(net +24V)(type protect))
+    (wire (path Front 118.1  3797.2 -5063  3846.5 -5063)(net +24V)(type protect))
+    (wire (path Front 118.1  3584.6 -4850.4  3797.2 -5063)(net +24V)(type protect))
+    (wire (path Front 118.1  3582.7 -4271.6  3610.2 -4271.6)(net +24V)(type protect))
+    (wire (path Front 118.1  3649.6 -4665.3  3584.6 -4665.3)(net +24V)(type protect))
+    (wire (path Front 118.1  3742.1 -4572.8  3649.6 -4665.3)(net +24V)(type protect))
+    (wire (path Front 118.1  3742.1 -4403.5  3742.1 -4572.8)(net +24V)(type protect))
+    (wire (path Front 118.1  3610.2 -4271.6  3742.1 -4403.5)(net +24V)(type protect))
     (wire (path Front 23.6  7600 -3630  7730 -3630)(net +5V)(type protect))
-    (wire (path Front 23.6  7600 -3630  7600 -3530)(net +5V)(type protect))
     (wire (path Front 23.6  7480 -3652.5  7577.5 -3652.5  7600 -3630)(net +5V)(type protect))
-    (wire (path Front 118.1  4140 -5380  4060 -5460)(net GND)(type protect))
-    (wire (path Front 118.1  7310 -4780  7460 -4630)(net GND)(type protect))
-    (wire (path Front 118.1  4060 -5460  4060 -5610  4340 -5890  6860 -5890  7150 -5600
-            7150 -5250  7310 -5090  7310 -4780)(net GND)(type protect))
-    (wire (path Front 23.6  7600 -3430  7482.5 -3430)(net GND)(type protect))
-    (wire (path Front 118.1  4140 -5090  4140 -5380)(net GND)(type protect))
-    (wire (path Front 118.1  4020 -4970  4140 -5090)(net GND)(type protect))
-    (wire (path Front 118.1  3582.7 -4665.3  3745.3 -4665.3)(net GND)(type protect))
-    (wire (path Front 118.1  4020 -4940  4020 -4960)(net GND)(type protect))
-    (wire (path Front 118.1  3745.3 -4665.3  4020 -4940)(net GND)(type protect))
-    (wire (path Front 118.1  3582.7 -4074.8  3604.8 -4074.8)(net GND)(type protect))
-    (wire (path Front 118.1  3720 -4528  3582.7 -4665.3)(net GND)(type protect))
-    (wire (path Front 118.1  3720 -4190  3720 -4528)(net GND)(type protect))
-    (wire (path Front 118.1  3604.8 -4074.8  3720 -4190)(net GND)(type protect))
-    (wire (path Front 118.1  7460 -4630  7460 -4470)(net GND)(type protect))
-    (wire (path Back 23.6  7600 -3730  7590 -3730)(net GND)(type protect))
-    (wire (path Back 23.6  7540 -3490  7600 -3430)(net GND)(type protect))
-    (wire (path Back 23.6  7540 -3680  7540 -3490)(net GND)(type protect))
-    (wire (path Back 23.6  7590 -3730  7540 -3680)(net GND)(type protect))
-    (wire (path Front 23.6  7482.5 -3430  7480 -3427.5)(net GND)(type protect))
-    (wire (path Front 23.6  7730 -3430  7600 -3430)(net GND)(type protect))
-    (wire (path Front 23.6  7600 -3730  7482.5 -3730  7480 -3727.5)(net GND)(type protect))
-    (wire (path Front 23.6  7600 -3930  7730 -3930)(net GND)(type protect))
-    (wire (path Front 23.6  7600 -3830  7730 -3830)(net GND)(type protect))
-    (wire (path Front 23.6  7600 -3730  7730 -3730)(net GND)(type protect))
-    (wire (path Front 23.6  7600 -3830  7600 -3730)(net GND)(type protect))
-    (wire (path Front 23.6  7600 -3930  7600 -3830)(net GND)(type protect))
-    (wire (path Front 118.1  4020 -4960  4020 -4970)(net GND)(type protect))
+    (wire (path Front 23.6  7600 -3580  7600 -3530)(net +5V)(type protect))
+    (wire (path Front 23.6  7600 -3630  7600 -3580)(net +5V)(type protect))
+    (wire (path Front 23.6  7600 -3530  7730 -3530)(net +5V)(type protect))
+    (wire (path Front 10  4051.3 -3041.2  3996.2 -3041.2)(net /ev_moto/usb+)(type protect))
+    (wire (path Front 10  3964.8 -3041.2  3935.1 -3070.9)(net /ev_moto/usb+)(type protect))
+    (wire (path Front 10  3996.2 -3041.2  3964.8 -3041.2)(net /ev_moto/usb+)(type protect))
+    (wire (path Front 10  4051.3 -3021.6  3964.6 -3021.6  3935.1 -2992.1)(net "/ev_moto/usb-")(type protect))
+    (wire (path Front 10  4920 -4267.5  4915.6 -4267.5)(net GND)(type protect))
+    (wire (path Front 10  4883.9 -4352.4  4883.9 -4351.5)(net GND)(type protect))
+    (wire (path Front 10  4879.9 -4352.4  4883.9 -4352.4)(net GND)(type protect))
+    (wire (path Front 10  4868.1 -4340.6  4879.9 -4352.4)(net GND)(type protect))
+    (wire (path Front 10  4868.1 -4315  4868.1 -4340.6)(net GND)(type protect))
+    (wire (path Front 10  4915.6 -4267.5  4868.1 -4315)(net GND)(type protect))
+    (wire (path Front 10  5010 -4612.5  4920 -4612.5  4911.7 -4612.5)(net GND)(type protect))
+    (wire (path Front 10  4840.5 -4557.1  4828.5 -4569.1)(net GND)(type protect))
+    (wire (path Front 10  4856.3 -4557.1  4840.5 -4557.1)(net GND)(type protect))
+    (wire (path Front 10  4911.7 -4612.5  4856.3 -4557.1)(net GND)(type protect))
+    (wire (path Front 10  4828.5 -4572  4828.5 -4569.1  4828.5 -4535.2  4805.5 -4512.2)(net GND)(type protect))
+    (wire (path Front 10  4651.5 -4278.7  4651.5 -4358.2  4805.5 -4512.2)(net GND)(type protect))
+    (wire (path Front 10  4828.5 -4572  4828.5 -4601.3)(net GND)(type protect))
+    (wire (path Front 10  4651.5 -4278.7  4651.5 -4314.9)(net GND)(type protect))
+    (wire (path Front 10  4688.1 -4351.5  4883.9 -4351.5  4901.3 -4351.5)(net GND)(type protect))
+    (wire (path Front 10  4651.5 -4314.9  4688.1 -4351.5)(net GND)(type protect))
+    (wire (path Front 10  4651.5 -4278.7  4651.5 -4439)(net GND)(type protect))
+    (wire (path Front 10  4621 -4469.5  4578.7 -4469.5)(net GND)(type protect))
+    (wire (path Front 10  4651.5 -4439  4621 -4469.5)(net GND)(type protect))
+    (wire (path Front 10  4651.5 -4278.7  4651.5 -4309.1)(net GND)(type protect))
+    (wire (path Front 10  4568.7 -4267.5  4560 -4267.5)(net GND)(type protect))
+    (wire (path Front 10  4618.1 -4316.9  4568.7 -4267.5)(net GND)(type protect))
+    (wire (path Front 10  4643.7 -4316.9  4618.1 -4316.9)(net GND)(type protect))
+    (wire (path Front 10  4651.5 -4309.1  4643.7 -4316.9)(net GND)(type protect))
+    (wire (path Front 10  4301.1 -3153.4  4301.1 -3175.1)(net GND)(type protect))
+    (wire (path Front 10  4367.9 -3185  4409.4 -3226.5)(net GND)(type protect))
+    (wire (path Front 10  4311 -3185  4367.9 -3185)(net GND)(type protect))
+    (wire (path Front 10  4301.1 -3175.1  4311 -3185)(net GND)(type protect))
+    (wire (path Front 10  3937 -2757.8  4015.7 -2757.8)(net GND)(type protect))
+    (wire (path Front 10  4124.1 -2830.8  4124.1 -2793.4)(net GND)(type protect))
+    (wire (path Front 10  4088.5 -2757.8  4015.7 -2757.8)(net GND)(type protect))
+    (wire (path Front 10  4124.1 -2793.4  4088.5 -2757.8)(net GND)(type protect))
+    (wire (path Front 10  4015.7 -3226.5  4015.7 -3218.5)(net GND)(type protect))
+    (wire (path Front 10  4092.5 -3098.4  4074.7 -3080.6)(net GND)(type protect))
+    (wire (path Front 10  4092.5 -3106.3  4092.5 -3098.4)(net GND)(type protect))
+    (wire (path Front 10  4072.8 -3126  4092.5 -3106.3)(net GND)(type protect))
+    (wire (path Front 10  4072.8 -3161.4  4072.8 -3126)(net GND)(type protect))
+    (wire (path Front 10  4015.7 -3218.5  4072.8 -3161.4)(net GND)(type protect))
+    (wire (path Front 10  4015.7 -2757.8  4015.7 -2763.8)(net GND)(type protect))
+    (wire (path Front 10  4124.1 -2830.8  4124.1 -2858.2  4124.1 -2911.5)(net GND)(type protect))
+    (wire (path Front 10  4301.1 -3088.5  4301.1 -3153.4)(net GND)(type protect))
+    (wire (path Front 10  4124.1 -2911.5  4301.1 -3088.5)(net GND)(type protect))
+    (wire (path Front 10  4124.1 -2830.8  4124.1 -2872.2)(net GND)(type protect))
+    (wire (path Front 10  4214.5 -2962.6  4373.9 -2962.6)(net GND)(type protect))
+    (wire (path Front 10  4124.1 -2872.2  4214.5 -2962.6)(net GND)(type protect))
+    (wire (path Front 10  4124.1 -2830.8  4124.1 -3049.2)(net GND)(type protect))
+    (wire (path Front 10  4092.7 -3080.6  4074.7 -3080.6  4051.3 -3080.6)(net GND)(type protect))
+    (wire (path Front 10  4124.1 -3049.2  4092.7 -3080.6)(net GND)(type protect))
+    (wire (path Front 23.6  7455.1 -4734.3  7455.1 -4474.9)(net GND)(type protect))
     (wire (path Front 23.6  7510 -3930  7600 -3930)(net GND)(type protect))
-    (wire (path Front 23.6  7480 -3960  7510 -3930)(net GND)(type protect))
-    (wire (path Front 23.6  7480 -4450  7480 -3960)(net GND)(type protect))
-    (wire (path Front 23.6  7460 -4470  7480 -4450)(net GND)(type protect))
+    (wire (path Front 23.6  7460 -4470  7480 -4450  7480 -3960  7510 -3930)(net GND)(type protect))
+    (wire (path Front 23.6  7455.1 -4474.9  7460 -4470)(net GND)(type protect))
+    (wire (path Back 118.1  3584.6 -4468.5  3586.6 -4468.5)(net GND)(type protect))
+    (wire (path Back 118.1  7455.1 -5023.3  7455.1 -4734.3)(net GND)(type protect))
+    (wire (path Back 118.1  7399.7 -5078.7  7455.1 -5023.3)(net GND)(type protect))
+    (wire (path Back 118.1  7328.7 -5078.7  7399.7 -5078.7)(net GND)(type protect))
+    (wire (path Back 118.1  7167.3 -5240.1  7328.7 -5078.7)(net GND)(type protect))
+    (wire (path Back 118.1  7167.3 -5588.6  7167.3 -5240.1)(net GND)(type protect))
+    (wire (path Back 118.1  6854.3 -5901.6  7167.3 -5588.6)(net GND)(type protect))
+    (wire (path Back 118.1  4328.7 -5901.6  6854.3 -5901.6)(net GND)(type protect))
+    (wire (path Back 118.1  4019.7 -5592.6  4328.7 -5901.6)(net GND)(type protect))
+    (wire (path Back 118.1  4019.7 -5236.2  4019.7 -5592.6)(net GND)(type protect))
+    (wire (path Back 118.1  3846.5 -5063  4019.7 -5236.2)(net GND)(type protect))
+    (wire (path Back 118.1  3795.3 -5063  3846.5 -5063)(net GND)(type protect))
+    (wire (path Back 118.1  3596.5 -4864.2  3795.3 -5063)(net GND)(type protect))
+    (wire (path Back 118.1  3596.5 -4846.4  3596.5 -4864.2)(net GND)(type protect))
+    (wire (path Back 118.1  3714.6 -4728.3  3596.5 -4846.4)(net GND)(type protect))
+    (wire (path Back 118.1  3714.6 -4596.5  3714.6 -4728.3)(net GND)(type protect))
+    (wire (path Back 118.1  3586.6 -4468.5  3714.6 -4596.5)(net GND)(type protect))
+    (wire (path Back 118.1  3582.7 -4074.8  3582.7 -4084.7)(net GND)(type protect))
+    (wire (path Back 118.1  3710.6 -4342.5  3584.6 -4468.5)(net GND)(type protect))
+    (wire (path Back 118.1  3710.6 -4212.6  3710.6 -4342.5)(net GND)(type protect))
+    (wire (path Back 118.1  3582.7 -4084.7  3710.6 -4212.6)(net GND)(type protect))
+    (wire (path Front 23.6  7482.5 -3430  7480 -3427.5)(net GND)(type protect))
+    (wire (path Front 23.6  7600 -3830  7600 -3730  7482.5 -3730  7480 -3727.5)(net GND)(type protect))
+    (wire (path Front 23.6  7600 -3930  7600 -3830)(net GND)(type protect))
+    (wire (path Front 23.6  7600 -3430  7482.5 -3430)(net GND)(type protect))
+    (wire (path Front 23.6  7600 -3730  7730 -3730)(net GND)(type protect))
+    (wire (path Front 23.6  7730 -3430  7600 -3430)(net GND)(type protect))
+    (wire (path Front 23.6  7600 -3930  7730 -3930)(net GND)(type protect))
+    (wire (path Back 23.6  7590 -3730  7540 -3680)(net GND)(type protect))
+    (wire (path Back 23.6  7540 -3490  7600 -3430)(net GND)(type protect))
+    (wire (path Back 23.6  7600 -3730  7590 -3730)(net GND)(type protect))
+    (wire (path Back 23.6  7540 -3680  7540 -3490)(net GND)(type protect))
+    (wire (path Front 23.6  7600 -3830  7730 -3830)(net GND)(type protect))
+    (wire (path Front 15.7  3671.2 -3013.1  3839.1 -3013.1  3860.1 -2992.1)(net "N-000054")(type protect))
+    (wire (path Front 15.7  3671.2 -3044.5  3833.7 -3044.5  3860.1 -3070.9)(net "N-000095")(type protect))
+    (wire (path Front 10  4920 -4192.5  4924.8 -4192.5)(net VDD)(type protect))
+    (wire (path Front 10  4922.1 -4331.8  4901.3 -4331.8)(net VDD)(type protect))
+    (wire (path Front 10  4966.5 -4287.4  4922.1 -4331.8)(net VDD)(type protect))
+    (wire (path Front 10  4966.5 -4234.2  4966.5 -4287.4)(net VDD)(type protect))
+    (wire (path Front 10  4924.8 -4192.5  4966.5 -4234.2)(net VDD)(type protect))
+    (wire (path Front 10  5010 -4687.5  4920 -4687.5  4894.2 -4687.5)(net VDD)(type protect))
+    (wire (path Front 10  4848.2 -4641.5  4848.2 -4601.3)(net VDD)(type protect))
+    (wire (path Front 10  4894.2 -4687.5  4848.2 -4641.5)(net VDD)(type protect))
+    (wire (path Front 10  4631.8 -4278.7  4631.8 -4264.3  4560 -4192.5)(net VDD)(type protect))
+    (wire (path Front 10  4320.8 -3153.4  4320.8 -3164)(net VDD)(type protect))
+    (wire (path Front 10  4395.5 -3165.4  4409.4 -3151.5)(net VDD)(type protect))
+    (wire (path Front 10  4322.2 -3165.4  4395.5 -3165.4)(net VDD)(type protect))
+    (wire (path Front 10  4320.8 -3164  4322.2 -3165.4)(net VDD)(type protect))
+    (wire (path Front 10  4015.7 -3151.5  4015.7 -3114.2)(net VDD)(type protect))
+    (wire (path Front 10  4029.6 -3100.3  4051.3 -3100.3)(net VDD)(type protect))
+    (wire (path Front 10  4015.7 -3114.2  4029.6 -3100.3)(net VDD)(type protect))
+    (wire (path Front 10  3937 -2832.8  4015.7 -2832.8)(net VDD)(type protect))
+    (wire (path Front 10  4104.4 -2830.8  4104.4 -2813)(net VDD)(type protect))
+    (wire (path Front 10  4041.4 -2807.1  4015.7 -2832.8)(net VDD)(type protect))
+    (wire (path Front 10  4098.5 -2807.1  4041.4 -2807.1)(net VDD)(type protect))
+    (wire (path Front 10  4104.4 -2813  4098.5 -2807.1)(net VDD)(type protect))
     (wire (path Front 23.6  7600 -3230  7730 -3230)(net VDD)(type protect))
-    (wire (path Front 23.6  7600 -3330  7730 -3330)(net VDD)(type protect))
-    (wire (path Front 23.6  7600 -3330  7600 -3230)(net VDD)(type protect))
-    (wire (path Front 23.6  7480 -3352.5  7577.5 -3352.5  7600 -3330)(net VDD)(type protect))
+    (wire (path Front 23.6  7577.5 -3352.5  7600 -3330  7730 -3330)(net VDD)(type protect))
+    (wire (path Front 23.6  7600 -3330  7600 -3280  7600 -3230)(net VDD)(type protect))
+    (wire (path Front 23.6  7480 -3352.5  7577.5 -3352.5)(net VDD)(type protect))
   )
 )

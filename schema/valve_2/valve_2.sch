@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 13 Oct 2012 12:30:54 PM MSK
+EESchema Schematic File Version 2  date 22/11/2012 10:25:22
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -50,7 +50,7 @@ $Descr A1 33070 23400
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "13 oct 2012"
+Date "22 nov 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -58,16 +58,10 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L +5V #PWR?
-U 1 1 507926A6
-P 20550 17000
-F 0 "#PWR?" H 20550 17090 20  0001 C CNN
-F 1 "+5V" H 20550 17090 30  0000 C CNN
-	1    20550 17000
-	1    0    0    -1  
-$EndComp
-NoConn ~ 16000 18850
+Text Notes 16050 11950 0    60   ~ 0
+And here I should change powers. \nVss is digital and Vs is analog.
+Text Notes 950  16600 0    60   ~ 0
+Actually USB- should be wired to \nVCC. And probably it would be \nbetter do dedicate a MCU pad for \nthis purpose to attach/detach USB.
 Wire Wire Line
 	21150 18900 21150 18800
 Wire Wire Line
@@ -1715,6 +1709,16 @@ Connection ~ 21150 18100
 Connection ~ 21950 17200
 Wire Wire Line
 	21950 17800 21950 18100
+$Comp
+L +5V #PWR?
+U 1 1 507926A6
+P 20550 17000
+F 0 "#PWR?" H 20550 17090 20  0001 C CNN
+F 1 "+5V" H 20550 17090 30  0000 C CNN
+	1    20550 17000
+	1    0    0    -1  
+$EndComp
+NoConn ~ 16000 18850
 $Comp
 L R R68
 U 1 1 5065EF67
