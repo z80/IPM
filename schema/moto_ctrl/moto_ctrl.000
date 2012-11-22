@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 1 date Thu 22 Nov 2012 08:24:54 AM MSK
+PCBNEW-BOARD Version 1 date Thu 22 Nov 2012 08:26:30 AM MSK
 
 # Created by Pcbnew(2012-01-19 BZR 3256)-stable
 
@@ -11518,4 +11518,30 @@ De 15 0 169 0 800000
 $EndTRACK
 $ZONE
 $EndZONE
+$CZONE_OUTLINE
+ZInfo 50ADA92C 87 "GND"
+ZLayer 15
+ZAux 4 E
+ZClearance 200 T
+ZMinThickness 100
+ZOptions 0 16 F 276 200
+ZSmoothing 0 0
+ZCorner 43484 31280 0
+ZCorner 43484 28563 0
+ZCorner 40768 28563 0
+ZCorner 40768 31280 1
+$endCZONE_OUTLINE
+$CZONE_OUTLINE
+ZInfo 50ADA959 87 "GND"
+ZLayer 15
+ZAux 4 E
+ZClearance 200 T
+ZMinThickness 100
+ZOptions 0 16 F 276 200
+ZSmoothing 0 0
+ZCorner 48760 45748 0
+ZCorner 48760 43051 0
+ZCorner 46043 43051 0
+ZCorner 46043 45748 1
+$endCZONE_OUTLINE
 $EndBOARD
