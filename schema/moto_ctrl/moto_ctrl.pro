@@ -1,8 +1,6 @@
-update=Tue 20 Nov 2012 11:08:11 PM MSK
+update=Thu 22 Nov 2012 08:24:57 AM MSK
 version=1
-last_client=pcbnew
-[general]
-version=1
+last_client=kicad
 [eeschema]
 version=1
 LibDir=../libs
@@ -128,3 +126,5 @@ LibName19=micro-sd
 LibName20=my_foots
 LibName21=sdc
 LibName22=side-conns
+[general]
+version=1
