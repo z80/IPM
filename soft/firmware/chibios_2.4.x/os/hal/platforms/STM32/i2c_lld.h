@@ -413,6 +413,13 @@ struct I2CDriver{
    * @brief     Pointer to the I2Cx registers block.
    */
   I2C_TypeDef               *i2c;
+#if I2C_USE_SLAVE_MODE
+  uint8_t                   slave_mode;
+  uint8_t                   *rxbuf;
+  size_t                    rxbytes;
+  uint8_t                   *txbuf;
+  size_t                    txbytes;
+#endif
 };
 
 /*===========================================================================*/

@@ -335,9 +335,43 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
   default:
     break;
   }
+#if I2C_USE_SLAVE_MODE
+  if  (event & (I2C_SR1_ADDR | I2C_SR1_ADD10))
+  {
+      // If slave mode. On ADDR match DMA buffers should be configured.
+      if ( i2cp->slave_mode )
+      {
+          // Prepare buffers.
+          // RX DMA setup.
+          dmaStreamSetMemory0( i2cp->dmarx, i2cp->rxbuf );
+          dmaStreamSetTransactionSize( i2cp->dmarx, i2cp->rxbytes );
+
+          // TX DMA setup.
+          dmaStreamSetMemory0( i2cp->dmatx, i2cp->txbuf );
+          dmaStreamSetTransactionSize( i2cp->dmatx, i2cp->txbytes );
+
+          // And enable DMA.
+          dmaStreamEnable(i2cp->dmarx);
+          dmaStreamEnable(i2cp->dmatx);
+      }
+
+      // Clear Addr Flag
+      (void)dp->SR2;
+  }
+  else if ( event & I2C_SR1_STOPF )
+  {
+      // Turn interrupts on to feel ADDR match event to initiate transfer again.
+      dp->CR2 |= I2C_CR2_ITEVTEN;
+      // Generate Ack on address match and IOs.
+      // Here write to CR1 also clears STOPF bit (according to the datasheet).
+      dp->CR1 |= I2C_CR1_ACK;
+
+  }
+#else
   /* Clear ADDR flag. */
   if (event & (I2C_SR1_ADDR | I2C_SR1_ADD10))
     (void)dp->SR2;
+#endif
 }
 
 /**
@@ -804,6 +838,9 @@ msg_t i2c_lld_master_receive_timeout(I2CDriver *i2cp, i2caddr_t addr,
   if ((timeout != TIME_INFINITE) && !chVTIsArmedI(&vt))
     return RDY_TIMEOUT;
 
+#if I2C_USE_SLAVE_MODE
+  i2cp->slave_mode = 0;
+#endif
   /* Starts the operation.*/
   dp->CR2 |= I2C_CR2_ITEVTEN;
   dp->CR1 |= I2C_CR1_START | I2C_CR1_ACK;
@@ -890,6 +927,9 @@ msg_t i2c_lld_master_transmit_timeout(I2CDriver *i2cp, i2caddr_t addr,
   if ((timeout != TIME_INFINITE) && !chVTIsArmedI(&vt))
     return RDY_TIMEOUT;
 
+#if I2C_USE_SLAVE_MODE
+  i2cp->slave_mode = 0;
+#endif
   /* Starts the operation.*/
   dp->CR2 |= I2C_CR2_ITEVTEN;
   dp->CR1 |= I2C_CR1_START;
@@ -911,57 +951,42 @@ msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
                                 systime_t timeout )
 {
     I2C_TypeDef *dp = i2cp->i2c;
-    VirtualTimer vt;
 
-    /* Global timeout for the whole operation.*/
-    if (timeout != TIME_INFINITE)
-        chVTSetI(&vt, timeout, i2c_lld_safety_timeout, (void *)i2cp);
+    // Let's reset the bus to kill all communication and errors.
+    dp->CR1 |= I2C_CR1_SWRST;
+
+    // Disable DMA to prevent past IOs.
+    dmaStreamDisable( i2cp->dmarx );
+    dmaStreamDisable( i2cp->dmatx );
 
     /* Releases the lock from high level driver.*/
     chSysUnlock();
 
     /* Initializes driver fields, LSB = 1 -> read.*/
-    i2cp->addr = (addr << 1) | 0x01;
-    i2cp->errors = 0;
-
-    /* RX DMA setup.*/
-    dmaStreamSetMemory0( i2cp->dmarx, rxbuf );
-    dmaStreamSetTransactionSize( i2cp->dmarx, rxbytes );
-
-    /* TX DMA setup.*/
-    dmaStreamSetMemory0( i2cp->dmatx, txbuf );
-    dmaStreamSetTransactionSize( i2cp->dmatx, txbytes );
-
-    /* Waits until BUSY flag is reset and the STOP from the previous operation
-       is completed, alternatively for a timeout condition.*/
-    while ( (dp->SR2 & I2C_SR2_BUSY) || (dp->CR1 & I2C_CR1_STOP) )
-    {
-        chSysLock();
-        if ((timeout != TIME_INFINITE) && !chVTIsArmedI(&vt))
-            return RDY_TIMEOUT;
-        chSysUnlock();
-    }
+    i2cp->addr    = (addr << 1);
+    i2cp->errors  = 0;
+    i2cp->rxbuf   = rxbuf;
+    i2cp->rxbytes = rxbytes;
+    i2cp->txbuf   = txbuf;
+    i2cp->txbytes = txbytes;
 
     /* This lock will be released in high level driver.*/
     chSysLock();
 
-    /* Atomic check on the timer in order to make sure that a timeout didn't
-       happen outside the critical zone.*/
-    if ((timeout != TIME_INFINITE) && !chVTIsArmedI(&vt))
-        return RDY_TIMEOUT;
-
+#if I2C_USE_SLAVE_MODE
+    i2cp->slave_mode = 1;
+#endif
     /* Starts the operation.*/
+    // Own address.
     dp->OAR1 = ((addr << 1) & (0xFE));
-    dp->CR2 |= I2C_CR2_ITEVTEN;
-    dp->CR1 |= /*I2C_CR1_START*/ I2C_CR1_ACK;
+    // Turn interrupts and using DMA on.
+    dp->CR2 |= ( I2C_CR2_ITEVTEN | I2C_CR2_DMAEN );
+    // Generate Ack on address match and IOs.
+    dp->CR1 |= I2C_CR1_ACK;
+    // Remove software bus reset.
+    dp->CR1 &= (~I2C_CR1_SWRST);
 
-    /* Waits for the operation completion or a timeout.*/
-    i2cp->thread = chThdSelf();
-    chSchGoSleepS(THD_STATE_SUSPENDED);
-    if ((timeout != TIME_INFINITE) && chVTIsArmedI(&vt))
-        chVTResetI(&vt);
-
-    return chThdSelf()->p_u.rdymsg;
+    return 0;
 }
 
 
