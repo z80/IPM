@@ -67,8 +67,11 @@ static msg_t i2cThread( void *arg )
                 status = RDY_OK;
                 status = i2cMasterTransmitTimeout( &I2CD1, I2C_BASE_ADDR+i,
                                                    (uint8_t *)(&dataOut), sizeof(dataOut),
-                                                   (uint8_t *)(&dataIn),  sizeof(dataIn),
+                                                   0,  0,
     	    			                           tmo );
+                status = i2cMasterReceiveTimeout( &I2CD1, I2C_BASE_ADDR+i,
+                                                  (uint8_t *)(&dataIn),  sizeof(dataIn),
+                                                  tmo );
                 // Get back input.
                 chMtxLock( &mutex );
                 ins[i+1] = (dataIn & 0x0000FFFF);
