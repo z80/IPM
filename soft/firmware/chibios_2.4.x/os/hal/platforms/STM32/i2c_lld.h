@@ -469,8 +469,7 @@ extern "C" {
 #if I2C_USE_SLAVE_MODE
     msg_t i2c_lld_slave_io_timeout( I2CDriver * i2cp, i2caddr_t addr, 
                                     uint8_t * rxbuf, size_t rxbytes, 
-                                    const uint8_t * txbuf, size_t txbytes, 
-                                    systime_t timeout );
+                                    uint8_t * txbuf, size_t txbytes );
 #endif
 #ifdef __cplusplus
 }

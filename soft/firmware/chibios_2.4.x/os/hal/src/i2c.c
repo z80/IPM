@@ -310,28 +310,17 @@ void i2cReleaseBus(I2CDriver *i2cp) {
 msg_t i2cSlaveIoTimeout( I2CDriver * i2cp,
                          i2caddr_t addr,
                          uint8_t * rxbuf, size_t rxbytes,
-                         const uint8_t * txbuf, size_t txbytes,
-                         systime_t timeout )
+                         uint8_t * txbuf, size_t txbytes )
 {
     msg_t rdymsg;
 
-    chDbgCheck((i2cp != NULL) && (addr != 0) &&
-               (rxbytes > 0) && (rxbuf != NULL) &&
-               ((txbytes == 0) || ((txbytes > 0) && (txbuf != NULL))) &&
-               (timeout != TIME_IMMEDIATE),
-               "i2cMasterTransmitTimeout");
-
-    chDbgAssert( i2cp->state == I2C_READY,
-                 "i2cMasterTransmitTimeout(), #1", "not ready");
-
     chSysLock();
     i2cp->errors = I2CD_NO_ERROR;
-    i2cp->state = I2C_ACTIVE_RX;
+    i2cp->state = 0;
     rdymsg = i2c_lld_slave_io_timeout( i2cp, 
                                        addr, 
                                        rxbuf, rxbytes, 
-                                       txbuf, txbytes, 
-                                       timeout );
+                                       txbuf, txbytes );
     if (rdymsg == RDY_TIMEOUT)
         i2cp->state = I2C_LOCKED;
     else

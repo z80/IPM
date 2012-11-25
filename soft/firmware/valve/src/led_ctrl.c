@@ -15,12 +15,12 @@ static msg_t ledsThread( void *arg )
     chRegSetThreadName( "ld" );
     while ( 1 )
     {
-    	palClearPad( LED_PORT, LED_0_PIN );
+        /*palClearPad( LED_PORT, LED_0_PIN );
     	palClearPad( LED_PORT, LED_1_PIN );
-    	palClearPad( LED_PORT, LED_2_PIN );
+        palClearPad( LED_PORT, LED_2_PIN );*/
         chThdSleepMilliseconds( 250 );
 
-    	static uint32_t arg;
+        /*static uint32_t arg;
     	chMtxLock( &mutex );
     	arg = value;
     	chMtxUnlock();
@@ -35,7 +35,7 @@ static msg_t ledsThread( void *arg )
     	if ( arg & 4 )
     		palSetPad( LED_PORT, LED_2_PIN );
     	else
-    		palClearPad( LED_PORT, LED_2_PIN );
+            palClearPad( LED_PORT, LED_2_PIN );*/
         chThdSleepMilliseconds( 250 );
     }
 

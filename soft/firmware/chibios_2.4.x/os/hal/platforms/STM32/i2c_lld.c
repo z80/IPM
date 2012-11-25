@@ -298,6 +298,12 @@ static void i2c_lld_set_opmode(I2CDriver *i2cp) {
  * @notapi
  */
 static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
+            i2cp->state |= 1;
+            if ( palReadPad( GPIOB, 14 ) )
+                palClearPad( GPIOB, 14 );
+            else
+                palSetPad( GPIOB, 14 );
+
   I2C_TypeDef *dp = i2cp->i2c;
   uint32_t regSR = dp->SR2;
   uint32_t event = dp->SR1;
@@ -307,6 +313,10 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
      done by the DMA.*/
   switch (I2C_EV_MASK & (event | (regSR << 16))) {
   case I2C_EV5_MASTER_MODE_SELECT:
+          if ( palReadPad( GPIOB, 13 ) )
+              palClearPad( GPIOB, 13 );
+          else
+              palSetPad( GPIOB, 13 );
     dp->DR = i2cp->addr;
     break;
   case I2C_EV6_MASTER_REC_MODE_SELECTED:
@@ -338,6 +348,11 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
 #if I2C_USE_SLAVE_MODE
   if  (event & (I2C_SR1_ADDR | I2C_SR1_ADD10))
   {
+              i2cp->state |= 2;
+              if ( palReadPad( GPIOB, 12 ) )
+                  palClearPad( GPIOB, 12 );
+              else
+                  palSetPad( GPIOB, 12 );
       // If slave mode. On ADDR match DMA buffers should be configured.
       if ( i2cp->slave_mode )
       {
@@ -358,8 +373,9 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
       // Clear Addr Flag
       (void)dp->SR2;
   }
-  else if ( event & I2C_SR1_STOPF )
+  if ( event & I2C_SR1_STOPF )
   {
+      i2cp->state |= 3;
       // Turn interrupts on to feel ADDR match event to initiate transfer again.
       dp->CR2 |= I2C_CR2_ITEVTEN;
       // Generate Ack on address match and IOs.
@@ -947,8 +963,7 @@ msg_t i2c_lld_master_transmit_timeout(I2CDriver *i2cp, i2caddr_t addr,
 
 msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
                                 uint8_t * rxbuf, size_t rxbytes,
-                                const uint8_t * txbuf, size_t txbytes,
-                                systime_t timeout )
+                                uint8_t * txbuf, size_t txbytes )
 {
     I2C_TypeDef *dp = i2cp->i2c;
 
@@ -956,11 +971,11 @@ msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
     dp->CR1 |= I2C_CR1_SWRST;
 
     // Disable DMA to prevent past IOs.
-    dmaStreamDisable( i2cp->dmarx );
-    dmaStreamDisable( i2cp->dmatx );
+    //dmaStreamDisable( i2cp->dmarx );
+    //dmaStreamDisable( i2cp->dmatx );
 
     /* Releases the lock from high level driver.*/
-    chSysUnlock();
+    //chSysUnlock();
 
     /* Initializes driver fields, LSB = 1 -> read.*/
     i2cp->addr    = (addr << 1);
@@ -971,7 +986,7 @@ msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
     i2cp->txbytes = txbytes;
 
     /* This lock will be released in high level driver.*/
-    chSysLock();
+    //chSysLock();
 
 #if I2C_USE_SLAVE_MODE
     i2cp->slave_mode = 1;
@@ -982,6 +997,7 @@ msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
     // Turn interrupts and using DMA on.
     dp->CR2 |= ( I2C_CR2_ITEVTEN | I2C_CR2_DMAEN );
     // Generate Ack on address match and IOs.
+    dp->CR1 &= ~(I2C_CR1_START | I2C_CR1_ACK);
     dp->CR1 |= I2C_CR1_ACK;
     // Remove software bus reset.
     dp->CR1 &= (~I2C_CR1_SWRST);
