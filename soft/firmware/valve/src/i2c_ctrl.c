@@ -71,7 +71,7 @@ static msg_t i2cThread( void *arg )
     	    			                           tmo );
                 // Get back input.
                 chMtxLock( &mutex );
-                ins[i+1] = dataIn;
+                ins[i+1] = (dataIn & 0x0000FFFF);
                 chMtxUnlock();
             }
             // Here should be IO with moto controller boards and accelerometer.
