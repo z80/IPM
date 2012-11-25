@@ -22,7 +22,32 @@ int main( int argc, char * argv[] )
     cnt = c.read( stri );
     std::cout << stri;
 
-    cnt = c.write( "i2c_set_buffer 1 3 2 1\r\n" );
+    cnt = c.write( "st\r\n" );
+    cnt = c.read( stri );
+    std::cout << stri;
+
+    cnt = c.write( "out 0 0\r\n" );
+    cnt = c.read( stri );
+    std::cout << stri;
+
+    cnt = c.write( "out 1 1\r\n" );
+    cnt = c.read( stri );
+    std::cout << stri;
+
+    cnt = c.write( "st\r\n" );
+    cnt = c.read( stri );
+    std::cout << stri;
+
+    cnt = c.write( "st\r\n" );
+    cnt = c.read( stri );
+    std::cout << stri;
+
+    cnt = c.write( "st\r\n" );
+    cnt = c.read( stri );
+    std::cout << stri;
+
+
+    /*cnt = c.write( "i2c_set_buffer 1 3 2 1\r\n" );
     cnt = c.read( stri );
     std::cout << stri;
 
@@ -44,7 +69,7 @@ int main( int argc, char * argv[] )
 
     cnt = c.write( "i2c_buffer 4\r\n" );
     cnt = c.read( stri );
-    std::cout << stri;
+    std::cout << stri;*/
 
     return 0;
 }
