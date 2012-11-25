@@ -225,7 +225,7 @@ void tst_i2c_set_master( BaseChannel *chp, int argc, char * argv[] )
     if ( argc > 0 )
     {
     	uint8_t v = ( argv[0][0] != '0' ) ? 1 : 0;
-    	testSetAddr( v );
+        testSetMaster( v );
     }
     else
         testSetMaster( 0 );
@@ -262,13 +262,11 @@ void tst_i2c_io( BaseChannel *chp, int argc, char * argv[] )
 	}
 	else
 	{
-		static msg_t status;
-	    static systime_t tmo;
-	    tmo = MS2ST( 1000 );
-        status = i2cSlaveIoTimeout( &I2CD1, testAddr,
-                                    testBuffer, /*testCnt*/ 4,
-                                    0,  0 );
-        chprintf( chp, "slave ok:%d", status );
+        i2cSlaveIoTimeout( &I2CD1, testAddr,
+                           testBuffer, /*testCnt*/ 4,
+                           0,  0 );
+        chThdSleepSeconds( 2 );
+        chprintf( chp, "slave ok:%d", I2CD1.state );
 	}
 }
 
