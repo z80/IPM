@@ -1,4 +1,5 @@
 
+#include <sstream>
 #include "main_wnd.h"
 #include "lua.hpp"
 #include "boost/bind.hpp"
@@ -6,18 +7,12 @@
 
 const std::string MainWnd::CONFIG_FILE = "client.ini";
 const int         MainWnd::LOG_MAX     = 256;
-const int         MainWnd::MOTO_TIME_MAX = 1000;
-const int         MainWnd::MOTO1         = 1;
-const int         MainWnd::MOTO2         = 2;
-const int         MainWnd::MOTO3         = 4;
-const int         MainWnd::MOTO4         = 8;
 
 MainWnd::MainWnd( QWidget * parent )
 : QMainWindow( parent )
 {
-	m_motoVal = 0;
     ui.setupUi( this );
-    connect( this, SIGNAL(sigLog(const QString &)), this, SLOT(slotLog(const QString &)), Qt::QueuedConnection );
+    connect( this,       SIGNAL(sigLog(const QString &)),        this, SLOT(slotLog(const QString &)),  Qt::QueuedConnection );
     connect( ui.console, SIGNAL(line_validate(const QString &)), this, SLOT(slotSend(const QString &)), Qt::QueuedConnection );
 
     connect( this, SIGNAL(sigImageAccepted()), this, SLOT(slotImageAccepted()), Qt::QueuedConnection );
@@ -34,27 +29,10 @@ MainWnd::MainWnd( QWidget * parent )
 	m_peer->setInFileHandler( boost::bind<QIODevice *>( &MainWnd::inFileHandler, this, _1 ) );
 	m_peer->setAccFileHandler( boost::bind( &MainWnd::accFileHandler, this, _1, _2 ) );
 
-    connect( ui.imgBtn,     SIGNAL(clicked()), this, SLOT(slotImage()) );
-    connect( ui.voltsBtn,   SIGNAL(clicked()), this, SLOT(slotVoltages()) );
-    connect( ui.motoEnBtn,  SIGNAL(clicked()), this, SLOT(slotMotoEn()) );
-    connect( ui.powerEnBtn, SIGNAL(clicked()), this, SLOT(slotPowerEn()) );
-    connect( ui.lightBtn,   SIGNAL(clicked()), this, SLOT(slotLight()) );
-
-    // Connecting GUI slots.
-    m_motoBtns[ ui.fwdBtn ] = MOTO1 | MOTO3;
-    m_motoBtns[ ui.bwdBtn ] = MOTO2 | MOTO4;
-    m_motoBtns[ ui.ccwBtn ] = MOTO1 | MOTO4;
-    m_motoBtns[ ui.cwBtn ]  = MOTO2 | MOTO3;
-    m_motoBtns[ ui.leftFwdBtn ]  = MOTO1;
-    m_motoBtns[ ui.leftBwdBtn ]  = MOTO2;
-    m_motoBtns[ ui.rightFwdBtn ] = MOTO3;
-    m_motoBtns[ ui.rightBwdBtn ] = MOTO4;
-    for ( QHash<QPushButton *, quint8>::iterator it=m_motoBtns.begin(); it!=m_motoBtns.end(); it++ )
-    {
-    	QPushButton * b = it.key();
-        connect( b, SIGNAL(pressed()),  this, SLOT(slotMotoDown()) );
-        connect( b, SIGNAL(released()), this, SLOT(slotMotoUp()) );
-    }
+    connect( ui.image,   SIGNAL(triggered()), this, SLOT(slotImage()) );
+    connect( ui.connect, SIGNAL(triggered()), this, SLOT(slotConnect()) );
+    connect( ui.exec,    SIGNAL(triggered()), this, SLOT(slotExec()) );
+    connect( ui.send,    SIGNAL(triggered()), this, SLOT(slotSend()) );
 }
 
 MainWnd::~MainWnd()
@@ -161,84 +139,50 @@ void MainWnd::slotImage()
     m_peer->send( cmd );
 }
 
-void MainWnd::slotVoltages()
+void MainWnd::slotConnect()
 {
-    const std::string cmd = "volts()";
-    m_peer->send( cmd );
+    m_peer->PeerQxmpp::connect();
 }
 
-void MainWnd::slotLight()
+void MainWnd::slotExec()
 {
-    if ( ui.lightBtn->isChecked() )
-    	m_peer->send( "led( true )" );
-    else
-    	m_peer->send( "led( false )" );
-}
-
-void MainWnd::slotMotoEn()
-{
-    if ( ui.motoEnBtn->isChecked() )
-    	m_peer->send( "motoConfig( true, 10 )" );
-    else
-    	m_peer->send( "motoConfig( false, 10 )" );
-}
-
-void MainWnd::slotPowerEn()
-{
-    if ( ui.powerEnBtn->isChecked() )
-    	m_peer->send( "powerEn( true )" );
-    else
-    	m_peer->send( "powerEn( false )" );
-}
-
-void MainWnd::slotMotoDown()
-{
-    m_time = QTime::currentTime();
-    m_time.start();
-    QTimer::singleShot( MOTO_TIME_MAX, this, SLOT(slotTimeout()) );
-    QPushButton * b = qobject_cast<QPushButton *>( sender() );
-    if ( b )
+    QString stri = 
+        QFileDialog::getOpenFileName( this, tr( "Open script file" ),
+                                                "",
+                                            tr("Lua script (*.lua)") );
+    if ( stri.length() > 0 )
     {
-    	quint8 v = m_motoBtns[ b ];
-        m_motoVal |= v;
+        std::ostringstream out;
+        out << "local ch, err = loadfile( \"";
+        out << stri.toStdString();
+        out << "\" )\n";
+        out << "if ( not ch ) then\n";
+        out << "    print( err )\n";
+        out << "else\n";
+        out << "    ch()\n";
+        out << "end";
+        m_peer->invokeCmd( out.str() );
     }
 }
 
-void MainWnd::slotMotoUp()
+void MainWnd::slotSendFile()
 {
-    int msecs = m_time.elapsed();
-    if ( msecs < MOTO_TIME_MAX )
+    QString stri = 
+        QFileDialog::getOpenFileName( this, tr( "Open script file" ),
+                                                "",
+                                            tr("Lua script (*.lua)") );
+    if ( stri.length() > 0 )
     {
-    	quint8 v = m_motoVal;
-        QString stri = QString( "motoSet( %1, %2, %3, %4, %5 )" )
-    			                .arg( (v & MOTO1) ? "true" : "false" )
-    			                .arg( (v & MOTO2) ? "true" : "false" )
-    			                .arg( (v & MOTO3) ? "true" : "false" )
-    			                .arg( (v & MOTO4) ? "true" : "false" )
-    			                .arg( msecs );
-    	m_peer->send( stri.toStdString() );
+        QFile * f = new QFile( stri );
+        if ( !f->open( QIODevice::ReadOnly ) )
+        {
+            QMessageBox::critical( this, "Error", "Can\'t open file for reading" );
+            return;
+        }
+        QFileInfo fi( stri );
+        QString name = fi.fileName(); 
+        m_peer->sendFile( name.toStdString(), f );
     }
-    else
-        m_peer->send( "motoSet( false, false, false, false )" );
-    QPushButton * b = qobject_cast<QPushButton *>( sender() );
-    if ( b )
-    {
-    	quint8 v = m_motoBtns[ b ];
-        m_motoVal &= (~v);
-    }
-
-}
-
-void MainWnd::slotTimeout()
-{
-	quint8 v = m_motoVal;
-    QString stri = QString( "motoSet( %1, %2, %3, %4, %5 )" )
-			                .arg( (v & MOTO1) ? "true" : "false" )
-			                .arg( (v & MOTO2) ? "true" : "false" )
-			                .arg( (v & MOTO3) ? "true" : "false" )
-			                .arg( (v & MOTO4) ? "true" : "false" )
-			                .arg( 0 );
-	m_peer->send( stri.toStdString() );
 }
 
 void MainWnd::updatePixmap( const QImage & img )

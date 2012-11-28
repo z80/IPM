@@ -32,7 +32,7 @@
      <x>0</x>
      <y>0</y>
      <width>775</width>
-     <height>25</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
@@ -260,6 +260,75 @@
     </widget>
    </widget>
   </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>64</width>
+     <height>64</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="image"/>
+   <addaction name="connect"/>
+   <addaction name="exec"/>
+   <addaction name="send"/>
+  </widget>
+  <action name="image">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/camera.png</normaloff>:/images/camera.png</iconset>
+   </property>
+   <property name="text">
+    <string>Get image</string>
+   </property>
+   <property name="toolTip">
+    <string>Get image from attached web camera</string>
+   </property>
+  </action>
+  <action name="connect">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/network.png</normaloff>:/images/network.png</iconset>
+   </property>
+   <property name="text">
+    <string>Connect/reconnect</string>
+   </property>
+   <property name="toolTip">
+    <string>Connect/reconnect to remote host application</string>
+   </property>
+  </action>
+  <action name="exec">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/ctrl.png</normaloff>:/images/ctrl.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exec</string>
+   </property>
+   <property name="toolTip">
+    <string>Invoke local script file</string>
+   </property>
+  </action>
+  <action name="send">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/send.png</normaloff>:/images/send.png</iconset>
+   </property>
+   <property name="text">
+    <string>Send</string>
+   </property>
+   <property name="toolTip">
+    <string>Send script file</string>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>
@@ -269,6 +338,8 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>

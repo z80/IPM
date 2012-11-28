@@ -34,32 +34,22 @@ private:
 	PeerQxmpp * m_peer;
 	QTime       m_time;
 	QStringList m_logList;
-	QHash<QPushButton *, quint8> m_motoBtns;
-	quint8                       m_motoVal;
+
     QGraphicsScene      * m_scene;
     QGraphicsPixmapItem * m_image;
     QPixmap               m_pixmap;
 
 	static const std::string CONFIG_FILE;
 	static const int         LOG_MAX;
-	static const int         MOTO_TIME_MAX; // Due to big ping in the case of fast movements
-	                                          // it is necessary to be ablt
-	                                          // to set moto time explicitly.
-    static const int MOTO1,
-                       MOTO2,
-                       MOTO3,
-                       MOTO4;
+
     QImage m_img;
 public slots:
 	void slotSend( const QString & stri );
 	void slotImage();
-	void slotVoltages();
-	void slotLight();
-	void slotMotoEn();
-    void slotPowerEn();
-	void slotMotoDown();
-	void slotMotoUp();
-	void slotTimeout();
+    void slotConnect();
+    void slotExec();
+    void slotSendFile();
+    
 };
 
 

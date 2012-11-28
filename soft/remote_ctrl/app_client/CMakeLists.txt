@@ -40,6 +40,7 @@ QT4_ADD_RESOURCES( qrcSrc ${qrc} )
 set( src ${src} ${qrcSrc} )
 
 if ( WIN32 )
+    set( src ${src} "./src/icon.rc" )
     set( BUILD_TYPE WIN32 )
 else ( WIN32 )
     set( BUILD_TYPE "" )
