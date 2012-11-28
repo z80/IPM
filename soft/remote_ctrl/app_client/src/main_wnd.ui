@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>775</width>
-    <height>577</height>
+    <width>582</width>
+    <height>418</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,14 @@
      <number>1</number>
     </property>
     <item>
-     <widget class="QGraphicsView" name="view"/>
+     <widget class="QGraphicsView" name="view">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -31,12 +38,18 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>775</width>
-     <height>20</height>
+     <width>582</width>
+     <height>25</height>
     </rect>
    </property>
   </widget>
   <widget class="QDockWidget" name="cmdDw">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <property name="features">
     <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
    </property>
@@ -280,6 +293,7 @@
    <addaction name="connect"/>
    <addaction name="exec"/>
    <addaction name="send"/>
+   <addaction name="help"/>
   </widget>
   <action name="image">
    <property name="icon">
@@ -327,6 +341,21 @@
    </property>
    <property name="toolTip">
     <string>Send script file</string>
+   </property>
+  </action>
+  <action name="help">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/cap.png</normaloff>:/images/cap.png</iconset>
+   </property>
+   <property name="text">
+    <string>Help</string>
+   </property>
+   <property name="toolTip">
+    <string>Capitan Obvious says!</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
    </property>
   </action>
  </widget>

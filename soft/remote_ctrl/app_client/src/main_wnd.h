@@ -49,6 +49,7 @@ public slots:
     void slotConnect();
     void slotExec();
     void slotSendFile();
+    void slotHelp();
     
 };
 

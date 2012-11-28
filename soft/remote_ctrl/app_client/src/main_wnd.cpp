@@ -32,7 +32,7 @@ MainWnd::MainWnd( QWidget * parent )
     connect( ui.image,   SIGNAL(triggered()), this, SLOT(slotImage()) );
     connect( ui.connect, SIGNAL(triggered()), this, SLOT(slotConnect()) );
     connect( ui.exec,    SIGNAL(triggered()), this, SLOT(slotExec()) );
-    connect( ui.send,    SIGNAL(triggered()), this, SLOT(slotSend()) );
+    connect( ui.send,    SIGNAL(triggered()), this, SLOT(slotSendFile()) );
 }
 
 MainWnd::~MainWnd()
@@ -229,6 +229,11 @@ void MainWnd::sceneResizeEvent( QResizeEvent * e )
     QSizeF sz = ui.view->size();
     ui.view->setSceneRect( 0.0, 0.0, sz.width() - 10, sz.height() - 10 );
     updatePixmap();
+}
+
+void MainWnd::slotHelp()
+{
+
 }
 
 
