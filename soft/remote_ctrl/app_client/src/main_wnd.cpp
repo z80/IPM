@@ -309,22 +309,22 @@ void MainWnd::slotJoyChanged( QPointF v, bool mouseDown )
     if ( ap == ui.joy1 )
     {
         QMutexLocker lock( &mutex );
-        m_joy1 = v * 100.0;
+        m_joy1 = v * 200.0;
     }
     else if ( ap == ui.joy2 )
     {
         QMutexLocker lock( &mutex );
-        m_joy2 = v * 100.0;
+        m_joy2 = v * 200.0;
     }
     else if ( ap == ui.joy3 )
     {
         QMutexLocker lock( &mutex );
-        m_joy3 = v * 100.0;
+        m_joy3 = v * 200.0;
     }
     else
     {
         QMutexLocker lock( &mutex );
-        m_joy4 = v * 100.0;
+        m_joy4 = v * 200.0;
     }
 
 }
