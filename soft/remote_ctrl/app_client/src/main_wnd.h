@@ -5,6 +5,7 @@
 #include <QtGui>
 #include "peer_qxmpp.h"
 #include "ui_main_wnd.h"
+#include "help_wnd.h"
 
 class MainWnd: public QMainWindow
 {
@@ -22,6 +23,7 @@ private slots:
     void slotImageAccepted();
 public:
 	int print( lua_State * L );
+    int joy( lua_State * L );
 private:
 	void init( lua_State * L );
 	QIODevice * inFileHandler( const std::string & fileName );
@@ -34,6 +36,7 @@ private:
 	PeerQxmpp * m_peer;
 	QTime       m_time;
 	QStringList m_logList;
+    QPointer<HelpWnd> m_helpWnd;
 
     QGraphicsScene      * m_scene;
     QGraphicsPixmapItem * m_image;
@@ -43,6 +46,9 @@ private:
 	static const int         LOG_MAX;
 
     QImage m_img;
+
+    QMutex mutex;
+    QPointF m_joy1, m_joy2, m_joy3, m_joy4;
 public slots:
 	void slotSend( const QString & stri );
 	void slotImage();
@@ -50,7 +56,7 @@ public slots:
     void slotExec();
     void slotSendFile();
     void slotHelp();
-    
+    void slotJoyChanged( QPointF v, bool mouseDown );
 };
 
 

@@ -17,6 +17,24 @@ MainWnd::MainWnd( QWidget * parent )
 
     connect( this, SIGNAL(sigImageAccepted()), this, SLOT(slotImageAccepted()), Qt::QueuedConnection );
 
+    QObject::connect( ui.joy1, SIGNAL(valueChanged(QPointF, bool)), 
+                      this,    SLOT(slotJoyChanged(QPointF, bool)) );
+    QObject::connect( ui.joy2, SIGNAL(valueChanged(QPointF, bool)), 
+                      this,    SLOT(slotJoyChanged(QPointF, bool)) );
+    QObject::connect( ui.joy3, SIGNAL(valueChanged(QPointF, bool)), 
+                      this,    SLOT(slotJoyChanged(QPointF, bool)) );
+    QObject::connect( ui.joy4, SIGNAL(valueChanged(QPointF, bool)), 
+                      this,    SLOT(slotJoyChanged(QPointF, bool)) );
+
+
+    ui.joy1->setBackgroundColor1( QColor( qRgb( 0xff, 0xcc, 0x19 ) ) );
+    ui.joy1->setBackgroundColor2( QColor( qRgb( 0xac, 0x86, 0x00 ) ) );
+    ui.joy1->setEffectColor( QColor( qRgb( 0x39, 0xba, 0x00 ) ) );
+
+    ui.joy2->setBackgroundColor1( QColor( qRgb( 0xff, 0xcc, 0x19 ) ) );
+    ui.joy2->setBackgroundColor2( QColor( qRgb( 0xac, 0x86, 0x00 ) ) );
+    ui.joy2->setEffectColor( QColor( qRgb( 0x39, 0xba, 0x00 ) ) );
+
     m_scene = new QGraphicsScene( ui.view );
     m_scene->setBackgroundBrush( QBrush( Qt::gray ) );
     ui.view->setScene( m_scene );
@@ -33,6 +51,7 @@ MainWnd::MainWnd( QWidget * parent )
     connect( ui.connect, SIGNAL(triggered()), this, SLOT(slotConnect()) );
     connect( ui.exec,    SIGNAL(triggered()), this, SLOT(slotExec()) );
     connect( ui.send,    SIGNAL(triggered()), this, SLOT(slotSendFile()) );
+    connect( ui.help,    SIGNAL(triggered()), this, SLOT(slotHelp()) );
 }
 
 MainWnd::~MainWnd()
@@ -73,6 +92,15 @@ static int print( lua_State * L )
 	return mw->print( L );
 }
 
+static int joy( lua_State * L )
+{
+	lua_pushstring( L, "MainWnd" );
+	lua_gettable( L, LUA_REGISTRYINDEX );
+	MainWnd * mw = reinterpret_cast<MainWnd *>( const_cast<void *>( lua_topointer( L, -1 ) ) );
+	lua_pop( L, 1 );
+	return mw->joy( L );
+}
+
 void MainWnd::init( lua_State * L )
 {
 	lua_pushstring( L, "MainWnd" );
@@ -81,6 +109,10 @@ void MainWnd::init( lua_State * L )
 
     lua_pushstring( L, "print" );
     lua_pushcfunction( L, ::print );
+    lua_settable( L, LUA_GLOBALSINDEX );
+
+    lua_pushstring( L, "joy" );
+    lua_pushcfunction( L, ::joy );
     lua_settable( L, LUA_GLOBALSINDEX );
 
 	// Execute file.
@@ -119,6 +151,39 @@ int MainWnd::print( lua_State * L )
 	}
 	lua_settop( L, 0 );
 	return 0;
+}
+
+int MainWnd::joy( lua_State * L )
+{
+	int top = lua_gettop( L );
+    int index;
+    if ( top > 0 )
+        index = static_cast<int>( lua_tonumber( L, 1 ) );
+    else
+        index = 1;
+    QPointF at;
+    {
+        QMutexLocker lock( &mutex );
+        switch ( index )
+        {
+        case 2:
+            at = m_joy2;
+            break;
+        case 3:
+            at = m_joy3;
+            break;
+        case 4:
+            at = m_joy4;
+            break;
+        default:
+            at = m_joy1;
+            break;
+        }
+    }
+    lua_pushnumber( L, static_cast<lua_Number>( at.x() ) );
+    lua_pushnumber( L, static_cast<lua_Number>( at.y() ) );
+    //lua_settop( L, 0 );
+    return 2;
 }
 
 void MainWnd::log( const std::string & stri )
@@ -233,6 +298,34 @@ void MainWnd::sceneResizeEvent( QResizeEvent * e )
 
 void MainWnd::slotHelp()
 {
+    if ( !m_helpWnd )
+        m_helpWnd = new HelpWnd( ":/help/index.html" );
+    m_helpWnd->show();
+}
+
+void MainWnd::slotJoyChanged( QPointF v, bool mouseDown )
+{
+    AnalogPad * ap = qobject_cast<AnalogPad *>( sender() );
+    if ( ap == ui.joy1 )
+    {
+        QMutexLocker lock( &mutex );
+        m_joy1 = v * 100.0;
+    }
+    else if ( ap == ui.joy2 )
+    {
+        QMutexLocker lock( &mutex );
+        m_joy2 = v * 100.0;
+    }
+    else if ( ap == ui.joy3 )
+    {
+        QMutexLocker lock( &mutex );
+        m_joy3 = v * 100.0;
+    }
+    else
+    {
+        QMutexLocker lock( &mutex );
+        m_joy4 = v * 100.0;
+    }
 
 }
 

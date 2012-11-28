@@ -3,6 +3,8 @@ find_package( Qt4 )
 set( QT_USE_QTCORE    True )
 set( QT_USE_QTGUI     True )
 set( QT_USE_QTUITOOLS True )
+set( QT_USE_QTNETWORK True )
+set( QT_USE_QTWEBKIT  True )
 if ( WIN32 )
     set( QT_USE_QTMAIN True )
 endif ( WIN32 )
@@ -14,6 +16,7 @@ find_package( Boost COMPONENTS thread filesystem REQUIRED )
 find_package( Threads )
 
 include_directories( "./src" 
+                     "./src/analogpad" 
                      "${ROOT}/peer_abst/src" 
                      "${ROOT}/peer_qxmpp/src" 
                      "${ROOT}/3dparty/lua-5.1.5/src"
@@ -23,10 +26,14 @@ include_directories( "./src"
                      ${Boost_INCLUDE_DIRS}
                      ${CMAKE_CURRENT_BINARY_DIR} )
 
-file( GLOB src     "./src/*.cpp" )
-file( GLOB headers "./src/*.h" )
-file( GLOB ui      "./src/*.ui" )
-file( GLOB qrc     "./src/*.qrc" )
+file( GLOB src      "./src/*.cpp" )
+file( GLOB headers  "./src/*.h" )
+file( GLOB ui       "./src/*.ui" )
+file( GLOB qrc      "./src/*.qrc" )
+file( GLOB asrc     "./src/analogpad/*.cpp" )
+set( src ${src} ${asrc} )
+file( GLOB aheaders "./src/analogpad/*.h" )
+set( headers ${headers} ${aheaders} )
 message( STATUS "SRC = ${src}" )
 message( STATUS "HEADERS = ${headers}" )
 

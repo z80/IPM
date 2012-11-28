@@ -16,6 +16,16 @@
     <file>images/userlist.png</file>
     <file>images/userlistbig.png</file>
     <file>images/cap.png</file>
+    <file>help/jquery.min.js</file>
+	<file>help/index.html</file>
+	<file>help/api.html</file>
+	<file>help/bluequad.css</file>
+	<file>help/bluequad-print.css</file>
+	<file>help/img/contact.png</file>
+	<file>help/cover.png</file>
+	<file>help/lua.css</file>
+	<file>help/manual.css</file>
+	<file>help/manual.html</file>
 </qresource>
 
 </RCC>
