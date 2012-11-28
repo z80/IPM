@@ -1,5 +1,6 @@
 
 require( "luamcuctrl" )
+require( "bit" )
 
 
 function main()
