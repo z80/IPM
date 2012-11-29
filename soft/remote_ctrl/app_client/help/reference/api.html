@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1251">
+	<TITLE>Contents</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.2  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGEDBY" CONTENT="a a">
+	<META NAME="CHANGED" CONTENT="20121129;13201300">
+	<META NAME="" CONTENT="">
+</HEAD>
+<BODY LANG="ru-RU" DIR="LTR">
+<P STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT SIZE=2>Приложение
+</FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="en-US">app_client
+ </SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2>при запуске
+автоматически исполняет файл </FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="en-US">client.lua.
+</SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2>Все остальные
+файлы, если таковые будут, могут быть запущены оттуда. Исполняемые
+процедуры не обязательно должны выполнять возврат. Процедуры
+выполняются стеком. Другими словами, если при приходе команды
+выполняется какая-то процедура, то она приостанавливается,
+выполняется пришедшая команда, а потом исполнение прерванной
+процедуры возобновляется. Количество таких уровней вложенности может
+быть произвольным в разумных пределах.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT SIZE=2>app_client
+</FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="ru-RU">при
+соединении считывает из папки файл </SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2>client.ini
+</FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="ru-RU">и
+получает из него параметры соединения.</SPAN></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm"><B><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="ru-RU">jid_self</SPAN></FONT></FONT></B></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="ru-RU"><SPAN STYLE="font-weight: normal">Этот
+параметр &mdash; логин пользователя на сервере </SPAN></SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="font-weight: normal">XMPP.</SPAN></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm"><B><FONT COLOR="#000000"><FONT SIZE=2>p</FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="ru-RU">assword</SPAN></FONT></FONT></B></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="ru-RU">Пароль
+пользователя на сервере </SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2>XMPP.</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm"><B><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="ru-RU">host</SPAN></FONT></FONT></B></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="ru-RU">В
+случае, если доменное имя сервера не может быть разрешено из логина,
+оно может быть явно указано параметром </SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2>host.</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm"><B><FONT COLOR="#000000"><FONT SIZE=2>t</FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="ru-RU">ls</SPAN></FONT></FONT></B></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="ru-RU">Опциональное
+задействование шифрования </SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><B>TLS</B></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2>
+</FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="ru-RU">при
+соединении. Для </SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2>GoogleTalk
+</FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="ru-RU">должно
+быть равно </SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><B>true</B></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2>,
+</FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="ru-RU">иначе
+не подсоединится</SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2>.</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm"><B><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="ru-RU">jid_dest</SPAN></FONT></FONT></B></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT SIZE=2>Логин
+управляемого приложения, которому будут отправляться команды.</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm"><B><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="ru-RU">update_dest</SPAN></FONT></FONT></B></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="ru-RU">Параметр
+определяет, если пришедшая команда не от пользвателя </SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="ru-RU"><B>jid_dest</B></SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="ru-RU">,
+то значение </SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><B>jid_dest</B></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2>
+</FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="ru-RU">обновляется.</SPAN></FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT SIZE=2>На
+данный момент оборудование находится в разработке. Для отработки
+каких-либо алгоритмов вставлены эмуляции элементов управления на
+пульте робота &mdash; 4 кружка, которые временно заменяют настоящие
+джойстики.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT SIZE=2>Функциональность
+</FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="en-US">Lua
+</SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2>расширена
+приведёнными ниже функциями</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><B><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="">msleep(
+ms )</SPAN></FONT></FONT></B><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG=""><SPAN STYLE="font-weight: normal">
+</SPAN></SPAN></FONT></FONT>
+</P>
+<P STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><SPAN STYLE="font-weight: normal">Остановка
+исполнения скрипта на указанное время в милисекундах.</SPAN></FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><B><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="ru-RU">с</SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="">onnect()</SPAN></FONT></FONT></B></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT SIZE=2>Соединение
+с сервером </FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="en-US">XMPP
+/ GoogleTalk.</SPAN></FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><B><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="en-US">i</SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="">sConnected()</SPAN></FONT></FONT></B></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT SIZE=2>Проверка
+наличия соединения. Возвращает </FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="en-US"><B>true</B></SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="en-US">/</SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="en-US"><B>false</B></SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="en-US">.</SPAN></FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><B><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="">send(
+cmd )</SPAN></FONT></FONT></B></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT SIZE=2>Отправка
+команды</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><B><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="">sendFile(
+fileName, destFileName )</SPAN></FONT></FONT></B></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT SIZE=2>Отправка
+файла. Первый аргумент &mdash; исходное имя отправляемого файла.
+Второй аргумент &mdash; имя файла при полкчении.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><B><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="en-US">s</SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="">top()</SPAN></FONT></FONT></B></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT SIZE=2>Остановка
+исполнения всех запущенных команд.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><B><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="en-US">p</SPAN></FONT></FONT><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="">rint(
+... )</SPAN></FONT></FONT></B></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT SIZE=2>Вывод/печать
+аргументов.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><B><FONT COLOR="#000000"><FONT SIZE=2><SPAN LANG="">joy(
+index )</SPAN></FONT></FONT></B></P>
+<P STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT SIZE=2>Опрос
+состояний эмуляции джойстиков (кружки на экране). Аргумент &mdash;
+номер джойстика (от 1 до 4). Возвращает два числа &mdash; отклонение
+от центра в процентах.</FONT></FONT></P>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>
