@@ -2,16 +2,16 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 [Setup]
-AppName=robocam
-AppVerName=robocam
+AppName=robot
+AppVerName=robot
 AppPublisher=ipm
 AppPublisherURL=http://www.ipm.com/
 AppSupportURL=http://www.ipm.com/
 AppUpdatesURL=http://www.ipm.com/
-DefaultDirName=c:\programs\robocam
-DefaultGroupName=robocam
+DefaultDirName=c:\programs\robot
+DefaultGroupName=robot
 AllowNoIcons=yes
-OutputBaseFilename=robocam
+OutputBaseFilename=robot
 SetupIconFile=icon.ico
 Compression=lzma
 SolidCompression=yes
@@ -29,7 +29,7 @@ Source: "..\build.app\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs 
 
 [Icons]
 Name: "{group}\app_client"; Filename: "{app}\app_client.exe"; WorkingDir: "{app}"
-Name: "{group}\{cm:UninstallProgram,1-Wire}"; Filename: "{uninstallexe}"
+Name: "{group}\{cm:UninstallProgram,robot}"; Filename: "{uninstallexe}"
 Name: "{commondesktop}\app_client"; Filename: "{app}\app_client.exe"; WorkingDir: "{app}"; Tasks: desktopicon
 
 [Run]
