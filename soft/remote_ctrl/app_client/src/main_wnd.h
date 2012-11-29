@@ -5,7 +5,6 @@
 #include <QtGui>
 #include "peer_qxmpp.h"
 #include "ui_main_wnd.h"
-#include "help_wnd.h"
 
 class MainWnd: public QMainWindow
 {
@@ -36,7 +35,6 @@ private:
 	PeerQxmpp * m_peer;
 	QTime       m_time;
 	QStringList m_logList;
-    QPointer<HelpWnd> m_helpWnd;
 
     QGraphicsScene      * m_scene;
     QGraphicsPixmapItem * m_image;

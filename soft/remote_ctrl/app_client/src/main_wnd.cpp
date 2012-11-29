@@ -298,9 +298,7 @@ void MainWnd::sceneResizeEvent( QResizeEvent * e )
 
 void MainWnd::slotHelp()
 {
-    if ( !m_helpWnd )
-        m_helpWnd = new HelpWnd( ":/help/index.html" );
-    m_helpWnd->show();
+    QDesktopServices::openUrl( QUrl( "help\\index.html" ) );
 }
 
 void MainWnd::slotJoyChanged( QPointF v, bool mouseDown )
