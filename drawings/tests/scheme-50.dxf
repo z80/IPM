@@ -12309,7 +12309,7 @@ iso
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -15583,7 +15583,7 @@ iso
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -17227,7 +17227,7 @@ iso
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -17267,7 +17267,7 @@ iso
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -17451,7 +17451,7 @@ iso
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -17587,7 +17587,7 @@ iso
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -17651,7 +17651,7 @@ iso
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -34805,15 +34805,15 @@ ByLayer
  71
 5
  72
-0
+2
   1
 Notebook
   7
-normallatin1
+iso
  50
 0.0
  73
-1
+0
  44
 1.0
   0
@@ -37709,6 +37709,1110 @@ AcDbSpline
  30
 0.0
   0
+CIRCLE
+  5
+567
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-800.0
+ 20
+3465.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+568
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-1000.0810769916449772
+ 20
+3392.5
+ 30
+0.0
+ 40
+7.0987077247625763
+  0
+CIRCLE
+  5
+569
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-999.9937717907024535
+ 20
+3362.5
+ 30
+0.0
+ 40
+7.0116220563023361
+  0
+CIRCLE
+  5
+56A
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-937.5
+ 20
+3322.9232537216862511
+ 30
+0.0
+ 40
+7.0943877739821559
+  0
+CIRCLE
+  5
+56B
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-917.5
+ 20
+3322.9177971467074713
+ 30
+0.0
+ 40
+7.0998307906023248
+  0
+CIRCLE
+  5
+56C
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-897.5
+ 20
+3322.9177971467233874
+ 30
+0.0
+ 40
+7.0998307905864486
+  0
+CIRCLE
+  5
+56D
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-877.5
+ 20
+3322.9689525379485531
+ 30
+0.0
+ 40
+7.0488033320287844
+  0
+CIRCLE
+  5
+56E
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-857.5
+ 20
+3323.0542115232879041
+ 30
+0.0
+ 40
+6.963761739406837
+  0
+CIRCLE
+  5
+56F
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-937.5
+ 20
+3119.9332049159197595
+ 30
+0.0
+ 40
+7.0844613599327833
+  0
+CIRCLE
+  5
+570
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-877.5
+ 20
+3119.9673085101180732
+ 30
+0.0
+ 40
+7.0504432195329167
+  0
+CIRCLE
+  5
+571
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-970.0
+ 20
+2600.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+572
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-540.0
+ 20
+2550.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+573
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-340.0
+ 20
+2475.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+574
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-340.0
+ 20
+2445.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+575
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-340.0
+ 20
+2415.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+576
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-340.0
+ 20
+2385.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+577
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-700.0
+ 20
+2700.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+578
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+-700.0
+ 20
+3120.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+579
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+330.0
+ 20
+2740.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+57A
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+260.0
+ 20
+1800.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+57B
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+220.0
+ 20
+1800.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+57C
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+730.0
+ 20
+3200.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+57D
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+830.0
+ 20
+3200.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+57E
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+930.0
+ 20
+3200.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+57F
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+1030.0
+ 20
+3200.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+580
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+1130.0
+ 20
+3200.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+581
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+1230.0
+ 20
+3200.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+582
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+830.0
+ 20
+2900.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+583
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+930.0
+ 20
+2900.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+584
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+1025.0
+ 20
+2901.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+585
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+1400.0
+ 20
+1170.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+586
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+1130.0
+ 20
+2900.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+587
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+1300.0
+ 20
+2900.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+588
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+400.0
+ 20
+1800.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+589
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+450.0
+ 20
+1800.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+58A
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+360.0
+ 20
+1050.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+58B
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+760.0
+ 20
+1210.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+58C
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+760.0
+ 20
+1125.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+58D
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+760.0
+ 20
+950.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+58E
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+760.0
+ 20
+925.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+58F
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+800.0
+ 20
+1740.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+590
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+800.0
+ 20
+1925.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+591
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+800.0
+ 20
+2025.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+592
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+800.0
+ 20
+2125.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+593
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+800.0
+ 20
+2225.0
+ 30
+0.0
+ 40
+7.0
+  0
+CIRCLE
+  5
+594
+100
+AcDbEntity
+100
+AcDbCircle
+  8
+drawing
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+800.0
+ 20
+2470.0
+ 30
+0.0
+ 40
+7.0
+  0
 ENDSEC
   0
 SECTION
@@ -37747,7 +38851,7 @@ E
   3
 AcDbVariableDictionary
 350
-567
+595
   0
 DICTIONARY
   5
@@ -38211,7 +39315,7 @@ Layout2
   0
 DICTIONARY
   5
-567
+595
 100
 AcDbDictionary
 281
@@ -38219,15 +39323,15 @@ AcDbDictionary
   3
 DIMASSOC
 350
-569
+597
   3
 HIDETEXT
 350
-568
+596
   0
 DICTIONARYVAR
   5
-568
+596
 100
 DictionaryVariables
 280
@@ -38237,7 +39341,7 @@ DictionaryVariables
   0
 DICTIONARYVAR
   5
-569
+597
 100
 DictionaryVariables
 280
