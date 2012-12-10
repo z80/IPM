@@ -1,24 +1,24 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 22/11/2012 10:39:42
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Mon 10 Dec 2012 08:45:17 PM MSK
 
 BeginCmp
 TimeStamp = /509DDBA2/509E3AD6;
 Reference = adc1;
 ValeurCmp = AD5300;
-IdModule  = SO8E;
+IdModule  = MSOP_8;
 EndCmp
 
 BeginCmp
 TimeStamp = /509DDBA2/50AB7C66;
 Reference = adc2;
 ValeurCmp = AD5300;
-IdModule  = SO8E;
+IdModule  = MSOP_8;
 EndCmp
 
 BeginCmp
 TimeStamp = /509DDBA2/50AB7CCB;
 Reference = adc3;
 ValeurCmp = AD5300;
-IdModule  = SO8E;
+IdModule  = MSOP_8;
 EndCmp
 
 BeginCmp
@@ -591,42 +591,42 @@ EndCmp
 BeginCmp
 TimeStamp = /509DDBA2/50A28BF6;
 Reference = Q1;
-ValeurCmp = MOSFET_P;
+ValeurCmp = irlml2244;
 IdModule  = SOT23GDS;
 EndCmp
 
 BeginCmp
 TimeStamp = /509DDBA2/50A28B82;
 Reference = Q2;
-ValeurCmp = MOSFET_N;
+ValeurCmp = irlml2402;
 IdModule  = SOT23GDS;
 EndCmp
 
 BeginCmp
 TimeStamp = /509DDBA2/50A28C55;
 Reference = Q3;
-ValeurCmp = NPN;
+ValeurCmp = bc847;
 IdModule  = SOT23EBC;
 EndCmp
 
 BeginCmp
 TimeStamp = /509DDBA2/50A28D4E;
 Reference = Q4;
-ValeurCmp = MOSFET_P;
+ValeurCmp = irlml2244;
 IdModule  = SOT23GDS;
 EndCmp
 
 BeginCmp
 TimeStamp = /509DDBA2/50A28D4B;
 Reference = Q5;
-ValeurCmp = NPN;
+ValeurCmp = bc847;
 IdModule  = SOT23EBC;
 EndCmp
 
 BeginCmp
 TimeStamp = /509DDBA2/50A28BD6;
 Reference = Q6;
-ValeurCmp = MOSFET_N;
+ValeurCmp = irlml2402;
 IdModule  = SOT23GDS;
 EndCmp
 
