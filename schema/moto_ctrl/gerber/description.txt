@@ -1,0 +1,10 @@
+Board size 112x112mm
+     Layer files
+Top        - moto_ctrl-Front.gtl
+Bottom     - moto_ctrl-Back.gbl
+TopMask    - moto_ctrl-Mask_Front.gts
+BottomMask - moto_ctrl-Mask_Back.gbs
+BoardEdge  - moto_ctrl-PCB_Edges.gbr
+Drill      - moto_ctrl.drl
+
+
