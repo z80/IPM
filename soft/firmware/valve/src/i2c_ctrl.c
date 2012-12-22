@@ -90,6 +90,8 @@ static msg_t i2cThread( void *arg )
             status = i2cSlaveIoTimeout( &I2CD1, addr,
                                         (uint8_t *)&dataOut,  sizeof( dataOut ),
                                         (uint8_t *)&dataIn, sizeof( dataIn ) );
+            // Here it should be some type of delay
+            // because i2cSlaveIo returns immediately.
             write( dataOut );
         }
         /*if ( a == 0b00000111 )
