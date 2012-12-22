@@ -10,6 +10,9 @@ public:
 	McuCtrl();
 	~McuCtrl();
 
+    bool inputs( unsigned long * data, int len = 3 );
+    bool setOutputs( unsigned long * data, int len = 3 );
+
 	bool powerOffReset();
 	bool powerConfig( int onFirst, int onRegular, int off );
     bool powerEn( bool en );

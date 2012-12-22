@@ -14,6 +14,33 @@ McuCtrl::~McuCtrl()
 
 }
 
+bool McuCtrl::inputs( unsigned long * data, int len )
+{
+    std::string stri = "st\r\n";
+    int cntWr = write( stri );
+    int cntRd = read( stri );
+    // Here it should be output parser.
+    return true;
+}
+
+bool McuCtrl::setOutputs( unsigned long * data, int len )
+{
+    std::ostringstream out;
+    out << "out ";
+    for ( int i=0; i<len; i++ )
+    {
+        out << data[i];
+        if ( i < (len-1) )
+            out << " ";
+    }
+    out << "\r\n";
+    int cntWr = write( out.str() );
+    std::string stri;
+    stri.resize( 64 );
+    int cntRd = read( stri );
+    return ( cntRd >= cntWr );
+}
+
 bool McuCtrl::powerOffReset()
 {
 	std::string stri = "pwrrst\r\n";
