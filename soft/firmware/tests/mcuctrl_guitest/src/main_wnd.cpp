@@ -58,6 +58,7 @@ void MainWnd::slotTimeout()
         label = QString( "%1%2" ).arg( label ).arg( stri );
     }
     ui.state->setText( label );
+    setWindowTitle( "OK!" );
 }
 
 
