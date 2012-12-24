@@ -9,3 +9,4 @@ endif ( WIN32 )
 
 add_subdirectory( "./mcuctrl" )
 add_subdirectory( "./mcuctrl_test" )
+add_subdirectory( "./mcuctrl_guitest" )
