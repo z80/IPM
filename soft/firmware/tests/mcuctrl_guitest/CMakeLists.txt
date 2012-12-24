@@ -23,7 +23,7 @@ set( src ${src} ${moc_qrc} )
 
 add_executable( guitest  ${src} )
 target_link_libraries( guitest ${QT_LIBRARIES} mcuctrl )
-
+install( TARGETS guitest DESTINATION "." )
 
 
 
