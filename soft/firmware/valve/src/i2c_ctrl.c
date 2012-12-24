@@ -30,7 +30,7 @@ static msg_t i2cThread( void *arg )
     while ( 1 )
     {
         //chThdSleepMilliseconds( 1 );
-        chThdSleepMilliseconds( 500 );
+        chThdSleepMilliseconds( 50 );
         // Read ADDRESS pins.
         uint16_t ind = palReadPad( ADDR_PORT, ADDR_0_PIN ) |
                      ( palReadPad( ADDR_PORT, ADDR_1_PIN ) << 1 ) |
@@ -38,16 +38,16 @@ static msg_t i2cThread( void *arg )
         ind = (~ind) & 0x0007;
         //setLeds( a );
 
-    	static uint8_t master;
-    	static msg_t status;
+        static uint8_t master;
+        static msg_t status;
         static systime_t tmo;
         tmo = MS2ST( 100 );
         master = ( ind == 0 ) ? 1 : 0;
-    	// I/O with other boards.
+        // I/O with other boards.
         static uint32_t dataOut;
         static uint32_t dataIn;
         if ( master )
-    	{
+        {
             // First the board itself.
             chMtxLock( &mutex );
             ins[0] = valueRead();
@@ -56,7 +56,7 @@ static msg_t i2cThread( void *arg )
             // After all slave boards.
             static int8_t i;
             for ( i=0; i<I2C_SLAVES_CNT; i++ )
-    	    {
+            {
                 // To make IO thread safe IO itself takes place in separate variables.
                 // But storage arrays are filled within locked mutex.
                 // Get output.
@@ -68,21 +68,22 @@ static msg_t i2cThread( void *arg )
                 status = i2cMasterTransmitTimeout( &I2CD1, I2C_BASE_ADDR+i,
                                                    (uint8_t *)(&dataOut), sizeof(dataOut),
                                                    0,  0,
-    	    			                           tmo );
+                                                   tmo );
                 status = i2cMasterReceiveTimeout( &I2CD1, I2C_BASE_ADDR+i,
                                                   (uint8_t *)(&dataIn),  sizeof(dataIn),
                                                   tmo );
                 // Get back input.
                 chMtxLock( &mutex );
-                ins[i+1] = (dataIn & 0x0000FFFF);
+                //ins[i+1] = (dataIn & 0x0000FFFF);
+                ins[i+1] = dataIn;
                 chMtxUnlock();
             }
             // Here should be IO with moto controller boards and accelerometer.
             // .....
 
-    	}
-    	else
-    	{
+        }
+        else
+        {
             static uint8_t addr;
             addr = I2C_BASE_ADDR + ind - 1;
             dataIn = valueRead();
@@ -142,9 +143,9 @@ void initI2c( void )
         ins[i]  = 0;
     }
 
-	// Initializing mutex.
+    // Initializing mutex.
     chMtxInit( &mutex );
-	// Creating thread.
+    // Creating thread.
     chThdCreateStatic( waI2c, sizeof(waI2c), NORMALPRIO, i2cThread, NULL );
 }
 
@@ -166,9 +167,9 @@ void setOutput( uint8_t index, uint32_t * val )
 
 void cmd_state( BaseChannel *chp, int argc, char * argv [] )
 {
-	(void)chp;
-	(void)argc;
-	(void)argv;
+    (void)chp;
+    (void)argc;
+    (void)argv;
     uint32_t v;
     int8_t i;
     for ( i=0; i<(I2C_SLAVES_CNT+1); i++ )
@@ -192,7 +193,7 @@ void cmd_set_output( BaseChannel *chp, int argc, char * argv [] )
     }
     else
     {
-    	uint32_t v;
+        uint32_t v;
         int8_t i;
         for ( i=0; i<(I2C_SLAVES_CNT+1); i++ )
         {
@@ -214,20 +215,20 @@ void testSetMaster( uint8_t set )
 
 uint8_t testSend( uint8_t addr, uint32_t * val )
 {
-	static msg_t status;
+    static msg_t status;
     static systime_t tmo;
     tmo = MS2ST( 1000 );
-	status = RDY_OK;
-	status = i2cMasterTransmitTimeout( &I2CD1, addr,
-			                           (uint8_t *)&(val), sizeof(uint32_t),
-			                           0,  0,
-			                           tmo );
+    status = RDY_OK;
+    status = i2cMasterTransmitTimeout( &I2CD1, addr,
+                                       (uint8_t *)&(val), sizeof(uint32_t),
+                                       0,  0,
+                                       tmo );
     return ( status = RDY_OK ) ? 0 : 1;
 }
 
 uint8_t testReceive( uint8_t addr, uint32_t * val )
 {
-	static msg_t status;
+    static msg_t status;
     static systime_t tmo;
     tmo = MS2ST( 1000 );
     status = i2cSlaveIoTimeout( &I2CD1, addr,
@@ -244,63 +245,63 @@ void tst_i2c_set_addr( BaseChannel *chp, int argc, char * argv[] )
 {
     if ( argc > 0 )
     {
-    	int32_t v = atoi( argv[0] );
-    	//testSetAddr( (uint8_t)v );
-    	testAddr = (uint8_t)v;
-    	chprintf( chp, "ok:addr\r\n" );
+        int32_t v = atoi( argv[0] );
+        //testSetAddr( (uint8_t)v );
+        testAddr = (uint8_t)v;
+        chprintf( chp, "ok:addr\r\n" );
     }
     else
-    	chprintf( chp, "err:arg expected\r\n" );
+        chprintf( chp, "err:arg expected\r\n" );
 }
 
 void tst_i2c_set_master( BaseChannel *chp, int argc, char * argv[] )
 {
     if ( argc > 0 )
     {
-    	uint8_t v = ( argv[0][0] != '0' ) ? 1 : 0;
+        uint8_t v = ( argv[0][0] != '0' ) ? 1 : 0;
         testSetMaster( v );
     }
     else
         testSetMaster( 0 );
-	chprintf( chp, "ok:mr\r\n" );
+    chprintf( chp, "ok:mr\r\n" );
 }
 
 void tst_i2c_set_buffer( BaseChannel *chp, int argc, char * argv[] )
 {
-	testCnt = argc;
-	uint8_t i;
-	for ( i=0; i<argc; i++ )
-	{
+    testCnt = argc;
+    uint8_t i;
+    for ( i=0; i<argc; i++ )
+    {
         testBuffer[i] = (uint8_t)atoi( argv[i] );
-	}
-	chprintf( chp, "ok:buf\r\n" );
+    }
+    chprintf( chp, "ok:buf\r\n" );
 }
 
 void tst_i2c_io( BaseChannel *chp, int argc, char * argv[] )
 {
-	(void)argc;
-	(void)argv;
+    (void)argc;
+    (void)argv;
     if ( testMaster )
-	{
-		static msg_t status;
-	    static systime_t tmo;
+    {
+        static msg_t status;
+        static systime_t tmo;
         tmo = MS2ST( 1000 );
-		status = RDY_OK;
-		status = i2cMasterTransmitTimeout( &I2CD1, testAddr,
+        status = RDY_OK;
+        status = i2cMasterTransmitTimeout( &I2CD1, testAddr,
                                            testBuffer, /*testCnt*/ 4,
-				                           0,  0,
-				                           tmo );
+                                           0,  0,
+                                           tmo );
         chprintf( chp, "master ok:%d", status );
 
-	}
-	else
-	{
+    }
+    else
+    {
         i2cSlaveIoTimeout( &I2CD1, testAddr,
                            testBuffer, /*testCnt*/ 4,
                            0,  0 );
         chThdSleepSeconds( 2 );
         chprintf( chp, "slave ok:%d", I2CD1.state );
-	}
+    }
 }
 
 void tst_i2c_buffer( BaseChannel *chp, int argc, char * argv[] )
