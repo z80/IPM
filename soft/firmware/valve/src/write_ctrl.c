@@ -68,8 +68,8 @@ static msg_t writeThread( void *arg )
 
 void initWrite( void )
 {
-    palSetPad( OUT_PORT,     OUT_EN_PIN );
-    //palClearPad( OUT_PORT,     OUT_EN_PIN );
+    //palSetPad( OUT_PORT,     OUT_EN_PIN );
+    palClearPad( OUT_PORT,     OUT_EN_PIN );
     palSetPad( OUT_PORT,     OUT_MR_PIN );
     palSetPad( OUT_PORT,     OUT_CP_PIN );
     palSetPad( OUT_PORT,     OUT_DSA_PIN );
