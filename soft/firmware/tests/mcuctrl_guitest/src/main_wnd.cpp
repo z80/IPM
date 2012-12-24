@@ -53,8 +53,9 @@ void MainWnd::slotTimeout()
         v2 = (v[i] >> 8)  & 0b00001111;
         v3 = (v[i] >> 4)  & 0b00001111;
         v4 = v[i]         & 0b00001111;
-        QString stri = QString( "%1 %2 %3 %4\n" ).arg( v1, 4, 2, QChar( '0' ) ).arg( v2, 4, 2, QChar( '0' ) )
-                                               .arg( v3, 4, 2, QChar( '0' ) ).arg( v4, 4, 2, QChar( '0' ) );
+        QString stri = QString( "%1 %2 %3 %4\n%5\n" ).arg( v1, 4, 2, QChar( '0' ) ).arg( v2, 4, 2, QChar( '0' ) )
+                                                     .arg( v3, 4, 2, QChar( '0' ) ).arg( v4, 4, 2, QChar( '0' ) )
+                                                     .arg( v[i], 8, 16, QChar( '0' ) );
         label = QString( "%1%2" ).arg( label ).arg( stri );
     }
     ui.state->setText( label );
