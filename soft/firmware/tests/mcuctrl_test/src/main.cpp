@@ -12,7 +12,13 @@ int main( int argc, char * argv[] )
     if ( !res )
         return 1;
 
-    std::string stri;
+    const int cnt = 2;
+    unsigned long v[ cnt ];
+    res = c.inputs( v, cnt );
+    res = c.inputs( v, cnt );
+    res = c.inputs( v, cnt );
+
+    /*std::string stri;
     stri.resize( 128 );
     int cnt;
     cnt = c.read( stri );
@@ -44,7 +50,7 @@ int main( int argc, char * argv[] )
 
     cnt = c.write( "st\r\n" );
     cnt = c.read( stri );
-    std::cout << stri;
+    std::cout << stri;*/
 
 
     /*cnt = c.write( "i2c_set_buffer 1 3 2 1\r\n" );
