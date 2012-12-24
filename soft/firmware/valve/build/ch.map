@@ -1975,7 +1975,7 @@ destructors     0x080000ec        0x0
                 0x20005000                __heap_end__ = __ram_end__
 OUTPUT(build/ch.elf elf32-littlearm)
 
-.debug_abbrev   0x00000000     0x6d47
+.debug_abbrev   0x00000000     0x6d5e
  .debug_abbrev  0x00000000       0xd9 build/obj/crt0.o
  .debug_abbrev  0x000000d9       0x74 build/obj/vectors.o
  .debug_abbrev  0x0000014d       0x41 build/obj/chcore.o
@@ -2056,10 +2056,10 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_abbrev  0x000062e3      0x228 build/obj/usb_ctrl.o
  .debug_abbrev  0x0000650b      0x1ee build/obj/read_ctrl.o
  .debug_abbrev  0x000066f9      0x1d1 build/obj/write_ctrl.o
- .debug_abbrev  0x000068ca      0x2f6 build/obj/i2c_ctrl.o
- .debug_abbrev  0x00006bc0      0x187 build/obj/led_ctrl.o
+ .debug_abbrev  0x000068ca      0x30d build/obj/i2c_ctrl.o
+ .debug_abbrev  0x00006bd7      0x187 build/obj/led_ctrl.o
 
-.debug_info     0x00000000    0x1d6f8
+.debug_info     0x00000000    0x1d6fc
  .debug_info    0x00000000      0x345 build/obj/crt0.o
  .debug_info    0x00000345       0xb5 build/obj/vectors.o
  .debug_info    0x000003fa       0x8b build/obj/chcore.o
@@ -2140,8 +2140,8 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_info    0x0001a18a     0x11d6 build/obj/usb_ctrl.o
  .debug_info    0x0001b360      0x68a build/obj/read_ctrl.o
  .debug_info    0x0001b9ea      0x651 build/obj/write_ctrl.o
- .debug_info    0x0001c03b     0x10ec build/obj/i2c_ctrl.o
- .debug_info    0x0001d127      0x5d1 build/obj/led_ctrl.o
+ .debug_info    0x0001c03b     0x10f0 build/obj/i2c_ctrl.o
+ .debug_info    0x0001d12b      0x5d1 build/obj/led_ctrl.o
 
 .debug_line     0x00000000     0xb74a
  .debug_line    0x00000000      0x173 build/obj/crt0.o

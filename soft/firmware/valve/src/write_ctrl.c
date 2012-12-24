@@ -15,7 +15,7 @@ static void writeInternal( void )
     val = pendValue;
     chMtxUnlock();
     if ( val == curValue )
-    	return;
+        return;
 
     curValue = val;
     // set clock low.
@@ -68,20 +68,20 @@ static msg_t writeThread( void *arg )
 
 void initWrite( void )
 {
-    palSetPad( OUT_PORT,     OUT_EN_PIN );
-    //palClearPad( OUT_PORT,     OUT_EN_PIN );
-	palSetPad( OUT_PORT,     OUT_MR_PIN );
-	palSetPad( OUT_PORT,     OUT_CP_PIN );
-	palSetPad( OUT_PORT,     OUT_DSA_PIN );
-	palSetPadMode( IN_PORT, OUT_EN_PIN, PAL_MODE_OUTPUT_PUSHPULL );
-	palSetPadMode( IN_PORT, OUT_MR_PIN, PAL_MODE_OUTPUT_PUSHPULL );
-	palSetPadMode( IN_PORT, OUT_CP_PIN, PAL_MODE_OUTPUT_PUSHPULL );
-	palSetPadMode( IN_PORT, OUT_DSA_PIN, PAL_MODE_OUTPUT_PUSHPULL );
+    //palSetPad( OUT_PORT,     OUT_EN_PIN );
+    palClearPad( OUT_PORT,     OUT_EN_PIN );
+    palSetPad( OUT_PORT,     OUT_MR_PIN );
+    palSetPad( OUT_PORT,     OUT_CP_PIN );
+    palSetPad( OUT_PORT,     OUT_DSA_PIN );
+    palSetPadMode( IN_PORT, OUT_EN_PIN, PAL_MODE_OUTPUT_PUSHPULL );
+    palSetPadMode( IN_PORT, OUT_MR_PIN, PAL_MODE_OUTPUT_PUSHPULL );
+    palSetPadMode( IN_PORT, OUT_CP_PIN, PAL_MODE_OUTPUT_PUSHPULL );
+    palSetPadMode( IN_PORT, OUT_DSA_PIN, PAL_MODE_OUTPUT_PUSHPULL );
 
-	// Initializing mutex.
-	chMtxInit( &mutex );
-	// Creating thread.
-	chThdCreateStatic( waWrite, sizeof(waWrite), NORMALPRIO, writeThread, NULL );
+    // Initializing mutex.
+    chMtxInit( &mutex );
+    // Creating thread.
+    chThdCreateStatic( waWrite, sizeof(waWrite), NORMALPRIO, writeThread, NULL );
 }
 
 void write( uint32_t val )
