@@ -9,7 +9,8 @@ static uint32_t value = 0;
 
 static void read( uint32_t * val )
 {
-     // Clear clock.
+    /*
+    // Clear clock.
     palClearPad( IN_PORT, IN_CP_PIN );
     //chThdSleepMicroseconds( 1 );
     chThdSleepMilliseconds( 1 );
@@ -89,6 +90,8 @@ static void read( uint32_t * val )
     chMtxLock( &mutex );
     *val = result;
     chMtxUnlock();
+    */
+    *val = 0;
 }
 
 static WORKING_AREA( waRead, 256 );
