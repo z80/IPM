@@ -10,7 +10,12 @@
 #include "led_ctrl.h"
 #include "hdw_config.h"
 
-
+static const I2CConfig i2cfg1 =
+{
+    OPMODE_I2C,
+    10000,
+    STD_DUTY_CYCLE,
+};
 
 static Mutex    mutex;
 static uint32_t outs[ I2C_SLAVES_CNT+1 ]; // +1 because including master board itself.
@@ -69,9 +74,19 @@ static msg_t i2cThread( void *arg )
                                                    (uint8_t *)(&dataOut), sizeof(dataOut),
                                                    0,  0,
                                                    tmo );
+                if ( status == RDY_TIMEOUT )
+                {
+                    i2cStart( &I2CD1, &i2cfg1 );
+                    continue;
+                }
                 status = i2cMasterReceiveTimeout( &I2CD1, I2C_BASE_ADDR+i,
                                                   (uint8_t *)(&dataIn),  sizeof(dataIn),
                                                   tmo );
+                if ( status == RDY_TIMEOUT )
+                {
+                    i2cStart( &I2CD1, &i2cfg1 );
+                    continue;
+                }
                 // Get back input.
                 chMtxLock( &mutex );
                 //ins[i+1] = (dataIn & 0x0000FFFF);
@@ -112,13 +127,6 @@ static msg_t i2cThread( void *arg )
 
     return 0;
 }
-
-static const I2CConfig i2cfg1 =
-{
-    OPMODE_I2C,
-    10000,
-    STD_DUTY_CYCLE,
-};
 
 void initI2c( void )
 {
