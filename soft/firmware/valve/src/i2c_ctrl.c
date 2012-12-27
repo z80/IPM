@@ -13,7 +13,7 @@
 static const I2CConfig i2cfg1 =
 {
     OPMODE_I2C,
-    10000,
+    100000,
     STD_DUTY_CYCLE,
 };
 
@@ -74,16 +74,20 @@ static msg_t i2cThread( void *arg )
                                                    (uint8_t *)(&dataOut), sizeof(dataOut),
                                                    0,  0,
                                                    tmo );
-                if ( status == RDY_TIMEOUT )
+                if ( status != RDY_OK )
                 {
+                    i2cStop( &I2CD1 );
+                    chThdSleepMilliseconds( 100 );
                     i2cStart( &I2CD1, &i2cfg1 );
                     continue;
                 }
                 status = i2cMasterReceiveTimeout( &I2CD1, I2C_BASE_ADDR+i,
                                                   (uint8_t *)(&dataIn),  sizeof(dataIn),
                                                   tmo );
-                if ( status == RDY_TIMEOUT )
+                if ( status != RDY_OK )
                 {
+                    i2cStop( &I2CD1 );
+                    chThdSleepMilliseconds( 100 );
                     i2cStart( &I2CD1, &i2cfg1 );
                     continue;
                 }
