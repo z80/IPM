@@ -51,27 +51,8 @@ int main( int argc, char * argv[] )
     //cnt = c.read( stri );
     //cnt = c.read( stri );
 
-    bool r;
+    //bool r;
     //r = c.powerConfig( 3, 3, 3 );
-    r = c.powerEn( true );
-    r = c.led( true );
-    r = c.led( false );
-    r = c.motoConfig( true, 30 );
-    int val;
-    r = c.motoSet( true, true, true, true );
-    r = c.moto( val );
-    r = c.motoSet( true, false, true, false );
-    r = c.moto( val );
-    r = c.motoSet( true, false, false, false );
-    r = c.moto( val );
-    r = c.motoSet( true, true, true, true );
-    r = c.moto( val );
-    //r = c.motoReset();
-    r = c.motoConfig( false, 3 );
-    r = c.adcConfig( true );
-    int val1, val2;
-    r = c.adc( val1, val2 );
-    r = c.powerEn( false );
 
     return 0;
 }

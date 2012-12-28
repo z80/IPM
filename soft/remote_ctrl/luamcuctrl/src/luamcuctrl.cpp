@@ -65,7 +65,7 @@ static int write( lua_State * L )
 {
 	McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
     std::string stri = lua_tostring( L, 2 );
-    int res = io->write( stri ) > 0;
+    int res = io->write( stri );
     lua_pushnumber( L, static_cast<lua_Number>( res ) );
     return 1;
 }
@@ -82,135 +82,53 @@ static int read( lua_State * L )
     return 1;
 }
 
-static int led( lua_State * L )
+static int setOutputs( lua_State * L )
 {
 	McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
-	bool en = ( lua_toboolean( L , 2 ) > 0 );
-
-    bool res = io->led( en );
-    lua_pushboolean( L, ( res ) ? 1 : 0 );
+    int cnt = lua_gettop( L );
+    std::basic_string<unsigned long> args;
+    args.resize( cnt - 1 );
+    for ( int i=2; i<=cnt; i++ )
+        args[i-2] = static_cast<unsigned long>( lua_tonumber( L, i ) );
+    bool res = io->setOutputs( const_cast<unsigned long *>( args.data() ), static_cast<int>( args.size() ) );
+    lua_pushboolean( L, res ? 1 : 0 );
     return 1;
 }
 
-static int powerOffReset( lua_State * L )
+static int inputs( lua_State * L )
 {
 	McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
-	bool res = io->powerOffReset();
-	lua_pushboolean( L, ( res ) ? 1 : 0 );
-	return 1;
-}
-
-static int powerConfig( lua_State * L )
-{
-	McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
-	int onFirst = static_cast<int>( lua_tonumber( L, 2 ) );
-	int onRegular = static_cast<int>( lua_tonumber( L, 3 ) );
-	int off = static_cast<int>( lua_tonumber( L, 4 ) );
-    bool res = io->powerConfig( onFirst, onRegular, off );
-    lua_pushboolean( L, ( res ) ? 1 : 0 );
-    return 1;
-}
-
-static int powerEn( lua_State * L )
-{
-    McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
-    bool en = static_cast<int>( lua_toboolean( L, 2 ) > 0 );
-    bool res = io->powerEn( en );
-    lua_pushboolean( L, ( res ) ? 1 : 0 );
-    return 1;
-}
-
-static int motoConfig( lua_State * L )
-{
-	McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
-	bool en = ( lua_toboolean( L, 2 ) > 0 );
-	int offSec = static_cast<int>( lua_tonumber( L, 3 ) );
-	bool res = io->motoConfig( en, offSec );
-	lua_pushboolean( L, ( res ) ? 1 : 0 );
-	return 1;
-}
-
-static int motoSet( lua_State * L )
-{
-	McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
-	bool moto1 = ( lua_toboolean( L, 2 ) > 0 );
-	bool moto2 = ( lua_toboolean( L, 3 ) > 0 );
-	bool moto3 = ( lua_toboolean( L, 4 ) > 0 );
-	bool moto4 = ( lua_toboolean( L, 5 ) > 0 );
-	bool res = io->motoSet( moto1, moto2, moto3, moto4 );
-	lua_pushboolean( L, res ? 1 : 0 );
-	return 1;
-}
-
-static int motoReset( lua_State * L )
-{
-	McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
-	bool res = io->motoReset();
-	lua_pushboolean( L, ( res ) ? 1 : 0 );
-	return 1;
-}
-
-static int moto( lua_State * L )
-{
-	McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
-    int val;
-	bool res = io->moto( val );
+    int cnt;
+    if ( lua_gettop( L ) > 1 )
+        cnt = static_cast<int>( lua_tonumber( L, 2 ) );
+    else
+        cnt = 3;
+    std::basic_string<unsigned long> args;
+    args.resize( cnt );
+    bool res = io->inputs( const_cast<unsigned long *>( args.data() ), cnt );
     if ( res )
     {
-        lua_pushboolean( L, 1 );
-        lua_pushnumber( L, static_cast<lua_Number>( val ) );
-        return 2;
+        for ( int i=0; i<cnt; i++ )
+            lua_pushnumber( L, static_cast<lua_Number>( args[i] ) );
+        return cnt;
     }
-    lua_pushboolean( L, 0 );
-    return 1;
-}
-
-static int adcConfig( lua_State * L )
-{
-	McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
-    bool en = ( lua_toboolean( L, 2 ) > 0 );
-    bool res = io->adcConfig( en );
-    lua_pushboolean( L, ( res ) ? 1 : 0 );
-    return 1;
-}
-
-static int adc( lua_State * L )
-{
-	McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
-	int val1, val2;
-	bool res = io->adc( val1, val2 );
-	lua_pushboolean( L, ( res ) ? 1 : 0 );
-	if ( res )
-	{
-		lua_pushnumber( L, static_cast<lua_Number>( val1 ) );
-		lua_pushnumber( L, static_cast<lua_Number>( val2 ) );
-		return 3;
-	}
-	return 1;
+    return 0;
 }
 
 static const struct luaL_reg META_FUNCTIONS[] = {
-	{ "__gc",          gc },
-    { "pointer",       self },
+	{ "__gc",          gc }, 
+    { "pointer",       self }, 
     // Open/close routines
-    { "open",          open },
-    { "close",         close },
-    { "isOpen",        isOpen },
+    { "open",          open }, 
+    { "close",         close }, 
+    { "isOpen",        isOpen }, 
     // The lowest possible level
-    { "write",         write },
-    { "read",          read },
-    { "led",           led },
-    { "powerConfig",   powerConfig },
-    { "powerOffReset", powerOffReset },
-    { "powerEn",       powerEn },
-    { "motoConfig",    motoConfig },
-    { "motoSet",       motoSet },
-    { "motoReset",     motoReset },
-    { "moto",          moto },
-    { "adcConfig",     adcConfig },
-    { "adc",           adc },
+    { "write",         write }, 
+    { "read",          read }, 
+    { "setOutputs",    setOutputs }, 
+    { "inputs",        inputs }, 
 
-    { NULL,            NULL },
+    { NULL,            NULL }, 
 };
 
 static void createMeta( lua_State * L )

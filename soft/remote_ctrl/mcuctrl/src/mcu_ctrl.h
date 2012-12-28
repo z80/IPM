@@ -7,23 +7,11 @@
 class McuCtrl: public UsbIo
 {
 public:
-	McuCtrl();
-	~McuCtrl();
+    McuCtrl();
+    ~McuCtrl();
 
-	bool powerOffReset();
-	bool powerConfig( int onFirst, int onRegular, int off );
-    bool powerEn( bool en );
-
-    bool motoConfig( bool en, int val );
-    bool motoSet( bool moto1, bool moto2, bool moto3, bool moto4 );
-    bool motoReset();
-    bool moto( int & val );
-
-    bool led( bool en );
-
-    bool adcConfig( bool en );
-    bool adc( int & solar, int & battery );
-
+    bool inputs( unsigned long * data, int len = 2 );
+    bool setOutputs( unsigned long * data, int len = 2 );
 };
 
 

@@ -23,6 +23,7 @@ include_directories( "./src"
                      "${ROOT}/3dparty/lua-5.1.5/etc"  
                      "${ROOT}/3dparty/qtlua-1.4/src" 
                      "${ROOT}/3dparty/qwt-6.0.1/src" 
+                     "${ROOT}/3dparty/widgets/src" 
                      ${Boost_INCLUDE_DIRS}
                      ${CMAKE_CURRENT_BINARY_DIR} )
 
@@ -54,7 +55,7 @@ else ( WIN32 )
 endif ( WIN32 )
 
 add_executable( app_client ${BUILD_TYPE} ${src} )
-target_link_libraries( app_client peer_qxmpp liblua-5.1.5 qtlua ${CMAKE_THREAD_LIBS_INIT} ${Boost_LIBRARIES} ${QT_LIBRARIES} )
+target_link_libraries( app_client peer_qxmpp liblua-5.1.5 qtlua widgets ${CMAKE_THREAD_LIBS_INIT} ${Boost_LIBRARIES} ${QT_LIBRARIES} )
 install( TARGETS app_client DESTINATION "." )
 install( DIRECTORY "./src_lua/" DESTINATION "." )
 install( DIRECTORY "./help" DESTINATION "." )
