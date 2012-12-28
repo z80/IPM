@@ -143,6 +143,7 @@
    <addaction name="connect"/>
    <addaction name="exec"/>
    <addaction name="send"/>
+   <addaction name="valve"/>
    <addaction name="help"/>
   </widget>
   <widget class="QDockWidget" name="manipulatorDw">
@@ -241,6 +242,18 @@
    </property>
    <property name="shortcut">
     <string>F1</string>
+   </property>
+  </action>
+  <action name="valve">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/valve.png</normaloff>:/images/valve.png</iconset>
+   </property>
+   <property name="text">
+    <string>Valve</string>
+   </property>
+   <property name="toolTip">
+    <string>Valve test window</string>
    </property>
   </action>
  </widget>
