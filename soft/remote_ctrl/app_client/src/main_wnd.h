@@ -6,6 +6,8 @@
 #include "peer_qxmpp.h"
 #include "ui_main_wnd.h"
 
+class ValveTst;
+
 class MainWnd: public QMainWindow
 {
 	Q_OBJECT
@@ -23,6 +25,7 @@ private slots:
 public:
 	int print( lua_State * L );
     int joy( lua_State * L );
+    ValveTst * valveTst();
 private:
 	void init( lua_State * L );
 	QIODevice * inFileHandler( const std::string & fileName );
@@ -39,6 +42,8 @@ private:
     QGraphicsScene      * m_scene;
     QGraphicsPixmapItem * m_image;
     QPixmap               m_pixmap;
+
+    ValveTst             * m_valveTst;
 
 	static const std::string CONFIG_FILE;
 	static const int         LOG_MAX;

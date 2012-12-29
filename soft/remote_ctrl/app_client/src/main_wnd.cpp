@@ -1,6 +1,7 @@
 
 #include <sstream>
 #include "main_wnd.h"
+#include "valve_tst.h"
 #include "lua.hpp"
 #include "boost/bind.hpp"
 #include "boost/bind/placeholders.hpp"
@@ -43,20 +44,24 @@ MainWnd::MainWnd( QWidget * parent )
     m_image = new QGraphicsPixmapItem( 0, m_scene );
     m_image->setPos( 0.0, 0.0 );
 
+    m_valveTst = new ValveTst( 0 );
+
     m_peer = new PeerQxmpp( CONFIG_FILE, boost::bind( &MainWnd::init, this, _1 ) );
 	m_peer->setInFileHandler( boost::bind<QIODevice *>( &MainWnd::inFileHandler, this, _1 ) );
 	m_peer->setAccFileHandler( boost::bind( &MainWnd::accFileHandler, this, _1, _2 ) );
 
-    connect( ui.image,   SIGNAL(triggered()), this, SLOT(slotImage()) );
-    connect( ui.connect, SIGNAL(triggered()), this, SLOT(slotConnect()) );
-    connect( ui.exec,    SIGNAL(triggered()), this, SLOT(slotExec()) );
-    connect( ui.send,    SIGNAL(triggered()), this, SLOT(slotSendFile()) );
-    connect( ui.help,    SIGNAL(triggered()), this, SLOT(slotHelp()) );
+    connect( ui.image,   SIGNAL(triggered()), this,       SLOT(slotImage()) );
+    connect( ui.connect, SIGNAL(triggered()), this,       SLOT(slotConnect()) );
+    connect( ui.exec,    SIGNAL(triggered()), this,       SLOT(slotExec()) );
+    connect( ui.send,    SIGNAL(triggered()), this,       SLOT(slotSendFile()) );
+    connect( ui.help,    SIGNAL(triggered()), this,       SLOT(slotHelp()) );
+    connect( ui.valve,   SIGNAL(triggered()), m_valveTst, SLOT(show()) );
 }
 
 MainWnd::~MainWnd()
 {
     m_scene->deleteLater();
+    m_valveTst->deleteLater();
     delete m_image;
 	delete m_peer;
 }
@@ -101,6 +106,42 @@ static int joy( lua_State * L )
 	return mw->joy( L );
 }
 
+static int valveSetInputs( lua_State * L )
+{
+	lua_pushstring( L, "MainWnd" );
+	lua_gettable( L, LUA_REGISTRYINDEX );
+	MainWnd * mw = reinterpret_cast<MainWnd *>( const_cast<void *>( lua_topointer( L, -1 ) ) );
+	lua_pop( L, 1 );
+    int boardInd  = static_cast<int>( lua_tonumber( L, 1 ) );
+    quint32 value = static_cast<quint32>( lua_tonumber( L, 2 ) );
+    mw->valveTst()->setInputs( boardInd, value );
+    return 0;
+}
+
+static int valveSetOutputs( lua_State * L )
+{
+	lua_pushstring( L, "MainWnd" );
+	lua_gettable( L, LUA_REGISTRYINDEX );
+	MainWnd * mw = reinterpret_cast<MainWnd *>( const_cast<void *>( lua_topointer( L, -1 ) ) );
+	lua_pop( L, 1 );
+    int boardInd  = static_cast<int>( lua_tonumber( L, 1 ) );
+    quint32 value = static_cast<quint32>( lua_tonumber( L, 2 ) );
+    mw->valveTst()->setOutputs( boardInd, value );
+    return 0;
+}
+
+static int valveOutputs( lua_State * L )
+{
+	lua_pushstring( L, "MainWnd" );
+	lua_gettable( L, LUA_REGISTRYINDEX );
+	MainWnd * mw = reinterpret_cast<MainWnd *>( const_cast<void *>( lua_topointer( L, -1 ) ) );
+	lua_pop( L, 1 );
+    int boardInd  = static_cast<int>( lua_tonumber( L, 1 ) );
+    quint32 value = mw->valveTst()->outputs( boardInd );
+    lua_pushnumber( L, static_cast<lua_Number>( value ) );
+    return 1;
+}
+
 void MainWnd::init( lua_State * L )
 {
 	lua_pushstring( L, "MainWnd" );
@@ -113,6 +154,18 @@ void MainWnd::init( lua_State * L )
 
     lua_pushstring( L, "joy" );
     lua_pushcfunction( L, ::joy );
+    lua_settable( L, LUA_GLOBALSINDEX );
+
+    lua_pushstring( L, "valveSetInputs" );
+    lua_pushcfunction( L, ::valveSetInputs );
+    lua_settable( L, LUA_GLOBALSINDEX );
+
+    lua_pushstring( L, "valveSetOutputs" );
+    lua_pushcfunction( L, ::valveSetOutputs );
+    lua_settable( L, LUA_GLOBALSINDEX );
+
+    lua_pushstring( L, "valveOutputs" );
+    lua_pushcfunction( L, ::valveOutputs );
     lua_settable( L, LUA_GLOBALSINDEX );
 
 	// Execute file.
@@ -184,6 +237,11 @@ int MainWnd::joy( lua_State * L )
     lua_pushnumber( L, static_cast<lua_Number>( at.y() ) );
     //lua_settop( L, 0 );
     return 2;
+}
+
+ValveTst * MainWnd::valveTst()
+{
+    return m_valveTst;
 }
 
 void MainWnd::log( const std::string & stri )

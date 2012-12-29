@@ -20,6 +20,8 @@ function sleep( t )
 end
 
 print( "client.lua loaded!!!" )
+valveSetInputs( 0, 1+2+4 + 32768 )
+valveSetOutputs( 0, 1+4+16 )
 main()
 
 

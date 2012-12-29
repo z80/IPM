@@ -144,6 +144,7 @@
    <addaction name="exec"/>
    <addaction name="send"/>
    <addaction name="valve"/>
+   <addaction name="separator"/>
    <addaction name="help"/>
   </widget>
   <widget class="QDockWidget" name="manipulatorDw">
