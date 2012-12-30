@@ -39,7 +39,8 @@ function remoteInvokeInputs( vals )
 end
 
 function processMcu()
-    local mcu = luamcuctrl.create()
+    -- mcu variable is NOT local to be accessible from the outside.
+    mcu = luamcuctrl.create()
     local en = mcu:open()
     while true do
         local ins = { mcu:inputs() }
