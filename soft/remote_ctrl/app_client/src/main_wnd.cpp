@@ -6,25 +6,30 @@
 #include "boost/bind.hpp"
 #include "boost/bind/placeholders.hpp"
 
-const std::string MainWnd::CONFIG_FILE = "client.ini";
+const std::string MainWnd::CLIENT_CONFIG_FILE = "client.ini";
+const std::string MainWnd::SERVER_CONFIG_FILE = "server.ini";
 const int         MainWnd::LOG_MAX     = 256;
 
 MainWnd::MainWnd( QWidget * parent )
 : QMainWindow( parent )
 {
+    m_host = new HostQxmpp();
+    bool res = m_host->listen( SERVER_CONFIG_FILE );
+    Q_ASSERT( res );
+
     ui.setupUi( this );
     connect( this,       SIGNAL(sigLog(const QString &)),        this, SLOT(slotLog(const QString &)),  Qt::QueuedConnection );
     connect( ui.console, SIGNAL(line_validate(const QString &)), this, SLOT(slotSend(const QString &)), Qt::QueuedConnection );
 
     connect( this, SIGNAL(sigImageAccepted()), this, SLOT(slotImageAccepted()), Qt::QueuedConnection );
 
-    QObject::connect( ui.joy1, SIGNAL(valueChanged(QPointF, bool)), 
+    QObject::connect( ui.joy1, SIGNAL(valueChanged(QPointF, bool)),
                       this,    SLOT(slotJoyChanged(QPointF, bool)) );
-    QObject::connect( ui.joy2, SIGNAL(valueChanged(QPointF, bool)), 
+    QObject::connect( ui.joy2, SIGNAL(valueChanged(QPointF, bool)),
                       this,    SLOT(slotJoyChanged(QPointF, bool)) );
-    QObject::connect( ui.joy3, SIGNAL(valueChanged(QPointF, bool)), 
+    QObject::connect( ui.joy3, SIGNAL(valueChanged(QPointF, bool)),
                       this,    SLOT(slotJoyChanged(QPointF, bool)) );
-    QObject::connect( ui.joy4, SIGNAL(valueChanged(QPointF, bool)), 
+    QObject::connect( ui.joy4, SIGNAL(valueChanged(QPointF, bool)),
                       this,    SLOT(slotJoyChanged(QPointF, bool)) );
 
 
@@ -46,9 +51,9 @@ MainWnd::MainWnd( QWidget * parent )
 
     m_valveTst = new ValveTst( 0 );
 
-    m_peer = new PeerQxmpp( CONFIG_FILE, boost::bind( &MainWnd::init, this, _1 ) );
-	m_peer->setInFileHandler( boost::bind<QIODevice *>( &MainWnd::inFileHandler, this, _1 ) );
-	m_peer->setAccFileHandler( boost::bind( &MainWnd::accFileHandler, this, _1, _2 ) );
+    m_peer = new PeerQxmpp( CLIENT_CONFIG_FILE, boost::bind( &MainWnd::init, this, _1 ) );
+    m_peer->setInFileHandler( boost::bind<QIODevice *>( &MainWnd::inFileHandler, this, _1 ) );
+    m_peer->setAccFileHandler( boost::bind( &MainWnd::accFileHandler, this, _1, _2 ) );
 
     connect( ui.image,   SIGNAL(triggered()), this,       SLOT(slotImage()) );
     connect( ui.connect, SIGNAL(triggered()), this,       SLOT(slotConnect()) );
@@ -63,7 +68,7 @@ MainWnd::~MainWnd()
     m_scene->deleteLater();
     m_valveTst->deleteLater();
     delete m_image;
-	delete m_peer;
+    delete m_peer;
 }
 
 bool MainWnd::eventFilter( QObject * o, QEvent * e )
@@ -85,33 +90,33 @@ void MainWnd::slotLog( const QString & stri )
 
 void MainWnd::slotImageAccepted()
 {
-	updatePixmap( m_img );
+    updatePixmap( m_img );
 }
 
 static int print( lua_State * L )
 {
-	lua_pushstring( L, "MainWnd" );
-	lua_gettable( L, LUA_REGISTRYINDEX );
-	MainWnd * mw = reinterpret_cast<MainWnd *>( const_cast<void *>( lua_topointer( L, -1 ) ) );
-	lua_pop( L, 1 );
-	return mw->print( L );
+    lua_pushstring( L, "MainWnd" );
+    lua_gettable( L, LUA_REGISTRYINDEX );
+    MainWnd * mw = reinterpret_cast<MainWnd *>( const_cast<void *>( lua_topointer( L, -1 ) ) );
+    lua_pop( L, 1 );
+    return mw->print( L );
 }
 
 static int joy( lua_State * L )
 {
-	lua_pushstring( L, "MainWnd" );
-	lua_gettable( L, LUA_REGISTRYINDEX );
-	MainWnd * mw = reinterpret_cast<MainWnd *>( const_cast<void *>( lua_topointer( L, -1 ) ) );
-	lua_pop( L, 1 );
-	return mw->joy( L );
+    lua_pushstring( L, "MainWnd" );
+    lua_gettable( L, LUA_REGISTRYINDEX );
+    MainWnd * mw = reinterpret_cast<MainWnd *>( const_cast<void *>( lua_topointer( L, -1 ) ) );
+    lua_pop( L, 1 );
+    return mw->joy( L );
 }
 
 static int valveSetInputs( lua_State * L )
 {
-	lua_pushstring( L, "MainWnd" );
-	lua_gettable( L, LUA_REGISTRYINDEX );
-	MainWnd * mw = reinterpret_cast<MainWnd *>( const_cast<void *>( lua_topointer( L, -1 ) ) );
-	lua_pop( L, 1 );
+    lua_pushstring( L, "MainWnd" );
+    lua_gettable( L, LUA_REGISTRYINDEX );
+    MainWnd * mw = reinterpret_cast<MainWnd *>( const_cast<void *>( lua_topointer( L, -1 ) ) );
+    lua_pop( L, 1 );
     int boardInd  = static_cast<int>( lua_tonumber( L, 1 ) );
     quint32 value = static_cast<quint32>( lua_tonumber( L, 2 ) );
     mw->valveTst()->setInputs( boardInd, value );
@@ -120,10 +125,10 @@ static int valveSetInputs( lua_State * L )
 
 static int valveSetOutputs( lua_State * L )
 {
-	lua_pushstring( L, "MainWnd" );
-	lua_gettable( L, LUA_REGISTRYINDEX );
-	MainWnd * mw = reinterpret_cast<MainWnd *>( const_cast<void *>( lua_topointer( L, -1 ) ) );
-	lua_pop( L, 1 );
+    lua_pushstring( L, "MainWnd" );
+    lua_gettable( L, LUA_REGISTRYINDEX );
+    MainWnd * mw = reinterpret_cast<MainWnd *>( const_cast<void *>( lua_topointer( L, -1 ) ) );
+    lua_pop( L, 1 );
     int boardInd  = static_cast<int>( lua_tonumber( L, 1 ) );
     quint32 value = static_cast<quint32>( lua_tonumber( L, 2 ) );
     mw->valveTst()->setOutputs( boardInd, value );
@@ -132,10 +137,10 @@ static int valveSetOutputs( lua_State * L )
 
 static int valveOutputs( lua_State * L )
 {
-	lua_pushstring( L, "MainWnd" );
-	lua_gettable( L, LUA_REGISTRYINDEX );
-	MainWnd * mw = reinterpret_cast<MainWnd *>( const_cast<void *>( lua_topointer( L, -1 ) ) );
-	lua_pop( L, 1 );
+    lua_pushstring( L, "MainWnd" );
+    lua_gettable( L, LUA_REGISTRYINDEX );
+    MainWnd * mw = reinterpret_cast<MainWnd *>( const_cast<void *>( lua_topointer( L, -1 ) ) );
+    lua_pop( L, 1 );
     int boardInd  = static_cast<int>( lua_tonumber( L, 1 ) );
     quint32 value = mw->valveTst()->outputs( boardInd );
     lua_pushnumber( L, static_cast<lua_Number>( value ) );
@@ -144,9 +149,9 @@ static int valveOutputs( lua_State * L )
 
 void MainWnd::init( lua_State * L )
 {
-	lua_pushstring( L, "MainWnd" );
-	lua_pushlightuserdata( L, reinterpret_cast<void *>( this ) );
-	lua_settable( L, LUA_REGISTRYINDEX );
+    lua_pushstring( L, "MainWnd" );
+    lua_pushlightuserdata( L, reinterpret_cast<void *>( this ) );
+    lua_settable( L, LUA_REGISTRYINDEX );
 
     lua_pushstring( L, "print" );
     lua_pushcfunction( L, ::print );
@@ -168,47 +173,47 @@ void MainWnd::init( lua_State * L )
     lua_pushcfunction( L, ::valveOutputs );
     lua_settable( L, LUA_GLOBALSINDEX );
 
-	// Execute file.
-	luaL_dofile( L, "./client.lua" );
+    // Execute file.
+    luaL_dofile( L, "./client.lua" );
 }
 
 QIODevice * MainWnd::inFileHandler( const std::string & fileName )
 {
-	QString fn = QString::fromStdString( fileName );
-	if ( fn.toLower().right( 4 ) == ".png" )
-	{
-		QBuffer * buf = new QBuffer();
-		buf->open( QIODevice::WriteOnly );
-		return buf;
-	}
+    QString fn = QString::fromStdString( fileName );
+    if ( fn.toLower().right( 4 ) == ".png" )
+    {
+        QBuffer * buf = new QBuffer();
+        buf->open( QIODevice::WriteOnly );
+        return buf;
+    }
     return 0;
 }
 
 void MainWnd::accFileHandler( const std::string & fileName, QIODevice * file )
 {
     if ( file->isOpen() )
-    	file->close();
+        file->close();
     if ( !file->open( QIODevice::ReadOnly ) )
-    	return;
+        return;
     if ( m_img.load( file, "PNG" ) )
-    	emit sigImageAccepted();
+        emit sigImageAccepted();
 }
 
 int MainWnd::print( lua_State * L )
 {
-	int top = lua_gettop( L );
-	for ( int i=1; i<=top; i++ )
-	{
+    int top = lua_gettop( L );
+    for ( int i=1; i<=top; i++ )
+    {
         std::string stri = lua_tostring( L, i );
         log( stri );
-	}
-	lua_settop( L, 0 );
-	return 0;
+    }
+    lua_settop( L, 0 );
+    return 0;
 }
 
 int MainWnd::joy( lua_State * L )
 {
-	int top = lua_gettop( L );
+    int top = lua_gettop( L );
     int index;
     if ( top > 0 )
         index = static_cast<int>( lua_tonumber( L, 1 ) );
@@ -246,7 +251,7 @@ ValveTst * MainWnd::valveTst()
 
 void MainWnd::log( const std::string & stri )
 {
-	QString qstri = QString::fromStdString( stri );
+    QString qstri = QString::fromStdString( stri );
     emit sigLog( qstri );
 }
 
@@ -269,7 +274,7 @@ void MainWnd::slotConnect()
 
 void MainWnd::slotExec()
 {
-    QString stri = 
+    QString stri =
         QFileDialog::getOpenFileName( this, tr( "Open script file" ),
                                                 "",
                                             tr("Lua script (*.lua)") );
@@ -290,7 +295,7 @@ void MainWnd::slotExec()
 
 void MainWnd::slotSendFile()
 {
-    QString stri = 
+    QString stri =
         QFileDialog::getOpenFileName( this, tr( "Open script file" ),
                                                 "",
                                             tr("Lua script (*.lua)") );
@@ -303,7 +308,7 @@ void MainWnd::slotSendFile()
             return;
         }
         QFileInfo fi( stri );
-        QString name = fi.fileName(); 
+        QString name = fi.fileName();
         m_peer->sendFile( name.toStdString(), f );
     }
 }
@@ -317,20 +322,20 @@ void MainWnd::updatePixmap( const QImage & img )
 
     QSizeF imgSz = m_pixmap.size();
     QSizeF wndSz = ui.view->size();
-    
+
     qreal sc;
     qreal x, y;
     if ( ( imgSz.width() * wndSz.height() ) > ( imgSz.height() * wndSz.width() ) )
     {
         sc = wndSz.width() / imgSz.width();
         x = 0.0;
-        y = ( static_cast<qreal>( wndSz.height() ) - 
+        y = ( static_cast<qreal>( wndSz.height() ) -
               static_cast<qreal>( imgSz.height() ) * sc ) * 0.5;
     }
     else
     {
         sc = wndSz.height() / imgSz.height();
-        x = ( static_cast<qreal>( wndSz.width() ) - 
+        x = ( static_cast<qreal>( wndSz.width() ) -
               static_cast<qreal>( imgSz.width() ) * sc ) * 0.5;
         y = 0.0;
     }
