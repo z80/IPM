@@ -2,16 +2,42 @@
 require( "luamcuctrl" )
 require( "bit" )
 
+local BOARDS_CNT = 3
+local ins = { 0, 0, 0 }
 
 function main()
-    send( print( "host\'s entered main() dummy infinite loop" ) )
+send( "print( \'host\'s entered main() dummy infinite loop\' )" )
     while true do
-        sleep( 100 )
+        sleep( 0.1 )
     end
 end
 
-function sleep( msec )
-    msec = ( msec < 10000 ) and msec or 10000
+function setValves( vals )
+    local cnt = #vals
+    for i = 1, cnt do
+        ins[i] = vals[i] or 0
+    end
+    remoteInvokeInputs( vals )
+end
+
+function remoteInvokeInputs( vals )
+    local stri = "send( setInputs( { "
+    local cnt = #vals
+    for i=1, cnt do
+        stri = stri .. tostring( vals[i] or 0 )
+        if ( i ~= cnt ) then
+            stri = stri .. ", "
+        else
+            stri = stri .. " "
+        end
+    end
+    stri = stri .. "} ) )"
+    send( stri )
+end
+
+function sleep( sec )
+    sec = ( sec < 10 ) and sec or 10
+    msec = sec * 1000
     for i=1, msec, 50 do
         msleep( 50 )
     end
