@@ -54,17 +54,17 @@ bool HostQxmpp::PD::hasGetPassword() const
 bool HostQxmpp::PD::parseConfig( const std::string & fileName )
 {
     clientList.clear();
-	boost::property_tree::ptree config;
-	try
-	{
-		boost::property_tree::read_ini( fileName, config );
+    boost::property_tree::ptree config;
+    try
+    {
+        boost::property_tree::read_ini( fileName, config );
 
-		//const boost::property_tree::ptree & sect = config.get_child( "main" );
+        //const boost::property_tree::ptree & sect = config.get_child( "main" );
         for ( boost::property_tree::ptree::iterator i=config.begin(); i!=config.end(); i++ )
         {
             std::string key = i->first;
             boost::property_tree::ptree sect = config.get_child( key );
-            
+
             bool host = sect.get<bool>( "host", false );
             if ( host )
                 domain = QString::fromStdString( sect.get<std::string>( "domain", "qxmpp" ) );
@@ -75,13 +75,13 @@ bool HostQxmpp::PD::parseConfig( const std::string & fileName )
                 clientList[ login ] = password;
             }
         }
-	}
-	catch ( boost::property_tree::ini_parser_error & error )
-	{
-		std::cout << error.message() << ": " << error.filename() << ", line "
-			<< error.line() << std::endl;
+    }
+    catch ( boost::property_tree::ini_parser_error & error )
+    {
+        std::cout << error.message() << ": " << error.filename() << ", line "
+            << error.line() << std::endl;
         return false;
-	}
+    }
     return true;
 }
 
