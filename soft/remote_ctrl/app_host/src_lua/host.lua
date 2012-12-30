@@ -19,7 +19,7 @@ function setValves( vals )
     ins = {}
     local cnt = #vals
     for i = 1, cnt do
-        ins[i] = vals[i] or 0
+        ins[i] = (vals[i] or 0) * 2
     end
 end
 
@@ -77,6 +77,7 @@ function emulationProcessMcu()
                     inputs[i] = ins[i]
                 end
                 remoteInvokeInputs( inputs )
+                send( "print( \'Updated inputs\' )" )
                 break
             end
         end
