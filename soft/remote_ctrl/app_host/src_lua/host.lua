@@ -43,7 +43,7 @@ function processMcu()
     local en = mcu:open()
     while true do
         local ins = { mcu:inputs() }
-        if ( #ins < 3 ) then
+        if ( #ins < BOARDS_CNT ) then
             -- Failure
             send( "print( \'Error: mcu doesn\'t respond on USB requests\' )" )
             mcu:close()
@@ -67,8 +67,10 @@ function processMcu()
 end
 
 function emulationProcessMcu()
+    ins = {}
     while true do
         for i = 1, BOARDS_CNT do
+            ins[i] = ins[i] or 0
             if ( inputs[i] ~= ins[i] ) then
                 for i = 1, BOARDS_CNT do
                     inputs[i] = ins[i]
