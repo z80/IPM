@@ -16,10 +16,19 @@ function main()
 end
 
 function setValves( vals )
-    ins = {}
-    local cnt = #vals
-    for i = 1, cnt do
-        ins[i] = (vals[i] or 0) * 2
+    if ( emulation ) then
+        ins = {}
+        local cnt = #vals
+        for i = 1, cnt do
+            ins[i] = (vals[i] or 0) * 2
+        end
+    else
+        if ( mcu and mcu:isOpen() ) then
+            vals = vals or {}
+            mcu:setOutputs( unpack( vals ) )
+        else
+            send( "print( \'ERROR: mcu is not present or is not open\' )" )
+        end
     end
 end
 
@@ -43,7 +52,7 @@ function processMcu()
     mcu = luamcuctrl.create()
     local en = mcu:open()
     while true do
-        local ins = { mcu:inputs() }
+        local ins = { mcu:inputs( BOARDS_CNT ) }
         if ( #ins < BOARDS_CNT ) then
             -- Failure
             send( "print( \'Error: mcu doesn\'t respond on USB requests\' )" )
