@@ -1,8 +1,8 @@
 
-require( "luamcuctrl" )
+--require( "luamcuctrl" )
 require( "bit" )
 
-local BOARDS_CNT = 3
+local BOARDS_CNT = 2
 local inputs = { 0, 0, 0 }
 local emulation = true
 
