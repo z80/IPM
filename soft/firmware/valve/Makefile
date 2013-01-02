@@ -5,10 +5,10 @@
 
 # Compiler options here.
 ifeq ($(USE_OPT),)
-  USE_OPT = -O2 -ggdb -fomit-frame-pointer -falign-functions=16
-  # -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
-  #USE_OPT = -O0 -g -ggdb -fomit-frame-pointer -falign-functions=16
-  # -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
+  #USE_OPT = -O2 -ggdb -fomit-frame-pointer -falign-functions=16 
+  #-DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
+  USE_OPT = -O0 -g -ggdb -fomit-frame-pointer -falign-functions=16 
+  #-DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER
 endif
 
 # C specific options here (added to USE_OPT).

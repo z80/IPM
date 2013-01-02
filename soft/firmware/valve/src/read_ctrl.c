@@ -12,43 +12,18 @@ static void read( uint32_t * val )
     // Clear clock.
     palClearPad( IN_PORT, IN_CP_PIN );
     chThdSleepMicroseconds( 1 );
-    //chThdSleepMilliseconds( 1 );
 
     // Enable parallel load.
     palClearPad( IN_PORT, IN_PL_PIN );
     chThdSleepMicroseconds( 1 );
-    //chThdSleepMilliseconds( 1 );
-
-    // Set clock.
-    palSetPad( IN_PORT, IN_CP_PIN );
-    chThdSleepMicroseconds( 1 );
-    //chThdSleepMilliseconds( 1 );
-
-    // Clear clock.
-    palClearPad( IN_PORT, IN_CP_PIN );
-    chThdSleepMicroseconds( 1 );
-    //chThdSleepMilliseconds( 1 );
 
     // Disable parallel load.
     palSetPad( IN_PORT, IN_PL_PIN );
     chThdSleepMicroseconds( 1 );
-    //chThdSleepMilliseconds( 1 );
-
-    // Set clock.
-    palSetPad( IN_PORT, IN_CP_PIN );
-    chThdSleepMicroseconds( 1 );
-    //chThdSleepMilliseconds( 1 );
-
-    // Clear clock.
-    palClearPad( IN_PORT, IN_CP_PIN );
-    chThdSleepMicroseconds( 1 );
-    //chThdSleepMilliseconds( 1 );
 
     // Clock enable.
     palClearPad( IN_PORT, IN_CE_PIN );
     chThdSleepMicroseconds( 1 );
-    //chThdSleepMilliseconds( 1 );
-
 
     static uint32_t result;
     result = 0;
@@ -60,7 +35,6 @@ static void read( uint32_t * val )
         // Set clock.
         palSetPad( IN_PORT, IN_CP_PIN );
         chThdSleepMicroseconds( 1 );
-        //chThdSleepMilliseconds( 1 );
 
          // Check for value;
         static uint16_t b;
@@ -68,23 +42,19 @@ static void read( uint32_t * val )
         result += (b != 0) ? bitVal : 0;
         bitVal <<= 1;
         chThdSleepMicroseconds( 1 );
-        //chThdSleepMilliseconds( 1 );
 
         // Clear clock.
         palClearPad( IN_PORT, IN_CP_PIN );
         chThdSleepMicroseconds( 1 );
-        //chThdSleepMilliseconds( 1 );
 
     }
     // Set clock.
     palSetPad( IN_PORT, IN_CP_PIN );
     chThdSleepMicroseconds( 1 );
-    //chThdSleepMilliseconds( 1 );
 
     // Clock disable.
     palSetPad( IN_PORT, IN_CE_PIN );
     chThdSleepMicroseconds( 1 );
-    //chThdSleepMilliseconds( 1 );
 
     chMtxLock( &mutex );
     *val = result;
