@@ -116,16 +116,17 @@ static msg_t i2cThread( void *arg )
             }
             // Here should be IO with moto controller boards and accelerometer.
             // .....
-            chThdSleepMilliseconds( 1 );
+            chThdSleepMilliseconds( 50 );
         }
         else
         {
             static uint8_t addr;
             addr = I2C_BASE_ADDR + ind - 1;
             pendDataIn = valueRead();
-            if ( ( slaveFirstTime ) || ( pendDataIn != dataIn ) )
+            //if ( ( slaveFirstTime ) || ( pendDataIn != dataIn ) )
             {
                 //dataIn = 0x12345678;
+                i2cStart( &I2CD1, &i2cfg1 );
                 status = i2cSlaveIoTimeout( &I2CD1, addr,
                                             (uint8_t *)&dataOut,  sizeof( dataOut ),
                                             (uint8_t *)&dataIn, sizeof( dataIn ) );
@@ -134,7 +135,7 @@ static msg_t i2cThread( void *arg )
             }
             // Here it should be some type of delay
             // because i2cSlaveIo returns immediately.
-            chThdSleepMilliseconds( 1 );
+            chThdSleepMilliseconds( 50 );
             write( dataOut );
         }
         /*if ( a == 0b00000111 )

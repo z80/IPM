@@ -375,6 +375,8 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
   }
   if ( event & I2C_SR1_STOPF )
   {
+      // Clear Addr Flag
+      (void)dp->SR2;
       i2cp->state |= 8;
       // Turn interrupts on to feel ADDR match event to initiate transfer again.
       dp->CR2 |= I2C_CR2_ITEVTEN;
