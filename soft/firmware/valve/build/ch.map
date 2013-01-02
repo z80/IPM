@@ -1021,7 +1021,7 @@ destructors     0x080000ec        0x0
  *(SORT(.fini_array.*))
                 0x080000ec                PROVIDE (__fini_array_end, .)
 
-.text           0x080000f0     0x8524
+.text           0x080000f0     0x8514
  *(.text.startup.*)
  *(.text)
  .text          0x080000f0       0x10 /home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-atoi.o)
@@ -1616,206 +1616,206 @@ destructors     0x080000ec        0x0
  .text.processShell
                 0x08006870       0x60 build/obj/usb_ctrl.o
                 0x08006870                processShell
- .text.read     0x080068d0      0x130 build/obj/read_ctrl.o
+ .text.read     0x080068d0      0x120 build/obj/read_ctrl.o
  .text.readThread
-                0x08006a00       0x30 build/obj/read_ctrl.o
+                0x080069f0       0x30 build/obj/read_ctrl.o
  .text.initRead
-                0x08006a30       0x90 build/obj/read_ctrl.o
-                0x08006a30                initRead
+                0x08006a20       0x90 build/obj/read_ctrl.o
+                0x08006a20                initRead
  .text.valueRead
-                0x08006ac0       0x30 build/obj/read_ctrl.o
-                0x08006ac0                valueRead
+                0x08006ab0       0x30 build/obj/read_ctrl.o
+                0x08006ab0                valueRead
  .text.writeInternal
-                0x08006af0      0x110 build/obj/write_ctrl.o
+                0x08006ae0      0x110 build/obj/write_ctrl.o
  .text.writeThread
-                0x08006c00       0x30 build/obj/write_ctrl.o
+                0x08006bf0       0x30 build/obj/write_ctrl.o
  .text.initWrite
-                0x08006c30       0x90 build/obj/write_ctrl.o
-                0x08006c30                initWrite
- .text.write    0x08006cc0       0x30 build/obj/write_ctrl.o
-                0x08006cc0                write
+                0x08006c20       0x90 build/obj/write_ctrl.o
+                0x08006c20                initWrite
+ .text.write    0x08006cb0       0x30 build/obj/write_ctrl.o
+                0x08006cb0                write
  .text.i2cThread
-                0x08006cf0      0x2c0 build/obj/i2c_ctrl.o
- .text.initI2c  0x08006fb0       0xf0 build/obj/i2c_ctrl.o
-                0x08006fb0                initI2c
- .text.state    0x080070a0       0x30 build/obj/i2c_ctrl.o
-                0x080070a0                state
+                0x08006ce0      0x2c0 build/obj/i2c_ctrl.o
+ .text.initI2c  0x08006fa0       0xf0 build/obj/i2c_ctrl.o
+                0x08006fa0                initI2c
+ .text.state    0x08007090       0x30 build/obj/i2c_ctrl.o
+                0x08007090                state
  .text.setOutput
-                0x080070d0       0x30 build/obj/i2c_ctrl.o
-                0x080070d0                setOutput
+                0x080070c0       0x30 build/obj/i2c_ctrl.o
+                0x080070c0                setOutput
  .text.cmd_state
-                0x08007100       0x90 build/obj/i2c_ctrl.o
-                0x08007100                cmd_state
+                0x080070f0       0x90 build/obj/i2c_ctrl.o
+                0x080070f0                cmd_state
  .text.cmd_set_output
-                0x08007190       0x70 build/obj/i2c_ctrl.o
-                0x08007190                cmd_set_output
+                0x08007180       0x70 build/obj/i2c_ctrl.o
+                0x08007180                cmd_set_output
  .text.testSetMaster
-                0x08007200       0x20 build/obj/i2c_ctrl.o
-                0x08007200                testSetMaster
+                0x080071f0       0x20 build/obj/i2c_ctrl.o
+                0x080071f0                testSetMaster
  .text.tst_i2c_set_addr
-                0x08007220       0x50 build/obj/i2c_ctrl.o
-                0x08007220                tst_i2c_set_addr
+                0x08007210       0x50 build/obj/i2c_ctrl.o
+                0x08007210                tst_i2c_set_addr
  .text.tst_i2c_set_master
-                0x08007270       0x50 build/obj/i2c_ctrl.o
-                0x08007270                tst_i2c_set_master
+                0x08007260       0x50 build/obj/i2c_ctrl.o
+                0x08007260                tst_i2c_set_master
  .text.tst_i2c_set_buffer
-                0x080072c0       0x70 build/obj/i2c_ctrl.o
-                0x080072c0                tst_i2c_set_buffer
+                0x080072b0       0x70 build/obj/i2c_ctrl.o
+                0x080072b0                tst_i2c_set_buffer
  .text.tst_i2c_io
-                0x08007330       0xc0 build/obj/i2c_ctrl.o
-                0x08007330                tst_i2c_io
+                0x08007320       0xc0 build/obj/i2c_ctrl.o
+                0x08007320                tst_i2c_io
  .text.tst_i2c_buffer
-                0x080073f0       0x70 build/obj/i2c_ctrl.o
-                0x080073f0                tst_i2c_buffer
+                0x080073e0       0x70 build/obj/i2c_ctrl.o
+                0x080073e0                tst_i2c_buffer
  .text.ledsThread
-                0x08007460       0x30 build/obj/led_ctrl.o
- .text.initLed  0x08007490       0x80 build/obj/led_ctrl.o
-                0x08007490                initLed
- .text.setLeds  0x08007510       0x30 build/obj/led_ctrl.o
-                0x08007510                setLeds
+                0x08007450       0x30 build/obj/led_ctrl.o
+ .text.initLed  0x08007480       0x80 build/obj/led_ctrl.o
+                0x08007480                initLed
+ .text.setLeds  0x08007500       0x30 build/obj/led_ctrl.o
+                0x08007500                setLeds
  *(.rodata)
- .rodata        0x08007540       0x10 build/obj/chsys.o
- .rodata        0x08007550       0x58 build/obj/chdebug.o
- *fill*         0x080075a8        0x8 00
- .rodata        0x080075b0       0x34 build/obj/chvt.o
- *fill*         0x080075e4        0xc 00
- .rodata        0x080075f0       0x24 build/obj/chschd.o
- *fill*         0x08007614        0xc 00
- .rodata        0x08007620       0x94 build/obj/chthreads.o
- *fill*         0x080076b4        0xc 00
- .rodata        0x080076c0       0x48 build/obj/chdynamic.o
- *fill*         0x08007708        0x8 00
- .rodata        0x08007710       0x18 build/obj/chregistry.o
- *fill*         0x08007728        0x8 00
- .rodata        0x08007730       0xac build/obj/chmtx.o
- *fill*         0x080077dc        0x4 00
- .rodata        0x080077e0       0x90 build/obj/chevents.o
- .rodata        0x08007870       0x2c build/obj/chqueues.o
- *fill*         0x0800789c        0x4 00
- .rodata        0x080078a0       0x34 build/obj/chheap.o
- *fill*         0x080078d4        0xc 00
- .rodata        0x080078e0       0x34 build/obj/chmempools.o
- *fill*         0x08007914        0xc 00
- .rodata        0x08007920       0xec build/obj/i2c.o
- *fill*         0x08007a0c        0x4 00
- .rodata        0x08007a10      0x124 build/obj/usb.o
- *fill*         0x08007b34        0xc 00
- .rodata        0x08007b40       0x3c build/obj/serial_usb.o
- *fill*         0x08007b7c        0x4 00
- .rodata        0x08007b80       0x34 build/obj/stm32_dma.o
- *fill*         0x08007bb4        0xc 00
- .rodata        0x08007bc0      0x148 build/obj/i2c_lld.o
- *fill*         0x08007d08        0x8 00
- .rodata        0x08007d10       0x10 build/obj/usb_lld.o
- .rodata        0x08007d20      0x1f0 build/obj/shell.o
- .rodata        0x08007f10        0x8 build/obj/chprintf.o
- *fill*         0x08007f18        0x8 00
- .rodata        0x08007f20      0x1a8 build/obj/usb_ctrl.o
+ .rodata        0x08007530       0x10 build/obj/chsys.o
+ .rodata        0x08007540       0x58 build/obj/chdebug.o
+ *fill*         0x08007598        0x8 00
+ .rodata        0x080075a0       0x34 build/obj/chvt.o
+ *fill*         0x080075d4        0xc 00
+ .rodata        0x080075e0       0x24 build/obj/chschd.o
+ *fill*         0x08007604        0xc 00
+ .rodata        0x08007610       0x94 build/obj/chthreads.o
+ *fill*         0x080076a4        0xc 00
+ .rodata        0x080076b0       0x48 build/obj/chdynamic.o
+ *fill*         0x080076f8        0x8 00
+ .rodata        0x08007700       0x18 build/obj/chregistry.o
+ *fill*         0x08007718        0x8 00
+ .rodata        0x08007720       0xac build/obj/chmtx.o
+ *fill*         0x080077cc        0x4 00
+ .rodata        0x080077d0       0x90 build/obj/chevents.o
+ .rodata        0x08007860       0x2c build/obj/chqueues.o
+ *fill*         0x0800788c        0x4 00
+ .rodata        0x08007890       0x34 build/obj/chheap.o
+ *fill*         0x080078c4        0xc 00
+ .rodata        0x080078d0       0x34 build/obj/chmempools.o
+ *fill*         0x08007904        0xc 00
+ .rodata        0x08007910       0xec build/obj/i2c.o
+ *fill*         0x080079fc        0x4 00
+ .rodata        0x08007a00      0x124 build/obj/usb.o
+ *fill*         0x08007b24        0xc 00
+ .rodata        0x08007b30       0x3c build/obj/serial_usb.o
+ *fill*         0x08007b6c        0x4 00
+ .rodata        0x08007b70       0x34 build/obj/stm32_dma.o
+ *fill*         0x08007ba4        0xc 00
+ .rodata        0x08007bb0      0x148 build/obj/i2c_lld.o
+ *fill*         0x08007cf8        0x8 00
+ .rodata        0x08007d00       0x10 build/obj/usb_lld.o
+ .rodata        0x08007d10      0x1f0 build/obj/shell.o
+ .rodata        0x08007f00        0x8 build/obj/chprintf.o
+ *fill*         0x08007f08        0x8 00
+ .rodata        0x08007f10      0x1a8 build/obj/usb_ctrl.o
+ *fill*         0x080080b8        0x8 00
+ .rodata        0x080080c0        0x8 build/obj/read_ctrl.o
  *fill*         0x080080c8        0x8 00
- .rodata        0x080080d0        0x8 build/obj/read_ctrl.o
- *fill*         0x080080d8        0x8 00
- .rodata        0x080080e0        0x4 build/obj/write_ctrl.o
- *fill*         0x080080e4        0xc 00
- .rodata        0x080080f0       0x8c build/obj/i2c_ctrl.o
- *fill*         0x0800817c        0x4 00
- .rodata        0x08008180        0x4 build/obj/led_ctrl.o
- *fill*         0x08008184        0xc 00
- .rodata        0x08008190      0x104 /home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-ctype_.o)
-                0x08008190                _ctype_
+ .rodata        0x080080d0        0x4 build/obj/write_ctrl.o
+ *fill*         0x080080d4        0xc 00
+ .rodata        0x080080e0       0x8c build/obj/i2c_ctrl.o
+ *fill*         0x0800816c        0x4 00
+ .rodata        0x08008170        0x4 build/obj/led_ctrl.o
+ *fill*         0x08008174        0xc 00
+ .rodata        0x08008180      0x104 /home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-ctype_.o)
+                0x08008180                _ctype_
  *(.rodata.*)
- *fill*         0x08008294        0xc 00
+ *fill*         0x08008284        0xc 00
  .rodata.zero_status
+                0x08008290        0x4 build/obj/usb.o
+ *fill*         0x08008294        0xc 00
+ .rodata.active_status
                 0x080082a0        0x4 build/obj/usb.o
  *fill*         0x080082a4        0xc 00
- .rodata.active_status
+ .rodata.halted_status
                 0x080082b0        0x4 build/obj/usb.o
  *fill*         0x080082b4        0xc 00
- .rodata.halted_status
-                0x080082c0        0x4 build/obj/usb.o
- *fill*         0x080082c4        0xc 00
- .rodata.vmt    0x080082d0       0x24 build/obj/serial_usb.o
- *fill*         0x080082f4        0xc 00
+ .rodata.vmt    0x080082c0       0x24 build/obj/serial_usb.o
+ *fill*         0x080082e4        0xc 00
  .rodata._stm32_dma_streams
-                0x08008300       0x54 build/obj/stm32_dma.o
-                0x08008300                _stm32_dma_streams
- *fill*         0x08008354        0xc 00
+                0x080082f0       0x54 build/obj/stm32_dma.o
+                0x080082f0                _stm32_dma_streams
+ *fill*         0x08008344        0xc 00
  .rodata.cfgtab.6138
-                0x08008360       0x14 build/obj/pal_lld.o
- *fill*         0x08008374        0xc 00
+                0x08008350       0x14 build/obj/pal_lld.o
+ *fill*         0x08008364        0xc 00
  .rodata.ep0config
-                0x08008380       0x1c build/obj/usb_lld.o
- *fill*         0x0800839c        0x4 00
+                0x08008370       0x1c build/obj/usb_lld.o
+ *fill*         0x0800838c        0x4 00
  .rodata.pal_default_config
-                0x080083a0       0x3c build/obj/board.o
-                0x080083a0                pal_default_config
- *fill*         0x080083dc        0x4 00
+                0x08008390       0x3c build/obj/board.o
+                0x08008390                pal_default_config
+ *fill*         0x080083cc        0x4 00
  .rodata.vcom_device_descriptor_data
-                0x080083e0       0x14 build/obj/usb_ctrl.o
- *fill*         0x080083f4        0xc 00
+                0x080083d0       0x14 build/obj/usb_ctrl.o
+ *fill*         0x080083e4        0xc 00
  .rodata.vcom_device_descriptor
-                0x08008400        0x8 build/obj/usb_ctrl.o
- *fill*         0x08008408        0x8 00
+                0x080083f0        0x8 build/obj/usb_ctrl.o
+ *fill*         0x080083f8        0x8 00
  .rodata.vcom_configuration_descriptor_data
-                0x08008410       0x44 build/obj/usb_ctrl.o
- *fill*         0x08008454        0xc 00
+                0x08008400       0x44 build/obj/usb_ctrl.o
+ *fill*         0x08008444        0xc 00
  .rodata.vcom_configuration_descriptor
-                0x08008460        0x8 build/obj/usb_ctrl.o
- *fill*         0x08008468        0x8 00
+                0x08008450        0x8 build/obj/usb_ctrl.o
+ *fill*         0x08008458        0x8 00
  .rodata.vcom_string0
-                0x08008470        0x4 build/obj/usb_ctrl.o
- *fill*         0x08008474        0xc 00
+                0x08008460        0x4 build/obj/usb_ctrl.o
+ *fill*         0x08008464        0xc 00
  .rodata.vcom_string1
-                0x08008480       0x28 build/obj/usb_ctrl.o
- *fill*         0x080084a8        0x8 00
+                0x08008470       0x28 build/obj/usb_ctrl.o
+ *fill*         0x08008498        0x8 00
  .rodata.vcom_string2
-                0x080084b0       0x38 build/obj/usb_ctrl.o
- *fill*         0x080084e8        0x8 00
+                0x080084a0       0x38 build/obj/usb_ctrl.o
+ *fill*         0x080084d8        0x8 00
  .rodata.vcom_string3
-                0x080084f0        0x8 build/obj/usb_ctrl.o
- *fill*         0x080084f8        0x8 00
+                0x080084e0        0x8 build/obj/usb_ctrl.o
+ *fill*         0x080084e8        0x8 00
  .rodata.vcom_strings
-                0x08008500       0x20 build/obj/usb_ctrl.o
+                0x080084f0       0x20 build/obj/usb_ctrl.o
  .rodata.ep1config
-                0x08008520       0x1c build/obj/usb_ctrl.o
- *fill*         0x0800853c        0x4 00
+                0x08008510       0x1c build/obj/usb_ctrl.o
+ *fill*         0x0800852c        0x4 00
  .rodata.ep2config
-                0x08008540       0x1c build/obj/usb_ctrl.o
- *fill*         0x0800855c        0x4 00
+                0x08008530       0x1c build/obj/usb_ctrl.o
+ *fill*         0x0800854c        0x4 00
  .rodata.ep3config
-                0x08008560       0x1c build/obj/usb_ctrl.o
- *fill*         0x0800857c        0x4 00
+                0x08008550       0x1c build/obj/usb_ctrl.o
+ *fill*         0x0800856c        0x4 00
  .rodata.serusbcfg
-                0x08008580       0x14 build/obj/usb_ctrl.o
- *fill*         0x08008594        0xc 00
+                0x08008570       0x14 build/obj/usb_ctrl.o
+ *fill*         0x08008584        0xc 00
  .rodata.commands
-                0x080085a0       0x50 build/obj/usb_ctrl.o
+                0x08008590       0x50 build/obj/usb_ctrl.o
  .rodata.shell_cfg1
-                0x080085f0        0x8 build/obj/usb_ctrl.o
- *fill*         0x080085f8        0x8 00
+                0x080085e0        0x8 build/obj/usb_ctrl.o
+ *fill*         0x080085e8        0x8 00
  .rodata.i2cfg1
-                0x08008600        0xc build/obj/i2c_ctrl.o
- *fill*         0x0800860c        0x4 00
+                0x080085f0        0xc build/obj/i2c_ctrl.o
+ *fill*         0x080085fc        0x4 00
  .rodata.str1.4
-                0x08008610        0x4 /home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-impure.o)
+                0x08008600        0x4 /home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-impure.o)
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.gcc*)
 
-.vfp11_veneer   0x08008614        0x0
+.vfp11_veneer   0x08008604        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x08008614        0x0
+.v4_bx          0x08008604        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM.exidx      0x08008614        0x0
-                0x08008614                PROVIDE (__exidx_start, .)
+.ARM.exidx      0x08008604        0x0
+                0x08008604                PROVIDE (__exidx_start, .)
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x08008614                PROVIDE (__exidx_end, .)
+                0x08008604                PROVIDE (__exidx_end, .)
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
@@ -1823,11 +1823,11 @@ destructors     0x080000ec        0x0
 .eh_frame
  *(.eh_frame)
 
-.textalign      0x08008614        0x4
-                0x08008618                . = ALIGN (0x8)
- *fill*         0x08008614        0x4 00
-                0x08008618                _etext = .
-                0x08008618                _textdata = _etext
+.textalign      0x08008604        0x4
+                0x08008608                . = ALIGN (0x8)
+ *fill*         0x08008604        0x4 00
+                0x08008608                _etext = .
+                0x08008608                _textdata = _etext
 
 .stacks         0x20000000      0x800
                 0x20000000                . = ALIGN (0x8)
@@ -1844,7 +1844,7 @@ destructors     0x080000ec        0x0
                 0x20000800                __process_stack_end__ = .
                 0x20000800                __main_thread_stack_end__ = .
 
-.data           0x20000800      0x158 load address 0x08008618
+.data           0x20000800      0x158 load address 0x08008608
                 0x20000800                . = ALIGN (0x4)
                 0x20000800                PROVIDE (_data, .)
  *(.data)
@@ -1872,7 +1872,7 @@ destructors     0x080000ec        0x0
                 0x20000958                . = ALIGN (0x4)
                 0x20000958                PROVIDE (_edata, .)
 
-.bss            0x20000958      0xec0 load address 0x08008770
+.bss            0x20000958      0xec0 load address 0x08008760
                 0x20000958                . = ALIGN (0x4)
                 0x20000958                PROVIDE (_bss_start, .)
  *(.bss)
@@ -2153,7 +2153,7 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_info    0x0001b1ea     0x1131 build/obj/i2c_ctrl.o
  .debug_info    0x0001c31b      0x5cf build/obj/led_ctrl.o
 
-.debug_line     0x00000000     0xaeb4
+.debug_line     0x00000000     0xaeb1
  .debug_line    0x00000000      0x15e build/obj/crt0.o
  .debug_line    0x0000015e       0x6e build/obj/vectors.o
  .debug_line    0x000001cc       0x63 build/obj/chcore.o
@@ -2232,10 +2232,10 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_line    0x00009a9c      0x28f build/obj/chprintf.o
  .debug_line    0x00009d2b      0x146 build/obj/main.o
  .debug_line    0x00009e71      0x3fc build/obj/usb_ctrl.o
- .debug_line    0x0000a26d      0x2ac build/obj/read_ctrl.o
- .debug_line    0x0000a519      0x28b build/obj/write_ctrl.o
- .debug_line    0x0000a7a4      0x4c3 build/obj/i2c_ctrl.o
- .debug_line    0x0000ac67      0x24d build/obj/led_ctrl.o
+ .debug_line    0x0000a26d      0x2a9 build/obj/read_ctrl.o
+ .debug_line    0x0000a516      0x28b build/obj/write_ctrl.o
+ .debug_line    0x0000a7a1      0x4c3 build/obj/i2c_ctrl.o
+ .debug_line    0x0000ac64      0x24d build/obj/led_ctrl.o
 
 .debug_pubnames
                 0x00000000     0x1bc6

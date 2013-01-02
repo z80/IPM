@@ -9,10 +9,6 @@ static uint32_t value = 0;
 
 static void read( uint32_t * val )
 {
-    // Clear clock.
-    palClearPad( IN_PORT, IN_CP_PIN );
-    chThdSleepMicroseconds( 1 );
-
     // Enable parallel load.
     palClearPad( IN_PORT, IN_PL_PIN );
     chThdSleepMicroseconds( 1 );
@@ -30,13 +26,14 @@ static void read( uint32_t * val )
     static uint32_t bitVal;
     bitVal = 1;
     static int16_t i;
+
     for ( i=0; i<16; i++ )
     {
         // Set clock.
         palSetPad( IN_PORT, IN_CP_PIN );
         chThdSleepMicroseconds( 1 );
 
-         // Check for value;
+        // Check for value;
         static uint16_t b;
         b = palReadPad( IN_PORT, IN_Q7_PIN );
         result += (b != 0) ? bitVal : 0;
@@ -46,7 +43,6 @@ static void read( uint32_t * val )
         // Clear clock.
         palClearPad( IN_PORT, IN_CP_PIN );
         chThdSleepMicroseconds( 1 );
-
     }
     // Set clock.
     palSetPad( IN_PORT, IN_CP_PIN );
