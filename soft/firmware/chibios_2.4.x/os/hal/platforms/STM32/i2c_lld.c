@@ -356,6 +356,9 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
       // If slave mode. On ADDR match DMA buffers should be configured.
       if ( i2cp->slave_mode )
       {
+          // And enable DMA.
+          dmaStreamDisable( i2cp->dmarx );
+          dmaStreamDisable( i2cp->dmatx );
           // Prepare buffers.
           // RX DMA setup.
           dmaStreamSetMemory0( i2cp->dmarx, i2cp->rxbuf );
@@ -387,7 +390,6 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
       // Generate Ack on address match and IOs.
       // Here write to CR1 also clears STOPF bit (according to the datasheet).
       dp->CR1 |= I2C_CR1_ACK;
-
   }
 #else
   /* Clear ADDR flag. */
@@ -418,10 +420,13 @@ static void i2c_lld_serve_rx_end_irq(I2CDriver *i2cp, uint32_t flags) {
 
   dmaStreamDisable(i2cp->dmarx);
 
-  dp->CR2 &= ~I2C_CR2_LAST;
-  dp->CR1 &= ~I2C_CR1_ACK;
-  dp->CR1 |= I2C_CR1_STOP;
-  wakeup_isr(i2cp, RDY_OK);
+  if ( !i2cp->slave_mode )
+  {
+      dp->CR2 &= ~I2C_CR2_LAST;
+      dp->CR1 &= ~I2C_CR1_ACK;
+      dp->CR1 |= I2C_CR1_STOP;
+      wakeup_isr(i2cp, RDY_OK);
+  }
 }
 
 /**
