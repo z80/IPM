@@ -310,7 +310,8 @@ void i2cReleaseBus(I2CDriver *i2cp) {
 msg_t i2cSlaveIoTimeout( I2CDriver * i2cp,
                          i2caddr_t addr,
                          uint8_t * rxbuf, size_t rxbytes,
-                         uint8_t * txbuf, size_t txbytes )
+                         uint8_t * txbuf, size_t txbytes,
+                         systime_t timeout )
 {
     msg_t rdymsg;
 
@@ -320,7 +321,8 @@ msg_t i2cSlaveIoTimeout( I2CDriver * i2cp,
     rdymsg = i2c_lld_slave_io_timeout( i2cp, 
                                        addr, 
                                        rxbuf, rxbytes, 
-                                       txbuf, txbytes );
+                                       txbuf, txbytes,
+                                       timeout );
     if (rdymsg == RDY_TIMEOUT)
         i2cp->state = I2C_LOCKED;
     else

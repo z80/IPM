@@ -107,9 +107,17 @@ static msg_t i2cThread( void *arg )
             addr = I2C_BASE_ADDR + ind - 1;
             dataIn = valueRead();
             //dataIn = 0x12345678;
-            status = i2cSlaveIoTimeout( &I2CD1, addr,
-                                        (uint8_t *)&dataOut,  sizeof( dataOut ),
-                                        (uint8_t *)&dataIn, sizeof( dataIn ) );
+            static uint8_t firstTime = 1;
+            //if ( firstTime )
+            {
+                status = i2cSlaveIoTimeout( &I2CD1, addr,
+                                          (uint8_t *)&dataOut,  sizeof( dataOut ),
+                                          (uint8_t *)&dataIn, sizeof( dataIn ), tmo );
+                if ( status != RDY_OK )
+                    i2cStart( &I2CD1, &i2cfg1 );
+                else
+                    firstTime = 0;
+            }
             // Here it should be some type of delay
             // because i2cSlaveIo returns immediately.
             write( dataOut );
@@ -245,7 +253,8 @@ uint8_t testReceive( uint8_t addr, uint32_t * val )
     tmo = MS2ST( 1000 );
     status = i2cSlaveIoTimeout( &I2CD1, addr,
                                 (uint8_t *)val,  sizeof( uint32_t ),
-                                0, 0 );
+                                0, 0,
+                                tmo );
     return status;
 }
 
@@ -293,12 +302,12 @@ void tst_i2c_io( BaseChannel *chp, int argc, char * argv[] )
 {
     (void)argc;
     (void)argv;
+    static msg_t status;
+    static systime_t tmo;
+    tmo = MS2ST( 1000 );
+    status = RDY_OK;
     if ( testMaster )
     {
-        static msg_t status;
-        static systime_t tmo;
-        tmo = MS2ST( 1000 );
-        status = RDY_OK;
         status = i2cMasterTransmitTimeout( &I2CD1, testAddr,
                                            testBuffer, /*testCnt*/ 4,
                                            0,  0,
@@ -308,9 +317,9 @@ void tst_i2c_io( BaseChannel *chp, int argc, char * argv[] )
     }
     else
     {
-        i2cSlaveIoTimeout( &I2CD1, testAddr,
-                           testBuffer, /*testCnt*/ 4,
-                           0,  0 );
+        status = i2cSlaveIoTimeout( &I2CD1, testAddr,
+                                    testBuffer, /*testCnt*/ 4,
+                                    0,  0, tmo );
         chThdSleepSeconds( 2 );
         chprintf( chp, "slave ok:%d", I2CD1.state );
     }

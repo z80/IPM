@@ -148,7 +148,8 @@ extern "C" {
   msg_t i2cSlaveIoTimeout( I2CDriver * i2cp,
                            i2caddr_t addr,
                            uint8_t * rxbuf, size_t rxbytes,
-                           uint8_t * txbuf, size_t txbytes );
+                           uint8_t * txbuf, size_t txbytes,
+                           systime_t timeout );
 
 #endif /* I2C_ISE_SLAVE_MODE */
 
