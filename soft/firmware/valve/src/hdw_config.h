@@ -30,7 +30,7 @@
 
 // I2C
 #define I2C_BASE_ADDR  16
-#define I2C_SLAVES_CNT 1
+#define I2C_SLAVES_CNT 2
 #define I2C_PORT      GPIOC
 #define I2C_SCL_PAD   6
 #define I2C_SDA_PAD   7
