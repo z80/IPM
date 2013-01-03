@@ -40,11 +40,6 @@ static void writeInternal( void )
         chThdSleepMicroseconds( 1 );
         bitVal >>= 1;
     }
-    // To save some power if output is zero disable output on L293DDs.
-    if ( curValue == 0 )
-        palClearPad( OUT_PORT, OUT_EN_PIN );
-    else
-        palSetPad( OUT_PORT, OUT_EN_PIN );
 }
 
 static WORKING_AREA( waWrite, 256 );
@@ -73,9 +68,6 @@ static msg_t writeThread( void *arg )
 
 void initWrite( void )
 {
-    // By default all outputs are zeros.
-    // So it looks like it's good to keep outputs disabled.
-    // They'll be turned on automatically when output is not equal zero.
     //palSetPad( OUT_PORT,     OUT_EN_PIN );
     palClearPad( OUT_PORT,     OUT_EN_PIN );
     palSetPad( OUT_PORT,     OUT_MR_PIN );
