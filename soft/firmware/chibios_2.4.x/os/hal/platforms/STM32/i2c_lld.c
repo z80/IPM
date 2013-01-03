@@ -417,13 +417,17 @@ static void i2c_lld_serve_rx_end_irq(I2CDriver *i2cp, uint32_t flags) {
 
   dmaStreamDisable(i2cp->dmarx);
 
+#if I2C_USE_SLAVE_MODE
   if ( !i2cp->slave_mode )
   {
+#endif
       dp->CR2 &= ~I2C_CR2_LAST;
       dp->CR1 &= ~I2C_CR1_ACK;
       dp->CR1 |= I2C_CR1_STOP;
       wakeup_isr(i2cp, RDY_OK);
+#if I2C_USE_SLAVE_MODE
   }
+#endif
 }
 
 /**
