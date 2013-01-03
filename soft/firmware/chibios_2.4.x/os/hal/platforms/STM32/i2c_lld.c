@@ -357,8 +357,8 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
       if ( i2cp->slave_mode )
       {
           // And enable DMA.
-          dmaStreamDisable( i2cp->dmarx );
-          dmaStreamDisable( i2cp->dmatx );
+          //dmaStreamDisable( i2cp->dmarx );
+          //dmaStreamDisable( i2cp->dmatx );
           // Prepare buffers.
           // RX DMA setup.
           dmaStreamSetMemory0( i2cp->dmarx, i2cp->rxbuf );
@@ -420,13 +420,13 @@ static void i2c_lld_serve_rx_end_irq(I2CDriver *i2cp, uint32_t flags) {
 
   dmaStreamDisable(i2cp->dmarx);
 
-  if ( !i2cp->slave_mode )
-  {
+  //if ( !i2cp->slave_mode )
+  //{
       dp->CR2 &= ~I2C_CR2_LAST;
       dp->CR1 &= ~I2C_CR1_ACK;
       dp->CR1 |= I2C_CR1_STOP;
       wakeup_isr(i2cp, RDY_OK);
-  }
+  //}
 }
 
 /**
@@ -978,23 +978,23 @@ msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
                                 systime_t timeout )
 {
     I2C_TypeDef *dp = i2cp->i2c;
-    VirtualTimer vt;
+    //VirtualTimer vt;
 
-    /* Global timeout for the whole operation.*/
-    if (timeout != TIME_INFINITE)
-      chVTSetI( &vt, timeout, i2c_lld_safety_timeout, (void *)i2cp );
+    // Global timeout for the whole operation.
+    //if (timeout != TIME_INFINITE)
+    //  chVTSetI( &vt, timeout, i2c_lld_safety_timeout, (void *)i2cp );
 
-    /* Waits until BUSY flag is reset and the STOP from the previous operation
-       is completed, alternatively for a timeout condition.*/
-    chSysUnlock();
-    while ((dp->SR2 & I2C_SR2_BUSY) || (dp->CR1 & I2C_CR1_STOP))
+    // Waits until BUSY flag is reset and the STOP from the previous operation
+    // is completed, alternatively for a timeout condition.
+    //chSysUnlock();
+    /*while ((dp->SR2 & I2C_SR2_BUSY) || (dp->CR1 & I2C_CR1_STOP))
     {
         chSysLock();
         if ((timeout != TIME_INFINITE) && !chVTIsArmedI(&vt))
             return RDY_TIMEOUT;
         chSysUnlock();
     }
-    chSysLock();
+    chSysLock();*/
 
     /* Initializes driver fields, LSB = 1 -> read.*/
     i2cp->addr    = (addr << 1);
@@ -1014,8 +1014,10 @@ msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
     // Generate Ack on address match and IOs.
     dp->CR1 |= I2C_CR1_ACK;
 
-    /* Waits for the operation completion or a timeout.*/
-    i2cp->thread = chThdSelf();
+    // Waits for the operation completion or a timeout.
+    /*i2cp->thread = chThdSelf();
+    if ((timeout != TIME_INFINITE) && chVTIsArmedI(&vt))
+      chVTResetI(&vt);*/
     return RDY_OK;
 }
 
@@ -1049,6 +1051,8 @@ msg_t i2c_lld_slave_data_timeout( I2CDriver * i2cp,
     i2cp->txbuf   = txbuf;
     i2cp->txbytes = txbytes;
 
+    if ((timeout != TIME_INFINITE) && chVTIsArmedI(&vt))
+      chVTResetI(&vt);
     return RDY_OK;
 }
 

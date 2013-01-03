@@ -123,8 +123,11 @@ static msg_t i2cThread( void *arg )
             static uint8_t addr;
             addr = I2C_BASE_ADDR + ind - 1;
             pendDataIn = valueRead();
+
+                        slaveFirstTime = 1;
             if ( slaveFirstTime )
             {
+                i2cStart( &I2CD1, &i2cfg1 );
                 status = i2cSlaveIoTimeout( &I2CD1, addr,
                                             (uint8_t *)&dataOut,  sizeof( dataOut ),
                                             (uint8_t *)&dataIn, sizeof( dataIn ),
@@ -155,7 +158,7 @@ static msg_t i2cThread( void *arg )
             }
             // Here it should be some type of delay
             // because i2cSlaveIo returns immediately.
-            chThdSleepMilliseconds( 50 );
+            chThdSleepMilliseconds( 500 );
             write( dataOut );
         }
         /*if ( a == 0b00000111 )
