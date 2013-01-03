@@ -123,15 +123,35 @@ static msg_t i2cThread( void *arg )
             static uint8_t addr;
             addr = I2C_BASE_ADDR + ind - 1;
             pendDataIn = valueRead();
-            //if ( ( slaveFirstTime ) || ( pendDataIn != dataIn ) )
+            if ( slaveFirstTime )
             {
-                //dataIn = 0x12345678;
-                i2cStart( &I2CD1, &i2cfg1 );
                 status = i2cSlaveIoTimeout( &I2CD1, addr,
                                             (uint8_t *)&dataOut,  sizeof( dataOut ),
-                                            (uint8_t *)&dataIn, sizeof( dataIn ) );
-                dataIn = pendDataIn;
-                slaveFirstTime = 0;
+                                            (uint8_t *)&dataIn, sizeof( dataIn ),
+                                            tmo );
+                if ( status == RDY_OK )
+                {
+                    dataIn = pendDataIn;
+                    slaveFirstTime = 0;
+                }
+                else
+                {
+                    i2cStart( &I2CD1, &i2cfg1 );
+                    continue;
+                }
+            }
+            else if ( pendDataIn != dataIn )
+            {
+                // Just refresh data without
+                // bus interruption.
+                status = i2cSlaveDataTimeout( &I2CD1,
+                                       (uint8_t *)&dataOut,  sizeof( dataOut ),
+                                       (uint8_t *)&dataIn, sizeof( dataIn ),
+                                       tmo );
+                if ( status == RDY_OK )
+                    dataIn = pendDataIn;
+                else
+                    i2cStart( &I2CD1, &i2cfg1 );
             }
             // Here it should be some type of delay
             // because i2cSlaveIo returns immediately.
@@ -173,7 +193,7 @@ void initI2c( void )
 
     // Initial values for IOs.
     int16_t i;
-    for ( i=0; i<I2C_SLAVES_CNT; i++ )
+    for ( i=0; i<(I2C_SLAVES_CNT+1); i++ )
     {
         outs[i]     = 0;
         pendOuts[i] = 0;
@@ -269,8 +289,8 @@ uint8_t testReceive( uint8_t addr, uint32_t * val )
     static systime_t tmo;
     tmo = MS2ST( 1000 );
     status = i2cSlaveIoTimeout( &I2CD1, addr,
-                                (uint8_t *)val,  sizeof( uint32_t ),
-                                0, 0 );
+                         (uint8_t *)val,  sizeof( uint32_t ),
+                         0, 0, tmo );
     return status;
 }
 
@@ -318,11 +338,11 @@ void tst_i2c_io( BaseChannel *chp, int argc, char * argv[] )
 {
     (void)argc;
     (void)argv;
+    static msg_t status;
+    static systime_t tmo;
+    tmo = MS2ST( 1000 );
     if ( testMaster )
     {
-        static msg_t status;
-        static systime_t tmo;
-        tmo = MS2ST( 1000 );
         status = RDY_OK;
         status = i2cMasterTransmitTimeout( &I2CD1, testAddr,
                                            testBuffer, /*testCnt*/ 4,
@@ -333,9 +353,10 @@ void tst_i2c_io( BaseChannel *chp, int argc, char * argv[] )
     }
     else
     {
-        i2cSlaveIoTimeout( &I2CD1, testAddr,
-                           testBuffer, /*testCnt*/ 4,
-                           0,  0 );
+        status = RDY_OK;
+        status = i2cSlaveIoTimeout( &I2CD1, testAddr,
+                                    testBuffer, /*testCnt*/ 4,
+                                    0,  0, tmo );
         chThdSleepSeconds( 2 );
         chprintf( chp, "slave ok:%d", I2CD1.state );
     }

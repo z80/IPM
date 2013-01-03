@@ -298,7 +298,7 @@ static void i2c_lld_set_opmode(I2CDriver *i2cp) {
  * @notapi
  */
 static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
-            i2cp->state |= 1;
+            //i2cp->state |= 1;
             if ( palReadPad( GPIOB, 14 ) )
                 palClearPad( GPIOB, 14 );
             else
@@ -366,8 +366,12 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
           dmaStreamSetTransactionSize( i2cp->dmatx, i2cp->txbytes );
 
           // And enable DMA.
-          dmaStreamEnable(i2cp->dmarx);
-          dmaStreamEnable(i2cp->dmatx);
+          dmaStreamEnable( i2cp->dmarx );
+          dmaStreamEnable( i2cp->dmatx );
+
+          // Configure I2C to use DMA and (just for safety
+          // ensure interrupts are on).
+          dp->CR2 |= ( I2C_CR2_ITEVTEN | I2C_CR2_DMAEN );
       }
 
       // Clear Addr Flag
@@ -965,19 +969,27 @@ msg_t i2c_lld_master_transmit_timeout(I2CDriver *i2cp, i2caddr_t addr,
 
 msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
                                 uint8_t * rxbuf, size_t rxbytes,
-                                uint8_t * txbuf, size_t txbytes )
+                                uint8_t * txbuf, size_t txbytes,
+                                systime_t timeout )
 {
     I2C_TypeDef *dp = i2cp->i2c;
+    VirtualTimer vt;
 
-    // Let's reset the bus to kill all communication and errors.
-    //dp->CR1 |= I2C_CR1_SWRST;
+    /* Global timeout for the whole operation.*/
+    if (timeout != TIME_INFINITE)
+      chVTSetI( &vt, timeout, i2c_lld_safety_timeout, (void *)i2cp );
 
-    // Disable DMA to prevent past IOs.
-    //dmaStreamDisable( i2cp->dmarx );
-    //dmaStreamDisable( i2cp->dmatx );
-
-    /* Releases the lock from high level driver.*/
-    //chSysUnlock();
+    /* Waits until BUSY flag is reset and the STOP from the previous operation
+       is completed, alternatively for a timeout condition.*/
+    chSysUnlock();
+    while ((dp->SR2 & I2C_SR2_BUSY) || (dp->CR1 & I2C_CR1_STOP))
+    {
+        chSysLock();
+        if ((timeout != TIME_INFINITE) && !chVTIsArmedI(&vt))
+            return RDY_TIMEOUT;
+        chSysUnlock();
+    }
+    chSysLock();
 
     /* Initializes driver fields, LSB = 1 -> read.*/
     i2cp->addr    = (addr << 1);
@@ -987,14 +999,9 @@ msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
     i2cp->txbuf   = txbuf;
     i2cp->txbytes = txbytes;
 
-    /* This lock will be released in high level driver.*/
-    //chSysLock();
-
     i2cp->slave_mode = 1;
     /* Starts the operation.*/
     dp->CR1 &= ~(I2C_CR1_START | I2C_CR1_ACK);
-    // Remove software bus reset.
-    //dp->CR1 &= (~I2C_CR1_SWRST);
     // Own address.
     dp->OAR1 = ((addr << 1) & (0xFE));
     // Turn interrupts and using DMA on.
@@ -1002,8 +1009,44 @@ msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
     // Generate Ack on address match and IOs.
     dp->CR1 |= I2C_CR1_ACK;
 
-    return 0;
+    /* Waits for the operation completion or a timeout.*/
+    i2cp->thread = chThdSelf();
+    return RDY_OK;
 }
+
+msg_t i2c_lld_slave_data_timeout( I2CDriver * i2cp,
+                          uint8_t * rxbuf, size_t rxbytes,
+                          uint8_t * txbuf, size_t txbytes,
+                          systime_t timeout )
+{
+    I2C_TypeDef *dp = i2cp->i2c;
+    VirtualTimer vt;
+
+    /* Global timeout for the whole operation.*/
+    if (timeout != TIME_INFINITE)
+      chVTSetI( &vt, timeout, i2c_lld_safety_timeout, (void *)i2cp );
+
+    /* Waits until BUSY flag is reset and the STOP from the previous operation
+       is completed, alternatively for a timeout condition.*/
+    chSysUnlock();
+    while ((dp->SR2 & I2C_SR2_BUSY) || (dp->CR1 & I2C_CR1_STOP))
+    {
+        chSysLock();
+        if ((timeout != TIME_INFINITE) && !chVTIsArmedI(&vt))
+            return RDY_TIMEOUT;
+        chSysUnlock();
+    }
+    chSysLock();
+
+    // Setup new buffer values.
+    i2cp->rxbuf   = rxbuf;
+    i2cp->rxbytes = rxbytes;
+    i2cp->txbuf   = txbuf;
+    i2cp->txbytes = txbytes;
+
+    return RDY_OK;
+}
+
 
 
 #endif

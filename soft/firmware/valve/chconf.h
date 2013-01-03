@@ -52,7 +52,7 @@
  *          setting also defines the system tick time unit.
  */
 #if !defined(CH_FREQUENCY) || defined(__DOXYGEN__)
-#define CH_FREQUENCY                    1000
+#define CH_FREQUENCY                    36000
 #endif
 
 /**
@@ -67,7 +67,7 @@
  *          and generally faster.
  */
 #if !defined(CH_TIME_QUANTUM) || defined(__DOXYGEN__)
-#define CH_TIME_QUANTUM                 20
+#define CH_TIME_QUANTUM                 4
 #endif
 
 /**
