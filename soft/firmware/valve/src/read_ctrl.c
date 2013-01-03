@@ -64,7 +64,7 @@ static msg_t readThread( void *arg )
     chRegSetThreadName( "read" );
     while ( 1 )
     {
-        chThdSleepMilliseconds( 500 );
+        chThdSleepMilliseconds( 10 );
         read( &value );
 
         //uint8_t v = 0;
