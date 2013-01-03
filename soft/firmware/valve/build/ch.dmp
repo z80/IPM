@@ -32,21 +32,21 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   7 .debug_info   0001c93f  00000000  00000000  0001686a  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   0000aecd  00000000  00000000  000331a9  2**0
+  8 .debug_line   0000aecf  00000000  00000000  000331a9  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_pubnames 00001bc6  00000000  00000000  0003e076  2**0
+  9 .debug_pubnames 00001bc6  00000000  00000000  0003e078  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_pubtypes 00004bea  00000000  00000000  0003fc3c  2**0
+ 10 .debug_pubtypes 00004bea  00000000  00000000  0003fc3e  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_aranges 00001378  00000000  00000000  00044826  2**0
+ 11 .debug_aranges 00001378  00000000  00000000  00044828  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00001010  00000000  00000000  00045b9e  2**0
+ 12 .debug_ranges 00001010  00000000  00000000  00045ba0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    00004008  00000000  00000000  00046bae  2**0
+ 13 .debug_str    00004008  00000000  00000000  00046bb0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .comment      0000002a  00000000  00000000  0004abb6  2**0
+ 14 .comment      0000002a  00000000  00000000  0004abb8  2**0
                   CONTENTS, READONLY
- 15 .ARM.attributes 00000031  00000000  00000000  0004abe0  2**0
+ 15 .ARM.attributes 00000031  00000000  00000000  0004abe2  2**0
                   CONTENTS, READONLY
  16 .debug_frame  000033a4  00000000  00000000  0004ac14  2**2
                   CONTENTS, READONLY, DEBUGGING
@@ -226,7 +226,7 @@ SYMBOL TABLE:
 2000145c l     O .bss	00000001 testCnt
 20001460 l     O .bss	00000010 testBuffer
 20001470 l     O .bss	000001b0 waI2c
-08006de0 l     F .text	00000268 i2cThread
+08006de0 l     F .text	00000270 i2cThread
 20001628 l     O .bss	00000004 tmo.6816
 2000162c l     O .bss	00000001 master.6814
 2000162d l     O .bss	00000001 i.6819

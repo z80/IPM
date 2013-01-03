@@ -35,7 +35,7 @@ static msg_t i2cThread( void *arg )
     while ( 1 )
     {
         //chThdSleepMilliseconds( 1 );
-        chThdSleepMilliseconds( 100 );
+        //chThdSleepMilliseconds( 100 );
         // Read ADDRESS pins.
         uint16_t ind = palReadPad( ADDR_PORT, ADDR_0_PIN ) |
                      ( palReadPad( ADDR_PORT, ADDR_1_PIN ) << 1 ) |
@@ -100,6 +100,7 @@ static msg_t i2cThread( void *arg )
             // Here should be IO with moto controller boards and accelerometer.
             // .....
 
+            chThdSleepMilliseconds( 100 );
         }
         else
         {
@@ -120,6 +121,7 @@ static msg_t i2cThread( void *arg )
             }
             // Here it should be some type of delay
             // because i2cSlaveIo returns immediately.
+            chThdSleepMilliseconds( 1 );
             write( dataOut );
         }
         /*if ( a == 0b00000111 )

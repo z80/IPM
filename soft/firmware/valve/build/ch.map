@@ -2148,7 +2148,7 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_info    0x0001b282     0x10ee build/obj/i2c_ctrl.o
  .debug_info    0x0001c370      0x5cf build/obj/led_ctrl.o
 
-.debug_line     0x00000000     0xaecd
+.debug_line     0x00000000     0xaecf
  .debug_line    0x00000000      0x15e build/obj/crt0.o
  .debug_line    0x0000015e       0x6e build/obj/vectors.o
  .debug_line    0x000001cc       0x63 build/obj/chcore.o
@@ -2229,8 +2229,8 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_line    0x00009e98      0x3fc build/obj/usb_ctrl.o
  .debug_line    0x0000a294      0x2a9 build/obj/read_ctrl.o
  .debug_line    0x0000a53d      0x28b build/obj/write_ctrl.o
- .debug_line    0x0000a7c8      0x4b8 build/obj/i2c_ctrl.o
- .debug_line    0x0000ac80      0x24d build/obj/led_ctrl.o
+ .debug_line    0x0000a7c8      0x4ba build/obj/i2c_ctrl.o
+ .debug_line    0x0000ac82      0x24d build/obj/led_ctrl.o
 
 .debug_pubnames
                 0x00000000     0x1bc6
