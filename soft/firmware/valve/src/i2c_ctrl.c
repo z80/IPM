@@ -127,10 +127,11 @@ static msg_t i2cThread( void *arg )
                 i2cStop( &I2CD1 );
                 chThdSleepMilliseconds( 100 );
                 i2cStart( &I2CD1, &i2cfg1 );
+                continue;
             }
             // Here it should be some type of delay
             // because i2cSlaveIo returns immediately.
-            chThdSleepMilliseconds( 10 );
+            chThdSleepMilliseconds( 20 );
             write( dataOut );
         }
         /*if ( a == 0b00000111 )
