@@ -111,7 +111,7 @@ static msg_t i2cThread( void *arg )
             // Here should be IO with moto controller boards and accelerometer.
             // .....
 
-            chThdSleepMilliseconds( 20 );
+            chThdSleepMilliseconds( 50 );
         }
         else
         {
