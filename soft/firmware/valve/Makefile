@@ -91,7 +91,10 @@ CSRC = $(PORTSRC) \
        ./src/read_ctrl.c \
        ./src/write_ctrl.c \
        ./src/i2c_ctrl.c \
-       ./src/led_ctrl.c #\
+       ./src/led_ctrl.c \
+       ./src/iwdg/iwdg.c \
+       ./src/iwdg/iwdg_lld.c
+       
        #./src/cpal_usercallback.c \
        #./cpal_i2c/cpal_hal.c \
        #./cpal_i2c/cpal_i2c.c \
@@ -133,7 +136,8 @@ ASMSRC = $(PORTASM)
 INCDIR = $(PORTINC) $(KERNINC) $(TESTINC) \
          $(HALINC) $(PLATFORMINC) $(BOARDINC) \
          $(CHIBIOS)/os/various \
-         ./src #\
+         ./src \
+         ./src/iwdg 
          #./cpal_i2c \
          #./stdperiph
 

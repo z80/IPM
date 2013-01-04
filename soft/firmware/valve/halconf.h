@@ -41,6 +41,8 @@
 
 #include "mcuconf.h"
 
+#define HAL_USE_IWDG                 TRUE
+
 /**
  * @brief   Enables the TM subsystem.
  */
