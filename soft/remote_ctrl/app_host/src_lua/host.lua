@@ -8,7 +8,9 @@ local emulation = false
 function main()
     --while ( not isConnected() ) do
     --    sleep( 5 )
-    --    connect()
+    --    if ( not isConnected() ) then
+    --        connect()
+    --    end
     --end
     send( "print( \'host\'s entered main() dummy infinite loop\' )" )
     if ( emulation ) then
@@ -55,13 +57,18 @@ function processMcu()
     mcu = luamcuctrl.create()
     local en = mcu:open()
     while true do
-        local ins = { mcu:inputs( BOARDS_CNT ) }
+        local ins
+        if ( mcu and mcu:isOpen() ) then
+            ins = { mcu:inputs( BOARDS_CNT ) }
+        else
+            ins = {}
+        end
         if ( #ins < BOARDS_CNT ) then
             -- Failure
             send( "print( \'Error: mcu doesn\'t respond on USB requests\' )" )
             mcu:close()
             sleep( 5 )
-            cmu:open()
+            mcu:open()
         else
             -- Success.
             -- Compare current inputs with their new values from MCU.
