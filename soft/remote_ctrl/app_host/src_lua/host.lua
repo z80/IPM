@@ -1,12 +1,15 @@
 
---require( "luamcuctrl" )
 require( "bit" )
 
-local BOARDS_CNT = 2
+local BOARDS_CNT = 3
 local inputs = { 0, 0, 0 }
-local emulation = true
+local emulation = false
 
 function main()
+    --while ( not isConnected() ) do
+    --    sleep( 5 )
+    --    connect()
+    --end
     send( "print( \'host\'s entered main() dummy infinite loop\' )" )
     if ( emulation ) then
         emulationProcessMcu()
@@ -91,6 +94,18 @@ function emulationProcessMcu()
             end
         end
         sleep( 0.1 )
+    end
+end
+
+--[[
+    To understand what's going on call report() function.
+]]
+function report()
+    local stri = string.format( "print( \"mcu = %s\" )", tostring( mcu ) )
+    send( stri )
+    if ( mcu ) then
+        stri = string.format( "print( \"mcu:isOpen() = %s\" )", mcu:isOpen() and "true" or "false" )
+        send( stri )
     end
 end
 
