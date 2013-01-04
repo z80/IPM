@@ -17,7 +17,8 @@ int main(void)
 
     IWDGConfig cfg;
     cfg.div = IWDG_DIV_256;
-    cfg.counter = (40000 / 256 * 5);
+    cfg.counter = (40000 / 256 * 5 );
+    iwdgInit();
     iwdgStart( &IWDGD, &cfg );
     chThdSleepMilliseconds(1000);
     iwdgReset( &IWDGD );

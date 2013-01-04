@@ -94,8 +94,8 @@ void iwdg_lld_start( IWDGDriver *iwdgp, const IWDGConfig *cfg )
     IWDG_TypeDef * d = iwdgp->iwdg;
     d->KR  = KR_KEY_Write;
     d->PR  = cfg->div;
-    d->KR  = KR_KEY_Write;
     d->RLR = (cfg->counter <= IWDG_COUNTER_MAX) ? cfg->counter : IWDG_COUNTER_MAX;
+    d->KR  = KR_KEY_Reload;
     d->KR  = KR_KEY_Enable;
 }
 

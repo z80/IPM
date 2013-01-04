@@ -85,8 +85,6 @@ void iwdgStart( IWDGDriver *iwdgp, const IWDGConfig *config )
   chDbgCheck((iwdgp != NULL) && (config != NULL), "iwdgStart");
 
   chSysLock();
-  chDbgAssert((iwdgp->state == IWDG_STOP) || (iwdgp->state == IWDG_READY),
-              "iwdgStart(), #1", "invalid state");
   iwdg_lld_start( iwdgp, config );
   iwdgp->state = IWDG_READY;
   chSysUnlock();
