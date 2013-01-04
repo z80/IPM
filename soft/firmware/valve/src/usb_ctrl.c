@@ -10,6 +10,7 @@
 #include "usb_cdc.h"
 #include "shell.h"
 #include "chprintf.h"
+#include "iwdg.h"
 
 #include "read_ctrl.h"
 #include "write_ctrl.h"
@@ -388,6 +389,13 @@ static Thread * shelltp = NULL;
 
 void initUsb( void )
 {
+    usbDisconnectBus(serusbcfg.usbp);
+    uint8_t i;
+    for ( i=0; i<10; i++ )
+    {
+        chThdSleepMilliseconds( 100 );
+        iwdgReset( &IWDGD );
+    }
     sduObjectInit(&SDU1);
     sduStart(&SDU1, &serusbcfg);
     usbConnectBus(serusbcfg.usbp);
@@ -397,6 +405,7 @@ void initUsb( void )
 
 void finitUsb( void )
 {
+    usbDisconnectBus();
     sduStop( &SDU1 );
 }
 

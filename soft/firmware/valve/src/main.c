@@ -20,7 +20,6 @@ int main(void)
     cfg.counter = (40000 / 256 / 2 );
     iwdgInit();
     iwdgStart( &IWDGD, &cfg );
-    chThdSleepMilliseconds(1000);
     iwdgReset( &IWDGD );
 
     initLed();
