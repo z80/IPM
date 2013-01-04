@@ -18,7 +18,7 @@ static int create( lua_State * L )
 
 static int gc( lua_State * L )
 {
-	McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
+    McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
     if ( io )
         delete io;
     return 0;
@@ -26,14 +26,14 @@ static int gc( lua_State * L )
 
 static int self( lua_State * L )
 {
-	McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
+    McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
     lua_pushlightuserdata( L, reinterpret_cast< void * >(io) );
     return 1;
 }
 
 static int open( lua_State * L )
 {
-	McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
+    McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
     bool res;
     if ( ( lua_gettop( L ) > 1 ) && ( lua_type( L, 2 ) == LUA_TSTRING ) )
     {
@@ -48,14 +48,14 @@ static int open( lua_State * L )
 
 static int close( lua_State * L )
 {
-	McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
+    McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
     io->close();
     return 0;
 }
 
 static int isOpen( lua_State * L )
 {
-	McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
+    McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
     bool res = io->isOpen();
     lua_pushboolean( L, ( res ) ? 1 : 0 );
     return 1;
@@ -63,7 +63,7 @@ static int isOpen( lua_State * L )
 
 static int write( lua_State * L )
 {
-	McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
+    McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
     std::string stri = lua_tostring( L, 2 );
     int res = io->write( stri );
     lua_pushnumber( L, static_cast<lua_Number>( res ) );
@@ -72,19 +72,19 @@ static int write( lua_State * L )
 
 static int read( lua_State * L )
 {
-	McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
-	std::string stri;
+    McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
+    std::string stri;
     int res = io->read( stri );
     if ( res > 0 )
         lua_pushstring( L, stri.c_str() );
     else
-    	lua_pushnil( L );
+        lua_pushnil( L );
     return 1;
 }
 
 static int setOutputs( lua_State * L )
 {
-	McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
+    McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
     int cnt = lua_gettop( L );
     std::basic_string<unsigned long> args;
     args.resize( cnt - 1 );
@@ -97,7 +97,7 @@ static int setOutputs( lua_State * L )
 
 static int inputs( lua_State * L )
 {
-	McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
+    McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
     int cnt;
     if ( lua_gettop( L ) > 1 )
         cnt = static_cast<int>( lua_tonumber( L, 2 ) );
@@ -116,36 +116,37 @@ static int inputs( lua_State * L )
 }
 
 static const struct luaL_reg META_FUNCTIONS[] = {
-	{ "__gc",          gc }, 
-    { "pointer",       self }, 
+    { "__gc",          gc },
+    { "pointer",       self },
     // Open/close routines
-    { "open",          open }, 
-    { "close",         close }, 
-    { "isOpen",        isOpen }, 
+    { "open",          open },
+    { "close",         close },
+    { "isOpen",        isOpen },
     // The lowest possible level
-    { "write",         write }, 
-    { "read",          read }, 
-    { "setOutputs",    setOutputs }, 
-    { "inputs",        inputs }, 
+    { "write",         write },
+    { "read",          read },
+    { "setOutputs",    setOutputs },
+    { "inputs",        inputs },
 
-    { NULL,            NULL }, 
+    { NULL,            NULL },
 };
 
 static void createMeta( lua_State * L )
 {
+    int top = lua_gettop( L );
     luaL_newmetatable( L, META );  // create new metatable for file handles
     // file methods
     lua_pushliteral( L, "__index" );
     lua_pushvalue( L, -2 );  // push metatable
     lua_rawset( L, -3 );       // metatable.__index = metatable
     luaL_register( L, NULL, META_FUNCTIONS );
-    // ������� ����.
-    lua_pop( L, lua_gettop( L ) );
+
+    lua_settop( L, top );
 }
 
 static const struct luaL_reg FUNCTIONS[] = {
-	{ "create",  create }, 
-	{ NULL, NULL },
+    { "create",  create },
+    { NULL, NULL },
 };
 
 static void registerFunctions( lua_State * L )

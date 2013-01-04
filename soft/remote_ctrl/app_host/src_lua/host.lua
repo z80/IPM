@@ -6,12 +6,12 @@ local inputs = { 0, 0, 0 }
 local emulation = false
 
 function main()
-    --while ( not isConnected() ) do
-    --    sleep( 5 )
-    --    if ( not isConnected() ) then
-    --        connect()
-    --    end
-    --end
+    while ( not isConnected() ) do
+        sleep( 10 )
+        if ( not isConnected() ) then
+            connect()
+        end
+    end
     send( "print( \'host\'s entered main() dummy infinite loop\' )" )
     if ( emulation ) then
         emulationProcessMcu()
@@ -56,6 +56,11 @@ function processMcu()
     -- mcu variable is NOT local to be accessible from the outside.
     mcu = luamcuctrl.create()
     local en = mcu:open()
+    if ( en ) then
+        send( "print( \'Opended MCU successfully\' )" )
+    else
+        send( "print( \"ERROR: MCU can\'t be open\" )" )
+    end
     while true do
         local ins
         if ( mcu and mcu:isOpen() ) then
@@ -65,7 +70,7 @@ function processMcu()
         end
         if ( #ins < BOARDS_CNT ) then
             -- Failure
-            send( "print( \'Error: mcu doesn\'t respond on USB requests\' )" )
+            send( "print( \"Error: mcu doesn\'t respond on USB requests\" )" )
             mcu:close()
             sleep( 5 )
             mcu:open()
