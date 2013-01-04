@@ -4,6 +4,7 @@
 #include "i2c_ctrl.h"
 #include "hal.h"
 #include "chprintf.h"
+#include "iwdg.h"
 
 #include "read_ctrl.h"
 #include "write_ctrl.h"
@@ -75,6 +76,7 @@ static msg_t i2cThread( void *arg )
                 if ( pendDataOut != dataOut )
                 {
                     // IO itself.
+                    iwdgReset( &IWDGD );
                     status = i2cMasterTransmitTimeout( &I2CD1, I2C_BASE_ADDR+i,
                                                        (uint8_t *)(&pendDataOut), sizeof(pendDataOut),
                                                        0,  0,
@@ -92,6 +94,7 @@ static msg_t i2cThread( void *arg )
                         continue;
                     }
                 }
+                iwdgReset( &IWDGD );
                 status = i2cMasterReceiveTimeout( &I2CD1, I2C_BASE_ADDR+i,
                                                   (uint8_t *)(&dataIn),  sizeof(dataIn),
                                                   tmo );
@@ -108,13 +111,19 @@ static msg_t i2cThread( void *arg )
                 ins[i+1] = dataIn;
                 chMtxUnlock();
             }
+
+            iwdgReset( &IWDGD );
             // Here should be IO with moto controller boards and accelerometer.
             // .....
 
             chThdSleepMilliseconds( 50 );
+
+            iwdgReset( &IWDGD );
         }
         else
         {
+            iwdgReset( &IWDGD );
+
             static uint8_t addr;
             addr = I2C_BASE_ADDR + ind - 1;
             dataIn = valueRead();
