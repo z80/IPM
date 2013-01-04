@@ -59,7 +59,7 @@ static msg_t i2cThread( void *arg )
             // First the board itself.
             chMtxLock( &mutex );
             ins[0] = valueRead();
-            write( outs[0] );
+            write( pendOuts[0] );
             chMtxUnlock();
             // After all slave boards.
             static int8_t i;
