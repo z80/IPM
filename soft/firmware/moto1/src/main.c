@@ -22,18 +22,19 @@ int main(void)
     iwdgStart( &IWDGD, &cfg );
     iwdgReset( &IWDGD );
 
-    initLed();
-    initRead();
-    initWrite();
-    initI2c();
-    initUsb();
+    //initLed();
+    //initRead();
+    //initWrite();
+    //initI2c();
+    //initUsb();
 
-    setLeds( 2 );
+    //setLeds( 2 );
 
     while (TRUE)
     {
-        processShell();
-        chThdSleepMilliseconds(1000);
+        //processShell();
+        chThdSleepMilliseconds(100);
+        iwdgReset( &IWDGD );
     }
     return 0;
 }
