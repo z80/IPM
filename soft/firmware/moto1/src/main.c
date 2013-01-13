@@ -21,7 +21,7 @@ int main(void)
     iwdgStart( &IWDGD, &cfg );
     iwdgReset( &IWDGD );
 
-    //initLed();
+    initLed();
     initRead();
     initWrite();
     initI2c();
