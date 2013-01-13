@@ -1750,18 +1750,19 @@ destructors     0x080000ec        0x0
  .bss.pendValue
                 0x20001200        0x4 build/obj/write_ctrl.o
  .bss.mutex     0x20001204       0x10 build/obj/i2c_ctrl.o
- .bss.tmo.6838  0x20001214        0x4 build/obj/i2c_ctrl.o
- .bss.dataOut.6839
-                0x20001218        0x2 build/obj/i2c_ctrl.o
- .bss.dataIn.6840
-                0x2000121a        0x2 build/obj/i2c_ctrl.o
- .bss.addr.6841
-                0x2000121c        0x1 build/obj/i2c_ctrl.o
- *fill*         0x2000121d        0x3 00
- .bss.waI2c     0x20001220      0x1b0 build/obj/i2c_ctrl.o
- .bss.mutex     0x200013d0       0x10 build/obj/led_ctrl.o
- .bss.value     0x200013e0        0x4 build/obj/led_ctrl.o
- *fill*         0x200013e4        0x4 00
+ .bss.addr.6797
+                0x20001214        0x1 build/obj/i2c_ctrl.o
+ *fill*         0x20001215        0x3 00
+ .bss.waI2c     0x20001218      0x1b0 build/obj/i2c_ctrl.o
+ .bss.dataOut.6795
+                0x200013c8        0x2 build/obj/i2c_ctrl.o
+ *fill*         0x200013ca        0x2 00
+ .bss.tmo.6794  0x200013cc        0x4 build/obj/i2c_ctrl.o
+ .bss.dataIn.6796
+                0x200013d0        0x2 build/obj/i2c_ctrl.o
+ *fill*         0x200013d2        0x2 00
+ .bss.mutex     0x200013d4       0x10 build/obj/led_ctrl.o
+ .bss.value     0x200013e4        0x4 build/obj/led_ctrl.o
  .bss.waLeds    0x200013e8      0x1b0 build/obj/led_ctrl.o
  .bss.arg.6142  0x20001598        0x4 build/obj/led_ctrl.o
  .bss.IWDGD     0x2000159c        0x8 build/obj/iwdg_lld.o
