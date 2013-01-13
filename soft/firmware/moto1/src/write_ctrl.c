@@ -18,33 +18,15 @@ static void writeInternal( void )
         return;
 
     curValue = val;
-    // set clock low.
-    palClearPad( OUT_PORT, OUT_CP_PIN );
-    chThdSleepMicroseconds( 1 );
-    // Turn off master reset (it makes sense only for the very first time of course).
-    palSetPad( OUT_PORT, OUT_MR_PIN );
-    chThdSleepMicroseconds( 1 );
-    static int16_t i;
-    static uint32_t bitVal;
-    bitVal = (1 << 31);
-    for ( i=31; i>=0; i-- )
-    {
-        palClearPad( OUT_PORT, OUT_CP_PIN );
-        chThdSleepMicroseconds( 1 );
-        if ( curValue & bitVal )
-            palSetPad( OUT_PORT, OUT_DSA_PIN );
-        else
-            palClearPad( OUT_PORT, OUT_DSA_PIN );
-        chThdSleepMicroseconds( 1 );
-        palSetPad( OUT_PORT, OUT_CP_PIN );
-        chThdSleepMicroseconds( 1 );
-        bitVal >>= 1;
-    }
-    // To save some power if output is zero disable output on L293DDs.
-    if ( curValue == 0 )
-        palClearPad( OUT_PORT, OUT_EN_PIN );
+
+    if ( curValue & 0x0001 )
+        palSetPad( MOTO_PORT, MOTO_INPUT_1 );
     else
-        palSetPad( OUT_PORT, OUT_EN_PIN );
+        palClearPad( MOTO_PORT, MOTO_INPUT_1 );
+    if ( curValue & 0x0002 )
+        palSetPad( MOTO_PORT, MOTO_INPUT_2 );
+    else
+        palClearPad( MOTO_PORT, MOTO_INPUT_2 );
 }
 
 static WORKING_AREA( waWrite, 256 );
@@ -56,16 +38,6 @@ static msg_t writeThread( void *arg )
     {
         chThdSleepMilliseconds( 1 );
         writeInternal();
-
-        //setLeds( 1 );
-        //pendValue = 0xAAAAAAAA;
-        //writeInternal();
-        //chThdSleepSeconds( 2 );
-
-        //setLeds( 2 );
-        //pendValue = 0x55555555;
-        //writeInternal();
-        //chThdSleepSeconds( 2 );
     }
 
     return 0;
@@ -74,17 +46,10 @@ static msg_t writeThread( void *arg )
 void initWrite( void )
 {
     // By default all outputs are zeros.
-    // So it looks like it's good to keep outputs disabled.
-    // They'll be turned on automatically when output is not equal zero.
-    //palSetPad( OUT_PORT,     OUT_EN_PIN );
-    palClearPad( OUT_PORT,     OUT_EN_PIN );
-    palSetPad( OUT_PORT,     OUT_MR_PIN );
-    palSetPad( OUT_PORT,     OUT_CP_PIN );
-    palSetPad( OUT_PORT,     OUT_DSA_PIN );
-    palSetPadMode( IN_PORT, OUT_EN_PIN, PAL_MODE_OUTPUT_PUSHPULL );
-    palSetPadMode( IN_PORT, OUT_MR_PIN, PAL_MODE_OUTPUT_PUSHPULL );
-    palSetPadMode( IN_PORT, OUT_CP_PIN, PAL_MODE_OUTPUT_PUSHPULL );
-    palSetPadMode( IN_PORT, OUT_DSA_PIN, PAL_MODE_OUTPUT_PUSHPULL );
+    palClearPad( MOTO_PORT,     MOTO_INPUT_1 );
+    palClearPad( MOTO_PORT,     MOTO_INPUT_2 );
+    palSetPadMode( MOTO_PORT, MOTO_INPUT_1, PAL_MODE_OUTPUT_PUSHPULL );
+    palSetPadMode( MOTO_PORT, MOTO_INPUT_1, PAL_MODE_OUTPUT_PUSHPULL );
 
     // Initializing mutex.
     chMtxInit( &mutex );
@@ -92,7 +57,7 @@ void initWrite( void )
     chThdCreateStatic( waWrite, sizeof(waWrite), NORMALPRIO, writeThread, NULL );
 }
 
-void write( uint32_t val )
+void valueWrite( uint32_t val )
 {
     chMtxLock( &mutex );
     pendValue = val;

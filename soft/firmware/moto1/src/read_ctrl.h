@@ -5,7 +5,7 @@
 #include "ch.h"
 
 void     initRead( void );
-uint32_t valueRead( void );
+uint16_t valueRead( void );
 
 
 #endif

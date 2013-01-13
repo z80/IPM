@@ -5,55 +5,15 @@
 #include "led_ctrl.h"
 
 static Mutex    mutex;
-static uint32_t value = 0;
+static uint16_t value = 0;
 
-static void read( uint32_t * val )
+static void read( uint16_t * val )
 {
-    // Enable parallel load.
-    palClearPad( IN_PORT, IN_PL_PIN );
-    chThdSleepMicroseconds( 1 );
-
-    // Disable parallel load.
-    palSetPad( IN_PORT, IN_PL_PIN );
-    chThdSleepMicroseconds( 1 );
-
-    // Clock enable.
-    palClearPad( IN_PORT, IN_CE_PIN );
-    chThdSleepMicroseconds( 1 );
-
-    static uint32_t result;
-    result = 0;
-    static uint32_t bitVal;
-    bitVal = 1;
-    static int16_t i;
-
-    for ( i=0; i<16; i++ )
-    {
-        // Set clock.
-        palSetPad( IN_PORT, IN_CP_PIN );
-        chThdSleepMicroseconds( 1 );
-
-        // Check for value;
-        static uint16_t b;
-        b = palReadPad( IN_PORT, IN_Q7_PIN );
-        result += (b != 0) ? bitVal : 0;
-        bitVal <<= 1;
-        chThdSleepMicroseconds( 1 );
-
-        // Clear clock.
-        palClearPad( IN_PORT, IN_CP_PIN );
-        chThdSleepMicroseconds( 1 );
-    }
-    // Set clock.
-    palSetPad( IN_PORT, IN_CP_PIN );
-    chThdSleepMicroseconds( 1 );
-
-    // Clock disable.
-    palSetPad( IN_PORT, IN_CE_PIN );
-    chThdSleepMicroseconds( 1 );
-
+    // Check for value;
+    static uint16_t b;
+    b = palReadPad( SEN_PORT, SEN_1 ) | ( palReadPad( SEN_PORT, SEN_2 ) << 1 );
     chMtxLock( &mutex );
-    *val = result;
+    *val = b;
     chMtxUnlock();
 }
 
@@ -66,12 +26,6 @@ static msg_t readThread( void *arg )
     {
         chThdSleepMilliseconds( 10 );
         read( &value );
-
-        //uint8_t v = 0;
-        //uint8_t i;
-        //for ( i=0; i<16; i++ )
-        //    v += ( value & (1<<i) ) ? 1 : 0;
-        //setLeds( v | 4 );
     }
 
     return 0;
@@ -79,21 +33,15 @@ static msg_t readThread( void *arg )
 
 void initRead( void )
 {
-    palSetPadMode( IN_PORT, IN_Q7_PIN, PAL_MODE_INPUT );
-    palSetPad( IN_PORT,     IN_PL_PIN );
-    palSetPad( IN_PORT,     IN_CE_PIN );
-    palSetPad( IN_PORT,     IN_CP_PIN );
-    palSetPadMode( IN_PORT, IN_PL_PIN, PAL_MODE_OUTPUT_PUSHPULL );
-    palSetPadMode( IN_PORT, IN_CE_PIN, PAL_MODE_OUTPUT_PUSHPULL );
-    palSetPadMode( IN_PORT, IN_CP_PIN, PAL_MODE_OUTPUT_PUSHPULL );
-
+    palSetPadMode( SEN_PORT, SEN_1, PAL_MODE_INPUT );
+    palSetPadMode( SEN_PORT, SEN_2, PAL_MODE_INPUT );
     // Initializing mutex.
     chMtxInit( &mutex );
     // Creating thread.
     chThdCreateStatic( waRead, sizeof(waRead), NORMALPRIO, readThread, NULL );
 }
 
-uint32_t valueRead( void )
+uint16_t valueRead( void )
 {
     static uint32_t result;
     chMtxLock( &mutex );

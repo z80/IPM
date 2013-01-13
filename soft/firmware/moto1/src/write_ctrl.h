@@ -5,7 +5,7 @@
 #include "ch.h"
 
 void initWrite( void );
-void write( uint32_t val );
+void valueWrite( uint32_t val );
 
 
 #endif

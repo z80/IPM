@@ -4,7 +4,6 @@
 
 #include "iwdg.h"
 
-#include "usb_ctrl.h"
 #include "led_ctrl.h"
 #include "read_ctrl.h"
 #include "write_ctrl.h"
@@ -23,18 +22,15 @@ int main(void)
     iwdgReset( &IWDGD );
 
     //initLed();
-    //initRead();
-    //initWrite();
-    //initI2c();
-    //initUsb();
+    initRead();
+    initWrite();
+    initI2c();
 
     //setLeds( 2 );
 
     while (TRUE)
     {
-        //processShell();
-        chThdSleepMilliseconds(100);
-        iwdgReset( &IWDGD );
+        chThdSleepMilliseconds( 1000 );
     }
     return 0;
 }
