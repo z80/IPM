@@ -32,13 +32,12 @@ static msg_t i2cThread( void *arg )
         ind = (~ind) & 0x0007;
         //setLeds( a );
 
-        static msg_t status;
-        static systime_t tmo;
-        tmo = MS2ST( 100 );
-        master = ( ind == 0 ) ? 1 : 0;
+        //static msg_t status;
+        //static systime_t tmo;
+        //tmo = MS2ST( 100 );
         // I/O with other boards.
-        static uint16_t dataOut;
-        static uint16_t dataIn;
+        //static uint16_t dataOut;
+        //static uint16_t dataIn;
 
         iwdgReset( &IWDGD );
 

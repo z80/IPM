@@ -87,11 +87,9 @@ CSRC = $(PORTSRC) \
        $(CHIBIOS)/os/various/shell.c \
        $(CHIBIOS)/os/various/chprintf.c \
        ./src/main.c \
-       ./src/usb_ctrl.c \
-       ./src/read_ctrl.c \
-       ./src/write_ctrl.c \
        ./src/i2c_ctrl.c \
        ./src/led_ctrl.c \
+       ./src/dac_ctrl.c \
        ./src/iwdg/iwdg.c \
        ./src/iwdg/iwdg_lld.c
        

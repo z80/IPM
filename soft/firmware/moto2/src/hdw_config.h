@@ -19,6 +19,17 @@
 #define I2C_SCL_PAD     6
 #define I2C_SDA_PAD     7
 
+// SPI params
+#define DAC_PORT       GPIOA
+#define DAC_SCLK       0
+#define DAC_DIN        1
+#define DAC_CS_PORT_0  GPIOC
+#define DAC_CS_PAD_0   14
+#define DAC_CS_PORT_1  GPIOC
+#define DAC_CS_PAD_1   15
+#define DAC_CS_PORT_2  GPIOC
+#define DAC_CS_PAD_2   13
+
 #endif
 
 
