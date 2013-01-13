@@ -26,4 +26,22 @@ soft/remote_ctrl/build.eclipse
 soft/remote_ctrl/app
 _temp
 
+soft/firmware/moto1/.dep
+soft/firmware/moto1/.settings
+soft/firmware/moto1/build/lst
+soft/firmware/moto1/build/obj
+soft/firmware/moto1/.dep/*
+soft/firmware/moto1/.settings/*
+soft/firmware/moto1/build/lst/*
+soft/firmware/moto1/build/obj/*
+soft/firmware/moto2/.dep
+soft/firmware/moto2/.settings
+soft/firmware/moto2/build/lst
+soft/firmware/moto2/build/obj
+soft/firmware/moto2/.dep/*
+soft/firmware/moto2/.settings/*
+soft/firmware/moto2/build/lst/*
+soft/firmware/moto2/build/obj/*
+
+
 
