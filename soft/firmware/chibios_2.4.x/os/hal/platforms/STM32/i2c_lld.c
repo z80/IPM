@@ -298,11 +298,11 @@ static void i2c_lld_set_opmode(I2CDriver *i2cp) {
  * @notapi
  */
 static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
-            i2cp->state |= 1;
+            /*i2cp->state |= 1;
             if ( palReadPad( GPIOB, 14 ) )
                 palClearPad( GPIOB, 14 );
             else
-                palSetPad( GPIOB, 14 );
+                palSetPad( GPIOB, 14 );*/
 
   I2C_TypeDef *dp = i2cp->i2c;
   uint32_t regSR = dp->SR2;
@@ -313,10 +313,10 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
      done by the DMA.*/
   switch (I2C_EV_MASK & (event | (regSR << 16))) {
   case I2C_EV5_MASTER_MODE_SELECT:
-          if ( palReadPad( GPIOB, 13 ) )
+          /*if ( palReadPad( GPIOB, 13 ) )
               palClearPad( GPIOB, 13 );
           else
-              palSetPad( GPIOB, 13 );
+              palSetPad( GPIOB, 13 );*/
     dp->DR = i2cp->addr;
     break;
   case I2C_EV6_MASTER_REC_MODE_SELECTED:
@@ -348,11 +348,11 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
 #if I2C_USE_SLAVE_MODE
   if  (event & (I2C_SR1_ADDR | I2C_SR1_ADD10))
   {
-              i2cp->state |= 4;
+              /*i2cp->state |= 4;
               if ( palReadPad( GPIOB, 12 ) )
                   palClearPad( GPIOB, 12 );
               else
-                  palSetPad( GPIOB, 12 );
+                  palSetPad( GPIOB, 12 );*/
       // If slave mode. On ADDR match DMA buffers should be configured.
       if ( i2cp->slave_mode )
       {
