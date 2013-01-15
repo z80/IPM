@@ -19,7 +19,7 @@
 #define I2C_SCL_PAD     6
 #define I2C_SDA_PAD     7
 
-// SPI params
+// DAC params
 #define DAC_PORT       GPIOA
 #define DAC_SCLK       0
 #define DAC_DIN        1
@@ -29,6 +29,13 @@
 #define DAC_CS_PAD_1   15
 #define DAC_CS_PORT_2  GPIOC
 #define DAC_CS_PAD_2   13
+
+// BMSD params
+#define BMSD_DIR_PORT   GPIOB
+#define BMSD_DIR_PIN    15
+#define BMSD_UART       UARTD2
+#define BMSD_RX_TIMEOUT 1024   // Timeout to wait for BMSD reply. If there is no reply continue without it.
+#define BMSD_BAUD       9600
 
 #endif
 

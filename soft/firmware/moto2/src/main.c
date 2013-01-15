@@ -21,7 +21,7 @@ int main(void)
     iwdgReset( &IWDGD );
 
     dacInit();
-    initLed();
+    //initLed();
     //initI2c();
 
 

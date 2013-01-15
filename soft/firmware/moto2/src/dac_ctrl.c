@@ -40,8 +40,8 @@ void dacSet( uint8_t index, uint8_t value )
         pad  = DAC_CS_PAD_1;
         break;
     default:
-        port = DAC_CS_PORT_1;
-        pad  = DAC_CS_PAD_1;
+        port = DAC_CS_PORT_2;
+        pad  = DAC_CS_PAD_2;
         break;
     }
     // CS low.
