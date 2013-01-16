@@ -7,28 +7,32 @@
 #include "led_ctrl.h"
 #include "i2c_ctrl.h"
 #include "dac_ctrl.h"
+#include "bmsd_ctrl.h"
 
 int main(void)
 {
     halInit();
     chSysInit();
 
-    IWDGConfig cfg;
+    /*IWDGConfig cfg;
     cfg.div = IWDG_DIV_256;
     cfg.counter = (40000 / 256 / 2 );
     iwdgInit();
     iwdgStart( &IWDGD, &cfg );
-    iwdgReset( &IWDGD );
+    iwdgReset( &IWDGD );*/
 
+    initLed();
+    setLeds( 3 );
     dacInit();
-    //initLed();
+    //bmsdInit();
     //initI2c();
 
 
     while (TRUE)
     {
-        //chThdSleepMilliseconds( 1000 );
-        int16_t i;
+        //bmsdSetEn();
+        chThdSleepSeconds( 1 );
+        /*int16_t i;
         for ( i=0; i<256; i++ )
         {
             dacSet( 0, i );
@@ -44,7 +48,7 @@ int main(void)
             dacSet( 2, i );
             iwdgReset( &IWDGD );
             chThdSleepMilliseconds( 1 );
-        }
+        }*/
     }
     return 0;
 }
