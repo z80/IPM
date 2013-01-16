@@ -39,20 +39,23 @@ static void timeout( void * args )
 {
     (void)args;
     // Stop reading.
-    uartStopReceiveI( &BMSD_UART );
+    //uartStopReceiveI( &BMSD_UART );
     // Resume thread.
+    chSysLockFromIsr();
     chSchReadyI( thread );
+    chSysUnlockFromIsr();
 }
 
 static void startRead( void * args )
 {
     (void)args;
     // First setup timeout timer.
-    if ( chVTIsArmedI( &vt ) )
-        chVTResetI( &vt );
-    chVTSetI( &vt, MS2ST( BMSD_RX_TIMEOUT ), timeout, NULL );
+    //if ( chVTIsArmedI( &vt ) )
+    //    chVTResetI( &vt );
+    //chVTSetI( &vt, MS2ST( BMSD_RX_TIMEOUT ), timeout, NULL );
     // Start receive.
-    uartStartReceiveI( &BMSD_UART, 5, ioBuffer );
+    //uartStartReceiveI( &BMSD_UART, 5, ioBuffer );
+    timeout( args );
 }
 
 static void txCompleted( UARTDriver *uartp )
@@ -64,11 +67,13 @@ static void txCompleted( UARTDriver *uartp )
   chSysLockFromIsr();
   bytesReceived = 0;
 
-  if (chVTIsArmedI(&readVt))
-    chVTResetI(&readVt);
-  chVTSetI(&readVt, MS2ST(1), startRead, NULL);
+  //if (chVTIsArmedI(&readVt))
+  //  chVTResetI(&readVt);
+  //chVTSetI(&readVt, MS2ST(1), startRead, NULL);
 
   chSysUnlockFromIsr(); 
+
+  timeout( NULL );
 }
 
 static void rxEnd( UARTDriver *uartp )
@@ -107,13 +112,10 @@ static void uartIo( void )
     palSetPad( BMSD_DIR_PORT, BMSD_DIR_PIN );
     uartStartSend( &BMSD_UART, 5, ioBuffer );
 
+    chSysLock()
     thread = chThdSelf();
     chSchGoSleepS( THD_STATE_SUSPENDED );
-    //chVTSetI( &vt, MS2ST(BMSD_RX_TIMEOUT), NULL, NULL );
-
-    // Wait till timeout or reset from ISR.
-    //while ( chVTIsArmedI( &vt ) )
-    //    chThdSleepMicroseconds( BMSD_RX_TIMEOUT );
+    chSysUnlock();
 }
 
 static UARTConfig uart_cfg =
@@ -133,122 +135,6 @@ static UARTConfig uart_cfg =
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-static VirtualTimer vt1, vt2;
-
-static void restart(void *p) {
-
-  (void)p;
-  uartStartSendI(&UARTD2, 14, "Hello World!\r\n");
-}
-
-static void ledoff(void *p) {
-
-  (void)p;
-  //palSetPad(IOPORT3, GPIOC_LED);
-}
-
-/*
- * This callback is invoked when a transmission buffer has been completely
- * read by the driver.
- */
-static void txend1(UARTDriver *uartp) {
-
-  (void)uartp;
-  //palClearPad(IOPORT3, GPIOC_LED);
-}
-
-/*
- * This callback is invoked when a transmission has physically completed.
- */
-static void txend2(UARTDriver *uartp) {
-
-  (void)uartp;
-  //palSetPad(IOPORT3, GPIOC_LED);
-  chSysLockFromIsr();
-  if (chVTIsArmedI(&vt1))
-    chVTResetI(&vt1);
-  chVTSetI(&vt1, MS2ST(5000), restart, NULL);
-  chSysUnlockFromIsr();
-}
-
-/*
- * This callback is invoked on a receive error, the errors mask is passed
- * as parameter.
- */
-static void rxerr(UARTDriver *uartp, uartflags_t e) {
-
-  (void)uartp;
-  (void)e;
-}
-
-/*
- * This callback is invoked when a character is received but the application
- * was not ready to receive it, the character is passed as parameter.
- */
-static void rxchar(UARTDriver *uartp, uint16_t c) {
-
-  (void)uartp;
-  (void)c;
-  /* Flashing the LED each time a character is received.*/
-  //palClearPad(IOPORT3, GPIOC_LED);
-  chSysLockFromIsr();
-  if (chVTIsArmedI(&vt2))
-    chVTResetI(&vt2);
-  chVTSetI(&vt2, MS2ST(200), ledoff, NULL);
-  chSysUnlockFromIsr();
-}
-
-/*
- * This callback is invoked when a receive buffer has been completely written.
- */
-static void rxend(UARTDriver *uartp) {
-
-  (void)uartp;
-}
-
-/*
- * UART driver configuration structure.
- */
-static UARTConfig uart_cfg_1 = {
-  txLast,
-  txend2,
-  rxEnd,
-  rxChar, //rxchar,
-  rxErr,
-  BMSD_BAUD,
-  0,
-  USART_CR2_LINEN,
-  0
-};
 
 
 

@@ -9,6 +9,23 @@
 #include "dac_ctrl.h"
 #include "bmsd_ctrl.h"
 
+
+static WORKING_AREA( waUart, 256 );
+static msg_t uartThread( void *arg )
+{
+    (void)arg;
+    chRegSetThreadName( "ua" );
+    while ( 1 )
+    {
+        bmsdSetEn();
+        chThdSleepSeconds( 1 );
+    }
+
+    return 0;
+}
+
+
+
 int main(void)
 {
     halInit();
@@ -28,10 +45,10 @@ int main(void)
     bmsdInit();
     //initI2c();
 
+	chThdCreateStatic( waUart, sizeof(waUart), NORMALPRIO, uartThread, NULL );
 
     while (TRUE)
     {
-        bmsdSetEn();
         chThdSleepSeconds( 1 );
         /*int16_t i;
         for ( i=0; i<256; i++ )
