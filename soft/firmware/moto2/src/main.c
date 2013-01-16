@@ -24,13 +24,14 @@ int main(void)
     initLed();
     setLeds( 3 );
     dacInit();
+    chThdSleepSeconds( 5 );
     bmsdInit();
     //initI2c();
 
 
     while (TRUE)
     {
-        //bmsdSetEn();
+        bmsdSetEn();
         chThdSleepSeconds( 1 );
         /*int16_t i;
         for ( i=0; i<256; i++ )

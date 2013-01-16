@@ -34,7 +34,7 @@
 #define BMSD_DIR_PORT   GPIOB
 #define BMSD_DIR_PIN    15
 #define BMSD_UART       UARTD2
-#define BMSD_RX_TIMEOUT 1024   // Timeout to wait for BMSD reply. If there is no reply continue without it.
+#define BMSD_RX_TIMEOUT 128   // Timeout to wait for BMSD reply. If there is no reply continue without it.
 #define BMSD_BAUD       9600
 
 #endif
