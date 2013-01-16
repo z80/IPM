@@ -11,7 +11,7 @@ Program Header:
     LOAD off    0x00010800 vaddr 0x20000800 paddr 0x080031c0 align 2**15
          filesz 0x00000024 memsz 0x00000024 flags rw-
     LOAD off    0x00010828 vaddr 0x20000828 paddr 0x080031e4 align 2**15
-         filesz 0x00000000 memsz 0x000009bc flags rw-
+         filesz 0x00000000 memsz 0x00000cd0 flags rw-
     LOAD off    0x00018000 vaddr 0x20000000 paddr 0x20000000 align 2**15
          filesz 0x00000000 memsz 0x00000800 flags rw-
 private flags = 5000002: [Version5 EABI] [has entry point]
@@ -28,31 +28,31 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
   4 .data         00000024  20000800  080031c0  00010800  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  5 .bss          000009bc  20000828  080031e4  00010828  2**3
+  5 .bss          00000cd0  20000828  080031e4  00010828  2**3
                   ALLOC
   6 .debug_abbrev 00005d36  00000000  00000000  00010824  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_info   0001a477  00000000  00000000  0001655a  2**0
+  7 .debug_info   0001a445  00000000  00000000  0001655a  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   0000a73f  00000000  00000000  000309d1  2**0
+  8 .debug_line   0000a740  00000000  00000000  0003099f  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_pubnames 00001946  00000000  00000000  0003b110  2**0
+  9 .debug_pubnames 00001946  00000000  00000000  0003b0df  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_pubtypes 000045bb  00000000  00000000  0003ca56  2**0
+ 10 .debug_pubtypes 000045bb  00000000  00000000  0003ca25  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_aranges 00001248  00000000  00000000  00041011  2**0
+ 11 .debug_aranges 00001248  00000000  00000000  00040fe0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000ec8  00000000  00000000  00042259  2**0
+ 12 .debug_ranges 00000ec8  00000000  00000000  00042228  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    000039df  00000000  00000000  00043121  2**0
+ 13 .debug_str    000039df  00000000  00000000  000430f0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .comment      0000002a  00000000  00000000  00046b00  2**0
+ 14 .comment      0000002a  00000000  00000000  00046acf  2**0
                   CONTENTS, READONLY
- 15 .ARM.attributes 00000031  00000000  00000000  00046b2a  2**0
+ 15 .ARM.attributes 00000031  00000000  00000000  00046af9  2**0
                   CONTENTS, READONLY
- 16 .debug_frame  00002f10  00000000  00000000  00046b5c  2**2
+ 16 .debug_frame  00002f08  00000000  00000000  00046b2c  2**2
                   CONTENTS, READONLY, DEBUGGING
- 17 .debug_loc    00003ec2  00000000  00000000  00049a6c  2**0
+ 17 .debug_loc    00003eb6  00000000  00000000  00049a34  2**0
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  startup	00000000 startup
@@ -125,24 +125,25 @@ SYMBOL TABLE:
 08003160 l     O .text	00000012 cfgtab.5951
 00000000 l    df *ABS*	00000000 board.c
 00000000 l    df *ABS*	00000000 main.c
-20000e48 l     O .bss	000001b0 waUart
+20000e48 l     O .bss	000004b0 waUart
 08002780 l     F .text	00000024 uartThread
 00000000 l    df *ABS*	00000000 led_ctrl.c
-20000ff8 l     O .bss	00000010 mutex
-20001008 l     O .bss	00000004 value
-20001010 l     O .bss	000001b0 waLeds
+200012f8 l     O .bss	00000010 mutex
+20001308 l     O .bss	00000004 value
+20001310 l     O .bss	000001b0 waLeds
 08002800 l     F .text	00000098 ledsThread
-200011c0 l     O .bss	00000004 arg.5953
+200014c0 l     O .bss	00000004 arg.5953
 00000000 l    df *ABS*	00000000 dac_ctrl.c
 00000000 l    df *ABS*	00000000 bmsd_ctrl.c
 20000800 l     O .data	00000001 bytesReceived
-200011c4 l     O .bss	00000005 ioBuffer
-200011cc l     O .bss	00000014 vt
-200011e0 l     O .bss	00000004 thread
+200014c4 l     O .bss	00000005 ioBuffer
+200014cc l     O .bss	00000014 vt
+200014e0 l     O .bss	00000014 readVt
+200014f4 l     O .bss	00000004 thread
 080029b0 l     F .text	00000092 crc8
 08002a50 l     F .text	00000008 txLast
-08002a60 l     F .text	00000030 timeout
-08002a90 l     F .text	00000044 txCompleted
+08002a60 l     F .text	00000018 timeout
+08002a80 l     F .text	00000060 txCompleted
 08002ae0 l     F .text	00000008 rxEnd
 08002af0 l     F .text	00000064 rxChar
 08002b60 l     F .text	0000000a rxErr
@@ -231,7 +232,7 @@ SYMBOL TABLE:
 08000000 g     O startup	000000ec _vectors
 08000ab0 g     F .text	00000070 chSchGoSleepS
 20000de0 g     O .bss	00000048 I2CD1
-200011e4 g       *ABS*	00000000 __heap_base__
+200014f8 g       *ABS*	00000000 __heap_base__
 080031c0 g       *ABS*	00000000 _etext
 08000df0 g     F .text	00000070 chThdCreateI
 080005d0 g     F .text	00000028 dbg_check_enable
@@ -271,7 +272,7 @@ SYMBOL TABLE:
 08002c60 g     F .text	00000034 bmsdSetEn
 080008a0 g     F .text	0000009c chVTSetI
 080001e0  w    F .text	00000002 Vector64
-200011e4 g       .bss	00000000 _bss_end
+200014f8 g       .bss	00000000 _bss_end
 20000d44 g     O .bss	00000004 dbg_panic_msg
 08000100  w    F .text	00000002 _default_exit
 08002680 g     F .text	000000e0 _pal_lld_setgroupmode
@@ -354,7 +355,7 @@ SYMBOL TABLE:
 08001730 g     F .text	00000048 Vector78
 20005000 g       *ABS*	00000000 __ram_end__
 20000824 g       .data	00000000 _edata
-200011e4 g       *ABS*	00000000 _end
+200014f8 g       *ABS*	00000000 _end
 08000940 g     F .text	0000006c chVTResetI
 080001e0 g     F .text	00000002 _unhandled_exception
 080001e0  w    F .text	00000002 Vector88

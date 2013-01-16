@@ -41,9 +41,9 @@ static void timeout( void * args )
     // Stop reading.
     //uartStopReceiveI( &BMSD_UART );
     // Resume thread.
-    chSysLockFromIsr();
+    //chSysLockFromIsr();
     chSchReadyI( thread );
-    chSysUnlockFromIsr();
+    //chSysUnlockFromIsr();
 }
 
 static void startRead( void * args )
@@ -55,7 +55,7 @@ static void startRead( void * args )
     //chVTSetI( &vt, MS2ST( BMSD_RX_TIMEOUT ), timeout, NULL );
     // Start receive.
     //uartStartReceiveI( &BMSD_UART, 5, ioBuffer );
-    timeout( args );
+    //timeout( NULL );
 }
 
 static void txCompleted( UARTDriver *uartp )
@@ -67,13 +67,14 @@ static void txCompleted( UARTDriver *uartp )
   chSysLockFromIsr();
   bytesReceived = 0;
 
-  //if (chVTIsArmedI(&readVt))
-  //  chVTResetI(&readVt);
+  if (chVTIsArmedI(&readVt))
+    chVTResetI(&readVt);
   //chVTSetI(&readVt, MS2ST(1), startRead, NULL);
+  chVTSetI(&readVt, MS2ST(1), timeout,   NULL);
 
   chSysUnlockFromIsr(); 
 
-  timeout( NULL );
+  //timeout( NULL );
 }
 
 static void rxEnd( UARTDriver *uartp )

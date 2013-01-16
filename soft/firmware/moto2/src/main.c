@@ -10,7 +10,7 @@
 #include "bmsd_ctrl.h"
 
 
-static WORKING_AREA( waUart, 256 );
+static WORKING_AREA( waUart, 1024 );
 static msg_t uartThread( void *arg )
 {
     (void)arg;
