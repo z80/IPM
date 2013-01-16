@@ -24,7 +24,7 @@ int main(void)
     initLed();
     setLeds( 3 );
     dacInit();
-    //bmsdInit();
+    bmsdInit();
     //initI2c();
 
 
