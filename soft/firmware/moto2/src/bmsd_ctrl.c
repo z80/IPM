@@ -46,7 +46,6 @@ static void rxchar( UARTDriver *uartp, uint16_t c )
     {
         if (chVTIsArmedI(&vt))
           chVTResetI(&vt);
-        chSysUnlockFromIsr();
     }
 }
 

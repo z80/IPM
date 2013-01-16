@@ -24,29 +24,29 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
   3 .bss          00000634  20000800  08001db0  00010800  2**3
                   ALLOC
-  4 .debug_abbrev 0000694f  00000000  00000000  00009db0  2**0
+  4 .debug_abbrev 0000695b  00000000  00000000  00009db0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   0001aa7b  00000000  00000000  000106ff  2**0
+  5 .debug_info   0001aa61  00000000  00000000  0001070b  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_line   0000af8d  00000000  00000000  0002b17a  2**0
+  6 .debug_line   0000af8d  00000000  00000000  0002b16c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_loc    0000bb56  00000000  00000000  00036107  2**0
+  7 .debug_loc    0000bb23  00000000  00000000  000360f9  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_pubnames 00001946  00000000  00000000  00041c5d  2**0
+  8 .debug_pubnames 00001946  00000000  00000000  00041c1c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_pubtypes 00004446  00000000  00000000  000435a3  2**0
+  9 .debug_pubtypes 00004446  00000000  00000000  00043562  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_aranges 00001120  00000000  00000000  000479e9  2**0
+ 10 .debug_aranges 00001120  00000000  00000000  000479a8  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00001ea8  00000000  00000000  00048b09  2**0
+ 11 .debug_ranges 00001ea8  00000000  00000000  00048ac8  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_str    000039a9  00000000  00000000  0004a9b1  2**0
+ 12 .debug_str    000039a9  00000000  00000000  0004a970  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .comment      0000002a  00000000  00000000  0004e35a  2**0
+ 13 .comment      0000002a  00000000  00000000  0004e319  2**0
                   CONTENTS, READONLY
- 14 .ARM.attributes 00000031  00000000  00000000  0004e384  2**0
+ 14 .ARM.attributes 00000031  00000000  00000000  0004e343  2**0
                   CONTENTS, READONLY
- 15 .debug_frame  00002e98  00000000  00000000  0004e3b8  2**2
+ 15 .debug_frame  00002e8c  00000000  00000000  0004e374  2**2
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  startup	00000000 startup
