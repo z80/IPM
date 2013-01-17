@@ -45,14 +45,14 @@
 #define ENCABS_DATA_PIN  7
 
 // Encoder relative
-#define ENCREL_A1_PORT  GPIOA
+#define ENCREL_A1_PORT  GPIOB
 #define ENCREL_A1_PIN   0
-#define ENCREL_B1_PORT  GPIOA
+#define ENCREL_B1_PORT  GPIOB
 #define ENCREL_B1_PIN   1
-#define ENCREL_A2_PORT  GPIOA
-#define ENCREL_A2_PIN   3
-#define ENCREL_B2_PORT  GPIOA
-#define ENCREL_B2_PIN   4
+#define ENCREL_A2_PORT  GPIOB
+#define ENCREL_A2_PIN   8
+#define ENCREL_B2_PORT  GPIOB
+#define ENCREL_B2_PIN   9
 
 #endif
 
