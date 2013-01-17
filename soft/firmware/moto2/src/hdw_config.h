@@ -37,6 +37,23 @@
 #define BMSD_RX_TIMEOUT 128   // Timeout to wait for BMSD reply. If there is no reply continue without it.
 #define BMSD_BAUD       9600
 
+// Encoder absolute
+#define ENCABS_BITS      13
+#define ENCABS_CLK_PORT  GPIOA
+#define ENCABS_CLK_PIN   6
+#define ENCABS_DATA_PORT GPIOA
+#define ENCABS_DATA_PIN  7
+
+// Encoder relative
+#define ENCREL_A1_PORT  GPIOA
+#define ENCREL_A1_PIN   0
+#define ENCREL_B1_PORT  GPIOA
+#define ENCREL_B1_PIN   1
+#define ENCREL_A2_PORT  GPIOA
+#define ENCREL_A2_PIN   3
+#define ENCREL_B2_PORT  GPIOA
+#define ENCREL_B2_PIN   4
+
 #endif
 
 

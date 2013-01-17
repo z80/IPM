@@ -91,6 +91,7 @@ CSRC = $(PORTSRC) \
        ./src/led_ctrl.c \
        ./src/dac_ctrl.c \
        ./src/bmsd_ctrl.c \
+       ./src/encabs_ctrl.c \
        ./src/iwdg/iwdg.c \
        ./src/iwdg/iwdg_lld.c
        

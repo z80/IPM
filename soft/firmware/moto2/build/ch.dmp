@@ -30,29 +30,29 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, DATA
   5 .bss          00000cd0  20000828  080033c4  00010828  2**3
                   ALLOC
-  6 .debug_abbrev 00005d36  00000000  00000000  00010824  2**0
+  6 .debug_abbrev 00005eec  00000000  00000000  00010824  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_info   0001a445  00000000  00000000  0001655a  2**0
+  7 .debug_info   0001aaae  00000000  00000000  00016710  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   0000a743  00000000  00000000  0003099f  2**0
+  8 .debug_line   0000a9e2  00000000  00000000  000311be  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_pubnames 00001946  00000000  00000000  0003b0e2  2**0
+  9 .debug_pubnames 00001972  00000000  00000000  0003bba0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_pubtypes 000045bb  00000000  00000000  0003ca28  2**0
+ 10 .debug_pubtypes 00004729  00000000  00000000  0003d512  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_aranges 00001248  00000000  00000000  00040fe3  2**0
+ 11 .debug_aranges 00001288  00000000  00000000  00041c3b  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000ec8  00000000  00000000  0004222b  2**0
+ 12 .debug_ranges 00000ef8  00000000  00000000  00042ec3  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    000039df  00000000  00000000  000430f3  2**0
+ 13 .debug_str    00003a27  00000000  00000000  00043dbb  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .comment      0000002a  00000000  00000000  00046ad2  2**0
+ 14 .comment      0000002a  00000000  00000000  000477e2  2**0
                   CONTENTS, READONLY
- 15 .ARM.attributes 00000031  00000000  00000000  00046afc  2**0
+ 15 .ARM.attributes 00000031  00000000  00000000  0004780c  2**0
                   CONTENTS, READONLY
- 16 .debug_frame  00002f10  00000000  00000000  00046b30  2**2
+ 16 .debug_frame  00002fa0  00000000  00000000  00047840  2**2
                   CONTENTS, READONLY, DEBUGGING
- 17 .debug_loc    00003ec2  00000000  00000000  00049a40  2**0
+ 17 .debug_loc    00003f66  00000000  00000000  0004a7e0  2**0
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  startup	00000000 startup
@@ -204,6 +204,7 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 shell.c
 00000000 l    df *ABS*	00000000 chprintf.c
 00000000 l    df *ABS*	00000000 i2c_ctrl.c
+00000000 l    df *ABS*	00000000 encabs_ctrl.c
 00000000 l    df *ABS*	00000000 iwdg.c
 00000000 l    df *ABS*	00000000 iwdg_lld.c
 00000000 l    df *ABS*	00000000 memset.c
