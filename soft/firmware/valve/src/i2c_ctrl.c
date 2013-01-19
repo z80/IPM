@@ -23,11 +23,12 @@ static uint32_t outs[ I2C_SLAVES_CNT+1 ]; // +1 because including master board i
 static uint32_t pendOuts[ I2C_SLAVES_CNT+1 ];
 static uint32_t ins[ I2C_SLAVES_CNT+1 ];
 
-#define TEST_BUFFER_SIZE 16
-static uint8_t testMaster = 1;
-static uint8_t testAddr = 9;
-static uint8_t testCnt = 0;
-static uint8_t testBuffer[ TEST_BUFFER_SIZE ];
+// Generic I2C functions declaration.
+void i2cSetAddr( uint8_t val );
+void i2cSetBuf( uint8_t addr, uint8_t at, uint8_t val );
+void i2cIo( uint8_t sendCnt, uint8_t receiveCnt );
+uint8_t i2cStatus( void );
+uint8_t i2cBuf( uint8_t index );
 
 static WORKING_AREA( waI2c, 256 );
 static msg_t i2cThread( void *arg )
@@ -245,77 +246,111 @@ void cmd_set_output( BaseChannel *chp, int argc, char * argv [] )
     }
 }
 
-void testSetAddr( uint8_t val )
+
+
+
+
+
+
+
+
+
+
+
+
+static uint8_t i2cAddr = 64;
+static uint8_t i2cOutBuffer[ I2C_OUT_BUF_SZ ];
+static uint8_t i2cInBuffer[ I2C_IN_BUF_SZ ];
+static uint8_t i2cTxSz, i2cRxSz;
+static uint8_t i2cStatus = 0;
+
+void i2cSetAddr( uint8_t val )
 {
-    testAddr = val;
+    i2cAddr = val;
 }
 
-void testSetMaster( uint8_t set )
+void i2cSetBuf( uint8_t addr, uint8_t at, uint8_t val )
 {
-    testMaster = set;
+    i2cOutBuf[ at ] = val;
 }
 
-uint8_t testSend( uint8_t addr, uint32_t * val )
+void i2cIo( uint8_t sendCnt, uint8_t receiveCnt )
 {
     static msg_t status;
+    chMtxLock( &mutex );
+        i2cStatus = 1;
+    chMtxUnlock();
     static systime_t tmo;
-    tmo = MS2ST( 1000 );
-    status = RDY_OK;
-    status = i2cMasterTransmitTimeout( &I2CD1, addr,
-                                       (uint8_t *)&(val), sizeof(uint32_t),
-                                       0,  0,
+    tmo = MS2ST( 500 );
+    status = i2cMasterTransmitTimeout( &I2CD1, testAddr,
+                                       i2cOutBuffer, sendCnt,
+                                       i2cInBufer,   receiveCnt,
                                        tmo );
-    return ( status = RDY_OK ) ? 0 : 1;
+  chMtxLock( &mutex );
+      if ( status == RES_OK )
+          i2cStatus = 0;
+      else
+          i2cStatus = 2;
+  chMtxUnlock();
 }
 
-uint8_t testReceive( uint8_t addr, uint32_t * val )
+uint8_t i2cStatus( void )
 {
-    static msg_t status;
-    static systime_t tmo;
-    tmo = MS2ST( 1000 );
-    status = i2cSlaveIoTimeout( &I2CD1, addr,
-                                (uint8_t *)val,  sizeof( uint32_t ),
-                                0, 0,
-                                tmo );
-    return status;
+    chMtxLock( &mutex );
+        static uint8_t res;
+        res = i2cStatus;
+    chMtxUnlock();
+    return res;
+}
+
+uint8_t i2cBuf( uint8_t index )
+{
+    return i2cInBuffer[ index ];
 }
 
 
 
-
-
-void tst_i2c_set_addr( BaseChannel *chp, int argc, char * argv[] )
+void i2c_set_addr( BaseChannel *chp, int argc, char * argv[] )
 {
     if ( argc > 0 )
     {
-        int32_t v = atoi( argv[0] );
-        //testSetAddr( (uint8_t)v );
-        testAddr = (uint8_t)v;
+        static int8_t v;
+        v = (uint8_t)atoi( argv[0] );
+        i2cSetAddr( v );
         chprintf( chp, "ok:addr\r\n" );
     }
     else
         chprintf( chp, "err:arg expected\r\n" );
 }
 
-void tst_i2c_set_master( BaseChannel *chp, int argc, char * argv[] )
+void i2c_set_buf( BaseChannel *chp, int argc, char * argv[] )
 {
     if ( argc > 0 )
     {
-        uint8_t v = ( argv[0][0] != '0' ) ? 1 : 0;
-        testSetMaster( v );
+        static uint8_t at;
+        at = atoi( argv[0] );
+        static uint8_t i;
+        for ( i=0; i<(argc-1); i++ )
+        {
+            static uint8_t v;
+            v = (uint8_t)atoi( argv[i+1] );
+            i2cSetBuf( at+i, v );
+        }
+        chprintf( chp, "ok:mr\r\n" );
     }
     else
-        testSetMaster( 0 );
-    chprintf( chp, "ok:mr\r\n" );
+        chprintf( chp, "err:mr\r\n" );
 }
 
-void tst_i2c_set_buffer( BaseChannel *chp, int argc, char * argv[] )
+void i2c_io( BaseChannel *chp, int argc, char * argv[] )
 {
-    testCnt = argc;
-    uint8_t i;
-    for ( i=0; i<argc; i++ )
+    if ( argc > 1 )
     {
-        testBuffer[i] = (uint8_t)atoi( argv[i] );
+        static uint8_t txSz, rxSz;
+        txSz = (uint8_t)atoi( argv[0] );
+        rxSz = (uint8_t)atoi( argv[1] );
+        // Initiate IO.
+        i2cSetStatus( 1 );
     }
     chprintf( chp, "ok:buf\r\n" );
 }

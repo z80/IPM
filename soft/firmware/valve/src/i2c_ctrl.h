@@ -12,17 +12,13 @@ void setOutput( uint8_t index, uint32_t * val );
 // Commands for console.
 void cmd_state( BaseChannel *chp, int argc, char * argv[] );
 void cmd_set_output( BaseChannel *chp, int argc, char * argv[] );
-// Test routines.
-void testSetAddr( uint8_t ind );
-void testSetMaster( uint8_t set );
-uint8_t testSend( uint8_t ind, uint32_t * val );
-uint8_t testReceive( uint8_t ind, uint32_t * val );
-// Test USB commands.
-void tst_i2c_set_addr( BaseChannel *chp, int argc, char * argv[] );
-void tst_i2c_set_master( BaseChannel *chp, int argc, char * argv[] );
-void tst_i2c_set_buffer( BaseChannel *chp, int argc, char * argv[] );
-void tst_i2c_io( BaseChannel *chp, int argc, char * argv[] );
-void tst_i2c_buffer( BaseChannel *chp, int argc, char * argv[] );
+
+// Generic I2C commands.
+void i2c_set_addr( BaseChannel *chp, int argc, char * argv[] );
+void i2c_set_buf( BaseChannel *chp, int argc, char * argv[] );
+void i2c_io( BaseChannel *chp, int argc, char * argv[] );
+void i2c_status( BaseChannel *chp, int argc, char * argv[] );
+void i2c_buffer( BaseChannel *chp, int argc, char * argv[] );
 
 #endif
 
