@@ -162,6 +162,16 @@ uint8_t bmsdReady( void )
     return res;
 }
 
+void bmsdRawCmd( uint8_t * cmd )
+{
+    ioBuffer[0] = cmd[0];
+    ioBuffer[1] = cmd[1];
+    ioBuffer[2] = cmd[2];
+    ioBuffer[3] = cmd[3];
+    ioBuffer[4] = cmd[4];
+    uartIo();
+}
+
 void bmsdSetEn( void )
 {
     ioBuffer[0] = 0xE6;

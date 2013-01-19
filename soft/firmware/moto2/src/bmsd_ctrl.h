@@ -6,6 +6,7 @@
 
 void bmsdInit( void );
 uint8_t bmsdReady( void );
+void bmsdRawCmd( uint8_t * cmd );
 void bmsdSetEn( void );
 void bmsdSetSpeed( int16_t speed );
 

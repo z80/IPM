@@ -7,7 +7,16 @@
 #include "iwdg.h"
 
 #include "led_ctrl.h"
+#include "exec_ctrl.h"
+#include "encrel_ctrl.h"
+#include "encabs_ctrl.h"
+#include "bmsd_ctrl.h"
 #include "hdw_config.h"
+
+#define OUT_BUFFER_SZ   (4*3+1) // 3 encoders and one status byte.
+#define IN_BUFFER_SZ    6       // 1 byte - command Id. Up to 5 bytes per command. Max command - BMSD command.
+static uint8_t outBuffer[ OUT_BUFFER_SZ ];
+static uint8_t inBuffer[ IN_BUFFER_SZ ];
 
 static const I2CConfig i2cfg1 =
 {
@@ -30,36 +39,58 @@ static msg_t i2cThread( void *arg )
                      ( palReadPad( ADDR_PORT, ADDR_1 ) << 1 ) |
                      ( palReadPad( ADDR_PORT, ADDR_2 ) << 2 );
         ind = (~ind) & 0x0007;
-        //setLeds( a );
-
-        //static msg_t status;
-        //static systime_t tmo;
-        //tmo = MS2ST( 100 );
-        // I/O with other boards.
-        //static uint16_t dataOut;
-        //static uint16_t dataIn;
 
         iwdgReset( &IWDGD );
 
-        /*static uint8_t addr;
+        static msg_t status;
+        static systime_t tmo;
+        tmo = MS2ST( I2C_TIMEOUT );
+        // I/O with other boards.
+        int32_t * pienc = (int32_t *)outBuffer;
+        pienc[0] = encrel( 0 );
+        pienc[1] = encrel( 1 );
+        uint32_t * paenc = ( uint32_t * )outBuffer;
+        paenc[2] = encabs();
+        outBuffer[8] = bmsdReady();
+
+        // Watchdog reset.
+        iwdgReset( &IWDGD );
+
+        // To make sure we've got something.
+        inBuffer[0] = I2C_CMD_IDLE;
+        static uint8_t addr;
         addr = I2C_BASE_ADDR + ind;
-        dataIn = valueRead();
-            //dataIn = 0x12345678;
+        // IO routine itself.
         status = i2cSlaveIoTimeout( &I2CD1, addr,
-                                    (uint8_t *)&dataOut,  sizeof( dataOut ),
-                                    (uint8_t *)&dataIn,   sizeof( dataIn ), tmo );
+                                    (uint8_t *)&outBuffer,  sizeof( outBuffer ),
+                                    (uint8_t *)&inBuffer,   sizeof( inBuffer ), tmo );
         if ( status != RDY_OK )
         {
+            // Watchdog reset.
+            iwdgReset( &IWDGD );
+            // Restart I2c bus.
             i2cStop( &I2CD1 );
-            chThdSleepMilliseconds( 100 );
+            //chThdSleepMilliseconds( 100 );
             i2cStart( &I2CD1, &i2cfg1 );
             continue;
         }
-        // Here it should be some type of delay
-        // because i2cSlaveIo returns immediately.
-        chThdSleepMilliseconds( 20 );
-        valueWrite( dataOut );*/
-        chThdSleepMilliseconds( 20 );
+        // Watchdog reset.
+        iwdgReset( &IWDGD );
+        // If we are here IO routine succeeded.
+        // Parse inBuffer
+        switch ( inBuffer[0] )
+        {
+        case I2C_CMD_DAC1:
+            break;
+        case I2C_CMD_DAC2:
+            break;
+        case I2C_CMD_ENC1:
+            break;
+        case I2C_CMD_ENC2:
+            break;
+        case I2C_CMD_BMSD:
+            break;
+        }
     }
 
     return 0;
@@ -67,6 +98,11 @@ static msg_t i2cThread( void *arg )
 
 void initI2c( void )
 {
+    uint8_t i;
+    for ( i=0; i<OUT_BUFFER_SZ; i++ )
+        outBuffer[i] = 0;
+    for ( i=0; i<IN_BUFFER_SZ; i++ )
+        inBuffer[i] = 0;
     // Address pins
     palSetPadMode( ADDR_PORT, ADDR_0, PAL_MODE_INPUT );
     palSetPadMode( ADDR_PORT, ADDR_1, PAL_MODE_INPUT );

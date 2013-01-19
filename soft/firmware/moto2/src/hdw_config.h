@@ -14,10 +14,18 @@
 #define ADDR_2          14
 
 // I2C params
+#define I2C_TIMEOUT     100   // Timeout for I2C to admit there was no transaction from BUS master.
 #define I2C_BASE_ADDR   64
 #define I2C_PORT        GPIOC
 #define I2C_SCL_PAD     6
 #define I2C_SDA_PAD     7
+// Commands
+#define I2C_CMD_IDLE    0
+#define I2C_CMD_DAC1    1  // Set ESCON DAC
+#define I2C_CMD_DAC2    2  // The same
+#define I2C_CMD_ENC1    3  // Set inc. encoder's value
+#define I2C_CMD_ENC2    4  // The same
+#define I2C_CMD_BMSD    5  // BMSD 5 bytes command
 
 // DAC params
 #define DAC_PORT       GPIOA
