@@ -75,6 +75,7 @@ static msg_t i2cThread( void *arg )
         // Watchdog reset.
         iwdgReset( &IWDGD );
         // If we are here IO routine succeeded.
+        execPostCmd( inBuffer );
     }
 
     return 0;

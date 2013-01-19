@@ -1965,7 +1965,7 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_info    0x0001bb26      0x290 build/obj/iwdg.o
  .debug_info    0x0001bdb6      0x256 build/obj/iwdg_lld.o
 
-.debug_line     0x00000000     0xb1d0
+.debug_line     0x00000000     0xb1d1
  .debug_line    0x00000000      0x15e build/obj/crt0.o
  .debug_line    0x0000015e       0x6e build/obj/vectors.o
  .debug_line    0x000001cc       0x63 build/obj/chcore.o
@@ -2043,15 +2043,15 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_line    0x000094c6      0x387 build/obj/shell.o
  .debug_line    0x0000984d      0x28f build/obj/chprintf.o
  .debug_line    0x00009adc      0x1ca build/obj/main.o
- .debug_line    0x00009ca6      0x35e build/obj/i2c_ctrl.o
- .debug_line    0x0000a004      0x21e build/obj/exec_ctrl.o
- .debug_line    0x0000a222      0x248 build/obj/led_ctrl.o
- .debug_line    0x0000a46a      0x1d1 build/obj/dac_ctrl.o
- .debug_line    0x0000a63b      0x3ba build/obj/bmsd_ctrl.o
- .debug_line    0x0000a9f5      0x29f build/obj/encabs_ctrl.o
- .debug_line    0x0000ac94      0x203 build/obj/encrel_ctrl.o
- .debug_line    0x0000ae97      0x196 build/obj/iwdg.o
- .debug_line    0x0000b02d      0x1a3 build/obj/iwdg_lld.o
+ .debug_line    0x00009ca6      0x35f build/obj/i2c_ctrl.o
+ .debug_line    0x0000a005      0x21e build/obj/exec_ctrl.o
+ .debug_line    0x0000a223      0x248 build/obj/led_ctrl.o
+ .debug_line    0x0000a46b      0x1d1 build/obj/dac_ctrl.o
+ .debug_line    0x0000a63c      0x3ba build/obj/bmsd_ctrl.o
+ .debug_line    0x0000a9f6      0x29f build/obj/encabs_ctrl.o
+ .debug_line    0x0000ac95      0x203 build/obj/encrel_ctrl.o
+ .debug_line    0x0000ae98      0x196 build/obj/iwdg.o
+ .debug_line    0x0000b02e      0x1a3 build/obj/iwdg_lld.o
 
 .debug_pubnames
                 0x00000000     0x1b72
@@ -3796,6 +3796,7 @@ evtStart                                          build/obj/evtimer.o
 evtStop                                           build/obj/evtimer.o
 execInit                                          build/obj/exec_ctrl.o
 execPostCmd                                       build/obj/exec_ctrl.o
+                                                  build/obj/i2c_ctrl.o
 extChannelDisable                                 build/obj/ext.o
 extChannelEnable                                  build/obj/ext.o
 extInit                                           build/obj/ext.o

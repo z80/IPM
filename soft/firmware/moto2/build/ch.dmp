@@ -34,21 +34,21 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   7 .debug_info   0001c00c  00000000  00000000  00016c85  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   0000b1d0  00000000  00000000  00032c91  2**0
+  8 .debug_line   0000b1d1  00000000  00000000  00032c91  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_pubnames 00001b72  00000000  00000000  0003de61  2**0
+  9 .debug_pubnames 00001b72  00000000  00000000  0003de62  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_pubtypes 00004a8b  00000000  00000000  0003f9d3  2**0
+ 10 .debug_pubtypes 00004a8b  00000000  00000000  0003f9d4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_aranges 000013d8  00000000  00000000  0004445e  2**0
+ 11 .debug_aranges 000013d8  00000000  00000000  0004445f  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00001038  00000000  00000000  00045836  2**0
+ 12 .debug_ranges 00001038  00000000  00000000  00045837  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    00003cda  00000000  00000000  0004686e  2**0
+ 13 .debug_str    00003cda  00000000  00000000  0004686f  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .comment      0000002a  00000000  00000000  0004a548  2**0
+ 14 .comment      0000002a  00000000  00000000  0004a549  2**0
                   CONTENTS, READONLY
- 15 .ARM.attributes 00000031  00000000  00000000  0004a572  2**0
+ 15 .ARM.attributes 00000031  00000000  00000000  0004a573  2**0
                   CONTENTS, READONLY
  16 .debug_frame  00003308  00000000  00000000  0004a5a4  2**2
                   CONTENTS, READONLY, DEBUGGING
