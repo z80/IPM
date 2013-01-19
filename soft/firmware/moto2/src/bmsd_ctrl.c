@@ -113,7 +113,7 @@ static void uartIo( void )
     palSetPad( BMSD_DIR_PORT, BMSD_DIR_PIN );
     uartStartSend( &BMSD_UART, 5, ioBuffer );
 
-    chSysLock()
+    chSysLock();
     thread = chThdSelf();
     chSchGoSleepS( THD_STATE_SUSPENDED );
     chSysUnlock();
@@ -156,8 +156,9 @@ void bmsdInit( void )
 
 uint8_t bmsdReady( void )
 {
-    // Here it also should be lock unlock.
-    uint8_t res = ( bytesReceived >= 5 ) ? 1 : 0;
+    chSysLock();
+        uint8_t res = ( bytesReceived >= 5 ) ? 1 : 0;
+    chSysUnlock();
     return res;
 }
 

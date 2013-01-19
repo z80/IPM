@@ -32,27 +32,27 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
   6 .debug_abbrev 000062e4  00000000  00000000  00010824  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_info   0001b845  00000000  00000000  00016b08  2**0
+  7 .debug_info   0001b877  00000000  00000000  00016b08  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   0000af8b  00000000  00000000  0003234d  2**0
+  8 .debug_line   0000af8d  00000000  00000000  0003237f  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_pubnames 00001b34  00000000  00000000  0003d2d8  2**0
+  9 .debug_pubnames 00001b34  00000000  00000000  0003d30c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_pubtypes 00004930  00000000  00000000  0003ee0c  2**0
+ 10 .debug_pubtypes 00004930  00000000  00000000  0003ee40  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_aranges 000013a0  00000000  00000000  0004373c  2**0
+ 11 .debug_aranges 000013a0  00000000  00000000  00043770  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000fe0  00000000  00000000  00044adc  2**0
+ 12 .debug_ranges 00000fe0  00000000  00000000  00044b10  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    00003c4e  00000000  00000000  00045abc  2**0
+ 13 .debug_str    00003c4e  00000000  00000000  00045af0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .comment      0000002a  00000000  00000000  0004970a  2**0
+ 14 .comment      0000002a  00000000  00000000  0004973e  2**0
                   CONTENTS, READONLY
- 15 .ARM.attributes 00000031  00000000  00000000  00049734  2**0
+ 15 .ARM.attributes 00000031  00000000  00000000  00049768  2**0
                   CONTENTS, READONLY
- 16 .debug_frame  00003280  00000000  00000000  00049768  2**2
+ 16 .debug_frame  00003288  00000000  00000000  0004979c  2**2
                   CONTENTS, READONLY, DEBUGGING
- 17 .debug_loc    0000431e  00000000  00000000  0004c9e8  2**0
+ 17 .debug_loc    0000432a  00000000  00000000  0004ca24  2**0
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  startup	00000000 startup
