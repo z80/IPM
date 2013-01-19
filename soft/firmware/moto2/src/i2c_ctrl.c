@@ -13,10 +13,8 @@
 #include "bmsd_ctrl.h"
 #include "hdw_config.h"
 
-#define OUT_BUFFER_SZ   (4*3+1) // 3 encoders and one status byte.
-#define IN_BUFFER_SZ    6       // 1 byte - command Id. Up to 5 bytes per command. Max command - BMSD command.
-static uint8_t outBuffer[ OUT_BUFFER_SZ ];
-static uint8_t inBuffer[ IN_BUFFER_SZ ];
+static uint8_t outBuffer[ I2C_OUT_BUFFER_SZ ];
+static uint8_t inBuffer[ I2C_IN_BUFFER_SZ ];
 
 static const I2CConfig i2cfg1 =
 {
@@ -77,20 +75,6 @@ static msg_t i2cThread( void *arg )
         // Watchdog reset.
         iwdgReset( &IWDGD );
         // If we are here IO routine succeeded.
-        // Parse inBuffer
-        switch ( inBuffer[0] )
-        {
-        case I2C_CMD_DAC1:
-            break;
-        case I2C_CMD_DAC2:
-            break;
-        case I2C_CMD_ENC1:
-            break;
-        case I2C_CMD_ENC2:
-            break;
-        case I2C_CMD_BMSD:
-            break;
-        }
     }
 
     return 0;
@@ -99,9 +83,9 @@ static msg_t i2cThread( void *arg )
 void initI2c( void )
 {
     uint8_t i;
-    for ( i=0; i<OUT_BUFFER_SZ; i++ )
+    for ( i=0; i<I2C_OUT_BUFFER_SZ; i++ )
         outBuffer[i] = 0;
-    for ( i=0; i<IN_BUFFER_SZ; i++ )
+    for ( i=0; i<I2C_IN_BUFFER_SZ; i++ )
         inBuffer[i] = 0;
     // Address pins
     palSetPadMode( ADDR_PORT, ADDR_0, PAL_MODE_INPUT );
