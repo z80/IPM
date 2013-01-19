@@ -383,10 +383,16 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
 
       i2cp->state |= 8;
       // Turn interrupts on to feel ADDR match event to initiate transfer again.
-      dp->CR2 |= I2C_CR2_ITEVTEN;
+      //dp->CR2 |= I2C_CR2_ITEVTEN;
       // Generate Ack on address match and IOs.
       // Here write to CR1 also clears STOPF bit (according to the datasheet).
-      dp->CR1 |= I2C_CR1_ACK;
+      //dp->CR1 |= I2C_CR1_ACK;
+      // Disable DMA. Just to be sure it is off in the case if 
+      // transferred less bytes then it was supposed.
+      dmaStreamDisable( i2cp->dmarx );
+      dmaStreamDisable( i2cp->dmatx );
+      // Wakeup waiting thread.
+      wakeup_isr( i2cp, RDY_OK );
   }
 #else
   /* Clear ADDR flag. */
@@ -1000,6 +1006,11 @@ msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
     // This lock will be released in high level driver.
     chSysLock();
 
+    // Atomic check on the timer in order to make sure that a timeout didn't
+    // happen outside the critical zone.
+    if ((timeout != TIME_INFINITE) && !chVTIsArmedI(&vt))
+        return RDY_TIMEOUT;
+
     // Initializes driver fields, LSB = 1 -> read.
     i2cp->addr    = (addr << 1);
     i2cp->errors  = 0;
@@ -1019,6 +1030,8 @@ msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
     dp->CR1 |= I2C_CR1_ACK;
 
     /* Waits for the operation completion or a timeout.*/
+    i2cp->thread = chThdSelf();
+    chSchGoSleepS( THD_STATE_SUSPENDED );
     if ( ( timeout != TIME_INFINITE ) && chVTIsArmedI( &vt ) )
       chVTResetI( &vt );
 
