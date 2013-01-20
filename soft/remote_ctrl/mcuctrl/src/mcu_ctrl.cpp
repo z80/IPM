@@ -53,6 +53,56 @@ bool McuCtrl::setOutputs( unsigned long * data, int len )
     return ( cntRd >= cntWr );
 }
 
+bool McuCtrl::i2cSetAddr( int addr )
+{
+    std::ostringstream out;
+    out << "addr ";
+    out << addr;
+    out << "\r\n";
+    int cntWr = write( out.str() );
+    std::string stri;
+    stri.resize( 64 );
+    int cntRd = read( stri );
+    return ( cntRd >= cntWr );
+}
+
+bool McuCtrl::i2cSetBuf( int start, unsigned char * data, int cnt )
+{
+    std::ostringstream out;
+    out << "set_buf ";
+    out << start;
+    for ( int i=0; i<cnt; i++ )
+    {
+        out << " ";
+        out << static_cast<int>( data[i] );
+    }
+    out << "\r\n";
+    int cntWr = write( out.str() );
+    std::string stri;
+    stri.resize( 64 );
+    int cntRd = read( stri );
+    return ( cntRd >= cntWr );
+}
+
+bool McuCtrl::i2cIo( int txCnt, int rxCnt )
+{
+    std::ostringstream out;
+    out << "io ";
+    out << txCnt;
+
+}
+
+bool McuCtrl::i2cStatus( int & status )
+{
+
+}
+
+bool McuCtrl::i2cBuffer( int cnt, unsigned char * data )
+{
+
+}
+
+
 
 
 
