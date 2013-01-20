@@ -7,6 +7,7 @@
 #include "encabs_ctrl.h"
 #include "bmsd_ctrl.h"
 #include "dac_ctrl.h"
+#include "led_ctrl.h"
 
 static Mutex   mutex;
 static Mailbox mailbox;
@@ -52,6 +53,9 @@ static msg_t execThread( void *arg )
                 break;
             case I2C_CMD_BMSD:
                 bmsdRawCmd( &buffer[1] );
+                break;
+            case I2C_CMD_LEDS:
+                setLeds( (uint32_t)buffer[2] );
                 break;
             }
         }

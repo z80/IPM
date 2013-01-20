@@ -26,6 +26,7 @@
 #define I2C_CMD_ENC1    3  // Set inc. encoder's value
 #define I2C_CMD_ENC2    4  // The same
 #define I2C_CMD_BMSD    5  // BMSD 5 bytes command
+#define I2C_CMD_LEDS    6  // Just debug LEDs control.
 #define I2C_OUT_BUFFER_SZ   (4*3+1) // 3 encoders and one status byte.
 #define I2C_IN_BUFFER_SZ    6       // 1 byte - command Id. Up to 5 bytes per command. Max command - BMSD command.
 

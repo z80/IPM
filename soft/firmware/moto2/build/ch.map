@@ -1001,18 +1001,18 @@ Discarded input sections
  .bss.waExec    0x00000000      0x1b0 build/obj/exec_ctrl.o
  .rodata        0x00000000        0x4 build/obj/exec_ctrl.o
  .text.execThread
-                0x00000000      0x140 build/obj/exec_ctrl.o
+                0x00000000      0x150 build/obj/exec_ctrl.o
  .text.execInit
                 0x00000000       0x50 build/obj/exec_ctrl.o
  .text.execPostCmd
                 0x00000000       0xb0 build/obj/exec_ctrl.o
- .bss.i.6052    0x00000000        0x1 build/obj/exec_ctrl.o
- .bss.msg.6032  0x00000000        0x4 build/obj/exec_ctrl.o
- .bss.res.6031  0x00000000        0x4 build/obj/exec_ctrl.o
- .bss.i.6034    0x00000000        0x1 build/obj/exec_ctrl.o
- .bss.buffer.6033
+ .bss.i.6057    0x00000000        0x1 build/obj/exec_ctrl.o
+ .bss.msg.6036  0x00000000        0x4 build/obj/exec_ctrl.o
+ .bss.res.6035  0x00000000        0x4 build/obj/exec_ctrl.o
+ .bss.i.6038    0x00000000        0x1 build/obj/exec_ctrl.o
+ .bss.buffer.6037
                 0x00000000        0x8 build/obj/exec_ctrl.o
- .bss.value32.6038
+ .bss.value32.6042
                 0x00000000        0x4 build/obj/exec_ctrl.o
  .text          0x00000000        0x0 build/obj/led_ctrl.o
  .data          0x00000000        0x0 build/obj/led_ctrl.o
@@ -1965,7 +1965,7 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_info    0x0001bb26      0x290 build/obj/iwdg.o
  .debug_info    0x0001bdb6      0x256 build/obj/iwdg_lld.o
 
-.debug_line     0x00000000     0xb1d1
+.debug_line     0x00000000     0xb1d3
  .debug_line    0x00000000      0x15e build/obj/crt0.o
  .debug_line    0x0000015e       0x6e build/obj/vectors.o
  .debug_line    0x000001cc       0x63 build/obj/chcore.o
@@ -2044,14 +2044,14 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_line    0x0000984d      0x28f build/obj/chprintf.o
  .debug_line    0x00009adc      0x1ca build/obj/main.o
  .debug_line    0x00009ca6      0x35f build/obj/i2c_ctrl.o
- .debug_line    0x0000a005      0x21e build/obj/exec_ctrl.o
- .debug_line    0x0000a223      0x248 build/obj/led_ctrl.o
- .debug_line    0x0000a46b      0x1d1 build/obj/dac_ctrl.o
- .debug_line    0x0000a63c      0x3ba build/obj/bmsd_ctrl.o
- .debug_line    0x0000a9f6      0x29f build/obj/encabs_ctrl.o
- .debug_line    0x0000ac95      0x203 build/obj/encrel_ctrl.o
- .debug_line    0x0000ae98      0x196 build/obj/iwdg.o
- .debug_line    0x0000b02e      0x1a3 build/obj/iwdg_lld.o
+ .debug_line    0x0000a005      0x220 build/obj/exec_ctrl.o
+ .debug_line    0x0000a225      0x248 build/obj/led_ctrl.o
+ .debug_line    0x0000a46d      0x1d1 build/obj/dac_ctrl.o
+ .debug_line    0x0000a63e      0x3ba build/obj/bmsd_ctrl.o
+ .debug_line    0x0000a9f8      0x29f build/obj/encabs_ctrl.o
+ .debug_line    0x0000ac97      0x203 build/obj/encrel_ctrl.o
+ .debug_line    0x0000ae9a      0x196 build/obj/iwdg.o
+ .debug_line    0x0000b030      0x1a3 build/obj/iwdg_lld.o
 
 .debug_pubnames
                 0x00000000     0x1b72
@@ -3940,6 +3940,7 @@ rlist                                             build/obj/chschd.o
                                                   build/obj/chsys.o
                                                   build/obj/chcore_v7m.o
 setLeds                                           build/obj/led_ctrl.o
+                                                  build/obj/exec_ctrl.o
                                                   build/obj/main.o
 shellCreate                                       build/obj/shell.o
 shellCreateStatic                                 build/obj/shell.o
