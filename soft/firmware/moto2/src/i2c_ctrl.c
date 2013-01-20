@@ -30,6 +30,11 @@ static msg_t i2cThread( void *arg )
 {
     (void)arg;
     chRegSetThreadName( "i" );
+
+    static msg_t status;
+    static systime_t tmo;
+    tmo = MS2ST( I2C_TIMEOUT );
+
     while ( 1 )
     {
         // Read ADDRESS pins.
@@ -40,9 +45,6 @@ static msg_t i2cThread( void *arg )
 
         iwdgReset( &IWDGD );
 
-        static msg_t status;
-        static systime_t tmo;
-        tmo = MS2ST( I2C_TIMEOUT );
         // I/O with other boards.
         int32_t * pienc = (int32_t *)outBuffer;
         pienc[0] = encrel( 0 );

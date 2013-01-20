@@ -984,10 +984,10 @@ Discarded input sections
  .text.i2cThread
                 0x00000000      0x160 build/obj/i2c_ctrl.o
  .text.initI2c  0x00000000      0x100 build/obj/i2c_ctrl.o
- .bss.tmo.6672  0x00000000        0x4 build/obj/i2c_ctrl.o
+ .bss.tmo.6671  0x00000000        0x4 build/obj/i2c_ctrl.o
  .bss.addr.6675
                 0x00000000        0x1 build/obj/i2c_ctrl.o
- .bss.status.6671
+ .bss.status.6670
                 0x00000000        0x4 build/obj/i2c_ctrl.o
  .text          0x00000000        0x0 build/obj/exec_ctrl.o
  .data          0x00000000        0x0 build/obj/exec_ctrl.o
