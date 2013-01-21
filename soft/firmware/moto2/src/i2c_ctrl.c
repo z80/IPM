@@ -33,7 +33,7 @@ static msg_t i2cThread( void *arg )
 
     static msg_t status;
     static systime_t tmo;
-    tmo = MS2ST( I2C_TIMEOUT );
+    tmo = MS2ST( 250 ); //MS2ST( I2C_TIMEOUT );
 
     while ( 1 )
     {
@@ -60,24 +60,26 @@ static msg_t i2cThread( void *arg )
         // To make sure we've got something.
         inBuffer[0] = I2C_CMD_IDLE;
         static uint8_t addr;
-        addr = I2C_BASE_ADDR; //I2C_BASE_ADDR + ind;
+        addr = 64; //I2C_BASE_ADDR + ind;
         // IO routine itself.
-        //status = i2cSlaveIoTimeout( &I2CD1, addr,
-        //                            (uint8_t *)&inBuffer,  sizeof( inBuffer ),
-        //                            (uint8_t *)&outBuffer, sizeof( outBuffer ), tmo );
+        status = i2cSlaveIoTimeout( &I2CD1, addr,
+                                    (uint8_t *)&inBuffer,  sizeof( inBuffer ),
+                                    (uint8_t *)&outBuffer, sizeof( outBuffer ), tmo );
         // Debug code.
-            status = RDY_OK;
-            inBuffer[0] = 6;
-            inBuffer[1] = 1;
+            //status = RDY_OK;
+            //inBuffer[0] = 6;
+            //inBuffer[1] = 1;
             //setLeds( 2 );
-            chThdSleepMilliseconds( 20 );
+            //chThdSleepMilliseconds( 20 );
         // / Debug code.
-        if ( status != RDY_OK )
+        if ( ( status != RDY_OK ) && 
+             ( status != RDY_TIMEOUT ) )
+
         {
             // Watchdog reset.
             //iwdgReset( &IWDGD );
             // Restart I2c bus.
-            i2cStop( &I2CD1 );
+            //i2cStop( &I2CD1 );
             //chThdSleepMilliseconds( 100 );
             i2cStart( &I2CD1, &i2cfg1 );
             continue;

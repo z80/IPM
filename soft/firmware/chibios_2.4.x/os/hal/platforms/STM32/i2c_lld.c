@@ -298,11 +298,7 @@ static void i2c_lld_set_opmode(I2CDriver *i2cp) {
  * @notapi
  */
 static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
-            /*i2cp->state |= 1;
-            if ( palReadPad( GPIOB, 14 ) )
-                palClearPad( GPIOB, 14 );
-            else
-                palSetPad( GPIOB, 14 );*/
+                palTogglePad( GPIOB, 11 );
 
   I2C_TypeDef *dp = i2cp->i2c;
   uint32_t regSR = dp->SR2;
@@ -348,11 +344,7 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
 #if I2C_USE_SLAVE_MODE
   if  (event & (I2C_SR1_ADDR | I2C_SR1_ADD10))
   {
-              /*i2cp->state |= 4;
-              if ( palReadPad( GPIOB, 12 ) )
-                  palClearPad( GPIOB, 12 );
-              else
-                  palSetPad( GPIOB, 12 );*/
+                  palTogglePad( GPIOB, 10 );
       // If slave mode. On ADDR match DMA buffers should be configured.
       if ( i2cp->slave_mode )
       {
@@ -378,9 +370,6 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
   }
   if ( event & I2C_SR1_STOPF )
   {
-      // Clear Addr Flag
-      (void)dp->SR2;
-
       i2cp->state |= 8;
       // Turn interrupts on to feel ADDR match event to initiate transfer again.
       //dp->CR2 |= I2C_CR2_ITEVTEN;
@@ -393,7 +382,10 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
       dmaStreamDisable( i2cp->dmatx );
       // Wakeup waiting thread.
       wakeup_isr( i2cp, RDY_OK );
-  }
+
+       // Clear Addr Flag
+      (void)dp->SR2;
+ }
 #else
   /* Clear ADDR flag. */
   if (event & (I2C_SR1_ADDR | I2C_SR1_ADD10))
