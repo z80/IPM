@@ -15,8 +15,8 @@ static msg_t ledsThread( void *arg )
     chRegSetThreadName( "ld" );
     while ( 1 )
     {
-        
-        /*palClearPad( LED_PORT, LED_0 );
+        /*
+        palClearPad( LED_PORT, LED_0 );
     	palClearPad( LED_PORT, LED_1 );
         chThdSleepMilliseconds( 250 );
 
@@ -31,8 +31,7 @@ static msg_t ledsThread( void *arg )
     	if ( arg & 2 )
     		palSetPad( LED_PORT, LED_1 );
     	else
-    		palClearPad( LED_PORT, LED_1 );
-        */
+    		palClearPad( LED_PORT, LED_1 );*/
         chThdSleepMilliseconds( 250 );
     }
 

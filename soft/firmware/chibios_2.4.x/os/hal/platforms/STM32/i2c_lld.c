@@ -298,7 +298,7 @@ static void i2c_lld_set_opmode(I2CDriver *i2cp) {
  * @notapi
  */
 static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
-                palTogglePad( GPIOB, 10 );
+                //palTogglePad( GPIOB, 10 );
 
     I2C_TypeDef *dp = i2cp->i2c;
     uint32_t regSR = dp->SR2;
@@ -350,7 +350,7 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
     {
         if  (event & (I2C_SR1_ADDR | I2C_SR1_ADD10))
         {
-            //palTogglePad( GPIOB, 11 );
+            palTogglePad( GPIOB, 10 );
 
             // When transaction begins reset byte counters.
             i2cp->rxind = 0;
@@ -379,7 +379,10 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
             // Clear STOPF bit by writing to CR1.
             dp->CR1 |= I2C_CR1_PE;
             // Wakeup waiting thread.
-            wakeup_isr( i2cp, RDY_OK );
+            // Wakeup only if no bytes for transfer to allow
+            // read after write transactions from master side.
+            //if ( i2cp->txbytes == 0 )
+                wakeup_isr( i2cp, RDY_OK );
         }
     }
     #endif // I2C_USE_SLAVE_MODE
@@ -998,17 +1001,21 @@ msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
     // Initializes driver fields, LSB = 1 -> read.
     i2cp->addr    = (addr << 1);
     i2cp->errors  = 0;
+
     i2cp->rxbuf   = rxbuf;
     i2cp->rxbytes = rxbytes;
+    //i2cp->rxind = 0;
+
     i2cp->txbuf   = txbuf;
     i2cp->txbytes = txbytes;
+    //i2cp->txind = 0;
 
     i2cp->slave_mode = 1;
     // Starts the operation.
     // No start - slave mode.
     dp->CR1 &= ~( I2C_CR1_START );
     // Turn off ISR and DMA.
-    dp->CR2 &= ~( I2C_CR2_ITEVTEN | I2C_CR2_DMAEN );
+    dp->CR2 &= ~( I2C_CR2_DMAEN );
     // Own address.
     dp->OAR1 = ((addr << 1) & (0xFE));
     // Turn interrupts.
@@ -1018,11 +1025,12 @@ msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
 
     /* Waits for the operation completion or a timeout.*/
     i2cp->thread = chThdSelf();
-    chSchGoSleepS( THD_STATE_SUSPENDED );
+    //chSchGoSleepS( THD_STATE_SUSPENDED );
     if ( ( timeout != TIME_INFINITE ) && chVTIsArmedI( &vt ) )
       chVTResetI( &vt );
 
-    return chThdSelf()->p_u.rdymsg;
+    //return chThdSelf()->p_u.rdymsg;
+    return RDY_OK;
 }
 
 

@@ -33,11 +33,11 @@ static msg_t i2cThread( void *arg )
 
     static msg_t status;
     static systime_t tmo;
-    tmo = MS2ST( 250 ); //MS2ST( I2C_TIMEOUT );
+    tmo = MS2ST( 150 ); //MS2ST( I2C_TIMEOUT );
 
     while ( 1 )
     {
-        chThdSleepMilliseconds( 20 );
+        chThdSleepMilliseconds( 1000 );
         // Read ADDRESS pins.
         uint16_t ind = palReadPad( ADDR_PORT, ADDR_0 ) |
                      ( palReadPad( ADDR_PORT, ADDR_1 ) << 1 ) |
@@ -67,6 +67,8 @@ static msg_t i2cThread( void *arg )
                                     (uint8_t *)&inBuffer,  sizeof( inBuffer ),
                                     (uint8_t *)&outBuffer, sizeof( outBuffer ), tmo );
         palTogglePad( GPIOB, 11 );
+        //if ( status == RDY_OK )
+        //    setLeds( 1 );
         // Debug code.
             //status = RDY_OK;
             //inBuffer[0] = 6;
@@ -74,8 +76,7 @@ static msg_t i2cThread( void *arg )
             //setLeds( 2 );
             //chThdSleepMilliseconds( 20 );
         // / Debug code.
-        if ( ( status != RDY_OK ) && 
-             ( status != RDY_TIMEOUT ) )
+        if ( status != RDY_OK )
 
         {
             // Watchdog reset.
