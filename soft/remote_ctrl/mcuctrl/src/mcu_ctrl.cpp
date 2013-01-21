@@ -53,6 +53,98 @@ bool McuCtrl::setOutputs( unsigned long * data, int len )
     return ( cntRd >= cntWr );
 }
 
+bool McuCtrl::i2cSetAddr( int addr )
+{
+    std::ostringstream out;
+    out << "addr ";
+    out << addr;
+    out << "\r\n";
+    int cntWr = write( out.str() );
+    std::string stri;
+    stri.resize( 64 );
+    int cntRd = read( stri );
+    return ( cntRd >= cntWr );
+}
+
+bool McuCtrl::i2cSetBuf( int start, unsigned char * data, int cnt )
+{
+    std::ostringstream out;
+    out << "set_buf ";
+    out << start;
+    for ( int i=0; i<cnt; i++ )
+    {
+        out << " ";
+        out << static_cast<int>( data[i] );
+    }
+    out << "\r\n";
+    int cntWr = write( out.str() );
+    std::string stri;
+    stri.resize( 64 );
+    int cntRd = read( stri );
+    return ( cntRd >= cntWr );
+}
+
+bool McuCtrl::i2cIo( int txCnt, int rxCnt )
+{
+    std::ostringstream out;
+    out << "io ";
+    out << txCnt;
+    out << " ";
+    out << rxCnt;
+    out << "\r\n";
+    int cntWr = write( out.str() );
+    std::string stri;
+    stri.resize( 64 );
+    int cntRd = read( stri );
+    return ( cntRd >= cntWr );
+}
+
+bool McuCtrl::i2cStatus( int & status )
+{
+    std::ostringstream out;
+    out << "status\r\n";
+    int cntWr = write( out.str() );
+    std::string stri;
+    stri.resize( 64 );
+    int cntRd = read( stri );
+    boost::regex patt( "\\{[\\w\\s]{1,}\\}" );
+    boost::sregex_iterator it( stri.begin(), stri.end(), patt );
+    boost::sregex_iterator end;
+    for ( ; it!=end; ++it )
+    {
+        //std::cout << it->str() << "\n";
+        std::string ss = it->str().substr( 1 );
+        std::istringstream in( ss );
+        in >> status;
+        return true;
+    }
+    return false;
+}
+
+bool McuCtrl::i2cBuffer( int cnt, unsigned char * data )
+{
+    std::ostringstream out;
+    out << "status\r\n";
+    int cntWr = write( out.str() );
+    std::string stri;
+    stri.resize( 64 );
+    int cntRd = read( stri );
+    boost::regex patt( "\\{[\\w\\s]{1,}\\}" );
+    boost::sregex_iterator it( stri.begin(), stri.end(), patt );
+    boost::sregex_iterator end;
+    for ( ; it!=end; ++it )
+    {
+        //std::cout << it->str() << "\n";
+        std::string ss = it->str().substr( 1 );
+        std::istringstream in( ss );
+        for ( int i=0; i<cnt; i++ )
+            in >> data[i];
+        return true;
+    }
+    return false;
+}
+
+
 
 
 

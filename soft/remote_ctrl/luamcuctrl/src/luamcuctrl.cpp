@@ -115,6 +115,70 @@ static int inputs( lua_State * L )
     return 0;
 }
 
+static int i2cSetAddr( lua_State * L )
+{
+    McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
+    int addr = static_cast<int>( lua_tonumber( L, 2 ) );
+    bool res = io->i2cSetAddr( addr );
+    lua_pushboolean( L, res ? 1 : 0 );
+    return 1;
+}
+
+static int i2cSetBuf( lua_State * L )
+{
+    McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
+    int start = static_cast<int>( lua_tonumber( L, 2 ) );
+    int cnt = lua_gettop( L );
+    std::basic_string<unsigned char> vals;
+    vals.resize( cnt - 2 );
+    for ( int i=3; i<=cnt; i++ )
+    {
+        unsigned char val = static_cast<unsigned char>( lua_tonumber( L, i ) );
+        vals[i] = val;
+    }
+    bool res = io->i2cSetBuf( start, const_cast<unsigned char *>( vals.data() ), vals.size() );
+    lua_pushboolean( L, res ? 1 : 0 );
+    return 1;
+}
+
+static int i2cIo( lua_State * L )
+{
+    McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
+    int txCnt = static_cast<int>( lua_tonumber( L, 2 ) );
+    int rxCnt = static_cast<int>( lua_tonumber( L, 2 ) );
+    bool res = io->i2cIo( txCnt, rxCnt );
+    lua_pushboolean( L, res ? 1 : 0 );
+    return 1;
+}
+
+static int i2cStatus( lua_State * L )
+{
+    McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
+    int status;
+    bool res = io->i2cStatus( status );
+    lua_pushboolean( L, res ? 1 : 0 );
+    if ( res )
+        lua_pushnumber( L, static_cast<lua_Number>( status ) );
+    else
+        lua_pushnumber( L, static_cast<lua_Number>( -1 ) );
+    return 2;
+}
+
+static int i2cBuffer( lua_State * L )
+{
+    McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
+    int cnt = static_cast<int>( lua_tonumber( L, 2 ) );
+    std::basic_string<unsigned char> vals;
+    vals.resize( cnt );
+    bool res = io->i2cBuffer( cnt, const_cast<unsigned char *>( vals.data() ) );
+    if ( !res )
+        return 0;
+    for ( int i=0; i<cnt; i++ )
+        lua_pushnumber( L, static_cast<lua_Number>( vals[i] ) );
+    return cnt;
+}
+
+
 static const struct luaL_reg META_FUNCTIONS[] = {
     { "__gc",          gc },
     { "pointer",       self },
@@ -127,6 +191,12 @@ static const struct luaL_reg META_FUNCTIONS[] = {
     { "read",          read },
     { "setOutputs",    setOutputs },
     { "inputs",        inputs },
+
+    { "i2cSetAddr", i2cSetAddr },
+    { "i2cSetBuf",  i2cSetBuf },
+    { "i2cIo",      i2cIo },
+    { "i2cStatus",  i2cStatus },
+    { "i2cBuffer",  i2cBuffer },
 
     { NULL,            NULL },
 };

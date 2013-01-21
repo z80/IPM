@@ -10,7 +10,7 @@
 #include "bmsd_ctrl.h"
 
 
-static WORKING_AREA( waUart, 1024 );
+/*static WORKING_AREA( waUart, 1024 );
 static msg_t uartThread( void *arg )
 {
     (void)arg;
@@ -22,7 +22,7 @@ static msg_t uartThread( void *arg )
     }
 
     return 0;
-}
+}*/
 
 
 
@@ -31,21 +31,23 @@ int main(void)
     halInit();
     chSysInit();
 
-    /*IWDGConfig cfg;
+    IWDGConfig cfg;
     cfg.div = IWDG_DIV_256;
     cfg.counter = (40000 / 256 / 2 );
     iwdgInit();
     iwdgStart( &IWDGD, &cfg );
-    iwdgReset( &IWDGD );*/
+    iwdgReset( &IWDGD );
 
     initLed();
     setLeds( 3 );
     dacInit();
     chThdSleepSeconds( 5 );
     bmsdInit();
-    //initI2c();
+    initI2c();
 
-	chThdCreateStatic( waUart, sizeof(waUart), NORMALPRIO, uartThread, NULL );
+    iwdgReset( &IWDGD );
+
+	//chThdCreateStatic( waUart, sizeof(waUart), NORMALPRIO, uartThread, NULL );
 
     while (TRUE)
     {

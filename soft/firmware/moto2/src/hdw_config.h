@@ -14,10 +14,24 @@
 #define ADDR_2          14
 
 // I2C params
+#define I2C_TIMEOUT     100   // Timeout for I2C to admit there was no transaction from BUS master.
 #define I2C_BASE_ADDR   64
 #define I2C_PORT        GPIOC
 #define I2C_SCL_PAD     6
 #define I2C_SDA_PAD     7
+// Commands
+#define I2C_CMD_IDLE    0
+#define I2C_CMD_DAC1    1  // Set ESCON DAC
+#define I2C_CMD_DAC2    2  // The same
+#define I2C_CMD_ENC1    3  // Set inc. encoder's value
+#define I2C_CMD_ENC2    4  // The same
+#define I2C_CMD_BMSD    5  // BMSD 5 bytes command
+#define I2C_CMD_LEDS    6  // Just debug LEDs control.
+#define I2C_OUT_BUFFER_SZ   (4*3+1) // 3 encoders and one status byte.
+#define I2C_IN_BUFFER_SZ    6       // 1 byte - command Id. Up to 5 bytes per command. Max command - BMSD command.
+
+// Exec thread
+#define EXEC_QUEUE_SIZE     5 // 3 encoders and one status byte.
 
 // DAC params
 #define DAC_PORT       GPIOA
@@ -36,6 +50,23 @@
 #define BMSD_UART       UARTD2
 #define BMSD_RX_TIMEOUT 128   // Timeout to wait for BMSD reply. If there is no reply continue without it.
 #define BMSD_BAUD       9600
+
+// Encoder absolute
+#define ENCABS_BITS      13
+#define ENCABS_CLK_PORT  GPIOA
+#define ENCABS_CLK_PIN   6
+#define ENCABS_DATA_PORT GPIOA
+#define ENCABS_DATA_PIN  7
+
+// Encoder relative
+#define ENCREL_A1_PORT  GPIOB
+#define ENCREL_A1_PIN   0
+#define ENCREL_B1_PORT  GPIOB
+#define ENCREL_B1_PIN   1
+#define ENCREL_A2_PORT  GPIOB
+#define ENCREL_A2_PIN   8
+#define ENCREL_B2_PORT  GPIOB
+#define ENCREL_B2_PIN   9
 
 #endif
 
