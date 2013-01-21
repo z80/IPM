@@ -55,7 +55,7 @@ static msg_t execThread( void *arg )
                 bmsdRawCmd( &buffer[1] );
                 break;
             case I2C_CMD_LEDS:
-                setLeds( (uint32_t)buffer[2] );
+                setLeds( (uint32_t)buffer[1] );
                 break;
             }
         }

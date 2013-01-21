@@ -5,6 +5,7 @@
 #include "iwdg.h"
 
 #include "led_ctrl.h"
+#include "exec_ctrl.h"
 #include "i2c_ctrl.h"
 #include "dac_ctrl.h"
 #include "bmsd_ctrl.h"
@@ -31,21 +32,22 @@ int main(void)
     halInit();
     chSysInit();
 
-    IWDGConfig cfg;
+    /*IWDGConfig cfg;
     cfg.div = IWDG_DIV_256;
     cfg.counter = (40000 / 256 / 2 );
     iwdgInit();
     iwdgStart( &IWDGD, &cfg );
-    iwdgReset( &IWDGD );
+    iwdgReset( &IWDGD );*/
 
     initLed();
     setLeds( 3 );
+    execInit();
     dacInit();
-    chThdSleepSeconds( 5 );
-    bmsdInit();
+    //chThdSleepSeconds( 5 );
+    //bmsdInit();
     initI2c();
 
-    iwdgReset( &IWDGD );
+    //iwdgReset( &IWDGD );
 
 	//chThdCreateStatic( waUart, sizeof(waUart), NORMALPRIO, uartThread, NULL );
 

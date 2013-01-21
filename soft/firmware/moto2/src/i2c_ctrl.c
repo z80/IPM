@@ -37,37 +37,45 @@ static msg_t i2cThread( void *arg )
 
     while ( 1 )
     {
+        chThdSleepMilliseconds( 20 );
         // Read ADDRESS pins.
         uint16_t ind = palReadPad( ADDR_PORT, ADDR_0 ) |
                      ( palReadPad( ADDR_PORT, ADDR_1 ) << 1 ) |
                      ( palReadPad( ADDR_PORT, ADDR_2 ) << 2 );
         ind = (~ind) & 0x0007;
 
-        iwdgReset( &IWDGD );
-
+        //iwdgReset( &IWDGD );
+        
         // I/O with other boards.
         int32_t * pienc = (int32_t *)outBuffer;
         pienc[0] = encrel( 0 );
-        pienc[1] = encrel( 1 );
+        pienc[1] = encrel( 1 );     
         uint32_t * paenc = ( uint32_t * )outBuffer;
-        paenc[2] = encabs();
+        //paenc[2] = encabs();      
         outBuffer[12] = bmsdReady();
-
+        
         // Watchdog reset.
-        iwdgReset( &IWDGD );
+        //iwdgReset( &IWDGD );
 
         // To make sure we've got something.
         inBuffer[0] = I2C_CMD_IDLE;
         static uint8_t addr;
         addr = I2C_BASE_ADDR; //I2C_BASE_ADDR + ind;
         // IO routine itself.
-        status = i2cSlaveIoTimeout( &I2CD1, addr,
-                                    (uint8_t *)&inBuffer,  sizeof( inBuffer ),
-                                    (uint8_t *)&outBuffer, sizeof( outBuffer ), tmo );
+        //status = i2cSlaveIoTimeout( &I2CD1, addr,
+        //                            (uint8_t *)&inBuffer,  sizeof( inBuffer ),
+        //                            (uint8_t *)&outBuffer, sizeof( outBuffer ), tmo );
+        // Debug code.
+            status = RDY_OK;
+            inBuffer[0] = 6;
+            inBuffer[1] = 1;
+            //setLeds( 2 );
+            chThdSleepMilliseconds( 20 );
+        // / Debug code.
         if ( status != RDY_OK )
         {
             // Watchdog reset.
-            iwdgReset( &IWDGD );
+            //iwdgReset( &IWDGD );
             // Restart I2c bus.
             i2cStop( &I2CD1 );
             //chThdSleepMilliseconds( 100 );
@@ -75,9 +83,9 @@ static msg_t i2cThread( void *arg )
             continue;
         }
         // Watchdog reset.
-        iwdgReset( &IWDGD );
+        //iwdgReset( &IWDGD );
         // If we are here IO routine succeeded.
-        execPostCmd( inBuffer );
+        execPostCmd( inBuffer );        
     }
 
     return 0;
@@ -96,7 +104,7 @@ void initI2c( void )
     palSetPadMode( ADDR_PORT, ADDR_2, PAL_MODE_INPUT );
     palSetPadMode( GPIOB, 6, PAL_MODE_STM32_ALTERNATE_OPENDRAIN );
     palSetPadMode( GPIOB, 7, PAL_MODE_STM32_ALTERNATE_OPENDRAIN );
-    chThdSleepMilliseconds( 100 );
+    //chThdSleepMilliseconds( 100 );
 
     i2cInit();
     //chThdSleepMilliseconds( 100 );

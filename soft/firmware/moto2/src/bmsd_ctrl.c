@@ -150,7 +150,7 @@ void bmsdInit( void )
     palSetPadMode( BMSD_DIR_PORT, BMSD_DIR_PIN, PAL_MODE_OUTPUT_PUSHPULL );
     palClearPad( BMSD_DIR_PORT, BMSD_DIR_PIN );
 
-    uartStart( &BMSD_UART, &uart_cfg );
+    //uartStart( &BMSD_UART, &uart_cfg );
     //uartStart( &UARTD2, &uart_cfg_1 );
 }
 
