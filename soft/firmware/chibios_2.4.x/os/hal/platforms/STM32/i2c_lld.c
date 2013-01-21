@@ -1035,7 +1035,7 @@ msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
     if ( ( timeout != TIME_INFINITE ) && chVTIsArmedI( &vt ) )
       chVTResetI( &vt );
 
-    return RDY_OK;
+    return chThdSelf()->p_u.rdymsg;
 }
 
 

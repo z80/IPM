@@ -32,25 +32,25 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   6 .debug_info   0001cbf8  00000000  00000000  00017a16  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   0000bb7f  00000000  00000000  0003460e  2**0
+  7 .debug_line   0000bb7d  00000000  00000000  0003460e  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_loc    0000c4cd  00000000  00000000  0004018d  2**0
+  8 .debug_loc    0000c4cc  00000000  00000000  0004018b  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_pubnames 00001b72  00000000  00000000  0004c65a  2**0
+  9 .debug_pubnames 00001b72  00000000  00000000  0004c657  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_pubtypes 000049f8  00000000  00000000  0004e1cc  2**0
+ 10 .debug_pubtypes 000049f8  00000000  00000000  0004e1c9  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_aranges 000012c8  00000000  00000000  00052bc4  2**0
+ 11 .debug_aranges 000012c8  00000000  00000000  00052bc1  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00002128  00000000  00000000  00053e8c  2**0
+ 12 .debug_ranges 00002128  00000000  00000000  00053e89  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    00003cc8  00000000  00000000  00055fb4  2**0
+ 13 .debug_str    00003cc8  00000000  00000000  00055fb1  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .comment      0000002a  00000000  00000000  00059c7c  2**0
+ 14 .comment      0000002a  00000000  00000000  00059c79  2**0
                   CONTENTS, READONLY
- 15 .ARM.attributes 00000031  00000000  00000000  00059ca6  2**0
+ 15 .ARM.attributes 00000031  00000000  00000000  00059ca3  2**0
                   CONTENTS, READONLY
- 16 .debug_frame  000032fc  00000000  00000000  00059cd8  2**2
+ 16 .debug_frame  000032f8  00000000  00000000  00059cd4  2**2
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  startup	00000000 startup
@@ -334,7 +334,7 @@ SYMBOL TABLE:
 08000760 g     F .text	00000040 dbg_check_leave_isr
 08003960 g       *ABS*	00000000 _textdata
 08001a10 g     F .text	00000090 VectorE0
-080022f0 g     F .text	0000010c i2c_lld_slave_io_timeout
+080022f0 g     F .text	00000108 i2c_lld_slave_io_timeout
 00000000 g       *ABS*	00000000 _text
 080002e0  w    F .text	00000002 MemManageVector
 080000ec g       startup	00000000 __fini_array_start
