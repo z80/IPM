@@ -1905,7 +1905,7 @@ destructors     0x080000ec        0x0
                 0x2000091c                . = ALIGN (0x4)
                 0x2000091c                PROVIDE (_edata, .)
 
-.bss            0x20000920      0xef4 load address 0x08006b64
+.bss            0x20000920      0xefc load address 0x08006b64
                 0x20000920                . = ALIGN (0x4)
                 0x20000920                PROVIDE (_bss_start, .)
  *(.bss)
@@ -1996,40 +1996,40 @@ destructors     0x080000ec        0x0
  .bss.pendDataOut.6846
                 0x200015e8        0x4 build/obj/i2c_ctrl.o
  .bss.g_i2cInBuffer
-                0x200015ec        0xc build/obj/i2c_ctrl.o
- .bss.i.6932    0x200015f8        0x1 build/obj/i2c_ctrl.o
- *fill*         0x200015f9        0x3 00
- .bss.tmo.6844  0x200015fc        0x4 build/obj/i2c_ctrl.o
- .bss.ins       0x20001600        0xc build/obj/i2c_ctrl.o
- .bss.outs      0x2000160c        0xc build/obj/i2c_ctrl.o
+                0x200015ec       0x10 build/obj/i2c_ctrl.o
+ .bss.i.6932    0x200015fc        0x1 build/obj/i2c_ctrl.o
+ *fill*         0x200015fd        0x3 00
+ .bss.tmo.6844  0x20001600        0x4 build/obj/i2c_ctrl.o
+ .bss.ins       0x20001604        0xc build/obj/i2c_ctrl.o
+ .bss.outs      0x20001610        0xc build/obj/i2c_ctrl.o
  .bss.addr.6853
-                0x20001618        0x1 build/obj/i2c_ctrl.o
- .bss.i.6954    0x20001619        0x1 build/obj/i2c_ctrl.o
- .bss.res.6916  0x2000161a        0x1 build/obj/i2c_ctrl.o
- *fill*         0x2000161b        0x1 00
- .bss.pendOuts  0x2000161c        0xc build/obj/i2c_ctrl.o
+                0x2000161c        0x1 build/obj/i2c_ctrl.o
+ .bss.i.6954    0x2000161d        0x1 build/obj/i2c_ctrl.o
+ .bss.res.6916  0x2000161e        0x1 build/obj/i2c_ctrl.o
+ *fill*         0x2000161f        0x1 00
+ .bss.pendOuts  0x20001620        0xc build/obj/i2c_ctrl.o
  .bss.g_i2cOutBuffer
-                0x20001628        0xc build/obj/i2c_ctrl.o
+                0x2000162c       0x10 build/obj/i2c_ctrl.o
  .bss.dataIn.6847
-                0x20001634        0x4 build/obj/i2c_ctrl.o
- .bss.tmo.6909  0x20001638        0x4 build/obj/i2c_ctrl.o
+                0x2000163c        0x4 build/obj/i2c_ctrl.o
+ .bss.tmo.6909  0x20001640        0x4 build/obj/i2c_ctrl.o
  .bss.g_i2cStatus
-                0x2000163c        0x1 build/obj/i2c_ctrl.o
- *fill*         0x2000163d        0x3 00
- .bss.mutex     0x20001640       0x10 build/obj/led_ctrl.o
- .bss.value     0x20001650        0x4 build/obj/led_ctrl.o
- *fill*         0x20001654        0x4 00
- .bss.waLeds    0x20001658      0x1b0 build/obj/led_ctrl.o
- .bss.arg.6142  0x20001808        0x4 build/obj/led_ctrl.o
- .bss.IWDGD     0x2000180c        0x8 build/obj/iwdg_lld.o
-                0x2000180c                IWDGD
-                0x20001814                . = ALIGN (0x4)
+                0x20001644        0x1 build/obj/i2c_ctrl.o
+ *fill*         0x20001645        0x3 00
+ .bss.mutex     0x20001648       0x10 build/obj/led_ctrl.o
+ .bss.value     0x20001658        0x4 build/obj/led_ctrl.o
+ *fill*         0x2000165c        0x4 00
+ .bss.waLeds    0x20001660      0x1b0 build/obj/led_ctrl.o
+ .bss.arg.6142  0x20001810        0x4 build/obj/led_ctrl.o
+ .bss.IWDGD     0x20001814        0x8 build/obj/iwdg_lld.o
+                0x20001814                IWDGD
+                0x2000181c                . = ALIGN (0x4)
  *(COMMON)
-                0x20001814                . = ALIGN (0x4)
-                0x20001814                PROVIDE (_bss_end, .)
-                0x20001814                PROVIDE (end, .)
-                0x20001814                _end = .
-                0x20001814                __heap_base__ = _end
+                0x2000181c                . = ALIGN (0x4)
+                0x2000181c                PROVIDE (_bss_end, .)
+                0x2000181c                PROVIDE (end, .)
+                0x2000181c                _end = .
+                0x2000181c                __heap_base__ = _end
                 0x20005000                __heap_end__ = __ram_end__
 OUTPUT(build/ch.elf elf32-littlearm)
 

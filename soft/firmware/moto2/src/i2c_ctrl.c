@@ -59,11 +59,11 @@ static msg_t i2cThread( void *arg )
         // To make sure we've got something.
         inBuffer[0] = I2C_CMD_IDLE;
         static uint8_t addr;
-        addr = I2C_BASE_ADDR + ind;
+        addr = I2C_BASE_ADDR; //I2C_BASE_ADDR + ind;
         // IO routine itself.
         status = i2cSlaveIoTimeout( &I2CD1, addr,
-                                    (uint8_t *)&outBuffer,  sizeof( outBuffer ),
-                                    (uint8_t *)&inBuffer,   sizeof( inBuffer ), tmo );
+                                    (uint8_t *)&inBuffer,  sizeof( inBuffer ),
+                                    (uint8_t *)&outBuffer, sizeof( outBuffer ), tmo );
         if ( status != RDY_OK )
         {
             // Watchdog reset.

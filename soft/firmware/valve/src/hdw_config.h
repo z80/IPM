@@ -35,8 +35,8 @@
 #define I2C_SCL_PAD   6
 #define I2C_SDA_PAD   7
 // Generic I2C io
-#define I2C_OUT_BUF_SZ  12
-#define I2C_IN_BUF_SZ   12
+#define I2C_OUT_BUF_SZ  13
+#define I2C_IN_BUF_SZ   13
 
 #endif
 

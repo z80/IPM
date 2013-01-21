@@ -11,7 +11,7 @@ Program Header:
     LOAD off    0x00010800 vaddr 0x20000800 paddr 0x08006a48 align 2**15
          filesz 0x0000011c memsz 0x0000011c flags rw-
     LOAD off    0x00010920 vaddr 0x20000920 paddr 0x08006b64 align 2**15
-         filesz 0x00000000 memsz 0x00000ef4 flags rw-
+         filesz 0x00000000 memsz 0x00000efc flags rw-
     LOAD off    0x00018000 vaddr 0x20000000 paddr 0x20000000 align 2**15
          filesz 0x00000000 memsz 0x00000800 flags rw-
 private flags = 5000002: [Version5 EABI] [has entry point]
@@ -28,7 +28,7 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
   4 .data         0000011c  20000800  08006a48  00010800  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  5 .bss          00000ef4  20000920  08006b64  00010920  2**3
+  5 .bss          00000efc  20000920  08006b64  00010920  2**3
                   ALLOC
   6 .debug_abbrev 000070b0  00000000  00000000  0001091c  2**0
                   CONTENTS, READONLY, DEBUGGING
@@ -213,26 +213,26 @@ SYMBOL TABLE:
 20001428 l     O .bss	000001b0 waI2c
 200015d8 l     O .bss	00000010 mutex
 200015e8 l     O .bss	00000004 pendDataOut.6846
-200015ec l     O .bss	0000000c g_i2cInBuffer
-200015f8 l     O .bss	00000001 i.6932
-200015fc l     O .bss	00000004 tmo.6844
-20001600 l     O .bss	0000000c ins
-2000160c l     O .bss	0000000c outs
-20001618 l     O .bss	00000001 addr.6853
-20001619 l     O .bss	00000001 i.6954
-2000161a l     O .bss	00000001 res.6916
-2000161c l     O .bss	0000000c pendOuts
-20001628 l     O .bss	0000000c g_i2cOutBuffer
-20001634 l     O .bss	00000004 dataIn.6847
-20001638 l     O .bss	00000004 tmo.6909
-2000163c l     O .bss	00000001 g_i2cStatus
+200015ec l     O .bss	0000000d g_i2cInBuffer
+200015fc l     O .bss	00000001 i.6932
+20001600 l     O .bss	00000004 tmo.6844
+20001604 l     O .bss	0000000c ins
+20001610 l     O .bss	0000000c outs
+2000161c l     O .bss	00000001 addr.6853
+2000161d l     O .bss	00000001 i.6954
+2000161e l     O .bss	00000001 res.6916
+20001620 l     O .bss	0000000c pendOuts
+2000162c l     O .bss	0000000d g_i2cOutBuffer
+2000163c l     O .bss	00000004 dataIn.6847
+20001640 l     O .bss	00000004 tmo.6909
+20001644 l     O .bss	00000001 g_i2cStatus
 08006a00 l     O .text	0000000c i2cfg1
 00000000 l    df *ABS*	00000000 led_ctrl.c
 08005710 l     F .text	00000088 ledsThread
-20001640 l     O .bss	00000010 mutex
-20001650 l     O .bss	00000004 value
-20001658 l     O .bss	000001b0 waLeds
-20001808 l     O .bss	00000004 arg.6142
+20001648 l     O .bss	00000010 mutex
+20001658 l     O .bss	00000004 value
+20001660 l     O .bss	000001b0 waLeds
+20001810 l     O .bss	00000004 arg.6142
 00000000 l    df *ABS*	00000000 iwdg.c
 00000000 l    df *ABS*	00000000 iwdg_lld.c
 00000000 l    df *ABS*	00000000 ctype_.c
@@ -320,7 +320,7 @@ SYMBOL TABLE:
 08000fb0 g     F .text	00000050 chSchGoSleepS
 08002830 g     F .text	00000096 sduDataTransmitted
 20000ee0 g     O .bss	00000048 I2CD1
-20001814 g       *ABS*	00000000 __heap_base__
+2000181c g       *ABS*	00000000 __heap_base__
 08006a48 g       *ABS*	00000000 _etext
 08001190 g     F .text	00000084 chThdCreateI
 08004140 g     F .text	0000002c usb_lld_clear_out
@@ -382,7 +382,7 @@ SYMBOL TABLE:
 08000404 g     F .text	00000018 strtol
 08000e60 g     F .text	00000054 chVTSetI
 080008a0  w    F .text	00000002 Vector64
-20001814 g       .bss	00000000 _bss_end
+2000181c g       .bss	00000000 _bss_end
 20000e40 g     O .bss	00000004 dbg_panic_msg
 080006c0  w    F .text	00000002 _default_exit
 08003960 g     F .text	00000144 _pal_lld_setgroupmode
@@ -493,7 +493,7 @@ SYMBOL TABLE:
 08001cc0 g     F .text	0000000e i2cObjectInit
 080043a0 g     F .text	000000ac shellGetLine
 08001350 g     F .text	00000080 chThdRelease
-2000180c g     O .bss	00000008 IWDGD
+20001814 g     O .bss	00000008 IWDGD
 20000970 g     O .bss	000000c0 _idle_thread_wa
 08001880 g     F .text	00000018 chOQInit
 08001790 g     F .text	0000005a chIQGetTimeout
@@ -513,7 +513,7 @@ SYMBOL TABLE:
 08002a20 g     F .text	00000034 Vector78
 20005000 g       *ABS*	00000000 __ram_end__
 2000091c g       .data	00000000 _edata
-20001814 g       *ABS*	00000000 _end
+2000181c g       *ABS*	00000000 _end
 08003270 g     F .text	000002c8 i2c_lld_start
 08000ec0 g     F .text	00000048 chVTResetI
 080008a0 g     F .text	00000002 _unhandled_exception

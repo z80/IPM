@@ -14,7 +14,7 @@
 #define ADDR_2          14
 
 // I2C params
-#define I2C_TIMEOUT     100   // Timeout for I2C to admit there was no transaction from BUS master.
+#define I2C_TIMEOUT     250   // Timeout for I2C to admit there was no transaction from BUS master.
 #define I2C_BASE_ADDR   64
 #define I2C_PORT        GPIOC
 #define I2C_SCL_PAD     6
