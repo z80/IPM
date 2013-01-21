@@ -76,7 +76,7 @@ static msg_t i2cThread( void *arg )
             //setLeds( 2 );
             //chThdSleepMilliseconds( 20 );
         // / Debug code.
-        if ( status != RDY_OK )
+        if ( I2CD1.errors != I2CD_NO_ERROR )
 
         {
             // Watchdog reset.
