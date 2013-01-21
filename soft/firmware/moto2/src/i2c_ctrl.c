@@ -23,6 +23,13 @@ static const I2CConfig i2cfg1 =
     STD_DUTY_CYCLE,
 };
 
+static void delay( void )
+{
+    volatile uint32_t i;
+    for ( i=0; i<512; i++ )
+        asm volatile ( "nop;" );
+}
+
 static Mutex    mutex;
 
 static WORKING_AREA( waI2c, 256 );
@@ -33,11 +40,11 @@ static msg_t i2cThread( void *arg )
 
     static msg_t status;
     static systime_t tmo;
-    tmo = MS2ST( 150 ); //MS2ST( I2C_TIMEOUT );
+    tmo = MS2ST( I2C_TIMEOUT );
 
     while ( 1 )
     {
-        chThdSleepMilliseconds( 1000 );
+        //chThdSleepMilliseconds( 1000 );
         // Read ADDRESS pins.
         uint16_t ind = palReadPad( ADDR_PORT, ADDR_0 ) |
                      ( palReadPad( ADDR_PORT, ADDR_1 ) << 1 ) |
@@ -62,18 +69,29 @@ static msg_t i2cThread( void *arg )
         static uint8_t addr;
         addr = 64; //I2C_BASE_ADDR + ind;
         // IO routine itself.
-        palTogglePad( GPIOB, 11 );
+        palClearPad( GPIOB, 11 );
         status = i2cSlaveIoTimeout( &I2CD1, addr,
-                                    (uint8_t *)&inBuffer,  sizeof( inBuffer ),
-                                    (uint8_t *)&outBuffer, sizeof( outBuffer ), tmo );
-        palTogglePad( GPIOB, 11 );
+                                    inBuffer,  13,
+                                    outBuffer, 13, tmo );
+        palSetPad( GPIOB, 11 );
         //if ( status == RDY_OK )
         //    setLeds( 1 );
         // Debug code.
             //status = RDY_OK;
             //inBuffer[0] = 6;
             //inBuffer[1] = 1;
-            //setLeds( 2 );
+        if ( inBuffer[3] == 0x70 )
+        {
+            delay();
+            palTogglePad( GPIOB, 10 );
+            delay();
+            palTogglePad( GPIOB, 10 );
+            delay();
+            palTogglePad( GPIOB, 10 );
+            delay();
+            palTogglePad( GPIOB, 10 );
+            delay();
+        }
             //chThdSleepMilliseconds( 20 );
         // / Debug code.
         if ( I2CD1.errors != I2CD_NO_ERROR )
@@ -90,7 +108,7 @@ static msg_t i2cThread( void *arg )
         // Watchdog reset.
         //iwdgReset( &IWDGD );
         // If we are here IO routine succeeded.
-        execPostCmd( inBuffer );        
+        //execPostCmd( inBuffer );
     }
 
     return 0;
