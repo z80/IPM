@@ -62,9 +62,11 @@ static msg_t i2cThread( void *arg )
         static uint8_t addr;
         addr = 64; //I2C_BASE_ADDR + ind;
         // IO routine itself.
+        palTogglePad( GPIOB, 11 );
         status = i2cSlaveIoTimeout( &I2CD1, addr,
                                     (uint8_t *)&inBuffer,  sizeof( inBuffer ),
                                     (uint8_t *)&outBuffer, sizeof( outBuffer ), tmo );
+        palTogglePad( GPIOB, 11 );
         // Debug code.
             //status = RDY_OK;
             //inBuffer[0] = 6;

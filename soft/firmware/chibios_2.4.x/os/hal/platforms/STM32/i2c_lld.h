@@ -417,8 +417,10 @@ struct I2CDriver{
   uint8_t                   slave_mode;
   uint8_t                   *rxbuf;
   size_t                    rxbytes;
+  size_t                    rxind;
   uint8_t                   *txbuf;
   size_t                    txbytes;
+  size_t                    txind;
 #endif
 };
 

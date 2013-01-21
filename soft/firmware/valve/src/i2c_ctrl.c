@@ -280,19 +280,31 @@ void i2cIo( void )
 {
     static msg_t status;
     static uint8_t st;
+         // Debug code.
+            g_i2cAddr = 64;
+            g_i2cStatus = 1;
+            g_i2cTxSz = 2;
+            g_i2cRxSz = 0;
+            g_i2cOutBuffer[0] = 6;
+            g_i2cOutBuffer[1] = 1;
+        // / Debug code.
     chMtxLock( &mutex );
         st = g_i2cStatus;
     chMtxUnlock();
     if ( st == 1 )
     {
         static systime_t tmo;
-        tmo = MS2ST( 50 );
+        tmo = MS2ST( 300 );
         if ( g_i2cTxSz > 0 )
         {
             status = i2cMasterTransmitTimeout( &I2CD1, g_i2cAddr,
                                                g_i2cOutBuffer, g_i2cTxSz,
                                                0,  0,
                                                tmo );
+            if ( status == RDY_OK )
+                setLeds( 1 );
+            else
+                setLeds( 7 );
             if ( status != RDY_OK )
             {
                 chMtxLock( &mutex );

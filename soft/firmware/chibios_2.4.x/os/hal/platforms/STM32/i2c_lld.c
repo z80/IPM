@@ -298,99 +298,91 @@ static void i2c_lld_set_opmode(I2CDriver *i2cp) {
  * @notapi
  */
 static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
-                palTogglePad( GPIOB, 11 );
+                palTogglePad( GPIOB, 10 );
 
-  I2C_TypeDef *dp = i2cp->i2c;
-  uint32_t regSR = dp->SR2;
-  uint32_t event = dp->SR1;
+    I2C_TypeDef *dp = i2cp->i2c;
+    uint32_t regSR = dp->SR2;
+    uint32_t event = dp->SR1;
 
-  /* Interrupts are disabled just before dmaStreamEnable() because there
-     is no need of interrupts until next transaction begin. All the work is
-     done by the DMA.*/
-  switch (I2C_EV_MASK & (event | (regSR << 16))) {
-  case I2C_EV5_MASTER_MODE_SELECT:
-          /*if ( palReadPad( GPIOB, 13 ) )
-              palClearPad( GPIOB, 13 );
-          else
-              palSetPad( GPIOB, 13 );*/
-    dp->DR = i2cp->addr;
-    break;
-  case I2C_EV6_MASTER_REC_MODE_SELECTED:
-    dp->CR2 &= ~I2C_CR2_ITEVTEN;
-    dmaStreamEnable(i2cp->dmarx);
-    dp->CR2 |= I2C_CR2_LAST;                 /* Needed in receiver mode. */
-    if (dmaStreamGetTransactionSize(i2cp->dmarx) < 2)
-      dp->CR1 &= ~I2C_CR1_ACK;
-    break;
-  case I2C_EV6_MASTER_TRA_MODE_SELECTED:
-    dp->CR2 &= ~I2C_CR2_ITEVTEN;
-    dmaStreamEnable(i2cp->dmatx);
-    break;
-  case I2C_EV8_2_MASTER_BYTE_TRANSMITTED:
-    /* Catches BTF event after the end of transmission.*/
-    if (dmaStreamGetTransactionSize(i2cp->dmarx) > 0) {
-      /* Starts "read after write" operation, LSB = 1 -> receive.*/
-      i2cp->addr |= 0x01;
-      dp->CR1 |= I2C_CR1_START | I2C_CR1_ACK;
-      return;
-    }
-    dp->CR2 &= ~I2C_CR2_ITEVTEN;
-    dp->CR1 |= I2C_CR1_STOP;
-    wakeup_isr(i2cp, RDY_OK);
-    break;
-  default:
-    break;
-  }
-#if I2C_USE_SLAVE_MODE
-  if  (event & (I2C_SR1_ADDR | I2C_SR1_ADD10))
-  {
-                  palTogglePad( GPIOB, 10 );
-      // If slave mode. On ADDR match DMA buffers should be configured.
-      if ( i2cp->slave_mode )
-      {
-          // Disable DMA. Just to be sure it is off.
-          dmaStreamDisable( i2cp->dmarx );
-          dmaStreamDisable( i2cp->dmatx );
-          // Prepare buffers.
-          // RX DMA setup.
-          dmaStreamSetMemory0( i2cp->dmarx, i2cp->rxbuf );
-          dmaStreamSetTransactionSize( i2cp->dmarx, i2cp->rxbytes );
-
-          // TX DMA setup.
-          dmaStreamSetMemory0( i2cp->dmatx, i2cp->txbuf );
-          dmaStreamSetTransactionSize( i2cp->dmatx, i2cp->txbytes );
-
-          // And enable DMA.
-          dmaStreamEnable(i2cp->dmarx);
-          dmaStreamEnable(i2cp->dmatx);
+    #if I2C_USE_SLAVE_MODE
+    if ( !i2cp->slave_mode )
+    {
+    #endif //I2C_USE_SLAVE_MODE
+      /* Interrupts are disabled just before dmaStreamEnable() because there
+         is no need of interrupts until next transaction begin. All the work is
+         done by the DMA.*/
+      switch (I2C_EV_MASK & (event | (regSR << 16))) {
+      case I2C_EV5_MASTER_MODE_SELECT:
+        dp->DR = i2cp->addr;
+        break;
+      case I2C_EV6_MASTER_REC_MODE_SELECTED:
+        dp->CR2 &= ~I2C_CR2_ITEVTEN;
+        dmaStreamEnable(i2cp->dmarx);
+        dp->CR2 |= I2C_CR2_LAST;                 /* Needed in receiver mode. */
+        if (dmaStreamGetTransactionSize(i2cp->dmarx) < 2)
+          dp->CR1 &= ~I2C_CR1_ACK;
+        break;
+      case I2C_EV6_MASTER_TRA_MODE_SELECTED:
+        dp->CR2 &= ~I2C_CR2_ITEVTEN;
+        dmaStreamEnable(i2cp->dmatx);
+        break;
+      case I2C_EV8_2_MASTER_BYTE_TRANSMITTED:
+        /* Catches BTF event after the end of transmission.*/
+        if (dmaStreamGetTransactionSize(i2cp->dmarx) > 0) {
+          /* Starts "read after write" operation, LSB = 1 -> receive.*/
+          i2cp->addr |= 0x01;
+          dp->CR1 |= I2C_CR1_START | I2C_CR1_ACK;
+          return;
+        }
+        dp->CR2 &= ~I2C_CR2_ITEVTEN;
+        dp->CR1 |= I2C_CR1_STOP;
+        wakeup_isr(i2cp, RDY_OK);
+        break;
+      default:
+        break;
       }
+      /* Clear ADDR flag. */
+      if (event & (I2C_SR1_ADDR | I2C_SR1_ADD10))
+        (void)dp->SR2;
+    #if I2C_USE_SLAVE_MODE
+    }
+    else
+    {
+        if  (event & (I2C_SR1_ADDR | I2C_SR1_ADD10))
+        {
+            //palTogglePad( GPIOB, 11 );
 
-      // Clear Addr Flag
-      (void)dp->SR2;
-  }
-  if ( event & I2C_SR1_STOPF )
-  {
-      i2cp->state |= 8;
-      // Turn interrupts on to feel ADDR match event to initiate transfer again.
-      //dp->CR2 |= I2C_CR2_ITEVTEN;
-      // Generate Ack on address match and IOs.
-      // Here write to CR1 also clears STOPF bit (according to the datasheet).
-      //dp->CR1 |= I2C_CR1_ACK;
-      // Disable DMA. Just to be sure it is off in the case if 
-      // transferred less bytes then it was supposed.
-      dmaStreamDisable( i2cp->dmarx );
-      dmaStreamDisable( i2cp->dmatx );
-      // Wakeup waiting thread.
-      wakeup_isr( i2cp, RDY_OK );
+            // When transaction begins reset byte counters.
+            i2cp->rxind = 0;
+            i2cp->txind = 0;
 
-       // Clear Addr Flag
-      (void)dp->SR2;
- }
-#else
-  /* Clear ADDR flag. */
-  if (event & (I2C_SR1_ADDR | I2C_SR1_ADD10))
-    (void)dp->SR2;
-#endif
+            // Clear Addr Flag
+            (void)dp->SR2;
+        }
+        if ( event & ( I2C_SR1_TXE | I2C_SR1_BTF ) )
+        {
+            dp->DR = i2cp->txbuf[ i2cp->txind ];
+            i2cp->txind = (i2cp->txind + 1) % i2cp->txbytes;
+        }
+        if ( event & I2C_SR1_RXNE )
+        {
+            i2cp->rxbuf[ i2cp->rxind ] = dp->DR;
+            i2cp->rxind = (i2cp->rxind + 1) % i2cp->rxbytes;
+        }
+        if ( event & I2C_SR1_AF )
+        {
+            dp->SR1 &= ~I2C_SR1_AF;
+            wakeup_isr( i2cp, RDY_OK );
+        }
+        if ( event & I2C_SR1_STOPF )
+        {
+            // Clear STOPF bit by writing to CR1.
+            dp->CR1 |= I2C_CR1_PE;
+            // Wakeup waiting thread.
+            wakeup_isr( i2cp, RDY_OK );
+        }
+    }
+    #endif // I2C_USE_SLAVE_MODE
 }
 
 /**
@@ -1013,11 +1005,14 @@ msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
 
     i2cp->slave_mode = 1;
     // Starts the operation.
-    dp->CR1 &= ~I2C_CR1_START;
+    // No start - slave mode.
+    dp->CR1 &= ~( I2C_CR1_START );
+    // Turn off ISR and DMA.
+    dp->CR2 &= ~( I2C_CR2_ITEVTEN | I2C_CR2_DMAEN );
     // Own address.
     dp->OAR1 = ((addr << 1) & (0xFE));
-    // Turn interrupts and using DMA on.
-    dp->CR2 |= ( I2C_CR2_ITEVTEN | I2C_CR2_DMAEN );
+    // Turn interrupts.
+    dp->CR2 |= I2C_CR2_ITEVTEN;
     // Generate Ack on address match and IOs.
     dp->CR1 |= I2C_CR1_ACK;
 
