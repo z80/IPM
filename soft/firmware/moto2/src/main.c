@@ -9,6 +9,8 @@
 #include "i2c_ctrl.h"
 #include "dac_ctrl.h"
 #include "bmsd_ctrl.h"
+#include "encabs_ctrl.h"
+#include "encrel_ctrl.h"
 
 
 /*static WORKING_AREA( waUart, 1024 );
@@ -41,6 +43,8 @@ int main(void)
 
     initLed();
     setLeds( 3 );
+    encabsInit();
+    encrelInit();
     execInit();
     dacInit();
     //chThdSleepSeconds( 5 );
