@@ -51,7 +51,7 @@ static msg_t i2cThread( void *arg )
         pienc[1] = encrel( 1 );
         uint32_t * paenc = ( uint32_t * )outBuffer;
         paenc[2] = encabs();
-        outBuffer[8] = bmsdReady();
+        outBuffer[12] = bmsdReady();
 
         // Watchdog reset.
         iwdgReset( &IWDGD );
