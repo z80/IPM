@@ -373,7 +373,7 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
             i2cp->rxbuf[ i2cp->rxind++ ] = dp->DR;
             if ( i2cp->rxind >= i2cp->rxbytes )
                 i2cp->rxind = 0;
-                    palTogglePad( GPIOB, 10 );
+                    //palTogglePad( GPIOB, 10 );
         }
         if ( event & I2C_SR1_STOPF )
         {

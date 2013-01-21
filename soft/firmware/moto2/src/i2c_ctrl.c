@@ -69,18 +69,18 @@ static msg_t i2cThread( void *arg )
         static uint8_t addr;
         addr = 64; //I2C_BASE_ADDR + ind;
         // IO routine itself.
-        palClearPad( GPIOB, 11 );
+        //palClearPad( GPIOB, 11 );
         status = i2cSlaveIoTimeout( &I2CD1, addr,
                                     inBuffer,  13,
                                     outBuffer, 13, tmo );
-        palSetPad( GPIOB, 11 );
+        //palSetPad( GPIOB, 11 );
         //if ( status == RDY_OK )
         //    setLeds( 1 );
         // Debug code.
             //status = RDY_OK;
             //inBuffer[0] = 6;
             //inBuffer[1] = 1;
-        if ( inBuffer[3] == 0x70 )
+        /*if ( inBuffer[3] == 0x70 )
         {
             delay();
             palTogglePad( GPIOB, 10 );
@@ -91,7 +91,7 @@ static msg_t i2cThread( void *arg )
             delay();
             palTogglePad( GPIOB, 10 );
             delay();
-        }
+        }*/
             //chThdSleepMilliseconds( 20 );
         // / Debug code.
         if ( I2CD1.errors != I2CD_NO_ERROR )
@@ -108,7 +108,7 @@ static msg_t i2cThread( void *arg )
         // Watchdog reset.
         //iwdgReset( &IWDGD );
         // If we are here IO routine succeeded.
-        //execPostCmd( inBuffer );
+        execPostCmd( inBuffer );
     }
 
     return 0;
