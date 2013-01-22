@@ -11,7 +11,7 @@
 
 static InputQueue inputQueue;
 #define QUEUE_SZ (I2C_IN_BUFFER_SZ * EXEC_QUEUE_SIZE)
-static uint8_t queue[ QUEUE_SZ ];
+static uint8_t queue[ I2C_IN_BUFFER_SZ * EXEC_QUEUE_SIZE ];
 
 static WORKING_AREA( waExec, 1024 );
 static msg_t execThread( void *arg )
@@ -57,13 +57,14 @@ static msg_t execThread( void *arg )
 void execInit( void )
 {
     // Initialize mailbox.
-    chIQInit( &inputQueue, queue, QUEUE_SZ, NULL );
+    chIQInit( &inputQueue, queue, I2C_IN_BUFFER_SZ * EXEC_QUEUE_SIZE, NULL );
     // Creating thread.
     chThdCreateStatic( waExec, sizeof(waExec), NORMALPRIO, execThread, NULL );
 }
 
 void execPostCmd( uint8_t * cmd )
 {
+    /*
     static uint8_t i = 0;
     static msg_t res;
     for ( ; i<I2C_IN_BUFFER_SZ; i++ )
@@ -74,6 +75,17 @@ void execPostCmd( uint8_t * cmd )
     }
     // Reset byte counter.
     i = 0;
+    */
+    chSysLockFromIsr();
+    static uint32_t i;
+    static msg_t res;
+    for ( i=0; i<I2C_IN_BUFFER_SZ; i++ )
+    {
+        res = chIQPutI( &inputQueue, cmd[i] );
+        if ( res != Q_OK )
+            return;
+    }
+    chSysUnlockFromIsr();
 }
 
 
