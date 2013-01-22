@@ -67,7 +67,7 @@ static msg_t i2cThread( void *arg )
         // To make sure we've got something.
         inBuffer[0] = I2C_CMD_IDLE;
         static uint8_t addr;
-        addr = 64; //I2C_BASE_ADDR + ind;
+        addr = I2C_BASE_ADDR; //I2C_BASE_ADDR + 2 * ind; // For moto_1 it is (2 * ind + 1)
         // IO routine itself.
         //palClearPad( GPIOB, 11 );
         status = i2cSlaveIoTimeout( &I2CD1, addr,

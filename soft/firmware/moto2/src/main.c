@@ -45,10 +45,10 @@ int main(void)
     setLeds( 3 );
     encabsInit();
     encrelInit();
-    execInit();
     dacInit();
     //chThdSleepSeconds( 5 );
-    //bmsdInit();
+    bmsdInit();
+    execInit();
     initI2c();
 
     //iwdgReset( &IWDGD );
