@@ -28,23 +28,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   5 .debug_info   0001cb03  00000000  00000000  0001317d  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_line   0000baf6  00000000  00000000  0002fc80  2**0
+  6 .debug_line   0000baf5  00000000  00000000  0002fc80  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_loc    0000c49a  00000000  00000000  0003b776  2**0
+  7 .debug_loc    0000c49a  00000000  00000000  0003b775  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_pubnames 00001b72  00000000  00000000  00047c10  2**0
+  8 .debug_pubnames 00001b72  00000000  00000000  00047c0f  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_pubtypes 00004952  00000000  00000000  00049782  2**0
+  9 .debug_pubtypes 00004952  00000000  00000000  00049781  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_aranges 000012c8  00000000  00000000  0004e0d4  2**0
+ 10 .debug_aranges 000012c8  00000000  00000000  0004e0d3  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00002128  00000000  00000000  0004f39c  2**0
+ 11 .debug_ranges 00002128  00000000  00000000  0004f39b  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_str    00003cdf  00000000  00000000  000514c4  2**0
+ 12 .debug_str    00003cdf  00000000  00000000  000514c3  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .comment      0000002a  00000000  00000000  000551a3  2**0
+ 13 .comment      0000002a  00000000  00000000  000551a2  2**0
                   CONTENTS, READONLY
- 14 .ARM.attributes 00000031  00000000  00000000  000551cd  2**0
+ 14 .ARM.attributes 00000031  00000000  00000000  000551cc  2**0
                   CONTENTS, READONLY
  15 .debug_frame  000032e0  00000000  00000000  00055200  2**2
                   CONTENTS, READONLY, DEBUGGING
@@ -286,7 +286,7 @@ SYMBOL TABLE:
 08000100  w    F .text	00000002 _default_exit
 08002650 g     F .text	00000144 _pal_lld_setgroupmode
 080002e0  w    F .text	00000002 VectorCC
-080028b0 g     F .text	000000b0 initI2c
+080028b0 g     F .text	000000ac initI2c
 08000d40 g     F .text	00000028 chSemInit
 080002e0  w    F .text	00000002 Vector54
 080002e0  w    F .text	00000002 Vector98

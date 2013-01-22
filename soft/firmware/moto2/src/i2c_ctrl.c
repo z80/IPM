@@ -127,12 +127,8 @@ void initI2c( void )
     palSetPadMode( ADDR_PORT, ADDR_2, PAL_MODE_INPUT );
     palSetPadMode( GPIOB, 6, PAL_MODE_STM32_ALTERNATE_OPENDRAIN );
     palSetPadMode( GPIOB, 7, PAL_MODE_STM32_ALTERNATE_OPENDRAIN );
-    //chThdSleepMilliseconds( 100 );
 
-    i2cInit();
-    //chThdSleepMilliseconds( 100 );
     i2cStart( &I2CD1, &i2cfg1 );
-    //chThdSleepMilliseconds( 200 );
 
     // Initializing mutex.
     chMtxInit( &mutex );

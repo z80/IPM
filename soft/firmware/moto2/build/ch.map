@@ -1973,7 +1973,7 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_info    0x0001c613      0x29a build/obj/iwdg.o
  .debug_info    0x0001c8ad      0x256 build/obj/iwdg_lld.o
 
-.debug_line     0x00000000     0xbaf6
+.debug_line     0x00000000     0xbaf5
  .debug_line    0x00000000      0x173 build/obj/crt0.o
  .debug_line    0x00000173       0x69 build/obj/vectors.o
  .debug_line    0x000001dc       0x5e build/obj/chcore.o
@@ -2051,15 +2051,15 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_line    0x00009bfd      0x3b5 build/obj/shell.o
  .debug_line    0x00009fb2      0x33d build/obj/chprintf.o
  .debug_line    0x0000a2ef      0x140 build/obj/main.o
- .debug_line    0x0000a42f      0x341 build/obj/i2c_ctrl.o
- .debug_line    0x0000a770      0x210 build/obj/exec_ctrl.o
- .debug_line    0x0000a980      0x255 build/obj/led_ctrl.o
- .debug_line    0x0000abd5      0x1ec build/obj/dac_ctrl.o
- .debug_line    0x0000adc1      0x567 build/obj/bmsd_ctrl.o
- .debug_line    0x0000b328      0x29c build/obj/encabs_ctrl.o
- .debug_line    0x0000b5c4      0x20d build/obj/encrel_ctrl.o
- .debug_line    0x0000b7d1      0x198 build/obj/iwdg.o
- .debug_line    0x0000b969      0x18d build/obj/iwdg_lld.o
+ .debug_line    0x0000a42f      0x340 build/obj/i2c_ctrl.o
+ .debug_line    0x0000a76f      0x210 build/obj/exec_ctrl.o
+ .debug_line    0x0000a97f      0x255 build/obj/led_ctrl.o
+ .debug_line    0x0000abd4      0x1ec build/obj/dac_ctrl.o
+ .debug_line    0x0000adc0      0x567 build/obj/bmsd_ctrl.o
+ .debug_line    0x0000b327      0x29c build/obj/encabs_ctrl.o
+ .debug_line    0x0000b5c3      0x20d build/obj/encrel_ctrl.o
+ .debug_line    0x0000b7d0      0x198 build/obj/iwdg.o
+ .debug_line    0x0000b968      0x18d build/obj/iwdg_lld.o
 
 .debug_loc      0x00000000     0xc49a
  .debug_loc     0x00000000       0x72 build/obj/crt0.o
@@ -3830,7 +3830,6 @@ hal_lld_init                                      build/obj/hal_lld.o
 i2cAcquireBus                                     build/obj/i2c.o
 i2cGetErrors                                      build/obj/i2c.o
 i2cInit                                           build/obj/i2c.o
-                                                  build/obj/i2c_ctrl.o
                                                   build/obj/hal.o
 i2cMasterReceiveTimeout                           build/obj/i2c.o
 i2cMasterTransmitTimeout                          build/obj/i2c.o
