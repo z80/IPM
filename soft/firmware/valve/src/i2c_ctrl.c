@@ -53,9 +53,9 @@ static msg_t i2cThread( void *arg )
         tmo = MS2ST( 100 );
         master = ( ind == 0 ) ? 1 : 0;
         // I/O with other boards.
-        static uint32_t dataOut;
-        static uint32_t pendDataOut;
-        static uint32_t dataIn;
+        static uint32_t dataOut = 0;
+        static uint32_t pendDataOut = 0;
+        static uint32_t dataIn = 0;
         if ( master )
         {
             // First the board itself.
@@ -124,26 +124,30 @@ static msg_t i2cThread( void *arg )
         }
         else
         {
-            iwdgReset( &IWDGD );
-
             static uint8_t addr;
             addr = I2C_BASE_ADDR + ind - 1;
+
             dataIn = valueRead();
-            //dataIn = 0x12345678;
-            status = i2cSlaveIoTimeout( &I2CD1, addr,
-                                        (uint8_t *)&dataOut,  sizeof( dataOut ),
-                                        (uint8_t *)&dataIn, sizeof( dataIn ), tmo );
-            if ( status != RDY_OK )
+            do {
+                iwdgReset( &IWDGD );
+                //dataIn = 0x12345678;
+                status = i2cSlaveIoTimeout( &I2CD1, addr,
+                                            (uint8_t *)&dataOut,  sizeof( dataOut ),
+                                            (uint8_t *)&dataIn, sizeof( dataIn ),
+                                            NULL, NULL, tmo );
+                if ( status != RDY_OK )
+                    i2cStart( &I2CD1, &i2cfg1 );
+            } while ( status != RDY_OK );
+            while ( 1 )
             {
-                i2cStop( &I2CD1 );
-                chThdSleepMilliseconds( 100 );
-                i2cStart( &I2CD1, &i2cfg1 );
-                continue;
+                chThdSleepMilliseconds( 20 );
+                iwdgReset( &IWDGD );
+                pendDataOut = valueRead();
+                chSysLock();
+                dataIn = pendDataOut;
+                chSysUnlock();
+                write( dataOut );
             }
-            // Here it should be some type of delay
-            // because i2cSlaveIo returns immediately.
-            chThdSleepMilliseconds( 20 );
-            write( dataOut );
         }
         /*if ( a == 0b00000111 )
         {
@@ -281,6 +285,7 @@ void i2cIo( void )
     static msg_t status;
     static uint8_t st;
          // Debug code.
+            /*
           static uint16_t nnn = 0;
             if ( nnn++ > 50 )
                 nnn = 0;
@@ -294,7 +299,7 @@ void i2cIo( void )
             g_i2cOutBuffer[1] = 1;
             g_i2cOutBuffer[2] = 0x0F;
             g_i2cOutBuffer[3] = 0x70;
-
+          */
         // / Debug code.
     chMtxLock( &mutex );
         st = g_i2cStatus;
