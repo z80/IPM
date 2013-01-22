@@ -385,13 +385,17 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
             // Wakeup only if no bytes for transfer to allow
             // read after write transactions from master side.
             //if ( i2cp->txbytes == 0 )
-            wakeup_isr( i2cp, RDY_OK );
+            //wakeup_isr( i2cp, RDY_OK );
+            if ( i2cp->rxcb )
+                i2cp->rxcb( i2cp );
         }
         if ( event & I2C_SR1_AF )
         {
             dp->SR1 &= ~I2C_SR1_AF;
                     //palTogglePad( GPIOB, 10 );
-            wakeup_isr( i2cp, RDY_OK );
+            //wakeup_isr( i2cp, RDY_OK );
+            if ( i2cp->rxcb )
+                i2cp->rxcb( i2cp );
         }
     }
     #endif // I2C_USE_SLAVE_MODE

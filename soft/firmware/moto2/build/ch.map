@@ -1086,7 +1086,7 @@ destructors     0x080000ec        0x0
  *(SORT(.fini_array.*))
                 0x080000ec                PROVIDE (__fini_array_end, .)
 
-.text           0x080000f0     0x3e90
+.text           0x080000f0     0x3e50
  *(.text.startup.*)
  *(.text)
  *(.text.*)
@@ -1457,199 +1457,199 @@ destructors     0x080000ec        0x0
  .text.i2c_lld_serve_rx_end_irq
                 0x08002180       0x80 build/obj/i2c_lld.o
  .text.VectorBC
-                0x08002200      0x200 build/obj/i2c_lld.o
+                0x08002200      0x1c0 build/obj/i2c_lld.o
                 0x08002200                VectorBC
  .text.VectorC0
-                0x08002400      0x160 build/obj/i2c_lld.o
-                0x08002400                VectorC0
+                0x080023c0      0x160 build/obj/i2c_lld.o
+                0x080023c0                VectorC0
  .text.i2c_lld_init
-                0x08002560       0x30 build/obj/i2c_lld.o
-                0x08002560                i2c_lld_init
+                0x08002520       0x30 build/obj/i2c_lld.o
+                0x08002520                i2c_lld_init
  .text.i2c_lld_start
-                0x08002590      0x2d0 build/obj/i2c_lld.o
-                0x08002590                i2c_lld_start
+                0x08002550      0x2d0 build/obj/i2c_lld.o
+                0x08002550                i2c_lld_start
  .text.i2c_lld_slave_io_timeout
-                0x08002860      0x130 build/obj/i2c_lld.o
-                0x08002860                i2c_lld_slave_io_timeout
- .text.notify2  0x08002990       0x20 build/obj/serial_lld.o
+                0x08002820      0x130 build/obj/i2c_lld.o
+                0x08002820                i2c_lld_slave_io_timeout
+ .text.notify2  0x08002950       0x20 build/obj/serial_lld.o
  .text.VectorD8
-                0x080029b0      0x180 build/obj/serial_lld.o
-                0x080029b0                VectorD8
+                0x08002970      0x180 build/obj/serial_lld.o
+                0x08002970                VectorD8
  .text.sd_lld_init
-                0x08002b30       0x20 build/obj/serial_lld.o
-                0x08002b30                sd_lld_init
+                0x08002af0       0x20 build/obj/serial_lld.o
+                0x08002af0                sd_lld_init
  .text.sd_lld_start
-                0x08002b50       0x80 build/obj/serial_lld.o
-                0x08002b50                sd_lld_start
+                0x08002b10       0x80 build/obj/serial_lld.o
+                0x08002b10                sd_lld_start
  .text._pal_lld_init
-                0x08002bd0       0x70 build/obj/pal_lld.o
-                0x08002bd0                _pal_lld_init
+                0x08002b90       0x70 build/obj/pal_lld.o
+                0x08002b90                _pal_lld_init
  .text._pal_lld_setgroupmode
-                0x08002c40      0x150 build/obj/pal_lld.o
-                0x08002c40                _pal_lld_setgroupmode
+                0x08002c00      0x150 build/obj/pal_lld.o
+                0x08002c00                _pal_lld_setgroupmode
  .text.__early_init
-                0x08002d90       0x10 build/obj/board.o
-                0x08002d90                __early_init
+                0x08002d50       0x10 build/obj/board.o
+                0x08002d50                __early_init
  .text.boardInit
-                0x08002da0       0x10 build/obj/board.o
-                0x08002da0                boardInit
- .text.main     0x08002db0       0x40 build/obj/main.o
-                0x08002db0                main
- .text.i2cRxCb  0x08002df0       0x20 build/obj/i2c_ctrl.o
- .text.i2cTxCb  0x08002e10       0x10 build/obj/i2c_ctrl.o
+                0x08002d60       0x10 build/obj/board.o
+                0x08002d60                boardInit
+ .text.main     0x08002d70       0x40 build/obj/main.o
+                0x08002d70                main
+ .text.i2cRxCb  0x08002db0       0x20 build/obj/i2c_ctrl.o
+ .text.i2cTxCb  0x08002dd0       0x10 build/obj/i2c_ctrl.o
  .text.i2cThread
-                0x08002e20       0xb0 build/obj/i2c_ctrl.o
- .text.initI2c  0x08002ed0       0xb0 build/obj/i2c_ctrl.o
-                0x08002ed0                initI2c
+                0x08002de0       0xb0 build/obj/i2c_ctrl.o
+ .text.initI2c  0x08002e90       0xb0 build/obj/i2c_ctrl.o
+                0x08002e90                initI2c
  .text.execThread
-                0x08002f80       0xe0 build/obj/exec_ctrl.o
+                0x08002f40       0xe0 build/obj/exec_ctrl.o
  .text.execInit
-                0x08003060       0x40 build/obj/exec_ctrl.o
-                0x08003060                execInit
+                0x08003020       0x40 build/obj/exec_ctrl.o
+                0x08003020                execInit
  .text.ledsThread
-                0x080030a0       0x20 build/obj/led_ctrl.o
- .text.initLed  0x080030c0       0x60 build/obj/led_ctrl.o
-                0x080030c0                initLed
- .text.setLeds  0x08003120       0x20 build/obj/led_ctrl.o
-                0x08003120                setLeds
- .text.dacInit  0x08003140       0x70 build/obj/dac_ctrl.o
-                0x08003140                dacInit
- .text.dacSet   0x080031b0       0xd0 build/obj/dac_ctrl.o
-                0x080031b0                dacSet
- .text.uartIo   0x08003280       0x50 build/obj/bmsd_ctrl.o
+                0x08003060       0x20 build/obj/led_ctrl.o
+ .text.initLed  0x08003080       0x60 build/obj/led_ctrl.o
+                0x08003080                initLed
+ .text.setLeds  0x080030e0       0x20 build/obj/led_ctrl.o
+                0x080030e0                setLeds
+ .text.dacInit  0x08003100       0x70 build/obj/dac_ctrl.o
+                0x08003100                dacInit
+ .text.dacSet   0x08003170       0xd0 build/obj/dac_ctrl.o
+                0x08003170                dacSet
+ .text.uartIo   0x08003240       0x50 build/obj/bmsd_ctrl.o
  .text.bmsdInit
-                0x080032d0       0x30 build/obj/bmsd_ctrl.o
-                0x080032d0                bmsdInit
+                0x08003290       0x30 build/obj/bmsd_ctrl.o
+                0x08003290                bmsdInit
  .text.bmsdRawCmd
-                0x08003300       0x30 build/obj/bmsd_ctrl.o
-                0x08003300                bmsdRawCmd
+                0x080032c0       0x30 build/obj/bmsd_ctrl.o
+                0x080032c0                bmsdRawCmd
  .text.encabsThread
-                0x08003330       0xf0 build/obj/encabs_ctrl.o
+                0x080032f0       0xf0 build/obj/encabs_ctrl.o
  .text.encabsInit
-                0x08003420       0x50 build/obj/encabs_ctrl.o
-                0x08003420                encabsInit
- .text.extcb1   0x08003470       0x40 build/obj/encrel_ctrl.o
- .text.extcb2   0x080034b0       0x40 build/obj/encrel_ctrl.o
+                0x080033e0       0x50 build/obj/encabs_ctrl.o
+                0x080033e0                encabsInit
+ .text.extcb1   0x08003430       0x40 build/obj/encrel_ctrl.o
+ .text.extcb2   0x08003470       0x40 build/obj/encrel_ctrl.o
  .text.encrelInit
-                0x080034f0       0x10 build/obj/encrel_ctrl.o
-                0x080034f0                encrelInit
+                0x080034b0       0x10 build/obj/encrel_ctrl.o
+                0x080034b0                encrelInit
  .text.encrelSet
-                0x08003500       0x50 build/obj/encrel_ctrl.o
-                0x08003500                encrelSet
+                0x080034c0       0x50 build/obj/encrel_ctrl.o
+                0x080034c0                encrelSet
  *(.rodata)
  *(.rodata.*)
  .rodata.str1.4
-                0x08003550        0xd build/obj/chsys.o
+                0x08003510        0xd build/obj/chsys.o
                                  0x10 (size before relaxing)
- *fill*         0x0800355d        0x3 00
+ *fill*         0x0800351d        0x3 00
  .rodata.str1.4
-                0x08003560       0x56 build/obj/chdebug.o
+                0x08003520       0x56 build/obj/chdebug.o
                                  0x58 (size before relaxing)
- *fill*         0x080035b6        0xa 00
+ *fill*         0x08003576        0xa 00
  .rodata.str1.4
-                0x080035c0       0x31 build/obj/chvt.o
+                0x08003580       0x31 build/obj/chvt.o
                                  0x34 (size before relaxing)
- *fill*         0x080035f1        0xf 00
+ *fill*         0x080035b1        0xf 00
  .rodata.str1.4
-                0x08003600       0x23 build/obj/chschd.o
+                0x080035c0       0x23 build/obj/chschd.o
                                  0x24 (size before relaxing)
- *fill*         0x08003623        0xd 00
+ *fill*         0x080035e3        0xd 00
  .rodata.str1.4
-                0x08003630       0x94 build/obj/chthreads.o
- *fill*         0x080036c4        0xc 00
+                0x080035f0       0x94 build/obj/chthreads.o
+ *fill*         0x08003684        0xc 00
  .rodata.str1.4
-                0x080036d0      0x146 build/obj/chsem.o
+                0x08003690      0x146 build/obj/chsem.o
                                 0x148 (size before relaxing)
- *fill*         0x08003816        0xa 00
+ *fill*         0x080037d6        0xa 00
  .rodata.str1.4
-                0x08003820       0xab build/obj/chmtx.o
+                0x080037e0       0xab build/obj/chmtx.o
                                  0xac (size before relaxing)
- *fill*         0x080038cb        0x5 00
+ *fill*         0x0800388b        0x5 00
  .rodata.str1.4
-                0x080038d0       0x90 build/obj/chevents.o
+                0x08003890       0x90 build/obj/chevents.o
  .rodata.str1.4
-                0x08003960       0x87 build/obj/chmboxes.o
+                0x08003920       0x87 build/obj/chmboxes.o
                                  0x88 (size before relaxing)
- *fill*         0x080039e7        0x9 00
+ *fill*         0x080039a7        0x9 00
  .rodata.str1.4
-                0x080039f0       0x29 build/obj/chqueues.o
+                0x080039b0       0x29 build/obj/chqueues.o
                                  0x2c (size before relaxing)
- *fill*         0x08003a19        0x7 00
+ *fill*         0x080039d9        0x7 00
  .rodata.str1.4
-                0x08003a20       0x9c build/obj/ext.o
- *fill*         0x08003abc        0x4 00
+                0x080039e0       0x9c build/obj/ext.o
+ *fill*         0x08003a7c        0x4 00
  .rodata.str1.4
-                0x08003ac0       0xea build/obj/i2c.o
+                0x08003a80       0xea build/obj/i2c.o
                                  0xec (size before relaxing)
- *fill*         0x08003baa        0x6 00
+ *fill*         0x08003b6a        0x6 00
  .rodata.str1.4
-                0x08003bb0       0x5f build/obj/serial.o
+                0x08003b70       0x5f build/obj/serial.o
                                  0x60 (size before relaxing)
- *fill*         0x08003c0f        0x1 00
- .rodata.vmt    0x08003c10       0x24 build/obj/serial.o
- *fill*         0x08003c34        0xc 00
+ *fill*         0x08003bcf        0x1 00
+ .rodata.vmt    0x08003bd0       0x24 build/obj/serial.o
+ *fill*         0x08003bf4        0xc 00
  .rodata.str1.4
-                0x08003c40       0x31 build/obj/stm32_dma.o
+                0x08003c00       0x31 build/obj/stm32_dma.o
                                  0x34 (size before relaxing)
- *fill*         0x08003c71        0xf 00
+ *fill*         0x08003c31        0xf 00
  .rodata._stm32_dma_streams
-                0x08003c80       0x54 build/obj/stm32_dma.o
-                0x08003c80                _stm32_dma_streams
- *fill*         0x08003cd4        0xc 00
+                0x08003c40       0x54 build/obj/stm32_dma.o
+                0x08003c40                _stm32_dma_streams
+ *fill*         0x08003c94        0xc 00
  .rodata.str1.4
-                0x08003ce0      0x130 build/obj/i2c_lld.o
+                0x08003ca0      0x130 build/obj/i2c_lld.o
  .rodata.default_config
-                0x08003e10        0xc build/obj/serial_lld.o
- *fill*         0x08003e1c        0x4 00
+                0x08003dd0        0xc build/obj/serial_lld.o
+ *fill*         0x08003ddc        0x4 00
  .rodata.cfgtab.5990
-                0x08003e20       0x14 build/obj/pal_lld.o
- *fill*         0x08003e34        0xc 00
+                0x08003de0       0x14 build/obj/pal_lld.o
+ *fill*         0x08003df4        0xc 00
  .rodata.pal_default_config
-                0x08003e40       0x3c build/obj/board.o
-                0x08003e40                pal_default_config
- *fill*         0x08003e7c        0x4 00
+                0x08003e00       0x3c build/obj/board.o
+                0x08003e00                pal_default_config
+ *fill*         0x08003e3c        0x4 00
  .rodata.str1.4
-                0x08003e80        0x2 build/obj/i2c_ctrl.o
+                0x08003e40        0x2 build/obj/i2c_ctrl.o
                                   0x4 (size before relaxing)
- *fill*         0x08003e82        0xe 00
+ *fill*         0x08003e42        0xe 00
  .rodata.i2cfg1
-                0x08003e90        0xc build/obj/i2c_ctrl.o
- *fill*         0x08003e9c        0x4 00
+                0x08003e50        0xc build/obj/i2c_ctrl.o
+ *fill*         0x08003e5c        0x4 00
  .rodata.str1.4
-                0x08003ea0        0x2 build/obj/exec_ctrl.o
+                0x08003e60        0x2 build/obj/exec_ctrl.o
                                   0x4 (size before relaxing)
- *fill*         0x08003ea2        0xe 00
+ *fill*         0x08003e62        0xe 00
  .rodata.str1.4
-                0x08003eb0        0x3 build/obj/led_ctrl.o
+                0x08003e70        0x3 build/obj/led_ctrl.o
                                   0x4 (size before relaxing)
- *fill*         0x08003eb3        0xd 00
+ *fill*         0x08003e73        0xd 00
  .rodata.CSWTCH.8
-                0x08003ec0        0x4 build/obj/dac_ctrl.o
- *fill*         0x08003ec4        0xc 00
+                0x08003e80        0x4 build/obj/dac_ctrl.o
+ *fill*         0x08003e84        0xc 00
  .rodata.str1.4
-                0x08003ed0        0x4 build/obj/encabs_ctrl.o
- *fill*         0x08003ed4        0xc 00
+                0x08003e90        0x4 build/obj/encabs_ctrl.o
+ *fill*         0x08003e94        0xc 00
  .rodata.extcfg
-                0x08003ee0       0xa0 build/obj/encrel_ctrl.o
+                0x08003ea0       0xa0 build/obj/encrel_ctrl.o
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.gcc*)
 
-.vfp11_veneer   0x08003f80        0x0
+.vfp11_veneer   0x08003f40        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x08003f80        0x0
+.v4_bx          0x08003f40        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM.exidx      0x08003f80        0x0
-                0x08003f80                PROVIDE (__exidx_start, .)
+.ARM.exidx      0x08003f40        0x0
+                0x08003f40                PROVIDE (__exidx_start, .)
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x08003f80                PROVIDE (__exidx_end, .)
+                0x08003f40                PROVIDE (__exidx_end, .)
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
@@ -1657,10 +1657,10 @@ destructors     0x080000ec        0x0
 .eh_frame
  *(.eh_frame)
 
-.textalign      0x08003f80        0x0
-                0x08003f80                . = ALIGN (0x8)
-                0x08003f80                _etext = .
-                0x08003f80                _textdata = _etext
+.textalign      0x08003f40        0x0
+                0x08003f40                . = ALIGN (0x8)
+                0x08003f40                _etext = .
+                0x08003f40                _textdata = _etext
 
 .stacks         0x20000000      0x800
                 0x20000000                . = ALIGN (0x8)
@@ -1677,7 +1677,7 @@ destructors     0x080000ec        0x0
                 0x20000800                __process_stack_end__ = .
                 0x20000800                __main_thread_stack_end__ = .
 
-.data           0x20000800        0xc load address 0x08003f80
+.data           0x20000800        0xc load address 0x08003f40
                 0x20000800                . = ALIGN (0x4)
                 0x20000800                PROVIDE (_data, .)
  *(.data)
@@ -1689,7 +1689,7 @@ destructors     0x080000ec        0x0
                 0x2000080c                . = ALIGN (0x4)
                 0x2000080c                PROVIDE (_edata, .)
 
-.bss            0x20000810     0x1358 load address 0x08003f8c
+.bss            0x20000810     0x1358 load address 0x08003f4c
                 0x20000810                . = ALIGN (0x4)
                 0x20000810                PROVIDE (_bss_start, .)
  *(.bss)
@@ -1870,7 +1870,7 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_abbrev  0x00006e5b      0x138 build/obj/iwdg.o
  .debug_abbrev  0x00006f93      0x164 build/obj/iwdg_lld.o
 
-.debug_info     0x00000000    0x1d1fa
+.debug_info     0x00000000    0x1d10a
  .debug_info    0x00000000      0x345 build/obj/crt0.o
  .debug_info    0x00000345       0xb5 build/obj/vectors.o
  .debug_info    0x000003fa       0x8b build/obj/chcore.o
@@ -1931,34 +1931,34 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_info    0x0001427a       0x9f build/obj/can_lld.o
  .debug_info    0x00014319      0x63d build/obj/ext_lld.o
  .debug_info    0x00014956       0x9f build/obj/gpt_lld.o
- .debug_info    0x000149f5     0x15a0 build/obj/i2c_lld.o
- .debug_info    0x00015f95       0x9f build/obj/icu_lld.o
- .debug_info    0x00016034       0x9f build/obj/mac_lld.o
- .debug_info    0x000160d3       0x9f build/obj/pwm_lld.o
- .debug_info    0x00016172      0xeea build/obj/serial_lld.o
- .debug_info    0x0001705c       0x9f build/obj/sdc_lld.o
- .debug_info    0x000170fb       0x9f build/obj/spi_lld.o
- .debug_info    0x0001719a       0x9f build/obj/uart_lld.o
- .debug_info    0x00017239      0x39a build/obj/pal_lld.o
- .debug_info    0x000175d3       0x9f build/obj/usb_lld.o
- .debug_info    0x00017672       0x9f build/obj/rtc_lld.o
- .debug_info    0x00017711      0x185 build/obj/board.o
- .debug_info    0x00017896      0x5ef build/obj/evtimer.o
- .debug_info    0x00017e85      0xc31 build/obj/syscalls.o
- .debug_info    0x00018ab6      0xcdf build/obj/shell.o
- .debug_info    0x00019795      0x3fc build/obj/chprintf.o
- .debug_info    0x00019b91       0xd2 build/obj/main.o
- .debug_info    0x00019c63      0xafa build/obj/i2c_ctrl.o
- .debug_info    0x0001a75d      0x6ad build/obj/exec_ctrl.o
- .debug_info    0x0001ae0a      0x5d1 build/obj/led_ctrl.o
- .debug_info    0x0001b3db      0x29d build/obj/dac_ctrl.o
- .debug_info    0x0001b678      0xb0c build/obj/bmsd_ctrl.o
- .debug_info    0x0001c184      0x6df build/obj/encabs_ctrl.o
- .debug_info    0x0001c863      0x4a7 build/obj/encrel_ctrl.o
- .debug_info    0x0001cd0a      0x29a build/obj/iwdg.o
- .debug_info    0x0001cfa4      0x256 build/obj/iwdg_lld.o
+ .debug_info    0x000149f5     0x14b0 build/obj/i2c_lld.o
+ .debug_info    0x00015ea5       0x9f build/obj/icu_lld.o
+ .debug_info    0x00015f44       0x9f build/obj/mac_lld.o
+ .debug_info    0x00015fe3       0x9f build/obj/pwm_lld.o
+ .debug_info    0x00016082      0xeea build/obj/serial_lld.o
+ .debug_info    0x00016f6c       0x9f build/obj/sdc_lld.o
+ .debug_info    0x0001700b       0x9f build/obj/spi_lld.o
+ .debug_info    0x000170aa       0x9f build/obj/uart_lld.o
+ .debug_info    0x00017149      0x39a build/obj/pal_lld.o
+ .debug_info    0x000174e3       0x9f build/obj/usb_lld.o
+ .debug_info    0x00017582       0x9f build/obj/rtc_lld.o
+ .debug_info    0x00017621      0x185 build/obj/board.o
+ .debug_info    0x000177a6      0x5ef build/obj/evtimer.o
+ .debug_info    0x00017d95      0xc31 build/obj/syscalls.o
+ .debug_info    0x000189c6      0xcdf build/obj/shell.o
+ .debug_info    0x000196a5      0x3fc build/obj/chprintf.o
+ .debug_info    0x00019aa1       0xd2 build/obj/main.o
+ .debug_info    0x00019b73      0xafa build/obj/i2c_ctrl.o
+ .debug_info    0x0001a66d      0x6ad build/obj/exec_ctrl.o
+ .debug_info    0x0001ad1a      0x5d1 build/obj/led_ctrl.o
+ .debug_info    0x0001b2eb      0x29d build/obj/dac_ctrl.o
+ .debug_info    0x0001b588      0xb0c build/obj/bmsd_ctrl.o
+ .debug_info    0x0001c094      0x6df build/obj/encabs_ctrl.o
+ .debug_info    0x0001c773      0x4a7 build/obj/encrel_ctrl.o
+ .debug_info    0x0001cc1a      0x29a build/obj/iwdg.o
+ .debug_info    0x0001ceb4      0x256 build/obj/iwdg_lld.o
 
-.debug_line     0x00000000     0xb8b6
+.debug_line     0x00000000     0xb8b4
  .debug_line    0x00000000      0x173 build/obj/crt0.o
  .debug_line    0x00000173       0x69 build/obj/vectors.o
  .debug_line    0x000001dc       0x5e build/obj/chcore.o
@@ -2019,34 +2019,34 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_line    0x00007e4e       0xde build/obj/can_lld.o
  .debug_line    0x00007f2c      0x37a build/obj/ext_lld.o
  .debug_line    0x000082a6       0xde build/obj/gpt_lld.o
- .debug_line    0x00008384      0x685 build/obj/i2c_lld.o
- .debug_line    0x00008a09       0xde build/obj/icu_lld.o
- .debug_line    0x00008ae7       0xde build/obj/mac_lld.o
- .debug_line    0x00008bc5       0xde build/obj/pwm_lld.o
- .debug_line    0x00008ca3      0x391 build/obj/serial_lld.o
- .debug_line    0x00009034       0xde build/obj/sdc_lld.o
- .debug_line    0x00009112       0xde build/obj/spi_lld.o
- .debug_line    0x000091f0       0xde build/obj/uart_lld.o
- .debug_line    0x000092ce      0x227 build/obj/pal_lld.o
- .debug_line    0x000094f5       0xde build/obj/usb_lld.o
- .debug_line    0x000095d3       0xde build/obj/rtc_lld.o
- .debug_line    0x000096b1      0x14e build/obj/board.o
- .debug_line    0x000097ff      0x1b8 build/obj/evtimer.o
- .debug_line    0x000099b7      0x1f0 build/obj/syscalls.o
- .debug_line    0x00009ba7      0x3b5 build/obj/shell.o
- .debug_line    0x00009f5c      0x33d build/obj/chprintf.o
- .debug_line    0x0000a299      0x140 build/obj/main.o
- .debug_line    0x0000a3d9      0x34b build/obj/i2c_ctrl.o
- .debug_line    0x0000a724      0x210 build/obj/exec_ctrl.o
- .debug_line    0x0000a934      0x248 build/obj/led_ctrl.o
- .debug_line    0x0000ab7c      0x1ec build/obj/dac_ctrl.o
- .debug_line    0x0000ad68      0x380 build/obj/bmsd_ctrl.o
- .debug_line    0x0000b0e8      0x29c build/obj/encabs_ctrl.o
- .debug_line    0x0000b384      0x20d build/obj/encrel_ctrl.o
- .debug_line    0x0000b591      0x198 build/obj/iwdg.o
- .debug_line    0x0000b729      0x18d build/obj/iwdg_lld.o
+ .debug_line    0x00008384      0x683 build/obj/i2c_lld.o
+ .debug_line    0x00008a07       0xde build/obj/icu_lld.o
+ .debug_line    0x00008ae5       0xde build/obj/mac_lld.o
+ .debug_line    0x00008bc3       0xde build/obj/pwm_lld.o
+ .debug_line    0x00008ca1      0x391 build/obj/serial_lld.o
+ .debug_line    0x00009032       0xde build/obj/sdc_lld.o
+ .debug_line    0x00009110       0xde build/obj/spi_lld.o
+ .debug_line    0x000091ee       0xde build/obj/uart_lld.o
+ .debug_line    0x000092cc      0x227 build/obj/pal_lld.o
+ .debug_line    0x000094f3       0xde build/obj/usb_lld.o
+ .debug_line    0x000095d1       0xde build/obj/rtc_lld.o
+ .debug_line    0x000096af      0x14e build/obj/board.o
+ .debug_line    0x000097fd      0x1b8 build/obj/evtimer.o
+ .debug_line    0x000099b5      0x1f0 build/obj/syscalls.o
+ .debug_line    0x00009ba5      0x3b5 build/obj/shell.o
+ .debug_line    0x00009f5a      0x33d build/obj/chprintf.o
+ .debug_line    0x0000a297      0x140 build/obj/main.o
+ .debug_line    0x0000a3d7      0x34b build/obj/i2c_ctrl.o
+ .debug_line    0x0000a722      0x210 build/obj/exec_ctrl.o
+ .debug_line    0x0000a932      0x248 build/obj/led_ctrl.o
+ .debug_line    0x0000ab7a      0x1ec build/obj/dac_ctrl.o
+ .debug_line    0x0000ad66      0x380 build/obj/bmsd_ctrl.o
+ .debug_line    0x0000b0e6      0x29c build/obj/encabs_ctrl.o
+ .debug_line    0x0000b382      0x20d build/obj/encrel_ctrl.o
+ .debug_line    0x0000b58f      0x198 build/obj/iwdg.o
+ .debug_line    0x0000b727      0x18d build/obj/iwdg_lld.o
 
-.debug_loc      0x00000000     0xb2ba
+.debug_loc      0x00000000     0xb21f
  .debug_loc     0x00000000       0x72 build/obj/crt0.o
  .debug_loc     0x00000072      0x11b build/obj/chcore_v7m.o
  .debug_loc     0x0000018d      0x10a build/obj/nvic.o
@@ -2088,23 +2088,23 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_loc     0x0000805c      0x2ae build/obj/stm32_dma.o
  .debug_loc     0x0000830a       0x20 build/obj/hal_lld.o
  .debug_loc     0x0000832a      0x375 build/obj/ext_lld.o
- .debug_loc     0x0000869f      0xb8f build/obj/i2c_lld.o
- .debug_loc     0x0000922e      0x2d6 build/obj/serial_lld.o
- .debug_loc     0x00009504      0x511 build/obj/pal_lld.o
- .debug_loc     0x00009a15      0x12f build/obj/evtimer.o
- .debug_loc     0x00009b44      0x15b build/obj/syscalls.o
- .debug_loc     0x00009c9f      0x6e5 build/obj/shell.o
- .debug_loc     0x0000a384      0x779 build/obj/chprintf.o
- .debug_loc     0x0000aafd       0x20 build/obj/main.o
- .debug_loc     0x0000ab1d      0x18a build/obj/i2c_ctrl.o
- .debug_loc     0x0000aca7       0x9d build/obj/exec_ctrl.o
- .debug_loc     0x0000ad44       0x9d build/obj/led_ctrl.o
- .debug_loc     0x0000ade1       0x94 build/obj/dac_ctrl.o
- .debug_loc     0x0000ae75       0xe5 build/obj/bmsd_ctrl.o
- .debug_loc     0x0000af5a       0xa1 build/obj/encabs_ctrl.o
- .debug_loc     0x0000affb      0x194 build/obj/encrel_ctrl.o
- .debug_loc     0x0000b18f       0xe6 build/obj/iwdg.o
- .debug_loc     0x0000b275       0x45 build/obj/iwdg_lld.o
+ .debug_loc     0x0000869f      0xaf4 build/obj/i2c_lld.o
+ .debug_loc     0x00009193      0x2d6 build/obj/serial_lld.o
+ .debug_loc     0x00009469      0x511 build/obj/pal_lld.o
+ .debug_loc     0x0000997a      0x12f build/obj/evtimer.o
+ .debug_loc     0x00009aa9      0x15b build/obj/syscalls.o
+ .debug_loc     0x00009c04      0x6e5 build/obj/shell.o
+ .debug_loc     0x0000a2e9      0x779 build/obj/chprintf.o
+ .debug_loc     0x0000aa62       0x20 build/obj/main.o
+ .debug_loc     0x0000aa82      0x18a build/obj/i2c_ctrl.o
+ .debug_loc     0x0000ac0c       0x9d build/obj/exec_ctrl.o
+ .debug_loc     0x0000aca9       0x9d build/obj/led_ctrl.o
+ .debug_loc     0x0000ad46       0x94 build/obj/dac_ctrl.o
+ .debug_loc     0x0000adda       0xe5 build/obj/bmsd_ctrl.o
+ .debug_loc     0x0000aebf       0xa1 build/obj/encabs_ctrl.o
+ .debug_loc     0x0000af60      0x194 build/obj/encrel_ctrl.o
+ .debug_loc     0x0000b0f4       0xe6 build/obj/iwdg.o
+ .debug_loc     0x0000b1da       0x45 build/obj/iwdg_lld.o
 
 .debug_pubnames
                 0x00000000     0x1a88
@@ -2530,7 +2530,7 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_aranges
                 0x00001258       0x30 build/obj/iwdg_lld.o
 
-.debug_ranges   0x00000000     0x1f70
+.debug_ranges   0x00000000     0x1f58
  .debug_ranges  0x00000000       0x58 build/obj/crt0.o
  .debug_ranges  0x00000058       0x10 build/obj/vectors.o
  .debug_ranges  0x00000068       0x10 build/obj/chcore.o
@@ -2574,24 +2574,24 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_ranges  0x00001648       0x58 build/obj/stm32_dma.o
  .debug_ranges  0x000016a0       0x30 build/obj/hal_lld.o
  .debug_ranges  0x000016d0       0x80 build/obj/ext_lld.o
- .debug_ranges  0x00001750      0x308 build/obj/i2c_lld.o
- .debug_ranges  0x00001a58       0xb8 build/obj/serial_lld.o
- .debug_ranges  0x00001b10       0x18 build/obj/pal_lld.o
- .debug_ranges  0x00001b28       0x18 build/obj/board.o
- .debug_ranges  0x00001b40       0x68 build/obj/evtimer.o
- .debug_ranges  0x00001ba8       0x40 build/obj/syscalls.o
- .debug_ranges  0x00001be8       0xa8 build/obj/shell.o
- .debug_ranges  0x00001c90       0x18 build/obj/chprintf.o
- .debug_ranges  0x00001ca8       0x10 build/obj/main.o
- .debug_ranges  0x00001cb8       0x48 build/obj/i2c_ctrl.o
- .debug_ranges  0x00001d00       0x38 build/obj/exec_ctrl.o
- .debug_ranges  0x00001d38       0x20 build/obj/led_ctrl.o
- .debug_ranges  0x00001d58       0xb8 build/obj/dac_ctrl.o
- .debug_ranges  0x00001e10       0x38 build/obj/bmsd_ctrl.o
- .debug_ranges  0x00001e48       0xb8 build/obj/encabs_ctrl.o
- .debug_ranges  0x00001f00       0x30 build/obj/encrel_ctrl.o
- .debug_ranges  0x00001f30       0x20 build/obj/iwdg.o
- .debug_ranges  0x00001f50       0x20 build/obj/iwdg_lld.o
+ .debug_ranges  0x00001750      0x2f0 build/obj/i2c_lld.o
+ .debug_ranges  0x00001a40       0xb8 build/obj/serial_lld.o
+ .debug_ranges  0x00001af8       0x18 build/obj/pal_lld.o
+ .debug_ranges  0x00001b10       0x18 build/obj/board.o
+ .debug_ranges  0x00001b28       0x68 build/obj/evtimer.o
+ .debug_ranges  0x00001b90       0x40 build/obj/syscalls.o
+ .debug_ranges  0x00001bd0       0xa8 build/obj/shell.o
+ .debug_ranges  0x00001c78       0x18 build/obj/chprintf.o
+ .debug_ranges  0x00001c90       0x10 build/obj/main.o
+ .debug_ranges  0x00001ca0       0x48 build/obj/i2c_ctrl.o
+ .debug_ranges  0x00001ce8       0x38 build/obj/exec_ctrl.o
+ .debug_ranges  0x00001d20       0x20 build/obj/led_ctrl.o
+ .debug_ranges  0x00001d40       0xb8 build/obj/dac_ctrl.o
+ .debug_ranges  0x00001df8       0x38 build/obj/bmsd_ctrl.o
+ .debug_ranges  0x00001e30       0xb8 build/obj/encabs_ctrl.o
+ .debug_ranges  0x00001ee8       0x30 build/obj/encrel_ctrl.o
+ .debug_ranges  0x00001f18       0x20 build/obj/iwdg.o
+ .debug_ranges  0x00001f38       0x20 build/obj/iwdg_lld.o
 
 .debug_str      0x00000000     0x3b5a
  .debug_str     0x00000000      0x1d0 build/obj/crt0.o
