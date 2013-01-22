@@ -48,7 +48,7 @@ int main(void)
     dacInit();
     //bmsdInit();
     execInit();
-    chThdSleepSeconds( 2 );
+    //chThdSleepSeconds( 2 );
     initI2c();
 
     //iwdgReset( &IWDGD );
