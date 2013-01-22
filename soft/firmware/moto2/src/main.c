@@ -46,7 +46,7 @@ int main(void)
     encabsInit();
     encrelInit();
     dacInit();
-    //bmsdInit();
+    bmsdInit();
     execInit();
     //chThdSleepSeconds( 2 );
     initI2c();

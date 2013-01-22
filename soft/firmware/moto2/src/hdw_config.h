@@ -50,6 +50,7 @@
 #define BMSD_UART       UARTD2
 #define BMSD_RX_TIMEOUT 128   // Timeout to wait for BMSD reply. If there is no reply continue without it.
 #define BMSD_BAUD       9600
+#define BMSD_TIMEOUT    500
 
 // Encoder absolute
 #define ENCABS_BITS      13
