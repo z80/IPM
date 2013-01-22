@@ -36,7 +36,7 @@ static void i2cRxCb( I2CDriver * i2cp )
     (void)i2cp;
     // Command processing.
     // If we are here IO routine succeeded.
-    execPostCmd( inBuffer );
+    //execPostCmd( inBuffer );
 
     //palTogglePad( GPIOB, 10 );
 }

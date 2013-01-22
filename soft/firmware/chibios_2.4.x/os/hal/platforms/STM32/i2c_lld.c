@@ -394,8 +394,8 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
             dp->SR1 &= ~I2C_SR1_AF;
                     //palTogglePad( GPIOB, 10 );
             //wakeup_isr( i2cp, RDY_OK );
-            if ( i2cp->rxcb )
-                i2cp->rxcb( i2cp );
+            if ( i2cp->txcb )
+                i2cp->txcb( i2cp );
         }
     }
     #endif // I2C_USE_SLAVE_MODE
@@ -1025,7 +1025,7 @@ msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
     i2cp->txbuf   = txbuf;
     i2cp->txbytes = txbytes;
     i2cp->txind = 0;
-    i2cp->rxcb  = txcb;
+    i2cp->txcb  = txcb;
 
     i2cp->slave_mode = 1;
     // Starts the operation.
