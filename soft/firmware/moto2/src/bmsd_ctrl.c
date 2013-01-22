@@ -262,7 +262,7 @@ void bmsdInit( void )
     palClearPad( BMSD_DIR_PORT, BMSD_DIR_PIN );
 
     //uartStart( &BMSD_UART, &uart_cfg );
-    //uartStart( &UARTD2, &uart_cfg_1 );
+    uartStart( &UARTD2, &uart_cfg_1 );
 }
 
 uint8_t bmsdReady( void )

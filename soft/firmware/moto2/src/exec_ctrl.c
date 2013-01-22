@@ -15,7 +15,7 @@ static uint8_t pendingIndex = 0;
 static msg_t   msgs[ EXEC_QUEUE_SIZE ];
 static uint8_t queue[ I2C_IN_BUFFER_SZ * EXEC_QUEUE_SIZE ];
 
-static WORKING_AREA( waExec, 256 );
+static WORKING_AREA( waExec, 1024 );
 static msg_t execThread( void *arg )
 {
     (void)arg;

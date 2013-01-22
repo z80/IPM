@@ -32,7 +32,7 @@ static void delay( void )
 
 static Mutex    mutex;
 
-static WORKING_AREA( waI2c, 256 );
+static WORKING_AREA( waI2c, 512 );
 static msg_t i2cThread( void *arg )
 {
     (void)arg;

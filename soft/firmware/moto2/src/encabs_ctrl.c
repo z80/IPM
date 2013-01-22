@@ -36,7 +36,7 @@ static Mutex    mutex;
 static uint32_t value = 0;
 
 
-static WORKING_AREA( waEncabs, 256 );
+static WORKING_AREA( waEncabs, 512 );
 static msg_t encabsThread( void *arg )
 {
     (void)arg;
