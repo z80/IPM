@@ -33,15 +33,19 @@ static void delay( void )
 
 static void i2cRxCb( I2CDriver * i2cp )
 {
+    (void)i2cp;
     // Command processing.
-    inBuffer[0] = I2C_CMD_IDLE;
-    palTogglePad( GPIOB, 10 );
+    // If we are here IO routine succeeded.
+    execPostCmd( inBuffer );
+
+    //palTogglePad( GPIOB, 10 );
 }
 
 static void i2cTxCb( I2CDriver * i2cp )
 {
-    // Refresh buffer.
-    palTogglePad( GPIOB, 11 );
+    (void)i2cp;
+    // Refresh buffer if necessary.
+    //palTogglePad( GPIOB, 11 );
 }
 
 
@@ -81,7 +85,6 @@ static msg_t i2cThread( void *arg )
 
     while ( 1 )
     {
-        /*
         // I/O with other boards.
         int32_t * pienc = (int32_t *)outBuffer;
         pienc[0] = encrel( 0 );
@@ -89,10 +92,8 @@ static msg_t i2cThread( void *arg )
         uint32_t * paenc = ( uint32_t * )outBuffer;
         paenc[2] = encabs();      
         outBuffer[12] = bmsdReady();
-        */
-        // If we are here IO routine succeeded.
-        //execPostCmd( inBuffer );
-        chThdSleepMilliseconds( 100 );
+
+        chThdSleepMilliseconds( 10 );
     }
 
     return 0;
