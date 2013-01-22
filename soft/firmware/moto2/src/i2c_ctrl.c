@@ -15,6 +15,7 @@
 
 static uint8_t outBuffer[ I2C_OUT_BUFFER_SZ ];
 static uint8_t inBuffer[ I2C_IN_BUFFER_SZ ];
+static Mutex   mutex;
 
 static const I2CConfig i2cfg1 =
 {
@@ -30,7 +31,19 @@ static void delay( void )
         asm volatile ( "nop;" );
 }
 
-static Mutex    mutex;
+static void i2cRxCb( I2CDriver * i2cp )
+{
+    // Command processing.
+    inBuffer[0] = I2C_CMD_IDLE;
+    palTogglePad( GPIOB, 10 );
+}
+
+static void i2cTxCb( I2CDriver * i2cp )
+{
+    // Refresh buffer.
+    palTogglePad( GPIOB, 11 );
+}
+
 
 static WORKING_AREA( waI2c, 512 );
 static msg_t i2cThread( void *arg )
@@ -42,17 +55,33 @@ static msg_t i2cThread( void *arg )
     static systime_t tmo;
     tmo = MS2ST( I2C_TIMEOUT );
 
-    while ( 1 )
-    {
-        //chThdSleepMilliseconds( 1000 );
+    // To make sure we've got something.
+    inBuffer[0] = I2C_CMD_IDLE;
+    do {
         // Read ADDRESS pins.
         uint16_t ind = palReadPad( ADDR_PORT, ADDR_0 ) |
                      ( palReadPad( ADDR_PORT, ADDR_1 ) << 1 ) |
                      ( palReadPad( ADDR_PORT, ADDR_2 ) << 2 );
         ind = (~ind) & 0x0007;
 
-        //iwdgReset( &IWDGD );
-        
+        static uint8_t addr;
+        addr = I2C_BASE_ADDR; //I2C_BASE_ADDR + 2 * ind; // For moto_1 it is (2 * ind + 1)
+        // IO routine itself.
+        //palClearPad( GPIOB, 11 );
+        status = i2cSlaveIoTimeout( &I2CD1, addr,
+                                    inBuffer,  13,
+                                    outBuffer, 13,
+                                    i2cRxCb,
+                                    i2cTxCb,
+                                    tmo );
+
+        if ( status != RDY_OK )
+            i2cStart( &I2CD1, &i2cfg1 );
+    } while ( status != RDY_OK );
+
+    while ( 1 )
+    {
+        /*
         // I/O with other boards.
         int32_t * pienc = (int32_t *)outBuffer;
         pienc[0] = encrel( 0 );
@@ -60,55 +89,10 @@ static msg_t i2cThread( void *arg )
         uint32_t * paenc = ( uint32_t * )outBuffer;
         paenc[2] = encabs();      
         outBuffer[12] = bmsdReady();
-        
-        // Watchdog reset.
-        //iwdgReset( &IWDGD );
-
-        // To make sure we've got something.
-        inBuffer[0] = I2C_CMD_IDLE;
-        static uint8_t addr;
-        addr = I2C_BASE_ADDR; //I2C_BASE_ADDR + 2 * ind; // For moto_1 it is (2 * ind + 1)
-        // IO routine itself.
-        //palClearPad( GPIOB, 11 );
-        status = i2cSlaveIoTimeout( &I2CD1, addr,
-                                    inBuffer,  13,
-                                    outBuffer, 13, tmo );
-        //palSetPad( GPIOB, 11 );
-        //if ( status == RDY_OK )
-        //    setLeds( 1 );
-        // Debug code.
-            //status = RDY_OK;
-            //inBuffer[0] = 6;
-            //inBuffer[1] = 1;
-        /*if ( inBuffer[3] == 0x70 )
-        {
-            delay();
-            palTogglePad( GPIOB, 10 );
-            delay();
-            palTogglePad( GPIOB, 10 );
-            delay();
-            palTogglePad( GPIOB, 10 );
-            delay();
-            palTogglePad( GPIOB, 10 );
-            delay();
-        }*/
-            //chThdSleepMilliseconds( 20 );
-        // / Debug code.
-        if ( I2CD1.errors != I2CD_NO_ERROR )
-
-        {
-            // Watchdog reset.
-            //iwdgReset( &IWDGD );
-            // Restart I2c bus.
-            //i2cStop( &I2CD1 );
-            //chThdSleepMilliseconds( 100 );
-            i2cStart( &I2CD1, &i2cfg1 );
-            continue;
-        }
-        // Watchdog reset.
-        //iwdgReset( &IWDGD );
+        */
         // If we are here IO routine succeeded.
-        execPostCmd( inBuffer );
+        //execPostCmd( inBuffer );
+        chThdSleepMilliseconds( 100 );
     }
 
     return 0;

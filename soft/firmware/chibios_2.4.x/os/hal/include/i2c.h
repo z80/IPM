@@ -149,6 +149,8 @@ extern "C" {
                            i2caddr_t addr,
                            uint8_t * rxbuf, size_t rxbytes,
                            uint8_t * txbuf, size_t txbytes,
+                           TI2cSlaveCb rxcb,
+                           TI2cSlaveCb txcb,
                            systime_t timeout );
 
 #endif /* I2C_ISE_SLAVE_MODE */

@@ -281,7 +281,11 @@ void i2cIo( void )
     static msg_t status;
     static uint8_t st;
          // Debug code.
-            /*
+          static uint16_t nnn = 0;
+            if ( nnn++ > 50 )
+                nnn = 0;
+            else
+                return;
             g_i2cAddr = 64;
             g_i2cStatus = 1;
             g_i2cTxSz = 4;
@@ -290,7 +294,7 @@ void i2cIo( void )
             g_i2cOutBuffer[1] = 1;
             g_i2cOutBuffer[2] = 0x0F;
             g_i2cOutBuffer[3] = 0x70;
-            */
+
         // / Debug code.
     chMtxLock( &mutex );
         st = g_i2cStatus;

@@ -978,6 +978,8 @@ msg_t i2c_lld_master_transmit_timeout(I2CDriver *i2cp, i2caddr_t addr,
 msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
                                 uint8_t * rxbuf, size_t rxbytes,
                                 uint8_t * txbuf, size_t txbytes,
+                                TI2cSlaveCb rxcb,
+                                TI2cSlaveCb txcb,
                                 systime_t timeout )
 {
     I2C_TypeDef *dp = i2cp->i2c;
@@ -1014,10 +1016,12 @@ msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
     i2cp->rxbuf   = rxbuf;
     i2cp->rxbytes = rxbytes;
     i2cp->rxind = 0;
+    i2cp->rxcb  = rxcb;
 
     i2cp->txbuf   = txbuf;
     i2cp->txbytes = txbytes;
     i2cp->txind = 0;
+    i2cp->rxcb  = txcb;
 
     i2cp->slave_mode = 1;
     // Starts the operation.
@@ -1034,12 +1038,12 @@ msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
 
     /* Waits for the operation completion or a timeout.*/
     i2cp->thread = chThdSelf();
-    chSchGoSleepS( THD_STATE_SUSPENDED );
+    //chSchGoSleepS( THD_STATE_SUSPENDED );
     if ( ( timeout != TIME_INFINITE ) && chVTIsArmedI( &vt ) )
       chVTResetI( &vt );
 
-    return chThdSelf()->p_u.rdymsg;
-    //return RDY_OK;
+    //return chThdSelf()->p_u.rdymsg;
+    return RDY_OK;
 }
 
 

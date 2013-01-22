@@ -359,6 +359,10 @@ typedef struct {
  */
 typedef struct I2CDriver I2CDriver;
 
+#if I2C_USE_SLAVE_MODE
+    typedef void (* TI2cSlaveCb)( I2CDriver * i2cp );
+#endif
+
 /**
  * @brief Structure representing an I2C driver.
  */
@@ -418,9 +422,12 @@ struct I2CDriver{
   uint8_t                   *rxbuf;
   size_t                    rxbytes;
   size_t                    rxind;
+  TI2cSlaveCb               rxcb;
+
   uint8_t                   *txbuf;
   size_t                    txbytes;
   size_t                    txind;
+  TI2cSlaveCb               txcb;
 #endif
 };
 
@@ -472,6 +479,8 @@ extern "C" {
     msg_t i2c_lld_slave_io_timeout( I2CDriver * i2cp, i2caddr_t addr, 
                                     uint8_t * rxbuf, size_t rxbytes, 
                                     uint8_t * txbuf, size_t txbytes,
+                                    TI2cSlaveCb rxcb,
+                                    TI2cSlaveCb txcb,
                                     systime_t timeout );
 #endif
 #ifdef __cplusplus

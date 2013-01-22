@@ -26,11 +26,11 @@ int main( int argc, char * argv[] )
     for ( int i=0; i<32; i++ )
     {
         status = -1;
-        res = c.i2cIo( 2, 0 );
+        res = c.i2cIo( 4, 0 );
         res = c.i2cStatus( status );
-        res = c.i2cIo( 2, 0 );
+        res = c.i2cIo( 4, 0 );
         res = c.i2cStatus( status );
-        res = c.i2cIo( 2, 0 );
+        res = c.i2cIo( 4, 0 );
         res = c.i2cStatus( status );
     }
 

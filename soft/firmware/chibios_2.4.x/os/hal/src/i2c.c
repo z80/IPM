@@ -311,6 +311,8 @@ msg_t i2cSlaveIoTimeout( I2CDriver * i2cp,
                          i2caddr_t addr,
                          uint8_t * rxbuf, size_t rxbytes,
                          uint8_t * txbuf, size_t txbytes,
+                         TI2cSlaveCb rxcb,
+                         TI2cSlaveCb txcb,
                          systime_t timeout )
 {
     msg_t rdymsg;
@@ -318,10 +320,12 @@ msg_t i2cSlaveIoTimeout( I2CDriver * i2cp,
     chSysLock();
     i2cp->errors = I2CD_NO_ERROR;
     i2cp->state = 0;
-    rdymsg = i2c_lld_slave_io_timeout( i2cp, 
-                                       addr, 
-                                       rxbuf, rxbytes, 
+    rdymsg = i2c_lld_slave_io_timeout( i2cp,
+                                       addr,
+                                       rxbuf, rxbytes,
                                        txbuf, txbytes,
+                                       rxcb,
+                                       txcb,
                                        timeout );
     if (rdymsg == RDY_TIMEOUT)
         i2cp->state = I2C_LOCKED;
