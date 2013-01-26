@@ -1942,7 +1942,7 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_info    0x0001c132      0x29a build/obj/iwdg.o
  .debug_info    0x0001c3cc      0x256 build/obj/iwdg_lld.o
 
-.debug_line     0x00000000     0xb475
+.debug_line     0x00000000     0xb474
  .debug_line    0x00000000      0x173 build/obj/crt0.o
  .debug_line    0x00000173       0x69 build/obj/vectors.o
  .debug_line    0x000001dc       0x5e build/obj/chcore.o
@@ -2022,12 +2022,12 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_line    0x0000a52f      0x1a0 build/obj/main.o
  .debug_line    0x0000a6cf      0x267 build/obj/read_ctrl.o
  .debug_line    0x0000a936      0x272 build/obj/write_ctrl.o
- .debug_line    0x0000aba8      0x353 build/obj/i2c_ctrl.o
- .debug_line    0x0000aefb      0x255 build/obj/led_ctrl.o
- .debug_line    0x0000b150      0x198 build/obj/iwdg.o
- .debug_line    0x0000b2e8      0x18d build/obj/iwdg_lld.o
+ .debug_line    0x0000aba8      0x352 build/obj/i2c_ctrl.o
+ .debug_line    0x0000aefa      0x255 build/obj/led_ctrl.o
+ .debug_line    0x0000b14f      0x198 build/obj/iwdg.o
+ .debug_line    0x0000b2e7      0x18d build/obj/iwdg_lld.o
 
-.debug_loc      0x00000000     0xb70b
+.debug_loc      0x00000000     0xb70c
  .debug_loc     0x00000000       0x72 build/obj/crt0.o
  .debug_loc     0x00000072      0x11b build/obj/chcore_v7m.o
  .debug_loc     0x0000018d      0x10a build/obj/nvic.o
@@ -2078,10 +2078,10 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_loc     0x0000b375       0x2c build/obj/main.o
  .debug_loc     0x0000b3a1       0x7f build/obj/read_ctrl.o
  .debug_loc     0x0000b420       0x9d build/obj/write_ctrl.o
- .debug_loc     0x0000b4bd       0x86 build/obj/i2c_ctrl.o
- .debug_loc     0x0000b543       0x9d build/obj/led_ctrl.o
- .debug_loc     0x0000b5e0       0xe6 build/obj/iwdg.o
- .debug_loc     0x0000b6c6       0x45 build/obj/iwdg_lld.o
+ .debug_loc     0x0000b4bd       0x87 build/obj/i2c_ctrl.o
+ .debug_loc     0x0000b544       0x9d build/obj/led_ctrl.o
+ .debug_loc     0x0000b5e1       0xe6 build/obj/iwdg.o
+ .debug_loc     0x0000b6c7       0x45 build/obj/iwdg_lld.o
 
 .debug_pubnames
                 0x00000000     0x1b41

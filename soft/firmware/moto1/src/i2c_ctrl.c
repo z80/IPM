@@ -42,7 +42,7 @@ static msg_t i2cThread( void *arg )
                      ( palReadPad( ADDR_PORT, ADDR_1 ) << 1 ) |
                      ( palReadPad( ADDR_PORT, ADDR_2 ) << 2 );
         ind = (~ind) & 0x0007;
-        addr = I2C_BASE_ADDR + ind;
+        addr = I2C_BASE_ADDR + 2 * ind + 1;
 
         dataIn = valueRead();
         status = i2cSlaveIoTimeout( &I2CD1, addr,
