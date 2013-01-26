@@ -50,13 +50,18 @@ static msg_t i2cThread( void *arg )
                                     (uint8_t *)&dataIn,   sizeof( dataIn ),
                                     NULL, NULL,
                                     tmo );
+        iwdgReset( &IWDGD );
         if ( status != RDY_OK )
+        {
             i2cStart( &I2CD1, &i2cfg1 );
+            iwdgReset( &IWDGD );
+        }
     } while ( status != RDY_OK );
 
     while ( 1 )
     {
         chThdSleepMilliseconds( 20 );
+        iwdgReset( &IWDGD );
         dataIn = valueRead();
         valueWrite( dataOut );
     }
