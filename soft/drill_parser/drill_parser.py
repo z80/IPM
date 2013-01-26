@@ -1,17 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-"""
-ZetCode Tkinter tutorial
-
-In this program, we show various
-message boxes.
-
-author: Jan Bodnar
-last modified: January 2011
-website: www.zetcode.com
-"""
-
 from ttk import Frame, Button, Style
 from Tkinter import Tk, Text, END, BOTH, W, N, E, S
 import tkMessageBox as box
