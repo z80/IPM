@@ -13,7 +13,7 @@ website: www.zetcode.com
 """
 
 from ttk import Frame, Button, Style
-from Tkinter import Tk, Text, BOTH, END
+from Tkinter import Tk, Text, END, BOTH, W, N, E, S
 import tkMessageBox as box
 import tkFileDialog
 import re
@@ -29,16 +29,21 @@ class DrillParser(Frame):
         
     def initUI(self):
       
-        self.parent.title("Message boxes")
+        self.parent.title("Drill file parser")
         self.style = Style()
         self.style.theme_use("default")        
-        self.pack()
+        self.pack( fill=BOTH, expand=1 )
+
+        self.columnconfigure(1, weight=1)
+        self.columnconfigure(3, pad=7)
+        self.rowconfigure(3, weight=1)
+        self.rowconfigure(5, pad=7)
         
         self.openBtn = Button(self, text="Open drill file", command=self.onOpen)
-        self.openBtn.grid()
+        self.openBtn.grid( sticky=W )
 
         self.txt = Text(self)
-        self.txt.grid( row=1, column=0 )
+        self.txt.grid( row=1, column=0, rowspan=5, columnspan=2, sticky=E+W+S+N )
         #self.txt.pack(fill=BOTH, expand=1)
 
     def onOpen(self):
@@ -104,7 +109,7 @@ class DrillParser(Frame):
 def main():
     root = Tk()
     ex = DrillParser(root)
-    root.geometry("600x800+300+300")
+    root.geometry("350x300+300+300")
     root.mainloop()  
 
 
