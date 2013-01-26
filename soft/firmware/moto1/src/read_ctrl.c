@@ -5,12 +5,12 @@
 #include "led_ctrl.h"
 
 static Mutex    mutex;
-static uint16_t value = 0;
+static uint32_t value = 0;
 
-static void read( uint16_t * val )
+static void read( uint32_t * val )
 {
     // Check for value;
-    static uint16_t b;
+    static uint32_t b;
     b = palReadPad( SEN_PORT, SEN_1 ) | ( palReadPad( SEN_PORT, SEN_2 ) << 1 );
     chMtxLock( &mutex );
     *val = b;
@@ -41,7 +41,7 @@ void initRead( void )
     chThdCreateStatic( waRead, sizeof(waRead), NORMALPRIO, readThread, NULL );
 }
 
-uint16_t valueRead( void )
+uint32_t valueRead( void )
 {
     static uint32_t result;
     chMtxLock( &mutex );

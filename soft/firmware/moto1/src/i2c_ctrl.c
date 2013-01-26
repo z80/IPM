@@ -25,43 +25,39 @@ static msg_t i2cThread( void *arg )
 {
     (void)arg;
     chRegSetThreadName( "i" );
-    while ( 1 )
-    {
+
+    static msg_t status;
+    static systime_t tmo;
+    tmo = MS2ST( 100 );
+    // I/O with other boards.
+    static uint32_t dataOut;
+    static uint32_t dataIn;
+
+    iwdgReset( &IWDGD );
+
+    static uint8_t addr;
+    do {
         // Read ADDRESS pins.
         uint16_t ind = palReadPad( ADDR_PORT, ADDR_0 ) |
                      ( palReadPad( ADDR_PORT, ADDR_1 ) << 1 ) |
                      ( palReadPad( ADDR_PORT, ADDR_2 ) << 2 );
         ind = (~ind) & 0x0007;
-        //setLeds( a );
-
-        static uint8_t master;
-        static msg_t status;
-        static systime_t tmo;
-        tmo = MS2ST( 100 );
-        master = ( ind == 0 ) ? 1 : 0;
-        // I/O with other boards.
-        static uint16_t dataOut;
-        static uint16_t dataIn;
-
-        iwdgReset( &IWDGD );
-
-        static uint8_t addr;
         addr = I2C_BASE_ADDR + ind;
+
         dataIn = valueRead();
-            //dataIn = 0x12345678;
         status = i2cSlaveIoTimeout( &I2CD1, addr,
                                     (uint8_t *)&dataOut,  sizeof( dataOut ),
-                                    (uint8_t *)&dataIn,   sizeof( dataIn ), tmo );
+                                    (uint8_t *)&dataIn,   sizeof( dataIn ),
+                                    NULL, NULL,
+                                    tmo );
         if ( status != RDY_OK )
-        {
-            i2cStop( &I2CD1 );
-            chThdSleepMilliseconds( 100 );
             i2cStart( &I2CD1, &i2cfg1 );
-            continue;
-        }
-        // Here it should be some type of delay
-        // because i2cSlaveIo returns immediately.
+    } while ( status != RDY_OK );
+
+    while ( 1 )
+    {
         chThdSleepMilliseconds( 20 );
+        dataIn = valueRead();
         valueWrite( dataOut );
     }
 
@@ -78,10 +74,7 @@ void initI2c( void )
     palSetPadMode( GPIOB, 7, PAL_MODE_STM32_ALTERNATE_OPENDRAIN );
     chThdSleepMilliseconds( 100 );
 
-    i2cInit();
-    //chThdSleepMilliseconds( 100 );
     i2cStart( &I2CD1, &i2cfg1 );
-    //chThdSleepMilliseconds( 200 );
 
     // Initializing mutex.
     chMtxInit( &mutex );
