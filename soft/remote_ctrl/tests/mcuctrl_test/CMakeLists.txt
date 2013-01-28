@@ -19,6 +19,7 @@ set( libs ${libs} )
 message( STATUS "LIBS1 = ${libs}" )
 target_link_libraries( mcuctrl_test ${libs} )
 set_property( TARGET mcuctrl_test PROPERTY COMPILE_DEFINITIONS ${defs} )
+install( TARGETS mcuctrl_test DESTINATION "./" )
 
 
 
