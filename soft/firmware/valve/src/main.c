@@ -28,7 +28,7 @@ int main(void)
     initI2c();
     initUsb();
 
-    setLeds( 2 );
+    setLeds( 1 );
 
     while (TRUE)
     {

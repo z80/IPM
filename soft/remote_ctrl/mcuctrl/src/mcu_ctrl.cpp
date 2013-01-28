@@ -124,7 +124,9 @@ bool McuCtrl::i2cStatus( int & status )
 bool McuCtrl::i2cBuffer( int cnt, unsigned char * data )
 {
     std::ostringstream out;
-    out << "status\r\n";
+    out << "buffer ";
+    out << cnt;
+    out << "\r\n";
     int cntWr = write( out.str() );
     std::string stri;
     stri.resize( 64 );

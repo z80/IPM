@@ -6,6 +6,7 @@
 
 void initLed( void );
 void setLeds( uint32_t val );
+void toggleLedI( uint32_t ind );
 
 #endif
 

@@ -31,6 +31,19 @@ void i2cSetStatus( uint8_t val );
 uint8_t i2cStatus( void );
 uint8_t i2cBuf( uint8_t index );
 
+static void i2cRxCb( I2CDriver * i2cp )
+{
+    (void)i2cp;
+    toggleLedI( 1 );
+}
+
+static void i2cTxCb( I2CDriver * i2cp )
+{
+    (void)i2cp;
+    toggleLedI( 2 );
+}
+
+
 static WORKING_AREA( waI2c, 256 );
 static msg_t i2cThread( void *arg )
 {
@@ -134,7 +147,7 @@ static msg_t i2cThread( void *arg )
                 status = i2cSlaveIoTimeout( &I2CD1, addr,
                                             (uint8_t *)&dataOut,  sizeof( dataOut ),
                                             (uint8_t *)&dataIn, sizeof( dataIn ),
-                                            NULL, NULL, tmo );
+                                            i2cRxCb, i2cTxCb, tmo );
                 if ( status != RDY_OK )
                     i2cStart( &I2CD1, &i2cfg1 );
             } while ( status != RDY_OK );

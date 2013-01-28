@@ -7,19 +7,26 @@
 static Mutex    mutex;
 static uint32_t value = 0;
 
+static void delay( void )
+{
+    static volatile uint16_t i;
+    for ( i=0; i<256; i++ )
+        asm volatile ( "nop;" );
+}
+
 static void read( uint32_t * val )
 {
     // Enable parallel load.
     palClearPad( IN_PORT, IN_PL_PIN );
-    chThdSleepMicroseconds( 1 );
+    delay();
 
     // Disable parallel load.
     palSetPad( IN_PORT, IN_PL_PIN );
-    chThdSleepMicroseconds( 1 );
+    delay();
 
     // Clock enable.
     palClearPad( IN_PORT, IN_CE_PIN );
-    chThdSleepMicroseconds( 1 );
+    delay();
 
     static uint32_t result;
     result = 0;
@@ -31,26 +38,26 @@ static void read( uint32_t * val )
     {
         // Set clock.
         palSetPad( IN_PORT, IN_CP_PIN );
-        chThdSleepMicroseconds( 1 );
+        delay();
 
         // Check for value;
         static uint16_t b;
         b = palReadPad( IN_PORT, IN_Q7_PIN );
         result += (b != 0) ? bitVal : 0;
         bitVal <<= 1;
-        chThdSleepMicroseconds( 1 );
+        delay();
 
         // Clear clock.
         palClearPad( IN_PORT, IN_CP_PIN );
-        chThdSleepMicroseconds( 1 );
+        delay();
     }
     // Set clock.
     palSetPad( IN_PORT, IN_CP_PIN );
-    chThdSleepMicroseconds( 1 );
+    delay();
 
     // Clock disable.
     palSetPad( IN_PORT, IN_CE_PIN );
-    chThdSleepMicroseconds( 1 );
+    delay();
 
     chMtxLock( &mutex );
     *val = result;

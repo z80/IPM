@@ -8,6 +8,13 @@ static Mutex    mutex;
 static uint32_t curValue  = 0;
 static uint32_t pendValue = 0;
 
+static void delay( void )
+{
+    static volatile uint16_t i;
+    for ( i=0; i<256; i++ )
+        asm volatile ( "nop;" );
+}
+
 static void writeInternal( void )
 {
     static uint32_t val;
@@ -20,24 +27,24 @@ static void writeInternal( void )
     curValue = val;
     // set clock low.
     palClearPad( OUT_PORT, OUT_CP_PIN );
-    chThdSleepMicroseconds( 1 );
+    delay();
     // Turn off master reset (it makes sense only for the very first time of course).
     palSetPad( OUT_PORT, OUT_MR_PIN );
-    chThdSleepMicroseconds( 1 );
+    delay();
     static int16_t i;
     static uint32_t bitVal;
     bitVal = (1 << 31);
     for ( i=31; i>=0; i-- )
     {
         palClearPad( OUT_PORT, OUT_CP_PIN );
-        chThdSleepMicroseconds( 1 );
+        delay();
         if ( curValue & bitVal )
             palSetPad( OUT_PORT, OUT_DSA_PIN );
         else
             palClearPad( OUT_PORT, OUT_DSA_PIN );
-        chThdSleepMicroseconds( 1 );
+        delay();
         palSetPad( OUT_PORT, OUT_CP_PIN );
-        chThdSleepMicroseconds( 1 );
+        delay();
         bitVal >>= 1;
     }
     // To save some power if output is zero disable output on L293DDs.

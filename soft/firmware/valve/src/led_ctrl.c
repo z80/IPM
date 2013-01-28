@@ -68,6 +68,16 @@ void setLeds( uint32_t val )
     chMtxUnlock();
 }
 
+void toggleLedI( uint32_t ind )
+{
+    if ( ind & 1 )
+        palTogglePad( LED_PORT, LED_0_PIN );
+    if ( ind & 2 )
+        palTogglePad( LED_PORT, LED_1_PIN );
+    if ( ind & 4 )
+        palTogglePad( LED_PORT, LED_2_PIN );
+}
+
 
 
 
