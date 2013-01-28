@@ -78,7 +78,7 @@ static msg_t i2cThread( void *arg )
                 if ( pendDataOut != dataOut )
                 {
                     // IO itself.
-                    iwdgReset( &IWDGD );
+                    //iwdgReset( &IWDGD );
                     status = i2cMasterTransmitTimeout( &I2CD1, I2C_BASE_ADDR+i,
                                                        (uint8_t *)(&pendDataOut), sizeof(pendDataOut),
                                                        0,  0,
@@ -90,20 +90,20 @@ static msg_t i2cThread( void *arg )
                         chMtxUnlock();
                     }
                     {
-                        i2cStop( &I2CD1 );
-                        chThdSleepMilliseconds( 10 );
+                        //i2cStop( &I2CD1 );
+                        //chThdSleepMilliseconds( 10 );
                         i2cStart( &I2CD1, &i2cfg1 );
                         continue;
                     }
                 }
-                iwdgReset( &IWDGD );
+                //iwdgReset( &IWDGD );
                 status = i2cMasterReceiveTimeout( &I2CD1, I2C_BASE_ADDR+i,
                                                   (uint8_t *)(&dataIn),  sizeof(dataIn),
                                                   tmo );
                 if ( status != RDY_OK )
                 {
-                    i2cStop( &I2CD1 );
-                    chThdSleepMilliseconds( 100 );
+                    //i2cStop( &I2CD1 );
+                    //chThdSleepMilliseconds( 100 );
                     i2cStart( &I2CD1, &i2cfg1 );
                     continue;
                 }
@@ -114,13 +114,13 @@ static msg_t i2cThread( void *arg )
                 chMtxUnlock();
             }
 
-            iwdgReset( &IWDGD );
+            //iwdgReset( &IWDGD );
             // Here is generic I2C io.
             i2cIo();
 
             chThdSleepMilliseconds( 50 );
 
-            iwdgReset( &IWDGD );
+            //iwdgReset( &IWDGD );
         }
         else
         {
@@ -129,7 +129,7 @@ static msg_t i2cThread( void *arg )
 
             dataIn = valueRead();
             do {
-                iwdgReset( &IWDGD );
+                //iwdgReset( &IWDGD );
                 //dataIn = 0x12345678;
                 status = i2cSlaveIoTimeout( &I2CD1, addr,
                                             (uint8_t *)&dataOut,  sizeof( dataOut ),
@@ -141,7 +141,7 @@ static msg_t i2cThread( void *arg )
             while ( 1 )
             {
                 chThdSleepMilliseconds( 20 );
-                iwdgReset( &IWDGD );
+                //iwdgReset( &IWDGD );
                 pendDataOut = valueRead();
                 chSysLock();
                 dataIn = pendDataOut;
@@ -267,7 +267,7 @@ static uint8_t g_i2cAddr = 64;
 static uint8_t g_i2cOutBuffer[ I2C_OUT_BUF_SZ ];
 static uint8_t g_i2cInBuffer[ I2C_IN_BUF_SZ ];
 static uint8_t g_i2cTxSz = 0,
-                g_i2cRxSz = 0;
+               g_i2cRxSz = 0;
 static uint8_t g_i2cStatus = 0;
 
 void i2cSetAddr( uint8_t val )
@@ -317,12 +317,13 @@ void i2cIo( void )
             if ( status == RDY_OK )
                 setLeds( 1 );
             else
-                setLeds( 7 );
+                setLeds( 2 );
             if ( status != RDY_OK )
             {
                 chMtxLock( &mutex );
                     g_i2cStatus = 2;
                 chMtxUnlock();
+                i2cStart( &I2CD1, &i2cfg1 );
                 return;
             }
         }
@@ -331,11 +332,16 @@ void i2cIo( void )
             status = i2cMasterReceiveTimeout( &I2CD1, g_i2cAddr,
                                               g_i2cInBuffer, g_i2cRxSz,
                                               tmo );
+            if ( status == RDY_OK )
+                setLeds( 1 );
+            else
+                setLeds( 3 );
             if ( status != RDY_OK )
             {
                 chMtxLock( &mutex );
                     g_i2cStatus = 3;
                 chMtxUnlock();
+                i2cStart( &I2CD1, &i2cfg1 );
                 return;
             }
         }
@@ -409,8 +415,11 @@ void i2c_io( BaseChannel *chp, int argc, char * argv[] )
         // Initiate IO.
         // IO itself will be executed in a separate thread.
         i2cSetStatus( 1 );
+        chprintf( chp, "ok:io %d %d\r\n", g_i2cTxSz, g_i2cRxSz );
+        return;
     }
-    chprintf( chp, "ok:io\r\n" );
+    else
+        chprintf( chp, "err:not enough args\r\n" );
 }
 
 void i2c_status( BaseChannel *chp, int argc, char * argv[] )

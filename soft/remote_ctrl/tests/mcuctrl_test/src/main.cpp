@@ -12,7 +12,7 @@ int main( int argc, char * argv[] )
     if ( !res )
         return 1;
 
-    unsigned char addr = 64+1;
+    unsigned char addr = 64;
 
     res = c.i2cSetAddr( addr );
     res = c.i2cSetAddr( addr );
@@ -28,13 +28,14 @@ int main( int argc, char * argv[] )
     //for ( int i=0; i<32; i++ )
     //{
         status = -1;
-        res = c.i2cIo( 4, 4 );
+        res = c.i2cIo( 4, 0 );
         res = c.i2cStatus( status );
-        res = c.i2cIo( 4, 4 );
+        res = c.i2cIo( 4, 0 );
         res = c.i2cStatus( status );
-        res = c.i2cIo( 4, 4 );
+        res = c.i2cIo( 4, 0 );
         res = c.i2cStatus( status );
         res = c.i2cBuffer( 4, data );
+        std::cout << data[0] << " " << data[1] << " " << data[2] << " " << data [3] << "\n";
     //}
 
     return 0;
