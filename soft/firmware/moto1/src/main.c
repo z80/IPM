@@ -14,19 +14,19 @@ int main(void)
     halInit();
     chSysInit();
 
-    IWDGConfig cfg;
+    /*IWDGConfig cfg;
     cfg.div = IWDG_DIV_256;
     cfg.counter = (40000 / 256 / 2 );
     iwdgInit();
     iwdgStart( &IWDGD, &cfg );
-    iwdgReset( &IWDGD );
+    iwdgReset( &IWDGD );*/
 
     initLed();
-    initRead();
-    initWrite();
-    initI2c();
+    setLeds( 3 );
+    //initRead();
+    //initWrite();
+    //initI2c();
 
-    //setLeds( 2 );
 
     while (TRUE)
     {
