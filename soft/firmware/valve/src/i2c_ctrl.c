@@ -4,7 +4,6 @@
 #include "i2c_ctrl.h"
 #include "hal.h"
 #include "chprintf.h"
-#include "iwdg.h"
 
 #include "read_ctrl.h"
 #include "write_ctrl.h"
@@ -34,13 +33,13 @@ uint8_t i2cBuf( uint8_t index );
 static void i2cRxCb( I2CDriver * i2cp )
 {
     (void)i2cp;
-    toggleLedI( 1 );
+    toggleLedsI( 2 );
 }
 
 static void i2cTxCb( I2CDriver * i2cp )
 {
     (void)i2cp;
-    toggleLedI( 2 );
+    toggleLedsI( 4 );
 }
 
 
@@ -49,6 +48,8 @@ static msg_t i2cThread( void *arg )
 {
     (void)arg;
     chRegSetThreadName( "i" );
+    // To all LOW/HIGH levels on address pins to reach their levels.
+    chThdSleepMilliseconds( 100 );
     while ( 1 )
     {
         //chThdSleepMilliseconds( 1 );
@@ -58,17 +59,17 @@ static msg_t i2cThread( void *arg )
                      ( palReadPad( ADDR_PORT, ADDR_1_PIN ) << 1 ) |
                      ( palReadPad( ADDR_PORT, ADDR_2_PIN ) << 2 );
         ind = (~ind) & 0x0007;
-        //setLeds( a );
 
         static uint8_t master;
         static msg_t status;
         static systime_t tmo;
-        tmo = MS2ST( 100 );
+        tmo = MS2ST( I2C_IO_TIMEOUT_MS );
         master = ( ind == 0 ) ? 1 : 0;
         // I/O with other boards.
         static uint32_t dataOut = 0;
         static uint32_t pendDataOut = 0;
         static uint32_t dataIn = 0;
+        setLeds( master ? 1 : 0 );
         if ( master )
         {
             // First the board itself.
@@ -91,7 +92,6 @@ static msg_t i2cThread( void *arg )
                 if ( pendDataOut != dataOut )
                 {
                     // IO itself.
-                    //iwdgReset( &IWDGD );
                     status = i2cMasterTransmitTimeout( &I2CD1, I2C_BASE_ADDR+i,
                                                        (uint8_t *)(&pendDataOut), sizeof(pendDataOut),
                                                        0,  0,
@@ -101,22 +101,29 @@ static msg_t i2cThread( void *arg )
                         chMtxLock( &mutex );
                             outs[i+1] = pendDataOut;
                         chMtxUnlock();
+                        toggleLeds( 2 );
                     }
+                    else
                     {
-                        //i2cStop( &I2CD1 );
-                        //chThdSleepMilliseconds( 10 );
+                        setLeds( 7 );
+                        i2cStop( &I2CD1 );
+                        chThdSleepMilliseconds( 10 );
                         i2cStart( &I2CD1, &i2cfg1 );
                         continue;
                     }
                 }
-                //iwdgReset( &IWDGD );
                 status = i2cMasterReceiveTimeout( &I2CD1, I2C_BASE_ADDR+i,
                                                   (uint8_t *)(&dataIn),  sizeof(dataIn),
                                                   tmo );
-                if ( status != RDY_OK )
+                if ( status == RDY_OK )
                 {
-                    //i2cStop( &I2CD1 );
-                    //chThdSleepMilliseconds( 100 );
+                    toggleLeds( 4 );
+                }
+                else
+                {
+                    setLeds( 7 );
+                    i2cStop( &I2CD1 );
+                    chThdSleepMilliseconds( 10 );
                     i2cStart( &I2CD1, &i2cfg1 );
                     continue;
                 }
@@ -127,34 +134,41 @@ static msg_t i2cThread( void *arg )
                 chMtxUnlock();
             }
 
-            //iwdgReset( &IWDGD );
             // Here is generic I2C io.
             i2cIo();
 
-            chThdSleepMilliseconds( 50 );
+            chThdSleepMilliseconds( I2C_QUERY_PERIOD_MS );
 
-            //iwdgReset( &IWDGD );
         }
         else
         {
             static uint8_t addr;
             addr = I2C_BASE_ADDR + ind - 1;
+            setLeds( addr );
 
             dataIn = valueRead();
             do {
-                //iwdgReset( &IWDGD );
                 //dataIn = 0x12345678;
                 status = i2cSlaveIoTimeout( &I2CD1, addr,
                                             (uint8_t *)&dataOut,  sizeof( dataOut ),
                                             (uint8_t *)&dataIn, sizeof( dataIn ),
                                             i2cRxCb, i2cTxCb, tmo );
                 if ( status != RDY_OK )
+                {
                     i2cStart( &I2CD1, &i2cfg1 );
+                    setLeds( 7 );
+                }
             } while ( status != RDY_OK );
+
+            // Managed to initialize I2C slave IO.
+            toggleLeds( 7 );
             while ( 1 )
             {
-                chThdSleepMilliseconds( 20 );
-                //iwdgReset( &IWDGD );
+                status = i2cSlaveIoTimeout( &I2CD1, addr,
+                                            (uint8_t *)&dataOut,  sizeof( dataOut ),
+                                            (uint8_t *)&dataIn, sizeof( dataIn ),
+                                            i2cRxCb, i2cTxCb, tmo );
+                chThdSleepMilliseconds( I2C_QUERY_PERIOD_MS );
                 pendDataOut = valueRead();
                 chSysLock();
                 dataIn = pendDataOut;
@@ -348,7 +362,7 @@ void i2cIo( void )
             if ( status == RDY_OK )
                 setLeds( 1 );
             else
-                setLeds( 3 );
+                setLeds( 4 );
             if ( status != RDY_OK )
             {
                 chMtxLock( &mutex );

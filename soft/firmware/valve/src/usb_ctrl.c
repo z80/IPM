@@ -391,17 +391,16 @@ static Thread * shelltp = NULL;
 
 void initUsb( void )
 {
+    // Disconnect bus.
     usbDisconnectBus(serusbcfg.usbp);
-    uint8_t i;
-    for ( i=0; i<10; i++ )
-    {
-        chThdSleepMilliseconds( 100 );
-        iwdgReset( &IWDGD );
-    }
+    // Wait for a while for computer to feel device is disconnected.
+    chThdSleepMilliseconds( 1000 );
+    // Init USB
     sduObjectInit(&SDU1);
     sduStart(&SDU1, &serusbcfg);
+    // Connect bus.
     usbConnectBus(serusbcfg.usbp);
-
+    // Initialize text shell.
     shellInit();
 }
 

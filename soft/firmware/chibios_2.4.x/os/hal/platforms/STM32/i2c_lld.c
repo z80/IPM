@@ -298,7 +298,6 @@ static void i2c_lld_set_opmode(I2CDriver *i2cp) {
  * @notapi
  */
 static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
-                //palTogglePad( GPIOB, 10 );
 
     I2C_TypeDef *dp = i2cp->i2c;
     uint32_t regSR = dp->SR2;
@@ -350,8 +349,6 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
     {
         if  (event & (I2C_SR1_ADDR | I2C_SR1_ADD10))
         {
-            //palTogglePad( GPIOB, 10 );
-
             // When transaction begins reset byte counters.
             i2cp->rxind = 0;
             i2cp->txind = 0;
@@ -359,44 +356,43 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
             // Clear Addr Flag
             event = dp->SR1;
             regSR = dp->SR2;
-                        //palTogglePad( GPIOB, 10 );
         }
         if ( event & I2C_SR1_TXE )
         {
             dp->DR = i2cp->txbuf[ i2cp->txind++ ];
             if ( i2cp->rxind >= i2cp->txbytes )
                 i2cp->txind = 0;
-                    //palTogglePad( GPIOB, 10 );
+                            palTogglePad( GPIOB, 13 );
         }
         if ( event & I2C_SR1_RXNE )
         {
             i2cp->rxbuf[ i2cp->rxind++ ] = dp->DR;
             if ( i2cp->rxind >= i2cp->rxbytes )
                 i2cp->rxind = 0;
-                    //palTogglePad( GPIOB, 10 );
         }
         if ( event & I2C_SR1_STOPF )
         {
             // Clear STOPF bit by writing to CR1.
             event = dp->SR1;
             dp->CR1 |= I2C_CR1_PE;
-                    //palTogglePad( GPIOB, 10 );
-            // Wakeup waiting thread.
-            // Wakeup only if no bytes for transfer to allow
-            // read after write transactions from master side.
-            //if ( i2cp->txbytes == 0 )
-            //wakeup_isr( i2cp, RDY_OK );
+
+            // Notify user about receive finish.
             if ( i2cp->rxcb )
                 i2cp->rxcb( i2cp );
         }
         if ( event & I2C_SR1_AF )
         {
             dp->SR1 &= ~I2C_SR1_AF;
-                    //palTogglePad( GPIOB, 10 );
-            //wakeup_isr( i2cp, RDY_OK );
+
+                            palTogglePad( GPIOB, 14 );
+            // Notify user about transfer finish.
             if ( i2cp->txcb )
                 i2cp->txcb( i2cp );
         }
+        // Turn interrupts.
+        dp->CR2 |= I2C_CR2_ITEVTEN;
+        // Generate Ack on address match and IOs.
+        dp->CR1 |= I2C_CR1_ACK;
     }
     #endif // I2C_USE_SLAVE_MODE
 }

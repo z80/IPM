@@ -15,25 +15,26 @@ int main(void)
     halInit();
     chSysInit();
 
-    IWDGConfig cfg;
-    cfg.div = IWDG_DIV_256;
-    cfg.counter = (40000 / 256 / 2 );
-    iwdgInit();
-    iwdgStart( &IWDGD, &cfg );
-    iwdgReset( &IWDGD );
-
     initLed();
+    setLeds( 7 );
     initRead();
     initWrite();
     initI2c();
     initUsb();
 
-    setLeds( 1 );
+
+    /*IWDGConfig cfg;
+    cfg.div = IWDG_DIV_256;
+    cfg.counter = (40000 / 256 / 2 );
+    iwdgInit();
+    iwdgStart( &IWDGD, &cfg );
+    iwdgReset( &IWDGD );*/
 
     while (TRUE)
     {
+        //iwdgReset( &IWDGD );
         processShell();
-        chThdSleepMilliseconds(1000);
+        chThdSleepMilliseconds( 250 );
     }
     return 0;
 }

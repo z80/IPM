@@ -29,14 +29,17 @@
 #define IN_Q7_PIN   3
 
 // I2C
-#define I2C_BASE_ADDR  16
-#define I2C_SLAVES_CNT 2
-#define I2C_PORT      GPIOC
-#define I2C_SCL_PAD   6
-#define I2C_SDA_PAD   7
+#define I2C_BASE_ADDR       1
+#define I2C_SLAVES_CNT      2
+#define I2C_PORT            GPIOC
+#define I2C_SCL_PAD         6
+#define I2C_SDA_PAD         7
 // Generic I2C io
-#define I2C_OUT_BUF_SZ  13
-#define I2C_IN_BUF_SZ   13
+#define I2C_OUT_BUF_SZ      13
+#define I2C_IN_BUF_SZ       13
+// Timeouts
+#define I2C_QUERY_PERIOD_MS 10
+#define I2C_IO_TIMEOUT_MS   20
 
 #endif
 
