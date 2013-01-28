@@ -14,18 +14,18 @@ int main(void)
     halInit();
     chSysInit();
 
-    /*IWDGConfig cfg;
+    IWDGConfig cfg;
     cfg.div = IWDG_DIV_256;
-    cfg.counter = (40000 / 256 / 2 );
+    cfg.counter = (40000 / 256 / 2 ); // Timeout is half of a second.
     iwdgInit();
     iwdgStart( &IWDGD, &cfg );
-    iwdgReset( &IWDGD );*/
+    iwdgReset( &IWDGD );
 
     initLed();
     setLeds( 3 );
-    //initRead();
-    //initWrite();
-    //initI2c();
+    initRead();
+    initWrite();
+    initI2c();
 
 
     while (TRUE)
