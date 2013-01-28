@@ -34,12 +34,12 @@ int main(void)
     halInit();
     chSysInit();
 
-    /*IWDGConfig cfg;
+    IWDGConfig cfg;
     cfg.div = IWDG_DIV_256;
     cfg.counter = (40000 / 256 / 2 );
     iwdgInit();
     iwdgStart( &IWDGD, &cfg );
-    iwdgReset( &IWDGD );*/
+    iwdgReset( &IWDGD );
 
     initLed();
     setLeds( 3 );
@@ -57,24 +57,8 @@ int main(void)
 
     while (TRUE)
     {
-        chThdSleepSeconds( 1 );
-        /*int16_t i;
-        for ( i=0; i<256; i++ )
-        {
-            dacSet( 0, i );
-            dacSet( 1, i );
-            dacSet( 2, i );
-            iwdgReset( &IWDGD );
-            chThdSleepMilliseconds( 1 );
-        }
-        for ( i=255; i>=0; i-- )
-        {
-            dacSet( 0, i );
-            dacSet( 1, i );
-            dacSet( 2, i );
-            iwdgReset( &IWDGD );
-            chThdSleepMilliseconds( 1 );
-        }*/
+        iwdgReset( &IWDGD );
+        chThdSleepMilliseconds( 250 );
     }
     return 0;
 }

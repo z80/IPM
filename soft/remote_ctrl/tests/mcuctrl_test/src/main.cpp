@@ -12,7 +12,7 @@ int main( int argc, char * argv[] )
     if ( !res )
         return 1;
 
-    unsigned char addr = 64;
+    unsigned char addr = 10;
 
     res = c.i2cSetAddr( addr );
     res = c.i2cSetAddr( addr );

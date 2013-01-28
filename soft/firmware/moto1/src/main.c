@@ -30,7 +30,8 @@ int main(void)
 
     while (TRUE)
     {
-        chThdSleepMilliseconds( 1000 );
+        iwdgReset( &IWDGD );
+        chThdSleepMilliseconds( 250 );
     }
     return 0;
 }

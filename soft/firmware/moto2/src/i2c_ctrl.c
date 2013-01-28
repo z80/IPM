@@ -4,7 +4,6 @@
 #include "i2c_ctrl.h"
 #include "hal.h"
 #include "chprintf.h"
-#include "iwdg.h"
 
 #include "led_ctrl.h"
 #include "exec_ctrl.h"
@@ -69,7 +68,7 @@ static msg_t i2cThread( void *arg )
         ind = (~ind) & 0x0007;
 
         static uint8_t addr;
-        addr = I2C_BASE_ADDR; //I2C_BASE_ADDR + 2 * ind; // For moto_1 it is (2 * ind + 1)
+        addr = I2C_BASE_ADDR + 2 * ind; // For moto_1 it is (2 * ind + 1)
         // IO routine itself.
         //palClearPad( GPIOB, 11 );
         status = i2cSlaveIoTimeout( &I2CD1, addr,

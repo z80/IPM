@@ -2,7 +2,6 @@
 #include "led_ctrl.h"
 #include "hal.h"
 
-#include "iwdg.h"
 #include "hdw_config.h"
 
 static Mutex    mutex;
@@ -16,7 +15,6 @@ static msg_t ledsThread( void *arg )
     chRegSetThreadName( "ld" );
     while ( 1 )
     {
-        iwdgReset( &IWDGD );
         palClearPad( LED_PORT, LED_0 );
     	palClearPad( LED_PORT, LED_1 );
         chThdSleepMilliseconds( 250 );
@@ -26,7 +24,6 @@ static msg_t ledsThread( void *arg )
     	arg = value;
     	chMtxUnlock();
 
-    	iwdgReset( &IWDGD );
     	if ( arg & 1 )
     		palSetPad( LED_PORT, LED_0 );
     	else
