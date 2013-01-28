@@ -99,7 +99,7 @@ static msg_t i2cThread( void *arg )
                         chMtxLock( &mutex );
                             outs[i+1] = pendDataOut;
                         chMtxUnlock();
-                        toggleLeds( 2 );
+                        toggleLedsImmediate( 2 );
                     }
                     else
                     {
@@ -115,7 +115,7 @@ static msg_t i2cThread( void *arg )
                                                   tmo );
                 if ( status == RDY_OK )
                 {
-                    toggleLeds( 4 );
+                    toggleLedsImmediate( 4 );
                 }
                 else
                 {
@@ -342,9 +342,9 @@ void i2cIo( void )
                                                0,  0,
                                                tmo );
             if ( status == RDY_OK )
-                setLeds( 1 );
+                toggleLedsImmediate( 2 );
             else
-                setLeds( 2 );
+                setLeds( 7 );
             if ( status != RDY_OK )
             {
                 chMtxLock( &mutex );
@@ -360,9 +360,9 @@ void i2cIo( void )
                                               g_i2cInBuffer, g_i2cRxSz,
                                               tmo );
             if ( status == RDY_OK )
-                setLeds( 1 );
+                toggleLedsImmediate( 4 );
             else
-                setLeds( 4 );
+                setLeds( 7 );
             if ( status != RDY_OK )
             {
                 chMtxLock( &mutex );

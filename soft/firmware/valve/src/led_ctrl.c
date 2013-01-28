@@ -62,6 +62,16 @@ void toggleLeds( uint32_t arg )
     chMtxUnlock();
 }
 
+void toggleLedsImmediate( uint32_t val )
+{
+    if ( val & 1 )
+        palTogglePad( LED_PORT, LED_0_PIN );
+    if ( val & 2 )
+        palTogglePad( LED_PORT, LED_1_PIN );
+    if ( val & 4 )
+        palTogglePad( LED_PORT, LED_2_PIN );
+}
+
 void toggleLedsI( uint32_t arg )
 {
     if ( arg & 1 )
