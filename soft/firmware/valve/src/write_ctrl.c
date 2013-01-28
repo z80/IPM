@@ -11,7 +11,7 @@ static uint32_t pendValue = 0;
 static void delay( void )
 {
     static volatile uint16_t i;
-    for ( i=0; i<256; i++ )
+    for ( i=0; i<32; i++ )
         asm volatile ( "nop;" );
 }
 

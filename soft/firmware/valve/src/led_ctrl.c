@@ -17,7 +17,7 @@ static msg_t ledsThread( void *arg )
     while ( 1 )
     {
         static uint32_t arg;
-    	/*chMtxLock( &mutex );
+    	chMtxLock( &mutex );
             arg = value;
             if ( arg & 1 )
                 palTogglePad( LED_PORT, LED_0_PIN );
@@ -25,7 +25,7 @@ static msg_t ledsThread( void *arg )
                 palTogglePad( LED_PORT, LED_1_PIN );
             if ( arg & 4 )
                 palTogglePad( LED_PORT, LED_2_PIN );
-        chMtxUnlock();*/
+        chMtxUnlock();
         chThdSleepMilliseconds( 250 );
     }
 
@@ -34,9 +34,9 @@ static msg_t ledsThread( void *arg )
 
 void initLed( void )
 {
-	palClearPad( LED_PORT,     LED_0_PIN );
-	palClearPad( LED_PORT,     LED_1_PIN );
-	palClearPad( LED_PORT,     LED_2_PIN );
+	palSetPad( LED_PORT,     LED_0_PIN );
+	palSetPad( LED_PORT,     LED_1_PIN );
+	palSetPad( LED_PORT,     LED_2_PIN );
 	palSetPadMode( LED_PORT, LED_0_PIN, PAL_MODE_OUTPUT_PUSHPULL );
 	palSetPadMode( LED_PORT, LED_1_PIN, PAL_MODE_OUTPUT_PUSHPULL );
 	palSetPadMode( LED_PORT, LED_2_PIN, PAL_MODE_OUTPUT_PUSHPULL );
@@ -51,43 +51,25 @@ void setLeds( uint32_t arg )
 {
     chMtxLock( &mutex );
         value = arg;
-        /*if ( value & 1 )
-            palSetPad( LED_PORT, LED_0_PIN );
-        else
-            palClearPad( LED_PORT, LED_0_PIN );
-        if ( value & 2 )
-            palSetPad( LED_PORT, LED_1_PIN );
-        else
-            palClearPad( LED_PORT, LED_1_PIN );
-        if ( value & 4 )
-            palSetPad( LED_PORT, LED_2_PIN );
-        else
-            palClearPad( LED_PORT, LED_2_PIN );*/
     chMtxUnlock();
 }
 
 void toggleLeds( uint32_t arg )
 {
     chMtxLock( &mutex );
-        value ^= (arg & 0x07);
-        /*if ( arg & 1 )
-            palTogglePad( LED_PORT, LED_0_PIN );
-        if ( arg & 2 )
-            palTogglePad( LED_PORT, LED_1_PIN );
-        if ( arg & 4 )
-            palTogglePad( LED_PORT, LED_2_PIN );*/
+        value = ( value & ( ~arg ) ) |
+                ( (value ^ arg ) & (arg & 0x07) );
     chMtxUnlock();
 }
 
 void toggleLedsI( uint32_t arg )
 {
-    value ^= (arg & 0x07);
-    /*if ( arg & 1 )
+    if ( arg & 1 )
         palTogglePad( LED_PORT, LED_0_PIN );
     if ( arg & 2 )
         palTogglePad( LED_PORT, LED_1_PIN );
     if ( arg & 4 )
-        palTogglePad( LED_PORT, LED_2_PIN );*/
+        palTogglePad( LED_PORT, LED_2_PIN );
 }
 
 

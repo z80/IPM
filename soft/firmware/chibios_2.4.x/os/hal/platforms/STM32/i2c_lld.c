@@ -362,7 +362,6 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
             dp->DR = i2cp->txbuf[ i2cp->txind++ ];
             if ( i2cp->rxind >= i2cp->txbytes )
                 i2cp->txind = 0;
-                            palTogglePad( GPIOB, 13 );
         }
         if ( event & I2C_SR1_RXNE )
         {
@@ -384,15 +383,10 @@ static void i2c_lld_serve_event_interrupt(I2CDriver *i2cp) {
         {
             dp->SR1 &= ~I2C_SR1_AF;
 
-                            palTogglePad( GPIOB, 14 );
             // Notify user about transfer finish.
             if ( i2cp->txcb )
                 i2cp->txcb( i2cp );
         }
-        // Turn interrupts.
-        dp->CR2 |= I2C_CR2_ITEVTEN;
-        // Generate Ack on address match and IOs.
-        dp->CR1 |= I2C_CR1_ACK;
     }
     #endif // I2C_USE_SLAVE_MODE
 }
@@ -485,12 +479,29 @@ static void i2c_lld_serve_error_interrupt(I2CDriver *i2cp) {
     dp->SR1 &= ~I2C_SR1_ARLO;
     errors |= I2CD_ARBITRATION_LOST;
   }
+#if I2C_USE_SLAVE_MODE
+  if ( !i2cp->slave_mode )
+  {
+#endif
   if (dp->SR1 & I2C_SR1_AF) {                       /* Acknowledge fail.    */
     dp->SR1 &= ~I2C_SR1_AF;
     dp->CR2 &= ~I2C_CR2_ITEVTEN;
     dp->CR1 |= I2C_CR1_STOP;                        /* Setting stop bit.    */
     errors |= I2CD_ACK_FAILURE;
   }
+#if I2C_USE_SLAVE_MODE
+  }
+  else
+  {
+      // In slave mode it is not an error it is end of slave transfer.
+      // Just clear AF flag.
+      dp->SR1 &= ~I2C_SR1_AF;
+
+      // Notify user about transfer finish.
+      if ( i2cp->txcb )
+          i2cp->txcb( i2cp );
+  }
+#endif
   if (dp->SR1 & I2C_SR1_OVR) {                      /* Overrun.             */
     dp->SR1 &= ~I2C_SR1_OVR;
     errors |= I2CD_OVERRUN;
@@ -1031,8 +1042,8 @@ msg_t i2c_lld_slave_io_timeout( I2CDriver *i2cp, i2caddr_t addr,
     dp->CR2 &= ~( I2C_CR2_DMAEN );
     // Own address.
     dp->OAR1 = ((addr << 1) & (0xFE));
-    // Turn interrupts.
-    dp->CR2 |= I2C_CR2_ITEVTEN;
+    // Turn interrupts and buffer interrupts on.
+    dp->CR2 |= (I2C_CR2_ITEVTEN | I2C_CR2_ITBUFEN);
     // Generate Ack on address match and IOs.
     dp->CR1 |= I2C_CR1_ACK;
 

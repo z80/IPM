@@ -49,11 +49,9 @@ static msg_t i2cThread( void *arg )
     (void)arg;
     chRegSetThreadName( "i" );
     // To all LOW/HIGH levels on address pins to reach their levels.
-    chThdSleepMilliseconds( 100 );
+    chThdSleepMilliseconds( I2C_IO_TIMEOUT_MS );
     while ( 1 )
     {
-        //chThdSleepMilliseconds( 1 );
-        //chThdSleepMilliseconds( 100 );
         // Read ADDRESS pins.
         uint16_t ind = palReadPad( ADDR_PORT, ADDR_0_PIN ) |
                      ( palReadPad( ADDR_PORT, ADDR_1_PIN ) << 1 ) |
@@ -74,8 +72,8 @@ static msg_t i2cThread( void *arg )
         {
             // First the board itself.
             chMtxLock( &mutex );
-            ins[0] = valueRead();
-            write( pendOuts[0] );
+                ins[0] = valueRead();
+                write( pendOuts[0] );
             chMtxUnlock();
             // After all slave boards.
             static int8_t i;
@@ -144,7 +142,7 @@ static msg_t i2cThread( void *arg )
         {
             static uint8_t addr;
             addr = I2C_BASE_ADDR + ind - 1;
-            setLeds( addr );
+            //setLeds( addr );
 
             dataIn = valueRead();
             do {
@@ -161,17 +159,19 @@ static msg_t i2cThread( void *arg )
             } while ( status != RDY_OK );
 
             // Managed to initialize I2C slave IO.
-            toggleLeds( 7 );
+            setLeds( 0 );
             while ( 1 )
             {
+                /*
                 status = i2cSlaveIoTimeout( &I2CD1, addr,
                                             (uint8_t *)&dataOut,  sizeof( dataOut ),
                                             (uint8_t *)&dataIn, sizeof( dataIn ),
                                             i2cRxCb, i2cTxCb, tmo );
+                */
                 chThdSleepMilliseconds( I2C_QUERY_PERIOD_MS );
                 pendDataOut = valueRead();
                 chSysLock();
-                dataIn = pendDataOut;
+                    dataIn = pendDataOut;
                 chSysUnlock();
                 write( dataOut );
             }
