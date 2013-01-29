@@ -294,7 +294,7 @@ function Lsm303::setMagGain( value )
   self:beginTransmission( MAG_ADDRESS )
   self:write( LSM303_CRB_REG_M )
   self:write( value )
-  self:endTransmission()
+  self.last_status = self:endTransmission()
 end
 
 -- Reads the 3 accelerometer channels and stores them in vector a
@@ -328,9 +328,9 @@ function Lsm303::readAcc()
   -- GCC performs an arithmetic right shift for signed negative numbers, but this code will not work
   -- if you port it to a compiler that does a logical right shift instead.
   local a = {}
-  a.x = bit.lshift( bit.or( bit.lshift( xha, 8 ), xla ), -4 )
-  a.y = bit.lshift( bit.or( bit.lshift( yha, 8 ), yla ), -4 )
-  a.z = bit.lshift( bit.or( bit.lshift( zha, 8 ), zla ), -4 )
+  a.x = bit.rshift( bit.bor( bit.lshift( xha, 8 ), xla ), 4 )
+  a.y = bit.rshift( bit.bor( bit.lshift( yha, 8 ), yla ), 4 )
+  a.z = bit.rshift( bit.bor( bit.lshift( zha, 8 ), zla ), 4 )
   self.a = a
 end
 
@@ -373,9 +373,9 @@ function Lsm303::readMag()
 
   -- combine high and low bytes
   local m = {}
-  m.x = bit.or( bit.lshift( xhm, 8 ), xlm )
-  m.y = bit.or( bit.lshift( yhm, 8 ), ylm )
-  m.z = bit.or( bit.lshift( zhm, 8 ), zlm )
+  m.x = bit.bor( bit.lshift( xhm, 8 ), xlm )
+  m.y = bit.bor( bit.lshift( yhm, 8 ), ylm )
+  m.z = bit.bor( bit.lshift( zhm, 8 ), zlm )
   self.m = m
 end
 
