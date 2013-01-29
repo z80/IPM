@@ -111,26 +111,58 @@ function Lsm303:endTransmission()
         t[i+1] = self.i2cBuffer[i]
     end
     local res = self.mcu:i2cSetAddr( self.i2cAddr )
+    sleep( self.delay )
     res = self.mcu:i2cSetAddr( self.i2cAddr )
+    sleep( self.delay )
     res = self.mcu:i2cSetBuf( unpack( t ) )
     if ( not res ) then
-        return false
+        return false, 1
     end
+    sleep( self.delay )
     res = self.mcu:i2cIo( cnt, 0 )
     if ( not res ) then
-        return false
+        return false, 2
     end
+    sleep( self.delay )
+    local status
     res, status = self.mcu:status()
-    return res, status
+    if not res then
+        return false, 3
+    end
+    return (status == 0)
 end
 
 function Lsm303:requestFrom( addr, cnt )
     local res = self.mcu:i2cSetAddr( self.i2cAddr )
+    sleep( self.delay )
     res = self.mcu:i2cSetAddr( self.i2cAddr )
+    if ( not res ) then
+        return false, 1
+    end
+    sleep( self.delay )
     res = self.mcu:i2cIo( 0, cnt )
-    local t = { self.mcu:i2cBuffer( cnt ) }
-    self.i2cBuffer = t
-    self.i2cIndex  = 1
+    if ( not res ) then
+        return false, 2
+    end
+    local st
+    sleep( self.delay )
+    res, st = self.mcu:i2cStatus()
+    if ( not res ) then
+        return false, 3
+    end
+    if ( st == 0 ) then
+        local t = { self.mcu:i2cBuffer( cnt ) }
+        self.i2cBuffer = t
+        self.i2cIndex  = 1
+        return true
+    
+    self.i2cBuffer = nil
+    self.i2cIndex = nil
+    return false, 4
+end
+
+function Lsm303:available()
+    return self.i2cBuffer and #self.i2cBuffer or 0
 end
 
 function Lsm303:read()
@@ -140,7 +172,8 @@ function Lsm303:read()
 end
 
 function Lsm303:__init( mcu )
-    self.mcu = mcu
+    self.mcu   = mcu
+    self.delay = 0.5 -- Pause between I2C requests.
     -- These are just some values for a particular unit; it is recommended that
     -- a calibration be done for your particular unit.
     m_max = {}
@@ -154,15 +187,15 @@ function Lsm303:__init( mcu )
     m_min.z = -770
     self.m_min = {}
 
-    self._device = LSM303_DEVICE_AUTO;
-    self.acc_address = ACC_ADDRESS_SA0_A_LOW;
+    self._device     = LSM303DLHC_DEVICE      --LSM303_DEVICE_AUTO;
+    self.acc_address = ACC_ADDRESS_SA0_A_HIGH --ACC_ADDRESS_SA0_A_LOW
 
-    self.io_timeout = 0;  -- 0 = no timeout
-    self.did_timeout = false;
+    self.io_timeout  = 0  -- 0 = no timeout
+    self.did_timeout = false
 end
 
 function Lsm303:init( device, sa0_a )
-    self._device = device;
+    self._device = device or self._device
     if device == LSM303DLH_DEVICE or
        device == LSM303DLM_DEVICE then
         if (sa0_a == LSM303_SA0_A_LOW) then
@@ -244,7 +277,6 @@ function Lsm303::readMagReg( reg )
         reg = (self._device == LSM303DLH_DEVICE) and LSM303DLH_OUT_Z_H_M or LSM303DLM_OUT_Z_H_M
     elseif res == LSM303_OUT_Z_L_M then
         reg = ( self._device == LSM303DLH_DEVICE) and LSM303DLH_OUT_Z_L_M or LSM303DLM_OUT_Z_L_M;
-        break;
     end
   end
 
@@ -266,7 +298,7 @@ function Lsm303::setMagGain( value )
 end
 
 -- Reads the 3 accelerometer channels and stores them in vector a
-function LSM303::readAcc()
+function Lsm303::readAcc()
   self:beginTransmission( self.acc_address );
   -- assert the MSB of the address to get the accelerometer
   -- to do slave-transmit subaddress updating.
@@ -325,7 +357,7 @@ function Lsm303::readMag()
 
   local yhm, ylm, zhm, zlm;
 
-  if ( self._device == LSM303DLH_DEVICE )
+  if ( self._device == LSM303DLH_DEVICE ) then
     -- DLH: register address for Y comes before Z
     yhm = self:read()
     ylm = self:read()
@@ -347,19 +379,19 @@ function Lsm303::readMag()
   self.m = m
 end
 
-// Reads all 6 channels of the LSM303 and stores them in the object variables
-void LSM303::read(void)
-{
+-- Reads all 6 channels of the LSM303 and stores them in the object variables
+function Lsm303::read()
   readAcc();
   readMag();
-}
+end
 
-// Returns the number of degrees from the -Y axis that it
-// is pointing.
-int LSM303::heading(void)
-{
+
+--[[
+-- Returns the number of degrees from the -Y axis that it
+-- is pointing.
+function LSM303::heading()
   return heading((vector){0,-1,0});
-}
+end
 
 // Returns the number of degrees from the From vector projected into
 // the horizontal plane is away from north.
@@ -416,23 +448,22 @@ void LSM303::vector_normalize(vector *a)
   a->y /= mag;
   a->z /= mag;
 }
+]]
 
-// Private Methods //////////////////////////////////////////////////////////////
 
-byte LSM303::detectSA0_A(void)
-{
-  Wire.beginTransmission(ACC_ADDRESS_SA0_A_LOW);
-  Wire.write(LSM303_CTRL_REG1_A);
-  last_status = Wire.endTransmission();
-  Wire.requestFrom(ACC_ADDRESS_SA0_A_LOW, 1);
-  if (Wire.available())
-  {
-    Wire.read();
-    return LSM303_SA0_A_LOW;
-  }
+-- Private Methods //////////////////////////////////////////////////////////////
+function Lsm303::detectSA0_A()
+  self:beginTransmission( ACC_ADDRESS_SA0_A_LOW )
+  self:write( LSM303_CTRL_REG1_A )
+  self.last_status = self:endTransmission()
+
+  self:requestFrom( ACC_ADDRESS_SA0_A_LOW, 1 )
+  if ( self:available() > 0 ) then
+    self:read()
+    return LSM303_SA0_A_LOW
   else
-    return LSM303_SA0_A_HIGH;
-}
+    return LSM303_SA0_A_HIGH
+end
 
 
 

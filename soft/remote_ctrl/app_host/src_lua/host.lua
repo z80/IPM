@@ -1,5 +1,6 @@
 
 require( "bit" )
+require( "lsm303" )
 
 local BOARDS_CNT = 3
 local inputs = { 0, 0, 0 }
