@@ -195,7 +195,9 @@ function Lsm303:__init( mcu )
 end
 
 function Lsm303:init( device, sa0_a )
-    self._device = device or self._device
+    -- To be able to work without arguments at all.
+    device = device or self._device
+    -- Proceed normally as before.
     if device == LSM303DLH_DEVICE or
        device == LSM303DLM_DEVICE then
         if (sa0_a == LSM303_SA0_A_LOW) then
