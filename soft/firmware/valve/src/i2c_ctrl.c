@@ -257,14 +257,14 @@ void cmd_state( BaseChannel *chp, int argc, char * argv [] )
         else
             chprintf( chp, "%d ", v );
     }
-    chprintf( chp, "ok:st\r\n" );
+    chprintf( chp, "ok:st<\r\n" );
 }
 
 void cmd_set_output( BaseChannel *chp, int argc, char * argv [] )
 {
     if ( argc < (I2C_SLAVES_CNT+1) )
     {
-        chprintf( chp, "er:n args expected\r\n" );
+        chprintf( chp, "err:args expected<\r\n" );
     }
     else
     {
@@ -275,6 +275,7 @@ void cmd_set_output( BaseChannel *chp, int argc, char * argv [] )
             v = atoi( argv[i] );
             setOutput( i, &v );
         }
+        chprintf( chp, "ok:out<\r\n" );
     }
 }
 
@@ -408,10 +409,10 @@ void i2c_set_addr( BaseChannel *chp, int argc, char * argv[] )
         static int8_t v;
         v = (uint8_t)atoi( argv[0] );
         i2cSetAddr( v );
-        chprintf( chp, "ok:addr\r\n" );
+        chprintf( chp, "ok:set_addr<\r\n" );
     }
     else
-        chprintf( chp, "err:arg expected\r\n" );
+        chprintf( chp, "err:arg expected<\r\n" );
 }
 
 void i2c_set_buf( BaseChannel *chp, int argc, char * argv[] )
@@ -427,10 +428,10 @@ void i2c_set_buf( BaseChannel *chp, int argc, char * argv[] )
             v = (uint8_t)atoi( argv[i+1] );
             i2cSetBuf( at+i, v );
         }
-        chprintf( chp, "ok:mr\r\n" );
+        chprintf( chp, "ok:set_buf<\r\n" );
     }
     else
-        chprintf( chp, "err:mr\r\n" );
+        chprintf( chp, "err:args expected<\r\n" );
 }
 
 void i2c_io( BaseChannel *chp, int argc, char * argv[] )
@@ -442,11 +443,10 @@ void i2c_io( BaseChannel *chp, int argc, char * argv[] )
         // Initiate IO.
         // IO itself will be executed in a separate thread.
         i2cSetStatus( 1 );
-        chprintf( chp, "ok:io %d %d\r\n", g_i2cTxSz, g_i2cRxSz );
-        return;
+        chprintf( chp, "ok:io %d %d<\r\n", g_i2cTxSz, g_i2cRxSz );
     }
     else
-        chprintf( chp, "err:not enough args\r\n" );
+        chprintf( chp, "err:args expected<\r\n" );
 }
 
 void i2c_status( BaseChannel *chp, int argc, char * argv[] )
@@ -455,7 +455,7 @@ void i2c_status( BaseChannel *chp, int argc, char * argv[] )
     (void)argv;
     static uint8_t res;
     res = i2cStatus();
-    chprintf( chp, "ok:{%d}\r\n", res );
+    chprintf( chp, "ok:{%d}<\r\n", res );
 }
 
 void i2c_buffer( BaseChannel *chp, int argc, char * argv[] )
@@ -465,11 +465,13 @@ void i2c_buffer( BaseChannel *chp, int argc, char * argv[] )
         static uint8_t cnt;
         cnt = atoi( argv[0] );
         static uint8_t i;
-        chprintf( chp, "ok{" );
+        chprintf( chp, "ok:{" );
         for ( i=0; i<cnt; i++ )
             chprintf( chp, "%d ", g_i2cInBuffer[i] );
-        chprintf( chp, "}\r\n" );
+        chprintf( chp, "}<\r\n" );
     }
+    else
+        chprintf( chp, "err: arg expected<\r\n" );
 }
 
 
