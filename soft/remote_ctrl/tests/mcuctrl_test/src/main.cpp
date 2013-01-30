@@ -7,6 +7,25 @@
 
 int main( int argc, char * argv[] )
 {
+    std::string stri = "ok:{0 34 54}<\r\n";
+    std::string::const_iterator start = stri.begin();
+    std::string::const_iterator end   = stri.end();
+    boost::regex patt( "\\{([\\d\\s]{1,})\\}" );
+    boost::smatch match;
+    while ( boost::regex_search( start, end, match, patt ) )
+    {
+        // Entire match.
+        std::string all = match[0];
+        std::cout << match[0] << "\n";
+        // First result.
+        std::string first = match[1];
+        std::cout << match[1] << "\n";
+        // Second result ...
+        // Third  result ...
+    }
+
+
+    /*
     McuCtrl c;
     bool res = c.open();
     if ( !res )
@@ -45,6 +64,7 @@ int main( int argc, char * argv[] )
         res = c.i2cBuffer( 4, data );
         std::cout << data[0] << " " << data[1] << " " << data[2] << " " << data [3] << "\n";
     //}
+    */
 
     return 0;
 }
