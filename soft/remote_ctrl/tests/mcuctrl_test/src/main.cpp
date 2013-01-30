@@ -98,7 +98,7 @@ int main( int argc, char * argv[] )
         res = c.i2cStatus( status );
         res = c.i2cBuffer( 6, data );
         for ( int j=0; j<3; j++ )
-            g[j] = static_cast<int>(data[j*2]) | (static_cast<int>(data[j*2+1]) * 256); //>> 4;
+            g[j] = static_cast<int>(data[j*2]) | (static_cast<int>(data[j*2+1]) * 256) >> 4;
 
         res = c.i2cSetAddr( magAddr );
         // Mag read.
@@ -113,7 +113,7 @@ int main( int argc, char * argv[] )
         for ( int k=3; k<6; k++ )
         {
             int j = k - 3;
-            g[k] = (static_cast<int>(data[j*2]) << 8) | static_cast<int>(data[j*2+1]);
+            g[k] = (static_cast<int>(data[j*2]) * 256) | static_cast<int>(data[j*2+1]);
         }
 
         // Temp read.
