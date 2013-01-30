@@ -20,13 +20,14 @@ bool McuCtrl::inputs( unsigned long * data, int len )
     int cntWr = write( stri );
     int cntRd = read( stri );
     // Here it should be output parser.
-    boost::regex patt( "\\{[\\w\\s]{1,}\\}" );
-    boost::sregex_iterator it( stri.begin(), stri.end(), patt );
-    boost::sregex_iterator end;
-    for ( ; it!=end; ++it )
+    std::string::const_iterator start = stri.begin();
+    std::string::const_iterator end   = stri.end();
+    boost::regex patt( "\\{([\\w\\s]{1,})\\}" );
+    boost::smatch match;
+    if ( boost::regex_search( start, end, match, patt ) )
     {
         //std::cout << it->str() << "\n";
-        std::string ss = it->str().substr( 1 );
+        std::string ss = match[1];
         std::istringstream in( ss );
         for ( int i=0; i<len; i++ )
             in >> data[i];
@@ -107,13 +108,13 @@ bool McuCtrl::i2cStatus( int & status )
     std::string stri;
     stri.resize( 64 );
     int cntRd = read( stri );
-    boost::regex patt( "\\{[\\w\\s]{1,}\\}" );
-    boost::sregex_iterator it( stri.begin(), stri.end(), patt );
-    boost::sregex_iterator end;
-    for ( ; it!=end; ++it )
+    std::string::const_iterator start = stri.begin();
+    std::string::const_iterator end   = stri.end();
+    boost::regex patt( "\\{([\\w\\s]{1,})\\}" );
+    boost::smatch match;
+    if ( boost::regex_search( start, end, match, patt ) )
     {
-        //std::cout << it->str() << "\n";
-        std::string ss = it->str().substr( 1 );
+        std::string ss = match[1];
         std::istringstream in( ss );
         in >> status;
         return true;
@@ -131,13 +132,13 @@ bool McuCtrl::i2cBuffer( int cnt, unsigned char * data )
     std::string stri;
     stri.resize( 64 );
     int cntRd = read( stri );
-    boost::regex patt( "\\{[\\w\\s]{1,}\\}" );
-    boost::sregex_iterator it( stri.begin(), stri.end(), patt );
-    boost::sregex_iterator end;
-    for ( ; it!=end; ++it )
+    std::string::const_iterator start = stri.begin();
+    std::string::const_iterator end   = stri.end();
+    boost::regex patt( "\\{([\\w\\s]{1,})\\}" );
+    boost::smatch match;
+    if ( boost::regex_search( start, end, match, patt ) )
     {
-        //std::cout << it->str() << "\n";
-        std::string ss = it->str().substr( 1 );
+        std::string ss = match[1];
         std::istringstream in( ss );
         for ( int i=0; i<cnt; i++ )
             in >> data[i];
