@@ -32,7 +32,7 @@ public:
 
 const int UsbIo::PD::VENDOR_ID  = 0x0483;
 const int UsbIo::PD::PRODUCT_ID = 0x5740;
-const int UsbIo::PD::TIMEOUT    = 100;
+const int UsbIo::PD::TIMEOUT    = 500;
 
 const int UsbIo::PD::EP_OUT = 0x03;
 const int UsbIo::PD::EP_IN  = 0x81;
@@ -147,10 +147,16 @@ int UsbIo::read( std::string & stri )
 				return res;
 		}
 		len += actual_length;
-		if ( ( len > 0) && ( stri.at( len-1 ) == '\n' ) )
+        //if ( ( len > 0) && ( stri.at( len-1 ) == '\n' ) )
+        if ( ( len > 0 ) && ( stri.find( "<\r\n", 0 ) != std::string::npos ) )
 			break;
-		delay( 1 );
-		timeout--;
+        timeout--;
+        if ( timeout <= 0 )
+        {
+            len = static_cast<int>( TIMEOUT );
+            break;
+        }
+        delay( 1 );
 	}
 	stri.resize( len );
     return len;

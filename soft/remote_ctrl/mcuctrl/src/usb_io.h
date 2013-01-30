@@ -7,6 +7,7 @@
 class UsbIo
 {
 public:
+    enum Err { NODATA=0, TIMEOUT=-1 };
     UsbIo();
     virtual ~UsbIo();
     bool open( const std::string & arg = std::string() );
