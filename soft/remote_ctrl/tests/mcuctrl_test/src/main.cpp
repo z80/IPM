@@ -51,7 +51,7 @@ int main( int argc, char * argv[] )
 
     res = c.i2cSetAddr( accAddr );
     data[0] = 0x23;
-    data[1] = 0b00001000; //0x27;
+    data[1] = 0b00000000;
     res = c.i2cSetBuf( 0, data, 2 );
     res = c.i2cIo( 2, 0 );
     usleep( 100 * 1000 );
@@ -98,7 +98,11 @@ int main( int argc, char * argv[] )
         res = c.i2cStatus( status );
         res = c.i2cBuffer( 6, data );
         for ( int j=0; j<3; j++ )
-            g[j] = static_cast<int>(data[j*2]) | (static_cast<int>(data[j*2+1]) * 256) >> 4;
+        {
+            g[j] = ( static_cast<int>(data[j*2]) | (static_cast<int>(data[j*2+1]) * 256) );
+            if ( g[j] & (1<<15) )
+                g[j] -= 65536;
+        }
 
         res = c.i2cSetAddr( magAddr );
         // Mag read.
@@ -114,7 +118,14 @@ int main( int argc, char * argv[] )
         {
             int j = k - 3;
             g[k] = (static_cast<int>(data[j*2]) * 256) | static_cast<int>(data[j*2+1]);
+            if ( g[k] & (1<<15) )
+                g[k] -= 65536;
         }
+        // The order is x, z, y.
+        int buf;
+        buf = g[4];
+        g[4] = g[5];
+        g[5] = buf;
 
         // Temp read.
         data[0] = 0x31;
