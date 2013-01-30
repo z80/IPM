@@ -141,7 +141,11 @@ bool McuCtrl::i2cBuffer( int cnt, unsigned char * data )
         std::string ss = match[1];
         std::istringstream in( ss );
         for ( int i=0; i<cnt; i++ )
-            in >> data[i];
+        {
+            int v;
+            in >> v;
+            data[i] = static_cast<unsigned char>( v );
+        }
         return true;
     }
     return false;
