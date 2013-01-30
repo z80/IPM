@@ -19,6 +19,7 @@ public:
     int read( std::string & stri );
     int setTimeout( int ms );
 
+    void msleep( int ms );
 protected:
     class PD;
     PD * pd;

@@ -13,6 +13,11 @@ public:
     bool inputs( unsigned long * data, int len = 2 );
     bool setOutputs( unsigned long * data, int len = 2 );
 
+    bool accInit();
+    bool accAcc( int & x, int & y, int & z );
+    bool accMag( int & x, int & y, int & z );
+    bool accTemp( int & t );
+
     bool i2cSetAddr( int addr );
     bool i2cSetBuf( int start, unsigned char * data, int cnt );
     bool i2cIo( int txCnt, int rxCnt );

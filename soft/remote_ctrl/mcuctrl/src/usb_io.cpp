@@ -168,6 +168,11 @@ int UsbIo::setTimeout( int ms )
     return 0;
 }
 
+void UsbIo::msleep( int ms )
+{
+    delay( ms );
+}
+
 
 
 

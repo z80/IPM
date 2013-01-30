@@ -54,6 +54,206 @@ bool McuCtrl::setOutputs( unsigned long * data, int len )
     return ( cntRd >= cntWr );
 }
 
+bool McuCtrl::accInit()
+{
+    // Accelerometer.
+    unsigned char accAddr = 25,
+                  magAddr = 30;
+    unsigned char data[6];
+
+    // Init acc.
+    bool res = i2cSetAddr( accAddr );
+    if ( !res )
+        return false;
+    data[0] = 0x20;
+    data[1] = 0b00100111; //0x27;
+    res = i2cSetBuf( 0, data, 2 );
+    if ( !res )
+        return false;
+    res = i2cIo( 2, 0 );
+    if ( !res )
+        return false;
+    msleep( 100 );
+    int status = -1;
+    res = i2cStatus( status );
+    if ( !res )
+        return false;
+    //res = c.i2cStatus( status );
+    //res = c.i2cStatus( status );
+
+    res = i2cSetAddr( accAddr );
+    if ( !res )
+        return false;
+    data[0] = 0x23;
+    data[1] = 0b00000000;
+    res = i2cSetBuf( 0, data, 2 );
+    if ( !res )
+        return false;
+    res = i2cIo( 2, 0 );
+    if ( !res )
+        return false;
+    msleep( 100 );
+    status = -1;
+    res = i2cStatus( status );
+    if ( !res )
+        return false;
+    //res = i2cStatus( status );
+    //res = i2cStatus( status );
+
+    // Init mag.
+    res = i2cSetAddr( magAddr );
+    if ( !res )
+        return false;
+    data[0] = 0x00;
+    data[1] = 0b10010000; //0x00;
+    res = i2cSetBuf( 0, data, 2 );
+    if ( !res )
+        return false;
+    res = i2cIo( 2, 0 );
+    if ( !res )
+        return false;
+    msleep( 100 );
+    status = -1;
+    res = i2cStatus( status );
+    if ( !res )
+        return false;
+    //res = i2cStatus( status );
+    //res = i2cStatus( status );
+
+    data[0] = 0x02;
+    data[1] = 0b00000000; //0x00;
+    res = i2cSetBuf( 0, data, 2 );
+    if ( !res )
+        return false;
+    res = i2cIo( 2, 0 );
+    if ( !res )
+        return false;
+    msleep( 100 );
+    status = -1;
+    res = i2cStatus( status );
+    if ( !res )
+        return false;
+    //res = i2cStatus( status );
+    //res = i2cStatus( status );
+    return true;
+}
+
+bool McuCtrl::accAcc( int & x, int & y, int & z )
+{
+    unsigned char accAddr = 25;
+    unsigned char data[6];
+    int g[3];
+
+    bool res = i2cSetAddr( accAddr );
+    if ( !res )
+        return false;
+    // Reading back.
+    data[0] = (0x28 | (1<<7));
+    res = i2cSetBuf( 0, data, 1 );
+    if ( !res )
+        return false;
+    res = i2cIo( 1, 6 );
+    if ( !res )
+        return false;
+    msleep( 50 );
+    int status = -1;
+    res = i2cStatus( status );
+    if ( !res )
+        return false;
+    if ( status != 0 )
+        return false;
+    //res = i2cStatus( status );
+    //res = i2cStatus( status );
+    res = i2cBuffer( 6, data );
+    if ( !res )
+        return false;
+    for ( int j=0; j<3; j++ )
+    {
+        g[j] = ( static_cast<int>(data[j*2]) | (static_cast<int>(data[j*2+1]) * 256) );
+        if ( g[j] & (1<<15) )
+            g[j] -= 65536;
+    }
+    x = g[0];
+    y = g[1];
+    z = g[2];
+    return true;
+}
+
+bool McuCtrl::accMag( int & x, int & y, int & z )
+{
+    unsigned char magAddr = 30;
+    unsigned char data[6];
+    int g[3];
+
+    bool res = i2cSetAddr( magAddr );
+    if ( !res )
+        return false;
+    // Mag read.
+    data[0] = 0x03;
+    res = i2cSetBuf( 0, data, 1 );
+    if ( !res )
+        return false;
+    res = i2cIo( 1, 6 );
+    if ( !res )
+        return false;
+    msleep( 50 );
+    int status = -1;
+    res = i2cStatus( status );
+    if ( !res )
+        return false;
+    if ( status != 0 )
+        return false;
+    //res = i2cStatus( status );
+    //res = i2cStatus( status );
+    res = i2cBuffer( 6, data );
+    if ( !res )
+        return false;
+    for ( int j=0; j<3; j++ )
+    {
+        g[j] = (static_cast<int>(data[j*2]) * 256) | static_cast<int>(data[j*2+1]);
+        if ( g[j] & (1<<15) )
+            g[j] -= 65536;
+    }
+    // The order is x, z, y.
+    x = g[0];
+    z = g[1];
+    y = g[2];
+    return true;
+}
+
+bool McuCtrl::accTemp( int & t )
+{
+    unsigned char magAddr = 30;
+    unsigned char data[6];
+
+    bool res = i2cSetAddr( magAddr );
+    if ( !res )
+        return false;
+    // Temp read.
+    data[0] = 0x31;
+    res = i2cSetBuf( 0, data, 1 );
+    if ( !res )
+        return false;
+    res = i2cIo( 1, 2 );
+    if ( !res )
+        return false;
+    msleep( 50 );
+    int status = -1;
+    res = i2cStatus( status );
+    if ( !res )
+        return false;
+    if ( status != 0 )
+        return false;
+    //res = i2cStatus( status );
+    //res = i2cStatus( status );
+    res = i2cBuffer( 2, data );
+    if ( !res )
+        return false;
+    t = static_cast<int>( data[0]) * 256 + static_cast<int>(data[1]);
+    return true;
+}
+
+
 bool McuCtrl::i2cSetAddr( int addr )
 {
     std::ostringstream out;

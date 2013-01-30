@@ -115,6 +115,54 @@ static int inputs( lua_State * L )
     return 0;
 }
 
+static int accInit( lua_State * L )
+{
+    McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
+    bool res = io->accInit();
+    lua_pushboolean( L, res ? 1 : 0 );
+    return 1;
+}
+
+static int accAcc( lua_State * L )
+{
+    McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
+    int x, y, z;
+    bool res = io->accAcc( x, y, z );
+    lua_pushboolean( L, res ? 1 : 0 );
+    if ( !res )
+        return 1;
+    lua_pushnumber( L, static_cast<lua_Number>( x ) );
+    lua_pushnumber( L, static_cast<lua_Number>( y ) );
+    lua_pushnumber( L, static_cast<lua_Number>( z ) );
+    return 4;
+}
+
+static int accMag( lua_State * L )
+{
+    McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
+    int x, y, z;
+    bool res = io->accMag( x, y, z );
+    lua_pushboolean( L, res ? 1 : 0 );
+    if ( !res )
+        return 1;
+    lua_pushnumber( L, static_cast<lua_Number>( x ) );
+    lua_pushnumber( L, static_cast<lua_Number>( y ) );
+    lua_pushnumber( L, static_cast<lua_Number>( z ) );
+    return 4;
+}
+
+static int accTemp( lua_State * L )
+{
+    McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
+    int t;
+    bool res = io->accTemp( t );
+    lua_pushboolean( L, res ? 1 : 0 );
+    if ( !res )
+        return 1;
+    lua_pushnumber( L, static_cast<lua_Number>( t ) );
+    return 2;
+}
+
 static int i2cSetAddr( lua_State * L )
 {
     McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
@@ -191,6 +239,10 @@ static const struct luaL_reg META_FUNCTIONS[] = {
     { "read",          read },
     { "setOutputs",    setOutputs },
     { "inputs",        inputs },
+    { "accInit",       accInit },
+    { "accAcc",        accAcc },
+    { "accMag",        accMag },
+    { "accTemp",       accTemp },
 
     { "i2cSetAddr", i2cSetAddr },
     { "i2cSetBuf",  i2cSetBuf },
