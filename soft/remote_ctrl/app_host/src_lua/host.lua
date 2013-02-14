@@ -63,6 +63,7 @@ function processMcu()
     local en = mcu:open()
     if ( en ) then
         send( "print( \'Opended MCU successfully\' )" )
+	mcu:accInit()
     else
         send( "print( \"ERROR: MCU can\'t be open\" )" )
     end
@@ -79,6 +80,7 @@ function processMcu()
             mcu:close()
             sleep( 5 )
             mcu:open()
+	    mcu:accInit()
         else
             -- Success.
             -- Compare current inputs with their new values from MCU.
@@ -91,6 +93,7 @@ function processMcu()
                     break
                 end
             end
+	    print( "here" )
         end
         sleep( 0.1 )
     end
@@ -124,6 +127,36 @@ function report()
         stri = string.format( "print( \"mcu:isOpen() = %s\" )", mcu:isOpen() and "true" or "false" )
         send( stri )
     end
+end
+
+function reportAcc()
+    local res, x, y, z = mcu:accAcc()
+    local striAcc
+    if ( res ) then
+        striAcc = string.format( "setAcc( %6i, %6i, %6i )", x, y, z )
+    else
+        striAcc = "print( \'acc: error\' )"
+    end
+
+    local striMag
+    res, x, y, z = mcu:accMag()
+    if ( res ) then
+        striMag = string.format( "setMag( %6i, %6i, %6i )", x, y, z )
+    else
+        striMag = "print( \'mag: error\' )"
+    end
+    
+    local striTemp
+    res, x = mcu:accTemp()
+    if ( res ) then
+        striTemp = string.format( "setTemp( %6i )", x )
+    else
+        striTemp = string.format( "print( \'t: error\' )" )
+    end
+
+    send( striAcc )
+    send( striMag )
+    send( striTemp )
 end
 
 function sleep( sec )

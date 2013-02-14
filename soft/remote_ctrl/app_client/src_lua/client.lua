@@ -65,6 +65,19 @@ function setInputs( vals )
     end
 end
 
+function setAcc( x, y, z )
+    print( string.format( "acc: %i, %i, %i", x, y, z ) )
+end
+
+function setMag( x, y, z )
+    print( string.format( "mag: %i, %i, %i", x, y, z ) )
+end
+
+function setTemp( t )
+    print( string.format( "temp: %i", t ) )
+end
+
+
 main()
 
 
