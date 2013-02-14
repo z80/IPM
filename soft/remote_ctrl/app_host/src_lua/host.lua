@@ -159,6 +159,32 @@ function reportAcc()
     send( striTemp )
 end
 
+function reportInputs()
+    local ins
+    if ( mcu and mcu:isOpen() ) then
+        ins = { mcu:inputs( BOARDS_CNT ) }
+    else
+        ins = {}
+    end
+    if ( #ins < BOARDS_CNT ) then
+        -- Failure
+        send( "print( \"Error: mcu doesn\'t respond on USB requests\" )" )
+        mcu:close()
+        sleep( 5 )
+        mcu:open()
+        mcu:accInit()
+    else
+        -- Success.
+        -- Compare current inputs with their new values from MCU.
+        for i = 1, BOARDS_CNT do
+            inputs[i] = ins[i]
+        end
+	local stri = string.format( "print( \'%i, %i, %i\' )", ins[1] or 0, ins[2] or 0, ins[3] or 0 )
+	send( stri )
+        remoteInvokeInputs( inputs )
+    end
+end
+
 function sleep( sec )
     sec = ( sec < 10 ) and sec or 10
     msec = sec * 1000
