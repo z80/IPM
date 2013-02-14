@@ -79,8 +79,10 @@ function processMcu()
             send( "print( \"Error: mcu doesn\'t respond on USB requests\" )" )
             mcu:close()
             sleep( 5 )
-            mcu:open()
-	    mcu:accInit()
+            local res = mcu:open()
+	    if ( res ) then
+                mcu:accInit()
+	    end
         else
             -- Success.
             -- Compare current inputs with their new values from MCU.
@@ -171,8 +173,10 @@ function reportInputs()
         send( "print( \"Error: mcu doesn\'t respond on USB requests\" )" )
         mcu:close()
         sleep( 5 )
-        mcu:open()
-        mcu:accInit()
+        local res = mcu:open()
+	if ( res ) then
+            mcu:accInit()
+	end
     else
         -- Success.
         -- Compare current inputs with their new values from MCU.
