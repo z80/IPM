@@ -4,7 +4,6 @@
 
 #include <QtGui>
 #include "peer_qxmpp.h"
-#include "host_qxmpp.h"
 #include "ui_main_wnd.h"
 
 class ValveTst;
@@ -37,7 +36,6 @@ private:
 
     Ui_MainWnd  ui;
     PeerQxmpp * m_peer;
-    HostQxmpp * m_host;
     QTime       m_time;
     QStringList m_logList;
 

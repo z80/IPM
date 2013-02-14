@@ -1,6 +1,7 @@
 
 #include <QtGui>
 #include "lua.hpp"
+#include "host_qxmpp.h"
 #include "peer_qxmpp.h"
 #include "luamcuctrl.h"
 #include "luaprocess.h"
@@ -8,7 +9,8 @@
 #include <boost/bind.hpp>
 
 bool g_acceptFiles = false;
-static const char config[] = "host.ini";
+static const char serverConfig[] = "server.ini";
+static const char hostConfig[]   = "host.ini";
 
 static void init( lua_State * L );
 static int setAcceptFiles( lua_State * L );
@@ -19,7 +21,12 @@ static void accFileHandler(const std::string &, QIODevice *);
 int main( int argc, char ** argv )
 {
     QCoreApplication a( argc, argv );
-	PeerQxmpp peer( config, boost::bind( init, _1 ) );
+    // XMPP server initalization.
+    HostQxmpp host;
+    bool result = host.listen( serverConfig );
+    Q_ASSERT( result );
+    // XMPP peer initialization.
+    PeerQxmpp peer( hostConfig, boost::bind( init, _1 ) );
 	peer.setInFileHandler( boost::bind<QIODevice *>( inFileHandler, _1 ) );
 	peer.setAccFileHandler( boost::bind( accFileHandler, _1, _2 ) );
 

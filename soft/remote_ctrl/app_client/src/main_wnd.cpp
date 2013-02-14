@@ -13,10 +13,6 @@ const int         MainWnd::LOG_MAX     = 256;
 MainWnd::MainWnd( QWidget * parent )
 : QMainWindow( parent )
 {
-    m_host = new HostQxmpp();
-    bool res = m_host->listen( SERVER_CONFIG_FILE );
-    Q_ASSERT( res );
-
     ui.setupUi( this );
     connect( this,       SIGNAL(sigLog(const QString &)),        this, SLOT(slotLog(const QString &)),  Qt::QueuedConnection );
     connect( ui.console, SIGNAL(line_validate(const QString &)), this, SLOT(slotSend(const QString &)), Qt::QueuedConnection );
