@@ -93,7 +93,7 @@ function processMcu()
                     break
                 end
             end
-	    print( "here" )
+	    --print( "here" )
         end
         sleep( 0.1 )
     end
