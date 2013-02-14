@@ -58,7 +58,7 @@ function processMcu()
     mcu = luamcuctrl.create()
     -- Accelerometer class.
     -- It is for the very first run and probably doesn't work at all.
-    lsm303 = Lsm303( mcu )
+    --lsm303 = Lsm303( mcu )
     
     local en = mcu:open()
     if ( en ) then
