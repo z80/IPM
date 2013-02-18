@@ -212,6 +212,21 @@ function image( w, h )
     print( "image left" )
 end
 
+function valveTest( tOn, tOff, cnt )
+    local vOn  = { 1, 0, 0 }
+    local vOff = { 0, 0, 0 }
+    cnt = cnt or 3
+    tOn = tOn or 0.1
+    tOff = tOff or 0.1
+    for i=1, cnt do
+        setValves( vOn )
+        sleep( tOn )
+        setValves( vOff )
+        sleep( tOff )
+    end
+    send( "print( \'Done\' )" )
+end
+
 print( "host.lua loaded!!!" )
 main()
 
