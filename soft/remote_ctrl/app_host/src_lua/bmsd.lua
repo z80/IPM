@@ -16,7 +16,7 @@ function crc8( inData, seed )
 	else
 	    seed = bit.bxor( seed, 0x18 )
 	    seed = bit.rshift( seed, 1 )
-	    seed = bit.bor( 0x80 )
+	    seed = bit.bor( seed, 0x80 )
 	end
 	inData = bit.rshift( inData, 1 )
     end
