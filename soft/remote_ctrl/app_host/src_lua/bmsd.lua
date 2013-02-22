@@ -26,7 +26,7 @@ end
 function crc( t )
     local seed = 0
     local cnt = #t
-    for i = 1, cnt do
+    for i = 2, cnt do
         seed = crc8( t[i], seed )
     end
     return seed
