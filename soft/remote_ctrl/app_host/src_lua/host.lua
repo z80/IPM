@@ -1,6 +1,7 @@
 
 require( "bit" )
 --require( "lsm303" )
+require( "bmsd" )
 
 local BOARDS_CNT = 3
 local inputs = { 0, 0, 0 }
@@ -56,6 +57,7 @@ end
 function processMcu()
     -- mcu variable is NOT local to be accessible from the outside.
     mcu = luamcuctrl.create()
+    bmsd = BMSD( mcu )
     -- Accelerometer class.
     -- It is for the very first run and probably doesn't work at all.
     --lsm303 = Lsm303( mcu )
