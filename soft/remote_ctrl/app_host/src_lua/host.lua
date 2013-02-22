@@ -3,6 +3,14 @@ require( "bit" )
 --require( "lsm303" )
 require( "bmsd" )
 
+function display( ... )
+    local t = { ... }
+    for i=1, #t do
+        local stri = string.format( "print( \'arg[%i] = %s\' )", i, tostring( t[i] ) )
+	send( stri )
+    end
+end
+
 local BOARDS_CNT = 3
 local inputs = { 0, 0, 0 }
 local emulation = false
