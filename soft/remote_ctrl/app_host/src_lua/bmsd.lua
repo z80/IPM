@@ -54,6 +54,7 @@ function BMSD:i2cIo( cmd, arg )
     arg = arg or 0
     local t = { HEADER, ADDR, cmd, arg }
     local c = crc( t )
+    display( unpack( t ) )
     print( "one" )
     t[5] = c
     local mcu = self.mcu
