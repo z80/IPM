@@ -6,6 +6,7 @@ local HEADER = 0xE6
 local ADDR   = 0xFF
 local I2C_ADDR = 10
 local I2C_TIMEOUT = 1.5
+local I2C_CMD_BMSD = 5
 
 function crc8( inData, seed )
     seed = seed or 0
@@ -42,19 +43,30 @@ function BMSD:i2cIo( cmd, arg )
     arg = arg or 0
     local t = { HEADER, ADDR, cmd, arg }
     local c = crc( t )
+    print( "one" )
     t[5] = c
     local mcu = self.mcu
     mcu:i2cSetAddr( I2C_ADDR )
-    mcu:i2cSetBuf( 0, unpack( t ) )
-    mcu:i2cIo()
+    print( "two" )
+    mcu:i2cSetBuf( 0, I2C_CMD_BMSD, unpack( t ) )
+    print( "three" )
+    mcu:i2cIo( 6, 0 )
+    print( "four" )
     while true do
-        local res = ( mcu:i2cStatus() == 0 )
+        local res, val = mcu:i2cStatus()
 	if ( res ) then
-            return true
-	end
+            if ( val == 0 ) then
+	        send( "print( \'I2C send sucess\' )" )
+                return true
+            end
+        else
+            return false
+        end
         sleep( 0.1 )
     end
+    print( "five" )
     send( "print( \'Error: I2C io error BMSD IO\' )" )
+    print( "six" )
     return false
 end
 
@@ -75,6 +87,7 @@ function BMSD:move( speed )
         send( "print( \'Error: BMSD dir\' )" )
 	return false
     end
+    sleep( 0.5 )
     res = self:i2cIo( 0xA3, speed )
     if ( not res ) then
         send( "print( \'Error: BMSD speed\' )" )
