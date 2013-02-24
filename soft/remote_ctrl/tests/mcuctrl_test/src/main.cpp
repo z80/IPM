@@ -7,8 +7,35 @@
 
 #include <unistd.h>
 
+unsigned char OWI_ComputeCRC8(unsigned char inData, unsigned char seed)
+{
+    unsigned char bitsLeft;
+    unsigned char temp;
+    for (bitsLeft = 8; bitsLeft > 0; bitsLeft--)
+    {
+        temp = ((seed ^ inData) & 0x01);
+        if (temp == 0)
+        {
+            seed >>= 1;
+        }
+        else
+        {
+            seed ^= 0x18;
+            seed >>= 1;
+            seed |= 0x80;
+        }
+        inData >>= 1;
+    }
+    return seed;
+}
+
 int main( int argc, char * argv[] )
 {
+
+    unsigned char crc;
+    crc = OWI_ComputeCRC8( 1, 0 );
+    crc = OWI_ComputeCRC8( 2, crc );
+    return 0;
     /*std::string stri = "ok:{0 34 54}<\r\n";
     std::string::const_iterator start = stri.begin();
     std::string::const_iterator end   = stri.end();
