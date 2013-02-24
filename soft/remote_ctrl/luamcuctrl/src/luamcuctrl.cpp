@@ -177,15 +177,18 @@ static int i2cSetBuf( lua_State * L )
     McuCtrl * io = *reinterpret_cast<McuCtrl * *>( lua_touserdata( L, 1 ) );
     int start = static_cast<int>( lua_tonumber( L, 2 ) );
     int cnt = lua_gettop( L );
-    std::basic_string<unsigned char> vals;
-    vals.resize( cnt - 2 );
     for ( int i=3; i<=cnt; i++ )
     {
         unsigned char val = static_cast<unsigned char>( lua_tonumber( L, i ) );
-        vals[i] = val;
+        bool res = io->i2cSetBuf( start, &val, 1 );
+        start++;
+        if ( !res )
+        {
+            lua_pushboolean( L, 0 );
+            return 1;
+        }
     }
-    bool res = io->i2cSetBuf( start, const_cast<unsigned char *>( vals.data() ), vals.size() );
-    lua_pushboolean( L, res ? 1 : 0 );
+    lua_pushboolean( L, 1 );
     return 1;
 }
 

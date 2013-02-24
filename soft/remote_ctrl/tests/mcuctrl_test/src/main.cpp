@@ -31,7 +31,7 @@ int main( int argc, char * argv[] )
     bool res = c.open();
     if ( !res )
         return 1;
-
+    /*
     // Accelerometer.
     unsigned char accAddr = 25,
                   magAddr = 30;
@@ -151,19 +151,19 @@ int main( int argc, char * argv[] )
         usleep( 500 * 1000 );
     }
     // / Accelerometer.
+    */
 
 
-
-    /*unsigned char addr = 10;
+    unsigned char addr = 10;
 
     res = c.i2cSetAddr( addr );
     res = c.i2cSetAddr( addr );
     unsigned char data[6];
     data[0] = 6;
-    data[1] = 1;
+    data[1] = 0;
     data[2] = 0;
     data[3] = 0;
-    res = c.i2cSetBuf( 0, data, 2 );
+    res = c.i2cSetBuf( 0, data, 4 );
     int status = -1;
     res = c.i2cStatus( status );
 
@@ -182,7 +182,7 @@ int main( int argc, char * argv[] )
 
         res = c.i2cBuffer( 4, data );
         std::cout << data[0] << " " << data[1] << " " << data[2] << " " << data [3] << "\n";
-    */
+
     return 0;
 }
 
