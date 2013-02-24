@@ -33,6 +33,17 @@ function crc( t )
     return seed
 end
 
+function flipBits( arg )
+    local res = 0
+    for i=0, 7 do
+        local b = bit.lshift( 1, i )
+        local val = ( bit.band( arg, b ) ~= 0 ) and 1 or 0
+	local b = bit.lshift( val, 7-i )
+	res = res + b
+    end
+    return res
+end
+
 BMSD = class()
 
 function BMSD:__init( mcu )
@@ -48,6 +59,9 @@ function BMSD:i2cIo( cmd, arg )
     local mcu = self.mcu
     mcu:i2cSetAddr( I2C_ADDR )
     print( "two" )
+    for i=1, #t do
+        t[i] = flipBits( t[i] )
+    end
     mcu:i2cSetBuf( 0, I2C_CMD_BMSD, unpack( t ) )
     print( "three" )
     mcu:i2cIo( 6, 0 )
