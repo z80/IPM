@@ -42,8 +42,13 @@ static void uartIo( void )
     tmo = MS2ST( BMSD_TIMEOUT );
     // Set dir to output.
     palSetPad( BMSD_DIR_PORT, BMSD_DIR_PIN );
+    chThdSleepMilliseconds( 5 );
     // Write.
     sdWriteTimeout( &SD2, ioBuffer, sizeof( ioBuffer ), tmo );
+    // This is 5 bytes per 9 bits duration as 9600bps is 4.6875.
+    // But OS task switch doesn't allow to make it perfectly.
+    // So I do that with enough overcover.
+    chThdSleepMilliseconds( 7 );
     // Set dir to input.
     palClearPad( BMSD_DIR_PORT, BMSD_DIR_PIN );
     // Read.
