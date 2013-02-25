@@ -59,7 +59,6 @@ function BMSD:i2cIo( cmd, arg, crc, mirror, invert )
     arg = arg or 0
     local t = { HEADER, ADDR, cmd, arg }
     local c = crc or crcMsg( t )
-    display( unpack( t ) )
     print( "one" )
     t[5] = c
     display( unpack( t ) )
@@ -101,9 +100,10 @@ end
 function BMSD:enumCrc( cmd, arg, mirror, invert )
     for i=0, 255 do
         local res = self:i2cIo( cmd or 0x51, arg or 0x00, i, mirror, invert )
-        display( string.format( "$s, CRC = %h", tostring( res ), i ) )
+        display( string.format( "%s, CRC = %2x", tostring( res ), i ) )
         sleep( 1.1 )
     end
+    display( "Crc enumeration is finished" )
 end
 
 function BMSD:start()
