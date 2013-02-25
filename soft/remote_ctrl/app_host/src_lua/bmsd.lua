@@ -50,18 +50,20 @@ function BMSD:__init( mcu )
     self.mcu = mcu
 end
 
-function BMSD:i2cIo( cmd, arg )
+function BMSD:i2cIo( cmd, arg, addr, flip )
     arg = arg or 0
-    local t = { HEADER, ADDR, cmd, arg }
+    local t = { HEADER, addr or ADDR, cmd, arg }
     local c = crc( t )
-    display( unpack( t ) )
     print( "one" )
     t[5] = c
+    display( unpack( t ) )
     local mcu = self.mcu
     mcu:i2cSetAddr( I2C_ADDR )
     print( "two" )
-    for i=1, #t do
-        t[i] = flipBits( t[i] )
+    if ( flip ) then
+        for i=1, #t do
+            t[i] = flipBits( t[i] )
+        end
     end
     mcu:i2cSetBuf( 0, I2C_CMD_BMSD, unpack( t ) )
     print( "three" )
@@ -83,6 +85,22 @@ function BMSD:i2cIo( cmd, arg )
     send( "print( \'Error: I2C io error BMSD IO\' )" )
     print( "six" )
     return false
+end
+
+function BMSD:tryAll( cmd, data )
+    cmd = cmd or 0x51
+    data = data or 0
+    for i=0, 255 do
+        local res = self:i2cIo( cmd, data, i, false )
+	display( string.format( "Done iteration %i, flip false, result: %s", i, tostring( res ) ) )
+	sleep( 1.1 )
+    end
+    for i=0, 255 do
+        local res = self:i2cIo( cmd, data, i, true )
+        display( string.format( "Done iteration %i, flip true, result: %s", i, tostring( res ) ) )
+	sleep( 1.1 )
+    end
+    display( "All iterations done" )
 end
 
 function BMSD:start()
