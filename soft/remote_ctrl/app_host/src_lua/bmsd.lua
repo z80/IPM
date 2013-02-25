@@ -12,19 +12,19 @@ function crc8( inData, seed )
     seed = seed or 0
     for bitsLeft=8, 1, -1 do
         local temp = bit.band( bit.bxor( seed, inData ), 0x01 )
-	if ( temp == 0 ) then
-	    seed = bit.rshift( seed, 1 )
-	else
-	    seed = bit.bxor( seed, 0x18 )
-	    seed = bit.rshift( seed, 1 )
-	    seed = bit.bor( seed, 0x80 )
-	end
-	inData = bit.rshift( inData, 1 )
+    if ( temp == 0 ) then
+        seed = bit.rshift( seed, 1 )
+    else
+        seed = bit.bxor( seed, 0x18 )
+        seed = bit.rshift( seed, 1 )
+        seed = bit.bor( seed, 0x80 )
+    end
+    inData = bit.rshift( inData, 1 )
     end
     return seed
 end
 
-function crc( t )
+function crcMsg( t )
     local seed = 0
     local cnt = #t
     for i = 2, cnt do
@@ -33,14 +33,19 @@ function crc( t )
     return seed
 end
 
-function flipBits( arg )
+function mirrorBits( arg )
     local res = 0
     for i=0, 7 do
         local b = bit.lshift( 1, i )
         local val = ( bit.band( arg, b ) ~= 0 ) and 1 or 0
-	local b = bit.lshift( val, 7-i )
-	res = res + b
+    local b = bit.lshift( val, 7-i )
+    res = res + b
     end
+    return res
+end
+
+function invertBits( arg )
+    local res = bit.band( bit.bnot( arg ), 0xFF )
     return res
 end
 
@@ -50,18 +55,25 @@ function BMSD:__init( mcu )
     self.mcu = mcu
 end
 
-function BMSD:i2cIo( cmd, arg )
+function BMSD:i2cIo( cmd, arg, crc, mirror, invert )
     arg = arg or 0
     local t = { HEADER, ADDR, cmd, arg }
-    local c = crc( t )
+    local c = crc or crcMsg( t )
     display( unpack( t ) )
     print( "one" )
     t[5] = c
     local mcu = self.mcu
     mcu:i2cSetAddr( I2C_ADDR )
     print( "two" )
-    for i=1, #t do
-        t[i] = flipBits( t[i] )
+    if ( mirror ) then
+        for i=1, #t do
+            t[i] = mirrorBits( t[i] )
+        end
+    end
+    if ( invert ) then
+        for i=1, #t do
+            t[i] = invertBits( t[i] )
+        end        
     end
     mcu:i2cSetBuf( 0, I2C_CMD_BMSD, unpack( t ) )
     print( "three" )
@@ -69,9 +81,9 @@ function BMSD:i2cIo( cmd, arg )
     print( "four" )
     while true do
         local res, val = mcu:i2cStatus()
-	if ( res ) then
+        if ( res ) then
             if ( val == 0 ) then
-	        send( "print( \'I2C send sucess\' )" )
+                send( "print( \'I2C send sucess\' )" )
                 return true
             end
         else
@@ -83,6 +95,14 @@ function BMSD:i2cIo( cmd, arg )
     send( "print( \'Error: I2C io error BMSD IO\' )" )
     print( "six" )
     return false
+end
+
+function BMSD:enumCrc( cmd, arg, mirror, invert )
+    for i=0, 255 do
+        local res = self:i2cIo( cmd or 0x51, arg or 0x00, i, mirror, invert )
+        display( string.format( "$s, CRC = %h", tostring( res ), i ) )
+        sleep( 1.1 )
+    end
 end
 
 function BMSD:start()
@@ -100,7 +120,7 @@ function BMSD:move( speed )
     local res = self:i2cIo( 0xA7, dir )
     if ( not res ) then
         send( "print( \'Error: BMSD dir\' )" )
-	return false
+    return false
     end
     sleep( 0.5 )
     res = self:i2cIo( 0xA3, speed )
