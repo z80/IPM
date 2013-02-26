@@ -55,9 +55,10 @@ function BMSD:__init( mcu )
     self.mcu = mcu
 end
 
-function BMSD:i2cIo( cmd, arg, crc, mirror, invert )
+function BMSD:i2cIo( cmd, addr, arg, crc, mirror, invert )
+    addr = addr or ADDR
     arg = arg or 0
-    local t = { HEADER, ADDR, cmd, arg }
+    local t = { HEADER, addr, cmd, arg }
     local c = crc or crcMsg( t )
     print( "one" )
     t[5] = c
@@ -99,35 +100,72 @@ end
 
 function BMSD:enumCrc( cmd, arg, mirror, invert )
     for i=0, 255 do
-        local res = self:i2cIo( cmd or 0x51, arg or 0x00, i, mirror, invert )
+        local res = self:i2cIo( cmd or 0x51, 0x00, arg or 0x00, i, mirror, invert )
         display( string.format( "%s, CRC = %2x", tostring( res ), i ) )
         sleep( 1.1 )
     end
     display( "Crc enumeration is finished" )
 end
 
-function BMSD:start()
-    local res = self:i2cIo( 0x51 )
+function BMSD:setAddr( addr )
+    local res = self:i2cIo( 0xA0, 0xFF, 0x00 )
     return res
 end
 
+function BMSD:start()
+    local res = self:i2cIo( 0x51, 0x00, 0x00 )
+    sleep( 0.5 )
+    res = self:i2cIo( 0xA2, 0x00, 0x00 )
+    return res
+end
+
+function BMSD:stop()
+    local res = self:i2cIo( 0x52, 0x00, 0x00 )
+end
+
 -- Speed here is in percents from -100 to 100
-function BMSD:move( speed )
+function BMSD:move( speed, acc, decc )
     speed = speed or 10
     speed = ( speed <= 100 ) and speed or 100
     speed = ( speed >= -100 ) and speed or -100
+    acc = math.abs( acc or 100/24 )
+    acc = math.floor( acc/100 * 24 + 0.5 )
+    acc = ( acc <= 100 ) and acc or 100
+    acc = ( acc >= 1 ) and acc or 1
+
+    decc = math.abs( decc or 100/24 )
+    decc = math.floor( decc/100 * 24 + 0.5 )
+    decc = ( decc <= 100 ) and decc or 100
+    decc = ( decc >= 1 ) and decc or 1
+
     local dir = ( speed >= 0 ) and 1 or 0
-    speed = speed * 250 / 100
-    local res = self:i2cIo( 0xA7, dir )
+    speed = math.floor( speed * 250 / 100 + 0.5 )
+
+    local res = self:i2cIo( 0xA7, 0x00, dir )
     if ( not res ) then
         send( "print( \'Error: BMSD dir\' )" )
     return false
     end
     sleep( 0.5 )
-    res = self:i2cIo( 0xA3, speed )
+
+    res = self:i2cIo( 0xA3, 0x00, speed )
     if ( not res ) then
         send( "print( \'Error: BMSD speed\' )" )
     end
+    sleep( 0.5 )
+
+    res = self:i2cIo( 0xA5, 0x00, acc )
+    if ( not res ) then
+        send( "print( \'Error: BMSD speed\' )" )
+    end
+    sleep( 0.5 )
+ 
+    res = self:i2cIo( 0xA6, 0x00, decc )
+    if ( not res ) then
+        send( "print( \'Error: BMSD speed\' )" )
+    end
+    sleep( 0.5 )
+ 
     return res
 end
 
