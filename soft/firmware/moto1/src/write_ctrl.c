@@ -49,7 +49,7 @@ void initWrite( void )
     palClearPad( MOTO_PORT,     MOTO_INPUT_1 );
     palClearPad( MOTO_PORT,     MOTO_INPUT_2 );
     palSetPadMode( MOTO_PORT, MOTO_INPUT_1, PAL_MODE_OUTPUT_PUSHPULL );
-    palSetPadMode( MOTO_PORT, MOTO_INPUT_1, PAL_MODE_OUTPUT_PUSHPULL );
+    palSetPadMode( MOTO_PORT, MOTO_INPUT_2, PAL_MODE_OUTPUT_PUSHPULL );
 
     // Initializing mutex.
     chMtxInit( &mutex );
