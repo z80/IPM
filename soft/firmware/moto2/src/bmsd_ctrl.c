@@ -4,7 +4,7 @@
 #include "hal.h"
 #include "hdw_config.h"
 
-static uint8_t bytesReceived = 5;
+static uint8_t status = 0;
 static uint8_t ioBuffer[5];
 static SerialConfig config =
 {
@@ -53,6 +53,7 @@ static void uartIo( void )
     palClearPad( BMSD_DIR_PORT, BMSD_DIR_PIN );
     // Read.
     sdReadTimeout( &SD2, ioBuffer, sizeof( ioBuffer ), tmo );
+    status = 0;
 }
 
 
@@ -69,13 +70,14 @@ void bmsdInit( void )
 uint8_t bmsdReady( void )
 {
     chSysLock();
-        uint8_t res = ( bytesReceived >= 5 ) ? 1 : 0;
+        uint8_t res = status;
     chSysUnlock();
     return res;
 }
 
 void bmsdRawCmd( uint8_t * cmd )
 {
+    status = 1;
     ioBuffer[0] = cmd[0];
     ioBuffer[1] = cmd[1];
     ioBuffer[2] = cmd[2];
