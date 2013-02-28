@@ -139,6 +139,7 @@ function BMSD:move( speed, acc, decc )
     decc = ( decc >= 1 ) and decc or 1
 
     local dir = ( speed >= 0 ) and 1 or 0
+    speed = math.abs( speed )
     speed = math.floor( speed * 250 / 100 + 0.5 )
 
     local res = self:i2cIo( 0xA7, 0x00, dir )
