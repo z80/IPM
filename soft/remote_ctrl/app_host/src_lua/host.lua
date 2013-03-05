@@ -2,6 +2,7 @@
 require( "bit" )
 --require( "lsm303" )
 require( "bmsd" )
+require( "escon" )
 
 function display( ... )
     local t = { ... }
@@ -66,6 +67,7 @@ function processMcu()
     -- mcu variable is NOT local to be accessible from the outside.
     mcu = luamcuctrl.create()
     bmsd = BMSD( mcu )
+    escon = ESCON( mcu )
     -- Accelerometer class.
     -- It is for the very first run and probably doesn't work at all.
     --lsm303 = Lsm303( mcu )
