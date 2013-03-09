@@ -117,6 +117,10 @@ function ESCON:setSpeed( index, val )
     return res
 end
 
+function ESCON:move( index, val )
+    self:setSpeed( index, val )
+end
+
 
 
 
