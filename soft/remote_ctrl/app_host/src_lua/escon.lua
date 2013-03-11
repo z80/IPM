@@ -10,19 +10,23 @@ local CMD_VOLT2 = 2
 ESCON = class()
 
 function ESCON:i2cIo( addr, ... )
+    local t = { ... }
+    while ( #t < 4 ) do
+        t[ #t + 1 ] = 0
+    end
+    local cnt = #t
     local mcu = self.mcu
     local res = mcu:i2cSetAddr( addr )
     if ( not res ) then
         display( "ESCON ERROR: failsed to sed I2C address = " .. tostring( addr ) )
 	return false
     end
-    res = mcu:i2cSetBuf( 0, ... )
+    res = mcu:i2cSetBuf( 0, unpack( t ) )
     if ( not res ) then
         display( "ESCON ERROR: failsed to sed I2C buffer" )
 	return false
     end
-    local t = { ... }
-    mcu:i2cIo( #t, 0 )
+    mcu:i2cIo( cnt, 0 )
     while true do
         local res, val = mcu:i2cStatus()
 	if ( res ) then
@@ -74,7 +78,8 @@ function ESCON:stop( index )
     return res
 end
 
-function ESCON:start()
+function ESCON:start( index )
+    index = index or 1
     local addr, val
     if ( index == 1 ) then
         self.enBits[1] = bit.bor( self.enBits[1], 0x01 )
