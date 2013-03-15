@@ -11,6 +11,7 @@ message( STATUS "HEADERS = ${headers}" )
 
 add_executable( pawn_test ${src} )
 install( TARGETS pawn_test DESTINATION "./" )
+install( DIRECTORY ./pawn_src DESTINATION "./" )
 
 
 
