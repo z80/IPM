@@ -27,8 +27,8 @@ IF (UNIX)
     TARGET_LINK_LIBRARIES(pawn_test dl)
   ENDIF(HAVE_CURSES_H)
 ENDIF (UNIX)
-install( TARGETS pawn_test DESTINATION "./" )
-install( DIRECTORY ./pawn_src DESTINATION "./" )
+install( TARGETS pawn_test DESTINATION "./pawn" )
+install( DIRECTORY ./pawn_src/ DESTINATION "./pawn" )
 
 
 
