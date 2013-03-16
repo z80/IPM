@@ -43,5 +43,13 @@ soft/firmware/moto2/.settings/*
 soft/firmware/moto2/build/lst/*
 soft/firmware/moto2/build/obj/*
 
+soft/firmware/pawn/.dep
+soft/firmware/pawn/.settings
+soft/firmware/pawn/build/lst
+soft/firmware/pawn/build/obj
+soft/firmware/pawn/.dep/*
+soft/firmware/pawn/.settings/*
+soft/firmware/pawn/build/lst/*
+soft/firmware/pawn/build/obj/*
 
 
