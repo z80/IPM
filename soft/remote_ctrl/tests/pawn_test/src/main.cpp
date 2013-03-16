@@ -2,6 +2,7 @@
 #include "amx.h"
 #include "pawn_config.h"
 #include <iostream>
+#include <stdio.h>
 
 struct Pawn
 {

@@ -1,7 +1,7 @@
 
 IF(UNIX)
   ADD_DEFINITIONS(-DENABLE_BINRELOC -D_GNU_SOURCE)
-  INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/../linux)
+  INCLUDE_DIRECTORIES( ../linux)
   LINK_LIBRARIES(pthread m) #CMake adds the "lib" prefix, so "pthread" becomes "libpthread"
 ENDIF(UNIX)
 IF(WIN32)
@@ -15,7 +15,7 @@ SET( PAWNCC_SRCS sc1.c sc2.c sc3.c sc4.c sc5.c sc6.c sc7.c
      ${CMAKE_CURRENT_SOURCE_DIR}/../amx/keeloq.c )
 
 IF(UNIX)
-  SET(PAWNCC_SRCS ${PAWNCC_SRCS} ${CMAKE_CURRENT_SOURCE_DIR}/../linux/binreloc.c)
+  SET(PAWNCC_SRCS ${PAWNCC_SRCS} ../linux/binreloc.c)
 ENDIF(UNIX)
 add_executable( pawncc ${PAWNCC_SRCS} )
 install( TARGETS pawncc DESTINATION "./" )
