@@ -4,7 +4,8 @@
 #define __PAWN_CONFIG_H_
 
 
-#define PAWN_MEM_SIZE ( 1024 * 10 )
+#define PAWN_RAM_SIZE ( 1024 )
+#define PAWN_ROM_SIZE ( 4096 )
 
 
 #endif
