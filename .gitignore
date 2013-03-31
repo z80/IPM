@@ -52,4 +52,14 @@ soft/firmware/pawn/.settings/*
 soft/firmware/pawn/build/lst/*
 soft/firmware/pawn/build/obj/*
 
+soft/firmware/joystick/.dep
+soft/firmware/joystick/.settings
+soft/firmware/joystick/build/lst
+soft/firmware/joystick/build/obj
+soft/firmware/joystick/.dep/*
+soft/firmware/joystick/.settings/*
+soft/firmware/joystick/build/lst/*
+soft/firmware/joystick/build/obj/*
+
+
 
