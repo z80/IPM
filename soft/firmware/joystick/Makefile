@@ -67,7 +67,8 @@ CSRC = $(PORTSRC) \
        $(CHIBIOS)/os/various/shell.c \
        $(CHIBIOS)/os/various/chprintf.c \
        ./src/main.c \
-       ./src/ftdi_ctrl.c
+       ./src/ftdi_ctrl.c \
+       ./src/joystick_ctrl.c
 
 # C++ sources that can be compiled in ARM or THUMB mode depending on the global
 # setting.

@@ -24,25 +24,25 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   4 .comment      0000002a  00000000  00000000  00010248  2**0
                   CONTENTS, READONLY
-  5 .debug_abbrev 00004958  00000000  00000000  00010272  2**0
+  5 .debug_abbrev 00004aed  00000000  00000000  00010272  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00011acb  00000000  00000000  00014bca  2**0
+  6 .debug_info   000120e3  00000000  00000000  00014d5f  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   00006aa9  00000000  00000000  00026695  2**0
+  7 .debug_line   00006c78  00000000  00000000  00026e42  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_pubnames 00001151  00000000  00000000  0002d13e  2**0
+  8 .debug_pubnames 0000117c  00000000  00000000  0002daba  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_pubtypes 00002fa8  00000000  00000000  0002e28f  2**0
+  9 .debug_pubtypes 000030ee  00000000  00000000  0002ec36  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_aranges 00000d20  00000000  00000000  00031237  2**0
+ 10 .debug_aranges 00000d58  00000000  00000000  00031d24  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 000011d8  00000000  00000000  00031f57  2**0
+ 11 .debug_ranges 00001238  00000000  00000000  00032a7c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_str    000023d9  00000000  00000000  0003312f  2**0
+ 12 .debug_str    00002449  00000000  00000000  00033cb4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_frame  00002070  00000000  00000000  00035508  2**2
+ 13 .debug_frame  00002114  00000000  00000000  00036100  2**2
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_loc    0000676f  00000000  00000000  00037578  2**0
+ 14 .debug_loc    000068d6  00000000  00000000  00038214  2**0
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 00000000 l    d  .text	00000000 .text
@@ -196,6 +196,7 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 serial_usb.c
 00000000 l    df *ABS*	00000000 rtc.c
 00000000 l    df *ABS*	00000000 spi_lld.c
+00000000 l    df *ABS*	00000000 joystick_ctrl.c
 00003530 g     O .text	0000001c pal_default_config
 00001100 g     F .text	00000060 chEvtSignalFlagsI
 00000710 g     F .text	00000098 chSysTimerHandlerI

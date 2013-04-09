@@ -70,7 +70,7 @@ static Thread * shellTp = 0;
 void processShellFtdi( void )
 {
     if ( !shellTp )
-        shellTp = shellCreate( &shellConfig,  SHELL_SZ, NORMALPRIO );
+        shellTp = shellCreate( &shellConfig, SHELL_SZ, NORMALPRIO );
     else if ( chThdTerminated( shellTp ) )
     {
         chThdRelease( shellTp );
