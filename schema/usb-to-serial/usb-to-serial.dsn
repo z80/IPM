@@ -57,8 +57,8 @@
       (place R3 195800 -116000 front 0 (PN 1k5))
       (place R2 192800 -115000 front 270 (PN 27))
       (place R1 190800 -117800 front 270 (PN 27))
-      (place R6 184400 -135600 front 90 (PN 1k))
-      (place R5 184400 -131600 front 90 (PN 1k))
+      (place R6 185200 -123800 front 90 (PN 1k))
+      (place R5 185200 -119800 front 90 (PN 1k))
       (place C7 198200 -118800 front 90 (PN 100n))
       (place C6 201800 -130600 front 270 (PN 100n))
       (place C5 201800 -124000 front 90 (PN 100n))
@@ -82,8 +82,8 @@
       (place P1 194600 -145400 front 180 (PN CONN_6X2))
     )
     (component "LED-5MM"
-      (place D2 185800 -119000 front 270 (PN LED))
-      (place D1 185600 -127200 front 90 (PN LED))
+      (place D2 185200 -108000 front 90 (PN LED))
+      (place D1 185200 -115000 front 90 (PN LED))
     )
     (component "my-mini-usb-b"
       (place U3 194000 -107200 front 270 (PN "MINI-USB-B"))
