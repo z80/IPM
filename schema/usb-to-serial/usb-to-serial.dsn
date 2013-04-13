@@ -24,9 +24,6 @@
       (path pcb 0  182000 -102000  182000 -159000  211000 -159000  211000 -102000
             182000 -102000)
     )
-    (plane GND (polygon F.Cu 0  199800 -111800  196400 -111800  196400 -108400  191600 -108400
-            191600 -111800  188200 -111800  188200 -111600  188200 -102000
-            199800 -102000))
     (via "Via[0-1]_2500:200_um" "Via[0-1]_2500:0_um")
     (rule
       (width 400)
@@ -487,6 +484,16 @@
     (wire (path F.Cu 400  200200 -133200  204000 -137000)(net /txd)(type protect))
     (wire (path F.Cu 400  200200 -130000  200200 -133200)(net /txd)(type protect))
     (wire (path F.Cu 400  199774 -129574  200200 -130000)(net /txd)(type protect))
+    (wire (path F.Cu 400  192600 -108200  192400 -108400)(net GND)(type protect))
+    (wire (path F.Cu 400  192600 -108200  196000 -108200  196400 -108600  196400 -110000
+            196452 -109948)(net GND)(type protect))
+    (wire (path F.Cu 400  198498 -109948  196452 -109948)(net GND)(type protect))
+    (wire (path F.Cu 400  192400 -109946  192402 -109948)(net GND)(type protect))
+    (wire (path F.Cu 400  192400 -108400  192400 -109946)(net GND)(type protect))
+    (wire (path F.Cu 400  198498 -104452  198498 -109948)(net GND)(type protect))
+    (wire (path F.Cu 400  189502 -104452  198498 -104452)(net GND)(type protect))
+    (wire (path F.Cu 400  189601 -109948  189601 -104551  189502 -104452)(net GND)(type protect))
+    (wire (path F.Cu 400  192402 -109948  189601 -109948)(net GND)(type protect))
     (wire (path F.Cu 400  194100 -124900  194100 -125900)(net GND)(type protect))
     (wire (path F.Cu 400  191206 -129794  191206 -131550)(net GND)(type protect))
     (wire (path F.Cu 400  193200 -127800  191206 -129794)(net GND)(type protect))
