@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 13 Apr 2013 12:53:10 AM MSK
+EESchema Schematic File Version 2  date Sat 13 Apr 2013 11:18:08 PM MSK
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -40,7 +40,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "12 apr 2013"
+Date "13 apr 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -745,8 +745,6 @@ Wire Wire Line
 Wire Wire Line
 	12700 3300 12250 3300
 Wire Wire Line
-	11200 3400 12700 3400
-Wire Wire Line
 	12700 3500 12250 3500
 Wire Wire Line
 	12700 3600 12250 3600
@@ -757,28 +755,26 @@ Wire Wire Line
 Wire Wire Line
 	13500 3300 13900 3300
 Wire Wire Line
-	13500 3400 13900 3400
+	13500 3700 13900 3700
 Wire Wire Line
-	13500 3500 13900 3500
-Wire Wire Line
-	13500 3700 15050 3700
-Text Label 11550 3200 0    60   ~ 0
-txd
-Text Label 11550 3300 0    60   ~ 0
-rxd
-Text Label 11550 3500 0    60   ~ 0
-rts
-Text Label 11550 3600 0    60   ~ 0
-dtr
-Text Label 11550 3700 0    60   ~ 0
-txden
-Text Label 14550 3200 0    60   ~ 0
-cts
+	13500 3600 15050 3600
 Text Label 14550 3300 0    60   ~ 0
+txd
+Text Label 14550 3200 0    60   ~ 0
+rxd
+Text Label 11550 3200 0    60   ~ 0
+rts
+Text Label 11550 3400 0    60   ~ 0
+dtr
+Text Label 14550 3700 0    60   ~ 0
+txden
+Text Label 11550 3300 0    60   ~ 0
+cts
+Text Label 11550 3500 0    60   ~ 0
 dsr
-Text Label 14550 3400 0    60   ~ 0
+Text Label 11550 3600 0    60   ~ 0
 dcd
-Text Label 14550 3500 0    60   ~ 0
+Text Label 11550 3700 0    60   ~ 0
 ri
 NoConn ~ 7250 5800
 NoConn ~ 7250 6000
@@ -786,12 +782,12 @@ NoConn ~ 7250 6200
 $Comp
 L +3.3V #PWR027
 U 1 1 51687636
-P 15050 3600
-F 0 "#PWR027" H 15050 3560 30  0001 C CNN
-F 1 "+3.3V" H 15050 3710 30  0000 C CNN
-F 2 "" H 15050 3600 60  0000 C CNN
-F 3 "" H 15050 3600 60  0000 C CNN
-	1    15050 3600
+P 15050 3500
+F 0 "#PWR027" H 15050 3460 30  0001 C CNN
+F 1 "+3.3V" H 15050 3610 30  0000 C CNN
+F 2 "" H 15050 3500 60  0000 C CNN
+F 3 "" H 15050 3500 60  0000 C CNN
+	1    15050 3500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1014,7 +1010,7 @@ Connection ~ 12200 7500
 Connection ~ 12800 6700
 Text Label 12900 6700 0    60   ~ 0
 vccout
-Text Label 13600 3600 0    60   ~ 0
+Text Label 14900 3400 1    60   ~ 0
 vccout
 $Comp
 L R R8
@@ -1055,17 +1051,15 @@ F 3 "~" H 12000 3500 30  0000 C CNN
 $EndComp
 Wire Wire Line
 	11750 3500 11500 3500
-Wire Wire Line
-	11200 3400 11200 3500
 $Comp
 L GND #PWR037
 U 1 1 51688F1C
-P 11200 3500
-F 0 "#PWR037" H 11200 3500 30  0001 C CNN
-F 1 "GND" H 11200 3430 30  0001 C CNN
-F 2 "" H 11200 3500 60  0000 C CNN
-F 3 "" H 11200 3500 60  0000 C CNN
-	1    11200 3500
+P 14650 3450
+F 0 "#PWR037" H 14650 3450 30  0001 C CNN
+F 1 "GND" H 14650 3380 30  0001 C CNN
+F 2 "" H 14650 3450 60  0000 C CNN
+F 3 "" H 14650 3450 60  0000 C CNN
+	1    14650 3450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1119,37 +1113,22 @@ $EndComp
 $Comp
 L R R15
 U 1 1 51688F3C
-P 14150 3400
-F 0 "R15" V 14230 3400 40  0000 C CNN
-F 1 "330" V 14157 3401 40  0000 C CNN
-F 2 "~" V 14080 3400 30  0000 C CNN
-F 3 "~" H 14150 3400 30  0000 C CNN
-	1    14150 3400
-	0    -1   -1   0   
-$EndComp
-$Comp
-L R R16
-U 1 1 51688F42
-P 14150 3500
-F 0 "R16" V 14230 3500 40  0000 C CNN
-F 1 "330" V 14157 3501 40  0000 C CNN
-F 2 "~" V 14080 3500 30  0000 C CNN
-F 3 "~" H 14150 3500 30  0000 C CNN
-	1    14150 3500
+P 14150 3700
+F 0 "R15" V 14230 3700 40  0000 C CNN
+F 1 "330" V 14157 3701 40  0000 C CNN
+F 2 "~" V 14080 3700 30  0000 C CNN
+F 3 "~" H 14150 3700 30  0000 C CNN
+	1    14150 3700
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	15050 3700 15050 3600
+	15050 3600 15050 3500
 Wire Wire Line
-	14400 3500 14650 3500
-Wire Wire Line
-	14400 3400 14650 3400
+	14400 3700 14650 3700
 Wire Wire Line
 	14400 3300 14650 3300
 Wire Wire Line
 	14400 3200 14650 3200
-Wire Wire Line
-	13900 3600 13500 3600
 $Comp
 L MINI-USB-B U3
 U 1 1 516874CD
@@ -1196,4 +1175,27 @@ F 3 "" H 4000 6000 60  0000 C CNN
 	1    4000 6000
 	1    0    0    -1  
 $EndComp
+$Comp
+L R R16
+U 1 1 5169AE8D
+P 12000 3400
+F 0 "R16" V 12080 3400 40  0000 C CNN
+F 1 "330" V 12007 3401 40  0000 C CNN
+F 2 "~" V 11930 3400 30  0000 C CNN
+F 3 "~" H 12000 3400 30  0000 C CNN
+	1    12000 3400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	12700 3400 12250 3400
+Wire Wire Line
+	11750 3400 11500 3400
+Wire Wire Line
+	13500 3400 14650 3400
+Wire Wire Line
+	14650 3400 14650 3450
+Wire Wire Line
+	13500 3500 14900 3500
+Wire Wire Line
+	14900 3500 14900 3150
 $EndSCHEMATC

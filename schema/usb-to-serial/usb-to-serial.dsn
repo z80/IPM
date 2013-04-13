@@ -26,7 +26,7 @@
     )
     (via "Via[0-1]_2500:200_um" "Via[0-1]_2500:0_um")
     (rule
-      (width 254)
+      (width 400)
       (clearance 254.1)
       (clearance 254.1 (type default_smd))
       (clearance 63.5 (type smd_smd))
@@ -68,8 +68,8 @@
       (place R12 188200 -140200 front 270 (PN 330))
       (place R13 201000 -150200 front 270 (PN 330))
       (place R14 198400 -150200 front 270 (PN 330))
-      (place R15 196000 -150200 front 270 (PN 330))
-      (place R16 193400 -150200 front 270 (PN 330))
+      (place R15 188200 -150200 front 270 (PN 330))
+      (place R16 195800 -140200 front 270 (PN 330))
       (place R17 189400 -113200 front 0 (PN 100k))
     )
     (component Quarz
@@ -310,13 +310,13 @@
   )
   (network
     (net +3.3V
-      (pins U1-13 U2-5 C11-1 C10-1 P1-12)
+      (pins U1-13 U2-5 C11-1 C10-1 P1-10)
     )
     (net /cts
-      (pins U1-22 R13-2)
+      (pins U1-22 R9-1)
     )
     (net /dcd
-      (pins U1-19 R15-2)
+      (pins U1-19 R11-1)
     )
     (net /dm
       (pins U1-8 R1-2)
@@ -325,40 +325,40 @@
       (pins U1-7 R3-1 R2-2)
     )
     (net /dsr
-      (pins U1-20 R14-2)
+      (pins U1-20 R10-1)
     )
     (net /dtr
-      (pins U1-21 R11-1)
+      (pins U1-21 R16-1)
     )
     (net /pwren
       (pins U1-15 R7-2)
     )
     (net /ri
-      (pins U1-18 R16-2)
+      (pins U1-18 R12-1)
     )
     (net /rstout
       (pins U1-5 R3-2)
     )
     (net /rts
-      (pins U1-23 R10-1)
+      (pins U1-23 R8-1)
     )
     (net /rxd
-      (pins U1-24 R9-1)
+      (pins U1-24 R13-2)
     )
     (net /rxled
       (pins U1-11 D2-2)
     )
     (net /txd
-      (pins U1-25 R8-1)
+      (pins U1-25 R14-2)
     )
     (net /txden
-      (pins U1-16 R12-1)
+      (pins U1-16 R15-2)
     )
     (net /txled
       (pins U1-12 D1-2)
     )
     (net /vccout
-      (pins Q1-D C12-1 P1-10)
+      (pins Q1-D C12-1 P1-8)
     )
     (net /xtal1
       (pins U1-27 C2-1 X1-1)
@@ -368,30 +368,39 @@
     )
     (net GND
       (pins U1-17 U1-31 U1-29 U1-9 U1-14 U2-2 C3-2 C2-2 C11-2 C10-2 C9-2 C1-2 C7-2
-        C6-2 C5-2 C4-1 P1-5 R17-1 U3-5 U3-0 U3-0@1 U3-0@2 U3-0@3)
+        C6-2 C5-2 C4-1 P1-6 R17-1 U3-5 U3-0 U3-0@1 U3-0@2 U3-0@3)
     )
     (net "N-000001"
-      (pins P1-2 R13-1)
-    )
-    (net "N-0000010"
-      (pins P1-11 R12-2)
+      (pins P1-12 R15-1)
     )
     (net "N-0000011"
-      (pins P1-9 R11-2)
+      (pins P1-4 R14-1)
     )
     (net "N-0000012"
-      (pins P1-7 R10-2)
+      (pins P1-2 R13-1)
     )
     (net "N-0000013"
-      (pins P1-3 R9-2)
+      (pins P1-11 R12-2)
     )
     (net "N-0000014"
+      (pins P1-9 R11-2)
+    )
+    (net "N-0000015"
+      (pins P1-7 R10-2)
+    )
+    (net "N-0000016"
+      (pins P1-3 R9-2)
+    )
+    (net "N-0000017"
       (pins P1-1 R8-2)
     )
     (net "N-0000023"
+      (pins P1-5 R16-2)
+    )
+    (net "N-0000025"
       (pins R17-2 U3-4)
     )
-    (net "N-0000028"
+    (net "N-0000027"
       (pins Q1-G C12-2 R7-1)
     )
     (net "N-0000031"
@@ -412,33 +421,31 @@
     (net "N-0000043"
       (pins R1-1 U3-2)
     )
-    (net "N-000007"
-      (pins P1-8 R16-1)
-    )
-    (net "N-000008"
-      (pins P1-6 R15-1)
-    )
-    (net "N-000009"
-      (pins P1-4 R14-1)
-    )
     (net VCC
       (pins U1-4 U1-3 U1-26 Q1-S U2-1 U2-3 C9-1 C1-1 R6-1 R5-1 C7-1 C6-1 R4-1 U3-1)
     )
     (class kicad_default "" +3.3V /cts /dcd /dm /dp /dsr /dtr /pwren /ri /rstout
       /rts /rxd /rxled /txd /txden /txled /vccout /xtal1 /xtal2 GND "N-000001"
-      "N-0000010" "N-0000011" "N-0000012" "N-0000013" "N-0000014" "N-0000023"
-      "N-0000028" "N-0000031" "N-0000036" "N-0000037" "N-0000040" "N-0000042"
-      "N-0000043" "N-000007" "N-000008" "N-000009" VCC
+      "N-0000011" "N-0000012" "N-0000013" "N-0000014" "N-0000015" "N-0000016"
+      "N-0000017" "N-0000023" "N-0000025" "N-0000027" "N-0000031" "N-0000036"
+      "N-0000037" "N-0000040" "N-0000042" "N-0000043" VCC
       (circuit
         (use_via Via[0-1]_2500:200_um)
       )
       (rule
-        (width 254)
+        (width 400)
         (clearance 254.1)
       )
     )
   )
   (wiring
+    (wire (path F.Cu 400  196700 -136100  197200 -136600  198000 -136600)(net /cts)(type protect))
+    (wire (path F.Cu 400  198400 -137000  198400 -139248)(net /cts)(type protect))
+    (wire (path F.Cu 400  198000 -136600  198400 -137000)(net /cts)(type protect))
+    (wire (path F.Cu 400  195219 -131550  195219 -134619  196700 -136100)(net /cts)(type protect))
+    (wire (path F.Cu 400  192832 -131550  192832 -135568)(net /dcd)(type protect))
+    (wire (path F.Cu 400  190800 -137600  190800 -139248)(net /dcd)(type protect))
+    (wire (path F.Cu 400  192832 -135568  190800 -137600)(net /dcd)(type protect))
     (wire (path F.Cu 400  191224 -121984  191224 -120624)(net /dm)(type protect))
     (wire (path F.Cu 400  190800 -120200  190800 -118752)(net /dm)(type protect))
     (wire (path F.Cu 400  191224 -120624  190800 -120200)(net /dm)(type protect))
@@ -448,6 +455,14 @@
     (wire (path F.Cu 400  192400 -117400  192800 -117000)(net /dp)(type protect))
     (wire (path F.Cu 400  192400 -119600  192400 -117400)(net /dp)(type protect))
     (wire (path F.Cu 400  192024 -119976  192400 -119600)(net /dp)(type protect))
+    (wire (path F.Cu 400  193619 -131550  193619 -136981)(net /dsr)(type protect))
+    (wire (path F.Cu 400  193400 -137200  193400 -139248)(net /dsr)(type protect))
+    (wire (path F.Cu 400  193619 -136981  193400 -137200)(net /dsr)(type protect))
+    (wire (path F.Cu 400  194432 -131550  194432 -135032)(net /dtr)(type protect))
+    (wire (path F.Cu 400  195800 -136400  195800 -139248)(net /dtr)(type protect))
+    (wire (path F.Cu 400  194432 -135032  195800 -136400)(net /dtr)(type protect))
+    (wire (path F.Cu 400  188200 -139248  188200 -137800  190400 -135600)(net /ri)(type protect))
+    (wire (path F.Cu 400  192019 -131550  192019 -133981  190400 -135600)(net /ri)(type protect))
     (wire (path F.Cu 400  193624 -121984  193624 -120376)(net /rstout)(type protect))
     (wire (path F.Cu 400  196752 -116448  196752 -116000)(net /rstout)(type protect))
     (wire (path F.Cu 400  195800 -117400  196752 -116448)(net /rstout)(type protect))
@@ -457,9 +472,37 @@
     (wire (path F.Cu 400  194400 -119800  194600 -119600)(net /rstout)(type protect))
     (wire (path F.Cu 400  194200 -119800  194400 -119800)(net /rstout)(type protect))
     (wire (path F.Cu 400  193624 -120376  194200 -119800)(net /rstout)(type protect))
+    (wire (path F.Cu 400  196032 -131550  196032 -134232)(net /rts)(type protect))
+    (wire (path F.Cu 400  201000 -137000  201000 -139248)(net /rts)(type protect))
+    (wire (path F.Cu 400  199600 -135600  201000 -137000)(net /rts)(type protect))
+    (wire (path F.Cu 400  197400 -135600  199600 -135600)(net /rts)(type protect))
+    (wire (path F.Cu 400  196032 -134232  197400 -135600)(net /rts)(type protect))
+    (wire (path F.Cu 400  196819 -131550  196819 -133219)(net /rxd)(type protect))
+    (wire (path F.Cu 400  202448 -151152  201000 -151152)(net /rxd)(type protect))
+    (wire (path F.Cu 400  203000 -150600  202448 -151152)(net /rxd)(type protect))
+    (wire (path F.Cu 400  203000 -137400  203000 -150600)(net /rxd)(type protect))
+    (wire (path F.Cu 400  200400 -134800  203000 -137400)(net /rxd)(type protect))
+    (wire (path F.Cu 400  198400 -134800  200400 -134800)(net /rxd)(type protect))
+    (wire (path F.Cu 400  196819 -133219  198400 -134800)(net /rxd)(type protect))
     (wire (path F.Cu 400  189225 -125581  187381 -125581)(net /rxled)(type protect))
     (wire (path F.Cu 400  185800 -124000  185800 -120270)(net /rxled)(type protect))
     (wire (path F.Cu 400  187381 -125581  185800 -124000)(net /rxled)(type protect))
+    (wire (path F.Cu 400  198826 -129574  199774 -129574)(net /txd)(type protect))
+    (wire (path F.Cu 400  198400 -151800  198400 -151152)(net /txd)(type protect))
+    (wire (path F.Cu 400  199400 -152800  198400 -151800)(net /txd)(type protect))
+    (wire (path F.Cu 400  202400 -152800  199400 -152800)(net /txd)(type protect))
+    (wire (path F.Cu 400  204000 -151200  202400 -152800)(net /txd)(type protect))
+    (wire (path F.Cu 400  204000 -137000  204000 -151200)(net /txd)(type protect))
+    (wire (path F.Cu 400  200200 -133200  204000 -137000)(net /txd)(type protect))
+    (wire (path F.Cu 400  200200 -130000  200200 -133200)(net /txd)(type protect))
+    (wire (path F.Cu 400  199774 -129574  200200 -130000)(net /txd)(type protect))
+    (wire (path F.Cu 400  189225 -129594  188406 -129594)(net /txden)(type protect))
+    (wire (path F.Cu 400  186552 -151152  188200 -151152)(net /txden)(type protect))
+    (wire (path F.Cu 400  186200 -150800  186552 -151152)(net /txden)(type protect))
+    (wire (path F.Cu 400  186200 -138200  186200 -150800)(net /txden)(type protect))
+    (wire (path F.Cu 400  187800 -136600  186200 -138200)(net /txden)(type protect))
+    (wire (path F.Cu 400  187800 -130200  187800 -136600)(net /txden)(type protect))
+    (wire (path F.Cu 400  188406 -129594  187800 -130200)(net /txden)(type protect))
     (wire (path F.Cu 400  189225 -126368  186038 -126368  185600 -125930)(net /txled)(type protect))
     (wire (path F.Cu 400  206400 -130499  206400 -130600)(net /xtal1)(type protect))
     (wire (path F.Cu 400  207152 -131352  208800 -131352)(net /xtal1)(type protect))
@@ -496,15 +539,17 @@
     (wire (path F.Cu 400  195552 -118600  196400 -118600)(net GND)(type protect))
     (wire (path F.Cu 400  197152 -117848  198200 -117848)(net GND)(type protect))
     (wire (path F.Cu 400  196400 -118600  197152 -117848)(net GND)(type protect))
-    (wire (path F.Cu 400  201000 -149248  201000 -146720  200950 -146670)(net "N-000001")(type protect))
-    (wire (path F.Cu 400  188250 -144130  188250 -141202  188200 -141152)(net "N-0000010")(type protect))
-    (wire (path F.Cu 400  190790 -144130  190790 -141162  190800 -141152)(net "N-0000011")(type protect))
-    (wire (path F.Cu 400  193330 -144130  193330 -141222  193400 -141152)(net "N-0000012")(type protect))
-    (wire (path F.Cu 400  198410 -144130  198410 -141162  198400 -141152)(net "N-0000013")(type protect))
-    (wire (path F.Cu 400  200950 -144130  200950 -141202  201000 -141152)(net "N-0000014")(type protect))
-    (wire (path F.Cu 400  193202 -109948  193202 -111398)(net "N-0000023")(type protect))
-    (wire (path F.Cu 400  191400 -113200  190352 -113200)(net "N-0000023")(type protect))
-    (wire (path F.Cu 400  193202 -111398  191400 -113200)(net "N-0000023")(type protect))
+    (wire (path F.Cu 400  188200 -149248  188200 -146720  188250 -146670)(net "N-000001")(type protect))
+    (wire (path F.Cu 400  198400 -149248  198400 -146680  198410 -146670)(net "N-0000011")(type protect))
+    (wire (path F.Cu 400  201000 -149248  201000 -146720  200950 -146670)(net "N-0000012")(type protect))
+    (wire (path F.Cu 400  188250 -144130  188250 -141202  188200 -141152)(net "N-0000013")(type protect))
+    (wire (path F.Cu 400  190790 -144130  190790 -141162  190800 -141152)(net "N-0000014")(type protect))
+    (wire (path F.Cu 400  193330 -144130  193330 -141222  193400 -141152)(net "N-0000015")(type protect))
+    (wire (path F.Cu 400  198410 -144130  198410 -141162  198400 -141152)(net "N-0000016")(type protect))
+    (wire (path F.Cu 400  200950 -144130  200950 -141202  201000 -141152)(net "N-0000017")(type protect))
+    (wire (path F.Cu 400  193202 -109948  193202 -111398)(net "N-0000025")(type protect))
+    (wire (path F.Cu 400  191400 -113200  190352 -113200)(net "N-0000025")(type protect))
+    (wire (path F.Cu 400  193202 -111398  191400 -113200)(net "N-0000025")(type protect))
     (wire (path F.Cu 400  192824 -121984  192824 -120376)(net "N-0000031")(type protect))
     (wire (path F.Cu 400  193400 -118848  193648 -118600)(net "N-0000031")(type protect))
     (wire (path F.Cu 400  193400 -119600  193400 -118848)(net "N-0000031")(type protect))
@@ -521,9 +566,6 @@
     (wire (path F.Cu 400  191400 -115000  190800 -115600)(net "N-0000043")(type protect))
     (wire (path F.Cu 400  193800 -115000  191400 -115000)(net "N-0000043")(type protect))
     (wire (path F.Cu 400  194798 -114002  193800 -115000)(net "N-0000043")(type protect))
-    (wire (path F.Cu 400  193400 -149248  193400 -146740  193330 -146670)(net "N-000007")(type protect))
-    (wire (path F.Cu 400  196000 -149248  196000 -146800  195870 -146670)(net "N-000008")(type protect))
-    (wire (path F.Cu 400  198400 -149248  198400 -146680  198410 -146670)(net "N-000009")(type protect))
     (wire (path F.Cu 400  198826 -128776  200929 -128776  201800 -129648)(net VCC)(type protect))
     (wire (path F.Cu 400  195000 -120200  195400 -119800)(net VCC)(type protect))
     (wire (path F.Cu 400  198152 -119800  198200 -119752)(net VCC)(type protect))
