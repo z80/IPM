@@ -1,6 +1,6 @@
 
 #include "joystick_ctrl.h"
-#include "lpc214x.h"
+#include "lpc2148.h"
 
 #define JOY_PORT1    IOPORT1
 #define JOY_PORT2    IOPORT2

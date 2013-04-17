@@ -14,8 +14,8 @@
  *                           All registers use "volatile unsigned long". 
 ******************************************************************************/
 
-#ifndef __LPC214x_H
-#define __LPC214x_H
+#ifndef __LPC2148_H
+#define __LPC2148_H
 
 /* Vectored Interrupt Controller (VIC) */
 #define VIC_BASE_ADDR	0xFFFFF000
