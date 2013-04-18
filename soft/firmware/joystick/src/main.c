@@ -1,9 +1,7 @@
 
 #include "ch.h"
-#include "hal.h"
 
 #include "ftdi_ctrl.h"
-#include "joystick_ctrl.h"
 
 #include "lpc2148.h"
 static void initTest( void );
@@ -19,8 +17,7 @@ int main( void )
     while ( TRUE )
     {
         processTest();
-        //processShellFtdi();
-        //chThdSleepMilliseconds( 500 );
+        //processFtdi();
     }
     return 0;
 }

@@ -5,7 +5,7 @@
 #include "ch.h"
 
 void initFtdi( void );
-void processShellFtdi( void );
+void processFtdi( void );
 
 
 #endif
