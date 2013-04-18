@@ -5,6 +5,7 @@
 #include "lua.hpp"
 #include "boost/bind.hpp"
 #include "boost/bind/placeholders.hpp"
+#include "luajoyctrl.h"
 
 const std::string MainWnd::CLIENT_CONFIG_FILE = "client.ini";
 const std::string MainWnd::SERVER_CONFIG_FILE = "server.ini";
@@ -168,6 +169,9 @@ void MainWnd::init( lua_State * L )
     lua_pushstring( L, "valveOutputs" );
     lua_pushcfunction( L, ::valveOutputs );
     lua_settable( L, LUA_GLOBALSINDEX );
+
+    // Joysticks board io.
+    luaopen_luajoyctrl( L );
 
     // Execute file.
     luaL_dofile( L, "./client.lua" );

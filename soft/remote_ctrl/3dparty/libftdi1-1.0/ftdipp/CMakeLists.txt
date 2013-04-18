@@ -14,7 +14,7 @@ if (FTDIPP)
         # Includes
         include_directories(BEFORE ${CMAKE_CURRENT_BINARY_DIR}
                             ${CMAKE_CURRENT_SOURCE_DIR}
-                            ${CMAKE_SOURCE_DIR}/src)
+                            ../src)
 
         include_directories(${Boost_INCLUDE_DIRS})
 

@@ -5,4 +5,10 @@ add_subdirectory( "./qwt-6.0.1" )
 add_subdirectory( "./luabitop-1.0.2" )
 add_subdirectory( "./widgets" )
 add_subdirectory( "./pawn" )
+add_subdirectory( "./libftdi1-1.0" )
+
+
+
+
+
 

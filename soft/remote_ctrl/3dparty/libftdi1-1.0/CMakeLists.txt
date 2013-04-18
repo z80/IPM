@@ -1,11 +1,13 @@
 # Project
-project(libftdi1)
+#project(libftdi1)
 set(MAJOR_VERSION 1)
 set(MINOR_VERSION 0)
 set(PACKAGE libftdi1)
 set(VERSION_STRING ${MAJOR_VERSION}.${MINOR_VERSION})
 set(VERSION ${VERSION_STRING})
-SET(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}")
+
+SET(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}")
+message( STATUS "MODULE PATH IS: ${CMAKE_MODULE_PATH}" )
 
 # CMake
 if("${CMAKE_BUILD_TYPE}" STREQUAL "")
@@ -139,11 +141,11 @@ endif(DOCUMENTATION AND DOXYGEN_FOUND)
 
 add_subdirectory(src)
 add_subdirectory(ftdipp)
-add_subdirectory(bindings)
-add_subdirectory(ftdi_eeprom)
-add_subdirectory(examples)
-add_subdirectory(packages)
-add_subdirectory(test)
+#add_subdirectory(bindings)
+#add_subdirectory(ftdi_eeprom)
+#add_subdirectory(examples)
+#add_subdirectory(packages)
+#add_subdirectory(test)
 
 # PkgConfig
 set(prefix      ${CMAKE_INSTALL_PREFIX})
@@ -157,9 +159,9 @@ if(${WIN32})
    set(libdir      ${CMAKE_INSTALL_PREFIX}/bin)
 endif(${WIN32})
 
-configure_file(${CMAKE_SOURCE_DIR}/libftdi1.spec.in ${CMAKE_BINARY_DIR}/libftdi1.spec @ONLY)
-configure_file(${CMAKE_SOURCE_DIR}/libftdi1.pc.in ${CMAKE_BINARY_DIR}/libftdi1.pc @ONLY)
-configure_file(${CMAKE_SOURCE_DIR}/libftdipp1.pc.in ${CMAKE_BINARY_DIR}/libftdipp1.pc @ONLY)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/libftdi1.spec.in ${CMAKE_BINARY_DIR}/libftdi1.spec @ONLY)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/libftdi1.pc.in ${CMAKE_BINARY_DIR}/libftdi1.pc @ONLY)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/libftdipp1.pc.in ${CMAKE_BINARY_DIR}/libftdipp1.pc @ONLY)
 install(FILES ${CMAKE_BINARY_DIR}/libftdi1.pc ${CMAKE_BINARY_DIR}/libftdipp1.pc
         DESTINATION lib${LIB_SUFFIX}/pkgconfig)
 
@@ -197,4 +199,4 @@ if ( UNIX )
           )
 endif ()
 
-include(CPack)
+#include(CPack)
