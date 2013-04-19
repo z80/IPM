@@ -55,10 +55,10 @@ static void processTest( void )
     IOCLR0 = (1<<7);
     delay();
 
-    char stri[] = "Hello, Putty!\n\r";
+    char stri[] = "Hello, Putty!\r\n";
 
-    stri[0] = 0;
-    sendUart1( (uint8_t *)stri, 1 );
+    //stri[0] = 0;
+    sendUart1( (uint8_t *)stri, 15 );
     delay();
 
     TJoy joys[4];
