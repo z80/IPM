@@ -34,6 +34,8 @@
 #define P0_6_MSK    (3<<12)
 #define P0_7_MSK    (3<<14)
 
+#define P0_11_MSK   (3<<22)
+
 #define P0_12_MSK   (3<<24)
 #define P0_12_ADC   (3<<24)
 #define P0_13_MSK   (3<<26)
@@ -105,6 +107,14 @@ void initJoy( void )
                  (1<<18) | (1<<19) |
                  (1<<20) | (1<<21) |
                  (1<<22) | (1<<23) );
+
+    // Put FTDI ~CTS~ low to grand it permit to write data.
+    // Make it to be GPIO pin.
+    PINSEL0 &= ~(P0_11_MSK);
+    // Direction output.
+    IODIR0 |= (1<<11);
+    // Value 0.
+    IOCLR0 = (1<<11);
 
     adcInit();
 }

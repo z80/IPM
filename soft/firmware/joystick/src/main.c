@@ -29,8 +29,8 @@ static void initTest( void )
     initUart1( 20000000, 38400 );
     initJoy();
 
-    // Only one output.
-    IODIR0 = (1<<7);
+    // Direction output.
+    IODIR0 |= (1<<7);
 
     #define P0_7     (0<<14)
     #define P0_7_MSK (3<<14)
