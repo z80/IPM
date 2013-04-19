@@ -4,6 +4,7 @@
 #include "ftdi_ctrl.h"
 
 #include "lpc2148.h"
+#include "uart1.h"
 static void initTest( void );
 static void processTest( void );
 
@@ -13,7 +14,7 @@ int main( void )
     //chSysInit();
 
     initTest();
-    //initFtdi();
+    //initFtdi( );
     while ( TRUE )
     {
         processTest();
@@ -24,7 +25,7 @@ int main( void )
 
 static void initTest( void )
 {
-    //IODIR0 = 0;
+    /*
     // Only one output.
     IODIR0 = (1<<7);
 
@@ -34,28 +35,28 @@ static void initTest( void )
     // Set P0_7 as GPIO.
     PINSEL0 &= (~P0_7_MSK);
     PINSEL0 |= P0_7;
-    //palSetPadMode( IOPORT1, PAL_PORT_BIT(7), PAL_MODE_OUTPUT_PUSHPULL );
-    //palClearPad( IOPORT1, PAL_PORT_BIT(7) );
+    */
+    initUart1( 20000000, 38400 );
 }
 
 static void delay( void )
 {
     volatile int i;
-    for ( i=0; i<1024; i++ )
+    for ( i=0; i<10240; i++ )
         ;
 }
 
 static void processTest( void )
 {
+    /*
     IOSET0 = (1<<7);
     delay();
     IOCLR0 = (1<<7);
     delay();
-    //palClearPad( IOPORT1, PAL_PORT_BIT(7) );
-    //chThdSleepMilliseconds( 500 );
-    //palSetPad( IOPORT1, PAL_PORT_BIT(7) );
-    //chThdSleepMilliseconds( 500 );
-
+    */
+    uint8_t a = 7;
+    sendUart1( &a, 1 );
+    delay();
 }
 
 
