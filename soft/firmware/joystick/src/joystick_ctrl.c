@@ -260,7 +260,7 @@ static void adcRead( TJoy * j )
     j[0].value[1] = (AD0DR2 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
 
 
-
+/*
     AD0CR = AD_CR_PDN                    // Exit power-down mode
             //| ((3 - 1) << AD_CR_CLKS)    // 4.0MHz Clock (12.0MHz / 3)
             | ( 7 << AD_CR_CLKDIV )
@@ -269,7 +269,8 @@ static void adcRead( TJoy * j )
     while ( !( AD0DR3 & AD_DR_DONE ) )
         continue;
     //j[1].value[0] = (AD0DR3 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
-/*
+*/
+    /*
     AD0CR = AD_CR_PDN                    // Exit power-down mode
             //| ((3 - 1) << AD_CR_CLKS)    // 4.0MHz Clock (12.0MHz / 3)
             | ( 7 << AD_CR_CLKDIV )
@@ -278,7 +279,7 @@ static void adcRead( TJoy * j )
     while ( !( AD0DR4 & AD_DR_DONE ) )
         continue;
     //j[1].value[1] = (AD0DR4 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
-
+*/
 
 
     AD1CR = AD_CR_PDN                    // Exit power-down mode
@@ -289,7 +290,9 @@ static void adcRead( TJoy * j )
     while ( !( AD1DR3 & AD_DR_DONE ) )
         continue;
     //j[2].value[0] = (AD1DR3 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
+    uint32_t aa = (AD1DR3 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
 
+    /*
     AD1CR = AD_CR_PDN                    // Exit power-down mode
             //| ((3 - 1) << AD_CR_CLKS)    // 4.0MHz Clock (12.0MHz / 3)
             | ( 7 << AD_CR_CLKDIV )
@@ -298,9 +301,9 @@ static void adcRead( TJoy * j )
     while ( !( AD1DR4 & AD_DR_DONE ) )
         continue;
     //j[2].value[1] = (AD1DR4 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
+*/
 
-
-
+/*
     AD1CR = AD_CR_PDN                    // Exit power-down mode
             //| ((3 - 1) << AD_CR_CLKS)    // 4.0MHz Clock (12.0MHz / 3)
             | ( 7 << AD_CR_CLKDIV )
@@ -309,7 +312,8 @@ static void adcRead( TJoy * j )
     while ( !( AD1DR5 & AD_DR_DONE ) )
         continue;
     //j[3].value[0] = (AD1DR5 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
-
+*/
+    /*
     AD1CR = AD_CR_PDN                    // Exit power-down mode
             //| ((3 - 1) << AD_CR_CLKS)    // 4.0MHz Clock (12.0MHz / 3)
             | ( 7 << AD_CR_CLKDIV )
