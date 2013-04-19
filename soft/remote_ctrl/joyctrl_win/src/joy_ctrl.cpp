@@ -40,6 +40,9 @@ bool JoyCtrl::open()
             pd->opened = (pd->res == FT_OK);
             if ( pd->opened )
             {
+                pd->res = FT_SetTimeouts( pd->handle, 500, 500 );
+                if ( pd->res != FT_OK )
+                    return false;
                 pd->res = FT_SetBaudRate( pd->handle, FT_BAUD_38400 );
                 if ( pd->res != FT_OK )
                     return false;
@@ -49,11 +52,14 @@ bool JoyCtrl::open()
                 pd->res = FT_SetFlowControl( pd->handle, FT_FLOW_NONE, 0, 0 );
                 if ( pd->res != FT_OK )
                     return false;
-                break;
+                pd->res = FT_SetRts( pd->handle );
+                if ( pd->res != FT_OK )
+                    return false;
+                return true;
             }
         }
     }
-    return pd->opened;
+    return false;
 }
 
 bool JoyCtrl::isOpen()
