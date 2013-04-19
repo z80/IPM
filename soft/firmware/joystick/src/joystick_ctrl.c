@@ -229,7 +229,7 @@ static void adcInit( void )
 static void delay( void )
 {
     volatile int i;
-    for ( i=0; i<1024; i++ )
+    for ( i=0; i<8; i++ )
         ;
 }
 // Read the current X position using ADC1.6
