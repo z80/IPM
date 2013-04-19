@@ -75,7 +75,7 @@ int32_t sendUart1( uint8_t * data, int sz )
     {
         #define LSR_THRE (1<<5)
         // Wait for TX buffer to empty.
-        while ( U1LSR & LSR_THRE )
+        while ( !(U1LSR & LSR_THRE) )
             continue;
         // Put tu Transmit holder register.
         U1THR = data[i];

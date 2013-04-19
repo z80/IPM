@@ -25,7 +25,7 @@ int main( void )
 
 static void initTest( void )
 {
-    /*
+
     // Only one output.
     IODIR0 = (1<<7);
 
@@ -35,7 +35,7 @@ static void initTest( void )
     // Set P0_7 as GPIO.
     PINSEL0 &= (~P0_7_MSK);
     PINSEL0 |= P0_7;
-    */
+
     initUart1( 20000000, 38400 );
 }
 
@@ -48,12 +48,12 @@ static void delay( void )
 
 static void processTest( void )
 {
-    /*
+
     IOSET0 = (1<<7);
     delay();
     IOCLR0 = (1<<7);
     delay();
-    */
+
     uint8_t a = 7;
     sendUart1( &a, 1 );
     delay();
