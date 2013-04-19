@@ -5,7 +5,12 @@
 #include <sstream>
 #include <boost/regex.hpp>
 
-#include <unistd.h>
+#ifndef WIN32
+    #include <unistd.h>
+    
+#else
+    #include <windows.h>
+#endif
 
 unsigned char OWI_ComputeCRC8(unsigned char inData, unsigned char seed)
 {
