@@ -2,9 +2,6 @@
 #include "joystick_ctrl.h"
 #include "lpc2148.h"
 
-#define JOY_PORT1    IOPORT1
-#define JOY_PORT2    IOPORT2
-
 #define AXIS_X_1    28
 #define AXIS_Y_1    29
 #define NULL_X_1    16
@@ -224,8 +221,8 @@ static void adcInit( void )
     PINSEL0 &= ~( MSK1_3 | MSK1_4 | MSK1_5 );
     PINSEL0 |= AD1_3 | AD1_4 | AD1_5;
 
-    AD0CR = AD_CR_PDN | ( (10 - 1) << AD_CR_CLKDIV );
-    AD1CR = AD_CR_PDN | ( (10 - 1) << AD_CR_CLKDIV );
+    AD0CR = AD_CR_PDN | ( (5 - 1) << AD_CR_CLKDIV );
+    AD1CR = AD_CR_PDN | ( (5 - 1) << AD_CR_CLKDIV );
 }
 
 
@@ -298,7 +295,7 @@ static void adcRead( TJoy * j )
     j[2].value[1] = a;
 
 
-/*
+
     delay();
     AD1CR &= ~(AD_CR_START_MASK | AD_CR_SEL_MASK );
     AD1CR |= AD_CR_SEL5;
@@ -316,7 +313,7 @@ static void adcRead( TJoy * j )
         continue;
     a = (AD1DR6 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
     j[3].value[1] = a;
-*/
+
 }
 
 
