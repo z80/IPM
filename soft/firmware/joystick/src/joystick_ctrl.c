@@ -211,35 +211,21 @@ void joystick( TJoy * j )
 
 static void adcInit( void )
 {
-  // Enable power for ADC1
-  PCONP |= ( PCAD0 | PCAD1 );
+    // Enable power for ADC1
+    PCONP |= ( PCAD0 | PCAD1 );
 
-  // Make sure P0.28 and 0.29 are set to GPIO (just in case)
-  // They are used to toggle between GND and 'floating'
-  PINSEL1 &= ~( MSK0_1 | MSK0_2 | MSK0_3 | MSK0_4 | MSK1_6 );
-  PINSEL1 |= AD0_1 | AD0_2 | AD0_3 | AD0_4 | AD1_6;
+    // Make sure P0.28 and 0.29 are set to GPIO (just in case)
+    // They are used to toggle between GND and 'floating'
+    PINSEL1 &= ~( MSK0_1 | MSK0_2 | MSK0_3 | MSK0_4 | MSK1_6 );
+    PINSEL1 |= AD0_1 | AD0_2 | AD0_3 | AD0_4 | AD1_6;
 
-  PINSEL0 &= ~( MSK1_3 | MSK1_4 | MSK1_5 );
-  PINSEL0 |= AD1_3 | AD1_4 | AD1_5;
-
-  // Initialise ADC converters (using 12MHz PCLK)
-  AD0CR = AD_CR_PDN                    // Exit power-down mode
-          | ((3 - 1) << AD_CR_CLKS)    // 4.0MHz Clock (12.0MHz / 3)
-          | AD_CR_SEL1 | AD_CR_SEL2 |
-            AD_CR_SEL3 | AD_CR_SEL4;   // Use channel 6 and 7
-
-  AD1CR = AD_CR_PDN                    // Exit power-down mode
-          | ((3 - 1) << AD_CR_CLKS)    // 4.0MHz Clock (12.0MHz / 3)
-          | AD_CR_SEL3 | AD_CR_SEL4 |
-            AD_CR_SEL5 | AD_CR_SEL6;   // Use channel 6 and 7
+    PINSEL0 &= ~( MSK1_3 | MSK1_4 | MSK1_5 );
+    PINSEL0 |= AD1_3 | AD1_4 | AD1_5;
 }
 
 // Read the current X position using ADC1.6
 static void adcRead( TJoy * j )
 {
-    // Start AD conversion
-    AD0CR |= AD_CR_START_NOW;
-    AD1CR |= AD_CR_START_NOW;
 
     /*
     // Wait for the conversion to complete
@@ -254,18 +240,85 @@ static void adcRead( TJoy * j )
         continue;
     */
 
+    AD0CR = AD_CR_PDN                    // Exit power-down mode
+            //| ((3 - 1) << AD_CR_CLKS)    // 4.0MHz Clock (12.0MHz / 3)
+            | ( 7 << AD_CR_CLKDIV )
+            | AD_CR_SEL1;
+    AD0CR |= AD_CR_START_NOW;
+    while ( !( AD0DR1 & AD_DR_DONE ) )
+        continue;
     // Return the processed results
     j[0].value[0] = (AD0DR1 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
+
+    AD0CR = AD_CR_PDN                    // Exit power-down mode
+            //| ((3 - 1) << AD_CR_CLKS)    // 4.0MHz Clock (12.0MHz / 3)
+            | ( 7 << AD_CR_CLKDIV )
+            | AD_CR_SEL2;
+    AD0CR |= AD_CR_START_NOW;
+    while ( !( AD0DR2 & AD_DR_DONE ) )
+        continue;
     j[0].value[1] = (AD0DR2 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
 
-    j[1].value[0] = (AD0DR3 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
-    j[1].value[1] = (AD0DR4 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
 
-    j[2].value[0] = (AD1DR3 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
-    j[2].value[1] = (AD1DR4 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
 
-    j[3].value[0] = (AD1DR5 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
-    j[3].value[1] = (AD1DR5 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
+    AD0CR = AD_CR_PDN                    // Exit power-down mode
+            //| ((3 - 1) << AD_CR_CLKS)    // 4.0MHz Clock (12.0MHz / 3)
+            | ( 7 << AD_CR_CLKDIV )
+            | AD_CR_SEL3;
+    AD0CR |= AD_CR_START_NOW;
+    while ( !( AD0DR3 & AD_DR_DONE ) )
+        continue;
+    //j[1].value[0] = (AD0DR3 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
+/*
+    AD0CR = AD_CR_PDN                    // Exit power-down mode
+            //| ((3 - 1) << AD_CR_CLKS)    // 4.0MHz Clock (12.0MHz / 3)
+            | ( 7 << AD_CR_CLKDIV )
+            | AD_CR_SEL4;
+    AD0CR |= AD_CR_START_NOW;
+    while ( !( AD0DR4 & AD_DR_DONE ) )
+        continue;
+    //j[1].value[1] = (AD0DR4 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
+
+
+
+    AD1CR = AD_CR_PDN                    // Exit power-down mode
+            //| ((3 - 1) << AD_CR_CLKS)    // 4.0MHz Clock (12.0MHz / 3)
+            | ( 7 << AD_CR_CLKDIV )
+            | AD_CR_SEL3;
+    AD1CR |= AD_CR_START_NOW;
+    while ( !( AD1DR3 & AD_DR_DONE ) )
+        continue;
+    //j[2].value[0] = (AD1DR3 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
+
+    AD1CR = AD_CR_PDN                    // Exit power-down mode
+            //| ((3 - 1) << AD_CR_CLKS)    // 4.0MHz Clock (12.0MHz / 3)
+            | ( 7 << AD_CR_CLKDIV )
+            | AD_CR_SEL4;
+    AD1CR |= AD_CR_START_NOW;
+    while ( !( AD1DR4 & AD_DR_DONE ) )
+        continue;
+    //j[2].value[1] = (AD1DR4 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
+
+
+
+    AD1CR = AD_CR_PDN                    // Exit power-down mode
+            //| ((3 - 1) << AD_CR_CLKS)    // 4.0MHz Clock (12.0MHz / 3)
+            | ( 7 << AD_CR_CLKDIV )
+            | AD_CR_SEL5;
+    AD1CR |= AD_CR_START_NOW;
+    while ( !( AD1DR5 & AD_DR_DONE ) )
+        continue;
+    //j[3].value[0] = (AD1DR5 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
+
+    AD1CR = AD_CR_PDN                    // Exit power-down mode
+            //| ((3 - 1) << AD_CR_CLKS)    // 4.0MHz Clock (12.0MHz / 3)
+            | ( 7 << AD_CR_CLKDIV )
+            | AD_CR_SEL5;
+    AD1CR |= AD_CR_START_NOW;
+    while ( !( AD1DR5 & AD_DR_DONE ) )
+        continue;
+    //j[3].value[1] = (AD1DR5 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
+*/
 }
 
 

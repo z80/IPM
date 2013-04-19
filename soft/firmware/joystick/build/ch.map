@@ -1063,7 +1063,7 @@ END GROUP
                 0x7fd02000                __dma_end__ = (0x7fd00000 + __dma_size__)
                 0x00000000                . = 0x0
 
-.text           0x00000000      0x7b0
+.text           0x00000000      0x740
                 0x00000000                _text = .
  *(vectors)
  vectors        0x00000000       0x44 build/obj/vectors.o
@@ -1096,17 +1096,17 @@ END GROUP
                 0x000002d0                __early_init
  .text.main     0x000002e0      0x130 build/obj/main.o
                 0x000002e0                main
- .text.initJoy  0x00000410       0xe0 build/obj/joystick_ctrl.o
+ .text.initJoy  0x00000410       0xc0 build/obj/joystick_ctrl.o
                 0x00000410                initJoy
  .text.joystick
-                0x000004f0      0x1f0 build/obj/joystick_ctrl.o
-                0x000004f0                joystick
+                0x000004d0      0x1a0 build/obj/joystick_ctrl.o
+                0x000004d0                joystick
  .text.initUart1
-                0x000006e0       0x90 build/obj/uart1.o
-                0x000006e0                initUart1
+                0x00000670       0x90 build/obj/uart1.o
+                0x00000670                initUart1
  .text.sendUart1
-                0x00000770       0x40 build/obj/uart1.o
-                0x00000770                sendUart1
+                0x00000700       0x40 build/obj/uart1.o
+                0x00000700                sendUart1
  *(.rodata)
  *(.rodata.*)
  *(.glue_7t)
@@ -1117,30 +1117,30 @@ END GROUP
  *(.ctors)
  *(.dtors)
 
-.vfp11_veneer   0x000007b0        0x0
+.vfp11_veneer   0x00000740        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x000007b0        0x0
+.v4_bx          0x00000740        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000007b0                __exidx_start = .
+                0x00000740                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000007b0                __exidx_end = .
+                0x00000740                __exidx_end = .
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
 .eh_frame
  *(.eh_frame)
-                0x000007b0                . = ALIGN (0x4)
-                0x000007b0                _etext = .
-                0x000007b0                _textdata = _etext
+                0x00000740                . = ALIGN (0x4)
+                0x00000740                _etext = .
+                0x00000740                _textdata = _etext
 
-.data           0x40000200        0x0 load address 0x000007b0
+.data           0x40000200        0x0 load address 0x00000740
                 0x40000200                _data = .
  *(.data)
                 0x40000200                . = ALIGN (0x4)
@@ -1150,7 +1150,7 @@ END GROUP
                 0x40000200                . = ALIGN (0x4)
                 0x40000200                _edata = .
 
-.bss            0x40000200        0x0 load address 0x000007b0
+.bss            0x40000200        0x0 load address 0x00000740
                 0x40000200                _bss_start = .
  *(.bss)
                 0x40000200                . = ALIGN (0x4)
@@ -1506,7 +1506,7 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_info    0x00011386      0x15b build/obj/joystick_ctrl.o
  .debug_info    0x000114e1      0x177 build/obj/uart1.o
 
-.debug_line     0x00000000     0x6a14
+.debug_line     0x00000000     0x69dd
  .debug_line    0x00000000       0x5b build/obj/chcore.o
  .debug_line    0x0000005b      0x1be build/obj/chsys.o
  .debug_line    0x00000219       0x1d build/obj/chdebug.o
@@ -1567,8 +1567,8 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_line    0x0000628c      0x2ff build/obj/chprintf.o
  .debug_line    0x0000658b      0x109 build/obj/main.o
  .debug_line    0x00006694       0xe2 build/obj/ftdi_ctrl.o
- .debug_line    0x00006776      0x169 build/obj/joystick_ctrl.o
- .debug_line    0x000068df      0x135 build/obj/uart1.o
+ .debug_line    0x00006776      0x132 build/obj/joystick_ctrl.o
+ .debug_line    0x000068a8      0x135 build/obj/uart1.o
 
 .debug_pubnames
                 0x00000000     0x11b6
@@ -1874,7 +1874,7 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_aranges
                 0x00000d10       0x30 build/obj/uart1.o
 
-.debug_ranges   0x00000000     0x1290
+.debug_ranges   0x00000000     0x1288
  .debug_ranges  0x00000000       0x10 build/obj/chcore.o
  .debug_ranges  0x00000010       0x20 build/obj/chsys.o
  .debug_ranges  0x00000030       0x28 build/obj/chvt.o
@@ -1916,8 +1916,8 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_ranges  0x00001130       0x18 build/obj/chprintf.o
  .debug_ranges  0x00001148       0xd0 build/obj/main.o
  .debug_ranges  0x00001218       0x18 build/obj/ftdi_ctrl.o
- .debug_ranges  0x00001230       0x40 build/obj/joystick_ctrl.o
- .debug_ranges  0x00001270       0x20 build/obj/uart1.o
+ .debug_ranges  0x00001230       0x38 build/obj/joystick_ctrl.o
+ .debug_ranges  0x00001268       0x20 build/obj/uart1.o
 
 .debug_str      0x00000000     0x2402
  .debug_str     0x00000000       0xb8 build/obj/chcore.o
@@ -2045,7 +2045,7 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_str     0x000023b1       0x51 build/obj/uart1.o
                                 0x126 (size before relaxing)
 
-.debug_frame    0x00000000     0x2060
+.debug_frame    0x00000000     0x2048
  .debug_frame   0x00000000       0x20 build/obj/chcore.o
  .debug_frame   0x00000020       0x5c build/obj/chsys.o
  .debug_frame   0x0000007c       0x5c build/obj/chvt.o
@@ -2087,15 +2087,15 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_frame   0x00001e08       0x7c build/obj/chprintf.o
  .debug_frame   0x00001e84       0x34 build/obj/main.o
  .debug_frame   0x00001eb8       0x44 build/obj/ftdi_ctrl.o
- .debug_frame   0x00001efc       0x50 build/obj/joystick_ctrl.o
- .debug_frame   0x00001f4c       0x50 build/obj/uart1.o
- .debug_frame   0x00001f9c       0x20 c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2\libgcc.a(_udivsi3.o)
- .debug_frame   0x00001fbc       0x20 c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2\libgcc.a(_umodsi3.o)
- .debug_frame   0x00001fdc       0x28 c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib\libc.a(lib_a-strcasecmp.o)
- .debug_frame   0x00002004       0x30 c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib\libc.a(lib_a-strchr.o)
- .debug_frame   0x00002034       0x2c c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib\libc.a(lib_a-strspn.o)
+ .debug_frame   0x00001efc       0x38 build/obj/joystick_ctrl.o
+ .debug_frame   0x00001f34       0x50 build/obj/uart1.o
+ .debug_frame   0x00001f84       0x20 c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2\libgcc.a(_udivsi3.o)
+ .debug_frame   0x00001fa4       0x20 c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2\libgcc.a(_umodsi3.o)
+ .debug_frame   0x00001fc4       0x28 c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib\libc.a(lib_a-strcasecmp.o)
+ .debug_frame   0x00001fec       0x30 c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib\libc.a(lib_a-strchr.o)
+ .debug_frame   0x0000201c       0x2c c:/programs/codesourcery/arm-2012.03-56/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib\libc.a(lib_a-strspn.o)
 
-.debug_loc      0x00000000     0x658b
+.debug_loc      0x00000000     0x6565
  .debug_loc     0x00000000       0x9e build/obj/chsys.o
  .debug_loc     0x0000009e       0xbf build/obj/chvt.o
  .debug_loc     0x0000015d      0x2c1 build/obj/chschd.o
@@ -2136,8 +2136,8 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_loc     0x00005d22      0x669 build/obj/chprintf.o
  .debug_loc     0x0000638b       0x2c build/obj/main.o
  .debug_loc     0x000063b7       0x5f build/obj/ftdi_ctrl.o
- .debug_loc     0x00006416       0x6c build/obj/joystick_ctrl.o
- .debug_loc     0x00006482      0x109 build/obj/uart1.o
+ .debug_loc     0x00006416       0x46 build/obj/joystick_ctrl.o
+ .debug_loc     0x0000645c      0x109 build/obj/uart1.o
 
 Cross Reference Table
 
