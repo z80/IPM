@@ -3,7 +3,6 @@
 #define __JOYSTICK_CTRL_H_
 
 #include "ch.h"
-#include "hal.h"
 
 #define NULL_X_BIT      1
 #define NULL_Y_BIT      2

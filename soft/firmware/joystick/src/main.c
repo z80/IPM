@@ -5,6 +5,7 @@
 
 #include "lpc2148.h"
 #include "uart1.h"
+#include "joystick_ctrl.h"
 static void initTest( void );
 static void processTest( void );
 
@@ -25,6 +26,8 @@ int main( void )
 
 static void initTest( void )
 {
+    initUart1( 20000000, 38400 );
+    initJoy();
 
     // Only one output.
     IODIR0 = (1<<7);
@@ -35,8 +38,6 @@ static void initTest( void )
     // Set P0_7 as GPIO.
     PINSEL0 &= (~P0_7_MSK);
     PINSEL0 |= P0_7;
-
-    initUart1( 20000000, 38400 );
 }
 
 static void delay( void )
@@ -54,8 +55,15 @@ static void processTest( void )
     IOCLR0 = (1<<7);
     delay();
 
-    uint8_t a = 7;
-    sendUart1( &a, 1 );
+    uint8_t a[2];
+    a[0] = 128+1;
+    a[1] = 255;
+
+    sendUart1( a, 2 );
+    delay();
+
+    TJoy joys[4];
+    joystick( joys );
     delay();
 }
 

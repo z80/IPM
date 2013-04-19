@@ -29,104 +29,107 @@
 #define NULL_Y_4    23
 #define TOTMANN_4   7
 
+#define STOP_BTN    16
+
+// PINSELs for joysticks.
+#define P0_4_MSK    (3<<8)
+#define P0_5_MSK    (3<<10)
+#define P0_6_MSK    (3<<12)
+#define P0_7_MSK    (3<<14)
+
+#define P0_12_MSK   (3<<24)
+#define P0_12_ADC   (3<<24)
+#define P0_13_MSK   (3<<26)
+#define P0_13_ADC   (3<<26)
+#define P0_15_MSK   (3<<30)
+#define P0_15_ADC   (3<<30)
+
+#define P0_16_MSK   (3)
+
+#define P0_21_MSK   (3<<10)
+#define P0_21_ADC   (2<<10)
+#define P0_25_MSK   (3<<18)
+#define P0_25_ADC   (1<<18)
+#define P0_28_MSK   (3<<24)
+#define P0_28_ADC   (1<<24)
+#define P0_29_MSK   (3<<26)
+#define P0_29_ADC   (1<<26)
+#define P0_30_MSK   (3<<28)
+#define P0_30_ADC   (1<<28)
+
+#define P1_16_MSK
+#define P1_17_MSK
+#define P1_18_MSK
+#define P1_19_MSK
+#define P1_20_MSK
+#define P1_21_MSK
+#define P1_22_MSK
+#define P1_23_MSK
+
+
+
+
 
 #define JOY_CNT             4
-#define JOY_QUERY_PERIOD    10
 
-static Mutex mutex;
-static TJoy joy[ 4 ];
-
-static void readJoy( TJoy * joy,
-                     uint32_t nullx, uint32_t nully,
-                     uint32_t totmann,
-                     uint32_t axisx, uint32_t axisy );
 static void adcInit( void );
-static void adcRead( void );
-
-static WORKING_AREA( waJoy, 256 );
-
-static msg_t Joy( void *arg )
-{
-    (void)arg;
-	while ( 1 )
-	{
-	    readJoy( joy,   NULL_X_1, NULL_Y_1, TOTMANN_1, AXIS_X_1, AXIS_Y_1 );
-	    readJoy( joy+1, NULL_X_2, NULL_Y_2, TOTMANN_2, AXIS_X_2, AXIS_Y_2 );
-	    readJoy( joy+2, NULL_X_3, NULL_Y_3, TOTMANN_3, AXIS_X_3, AXIS_Y_3 );
-	    readJoy( joy+3, NULL_X_4, NULL_Y_4, TOTMANN_4, AXIS_X_4, AXIS_Y_4 );
-	    adcRead();
-
-        chThdSleepMilliseconds( JOY_QUERY_PERIOD );
-	}
-	return 0;
-}
+static void adcRead( TJoy * j );
 
 void initJoy( void )
 {
-    palSetPadMode( JOY_PORT1, AXIS_X_1,  PAL_MODE_INPUT );
-    palSetPadMode( JOY_PORT1, AXIS_Y_1,  PAL_MODE_INPUT );
-    palSetPadMode( JOY_PORT2, NULL_X_1,  PAL_MODE_INPUT );
-    palSetPadMode( JOY_PORT2, NULL_Y_1,  PAL_MODE_INPUT );
-    palSetPadMode( JOY_PORT1, TOTMANN_1, PAL_MODE_INPUT );
+    PINSEL0 &= ~( P0_4_MSK |
+                  P0_5_MSK |
+                  P0_6_MSK |
+                  P0_7_MSK |
+                  P0_12_MSK |
+                  P0_13_MSK |
+                  P0_15_MSK );
 
-    palSetPadMode( JOY_PORT1, AXIS_X_2,  PAL_MODE_INPUT );
-    palSetPadMode( JOY_PORT1, AXIS_Y_2,  PAL_MODE_INPUT );
-    palSetPadMode( JOY_PORT2, NULL_X_2,  PAL_MODE_INPUT );
-    palSetPadMode( JOY_PORT2, NULL_Y_2,  PAL_MODE_INPUT );
-    palSetPadMode( JOY_PORT1, TOTMANN_2, PAL_MODE_INPUT );
+    PINSEL1 &= ~( P0_21_MSK |
+                  P0_25_MSK |
+                  P0_28_MSK |
+                  P0_29_MSK |
+                  P0_30_MSK );
 
-    palSetPadMode( JOY_PORT1, AXIS_X_3,  PAL_MODE_INPUT );
-    palSetPadMode( JOY_PORT1, AXIS_Y_3,  PAL_MODE_INPUT );
-    palSetPadMode( JOY_PORT2, NULL_X_3,  PAL_MODE_INPUT );
-    palSetPadMode( JOY_PORT2, NULL_Y_3,  PAL_MODE_INPUT );
-    palSetPadMode( JOY_PORT1, TOTMANN_3, PAL_MODE_INPUT );
+    PINSEL0 |= ( P0_12_ADC |
+                 P0_13_ADC |
+                 P0_15_ADC );
 
-    palSetPadMode( JOY_PORT1, AXIS_X_4,  PAL_MODE_INPUT );
-    palSetPadMode( JOY_PORT1, AXIS_Y_4,  PAL_MODE_INPUT );
-    palSetPadMode( JOY_PORT2, NULL_X_4,  PAL_MODE_INPUT );
-    palSetPadMode( JOY_PORT2, NULL_Y_4,  PAL_MODE_INPUT );
-    palSetPadMode( JOY_PORT1, TOTMANN_4, PAL_MODE_INPUT );
+    PINSEL1 |= ( P0_21_ADC |
+                 P0_25_ADC |
+                 P0_28_ADC |
+                 P0_29_ADC |
+                 P0_30_ADC );
+
+    IODIR0 &= ~( (1<<4) | (1<<5) |
+                 (1<<6) | (1<<7) |
+                 (1<<16) );
+    IODIR1 &= ~( (1<<16) | (1<<17) |
+                 (1<<18) | (1<<19) |
+                 (1<<20) | (1<<21) |
+                 (1<<22) | (1<<23) );
 
     adcInit();
-
-    chMtxInit( &mutex );
-    chThdCreateStatic( waJoy, sizeof( waJoy ), NORMALPRIO, Joy, NULL );
 }
 
-void joystick( TJoy * res )
+void joystick( TJoy * j )
 {
-    chMtxLock( &mutex );
-        uint8_t i;
-        for ( i=0; i<JOY_CNT; i++ )
-        {
-            res[i].flags = joy[i].flags;
-            res[i].value[0] = joy[i].value[0];
-            res[i].value[1] = joy[i].value[1];
-        }
-    chMtxUnlock();
+    j[0].flags = ( ( IOPIN1 & (1<<16) ) ? NULL_X_BIT : 0 ) +
+                 ( ( IOPIN1 & (1<<17) ) ? NULL_Y_BIT : 0 ) +
+                 ( ( IOPIN0 & (1<<4) )  ? TOTMANN_BIT : 0 );
+    j[1].flags = ( ( IOPIN1 & (1<<18) ) ? NULL_X_BIT : 0 ) +
+                 ( ( IOPIN1 & (1<<19) ) ? NULL_Y_BIT : 0 ) +
+                 ( ( IOPIN0 & (1<<5) )  ? TOTMANN_BIT : 0 );
+    j[2].flags = ( ( IOPIN1 & (1<<20) ) ? NULL_X_BIT : 0 ) +
+                 ( ( IOPIN1 & (1<<21) ) ? NULL_Y_BIT : 0 ) +
+                 ( ( IOPIN0 & (1<<6) )  ? TOTMANN_BIT : 0 );
+    j[3].flags = ( ( IOPIN1 & (1<<22) ) ? NULL_X_BIT : 0 ) +
+                 ( ( IOPIN1 & (1<<23) ) ? NULL_Y_BIT : 0 ) +
+                 ( ( IOPIN0 & (1<<7) )  ? TOTMANN_BIT : 0 );
+
+    adcRead( j );
 }
 
-static void readJoy( TJoy * joy,
-                     uint32_t nullx, uint32_t nully,
-                     uint32_t totmann,
-                     uint32_t axisx, uint32_t axisy )
-{
-    chMtxLock( &mutex );
-        if ( palReadPad( JOY_PORT2, nullx ) )
-            joy->flags |= NULL_X_BIT;
-        else
-            joy->flags &= ~NULL_X_BIT;
-        if ( palReadPad( JOY_PORT2, nully ) )
-            joy->flags |= NULL_Y_BIT;
-        else
-            joy->flags &= ~NULL_Y_BIT;
-
-        if ( palReadPad( JOY_PORT1, totmann ) )
-            joy->flags |= NULL_Y_BIT;
-        else
-            joy->flags &= ~NULL_Y_BIT;
-    chMtxUnlock();
-}
 
 
 
@@ -232,12 +235,13 @@ static void adcInit( void )
 }
 
 // Read the current X position using ADC1.6
-static void adcRead( void )
+static void adcRead( TJoy * j )
 {
     // Start AD conversion
     AD0CR |= AD_CR_START_NOW;
     AD1CR |= AD_CR_START_NOW;
 
+    /*
     // Wait for the conversion to complete
     while ( (!( AD0DR4 & AD_DR_DONE )) ||
             (!( AD0DR3 & AD_DR_DONE )) ||
@@ -247,22 +251,21 @@ static void adcRead( void )
             (!( AD1DR5 & AD_DR_DONE )) ||
             (!( AD1DR4 & AD_DR_DONE )) ||
             (!( AD1DR3 & AD_DR_DONE )) )
-      ;
+        continue;
+    */
 
-    chMtxLock( &mutex );
-        // Return the processed results
-        joy[0].value[0] = (AD0DR1 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
-        joy[0].value[1] = (AD0DR2 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
+    // Return the processed results
+    j[0].value[0] = (AD0DR1 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
+    j[0].value[1] = (AD0DR2 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
 
-        joy[1].value[0] = (AD0DR3 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
-        joy[1].value[1] = (AD0DR4 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
+    j[1].value[0] = (AD0DR3 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
+    j[1].value[1] = (AD0DR4 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
 
-        joy[2].value[0] = (AD1DR3 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
-        joy[2].value[1] = (AD1DR4 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
+    j[2].value[0] = (AD1DR3 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
+    j[2].value[1] = (AD1DR4 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
 
-        joy[3].value[0] = (AD1DR5 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
-        joy[3].value[1] = (AD1DR5 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
-    chMtxUnlock();
+    j[3].value[0] = (AD1DR5 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
+    j[3].value[1] = (AD1DR5 & AD_DR_RESULTMASK) >> AD_DR_RESULTSHIFT;
 }
 
 
