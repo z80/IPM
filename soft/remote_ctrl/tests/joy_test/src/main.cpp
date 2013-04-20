@@ -17,7 +17,11 @@ int main( int argc, char * argv[] )
     JoyCtrl c;
     bool res = c.open();
     if ( !res )
+    {
+        std::cout << "Failed to open device :(\r\n";
         return 1;
+    }
+    std::cout << "Managed to open device!!!\r\n";
     c.query();
     return 0;
 }
