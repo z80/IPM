@@ -24,7 +24,16 @@ JoyCtrl::~JoyCtrl()
 bool JoyCtrl::open()
 {
     Ftdi::Context & c = pd->ftdi;
-    bool res = c.open( 1234, 5678 );
+    bool res = ( c.open( 0x0403, 0x6001 ) == 0 );
+    if ( res )
+    {
+        if ( c.set_baud_rate( 38400 ) != 0 )
+            return false;
+        if ( c.set_flow_control( SIO_DISABLE_FLOW_CTRL ) != 0 )
+            return false;
+        if ( c.set_line_property( BITS_8, STOP_BIT_1, NONE, BREAK_OFF ) != 0 )
+            return false;
+    }
     return res;
 }
 
