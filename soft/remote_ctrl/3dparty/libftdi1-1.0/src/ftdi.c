@@ -441,11 +441,8 @@ int ftdi_usb_get_strings(struct ftdi_context * ftdi, struct libusb_device * dev,
     {
         if (libusb_get_string_descriptor_ascii(ftdi->usb_dev, desc.iSerialNumber, (unsigned char *)serial, serial_len) < 0)
         {
-            //ftdi_usb_close_internal (ftdi);
-            //ftdi_error_return(-9, "libusb_get_string_descriptor_ascii() failed");
-            // Somewhy this fails.
-            // But I want it to work properly!
-            strcpy( serial, "12345" );
+            ftdi_usb_close_internal (ftdi);
+            ftdi_error_return(-9, "libusb_get_string_descriptor_ascii() failed");
         }
     }
 
