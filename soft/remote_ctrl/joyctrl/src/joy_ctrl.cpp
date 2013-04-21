@@ -45,6 +45,8 @@ bool JoyCtrl::open()
 
 
     tcsetattr( pd->ftdi, TCSANOW, &options );
+
+    return true;
 }
 
 bool JoyCtrl::isOpen()
