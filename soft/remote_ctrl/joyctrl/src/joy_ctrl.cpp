@@ -1,6 +1,12 @@
 
 #include "joy_ctrl.h"
-#include "ftdi.hpp"
+#include <termios.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <sys/signal.h>
+#include <sys/types.h>
+#include <sys/ioctl.h>
 
 class JoyCtrl::PD
 {
@@ -8,7 +14,7 @@ public:
     PD() {}
     ~PD() {}
 
-    Ftdi::Context ftdi;
+    int ftdi;
 };
 
 JoyCtrl::JoyCtrl()
@@ -23,55 +29,57 @@ JoyCtrl::~JoyCtrl()
 
 bool JoyCtrl::open()
 {
-    Ftdi::Context & c = pd->ftdi;
-    Ftdi::List * list = Ftdi::List::find_all( c, 0x0403, 0x6001 );
-    bool res = false;
-    for ( Ftdi::List::iterator it=list->begin();
-          it!=list->end(); it++ )
-    {
-        if ( it->open() == 0 )
-        {
-            c = *it;
-            delete list;
-            if ( c.set_baud_rate( 38400 ) != 0 )
-                return false;
-            if ( c.set_flow_control( SIO_DISABLE_FLOW_CTRL ) != 0 )
-                return false;
-            if ( c.set_line_property( BITS_8, STOP_BIT_1, NONE, BREAK_OFF ) != 0 )
-                return false;
-            res = true;
-            break;
-        }
-    }
-    if ( !res )
-        delete list;
-    return res;
+    pd->ftdi = ::open("/dev/ttyUSB0", O_RDWR | O_NOCTTY | O_NDELAY );
+    if ( pd->ftdi < 0 )
+        return false;
+    struct termios options;
+    tcgetattr( pd->ftdi, &options );
+    cfsetispeed( &options, B38400 );
+    cfsetospeed( &options, B38400 );
+    options.c_cflag &= ~( HUPCL | CSTOPB | CSIZE );
+    options.c_cflag |= (CLOCAL | CREAD | CS8 );
+
+    options.c_iflag &= ~( IXON | IXOFF | IXANY );
+
+    options.c_oflag &= ~OPOST;
+
+
+    tcsetattr( pd->ftdi, TCSANOW, &options );
 }
 
 bool JoyCtrl::isOpen()
 {
-    Ftdi::Context & c = pd->ftdi;
-    bool res = c.is_open();
+    bool res = (pd->ftdi >= 0);
     return res;
 }
 
 
 void JoyCtrl::close()
 {
-    Ftdi::Context & c = pd->ftdi;
-    c.close();
+    ::close( pd->ftdi );
 }
 
 bool JoyCtrl::query()
 {
-    const int sz = 12;
-    unsigned char buffer[sz];
-    Ftdi::Context & c = pd->ftdi;
-    int cnt = c.write( buffer, 1 );
+    const int SZ = 12;
+    unsigned char buffer[SZ];
+    int cnt = ::write( pd->ftdi, buffer, 1 );
     if ( cnt < 1 )
         return false;
-    cnt = c.read( buffer, sz );
-    if ( cnt < sz )
+    int tries = 500;
+    while ( true )
+    {
+        int bytes;
+        ioctl( pd->ftdi, FIONREAD, &bytes );
+        if ( bytes >= SZ )
+            break;
+        tries--;
+        if ( tries <= 0 )
+            return false;
+        usleep( 1000 );
+    }
+    cnt = ::read( pd->ftdi, buffer, SZ );
+    if ( cnt < SZ )
         return false;
     return true;
 }
