@@ -84,7 +84,8 @@ void initJoy( void )
                   P0_13_MSK |
                   P0_15_MSK );
 
-    PINSEL1 &= ~( P0_21_MSK |
+    PINSEL1 &= ~( P0_16_MSK |
+                  P0_21_MSK |
                   P0_25_MSK |
                   P0_28_MSK |
                   P0_29_MSK |
@@ -123,7 +124,8 @@ void joystick( TJoy * j )
 {
     j[0].flags = ( ( IOPIN1 & (1<<16) ) ? NULL_X_BIT : 0 ) +
                  ( ( IOPIN1 & (1<<17) ) ? NULL_Y_BIT : 0 ) +
-                 ( ( IOPIN0 & (1<<4) )  ? TOTMANN_BIT : 0 );
+                 ( ( IOPIN0 & (1<<4) )  ? TOTMANN_BIT : 0 ) +
+                 ( ( IOPIN0 & (1<<16) ) ? STOP_BTN_BIT : 0 );  // Zero joystick contains additional bit describing stop button.
     j[1].flags = ( ( IOPIN1 & (1<<18) ) ? NULL_X_BIT : 0 ) +
                  ( ( IOPIN1 & (1<<19) ) ? NULL_Y_BIT : 0 ) +
                  ( ( IOPIN0 & (1<<5) )  ? TOTMANN_BIT : 0 );

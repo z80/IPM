@@ -13,12 +13,12 @@ void processFtdi( void )
 {
     uint8_t chr;
     uint32_t sz;
-    sz = receviceUart1( &chr, 1 );
+    sz = receiveUart1( &chr, 1 );
     if ( sz )
     {
         TJoy joys[4];
         joystick( joys );
-        sz = sendUart1( joys, sizeof( joys ) );
+        sz = sendUart1( (uint8_t *)joys, sizeof( joys ) );
     }
 }
 

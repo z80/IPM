@@ -7,6 +7,7 @@
 #define NULL_X_BIT      1
 #define NULL_Y_BIT      2
 #define TOTMANN_BIT     4
+#define STOP_BTN_BIT    8
 
 struct SJoy
 {

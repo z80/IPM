@@ -6,24 +6,22 @@
 #include "lpc2148.h"
 #include "uart1.h"
 #include "joystick_ctrl.h"
-static void initTest( void );
-static void processTest( void );
+//static void initTest( void );
+//static void processTest( void );
 
 int main( void )
 {
-    //halInit();
-    //chSysInit();
-
-    initTest();
-    //initFtdi( );
+    //initTest();
+    initFtdi( );
     while ( TRUE )
     {
-        processTest();
-        //processFtdi();
+        //processTest();
+        processFtdi();
     }
     return 0;
 }
 
+/*
 static void initTest( void )
 {
     initUart1( 20000000, 38400 );
@@ -65,7 +63,7 @@ static void processTest( void )
     joystick( joys );
     delay();
 }
-
+*/
 
 
 
