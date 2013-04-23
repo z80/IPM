@@ -3,6 +3,7 @@
 #include <windows.h>
 #include "ftd2xx.h"
 
+
 class JoyCtrl::PD
 {
 public:
@@ -74,9 +75,9 @@ void JoyCtrl::close()
     pd->opened = false;
 }
 
-bool JoyCtrl::query()
+bool JoyCtrl::query( unsigned char * result, int & sz )
 {
-    const int SZ = 12;
+    const int SZ = 32;
     unsigned char buffer[SZ];
     DWORD written = 0;
     pd->res = FT_Write( pd->handle, reinterpret_cast<LPVOID>( buffer ), 1, &written );
@@ -100,6 +101,8 @@ bool JoyCtrl::query()
     pd->res = FT_Read( pd->handle, reinterpret_cast<LPVOID>( buffer ), static_cast<DWORD>( SZ ), &bytes );
     if ( pd->res != FT_OK )
         return false;
+    memcpy( result, buffer, bytes );
+    sz = bytes;
     if ( bytes < SZ )
         return false;
     return true;

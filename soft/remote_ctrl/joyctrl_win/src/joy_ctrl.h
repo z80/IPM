@@ -12,7 +12,7 @@ public:
     bool isOpen();
     void close();
 
-    bool query();
+    bool query( unsigned char * buffer, int & sz );
 
 public:
     class PD;
