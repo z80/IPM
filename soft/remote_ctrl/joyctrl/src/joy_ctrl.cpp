@@ -61,15 +61,16 @@ void JoyCtrl::close()
     ::close( pd->ftdi );
 }
 
-bool JoyCtrl::query()
+bool JoyCtrl::query( unsigned char * buffer, int & sz )
 {
-    const int SZ = 12;
-    unsigned char buffer[SZ];
-    int cnt = ::write( pd->ftdi, buffer, 1 );
+    const int SZ = 32;
+    int tries = 500;
+    int bytes;
+    unsigned char arg = 0;
+    int cnt = ::write( pd->ftdi, &arg, 1 );
     if ( cnt < 1 )
         return false;
-    int tries = 500;
-    while ( true )
+    /*while ( true )
     {
         int bytes;
         ioctl( pd->ftdi, FIONREAD, &bytes );
@@ -79,9 +80,9 @@ bool JoyCtrl::query()
         if ( tries <= 0 )
             return false;
         usleep( 1000 );
-    }
-    cnt = ::read( pd->ftdi, buffer, SZ );
-    if ( cnt < SZ )
+    }*/
+    sz = ::read( pd->ftdi, buffer, SZ );
+    if ( sz < SZ )
         return false;
     return true;
 }

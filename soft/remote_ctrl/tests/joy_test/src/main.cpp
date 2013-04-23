@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <sstream>
+#include "stdio.h"
 
 #ifndef WIN32
     #include <unistd.h>
@@ -25,6 +26,10 @@ int main( int argc, char * argv[] )
     unsigned char buffer[512];
     int sz;
     c.query( buffer, sz );
+    for ( int i=0; i<sz; i++ )
+    {
+        printf( "%2i: 0x%2X\r\n", i, buffer[i] );
+    }
     return 0;
 }
 

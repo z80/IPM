@@ -57,7 +57,10 @@ static int isOpen( lua_State * L )
 static int query( lua_State * L )
 {
     JoyCtrl * io = *reinterpret_cast<JoyCtrl * *>( lua_touserdata( L, 1 ) );
-    bool res = io->query();
+    const int SZ = 32;
+    unsigned char buffer[ SZ ];
+    int sz;
+    bool res = io->query( buffer, sz );
     lua_pushboolean( L, res ? 1 : 0 );
     return 1;
 }
