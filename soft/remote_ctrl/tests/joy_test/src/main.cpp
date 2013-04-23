@@ -26,6 +26,11 @@ int main( int argc, char * argv[] )
     unsigned char buffer[512];
     int sz;
     c.query( buffer, sz );
+    c.query( buffer, sz );
+    c.query( buffer, sz );
+    c.query( buffer, sz );
+    c.query( buffer, sz );
+    c.query( buffer, sz );
     for ( int i=0; i<sz; i++ )
     {
         printf( "%2i: 0x%2X\r\n", i, buffer[i] );

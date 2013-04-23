@@ -15,6 +15,7 @@ else( WIN32 )
     list( APPEND com_src "./src/posix_qextserialport.cpp" )
     set( defs _TTY_POSIX_ )
 endif( WIN32 )
+message( STATUS "SERIAL DEFS: ${defs}" )
 
 # Статическая, поскольку хотелось бы только в одном месте использовать.
 add_library( serial STATIC ${com_src} )
@@ -22,6 +23,6 @@ target_link_libraries( serial ${QT_LIBRARIES} )
 # Символы для импорта динамических библиотек.
 set_property( TARGET serial PROPERTY DEFINE_SYMBOL ${defs} )
 
-#set_property( TARGET serial PROPERTY COMPILE_DEFINITIONS ${defs} )
+set_property( TARGET serial PROPERTY COMPILE_DEFINITIONS ${defs} )
 
 message( STATUS "configuring serial" )

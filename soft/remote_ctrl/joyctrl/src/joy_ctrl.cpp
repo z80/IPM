@@ -1,12 +1,6 @@
 
 #include "joy_ctrl.h"
-#include <termios.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <sys/signal.h>
-#include <sys/types.h>
-#include <sys/ioctl.h>
+#include "qextserialport.h"
 
 class JoyCtrl::PD
 {
@@ -14,12 +8,13 @@ public:
     PD() {}
     ~PD() {}
 
-    int ftdi;
+    QextSerialPort * ftdi;
 };
 
 JoyCtrl::JoyCtrl()
 {
     pd = new PD();
+    pd->ftdi = 0;
 }
 
 JoyCtrl::~JoyCtrl()
@@ -29,43 +24,44 @@ JoyCtrl::~JoyCtrl()
 
 bool JoyCtrl::open()
 {
-    pd->ftdi = ::open("/dev/ttyUSB0", O_RDWR | O_NOCTTY | O_NDELAY );
-    if ( pd->ftdi < 0 )
-        return false;
-    struct termios options;
-    tcgetattr( pd->ftdi, &options );
-    cfsetispeed( &options, B38400 );
-    cfsetospeed( &options, B38400 );
-    /*options.c_cflag &= ~( HUPCL | CSTOPB | CSIZE | PARENB );
-    options.c_cflag |= (CLOCAL | CREAD | CS8 );
-
-    options.c_iflag &= ~( IXON | IXOFF | IXANY );
-
-    options.c_oflag &= ~OPOST;*/
-
-    options.c_cflag = CS8|CREAD|CLOCAL;
-    options.c_iflag = 0;
-    options.c_oflag = 0;
-    options.c_cc[VMIN] = 0;
-    options.c_cc[VTIME] = 1;
-
-
-
-    tcsetattr( pd->ftdi, TCSANOW, &options );
-
-    return true;
+    if ( pd->ftdi )
+    {
+        pd->ftdi->deleteLater();
+    }
+    QextSerialPort * port;
+    port = new QextSerialPort("/dev/ttyUSB0");
+    port->setBaudRate(BAUD38400);
+    port->setFlowControl(FLOW_OFF);
+    port->setParity(PAR_NONE);
+    port->setDataBits(DATA_8);
+    port->setStopBits(STOP_1);
+    pd->ftdi = port;
+    bool res = port->open( QIODevice::ReadWrite );
+    if ( !res )
+    {
+        port->deleteLater();
+        pd->ftdi = 0;
+    }
+    return res;
 }
 
 bool JoyCtrl::isOpen()
 {
-    bool res = (pd->ftdi >= 0);
+    if ( !pd->ftdi )
+        return false;
+    bool res = pd->ftdi->isOpen();
     return res;
 }
 
 
 void JoyCtrl::close()
 {
-    ::close( pd->ftdi );
+    if ( pd->ftdi )
+    {
+        pd->ftdi->close();
+        pd->ftdi->deleteLater();
+    }
+    pd->ftdi = 0;
 }
 
 bool JoyCtrl::query( unsigned char * buffer, int & sz )
@@ -74,21 +70,21 @@ bool JoyCtrl::query( unsigned char * buffer, int & sz )
     int tries = 500;
     int bytes;
     unsigned char arg = 0;
-    int cnt = ::write( pd->ftdi, &arg, 1 );
+    int cnt = pd->ftdi->write( reinterpret_cast<char *>( &arg ), 1 );
     if ( cnt < 1 )
         return false;
-    /*while ( true )
+    while ( true )
     {
         int bytes;
-        ioctl( pd->ftdi, FIONREAD, &bytes );
+        bytes = pd->ftdi->bytesAvailable();
         if ( bytes >= SZ )
             break;
         tries--;
         if ( tries <= 0 )
             return false;
         usleep( 1000 );
-    }*/
-    sz = ::read( pd->ftdi, buffer, SZ );
+    }
+    sz = pd->ftdi->read( reinterpret_cast<char *>( buffer ), SZ );
     if ( sz < SZ )
         return false;
     return true;
