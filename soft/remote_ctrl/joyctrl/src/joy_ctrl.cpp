@@ -36,12 +36,19 @@ bool JoyCtrl::open()
     tcgetattr( pd->ftdi, &options );
     cfsetispeed( &options, B38400 );
     cfsetospeed( &options, B38400 );
-    options.c_cflag &= ~( HUPCL | CSTOPB | CSIZE );
+    /*options.c_cflag &= ~( HUPCL | CSTOPB | CSIZE | PARENB );
     options.c_cflag |= (CLOCAL | CREAD | CS8 );
 
     options.c_iflag &= ~( IXON | IXOFF | IXANY );
 
-    options.c_oflag &= ~OPOST;
+    options.c_oflag &= ~OPOST;*/
+
+    options.c_cflag = CS8|CREAD|CLOCAL;
+    options.c_iflag = 0;
+    options.c_oflag = 0;
+    options.c_cc[VMIN] = 0;
+    options.c_cc[VTIME] = 1;
+
 
 
     tcsetattr( pd->ftdi, TCSANOW, &options );
