@@ -66,7 +66,7 @@ void JoyCtrl::close()
 
 bool JoyCtrl::query( unsigned char * buffer, int & sz )
 {
-    const int SZ = 32;
+    const int SZ = 20;
     int tries = 500;
     int bytes;
     unsigned char arg = 0;

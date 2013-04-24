@@ -1,6 +1,6 @@
 
 #include "luajoyctrl.h"
-#include "joy_ctrl.h"
+#include "joyctrl_top.h"
 
 static const char META[] = "LUA_JOYCTRL_META";
 static const char LIB_NAME[] = "luajoyctrl";
@@ -8,9 +8,9 @@ static const char LIB_NAME[] = "luajoyctrl";
 static int create( lua_State * L )
 {
     int cnt = lua_gettop( L );
-    JoyCtrl * io = new JoyCtrl();
-    JoyCtrl * * p = reinterpret_cast< JoyCtrl * * >( lua_newuserdata( L, sizeof( JoyCtrl * ) ) );
-    *p = dynamic_cast<JoyCtrl *>( io );
+    JoyCtrlTop * io = new JoyCtrlTop();
+    JoyCtrlTop * * p = reinterpret_cast< JoyCtrlTop * * >( lua_newuserdata( L, sizeof( JoyCtrlTop * ) ) );
+    *p = dynamic_cast<JoyCtrlTop *>( io );
     luaL_getmetatable( L, META );
     lua_setmetatable( L, -2 );
     return 1;
@@ -18,7 +18,7 @@ static int create( lua_State * L )
 
 static int gc( lua_State * L )
 {
-    JoyCtrl * io = *reinterpret_cast<JoyCtrl * *>( lua_touserdata( L, 1 ) );
+    JoyCtrlTop * io = *reinterpret_cast<JoyCtrlTop * *>( lua_touserdata( L, 1 ) );
     if ( io )
         delete io;
     return 0;
@@ -26,14 +26,14 @@ static int gc( lua_State * L )
 
 static int self( lua_State * L )
 {
-    JoyCtrl * io = *reinterpret_cast<JoyCtrl * *>( lua_touserdata( L, 1 ) );
+    JoyCtrlTop * io = *reinterpret_cast<JoyCtrlTop * *>( lua_touserdata( L, 1 ) );
     lua_pushlightuserdata( L, reinterpret_cast< void * >(io) );
     return 1;
 }
 
 static int open( lua_State * L )
 {
-    JoyCtrl * io = *reinterpret_cast<JoyCtrl * *>( lua_touserdata( L, 1 ) );
+    JoyCtrlTop * io = *reinterpret_cast<JoyCtrlTop * *>( lua_touserdata( L, 1 ) );
     bool res = io->open();
     lua_pushboolean( L, ( res ) ? 1 : 0 );
     return 1;
@@ -41,26 +41,58 @@ static int open( lua_State * L )
 
 static int close( lua_State * L )
 {
-    JoyCtrl * io = *reinterpret_cast<JoyCtrl * *>( lua_touserdata( L, 1 ) );
+    JoyCtrlTop * io = *reinterpret_cast<JoyCtrlTop * *>( lua_touserdata( L, 1 ) );
     io->close();
     return 0;
 }
 
 static int isOpen( lua_State * L )
 {
-    JoyCtrl * io = *reinterpret_cast<JoyCtrl * *>( lua_touserdata( L, 1 ) );
+    JoyCtrlTop * io = *reinterpret_cast<JoyCtrlTop * *>( lua_touserdata( L, 1 ) );
     bool res = io->isOpen();
     lua_pushboolean( L, ( res ) ? 1 : 0 );
     return 1;
 }
 
-static int query( lua_State * L )
+static int queryState( lua_State * L )
 {
-    JoyCtrl * io = *reinterpret_cast<JoyCtrl * *>( lua_touserdata( L, 1 ) );
-    const int SZ = 32;
-    unsigned char buffer[ SZ ];
-    int sz;
-    bool res = io->query( buffer, sz );
+    JoyCtrlTop * io = *reinterpret_cast<JoyCtrlTop * *>( lua_touserdata( L, 1 ) );
+    bool res = io->queryState();
+    lua_pushboolean( L, res ? 1 : 0 );
+    return 1;
+}
+
+static int joy( lua_State * L )
+{
+    JoyCtrlTop * io = *reinterpret_cast<JoyCtrlTop * *>( lua_touserdata( L, 1 ) );
+    int index = static_cast<int>( lua_tonumber( L, 2 ) );
+    int res   = io->joy( index );
+    lua_pushnumber( L, static_cast<lua_Number>( res ) );
+    return 1;
+}
+
+static int nullX( lua_State * L )
+{
+    JoyCtrlTop * io = *reinterpret_cast<JoyCtrlTop * *>( lua_touserdata( L, 1 ) );
+    int index = static_cast<int>( lua_tonumber( L, 2 ) );
+    bool res   = io->nullX( index );
+    lua_pushboolean( L, res ? 1 : 0 );
+    return 1;
+}
+
+static int nullY( lua_State * L )
+{
+    JoyCtrlTop * io = *reinterpret_cast<JoyCtrlTop * *>( lua_touserdata( L, 1 ) );
+    int index = static_cast<int>( lua_tonumber( L, 2 ) );
+    bool res   = io->nullY( index );
+    lua_pushboolean( L, res ? 1 : 0 );
+    return 1;
+}
+
+static int stopBtn( lua_State * L )
+{
+    JoyCtrlTop * io = *reinterpret_cast<JoyCtrlTop * *>( lua_touserdata( L, 1 ) );
+    bool res   = io->stopBtn();
     lua_pushboolean( L, res ? 1 : 0 );
     return 1;
 }
@@ -75,8 +107,12 @@ static const struct luaL_reg META_FUNCTIONS[] = {
     { "open",          open },
     { "close",         close },
     { "isOpen",        isOpen },
-    // The lowest possible level
-    { "query",         query },
+    
+    { "queryState",    queryState },
+    { "joy",           joy },
+    { "nullX",         nullX },
+    { "nullY",         nullY },
+    { "stopBtn",       stopBtn },
 
     { NULL,            NULL },
 };

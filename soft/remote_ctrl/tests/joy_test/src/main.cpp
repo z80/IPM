@@ -23,7 +23,7 @@ int main( int argc, char * argv[] )
         return 1;
     }
     std::cout << "Managed to open device!!!\r\n";
-    unsigned char buffer[512];
+    unsigned char buffer[20];
     int sz;
     c.query( buffer, sz );
     c.query( buffer, sz );

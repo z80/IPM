@@ -77,7 +77,7 @@ void JoyCtrl::close()
 
 bool JoyCtrl::query( unsigned char * result, int & sz )
 {
-    const int SZ = 32;
+    const int SZ = 20;
     unsigned char buffer[SZ];
     DWORD written = 0;
     pd->res = FT_Write( pd->handle, reinterpret_cast<LPVOID>( buffer ), 1, &written );
