@@ -7,36 +7,36 @@ start address 0x00000000
 
 Program Header:
     LOAD off    0x00008000 vaddr 0x00000000 paddr 0x00000000 align 2**15
-         filesz 0x00000ab0 memsz 0x00000ab0 flags r-x
+         filesz 0x00000c20 memsz 0x00000c20 flags r-x
 private flags = 5000000: [Version5 EABI]
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         00000ab0  00000000  00000000  00008000  2**4
+  0 .text         00000c20  00000000  00000000  00008000  2**4
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .ARM.attributes 0000002c  00000000  00000000  00008ab0  2**0
+  1 .ARM.attributes 0000002c  00000000  00000000  00008c20  2**0
                   CONTENTS, READONLY
-  2 .comment      0000002a  00000000  00000000  00008adc  2**0
+  2 .comment      0000002a  00000000  00000000  00008c4c  2**0
                   CONTENTS, READONLY
-  3 .debug_abbrev 00004a20  00000000  00000000  00008b06  2**0
+  3 .debug_abbrev 00004a20  00000000  00000000  00008c76  2**0
                   CONTENTS, READONLY, DEBUGGING
-  4 .debug_info   000115f2  00000000  00000000  0000d526  2**0
+  4 .debug_info   000115f2  00000000  00000000  0000d696  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_line   000069e0  00000000  00000000  0001eb18  2**0
+  5 .debug_line   000069e9  00000000  00000000  0001ec88  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_pubnames 000011b6  00000000  00000000  000254f8  2**0
+  6 .debug_pubnames 000011b6  00000000  00000000  00025671  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_pubtypes 00002ed7  00000000  00000000  000266ae  2**0
+  7 .debug_pubtypes 00002ed7  00000000  00000000  00026827  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_aranges 00000d40  00000000  00000000  00029585  2**0
+  8 .debug_aranges 00000d40  00000000  00000000  000296fe  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_ranges 00001408  00000000  00000000  0002a2c5  2**0
+  9 .debug_ranges 00001408  00000000  00000000  0002a43e  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    000023df  00000000  00000000  0002b6cd  2**0
+ 10 .debug_str    000023df  00000000  00000000  0002b846  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_frame  00002044  00000000  00000000  0002daac  2**2
+ 11 .debug_frame  0000206c  00000000  00000000  0002dc28  2**2
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_loc    00006661  00000000  00000000  0002faf0  2**0
+ 12 .debug_loc    0000665e  00000000  00000000  0002fc94  2**0
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 00000000 l    d  .text	00000000 .text
@@ -73,6 +73,7 @@ SYMBOL TABLE:
 000000ec l       .text	00000000 .loop
 000000f0 l       .text	00000000 hwinit0
 00000120 l       .text	00000000 .udivsi3_skip_div0_test
+00000000 l    df *ABS*	00000000 memset.c
 00000000 l    df *ABS*	00000000 hal_lld.c
 00000000 l    df *ABS*	00000000 board.c
 00000000 l    df *ABS*	00000000 main.c
@@ -138,11 +139,11 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 strcasecmp.c
 00000000 l    df *ABS*	00000000 strchr.c
 00000000 l    df *ABS*	00000000 strspn.c
-00000ab0 g       *ABS*	00000000 __exidx_end
+00000c20 g       *ABS*	00000000 __exidx_end
 00000040  w      .text	00000000 UndHandler
 40000200 g       *ABS*	00000000 __heap_base__
-00000ab0 g       *ABS*	00000000 _etext
-00000320 g     F .text	00000038 processFtdi
+00000c20 g       *ABS*	00000000 _etext
+00000420 g     F .text	00000038 processFtdi
 0000049c g       *ABS*	00000000 __stacks_total_size__
 7fd02000 g       *ABS*	00000000 __dma_end__
 00000120 g     F .text	000000f4 __udivsi3
@@ -150,22 +151,23 @@ SYMBOL TABLE:
 40007a44 g       *ABS*	00000000 __heap_end__
 00000004 g       *ABS*	00000000 __abt_stack_size__
 00000050 g       .text	00000000 ResetHandler
-00000ab0 g       *ABS*	00000000 __exidx_start
+00000c20 g       *ABS*	00000000 __exidx_start
 40000200 g       .text	00000000 _bss_end
-00000930 g     F .text	00000084 initUart1
-00000a00 g     F .text	000000a8 receiveUart1
+00000aa0 g     F .text	00000084 initUart1
+00000b70 g     F .text	000000a8 receiveUart1
 00000080 g       *ABS*	00000000 __irq_stack_size__
 00000400 g       *ABS*	00000000 __sys_stack_size__
-00000300 g     F .text	0000001c initFtdi
+00000400 g     F .text	0000001c initFtdi
 00007ce0 g       *ABS*	00000000 __ram_size__
-00000360 g     F .text	000000fc initJoy
+00000460 g     F .text	000000fc initJoy
 00000240  w    F .text	00000004 __aeabi_ldiv0
-00000460 g     F .text	000004d0 joystick
-00000ab0 g       *ABS*	00000000 _textdata
+00000560 g     F .text	00000540 joystick
+00000c20 g       *ABS*	00000000 _textdata
 00000000 g       .text	00000000 _text
 00000040  w      .text	00000000 PrefetchHandler
 00002000 g       *ABS*	00000000 __dma_size__
-000002e0 g     F .text	00000014 main
+00000250 g     F .text	00000100 memset
+000003e0 g     F .text	00000014 main
 00000120 g     F .text	00000000 __aeabi_uidiv
 7fd00000 g       *ABS*	00000000 __dma_start__
 40000200 g       *ABS*	00000000 __ram_start__
@@ -177,15 +179,15 @@ SYMBOL TABLE:
 40000200 g       *ABS*	00000000 _end
 00000040 g       .text	00000000 _unhandled_exception
 40007a44 g       *ABS*	00000000 __main_thread_stack_base__
-00000250 g     F .text	00000078 lpc214x_clock_init
+00000350 g     F .text	00000078 lpc214x_clock_init
 00000040  w      .text	00000000 SwiHandler
 00000240  w    F .text	00000004 __aeabi_idiv0
 00000010 g       *ABS*	00000000 __fiq_stack_size__
 00000004 g       *ABS*	00000000 __svc_stack_size__
-000009c0 g     F .text	0000003c sendUart1
+00000b30 g     F .text	0000003c sendUart1
 00000004 g       *ABS*	00000000 __und_stack_size__
 000000ec  w      .text	00000000 _main_exit_handler
-000002d0 g     F .text	00000004 __early_init
+000003d0 g     F .text	00000004 __early_init
 00000040  w      .text	00000000 FiqHandler
 
 

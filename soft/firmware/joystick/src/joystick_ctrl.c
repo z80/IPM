@@ -1,6 +1,7 @@
 
 #include "joystick_ctrl.h"
 #include "lpc2148.h"
+#include <string.h>
 
 #define AXIS_X_1    28
 #define AXIS_Y_1    29
@@ -122,6 +123,9 @@ void initJoy( void )
 
 void joystick( TJoy * j )
 {
+    // Zero memory for easier identification.
+    memset( j, 0, sizeof(TJoy)*4 );
+
     j[0].flags = ( ( IOPIN1 & (1<<16) ) ? NULL_X_BIT : 0 ) +
                  ( ( IOPIN1 & (1<<17) ) ? NULL_Y_BIT : 0 ) +
                  ( ( IOPIN0 & (1<<4) )  ? TOTMANN_BIT : 0 ) +
