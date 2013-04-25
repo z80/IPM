@@ -17,8 +17,18 @@ void processFtdi( void )
     if ( sz )
     {
         TJoy joys[4];
+        unsigned char buffer[20];
+        int i;
         joystick( joys );
-        sz = sendUart1( (uint8_t *)joys, sizeof( joys ) );
+        for ( i=0; i<JOY_CNT; i++ )
+        {
+            buffer[ i*3 ]   = joys[i].flags;
+            buffer[ i*3+1 ] = (unsigned char)( joys[i].value[0] & 0x00FF );
+            buffer[ i*3+2 ] = (unsigned char)( ( joys[i].value[0] >> 8 ) & 0x00FF );
+            buffer[ i*3+3 ] = (unsigned char)( joys[i].value[1] & 0x00FF );
+            buffer[ i*3+4 ] = (unsigned char)( ( joys[i].value[1] >> 8 ) & 0x00FF );
+        }
+        sz = sendUart1( (uint8_t *)buffer, sizeof( buffer ) );
     }
 }
 

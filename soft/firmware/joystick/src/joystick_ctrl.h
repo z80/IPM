@@ -4,6 +4,8 @@
 
 #include "ch.h"
 
+#define JOY_CNT             4
+
 #define NULL_X_BIT      1
 #define NULL_Y_BIT      2
 #define TOTMANN_BIT     4

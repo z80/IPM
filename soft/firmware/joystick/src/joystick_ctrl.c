@@ -70,7 +70,6 @@
 
 
 
-#define JOY_CNT             4
 
 static void adcInit( void );
 static void adcRead( TJoy * j );
