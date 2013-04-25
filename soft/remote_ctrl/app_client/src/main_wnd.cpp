@@ -48,16 +48,16 @@ MainWnd::MainWnd( QWidget * parent )
 
     m_valveTst = new ValveTst( 0 );
 
-    m_peer = new PeerQxmpp( CLIENT_CONFIG_FILE, boost::bind( &MainWnd::init, this, _1 ) );
-    m_peer->setInFileHandler( boost::bind<QIODevice *>( &MainWnd::inFileHandler, this, _1 ) );
-    m_peer->setAccFileHandler( boost::bind( &MainWnd::accFileHandler, this, _1, _2 ) );
-
     connect( ui.image,   SIGNAL(triggered()), this,       SLOT(slotImage()) );
     connect( ui.connect, SIGNAL(triggered()), this,       SLOT(slotConnect()) );
     connect( ui.exec,    SIGNAL(triggered()), this,       SLOT(slotExec()) );
     connect( ui.send,    SIGNAL(triggered()), this,       SLOT(slotSendFile()) );
     connect( ui.help,    SIGNAL(triggered()), this,       SLOT(slotHelp()) );
     connect( ui.valve,   SIGNAL(triggered()), m_valveTst, SLOT(show()) );
+
+    m_peer = new PeerQxmpp( CLIENT_CONFIG_FILE, boost::bind( &MainWnd::init, this, _1 ) );
+    m_peer->setInFileHandler( boost::bind<QIODevice *>( &MainWnd::inFileHandler, this, _1 ) );
+    m_peer->setAccFileHandler( boost::bind( &MainWnd::accFileHandler, this, _1, _2 ) );
 }
 
 MainWnd::~MainWnd()

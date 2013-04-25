@@ -1,4 +1,7 @@
 
+require( "luajoyctrl" )
+
+
 local BOARDS_CNT = 3
 local valves = { 0, 0, 0 }
 
@@ -27,6 +30,9 @@ function main()
                 break
             end
         end
+	-- Process joysticks.
+        joyProcess()
+
         --[[for i = 1, 4 do
             local x, y = joy( i )
             --print( string.format( "joy[%i]: %3.2f%%, %3.2f%%", i, x, y ) )
@@ -76,6 +82,46 @@ end
 function setTemp( t )
     print( string.format( "temp: %i", t ) )
 end
+
+function joyProcess()
+    --print( "Entered joyProcess()" )
+    if ( not joystick ) then
+        --print( "one" )
+        local j = luajoyctrl.create()
+	j:open()
+	joystick = j
+    end
+    local j = joystick
+    --print( "two" )
+    if ( not j:isOpen() ) then
+        --print( "three" )
+        j:open()
+    end
+    if ( not j:isOpen() ) then
+        print( "ERROR: no joysticks board detected!" )
+        return
+    end
+    j:queryState()
+    local adc = {}
+    local nullX = {}
+    local nullY = {}
+    local stopBtn
+
+    stopByn = j:stopBtn()
+    print( string.format( "stopBtn: %s", stopBtn and "true" or "false" ) )
+
+    for i=0, 3 do
+        adc[i+1]   = j:joy( i )
+	nullX[i+1] = j:nullX( i )
+	nullY[i+1] = j:nullY( i )
+	print( string.format( "adc[%i]: %3i; nullX: %s, nullY: %s", 
+	                          i,  
+	                          adc[i+1], 
+				  nullX[i+1] and "true" or "false", 
+				  nullY[i+1] and "true" or "false" ) )
+    end
+end
+
 
 
 main()
