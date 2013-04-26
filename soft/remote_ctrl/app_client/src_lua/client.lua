@@ -30,7 +30,7 @@ function main()
                 break
             end
         end
-	-- Process joysticks.
+    -- Process joysticks.
         joyProcess()
 
         --[[for i = 1, 4 do
@@ -88,8 +88,8 @@ function joyProcess()
     if ( not joystick ) then
         --print( "one" )
         local j = luajoyctrl.create()
-	j:open()
-	joystick = j
+    j:open()
+    joystick = j
     end
     local j = joystick
     --print( "two" )
@@ -102,7 +102,8 @@ function joyProcess()
         return
     end
     j:queryState()
-    local adc = {}
+    local adcX = {}
+    local adcY = {}
     local nullX = {}
     local nullY = {}
     local stopBtn
@@ -111,14 +112,17 @@ function joyProcess()
     print( string.format( "stopBtn: %s", stopBtn and "true" or "false" ) )
 
     for i=0, 3 do
-        adc[i+1]   = j:joy( i )
-	nullX[i+1] = j:nullX( i )
-	nullY[i+1] = j:nullY( i )
-	print( string.format( "adc[%i]: %3i; nullX: %s, nullY: %s", 
-	                          i,  
-	                          adc[i+1], 
-				  nullX[i+1] and "true" or "false", 
-				  nullY[i+1] and "true" or "false" ) )
+        adcX[i+1]  = j:adcX( i )
+        adcY[i+1]  = j:adcY( i )
+        nullX[i+1] = j:nullX( i )
+        nullY[i+1] = j:nullY( i )
+        print( string.format( "adcX[%i]: %3i; adcY[%i]: %3i; nullX: %s, nullY: %s", 
+                              i,  
+                              adcX[i+1], 
+                              i, 
+                              adcY[i+1], 
+                              nullX[i+1] and "true" or "false", 
+                              nullY[i+1] and "true" or "false" ) )
     end
 end
 

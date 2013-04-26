@@ -11,7 +11,8 @@ public:
     ~JoyCtrlTop();
 
     bool queryState();
-    int  joy( int index );
+    int  adcX( int index );
+    int  adcY( int index );
     bool nullX( int index );
     bool nullY( int index );
     bool stopBtn();

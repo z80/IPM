@@ -62,11 +62,20 @@ static int queryState( lua_State * L )
     return 1;
 }
 
-static int joy( lua_State * L )
+static int adcX( lua_State * L )
 {
     JoyCtrlTop * io = *reinterpret_cast<JoyCtrlTop * *>( lua_touserdata( L, 1 ) );
     int index = static_cast<int>( lua_tonumber( L, 2 ) );
-    int res   = io->joy( index );
+    int res   = io->adcX( index );
+    lua_pushnumber( L, static_cast<lua_Number>( res ) );
+    return 1;
+}
+
+static int adcY( lua_State * L )
+{
+    JoyCtrlTop * io = *reinterpret_cast<JoyCtrlTop * *>( lua_touserdata( L, 1 ) );
+    int index = static_cast<int>( lua_tonumber( L, 2 ) );
+    int res   = io->adcY( index );
     lua_pushnumber( L, static_cast<lua_Number>( res ) );
     return 1;
 }
@@ -109,7 +118,8 @@ static const struct luaL_reg META_FUNCTIONS[] = {
     { "isOpen",        isOpen },
     
     { "queryState",    queryState },
-    { "joy",           joy },
+    { "adcX",          adcX },
+    { "adcY",          adcY },
     { "nullX",         nullX },
     { "nullY",         nullY },
     { "stopBtn",       stopBtn },
