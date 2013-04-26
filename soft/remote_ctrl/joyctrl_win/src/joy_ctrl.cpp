@@ -28,6 +28,7 @@ JoyCtrl::~JoyCtrl()
 bool JoyCtrl::open()
 {
     DWORD cnt = 0;
+    pd->opened = false;
     pd->res = FT_ListDevices( &cnt, 0, FT_LIST_NUMBER_ONLY );
     if ( pd->res == FT_OK )
     {
