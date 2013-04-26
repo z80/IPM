@@ -39,10 +39,10 @@ bool JoyCtrlTop::queryState()
     {
         pd->adcX[i] = static_cast<int>( buffer[5*i+1] ) + ( static_cast<int>( buffer[5*i+2] ) << 8);
         pd->adcY[i] = static_cast<int>( buffer[5*i+3] ) + ( static_cast<int>( buffer[5*i+4] ) << 8);
-        pd->nullX[i] = ( (buffer[5*i] & 1) == 0 );
-        pd->nullY[i] = ( (buffer[5*i] & 2) == 0 );
+        pd->nullX[i] = ( (buffer[5*i] & 1) != 0 );
+        pd->nullY[i] = ( (buffer[5*i] & 2) != 0 );
     }
-    pd->stop = ( ( buffer[0] & 8 ) == 0 );
+    pd->stop = ( ( buffer[0] & 8 ) != 0 );
     return true;
 }
 
@@ -61,7 +61,7 @@ int  JoyCtrlTop::adcY( int index )
         return 0;
     if ( index >= JOY_CNT )
         return 0;
-    return pd->adcX[ index ];
+    return pd->adcY[ index ];
 }
 
 bool JoyCtrlTop::nullX( int index )
