@@ -123,7 +123,7 @@ void initJoy( void )
 void joystick( TJoy * j )
 {
     // Zero memory for easier identification.
-    memset( j, 0, sizeof(TJoy)*4 );
+    memset( j, 0, sizeof(TJoy)*JOY_CNT );
 
     j[0].flags = ( ( IOPIN1 & (1<<16) ) ? NULL_X_BIT : 0 ) +
                  ( ( IOPIN1 & (1<<17) ) ? NULL_Y_BIT : 0 ) +
