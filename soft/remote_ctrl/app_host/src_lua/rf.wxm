@@ -1,0 +1,43 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 12.04.0 ] */
+
+/* [wxMaxima: input   start ] */
+kill( all );
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+detout: true$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+doallmxops: false$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+doscmxops: false$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+x: cos( %gamma ) * ( l * cos( %alpha ) + L2 * cos( %alpha + %beta ) )$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+y: sin( %gamma ) * ( l * cos( %alpha ) + L2 * cos( %alpha + %beta ) )$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+z: l * sin( %alpha ) + L2 * sin( %alpha + %beta )$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+A: matrix( [ diff(x,%alpha,1), diff(x,%beta,1), diff(x,%gamma,1) ], 
+           [ diff(y,%alpha,1), diff(y,%beta,1), diff(y,%gamma,1) ], 
+           [ diff(z,%alpha,1), diff(z,%beta,1), diff(z,%gamma,1) ] );
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+invA: gfactor( trigsimp( invert( A ) ) );
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
