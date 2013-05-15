@@ -10,33 +10,51 @@ detout: true$
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-doallmxops: false$
+doallmxops: true$
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-doscmxops: false$
+doscmxops: true$
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-x: cos( %gamma ) * ( l * cos( %alpha ) + L2 * cos( %alpha + %beta ) )$
+x: cos( %beta ) * ( l * cos( %alpha1 ) + L2 * cos( %alpha1 + %alpha2 ) )$
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-y: sin( %gamma ) * ( l * cos( %alpha ) + L2 * cos( %alpha + %beta ) )$
+y: sin( %beta ) * ( l * cos( %alpha1 ) + L2 * cos( %alpha1 + %alpha2 ) )$
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-z: l * sin( %alpha ) + L2 * sin( %alpha + %beta )$
+z: l * sin( %alpha1 ) + L2 * sin( %alpha1 + %alpha2 )$
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-A: matrix( [ diff(x,%alpha,1), diff(x,%beta,1), diff(x,%gamma,1) ], 
-           [ diff(y,%alpha,1), diff(y,%beta,1), diff(y,%gamma,1) ], 
-           [ diff(z,%alpha,1), diff(z,%beta,1), diff(z,%gamma,1) ] );
+x: subst( -%alpha1, %alpha2, x );
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-invA: gfactor( trigsimp( invert( A ) ) );
+y: subst( -%alpha1, %alpha2, y );
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+z: subst( -%alpha1, %alpha2, z );
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+A: matrix( [ diff(x,%alpha1,1), diff(x,%beta,1), diff(x,l,1) ], 
+           [ diff(y,%alpha1,1), diff(y,%beta,1), diff(y,l,1) ], 
+           [ diff(z,%alpha1,1), diff(z,%beta,1), diff(z,l,1)  ] );
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+invA: trigsimp( invert( A ) );
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+v: trigsimp( invA . matrix( [ dx ], 
+                            [ dy ], 
+                            [ dz ] ) );
 /* [wxMaxima: input   end   ] */
 
 /* Maxima can't load/batch files which end with a comment! */
