@@ -1,0 +1,61 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 12.04.0 ] */
+
+/* [wxMaxima: input   start ] */
+kill( all );
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+detout: true$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+doallmxops: true$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+doscmxops: true$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+x: cos( %beta ) * ( l * cos( %alpha1 ) + L2 * cos( %alpha1 + %alpha2 ) )$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+y: sin( %beta ) * ( l * cos( %alpha1 ) + L2 * cos( %alpha1 + %alpha2 ) )$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+z: l * sin( %alpha1 ) + L2 * sin( %alpha1 + %alpha2 )$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+x: subst( -%alpha1, %alpha2, x );
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+y: subst( -%alpha1, %alpha2, y );
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+z: subst( -%alpha1, %alpha2, z );
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+A: matrix( [ diff(x,%alpha1,1), diff(x,%beta,1), diff(x,l,1) ], 
+           [ diff(y,%alpha1,1), diff(y,%beta,1), diff(y,l,1) ], 
+           [ diff(z,%alpha1,1), diff(z,%beta,1), diff(z,l,1)  ] );
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+invA: trigsimp( invert( A ) );
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+v: trigsimp( invA . matrix( [ dx ], 
+                            [ dy ], 
+                            [ dz ] ) );
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

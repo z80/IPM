@@ -2978,7 +2978,7 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .ARM.attributes
                 0x00001087       0x29 /home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-ctype_.o)
 
-.debug_frame    0x00000000     0x3188
+.debug_frame    0x00000000     0x3184
  .debug_frame   0x00000000       0x50 build/obj/crt0.o
  .debug_frame   0x00000050       0x20 build/obj/vectors.o
  .debug_frame   0x00000070       0x20 build/obj/chcore.o
@@ -3031,15 +3031,15 @@ OUTPUT(build/ch.elf elf32-littlearm)
  .debug_frame   0x00002df0       0x6c build/obj/chprintf.o
  .debug_frame   0x00002e5c       0x2c build/obj/main.o
  .debug_frame   0x00002e88       0x68 build/obj/read_ctrl.o
- .debug_frame   0x00002ef0       0x7c build/obj/write_ctrl.o
- .debug_frame   0x00002f6c       0x5c build/obj/i2c_ctrl.o
- .debug_frame   0x00002fc8       0x74 build/obj/led_ctrl.o
- .debug_frame   0x0000303c       0x5c build/obj/iwdg.o
- .debug_frame   0x00003098       0x40 build/obj/iwdg_lld.o
- .debug_frame   0x000030d8       0x2c /home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memset.o)
- .debug_frame   0x00003104       0x2c /home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strcasecmp.o)
- .debug_frame   0x00003130       0x2c /home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strchr.o)
- .debug_frame   0x0000315c       0x2c /home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strspn.o)
+ .debug_frame   0x00002ef0       0x78 build/obj/write_ctrl.o
+ .debug_frame   0x00002f68       0x5c build/obj/i2c_ctrl.o
+ .debug_frame   0x00002fc4       0x74 build/obj/led_ctrl.o
+ .debug_frame   0x00003038       0x5c build/obj/iwdg.o
+ .debug_frame   0x00003094       0x40 build/obj/iwdg_lld.o
+ .debug_frame   0x000030d4       0x2c /home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-memset.o)
+ .debug_frame   0x00003100       0x2c /home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strcasecmp.o)
+ .debug_frame   0x0000312c       0x2c /home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strchr.o)
+ .debug_frame   0x00003158       0x2c /home/z80/programs/code-sourcery/2011.03-42/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2/libc.a(lib_a-strspn.o)
 
 Cross Reference Table
 

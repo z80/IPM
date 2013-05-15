@@ -5,6 +5,7 @@
 #include "lua.hpp"
 #include "boost/bind.hpp"
 #include "boost/bind/placeholders.hpp"
+#include "luajoyctrl.h"
 
 const std::string MainWnd::CLIENT_CONFIG_FILE = "client.ini";
 const std::string MainWnd::SERVER_CONFIG_FILE = "server.ini";
@@ -47,16 +48,16 @@ MainWnd::MainWnd( QWidget * parent )
 
     m_valveTst = new ValveTst( 0 );
 
-    m_peer = new PeerQxmpp( CLIENT_CONFIG_FILE, boost::bind( &MainWnd::init, this, _1 ) );
-    m_peer->setInFileHandler( boost::bind<QIODevice *>( &MainWnd::inFileHandler, this, _1 ) );
-    m_peer->setAccFileHandler( boost::bind( &MainWnd::accFileHandler, this, _1, _2 ) );
-
     connect( ui.image,   SIGNAL(triggered()), this,       SLOT(slotImage()) );
     connect( ui.connect, SIGNAL(triggered()), this,       SLOT(slotConnect()) );
     connect( ui.exec,    SIGNAL(triggered()), this,       SLOT(slotExec()) );
     connect( ui.send,    SIGNAL(triggered()), this,       SLOT(slotSendFile()) );
     connect( ui.help,    SIGNAL(triggered()), this,       SLOT(slotHelp()) );
     connect( ui.valve,   SIGNAL(triggered()), m_valveTst, SLOT(show()) );
+
+    m_peer = new PeerQxmpp( CLIENT_CONFIG_FILE, boost::bind( &MainWnd::init, this, _1 ) );
+    m_peer->setInFileHandler( boost::bind<QIODevice *>( &MainWnd::inFileHandler, this, _1 ) );
+    m_peer->setAccFileHandler( boost::bind( &MainWnd::accFileHandler, this, _1, _2 ) );
 }
 
 MainWnd::~MainWnd()
@@ -168,6 +169,9 @@ void MainWnd::init( lua_State * L )
     lua_pushstring( L, "valveOutputs" );
     lua_pushcfunction( L, ::valveOutputs );
     lua_settable( L, LUA_GLOBALSINDEX );
+
+    // Joysticks board io.
+    luaopen_luajoyctrl( L );
 
     // Execute file.
     luaL_dofile( L, "./client.lua" );

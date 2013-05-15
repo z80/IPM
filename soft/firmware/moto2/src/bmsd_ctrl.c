@@ -4,7 +4,7 @@
 #include "hal.h"
 #include "hdw_config.h"
 
-static uint8_t bytesReceived = 5;
+static uint8_t status = 0;
 static uint8_t ioBuffer[5];
 static SerialConfig config =
 {
@@ -42,12 +42,18 @@ static void uartIo( void )
     tmo = MS2ST( BMSD_TIMEOUT );
     // Set dir to output.
     palSetPad( BMSD_DIR_PORT, BMSD_DIR_PIN );
+    chThdSleepMilliseconds( 5 );
     // Write.
     sdWriteTimeout( &SD2, ioBuffer, sizeof( ioBuffer ), tmo );
+    // This is 5 bytes per 9 bits duration as 9600bps is 4.6875.
+    // But OS task switch doesn't allow to make it perfectly.
+    // So I do that with enough overcover.
+    chThdSleepMilliseconds( 7 );
     // Set dir to input.
     palClearPad( BMSD_DIR_PORT, BMSD_DIR_PIN );
     // Read.
     sdReadTimeout( &SD2, ioBuffer, sizeof( ioBuffer ), tmo );
+    status = 0;
 }
 
 
@@ -64,13 +70,14 @@ void bmsdInit( void )
 uint8_t bmsdReady( void )
 {
     chSysLock();
-        uint8_t res = ( bytesReceived >= 5 ) ? 1 : 0;
+        uint8_t res = status;
     chSysUnlock();
     return res;
 }
 
 void bmsdRawCmd( uint8_t * cmd )
 {
+    status = 1;
     ioBuffer[0] = cmd[0];
     ioBuffer[1] = cmd[1];
     ioBuffer[2] = cmd[2];

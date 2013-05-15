@@ -1,6 +1,16 @@
 
 require( "bit" )
 --require( "lsm303" )
+require( "bmsd" )
+require( "escon" )
+
+function display( ... )
+    local t = { ... }
+    for i=1, #t do
+        local stri = string.format( "print( \'arg[%i] = %s\' )", i, tostring( t[i] ) )
+	send( stri )
+    end
+end
 
 local BOARDS_CNT = 3
 local inputs = { 0, 0, 0 }
@@ -56,6 +66,8 @@ end
 function processMcu()
     -- mcu variable is NOT local to be accessible from the outside.
     mcu = luamcuctrl.create()
+    bmsd = BMSD( mcu )
+    escon = ESCON( mcu )
     -- Accelerometer class.
     -- It is for the very first run and probably doesn't work at all.
     --lsm303 = Lsm303( mcu )
