@@ -1,5 +1,6 @@
 
 require( "luajoyctrl" )
+require( "bit" )
 
 
 local BOARDS_CNT = 3
@@ -31,7 +32,7 @@ function main()
             end
         end
     -- Process joysticks.
-        joyProcess()
+        joyProcess( valves )
 
         --[[for i = 1, 4 do
             local x, y = joy( i )
@@ -83,7 +84,7 @@ function setTemp( t )
     print( string.format( "temp: %i", t ) )
 end
 
-function joyProcess()
+function joyProcess( valves )
     --print( "Entered joyProcess()" )
     if ( not joystick ) then
         --print( "one" )
@@ -123,6 +124,31 @@ function joyProcess()
                               adcY[i+1], 
                               nullX[i+1] and "true" or "false", 
                               nullY[i+1] and "true" or "false" ) )
+    end
+
+    -- 0-th joystick controls 0 and 1 outputs depending on where 
+    -- it is bended, to the left or to the right.
+    local valve = valves[0]
+    if ( adcX[0] < 1024 ) then
+        valve = bit.bor( valve, 1 )
+    elseif ( adcX[0] > 3072 ) then
+        valve = bit.bor( valve, 2 )
+    else
+        valve = bit.band( valve, 0xFFFFFFFF - 3 )
+    end
+    -- the same with 2 and 3 outs. They are 
+    -- made dependant on Y axis of 0-th joystick.
+    if ( adcY[0] < 1024 ) then
+        valve = bit.bor( valve, 4 )
+    elseif ( adcY[0] > 3072 ) then
+        valve = bit.bor( valve, 8 )
+    else
+        valve = bit.band( valve, 0xFFFFFFFF - 12 )
+    end
+ 
+    if ( valve ~= valves[0] ) then
+        valves[0] = valve
+        remoteInvokeOutputs( valves )
     end
 end
 
