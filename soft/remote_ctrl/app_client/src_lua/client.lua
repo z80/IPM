@@ -1,7 +1,7 @@
 
 require( "luajoyctrl" )
 require( "bit" )
-
+require( "movement" )
 
 local BOARDS_CNT = 3
 local valves = { 0, 0, 0 }
