@@ -7,7 +7,7 @@ require( "movement" )
 -- This value is supposed to detach real output
 -- and turn some test information on.
 DEBUG = true
-local JOY_TRESHOLD = 10
+local JOY_TRESHOLD = 30
 
 local BOARDS_CNT = 3
 local valves = { 0, 0, 0 }
@@ -58,7 +58,7 @@ function main()
             end
         end
         -- Process spinning
-        --[[
+        
         prevSpinDir = prevSpinDir or "idle"
         if ( turn > JOY_TRESHOLD ) then
             if ( prevSpinDir and prevSpinDir ~= "cw" ) then
@@ -87,7 +87,7 @@ function main()
                 send( "bmsd:stop()" )
             end
         end
-        ]]
+        
 
         --[[for i = 1, 4 do
             local x, y = joy( i )
