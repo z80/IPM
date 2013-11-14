@@ -2,6 +2,12 @@
 require( "luajoyctrl" )
 require( "bit" )
 require( "movement" )
+require( "debugger" )
+
+-- This value is supposed to detach real output
+-- and turn some test information on.
+local DEBUG = true
+local JOY_TRESHOLD = 10
 
 local BOARDS_CNT = 3
 local valves = { 0, 0, 0 }
@@ -12,27 +18,70 @@ function main()
         valveSetInputs( i-1, 0 )
         valveSetOutputs( i-1, 0 )
     end
+    mov = Mover()
 
     while true do
         sleep( 0.1 )
-        -- Valve test window outputs query
-        for i=1, BOARDS_CNT do
-            local valve = valveOutputs( i-1 )
-            -- If not equal
-            if ( valve ~= valves[i] ) then
-                -- Apply all changes.
-                for i = 1, BOARDS_CNT do
-                    local valve = valveOutputs( i-1 )
-                    valves[i] = valve
+        if ( not DEBUG ) then
+            -- Valve test window outputs query
+            for i=1, BOARDS_CNT do
+                local valve = valveOutputs( i-1 )
+                -- If not equal
+                if ( valve ~= valves[i] ) then
+                    -- Apply all changes.
+                    for i = 1, BOARDS_CNT do
+                        local valve = valveOutputs( i-1 )
+                        valves[i] = valve
+                    end
+                    -- Send to host.
+                    remoteInvokeOutputs( valves )
+                    -- Break comparing.
+                    break
                 end
-                -- Send to host.
-                remoteInvokeOutputs( valves )
-                -- Break comparing.
-                break
             end
         end
-    -- Process joysticks.
-        joyProcess( valves )
+        -- Process joysticks.
+        --joyProcess( valves )
+        local turn, fwd = joy( 1 )
+        print( "fwd = " .. tostring( fwd ) )
+        if ( fwd > JOY_TRESHOLD ) then
+            pause()
+            mov:forward()
+        elseif ( fwd < -JOY_TRESHOLD ) then
+            pause()
+            mov:backward()
+        end
+        -- Process spinning
+        --[[
+        prevSpinDir = prevSpinDir or "idle"
+        if ( turn > JOY_TRESHOLD ) then
+            if ( prevSpinDir and prevSpinDir ~= "cw" ) then
+                if ( DEBUG ) then
+                    print( "cw" )
+                end
+                prevSpinDir = "cw"
+                send( "bmsd:move( 10, 90, 90 )" )
+                send( "bmsd:start()" )
+            end
+        elseif ( turn < -JOY_TRESHOLD ) then
+            if ( prevSpinDir and prevSpinDir ~= "ccw" ) then
+                if ( DEBUG ) then
+                    print( "ccw" )
+                end
+                prevSpinDir = "ccw"
+                send( "bmsd:move( -10, 90, 90 )" )
+                send( "bmsd:start()" )
+            end
+        else
+            if ( prevSpinDir and prevSpinDir ~= "idle" ) then
+                if ( DEBUG ) then
+                    print( "idle" )
+                end
+                prevSpinDir = "idle"
+                send( "bmsd:stop()" )
+            end
+        end
+        ]]
 
         --[[for i = 1, 4 do
             local x, y = joy( i )
