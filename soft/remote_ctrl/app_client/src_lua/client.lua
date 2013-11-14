@@ -43,7 +43,7 @@ function main()
         -- Process joysticks.
         --joyProcess( valves )
         local turn, fwd = joy( 1 )
-        print( "fwd = " .. tostring( fwd ) )
+        --print( "fwd = " .. tostring( fwd ) )
         if ( fwd > JOY_TRESHOLD ) then
             --pause()
             res, err = pcall( mov.forward, mov )
