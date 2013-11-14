@@ -36,7 +36,7 @@ st =
     LoopSideSuckOn = 
     { 
         st = { 123, 321, 312 }, 
-        nextStep="LoopSideSupportsBack", 
+        nextStep="LoopCenterSuckOff", 
         prevStep="LoopSideSupportsDown", 
         delay = 4.0
     }, 
@@ -60,7 +60,7 @@ st =
     { 
         st = { 1, 1, 1 }, 
         nextStep="LoopCenterSupportDown", 
-        prevStep="LoopSideSuckOn", 
+        prevStep="LoopCenterSupportUp", 
         delay = 3.0
     }, 
 
@@ -68,7 +68,7 @@ st =
     {
         st = { 1, 1, 1 }, 
         nextStep="LoopCenterSuckOn", 
-        prevStep="LoopSizeSupportsBack", 
+        prevStep="LoopSideSupportsBack", 
         delay = 4.0
     }, 
 

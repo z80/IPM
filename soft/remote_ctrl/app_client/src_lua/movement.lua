@@ -64,28 +64,28 @@ function Mover:performStepFwd()
 
     local st = c[ nextStep ]
     if ( not DEBUG ) then
-        remoteInvokeOutputs( { st.outs[1], st.outs[2], st.outs[3] } )
+        remoteInvokeOutputs( { st.st[1], st.st[2], st.st[3] } )
     end
-    valveSetOutputs( 0, st.outs[1] )
-    valveSetOutputs( 1, st.outs[2] )
-    valveSetOutputs( 2, st.outs[3] )
+    valveSetOutputs( 0, st.st[1] )
+    valveSetOutputs( 1, st.st[2] )
+    valveSetOutputs( 2, st.st[3] )
     sleep( st.delay )
 
     self.state = nextStep
 end
 
 function Mover:performStepBwd()
-    local c = self.config
+    local c = self.states
     local st = c[ self.state ]
     local prevStep = st.prevStep
 
     local st = c[ prevStep ]
     if ( not DEBUG ) then
-        remoteInvokeOutputs( { st.outs[1], st.outs[2], st.outs[3] } )
+        remoteInvokeOutputs( { st.st[1], st.st[2], st.st[3] } )
     end
-    valveSetOutputs( 0, st.outs[1] )
-    valveSetOutputs( 1, st.outs[2] )
-    valveSetOutputs( 2, st.outs[3] )
+    valveSetOutputs( 0, st.st[1] )
+    valveSetOutputs( 1, st.st[2] )
+    valveSetOutputs( 2, st.st[3] )
     sleep( st.delay )
 
     self.state = prevStep
@@ -94,7 +94,7 @@ end
 
 
 function Mover:forward()
-    self.state = self.state or "Unitialized"
+    self.state = self.state or "Uninitialized"
     if ( DEBUG ) then
         print( self.state )
     end

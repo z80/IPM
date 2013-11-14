@@ -2,11 +2,11 @@
 require( "luajoyctrl" )
 require( "bit" )
 require( "movement" )
-require( "debugger" )
+-- require( "debugger" )
 
 -- This value is supposed to detach real output
 -- and turn some test information on.
-local DEBUG = true
+DEBUG = true
 local JOY_TRESHOLD = 10
 
 local BOARDS_CNT = 3
@@ -45,11 +45,17 @@ function main()
         local turn, fwd = joy( 1 )
         print( "fwd = " .. tostring( fwd ) )
         if ( fwd > JOY_TRESHOLD ) then
-            pause()
-            mov:forward()
+            --pause()
+            res, err = pcall( mov.forward, mov )
+            if ( not res ) then
+                print( err )
+            end
         elseif ( fwd < -JOY_TRESHOLD ) then
-            pause()
-            mov:backward()
+            --pause()
+            res, err = pcall( mov.backward, mov )
+            if ( not res ) then
+                print( err )
+            end
         end
         -- Process spinning
         --[[
