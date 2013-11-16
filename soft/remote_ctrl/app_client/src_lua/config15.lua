@@ -1,9 +1,18 @@
 
+local SIDES_DOWN_2  = 0x10
+local SIDE_ON_2     = 0x1
+local SIDES_UP_1    = 0x1
+local CENTER_ON_2   = 0x4
+local FORWARD_3     = 0x1
+local BACKWARD_3    = 0x4
+local CENTER_UP_1   = 0x10
+local CENTER_DOWN_1 = 0x8 
+
 st = 
 {
     Uninitialized = 
     { 
-        st = { 123, 321, 312 }, 
+        st = { 0, 0, 0 }, 
         nextStep="InitStep1", 
         prevStep="InitStep1", 
         delay = 0.5
@@ -11,7 +20,8 @@ st =
 
     InitStep1 = 
     { 
-        st = { 123, 321, 312 }, 
+        -- All supports down.
+        st = { CENTER_DOWN_1, SIDES_DOWN_2, 0 }, 
         nextStep="InitStep2", 
         prevStep="InitStep2", 
         delay = 3.0
@@ -19,7 +29,8 @@ st =
 
     InitStep2 = 
     { 
-        st = { 123, 321, 312 }, 
+        -- Side supprts down, both ejections on.
+        st = { CENTER_DOWN_1, SIDES_DOWN_2 + SIDE_ON_2 + CENTER_ON_2, 0 }, 
         nextStep="LoopSideSupportsDown", 
         prevStep="LoopSideSupportsDown", 
         delay = 2.0
@@ -27,7 +38,7 @@ st =
 
     LoopSideSupportsDown = 
     { 
-        st = { 123, 321, 312 }, 
+        st = { CENTER_DOWN_1, SIDES_DOWN_2 + CENTER_ON_2, 0 }, 
         nextStep="LoopSideSuckOn", 
         prevStep="LoopSideSupportsFwd", 
         delay = 2.0
@@ -35,22 +46,23 @@ st =
 
     LoopSideSuckOn = 
     { 
-        st = { 123, 321, 312 }, 
+        st = { 0, SIDE_ON_2 + CENTER_ON_2, 0 }, 
         nextStep="LoopCenterSuckOff", 
         prevStep="LoopSideSupportsDown", 
-        delay = 4.0
+        delay = 2.0
     }, 
 
     LoopCenterSuckOff = 
     {
-        st = { 1, 2, 3 }, 
+        st = { 0, SIDE_ON_2, 0 }, 
         nextStep="LoopCenterSupportUp", 
-        prevStep="LoopSideSuckOn"
+        prevStep="LoopSideSuckOn", 
+        delay = 2.0
     },
 
     LoopCenterSupportUp = 
     {
-        st = { 1, 2, 3 }, 
+        st = { CENTER_UP_1, SIDE_ON_2, 0 }, 
         nextStep="LoopSideSupportsBack", 
         prevStep="LoopCenterSuckOff", 
         delay = 3.0
@@ -58,7 +70,7 @@ st =
 
     LoopSideSupportsBack = 
     { 
-        st = { 1, 1, 1 }, 
+        st = { 0, SIDE_ON_2, BACKWARD_3 }, 
         nextStep="LoopCenterSupportDown", 
         prevStep="LoopCenterSupportUp", 
         delay = 3.0
@@ -66,41 +78,42 @@ st =
 
     LoopCenterSupportDown = 
     {
-        st = { 1, 1, 1 }, 
+        st = { CENTER_DOWN_1, SIDE_ON_2, 0 }, 
         nextStep="LoopCenterSuckOn", 
         prevStep="LoopSideSupportsBack", 
-        delay = 4.0
+        delay = 3.0
     }, 
 
     LoopCenterSuckOn = 
     {
-        st = { 1, 1, 1 }, 
-        nextStep="LoopSideSuckOff",
+        st = { 0, SIDE_ON_2 + CENTER_ON_2, 0 }, 
+        nextStep="LoopSideSuckOff", 
         prevStep="LoopCenterSupportDown", 
         delay = 5.0
     }, 
 
     LoopSideSuckOff = 
     {
-        st = { 1, 1, 1 }, 
+        st = { 0, CENTER_ON_2, 0 }, 
         nextStep="LoopSideSupportsUp", 
         prevStep="LoopCenterSuckOn", 
-        delay = 3.0
+        delay = 2.0
     }, 
 
     LoopSideSupportsUp = 
     {
-        st = { 1, 1, 1 }, 
+        st = { SIDES_UP_1, CENTER_ON_2, 0 }, 
         nextStep="LoopSideSupportsFwd", 
-        prevStep="LoopSideSuckOff"
+        prevStep="LoopSideSuckOff", 
+        delay = 2.0
     }, 
 
     LoopSideSupportsFwd = 
     {
-        st = { 1, 1, 1 }, 
+        st = { 0, CENTER_ON_2, FORWARD_3 }, 
         nextStep="LoopSideSupportsDown", 
         prevStep="LoopSideSupportsUp", 
-        delay = 3.0
+        delay = 2.0
     } 
 
 
