@@ -63,6 +63,7 @@ function Mover:performStepFwd()
     local nextStep = st.nextStep
 
     local st = c[ nextStep ]
+    print( tostring( nextStep ) )
     if ( not DEBUG ) then
         remoteInvokeOutputs( { st.st[1], st.st[2], st.st[3] } )
     end
@@ -80,6 +81,7 @@ function Mover:performStepBwd()
     local prevStep = st.prevStep
 
     local st = c[ prevStep ]
+    print( tostring( prevStep ) )
     if ( not DEBUG ) then
         remoteInvokeOutputs( { st.st[1], st.st[2], st.st[3] } )
     end
