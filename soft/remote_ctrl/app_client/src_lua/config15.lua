@@ -32,25 +32,6 @@ st =
         -- Side supprts down, both ejections on.
         st = { 0, CENTER_ON_2, 0 }, 
         nextStep="LoopSideSupportsDown", 
-        prevStep="LoopSideSupportsDown", 
-        delay = 3.0
-    }, 
-
-
-    InitStep3 = 
-    { 
-        -- Side supprts down, both ejections on.
-        st = { 0, SIDES_DOWN_2 + CENTER_ON_2, 0 }, 
-        nextStep="LoopSideSupportsDown", 
-        prevStep="InitStep2", 
-        delay = 1.5
-    }, 
-
-    InitStep4 = 
-    { 
-        -- Side supprts down, both ejections on.
-        st = { 0, SIDE_ON_2 + CENTER_ON_2, 0 }, 
-        nextStep="LoopSideSupportsDown", 
         prevStep="InitStep2", 
         delay = 3.0
     }, 
@@ -61,7 +42,7 @@ st =
         st = { CENTER_DOWN_1, SIDES_DOWN_2 + CENTER_ON_2, 0 }, 
         nextStep="LoopSideSuckOn", 
         prevStep="LoopSideSupportsFwd", 
-        delay = 2.0
+        delay = 1.0
     }, 
 
     LoopSideSuckOn = 
@@ -69,7 +50,7 @@ st =
         st = { 0, SIDE_ON_2 + CENTER_ON_2, 0 }, 
         nextStep="LoopCenterSuckOff", 
         prevStep="LoopSideSupportsDown", 
-        delay = 2.0
+        delay = 1.0
     }, 
 
     LoopCenterSuckOff = 
@@ -77,7 +58,7 @@ st =
         st = { 0, SIDE_ON_2, 0 }, 
         nextStep="LoopCenterSupportUp", 
         prevStep="LoopSideSuckOn", 
-        delay = 2.0
+        delay = 1.0
     },
 
     LoopCenterSupportUp = 
@@ -85,7 +66,7 @@ st =
         st = { CENTER_UP_1, SIDE_ON_2, 0 }, 
         nextStep="LoopSideSupportsBack", 
         prevStep="LoopCenterSuckOff", 
-        delay = 3.0
+        delay = 1.0
     }, 
 
     LoopSideSupportsBack = 
@@ -93,7 +74,7 @@ st =
         st = { 0, SIDE_ON_2, BACKWARD_3 }, 
         nextStep="LoopCenterSupportDown", 
         prevStep="LoopCenterSupportUp", 
-        delay = 3.0
+        delay = 1.0
     }, 
 
     LoopCenterSupportDown = 
@@ -101,7 +82,7 @@ st =
         st = { CENTER_DOWN_1, SIDE_ON_2, 0 }, 
         nextStep="LoopCenterSuckOn", 
         prevStep="LoopSideSupportsBack", 
-        delay = 3.0
+        delay = 1.0
     }, 
 
     LoopCenterSuckOn = 
@@ -109,7 +90,7 @@ st =
         st = { 0, SIDE_ON_2 + CENTER_ON_2, 0 }, 
         nextStep="LoopSideSuckOff", 
         prevStep="LoopCenterSupportDown", 
-        delay = 5.0
+        delay = 1.0
     }, 
 
     LoopSideSuckOff = 
@@ -117,7 +98,7 @@ st =
         st = { 0, CENTER_ON_2, 0 }, 
         nextStep="LoopSideSupportsUp", 
         prevStep="LoopCenterSuckOn", 
-        delay = 2.0
+        delay = 1.0
     }, 
 
     LoopSideSupportsUp = 
@@ -125,7 +106,7 @@ st =
         st = { SIDES_UP_1, CENTER_ON_2, 0 }, 
         nextStep="LoopSideSupportsFwd", 
         prevStep="LoopSideSuckOff", 
-        delay = 2.0
+        delay = 1.0
     }, 
 
     LoopSideSupportsFwd = 
@@ -133,7 +114,7 @@ st =
         st = { 0, CENTER_ON_2, FORWARD_3 }, 
         nextStep="LoopSideSupportsDown", 
         prevStep="LoopSideSupportsUp", 
-        delay = 2.0
+        delay = 1.0
     } 
 
 
