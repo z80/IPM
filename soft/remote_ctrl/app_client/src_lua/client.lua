@@ -1,7 +1,7 @@
 
 require( "luajoyctrl" )
 require( "bit" )
-require( "movement15" )
+--require( "movement15" )
 require( "movement50" )
 -- require( "debugger" )
 
