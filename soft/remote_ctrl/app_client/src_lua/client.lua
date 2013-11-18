@@ -44,13 +44,13 @@ function main()
         --joyProcess( valves )
         local turn, fwd = joy( 1 )
         --print( "fwd = " .. tostring( fwd ) )
-        if ( fwd > JOY_TRESHOLD ) then
+        if ( fwd < -JOY_TRESHOLD ) then
             --pause()
             res, err = pcall( mov.forward, mov )
             if ( not res ) then
                 print( err )
             end
-        elseif ( fwd < -JOY_TRESHOLD ) then
+        elseif ( fwd > JOY_TRESHOLD ) then
             --pause()
             res, err = pcall( mov.backward, mov )
             if ( not res ) then
