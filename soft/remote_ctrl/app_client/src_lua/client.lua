@@ -6,7 +6,7 @@ require( "movement" )
 
 -- This value is supposed to detach real output
 -- and turn some test information on.
-DEBUG = true
+--DEBUG = true
 local JOY_TRESHOLD = 30
 
 local BOARDS_CNT = 3
