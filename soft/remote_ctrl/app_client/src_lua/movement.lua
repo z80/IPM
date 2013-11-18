@@ -24,6 +24,15 @@ Loop:
 ]]
 
 
+local SIDES_DOWN_2  = 0x10
+local SIDE_ON_2     = 0x1
+local SIDES_UP_1    = 0x1
+local CENTER_ON_2   = 0x4
+local FORWARD_3     = 0x1
+local BACKWARD_3    = 0x4
+local CENTER_UP_1   = 0x10
+local CENTER_DOWN_1 = 0x8 
+
 Mover = class()
 
 function Mover:__init( config )
@@ -49,6 +58,43 @@ function Mover:stToInit()
     print( "Going to initial position..." )
     self:forward()
     self:forward()
+end
+
+
+function Mover:oneStepForward()
+    while true do
+        self:forward()
+        if ( self.state == "LoopSideSupportsDown" ) then
+            break
+        end
+    end
+end
+
+function Mover:oneStepBackward()
+
+    local dt = 0.3
+    sleep( dt )
+    remoteInvokeOutputs( { 0, CENTER_ON_2, BACKWARD_3 } )
+    sleep( dt )
+    remoteInvokeOutputs( { 0, CENTER_ON_2 + SIDES_DOWN_2, 0 } )
+    sleep( dt )
+    remoteInvokeOutputs( { 0, CENTER_ON_2 + SIDE_ON_2, 0 } )
+    sleep( dt )
+    remoteInvokeOutputs( { 0, SIDE_ON_2, 0 } )
+    sleep( dt )
+    remoteInvokeOutputs( { CENTER_UP_1, SIDE_ON_2, 0 } )
+    sleep( dt )
+    remoteInvokeOutputs( { 0, SIDE_ON_2, FORWARD_3 } )
+    sleep( dt )
+    remoteInvokeOutputs( { CENTER_DOWN_1, SIDE_ON_2, 0 } )
+    sleep( dt )
+    remoteInvokeOutputs( { 0, CENTER_ON_2 + SIDE_ON_2, 0 } )
+    sleep( dt )
+    remoteInvokeOutputs( { 0, CENTER_ON_2, 0 } )
+    sleep( dt )
+    remoteInvokeOutputs( { SIDES_UP_1, CENTER_ON_2, 0 } )
+    sleep( dt )
+    remoteInvokeOutputs( { 0, CENTER_ON_2, 0 } )
 end
 
 function Mover:performStepFwd()

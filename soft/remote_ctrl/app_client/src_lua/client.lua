@@ -42,23 +42,29 @@ function main()
         end
         -- Process joysticks.
         --joyProcess( valves )
+        local zeroSpin = false
         local turn, fwd = joy( 1 )
         --print( "fwd = " .. tostring( fwd ) )
         if ( fwd < -JOY_TRESHOLD ) then
             --pause()
-            res, err = pcall( mov.forward, mov )
+            zeroSpin = true
+            res, err = pcall( mov.oneStepForward, mov )
             if ( not res ) then
                 print( err )
             end
         elseif ( fwd > JOY_TRESHOLD ) then
             --pause()
-            res, err = pcall( mov.backward, mov )
+            zeroSpin = true
+            res, err = pcall( mov.oneStepBackward, mov )
             if ( not res ) then
                 print( err )
             end
         end
         -- Process spinning
         
+        if ( zeroSpin ) then
+            turn = 0.0
+        end
         prevSpinDir = prevSpinDir or "idle"
         if ( turn > JOY_TRESHOLD ) then
             if ( prevSpinDir and prevSpinDir ~= "cw" ) then
