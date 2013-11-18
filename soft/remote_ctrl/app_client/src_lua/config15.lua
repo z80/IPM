@@ -40,7 +40,7 @@ st =
     InitStep3 = 
     { 
         -- Side supprts down, both ejections on.
-        st = { 0, SIDES_DOWN_2 + CENTER_ON_2, FORWARD_3 }, 
+        st = { 0, SIDES_DOWN_2 + CENTER_ON_2, 0 }, 
         nextStep="LoopSideSupportsDown", 
         prevStep="InitStep2", 
         delay = 1.5
