@@ -21,7 +21,7 @@ st =
     InitStep1 = 
     { 
         -- All supports down.
-        st = { CENTER_DOWN_1, SIDES_DOWN_2, 0 }, 
+        st = { CENTER_DOWN_1 + SIDES_UP_1, 0, FORWARD_3 }, 
         nextStep="InitStep2", 
         prevStep="InitStep2", 
         delay = 3.0
@@ -30,11 +30,31 @@ st =
     InitStep2 = 
     { 
         -- Side supprts down, both ejections on.
-        st = { CENTER_DOWN_1, SIDES_DOWN_2 + SIDE_ON_2 + CENTER_ON_2, 0 }, 
+        st = { 0, CENTER_ON_2, 0 }, 
         nextStep="LoopSideSupportsDown", 
         prevStep="LoopSideSupportsDown", 
-        delay = 2.0
+        delay = 3.0
     }, 
+
+
+    InitStep3 = 
+    { 
+        -- Side supprts down, both ejections on.
+        st = { 0, SIDES_DOWN_2 + CENTER_ON_2, FORWARD_3 }, 
+        nextStep="LoopSideSupportsDown", 
+        prevStep="InitStep2", 
+        delay = 1.5
+    }, 
+
+    InitStep4 = 
+    { 
+        -- Side supprts down, both ejections on.
+        st = { 0, SIDE_ON_2 + CENTER_ON_2, 0 }, 
+        nextStep="LoopSideSupportsDown", 
+        prevStep="InitStep2", 
+        delay = 3.0
+    }, 
+
 
     LoopSideSupportsDown = 
     { 

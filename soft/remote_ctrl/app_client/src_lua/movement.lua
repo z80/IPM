@@ -39,22 +39,16 @@ function Mover:__init( config )
 
     self.states = st
     self.state = "Uninitialized"
+
+    sleep( 6.0 )
+    self:stToInit()
 end
 
 -- To initialized state.
 function Mover:stToInit()
-    local c = self.states
-    -- Suck On
-    local st = c[ "InitStep1" ]
-    remoteInvokeOutputs( { st.outs[1], st.outs[2], st.outs[3] } )
-    sleep( st.delay )
-
-    -- Side supports down.
-    st = c[ "InitStep2" ]
-    remoteInvokeOutputs( { st.outs[1], st.outs[2], st.outs[3] } )
-    sleep( st.delay )
-
-    self.state = "InitStep2"
+    print( "Going to initial position..." )
+    self:forward()
+    self:forward()
 end
 
 function Mover:performStepFwd()
