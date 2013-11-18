@@ -1,7 +1,8 @@
 
 require( "luajoyctrl" )
 require( "bit" )
-require( "movement" )
+require( "movement15" )
+require( "movement50" )
 -- require( "debugger" )
 
 -- This value is supposed to detach real output
