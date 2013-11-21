@@ -1,8 +1,8 @@
 
 require( "luajoyctrl" )
 require( "bit" )
---require( "movement15" )
-require( "movement50" )
+require( "movement15" )
+--require( "movement50" )
 -- require( "debugger" )
 
 -- This value is supposed to detach real output
@@ -64,7 +64,7 @@ function main()
         -- Process spinning
         
         if ( zeroSpin ) then
-            turn = 0.0
+            --turn = 0.0
         end
         prevSpinDir = prevSpinDir or "idle"
         if ( turn > JOY_TRESHOLD ) then
