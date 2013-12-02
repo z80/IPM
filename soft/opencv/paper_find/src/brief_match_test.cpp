@@ -67,49 +67,49 @@ int main(int argc, const char ** argv)
 
 void thresh_callback(int, void* )
 {
-  Mat canny_output;
-  vector<vector<Point> > contours;
-  vector<Vec4i> hierarchy;
+    Mat canny_output;
+    vector<vector<Point> > contours;
+    vector<Vec4i> hierarchy;
 
-  /// Detect edges using canny
-  Canny( blurred, canny_output, thresh, thresh*2, 3 );
-  // Dilate helps to remove potential holes between edge segments
-  dilate( canny_output, canny_output, Mat(), Point(-1,-1) );
-  /// Find contours
-  findContours( canny_output, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0, 0) );
+    /// Detect edges using canny
+    Canny( blurred, canny_output, thresh, thresh*2, 3 );
+    // Dilate helps to remove potential holes between edge segments
+    dilate( canny_output, canny_output, Mat(), Point(-1,-1) );
+    /// Find contours
+    findContours( canny_output, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0, 0) );
 
-  const double minArea = 1000.0;
-  double maxArea = minArea;
-  int maxIndex = -1;
-  std::vector<cv::Point> square;
-  for ( unsigned i=0; i<contours.size(); i++ )
-  {
-    std::vector<cv::Point> approx;
-    Mat v = Mat( contours[i] );
-    cv::approxPolyDP( v, approx, 
-                      arcLength( v, true )*0.05, true );
-    if ( ( approx.size() == 4 ) )
+    const double minArea = 1000.0;
+    double maxArea = minArea;
+    int maxIndex = -1;
+    std::vector<cv::Point> square;
+    for ( unsigned i=0; i<contours.size(); i++ )
     {
-        double area = contourArea( v, false );
-        if ( area > maxArea )
+        std::vector<cv::Point> approx;
+        Mat v = Mat( contours[i] );
+        cv::approxPolyDP( v, approx,
+                          arcLength( v, true )*0.05, true );
+        if ( ( approx.size() == 4 ) )
         {
-            maxArea  = area;
-            maxIndex = i;
-            square   = approx;
+            double area = contourArea( v, false );
+            if ( area > maxArea )
+            {
+                maxArea  = area;
+                maxIndex = i;
+                square   = approx;
+            }
         }
     }
-  }
 
-  /// Draw contours
-  Mat drawing = Mat::zeros( canny_output.size(), CV_8UC3 );
-  for( int i = 0; i< contours.size(); i++ )
-     {
-       Scalar color = Scalar( rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255) );
-       drawContours( drawing, contours, i, color, 1, 8, hierarchy, 0, Point() );
-     }
+    /// Draw contours
+    Mat drawing = Mat::zeros( canny_output.size(), CV_8UC3 );
+    for( int i = 0; i< contours.size(); i++ )
+    {
+        Scalar color = Scalar( rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255) );
+        drawContours( drawing, contours, i, color, 1, 8, hierarchy, 0, Point() );
+    }
 
-  if ( square.size() > 3 )
-  {
+    if ( square.size() > 3 )
+    {
         line( drawing, square[0], square[1], Scalar( 255, 0, 0 ), 3 );
         line( drawing, square[1], square[2], Scalar( 0, 255, 0 ), 3 );
         line( drawing, square[2], square[3], Scalar( 0, 0, 255 ), 3 );
@@ -125,7 +125,7 @@ void thresh_callback(int, void* )
 
         Point2f dst_vertices[3];
         dst_vertices[0] = Point(0, 0);
-        dst_vertices[1] = Point(box.boundingRect().width-1, 0); 
+        dst_vertices[1] = Point(box.boundingRect().width-1, 0);
         dst_vertices[2] = Point(0, box.boundingRect().height-1);
 
         Mat warpAffineMatrix = getAffineTransform(src_vertices, dst_vertices);
@@ -135,7 +135,7 @@ void thresh_callback(int, void* )
 
         namedWindow( "Result", CV_WINDOW_NORMAL /*CV_WINDOW_AUTOSIZE*/ );
         imshow( "Result", rotated );
-  }
+    }
     /// Show in a window
     namedWindow( "Contours", CV_WINDOW_NORMAL /*CV_WINDOW_AUTOSIZE*/ );
     imshow( "Contours", drawing );
