@@ -61,5 +61,11 @@ soft/firmware/joystick/.settings/*
 soft/firmware/joystick/build/lst/*
 soft/firmware/joystick/build/obj/*
 
+soft/opencv/build.app
+soft/opencv/build
+
+
+
+
 
 
