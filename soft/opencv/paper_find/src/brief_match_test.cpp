@@ -24,11 +24,12 @@ RNG rng(12345);
 Mat img, gray;
 Mat blurred;
 Mat toProcess;
-int cutoffFrom = 192;
+int thresholdValue = 192;
 int cutoffTo   = 255;
 
 int blurValue = 10;
 int eps       = 5;
+int threshholdWindowSz = 3;
 
 int main(int argc, const char ** argv)
 {
@@ -41,10 +42,10 @@ int main(int argc, const char ** argv)
     }
 
     namedWindow( "src", CV_WINDOW_AUTOSIZE );
-    createTrackbar( "Blur value:",      "src",   &blurValue,   max_thresh, 0 );
-    createTrackbar( "Treshold from:",   "src", &cutoffFrom, max_thresh, 0 );
-    createTrackbar( "Treshold to:",     "src", &cutoffTo,   max_thresh, 0 );
-    createTrackbar( "Contour epsilon:", "src", &eps,        100, 0 );
+    createTrackbar( "Blur value:",        "src", &blurValue,          max_thresh, 0 );
+    createTrackbar( "Treshold from:",     "src", &thresholdValue,     max_thresh,    0 );
+    createTrackbar( "Treshold wnd size:", "src", &threshholdWindowSz, 300, 0 );
+    createTrackbar( "Contour epsilon:",   "src", &eps,                100, 0 );
 
     while ( true )
     {
@@ -60,13 +61,19 @@ int main(int argc, const char ** argv)
         else
             blurred = gray;
         
-        threshold( blurred, toProcess, cutoffFrom, cutoffTo, THRESH_BINARY );
+        threshold( blurred, toProcess, thresholdValue, cutoffTo, THRESH_BINARY );
+        //if ( threshholdWindowSz < 1 )
+        //    threshholdWindowSz = 1;
+        //adaptiveThreshold( blurred, toProcess, thresholdValue,
+        //                   ADAPTIVE_THRESH_MEAN_C, THRESH_BINARY,
+        //                   threshholdWindowSz*2+1, 0.0 );
 
         thresh_callback( 0, 0 );
 
         imshow( "src", img );
         imshow( "For processing", toProcess );
-        if ( waitKey( 200 ) == 'q')
+        int res = 0;
+        if ( waitKey( 200 ) == 'q' )
             break;
     }
     inputCapture.release();
@@ -87,7 +94,8 @@ void thresh_callback(int, void* )
     /// Find contours
     //findContours( canny_output, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0, 0) );
     Mat cont = toProcess.clone();
-    findContours( cont, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0, 0) );
+    Mat::MSize sz = toProcess.size;
+    findContours( cont, contours, hierarchy, CV_RETR_LIST, CV_CHAIN_APPROX_SIMPLE, Point(0, 0) );
 
     const double minArea = 1000.0;
     double maxArea = minArea;
@@ -115,7 +123,7 @@ void thresh_callback(int, void* )
     /// Draw contours
     //Mat drawing = Mat::zeros( canny_output.size(), CV_8UC3 );
     //Mat drawing = Mat::zeros( blurred.size(), CV_8UC3 );
-    for( int i = 0; i< contours.size(); i++ )
+    for( int i = 0; i<contours.size(); i++ )
     {
         Scalar color = Scalar( rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255) );
         //drawContours( drawing, contours, i, color, 1, 8, hierarchy, 0, Point() );
@@ -124,6 +132,37 @@ void thresh_callback(int, void* )
 
     if ( square.size() > 3 )
     {
+        Point pt;
+        // Sort elements in decending Y direction.
+        for ( unsigned i=0; i<3; i++ )
+        {
+            for ( unsigned j=i+1; j<4; j++ )
+            {
+                if (square[i].y > square[j].y)
+                {
+                    pt = square[i];
+                    square[i] = square[j];
+                    square[j] = pt;
+                }
+            }
+        }
+        // Sort first two in X accending.
+        if ( square[0].x > square[1].x )
+        {
+            pt = square[0];
+            square[0] = square[1];
+            square[1] = pt;
+
+        }
+        // Sort last two in X decending.
+        if ( square[2].x < square[3].x )
+        {
+            pt = square[2];
+            square[2] = square[3];
+            square[3] = pt;
+
+        }
+
         //line( drawing, square[0], square[1], Scalar( 255, 0, 0 ), 3 );
         //line( drawing, square[1], square[2], Scalar( 0, 255, 0 ), 3 );
         //line( drawing, square[2], square[3], Scalar( 0, 0, 255 ), 3 );
@@ -138,14 +177,14 @@ void thresh_callback(int, void* )
         cv::Point2f src_vertices[4];
         src_vertices[0] = square[0];
         src_vertices[1] = square[1];
-        src_vertices[2] = square[3];
-        src_vertices[3] = square[2];
+        src_vertices[2] = square[2];
+        src_vertices[3] = square[3];
 
         Point2f dst_vertices[4];
-        dst_vertices[0] = Point(0, 0);
-        dst_vertices[1] = Point(box.boundingRect().width - 1, 0);
-        dst_vertices[2] = Point(0, box.boundingRect().height -1);
-        dst_vertices[3] = Point(box.boundingRect().width - 1, box.boundingRect().height -1);
+        dst_vertices[0] = Point(0, box.boundingRect().height -1);
+        dst_vertices[1] = Point(box.boundingRect().width - 1, box.boundingRect().height -1);
+        dst_vertices[2] = Point(box.boundingRect().width - 1, 0 );
+        dst_vertices[3] = Point(0, 0);
 
         //Mat warpAffineMatrix = getAffineTransform(src_vertices, dst_vertices);
         Mat warpPerspectiveMatrix = getPerspectiveTransform( src_vertices, dst_vertices );
