@@ -114,6 +114,7 @@ namespace Qr{
             this->_current_pos=this->_raw_data;
 
             return(bitstream->position());
+            return 0;
         }
         int Decoder::_get_charactor_count(int version)
         {

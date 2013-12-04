@@ -14,7 +14,7 @@
 class QrExtractor
 {
 public:
-    QrExtractor( int smoothSz = 2, int tresholdWndSz = 50 );
+    QrExtractor( int smoothSz = 2, int tresholdWndSz = 50, bool setup = false );
     ~QrExtractor();
     bool extract( const cv::Mat & img );
     void setDebug( bool en );

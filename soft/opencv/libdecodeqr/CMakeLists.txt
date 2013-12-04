@@ -11,7 +11,12 @@ message( STATUS ${src} )
 include_directories( ${OPENCV_INC_PATH} ./src )
 
 ADD_LIBRARY( ${projName} STATIC ${src} )
-TARGET_LINK_LIBRARIES( ${projName} ${OpenCV_LIBS} )
+
+set( libs ${OpenCV_LIBS} )
+if ( WIN32 )
+    set( libs ${libs} Ws2_32.lib )
+endif ( WIN32 )
+TARGET_LINK_LIBRARIES( ${projName} ${libs} )
 
 
 

@@ -53,7 +53,7 @@ namespace Qr{
 
         private:
             virtual int _read_header(int version,BitStream *bitstream);
-            virtual int _get_charactor_count(int version)=0;
+            virtual int _get_charactor_count(int version);
             virtual int _read_data(BitStream *bitstream);
         };
 

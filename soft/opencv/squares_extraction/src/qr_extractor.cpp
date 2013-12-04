@@ -20,8 +20,9 @@ public:
     vector<Point>         markers;
 
     bool debug;
-
+    RNG rng;
     PD()
+        : rng(12345)
     {
         debug = false;
     }
@@ -30,14 +31,71 @@ public:
     {
 
     }
-
+    static int weightO( const Mat & img, 
+                 const Point & o, const Point & x, const Point & y, 
+                 int pts = -1 );
+    static int detectO( const Mat & img, const vector<Point> & o );
+    static bool detectXy( const Point & o, const Point & x, const Point & y );
 };
 
-QrExtractor::QrExtractor( int smoothSz, int tresholdWndSz )
+int  QrExtractor::PD::weightO( const Mat & img, 
+                               const Point & o, const Point & x, const Point & y, 
+                               int pts )
+{
+    if ( pts < 0 )
+        pts = ( img.rows + img.cols ) / 4;
+    Point to = Point( (x.x + y.x - 2*o.x), (x.y + y.y - 2*o.y) );
+    int res = 0;
+    for ( int i=0; i<pts; i++ )
+    {
+        Point at = Point( o.x + to.x*i/((pts-1)*2), o.y + to.y*i/((pts-1)*2) );
+        if (at.x < 0)
+            return pts * 255;
+        if ( at.y < 0 )
+            return pts * 255;
+        if ( at.x >= img.cols )
+            return pts * 255;
+        if ( at.y >= img.rows )
+            return pts * 255;
+        res += img.data[ at.y * img.cols + at.x ]; //img.at( at )[0];
+    }
+    return res;
+}
+
+int  QrExtractor::PD::detectO( const Mat & img, const vector<Point> & o )
+{
+    if ( o.size() < 3 )
+        return -1;
+    int w0 = weightO( img, o[0], o[1], o[2] );
+    int w1 = weightO( img, o[1], o[0], o[2] );
+    int w2 = weightO( img, o[2], o[1], o[0] );
+    if ( ( w0 <= w1 ) && ( w0 <= w2 ) )
+        return 0;
+    if ( ( w1 <= w0 ) && ( w1 <= w2 ) )
+        return 1;
+    return 2;
+}
+
+bool QrExtractor::PD::detectXy( const Point & o, const Point & x, const Point & y )
+{
+    Point ox = Point( x.x - o.x, x.y - o.y );
+    Point oy = Point( y.x - o.x, y.y - o.y );
+    int res = ox.x*oy.y - ox.y*oy.x;
+    // Here <0 because QR code has center in upper right corner.
+    return ( res < 0 );
+}
+
+QrExtractor::QrExtractor( int smoothSz, int tresholdWndSz, bool setup )
 {
     pd = new PD();
     pd->smoothSz      = smoothSz;
     pd->tresholdWndSz = tresholdWndSz;
+    pd->debug = setup;
+    if ( setup )
+    {
+        cv::createTrackbar( "Blur value:",        "QrExtractor::orig", &pd->smoothSz,      300, 0 );
+        cv::createTrackbar( "Treshold wnd size:", "QrExtractor::orig", &pd->tresholdWndSz, 300, 0 );
+    }
 }
 
 QrExtractor::~QrExtractor()
@@ -61,7 +119,7 @@ static unsigned int intRoot(unsigned int x)
 
 bool QrExtractor::extract( const cv::Mat & img )
 {
-    if ( debug )
+    if ( pd->debug )
         pd->orig = img.clone();
 
     cv::cvtColor( img, pd->gray, CV_RGB2GRAY );
@@ -75,22 +133,22 @@ bool QrExtractor::extract( const cv::Mat & img )
     else
         pd->blurred = pd->gray;
 
-    if ( !(pd->pd->tresholdWndSz & 1) )
+    if ( !(pd->tresholdWndSz & 1) )
         pd->tresholdWndSz |= 1;
     cv::adaptiveThreshold( pd->blurred, pd->blurred, 255,
                            cv::ADAPTIVE_THRESH_GAUSSIAN_C, cv::THRESH_BINARY,
                            pd->tresholdWndSz, 0.0 );
 
-    if ( pd->debug )
-        pd->blurredSaved = pd->blurred.clone();
+    
+    pd->blurredSaved = pd->blurred.clone();
     cv::findContours( pd->blurred, pd->contours, pd->hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0, 0) );
 
     if ( pd->debug )
     {
-        for( int i = 0; i<pd->contours.size(); i++ )
+        for( unsigned i = 0; i<pd->contours.size(); i++ )
         {
             // Random color.
-            Scalar color = Scalar( rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255) );
+            Scalar color = Scalar( pd->rng.uniform(0, 255), pd->rng.uniform(0,255), pd->rng.uniform(0,255) );
             // Draw contour function.
             drawContours( pd->orig, pd->contours, i, color, 1, 8, pd->hierarchy, 0, Point() );
         }
@@ -152,7 +210,7 @@ bool QrExtractor::extract( const cv::Mat & img )
         x *= 0.333333333;
         y *= 0.333333333;
 
-        markers.push_back( Point( x, y ) );
+        markers.push_back( Point( static_cast<int>(x), static_cast<int>(y) ) );
         if ( markers.size() > 2 )
             break;
     }
@@ -163,17 +221,36 @@ bool QrExtractor::extract( const cv::Mat & img )
     // And the last one along (-Y) axis.
     if ( markers.size() > 2 )
     {
-
+        int indO = PD::detectO( pd->blurredSaved, markers );
+        const Point & o = markers[ indO ];
+        int indX = (indO+1)%3;
+        int indY = (indO+2)%3;
+        const Point & x = markers[ indX ];
+        const Point & y = markers[ indY ];
+        bool leftRf = PD::detectXy( o, x, y );
+        if ( !leftRf )
+        {
+            int t = indX;
+            indX = indY;
+            indY = t;
+        }
+        markers.push_back( markers[ indO ] );
+        markers.push_back( markers[ indX ] );
+        markers.push_back( markers[ indY ] );
+        markers[0] = markers[3];
+        markers[1] = markers[4];
+        markers[2] = markers[5];
+        markers.resize( 3 );
     }
 
 
-    if ( debug && ( markers.size() > 2 ) )
+    if ( pd->debug && ( markers.size() > 2 ) )
     {
         cv::line( pd->orig, markers[0], markers[1], Scalar( 255, 0, 0 ), 3 );
         cv::line( pd->orig, markers[1], markers[2], Scalar( 0, 255, 0 ), 3 );
         cv::line( pd->orig, markers[2], markers[0], Scalar( 0, 0, 255 ), 3 );
     }
-    if ( debug )
+    if ( pd->debug )
     {
         cv::imshow( "QrExtractor::orig",     pd->orig );
         cv::imshow( "QrExtractor::filtered", pd->blurredSaved );
