@@ -9,7 +9,10 @@ endif ( WIN32 )
 add_subdirectory( "./paper_find" )
 add_subdirectory( "./qr_read" )
 add_subdirectory( "./libdecodeqr" )
-add_subdirectory( "./squares_extraction" )
+add_subdirectory( "./cam_calibration" )
+
+
+#add_subdirectory( "./squares_extraction" )
 
 
 
