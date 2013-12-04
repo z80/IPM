@@ -13,6 +13,7 @@
 #include <iostream>
 
 #include "qr_extractor.h"
+#include "qr_reader.h"
 
 using namespace cv;
 using namespace std;
@@ -50,12 +51,15 @@ int main(int argc, const char ** argv)
     //createTrackbar( "Treshold wnd size:", "src", &threshholdWindowSz, 300, 0 );
 
     QrExtractor qe( 3, 30, true );
+    QrReader    qr( 3, 65, true );
 
     while ( true )
     {
         inputCapture >> captured;
 
-        qe.extract( captured );
+        bool res = qe.extract( captured );
+        if ( res )
+            qr.decode( captured, qe.points() );
         //gray.create( captured.rows, captured.cols, CV_8UC1 );
         //blurred.create( captured.rows, captured.cols, CV_8UC1 );
 

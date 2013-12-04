@@ -48,7 +48,7 @@ int  QrExtractor::PD::weightO( const Mat & img,
     int res = 0;
     for ( int i=0; i<pts; i++ )
     {
-        Point at = Point( o.x + to.x*i/((pts-1)*2), o.y + to.y*i/((pts-1)*2) );
+        Point at = Point( o.x + to.x*i/(pts-1), o.y + to.y*i/(pts-1) );
         if (at.x < 0)
             return pts * 255;
         if ( at.y < 0 )
@@ -82,7 +82,7 @@ bool QrExtractor::PD::detectXy( const Point & o, const Point & x, const Point & 
     Point oy = Point( y.x - o.x, y.y - o.y );
     int res = ox.x*oy.y - ox.y*oy.x;
     // Here <0 because QR code has center in upper right corner.
-    return ( res < 0 );
+    return ( res > 0 );
 }
 
 QrExtractor::QrExtractor( int smoothSz, int tresholdWndSz, bool setup )
@@ -93,6 +93,7 @@ QrExtractor::QrExtractor( int smoothSz, int tresholdWndSz, bool setup )
     pd->debug = setup;
     if ( setup )
     {
+        namedWindow( "QrExtractor::orig", CV_WINDOW_NORMAL );
         cv::createTrackbar( "Blur value:",        "QrExtractor::orig", &pd->smoothSz,      300, 0 );
         cv::createTrackbar( "Treshold wnd size:", "QrExtractor::orig", &pd->tresholdWndSz, 300, 0 );
     }
@@ -143,16 +144,16 @@ bool QrExtractor::extract( const cv::Mat & img )
     pd->blurredSaved = pd->blurred.clone();
     cv::findContours( pd->blurred, pd->contours, pd->hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, Point(0, 0) );
 
-    if ( pd->debug )
-    {
-        for( unsigned i = 0; i<pd->contours.size(); i++ )
-        {
-            // Random color.
-            Scalar color = Scalar( pd->rng.uniform(0, 255), pd->rng.uniform(0,255), pd->rng.uniform(0,255) );
-            // Draw contour function.
-            drawContours( pd->orig, pd->contours, i, color, 1, 8, pd->hierarchy, 0, Point() );
-        }
-    }
+    //if ( pd->debug )
+    //{
+    //    for( unsigned i = 0; i<pd->contours.size(); i++ )
+    //    {
+    //        // Random color.
+    //        Scalar color = Scalar( pd->rng.uniform(0, 255), pd->rng.uniform(0,255), pd->rng.uniform(0,255) );
+    //        // Draw contour function.
+    //        drawContours( pd->orig, pd->contours, i, color, 1, 8, pd->hierarchy, 0, Point() );
+    //    }
+    //}
 
     // Look for patterns.
     // There should be 3 squares. And each is a "pyramid of 3 squares" in turn.
@@ -246,9 +247,9 @@ bool QrExtractor::extract( const cv::Mat & img )
 
     if ( pd->debug && ( markers.size() > 2 ) )
     {
-        cv::line( pd->orig, markers[0], markers[1], Scalar( 255, 0, 0 ), 3 );
-        cv::line( pd->orig, markers[1], markers[2], Scalar( 0, 255, 0 ), 3 );
-        cv::line( pd->orig, markers[2], markers[0], Scalar( 0, 0, 255 ), 3 );
+        cv::line( pd->orig, markers[0], markers[1], Scalar( 0, 0, 255 ), 3 );
+        cv::line( pd->orig, markers[0], markers[2], Scalar( 0, 255, 0 ), 3 );
+        //cv::line( pd->orig, markers[2], markers[0], Scalar( 0, 0, 255 ), 3 );
     }
     if ( pd->debug )
     {
@@ -257,6 +258,11 @@ bool QrExtractor::extract( const cv::Mat & img )
     }
 
     return (markers.size() > 2);
+}
+
+const std::vector<cv::Point> & QrExtractor::points() const
+{
+    return pd->markers;
 }
 
 
