@@ -41,8 +41,8 @@ void QrReader::PD::rotateImage( const Mat & input, const vector<Point> & pts )
     rotated = input.clone();
     Point2f center = Point2f( rotated.rows/2.0, rotated.cols/2.0 );
     double sz = ( rotated.rows < rotated.cols ) ? rotated.rows : rotated.cols;
-    double margin = sz * 0.2;
-    double w = sz * 0.6;
+    double margin = sz * 0.35;
+    double w = sz * 0.3;
 
     Point2f dst_vertices[3];
     dst_vertices[0] = Point( margin,  margin );
