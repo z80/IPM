@@ -13,6 +13,8 @@ local JOY_TRESHOLD = 30
 local BOARDS_CNT = 3
 local valves = { 0, 0, 0 }
 
+local escon_started
+
 function main()
     print( "Initializing valve test window" )
     for i=1, BOARDS_CNT do
@@ -93,6 +95,23 @@ function main()
                 prevSpinDir = "idle"
                 send( "bmsd:stop()" )
             end
+        end
+        
+        -- Process manipulator.
+        local hor, vert = joy( 2 )
+        if ( hor > JOY_TRESHOLD ) then
+            
+        elseif ( hor < -JOY_TRESHOLD ) then
+            
+        else
+            
+        end
+        if ( vert > JOY_TRESHOLD ) then
+            
+        elseif ( vert < -JOY_TRESHOLD ) then
+            
+        else
+            
         end
         
 
@@ -211,6 +230,34 @@ function joyProcess( valves )
     if ( valve ~= valves[0] ) then
         valves[0] = valve
         remoteInvokeOutputs( valves )
+    end
+end
+
+function initEscon()
+    send( "escon:setSpeed( 1, 0 )" )
+    send( "escon:start( 1 )" )
+    
+    send( "escon:setSpeed( 2, 0 )" )
+    send( "escon:start( 2 )" )
+    
+    send( "escon:setSpeed( 3, 0 )" )
+    send( "escon:start( 3 )" )
+    
+    send( "escon:setSpeed( 4, 0 )" )
+    send( "escon:start( 4 )" )
+end
+
+function startStopEscon( ind, val )
+    if ( math.abs( val ) > JOY_THRESHOLD ) then
+        if ( not escon_started[ ind ] ) then
+            escon_started[ ind ] = true
+            send( string.format( "escon:start( %i )", ind ) )
+        end
+    else
+        if ( escon_started[ ind ] ) then
+            escon_started[ ind ] = false
+            send( string.format( "escon:stop( %i )", ind ) )
+        end
     end
 end
 
