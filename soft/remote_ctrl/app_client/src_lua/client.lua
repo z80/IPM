@@ -7,7 +7,8 @@ require( "movement50" )
 
 -- This value is supposed to detach real output
 -- and turn some test information on.
---DEBUG = true
+DEBUG = true
+
 local JOY_TRESHOLD = 30
 
 local BOARDS_CNT = 3
@@ -22,6 +23,9 @@ function main()
         valveSetOutputs( i-1, 0 )
     end
     mov = Mover()
+    
+    -- ESCON controllers initialization.
+    initEscon()
 
     while true do
         sleep( 0.1 )
@@ -44,9 +48,12 @@ function main()
             end
         end
         -- Process joysticks.
-        --joyProcess( valves )
+        if ( not DEBUG ) then
+            joyProcess( valves )
+        end
+        
         local zeroSpin = false
-        local turn, fwd = joy( 1 )
+        local turn, fwd = joyVal( 1 )
         --print( "fwd = " .. tostring( fwd ) )
         if ( fwd < -JOY_TRESHOLD ) then
             --pause()
@@ -98,21 +105,12 @@ function main()
         end
         
         -- Process manipulator.
-        local hor, vert = joy( 2 )
-        if ( hor > JOY_TRESHOLD ) then
-            
-        elseif ( hor < -JOY_TRESHOLD ) then
-            
-        else
-            
-        end
-        if ( vert > JOY_TRESHOLD ) then
-            
-        elseif ( vert < -JOY_TRESHOLD ) then
-            
-        else
-            
-        end
+        local hor, vert = joyVal( 2 )
+        esconSetSpeed( 1, hor )
+        esconSetSpeed( 2, vert )
+        
+        local hor, vert = joyVal( 3 )
+        esconSetSpeed( 3, vert )
         
 
         --[[for i = 1, 4 do
@@ -190,23 +188,32 @@ function joyProcess( valves )
     local nullY = {}
     local stopBtn
 
-    stopByn = j:stopBtn()
-    print( string.format( "stopBtn: %s", stopBtn and "true" or "false" ) )
+    stopBtn = j:stopBtn()
+    
+    
+    --print( string.format( "stopBtn: %s", stopBtn and "true" or "false" ) )
 
+    joyValues = joyValues or {}
     for i=0, 3 do
         adcX[i+1]  = j:adcX( i )
         adcY[i+1]  = j:adcY( i )
         nullX[i+1] = j:nullX( i )
         nullY[i+1] = j:nullY( i )
-        print( string.format( "adcX[%i]: %3i; adcY[%i]: %3i; nullX: %s, nullY: %s", 
+        --[[print( string.format( "adcX[%i]: %3i; adcY[%i]: %3i; nullX: %s, nullY: %s", 
                               i,  
                               adcX[i+1], 
                               i, 
                               adcY[i+1], 
                               nullX[i+1] and "true" or "false", 
                               nullY[i+1] and "true" or "false" ) )
+        ]]
+        
+        local x = (adcX[i+1] - 2047) * 100 / 2048
+        local y = (adcY[i+1] - 2047) * 100 / 2048
+        joyValues[ i+1 ] = { x = x, y = y }
     end
 
+    --[[
     -- 0-th joystick controls 0 and 1 outputs depending on where 
     -- it is bended, to the left or to the right.
     local valve = valves[0]
@@ -231,6 +238,7 @@ function joyProcess( valves )
         valves[0] = valve
         remoteInvokeOutputs( valves )
     end
+    ]]
 end
 
 function initEscon()
@@ -253,12 +261,45 @@ function startStopEscon( ind, val )
             escon_started[ ind ] = true
             send( string.format( "escon:start( %i )", ind ) )
         end
+        return true
     else
         if ( escon_started[ ind ] ) then
             escon_started[ ind ] = false
             send( string.format( "escon:stop( %i )", ind ) )
         end
     end
+    return false
+end
+
+function joyToSpeed( val )
+    local a = math.abs( val )
+    if (  a < JOY_TRESHOLD ) then
+        return 0
+    end
+    local s = 100 / (100 - JOY_THESHOLD)
+    if ( val > 0 ) then
+        return s*(a - JOY_TRESHOLD)
+    else
+        return s*(JOY_TRESHOLD - a)
+    end
+end
+
+function esconSetSpeed( inv, val )
+    if ( startStopEscon( ind, val ) ) then
+        local speed = joyToSpeed( val )
+        local stri = string.format( "escon:setSpeed( %i, %i )", ind, val )
+        send( stri )
+    end
+end
+
+function joyVal( ind )
+    if ( DEBUG ) then
+        local x, y = joy( ind )
+        return x, y
+    end
+    
+    x, y = joyValues[ ind ]
+    return x, y
 end
 
 
