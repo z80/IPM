@@ -14,7 +14,7 @@ local JOY_TRESHOLD = 30
 local BOARDS_CNT = 3
 local valves = { 0, 0, 0 }
 
-local escon_started
+local escon_started = {}
 
 function main()
     print( "Initializing valve test window" )
@@ -25,7 +25,7 @@ function main()
     mov = Mover()
     
     -- ESCON controllers initialization.
-    initEscon()
+    --initEscon()
 
     while true do
         sleep( 0.1 )
@@ -47,6 +47,8 @@ function main()
                 end
             end
         end
+
+        --print( "Before joysticks" )
         -- Process joysticks.
         if ( not DEBUG ) then
             joyProcess( valves )
@@ -71,7 +73,8 @@ function main()
             end
         end
         -- Process spinning
-        
+       
+        --print( "Here 01" )
         if ( zeroSpin ) then
             --turn = 0.0
         end
@@ -103,16 +106,22 @@ function main()
                 send( "bmsd:stop()" )
             end
         end
-        
+
+        --print( "Here 02" )
         -- Process manipulator.
-        local hor, vert = joyVal( 2 )
+        local hor, vert = joyVal( 3 )
+
+        --print( string.format( "hor = %s, ver = %s", tostring( hor ), tostring( vert ) ) )
+        --print( "Here 02.5" )
         esconSetSpeed( 1, hor )
+        --print( "Here 02.75" )
         esconSetSpeed( 2, vert )
         
-        local hor, vert = joyVal( 3 )
+        --print( "Here 03" )
+        local hor, vert = joyVal( 4 )
         esconSetSpeed( 3, vert )
         
-
+        --print( "After joysticks" )
         --[[for i = 1, 4 do
             local x, y = joy( i )
             --print( string.format( "joy[%i]: %3.2f%%, %3.2f%%", i, x, y ) )
@@ -256,13 +265,18 @@ function initEscon()
 end
 
 function startStopEscon( ind, val )
-    if ( math.abs( val ) > JOY_THRESHOLD ) then
+    --print( "startStop entered" )
+    --print( string.format( "ind = %s, val = %s", tostring(ind), tostring(val) ) )
+    if ( math.abs( val ) > JOY_TRESHOLD ) then
+        --print( "startStop start" )
         if ( not escon_started[ ind ] ) then
             escon_started[ ind ] = true
             send( string.format( "escon:start( %i )", ind ) )
         end
+        --print( "startStop left" )
         return true
     else
+        --print( "startStop stop" )
         if ( escon_started[ ind ] ) then
             escon_started[ ind ] = false
             send( string.format( "escon:stop( %i )", ind ) )
@@ -276,7 +290,7 @@ function joyToSpeed( val )
     if (  a < JOY_TRESHOLD ) then
         return 0
     end
-    local s = 100 / (100 - JOY_THESHOLD)
+    local s = 100 / (100 - JOY_TRESHOLD)
     if ( val > 0 ) then
         return s*(a - JOY_TRESHOLD)
     else
@@ -284,9 +298,11 @@ function joyToSpeed( val )
     end
 end
 
-function esconSetSpeed( inv, val )
+function esconSetSpeed( ind, val )
     if ( startStopEscon( ind, val ) ) then
+        --print( string.format( "setSpeed %s", tostring( val ) ) )
         local speed = joyToSpeed( val )
+        --print( "after joyToSpeed" )
         local stri = string.format( "escon:setSpeed( %i, %i )", ind, val )
         send( stri )
     end
