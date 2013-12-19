@@ -83,6 +83,7 @@ function ESCON:start( index )
     local addr, val
     if ( index == 1 ) then
         self.enBits[1] = bit.bor( self.enBits[1], 0x01 )
+        --self.enBits[1] = bit.bor( self.enBits[1], 0xff )
 	    val = self.enBits[1]
         addr = EN_ADDR[1]
     elseif ( index == 2 ) then
@@ -98,6 +99,7 @@ function ESCON:start( index )
 	    val = self.enBits[2]
         addr = EN_ADDR[2]
     end
+
     local res = self:i2cIo( addr, val )
     return res
 end
