@@ -24,7 +24,7 @@ Loop:
 ]]
 
 
-local CENTER_ON_1  = 0 --0x4+0x10
+local CENTER_ON_1  = 0 --0x01  --0x4+0x10
 local SIDES_DOWN_2 = 0x4
 local SIDES_UP_3   = 0x1
 local SIDES_ON_2   = 0 --0x1
@@ -83,8 +83,10 @@ end
 function Mover:oneStepBackward()
     local dt = 1.3
     sleep( dt )
-    remoteInvokeOutputs( { 0, SIDES_ON_2, FORWARD_3 } )
+    --print( "SIDES on, FORWARD" )
+    remoteInvokeOutputs( { CENTER_ON_1, 0, BACKWARD_3 } )
     sleep( dt )
+    --print( "CENTER ON, SIDES DOWN" )
     remoteInvokeOutputs( { CENTER_ON_1, SIDES_DOWN_2, 0 } )
     sleep( dt )
     remoteInvokeOutputs( { CENTER_ON_1, SIDES_ON_2, 0 } )
@@ -93,7 +95,7 @@ function Mover:oneStepBackward()
     sleep( dt )
     remoteInvokeOutputs( { 0, SIDES_ON_2, CENTER_UP_3 } )
     sleep( dt )
-    remoteInvokeOutputs( { 0, SIDES_ON_2, BACKWARD_3 } )
+    remoteInvokeOutputs( { 0, SIDES_ON_2, FORWARD_3 } )
     sleep( dt )
     remoteInvokeOutputs( { 0, SIDES_ON_2, CENTER_DOWN_3 } )
     sleep( dt )

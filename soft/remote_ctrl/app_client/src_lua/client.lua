@@ -1,8 +1,8 @@
 
 require( "luajoyctrl" )
 require( "bit" )
-require( "movement15" )
---require( "movement50" )
+--require( "movement15" )
+require( "movement50" )
 -- require( "debugger" )
 
 -- This value is supposed to detach real output
@@ -60,6 +60,7 @@ function main()
         if ( fwd < -JOY_TRESHOLD ) then
             --pause()
             zeroSpin = true
+            print( "Forward step" )
             res, err = pcall( mov.oneStepForward, mov )
             if ( not res ) then
                 print( err )
@@ -67,6 +68,7 @@ function main()
         elseif ( fwd > JOY_TRESHOLD ) then
             --pause()
             zeroSpin = true
+            print( "Backward step" )
             res, err = pcall( mov.oneStepBackward, mov )
             if ( not res ) then
                 print( err )
@@ -120,6 +122,8 @@ function main()
         --print( "Here 03" )
         local hor, vert = joyVal( 4 )
         esconSetSpeed( 3, vert )
+
+
         
         --print( "After joysticks" )
         --[[for i = 1, 4 do
