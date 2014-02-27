@@ -7,9 +7,9 @@ require( "movement50" )
 
 -- This value is supposed to detach real output
 -- and turn some test information on.
-DEBUG = true
+--DEBUG = true
 
-local JOY_TRESHOLD = 30
+local JOY_TRESHOLD = 25
 
 local BOARDS_CNT = 3
 local valves = { 0, 0, 0 }
@@ -29,6 +29,7 @@ function main()
 
     while true do
         sleep( 0.1 )
+        --[[
         if ( not DEBUG ) then
             -- Valve test window outputs query
             for i=1, BOARDS_CNT do
@@ -47,6 +48,7 @@ function main()
                 end
             end
         end
+        ]]
 
         --print( "Before joysticks" )
         -- Process joysticks.
@@ -78,7 +80,7 @@ function main()
        
         --print( "Here 01" )
         if ( zeroSpin ) then
-            --turn = 0.0
+            turn = 0.0
         end
         prevSpinDir = prevSpinDir or "idle"
         if ( turn > JOY_TRESHOLD ) then
@@ -125,12 +127,6 @@ function main()
 
 
         
-        --print( "After joysticks" )
-        --[[for i = 1, 4 do
-            local x, y = joy( i )
-            --print( string.format( "joy[%i]: %3.2f%%, %3.2f%%", i, x, y ) )
-        end
-        print( " " )]]
     end
 end
 
@@ -206,13 +202,15 @@ function joyProcess( valves )
     
     --print( string.format( "stopBtn: %s", stopBtn and "true" or "false" ) )
 
+    --print( "Joystick table" )
     joyValues = joyValues or {}
     for i=0, 3 do
         adcX[i+1]  = j:adcX( i )
         adcY[i+1]  = j:adcY( i )
         nullX[i+1] = j:nullX( i )
         nullY[i+1] = j:nullY( i )
-        --[[print( string.format( "adcX[%i]: %3i; adcY[%i]: %3i; nullX: %s, nullY: %s", 
+        --[[
+        print( string.format( "adcX[%i]: %3i; adcY[%i]: %3i; nullX: %s, nullY: %s", 
                               i,  
                               adcX[i+1], 
                               i, 
@@ -221,9 +219,10 @@ function joyProcess( valves )
                               nullY[i+1] and "true" or "false" ) )
         ]]
         
-        local x = (adcX[i+1] - 2047) * 100 / 2048
-        local y = (adcY[i+1] - 2047) * 100 / 2048
+        local y = (adcX[i+1] - 511) * 100 / 512
+        local x = (adcY[i+1] - 511) * 100 / 512
         joyValues[ i+1 ] = { x = x, y = y }
+        print( string.format( "k[%i]=%i, %i", i, joyValues[i+1].x, joyValues[i+1].y ) )
     end
 
     --[[
@@ -318,7 +317,7 @@ function joyVal( ind )
         return x, y
     end
     
-    x, y = joyValues[ ind ]
+    x, y = joyValues[ ind ].x, joyValues[ ind ].y
     return x, y
 end
 
