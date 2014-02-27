@@ -29,8 +29,8 @@ function main()
 
     while true do
         sleep( 0.1 )
-        --[[
-        if ( not DEBUG ) then
+         --[[
+        --if ( not DEBUG ) then
             -- Valve test window outputs query
             for i=1, BOARDS_CNT do
                 local valve = valveOutputs( i-1 )
@@ -47,9 +47,10 @@ function main()
                     break
                 end
             end
-        end
+        --end
         ]]
-
+        
+        
         --print( "Before joysticks" )
         -- Process joysticks.
         if ( not DEBUG ) then
@@ -124,8 +125,6 @@ function main()
         --print( "Here 03" )
         local hor, vert = joyVal( 4 )
         esconSetSpeed( 3, vert )
-
-
         
     end
 end
@@ -222,7 +221,7 @@ function joyProcess( valves )
         local y = (adcX[i+1] - 511) * 100 / 512
         local x = (adcY[i+1] - 511) * 100 / 512
         joyValues[ i+1 ] = { x = x, y = y }
-        print( string.format( "k[%i]=%i, %i", i, joyValues[i+1].x, joyValues[i+1].y ) )
+        --print( string.format( "k[%i]=%i, %i", i, joyValues[i+1].x, joyValues[i+1].y ) )
     end
 
     --[[

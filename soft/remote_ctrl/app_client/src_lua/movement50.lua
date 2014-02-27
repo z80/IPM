@@ -24,10 +24,11 @@ Loop:
 ]]
 
 
-local CENTER_ON_1  = 0 --0x01  --0x4+0x10
+local CENTER_ON_1  = 0--0x01
+local CENTER_ON_2  = 0--0x01
 local SIDES_DOWN_2 = 0x4
 local SIDES_UP_3   = 0x1
-local SIDES_ON_2   = 0 --0x1
+local SIDES_ON_1   = 0--0x04
 local FORWARD_3    = 0x40
 local BACKWARD_3   = 0x800
 local CENTER_UP_3  = 0x400
@@ -46,36 +47,38 @@ end
 -- To initialized state.
 function Mover:stToInit()
     print( "Going to initial position..." )
-    local dt = 2.3
+    local dt = 1.3
     sleep( dt )
     remoteInvokeOutputs( { 0, SIDES_DOWN_2, FORWARD_3 + CENTER_DOWN_3 } )
     sleep( dt )
-    remoteInvokeOutputs( { CENTER_ON_1, 0, 0 } )
+    remoteInvokeOutputs( { CENTER_ON_1, CENTER_ON_2, SIDES_UP_3 } )
+    sleep( dt )
+    remoteInvokeOutputs( { CENTER_ON_1, CENTER_ON_2, 0 } )
 end
 
 
 function Mover:oneStepForward()
     local dt = 1.3
     sleep( dt )
-    remoteInvokeOutputs( { CENTER_ON_1, SIDES_DOWN_2, 0 } )
+    remoteInvokeOutputs( { CENTER_ON_1, CENTER_ON_2 + SIDES_DOWN_2, 0 } )
     sleep( dt )
-    remoteInvokeOutputs( { CENTER_ON_1, SIDES_ON_2, 0 } )
+    remoteInvokeOutputs( { CENTER_ON_1 + SIDES_ON_1, CENTER_ON_2, 0 } )
     sleep( dt )
-    remoteInvokeOutputs( { 0, SIDES_ON_2, 0 } )
+    remoteInvokeOutputs( { SIDES_ON_1, 0, 0 } )
     sleep( dt )
-    remoteInvokeOutputs( { 0, SIDES_ON_2, CENTER_UP_3 } )
+    remoteInvokeOutputs( { SIDES_ON_1, 0, CENTER_UP_3 } )
     sleep( dt )
-    remoteInvokeOutputs( { 0, SIDES_ON_2, BACKWARD_3 } )
+    remoteInvokeOutputs( { SIDES_ON_1, 0, BACKWARD_3 } )
     sleep( dt )
-    remoteInvokeOutputs( { 0, SIDES_ON_2, CENTER_DOWN_3 } )
+    remoteInvokeOutputs( { SIDES_ON_1, 0, CENTER_DOWN_3 } )
     sleep( dt )
-    remoteInvokeOutputs( { CENTER_ON_1, SIDES_ON_2, 0 } )
+    remoteInvokeOutputs( { CENTER_ON_1 + SIDES_ON_1, CENTER_ON_2, 0 } )
     sleep( dt )
-    remoteInvokeOutputs( { CENTER_ON_1, 0, 0 } )
+    remoteInvokeOutputs( { CENTER_ON_1, CENTER_ON_2, 0 } )
     sleep( dt )
-    remoteInvokeOutputs( { CENTER_ON_1, 0, SIDES_UP_3 } ) 
+    remoteInvokeOutputs( { CENTER_ON_1, CENTER_ON_2, SIDES_UP_3 } ) 
     sleep( dt )
-    remoteInvokeOutputs( { CENTER_ON_1, 0, FORWARD_3 } ) 
+    remoteInvokeOutputs( { CENTER_ON_1, CENTER_ON_2, FORWARD_3 } ) 
     sleep( dt )
     remoteInvokeOutputs( { CENTER_ON_1, 0, 0 } ) 
 end
@@ -84,30 +87,30 @@ function Mover:oneStepBackward()
     local dt = 1.3
     sleep( dt )
     --print( "SIDES on, FORWARD" )
-    remoteInvokeOutputs( { CENTER_ON_1, 0, BACKWARD_3 } )
+    remoteInvokeOutputs( { CENTER_ON_1, CENTER_ON_2, BACKWARD_3 } )
     sleep( dt )
     --print( "CENTER ON, SIDES DOWN" )
-    remoteInvokeOutputs( { CENTER_ON_1, SIDES_DOWN_2, 0 } )
+    remoteInvokeOutputs( { CENTER_ON_1, CENTER_ON_2 + SIDES_DOWN_2, 0 } )
     sleep( dt )
-    remoteInvokeOutputs( { CENTER_ON_1, SIDES_ON_2, 0 } )
+    remoteInvokeOutputs( { CENTER_ON_1 + SIDES_ON_1, CENTER_ON_2, 0 } )
     sleep( dt )
-    remoteInvokeOutputs( { 0, SIDES_ON_2, 0 } )
+    remoteInvokeOutputs( { SIDES_ON_1, 0, 0 } )
     sleep( dt )
-    remoteInvokeOutputs( { 0, SIDES_ON_2, CENTER_UP_3 } )
+    remoteInvokeOutputs( { SIDES_ON_1, 0, CENTER_UP_3 } )
     sleep( dt )
-    remoteInvokeOutputs( { 0, SIDES_ON_2, FORWARD_3 } )
+    remoteInvokeOutputs( { SIDES_ON_1, 0, FORWARD_3 } )
     sleep( dt )
-    remoteInvokeOutputs( { 0, SIDES_ON_2, CENTER_DOWN_3 } )
+    remoteInvokeOutputs( { SIDES_ON_1, 0, CENTER_DOWN_3 } )
     sleep( dt )
-    remoteInvokeOutputs( { CENTER_ON_1, SIDES_ON_2, 0 } )
+    remoteInvokeOutputs( { CENTER_ON_1 + SIDES_ON_1, CENTER_ON_2, 0 } )
     sleep( dt )
-    remoteInvokeOutputs( { CENTER_ON_1, 0, 0 } )
+    remoteInvokeOutputs( { CENTER_ON_1, CENTER_ON_2, 0 } )
     sleep( dt )
-    remoteInvokeOutputs( { CENTER_ON_1, 0, SIDES_UP_3 } )
+    remoteInvokeOutputs( { CENTER_ON_1, CENTER_ON_2, SIDES_UP_3 } )
     sleep( dt )
-    remoteInvokeOutputs( { CENTER_ON_1, 0, FORWARD_3 } )
+    remoteInvokeOutputs( { CENTER_ON_1, CENTER_ON_2, FORWARD_3 } )
     sleep( dt )
-    remoteInvokeOutputs( { CENTER_ON_1, 0, 0 } )
+    remoteInvokeOutputs( { CENTER_ON_1, CENTER_ON_2, 0 } )
 end
 
 
