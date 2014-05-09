@@ -15,6 +15,8 @@ set( Boost_USE_MULTITHREADED True )
 find_package( Boost COMPONENTS thread filesystem REQUIRED )
 find_package( Threads )
 
+include( ${ROOT}/3dparty/cmake/FindLIBVLC.cmake )
+
 include_directories( "./src" 
                      "./src/analogpad" 
                      "${ROOT}/peer_abst/src" 
@@ -27,6 +29,9 @@ include_directories( "./src"
                      "${ROOT}/3dparty/widgets/src" 
                      ${Boost_INCLUDE_DIRS}
                      ${CMAKE_CURRENT_BINARY_DIR} )
+if ( WIN32 )
+    include_directories( ${ROOT}/3dparty/vlc/sdk/include )
+endif ( WIN32 )
 
 file( GLOB src      "./src/*.cpp" )
 file( GLOB headers  "./src/*.h" )
@@ -56,11 +61,13 @@ else ( WIN32 )
 endif ( WIN32 )
 
 add_executable( app_client ${BUILD_TYPE} ${src} )
-target_link_libraries( app_client peer_qxmpp
-                                  liblua-5.1.5
-                                  luajoyctrl
-                                  qtlua
-                                  widgets
+set( libs peer_qxmpp liblua-5.1.5 luajoyctrl qtlua widgets )
+if ( WIN32 )
+    set( libs ${libs} libvlc.lib )
+elseif ( UNIX )
+    set( libs ${libs} ${LIBVLC_LIBRARY} ${LIBVLCCORE_LIBRARY} )
+endif ( WIN32 )
+target_link_libraries( app_client ${libs}
                                   ${CMAKE_THREAD_LIBS_INIT}
                                   ${Boost_LIBRARIES}
                                   ${QT_LIBRARIES} )

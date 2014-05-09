@@ -7,36 +7,29 @@
     <x>0</x>
     <y>0</y>
     <width>799</width>
-    <height>657</height>
+    <height>673</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Remote control</string>
   </property>
-  <widget class="QWidget" name="cw">
+  <widget class="CameraWnd" name="view">
    <layout class="QVBoxLayout" name="verticalLayout">
     <property name="spacing">
      <number>1</number>
     </property>
-    <property name="margin">
+    <property name="leftMargin">
      <number>1</number>
     </property>
-    <item>
-     <widget class="QGraphicsView" name="view">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>512</width>
-        <height>256</height>
-       </size>
-      </property>
-     </widget>
-    </item>
+    <property name="topMargin">
+     <number>1</number>
+    </property>
+    <property name="rightMargin">
+     <number>1</number>
+    </property>
+    <property name="bottomMargin">
+     <number>1</number>
+    </property>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -45,7 +38,7 @@
      <x>0</x>
      <y>0</y>
      <width>799</width>
-     <height>20</height>
+     <height>29</height>
     </rect>
    </property>
   </widget>
@@ -70,7 +63,16 @@
      <property name="spacing">
       <number>0</number>
      </property>
-     <property name="margin">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
       <number>0</number>
      </property>
      <item>
@@ -79,7 +81,16 @@
         <property name="spacing">
          <number>0</number>
         </property>
-        <property name="margin">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
          <number>0</number>
         </property>
        </layout>
@@ -269,6 +280,12 @@
    <class>AnalogPad</class>
    <extends>QWidget</extends>
    <header>analogpad.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CameraWnd</class>
+   <extends>QWidget</extends>
+   <header>camera_wnd.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

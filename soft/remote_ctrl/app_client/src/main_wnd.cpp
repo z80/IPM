@@ -10,6 +10,7 @@
 const std::string MainWnd::CLIENT_CONFIG_FILE = "client.ini";
 const std::string MainWnd::SERVER_CONFIG_FILE = "server.ini";
 const int         MainWnd::LOG_MAX     = 256;
+const QString     MainWnd::VIDEO_CONFIG_FILE  = "video.ini";
 
 MainWnd::MainWnd( QWidget * parent )
 : QMainWindow( parent )
@@ -17,8 +18,6 @@ MainWnd::MainWnd( QWidget * parent )
     ui.setupUi( this );
     connect( this,       SIGNAL(sigLog(const QString &)),        this, SLOT(slotLog(const QString &)),  Qt::QueuedConnection );
     connect( ui.console, SIGNAL(line_validate(const QString &)), this, SLOT(slotSend(const QString &)), Qt::QueuedConnection );
-
-    connect( this, SIGNAL(sigImageAccepted()), this, SLOT(slotImageAccepted()), Qt::QueuedConnection );
 
     QObject::connect( ui.joy1, SIGNAL(valueChanged(QPointF, bool)),
                       this,    SLOT(slotJoyChanged(QPointF, bool)) );
@@ -38,17 +37,10 @@ MainWnd::MainWnd( QWidget * parent )
     ui.joy2->setBackgroundColor2( QColor( qRgb( 0xac, 0x86, 0x00 ) ) );
     ui.joy2->setEffectColor( QColor( qRgb( 0x39, 0xba, 0x00 ) ) );
 
-    m_scene = new QGraphicsScene( ui.view );
-    m_scene->setBackgroundBrush( QBrush( Qt::gray ) );
-    ui.view->setScene( m_scene );
-    ui.view->installEventFilter( this );
-
-    m_image = new QGraphicsPixmapItem( 0, m_scene );
-    m_image->setPos( 0.0, 0.0 );
-
     m_valveTst = new ValveTst( 0 );
 
-    connect( ui.image,   SIGNAL(triggered()), this,       SLOT(slotImage()) );
+    //connect( ui.image,   SIGNAL(triggered()), this,       SLOT(slotImage()) );
+    connect( ui.image,   SIGNAL(triggered()), this,       SLOT(slotVideo()) );
     connect( ui.connect, SIGNAL(triggered()), this,       SLOT(slotConnect()) );
     connect( ui.exec,    SIGNAL(triggered()), this,       SLOT(slotExec()) );
     connect( ui.send,    SIGNAL(triggered()), this,       SLOT(slotSendFile()) );
@@ -56,38 +48,23 @@ MainWnd::MainWnd( QWidget * parent )
     connect( ui.valve,   SIGNAL(triggered()), m_valveTst, SLOT(show()) );
 
     m_peer = new PeerQxmpp( CLIENT_CONFIG_FILE, boost::bind( &MainWnd::init, this, _1 ) );
-    m_peer->setInFileHandler( boost::bind<QIODevice *>( &MainWnd::inFileHandler, this, _1 ) );
-    m_peer->setAccFileHandler( boost::bind( &MainWnd::accFileHandler, this, _1, _2 ) );
+    //m_peer->setInFileHandler( boost::bind<QIODevice *>( &MainWnd::inFileHandler, this, _1 ) );
+    //m_peer->setAccFileHandler( boost::bind( &MainWnd::accFileHandler, this, _1, _2 ) );
+
+    QSettings s( VIDEO_CONFIG_FILE, QSettings::IniFormat, this );
+    m_videoUrl = s.value( "url", "rtsp://192.168.0.64:8000" ).toString();
 }
 
 MainWnd::~MainWnd()
 {
-    m_scene->deleteLater();
     m_valveTst->deleteLater();
-    delete m_image;
     delete m_peer;
-}
-
-bool MainWnd::eventFilter( QObject * o, QEvent * e )
-{
-    if ( e->type() == QEvent::Resize )
-    {
-        QResizeEvent * re = dynamic_cast<QResizeEvent *>( e );
-        if ( re )
-            sceneResizeEvent( re );
-    }
-    return false;
 }
 
 void MainWnd::slotLog( const QString & stri )
 {
     ui.console->print( stri );
     ui.console->print( "\n" );
-}
-
-void MainWnd::slotImageAccepted()
-{
-    updatePixmap( m_img );
 }
 
 static int print( lua_State * L )
@@ -177,28 +154,6 @@ void MainWnd::init( lua_State * L )
     luaL_dofile( L, "./client.lua" );
 }
 
-QIODevice * MainWnd::inFileHandler( const std::string & fileName )
-{
-    QString fn = QString::fromStdString( fileName );
-    if ( fn.toLower().right( 4 ) == ".png" )
-    {
-        QBuffer * buf = new QBuffer();
-        buf->open( QIODevice::WriteOnly );
-        return buf;
-    }
-    return 0;
-}
-
-void MainWnd::accFileHandler( const std::string & fileName, QIODevice * file )
-{
-    if ( file->isOpen() )
-        file->close();
-    if ( !file->open( QIODevice::ReadOnly ) )
-        return;
-    if ( m_img.load( file, "PNG" ) )
-        emit sigImageAccepted();
-}
-
 int MainWnd::print( lua_State * L )
 {
     int top = lua_gettop( L );
@@ -267,6 +222,13 @@ void MainWnd::slotImage()
     m_peer->send( cmd );
 }
 
+void MainWnd::slotVideo()
+{
+    QSettings s( VIDEO_CONFIG_FILE, QSettings::IniFormat, this );
+    m_videoUrl = s.value( "url", "rtsp://192.168.0.64:8000" ).toString();
+    ui.view->playFile( m_videoUrl );
+}
+
 void MainWnd::slotConnect()
 {
     m_peer->PeerQxmpp::connect();
@@ -313,52 +275,6 @@ void MainWnd::slotSendFile()
     }
 }
 
-void MainWnd::updatePixmap( const QImage & img )
-{
-    if ( !img.isNull() )
-        m_pixmap = QPixmap::fromImage( img );
-    if ( m_pixmap.isNull() )
-        return;
-
-    QSizeF imgSz = m_pixmap.size();
-    QSizeF wndSz = ui.view->size();
-
-    qreal sc;
-    qreal x, y;
-    if ( ( imgSz.width() * wndSz.height() ) > ( imgSz.height() * wndSz.width() ) )
-    {
-        sc = wndSz.width() / imgSz.width();
-        x = 0.0;
-        y = ( static_cast<qreal>( wndSz.height() ) -
-              static_cast<qreal>( imgSz.height() ) * sc ) * 0.5;
-    }
-    else
-    {
-        sc = wndSz.height() / imgSz.height();
-        x = ( static_cast<qreal>( wndSz.width() ) -
-              static_cast<qreal>( imgSz.width() ) * sc ) * 0.5;
-        y = 0.0;
-    }
-    m_scene->setSceneRect( QRectF( 0.0, 0.0, wndSz.width(), wndSz.height() ) );
-    m_image->setPixmap( m_pixmap );
-
-    QTransform scale;
-    scale.scale( sc, sc );
-
-    QTransform tran;
-    tran.translate( x, y );
-
-    tran = scale * tran;
-    m_image->setTransform( tran );
-}
-
-void MainWnd::sceneResizeEvent( QResizeEvent * e )
-{
-    QSizeF sz = ui.view->size();
-    ui.view->setSceneRect( 0.0, 0.0, sz.width() - 10, sz.height() - 10 );
-    updatePixmap();
-}
-
 void MainWnd::slotHelp()
 {
     QDesktopServices::openUrl( QUrl( "help\\index.html" ) );
@@ -390,6 +306,16 @@ void MainWnd::slotJoyChanged( QPointF v, bool mouseDown )
 
 }
 
+void MainWnd::showEvent( QShowEvent * )
+{
+    slotVideo();
+}
+
+void MainWnd::closeEvent( QCloseEvent * )
+{
+    QSettings s( VIDEO_CONFIG_FILE, QSettings::IniFormat, this );
+    s.setValue( "url", m_videoUrl );
+}
 
 
 
