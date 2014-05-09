@@ -10,13 +10,15 @@
 CameraWnd::CameraWnd( QWidget * parent )
 : QWidget( parent )
 {
-    setMinimumSize( 160, 120 );
+    setMinimumSize( 320, 240 );
     //preparation of the vlc command
     const char * const vlc_args[] = {
-              "-I", "dummy", /* Don't use any interface */
-              "--ignore-config", /* Don't use VLC's config */
-              "--extraintf=logger", //log anything
-              "--verbose=2", //be much more verbose then normal for debugging purpose
+              //"--sout-qsv-software",  // No hardware decoding.
+              "--no-overlay",         // No hardware acceerated overlay output.
+              "-I", "dummy",          /* Don't use any interface */
+              "--ignore-config",      /* Don't use VLC's config */
+              //"--extraintf=logger", //log anything
+              //"--verbose=2", //be much more verbose then normal for debugging purpose
               "--plugin-path=./plugins/" };
 
 //#ifdef Q_WS_X11
