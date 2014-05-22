@@ -7,12 +7,13 @@ require( "movement50" )
 
 -- This value is supposed to detach real output
 -- and turn some test information on.
---DEBUG = true
+DEBUG = true
 
 local JOY_TRESHOLD = 25
 
 local BOARDS_CNT = 3
-local valves = { 0, 0, 0 }
+valves = { 0, 0, 0 }
+inputs = { 0, 0, 0 }
 
 local escon_started = {}
 
@@ -29,8 +30,8 @@ function main()
 
     while true do
         sleep( 0.1 )
-         --[[
-        --if ( not DEBUG ) then
+        --[[
+        if ( not DEBUG ) then
             -- Valve test window outputs query
             for i=1, BOARDS_CNT do
                 local valve = valveOutputs( i-1 )
@@ -47,7 +48,7 @@ function main()
                     break
                 end
             end
-        --end
+        end
         ]]
         
         
@@ -129,12 +130,36 @@ function main()
     end
 end
 
-function sleep( t )
+function sleep( t, mask, stri )
     t = t or 1
     t = t * 1000
+    local report = true
+    local doStop = false
     for i=1, t do
+        if ( type( mask ) == 'table' ) then
+            for j=1, #mask do
+                if ( bit.band( mask[j], inputs[j] ) > 0 ) then
+                    --print( string.format( "Input detected: \'%s\'", tostring( stri ) ) )
+                    report = nil
+                    doStop = true
+                    break
+                end
+            end
+        else
+            if ( report ) then
+                --print( "not a table" )
+                report = nil
+            end
+        end
+        if ( doStop ) then
+            break
+        end
         msleep( 1 )
     end
+    if ( report ) then
+        print( string.format( "no appropriate input: (%i %i), (%i %i), (%i %i)", inputs[1], mask[1], inputs[2], mask[2], inputs[3], mask[3] ) )
+    end
+    --print( string.format( "%i, %i, %i", inputs[1], inputs[2], inputs[3] ) )
 end
 
 function remoteInvokeOutputs( vals )
@@ -156,6 +181,7 @@ function setInputs( vals )
     local cnt = #vals
     for i = 1, cnt do
         valveSetInputs( i-1, vals[i] )
+        inputs[i] = vals[i]
     end
 end
 
