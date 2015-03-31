@@ -17,7 +17,8 @@ static uint32_t encabsQuery( void )
     val = 0;
     static int16_t i;
     palClearPad( ENCABS_CLK_PORT, ENCABS_CLK_PIN );
-    delay();
+    for ( i=0; i<10; i++ )
+        delay();
     for ( i=(ENCABS_BITS-1); i>= 0; i-- )
     {
         palSetPad( ENCABS_CLK_PORT, ENCABS_CLK_PIN );
@@ -27,6 +28,8 @@ static uint32_t encabsQuery( void )
         palClearPad( ENCABS_CLK_PORT, ENCABS_CLK_PIN );
         delay();
     }
+    for ( i=0; i<20; i++ )
+        delay();
     palSetPad( ENCABS_CLK_PORT, ENCABS_CLK_PIN );
     return val;
 }
