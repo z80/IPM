@@ -53,7 +53,7 @@
 #define BMSD_TIMEOUT    500
 
 // Encoder absolute
-#define ENCABS_BITS      13
+#define ENCABS_BITS      25
 #define ENCABS_CLK_PORT  GPIOA
 #define ENCABS_CLK_PIN   6
 #define ENCABS_DATA_PORT GPIOA
