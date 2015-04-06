@@ -50,20 +50,16 @@ static msg_t execThread( void *arg )
             setLeds( (uint32_t)buffer[1] );
             break;
         case I2C_ABS_BITS:
-            value32 = *(int32_t *)(&(buffer[1]));
-            encabsSetBits( value32 );
+            encabsSetBits( (int)buffer[1] );
             break;
         case I2C_ABS_DELAY:
-            value32 = *(int32_t *)(&(buffer[1]));
-            encabsSetDelay( value32 );
+            encabsSetDelay( ((int)buffer[1])*128 );
             break;
         case I2C_ABS_FRONT_DELAY:
-            value32 = *(int32_t *)(&(buffer[1]));
-            encabsSetDelayFront( value32 );
+            encabsSetDelayFront( ((int)buffer[1])*128 );
             break;
         case I2C_ABS_BACK_DELAY:
-            value32 = *(int32_t *)(&(buffer[1]));
-            encabsSetDelayBack( value32 );
+            encabsSetDelayBack( ((int)buffer[1])*128 );
             break;
         }
     }
