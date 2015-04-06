@@ -3,6 +3,7 @@ require( "bit" )
 --require( "lsm303" )
 require( "bmsd" )
 require( "escon" )
+require( "absenc" )
 
 function display( ... )
     local t = { ... }
@@ -71,11 +72,13 @@ function processMcu()
     -- Accelerometer class.
     -- It is for the very first run and probably doesn't work at all.
     --lsm303 = Lsm303( mcu )
-    
+    encabs = Absenc()
+
     local en = mcu:open()
     if ( en ) then
         send( "print( \'Opended MCU successfully\' )" )
-	mcu:accInit()
+	      mcu:accInit()
+        encabsConfig( 12, 16 )
     else
         send( "print( \"ERROR: MCU can\'t be open\" )" )
     end
@@ -92,9 +95,9 @@ function processMcu()
             mcu:close()
             sleep( 5 )
             local res = mcu:open()
-	    if ( res ) then
+	          if ( res ) then
                 mcu:accInit()
-	    end
+	          end
         else
             -- Success.
             -- Compare current inputs with their new values from MCU.
@@ -159,7 +162,7 @@ function reportAcc()
     else
         striMag = "print( \'mag: error\' )"
     end
-    
+
     local striTemp
     res, x = mcu:accTemp()
     if ( res ) then
@@ -172,6 +175,8 @@ function reportAcc()
     send( striMag )
     send( striTemp )
 end
+
+acc = reportAcc
 
 function reportInputs()
     local ins
@@ -239,13 +244,12 @@ function valveTest( tOn, tOff, cnt )
     send( "print( \'Done\' )" )
 end
 
+function encabsConfig( bits, delay )
+  bits  = bits  or 12
+  delay = delay or 16
+  encabs:setBits( bits )
+  encabs:setDelay( delay )
+end
+
 print( "host.lua loaded!!!" )
 main()
-
-
-
-
-
-
-
-
