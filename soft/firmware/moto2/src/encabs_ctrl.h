@@ -7,9 +7,10 @@
 
 void encabsInit( void );
 uint32_t encabs( void );
-
+void encabsSetBits( int bits );
+void encabsSetDelay( int cnt );
+void encabsSetDelayFront( int cnt );
+void encabsSetDelayBack( int cnt );
 
 
 #endif
-
-

@@ -4,10 +4,15 @@
 #include "hal.h"
 #include "hdw_config.h"
 
+static int encabsBits;
+static int delayTicks;
+static int delayFrontTicks;
+static int delayBackTicks;
+
 static void delay( void )
 {
-    static volatile uint16_t i;
-    for ( i=0; i<1024; i++ );
+    static volatile int32_t i;
+    for ( i=0; i<delayTicks; i++ );
         //volatile asm( "nop;" );
 }
 
@@ -17,9 +22,9 @@ static uint32_t encabsQuery( void )
     val = 0;
     static int16_t i;
     palClearPad( ENCABS_CLK_PORT, ENCABS_CLK_PIN );
-    for ( i=0; i<10; i++ )
+    for ( i=0; i<delayFrontTicks; i++ )
         delay();
-    for ( i=(ENCABS_BITS-1); i>= 0; i-- )
+    for ( i=(encabsBits-1); i>=0; i-- )
     {
         palSetPad( ENCABS_CLK_PORT, ENCABS_CLK_PIN );
         delay();
@@ -28,7 +33,7 @@ static uint32_t encabsQuery( void )
         palClearPad( ENCABS_CLK_PORT, ENCABS_CLK_PIN );
         delay();
     }
-    for ( i=0; i<20; i++ )
+    for ( i=0; i<delayBackTicks; i++ )
         delay();
     palSetPad( ENCABS_CLK_PORT, ENCABS_CLK_PIN );
     return val;
@@ -63,6 +68,11 @@ void encabsInit( void )
     palSetPad(     ENCABS_CLK_PORT,  ENCABS_CLK_PIN );
     palSetPadMode( ENCABS_DATA_PORT, ENCABS_DATA_PIN, PAL_MODE_INPUT );
 
+    encabsBits      = ENCABS_BITS;
+    delayTicks      = 4096;
+    delayFrontTicks = 1;
+    delayBackTicks  = 1;
+
     // Initializing mutex.
     chMtxInit( &mutex );
     // Creating thread.
@@ -78,10 +88,22 @@ uint32_t encabs( void )
     return v;
 }
 
+void encabsSetBits( int bits )
+{
+    encabsBits = bits;
+}
 
+void encabsSetDelay( int cnt )
+{
+    delayTicks = cnt;
+}
 
+void encabsSetDelayFront( int cnt )
+{
+    delayFrontTicks = cnt;
+}
 
-
-
-
-
+void encabsSetDelayBack( int cnt )
+{
+    delayBackTicks = cnt;
+}

@@ -29,6 +29,11 @@
 #define I2C_CMD_LEDS    6  // Just debug LEDs control.
 #define I2C_OUT_BUFFER_SZ   (4*3+1) // 3 encoders and one status byte.
 #define I2C_IN_BUFFER_SZ    6       // 1 byte - command Id. Up to 5 bytes per command. Max command - BMSD command.
+// Absolute encoder commands.
+#define I2C_ABS_BITS    7
+#define I2C_ABS_DELAY   8
+#define I2C_ABS_FRONT_DELAY 9
+#define I2C_ABS_BACK_DELAY  10
 
 // Exec thread
 #define EXEC_QUEUE_SIZE     5 // 3 encoders and one status byte.
@@ -53,7 +58,7 @@
 #define BMSD_TIMEOUT    500
 
 // Encoder absolute
-#define ENCABS_BITS      25
+#define ENCABS_BITS      12
 #define ENCABS_CLK_PORT  GPIOA
 #define ENCABS_CLK_PIN   6
 #define ENCABS_DATA_PORT GPIOA
@@ -70,5 +75,3 @@
 #define ENCREL_B2_PIN   9
 
 #endif
-
-
